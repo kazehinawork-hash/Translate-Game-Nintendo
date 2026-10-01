@@ -15,9 +15,6 @@ output/
 #     Giữ trên máy để sửa/tra cứu, KHÔNG đẩy lên git cho nhẹ repo.
 games/
 
-# --- Lưu trữ file cũ ---
-archive/
-
 # --- ROM ---
 *.nsp
 *.xci

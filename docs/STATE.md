@@ -57,5 +57,5 @@
 ## 4. Hạ tầng repo & đóng gói
 - **Git**: đã khởi tạo (`git init`) + commit đầu; `.gitignore` ẩn khoá (`prod.keys`, `titlekeys.txt`), ROM, cache và dữ liệu nặng.
 - **Gói phát hành**: dùng trực tiếp thư mục `output/atmosphere/` — chép nguyên thư mục này vào gốc thẻ nhớ Switch (gộp vào `atmosphere` có sẵn). Gồm cả 3 mod: `0100F7E00C70E000`, `0100A00019DE0000`, `0100D2F00D5C0000`. Hướng dẫn cài: `docs/INSTALL-MOD.txt`.
-- **Dọn dẹp**: 35 file rác thư mục gốc đã nén vào `archive/scratch/archive_root_scrap.zip` và xoá khỏi gốc; đã xoá toàn bộ `__pycache__`.
-- **Cấu trúc**: dữ liệu mỗi game nằm trong `games/<TitleID>_<Tên>/{source,translations}`; file cũ gom vào `archive/`.
+- **Dọn dẹp**: đã xoá 35 file rác ở thư mục gốc, toàn bộ `__pycache__`, và thư mục `archive/` (~5 MB phụ phẩm cũ).
+- **Cấu trúc**: dữ liệu mỗi game nằm trong `games/<TitleID>_<Tên>/{source,translations}`.

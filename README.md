@@ -21,7 +21,6 @@ Translate Game/
 │       └─ README.md         Hướng dẫn riêng cho game đó
 ├─ output/                   SẢN PHẨM: mod LayeredFS — copy vào thẻ nhớ
 │   └─ atmosphere/contents/<TitleID>/romfs/...
-└─ archive/                  File cũ/không dùng nữa (có thể xoá bất cứ lúc nào)
 ```
 
 > `games/` và `output/` bị `.gitignore` chặn — repo GitHub chỉ chứa mã nguồn.

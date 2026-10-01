@@ -38,14 +38,25 @@ python tools/build_ori_mod.py --src <thu_muc_bundle_goc>
 python tools/patch_font_ori.py     # vá font (xem ghi chú bên dưới)
 ```
 
-## Ghi chú font
+## Ghi chú font (đã kiểm chứng bằng dữ liệu thật)
 
-- 7 Font asset trong game: `Candara` (font UI chính — **thiếu 46 dấu tiếng Việt**), `keyboard`,
-  `ProFontWindows`, `moon-tools` (font dev/ký hiệu — cũng thiếu dấu), và `Roboto-Thin/Bold/Light`
-  (đã đủ tiếng Việt).
-- Đã thay TTF nhúng của **Candara** bằng `tools/fonts_hades2/Lato-Regular.ttf` trong `data_3.unity3d`.
-- Các font dev (`keyboard`, `ProFontWindows`, `moon-tools`) **cố ý giữ nguyên** vì chúng chứa glyph
-  ký hiệu riêng — thay vào có thể hỏng icon. Nếu chơi thấy dòng nào bị ô vuông, báo để vá thêm.
+Game chỉ có **7 Font asset**, tất cả đều là **font động** (`m_CharacterRects = 0` → atlas dựng lúc chạy
+từ `m_FontData`), nên thay TTF nhúng là có hiệu lực ngay.
+
+| Font | Vai trò | Xử lý | Kết quả |
+|---|---|---|---|
+| `Candara` | Font UI chính (atlas động, **0 icon**) | **Thay hẳn** bằng Lato | 120/120 dấu VI, chỉ mất 2 ký tự vô nghĩa (U+2206, U+25AF) |
+| `ProFontWindows` | Font text (**0 icon**) | **Thay hẳn** bằng Lato | 0 thiếu |
+| `keyboard` | 52 chữ + **18 glyph ICON (PUA) đang dùng** (~100 lần/bundle) | **Hợp nhất** (giữ icon + thêm dấu) | 0 thiếu, giữ đủ 18 icon |
+| `moon-tools` | **100% glyph icon** (PUA) đang dùng | **Hợp nhất** | 0 thiếu, giữ đủ 33 icon |
+| `Roboto-Thin/Bold/Light` | Font UI | **Giữ nguyên** | Đã phủ đủ tiếng Việt từ đầu (896 glyph) |
+
+- Công cụ hợp nhất: `tools/merge_vi_font.py` — thêm glyph tiếng Việt từ Lato vào font gốc,
+  tự scale `unitsPerEm` (keyboard 1000, moon-tools 1024, Lato 2048) và **giữ toàn bộ glyph cũ**.
+- Đã kiểm chứng: mọi glyph tiếng Việt trong mod **đều có nét vẽ thật**; các glyph icon giữ nguyên
+  (kể cả U+E000–E002 vốn **rỗng sẵn ở bản gốc** — mod giống hệt gốc, không hồi quy).
+- ⚠️ **Không** thay hẳn `keyboard`/`moon-tools`: chúng chứa glyph icon đang được game dùng,
+  thay cả font sẽ làm icon biến mất.
 
 ## Việc còn lại
 

@@ -163,7 +163,8 @@ def patch_font(path, name_to_ttf, out_dir, pack='original'):
         nm = getattr(d, 'm_Name', '')
         if nm not in name_to_ttf:
             continue
-        ttf = open(name_to_ttf[nm], 'rb').read()
+        src = name_to_ttf[nm]
+        ttf = src if isinstance(src, (bytes, bytearray)) else open(src, 'rb').read()
         d.m_FontData = ttf
         d.save()
         done.append(nm)

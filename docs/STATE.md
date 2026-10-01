@@ -60,7 +60,8 @@
 - **Text**: 307 AssetBundle `Data/data_*.unity3d` (~1,36 GB), mỗi đoạn hội thoại là 1
   MonoBehaviour `TextMessageProvider` chứa **20 ngôn ngữ** (không có tiếng Việt).
 - **Trạng thái**: ✅ **ĐÃ BUILD MOD** — text 1.877 mục (1.793 chuỗi duy nhất) dịch 100%, QA 0 lỗi;
-  font `Candara` đã thay bằng Lato (đủ dấu tiếng Việt); đóng gói **103 file (870,7 MB)** tại
+  **cả 7 font đều đã phủ 100% dấu tiếng Việt** (Candara/ProFontWindows thay bằng Lato;
+  keyboard/moon-tools hợp nhất giữ icon; Roboto-* vốn đã đủ); đóng gói **103 file (871,6 MB)** tại
   `output/atmosphere/contents/01008DD013200000/romfs/Data/`.
 - **Sửa bản dịch**: `games/01008DD013200000_OriAndTheWillOfTheWisps/translations/ori_vi.json`
   (mảng `{Id, EN, VI}`) → chạy lại `python tools/build_ori_mod.py` + `python tools/patch_font_ori.py`.

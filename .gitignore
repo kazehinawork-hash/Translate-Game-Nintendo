@@ -13,7 +13,10 @@ output/
 
 # --- Dữ liệu từng game (nguồn bóc tách + bản dịch đang làm) ---
 #     Giữ trên máy để sửa/tra cứu, KHÔNG đẩy lên git cho nhẹ repo.
-games/
+#     (Riêng README.md của từng game thì vẫn đẩy — là tài liệu.)
+games/*/source/
+games/*/translations/
+games/*/_misc/
 
 # --- ROM ---
 *.nsp

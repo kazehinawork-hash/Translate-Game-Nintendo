@@ -1,0 +1,223 @@
+﻿Original,Vietnamese,Category,Note
+Play,Chơi,Menu,Nút bắt đầu ở Menu chính
+Options,Tùy chọn,Menu,Cài đặt game
+Controls,Điều khiển,Menu,Cấu hình phím bấm
+Quit,Thoát,Menu,Thoát game
+Cross-Saves,Lưu trữ đám mây,Menu,Đồng bộ save liên nền tảng
+Continue,Tiếp tục,Menu,Tiếp tục hành trình
+New Game,Trò chơi mới,Menu,Bắt đầu lượt chơi mới
+Paused,Tạm dừng,Menu,Dừng giữa chừng
+Confirm,Xác nhận,Menu,
+Cancel,Hủy,Menu,
+Back,Quay lại,Menu,
+Select,Chọn,Menu,
+Restore Defaults,Khôi phục mặc định,Menu,
+On,Bật,Menu,
+Off,Tắt,Menu,
+Melinoë,Melinoë,Character,Công chúa Âm phủ - Nhân vật chính
+Zagreus,Zagreus,Character,Hoàng tử Âm phủ (Hades 1)
+Chronos,Chronos,Character,Titan Thời Gian - Kẻ thù chính
+Hecate,Hecate,Character,Nữ thần Ngã ba đường - Sư phụ của Melinoë
+Odysseus,Odysseus,Character,Anh hùng mưu lược - Cố vấn tại Crossroads
+Nemesis,Nemesis,Character,Nữ thần Báo ứng
+Moros,Moros,Character,Hóa thân của Vận mệnh Diệt vong
+Eris,Eris,Character,Nữ thần Hỗn loạn & Xung đột
+Charon,Charon,Character,Người lái đò sông Styx
+Homer,Homer,Character,Thi hào dẫn chuyện
+Arachne,Arachne,Character,Nữ thợ dệt bị nguyền thành nhện
+Narcissus,Narcissus,Character,Chàng trai đem lòng yêu hình bóng của chính mình
+Echo,Echo,Character,Phản âm vĩnh cửu trong rừng
+Medea,Medea,Character,Phù thủy Colchis
+Circe,Circe,Character,Phù thủy đảo Aeaea
+Icarus,Icarus,Character,Con trai thợ thủ công Daedalus
+Dora,Dora,Character,Bóng ma nữ tại Crossroads
+Hermes,Hermes,Character,Người đưa tin Olympus
+Heracles,Heracles,Character,Anh hùng sức mạnh Olympus
+Persephone,Persephone,Character,Mẹ Melinoë - Hoàng hậu Địa giới
+Hades,Hades,Character,Chúa tể Âm phủ
+Skelly,Skelly,Character,Bộ xương tập luyện tại Crossroads
+The Crossroads,Ngã ba Địa Giới,Location,Căn cứ địa ngầm của Melinoë & Hecate
+Underworld,Âm phủ,Location,Cõi u minh dưới lòng đất
+Surface,Mặt đất,Location,Thế giới bên trên do Chronos chiếm đóng
+Olympus,Đỉnh Olympus,Location,Nơi ngự trị của các vị thần
+Tartarus,Vực Tartarus,Location,Tầng sâu nhất của Âm phủ
+Erebus,Vực Erebus,Location,Tầng Âm phủ đầu tiên
+Oceanus,Biển Oceanus,Location,Vùng biển ngầm
+Fields of Mourning,Cánh đồng U buồn,Location,Vùng đồng bằng mênh mông
+Ephyra,Thành Ephyra,Location,Tàn tích trên mặt đất
+Thessaly,Thessaly,Location,Vùng đất Thessaly
+The Oceanus,Biển Oceanus,Location,Vùng nước ngầm
+Asphodel,Asphodel,Location,Khu vực đồng cỏ của Âm phủ; giữ tên địa danh
+Boons,Ân huệ,Gameplay,Phước lành từ các vị thần Olympus
+Keepsakes,Kỷ vật,Gameplay,Vật phẩm trang bị mang lại hiệu ứng
+Magick,Pháp lực,Gameplay,Tài nguyên dùng cho kỹ năng Omega và phép thuật
+Cast,Vòng Phép,Combat,Vòng tròn phép thuật trói chân & sát thương
+Attack,Tấn công,Combat,Đòn đánh cơ bản
+Special,Đặc kỹ,Combat,Đòn đánh đặc biệt của vũ khí
+Dash,Lướt,Combat,Kỹ năng né tránh cơ động
+Sprint,Chạy nhanh,Combat,Giữ nút lướt để chạy tiếp
+Omega Attack,Tấn Công Omega,Combat,Tụ lực đòn Attack tiêu hao Magick
+Omega Special,Đặc Kỹ Omega,Combat,Tụ lực đòn Special tiêu hao Magick
+Omega Cast,Vòng Phép Omega,Combat,Tụ lực Cast tạo hiệu ứng bùng nổ
+Altar of Ashes,Bàn thờ Tro Tàn,Gameplay,Nơi khai mở các lá bài Arcana
+Arcana Cards,Lá bài Arcana,Gameplay,Hệ thống thẻ bài cường hóa nội tại
+The Silver Pool,Hồ Bạc,Gameplay,Nơi chế tạo và nâng cấp Vũ khí Màn Đêm
+Cauldron,Vạc Thần,Gameplay,Nơi thực hiện các Nghi thức Thần chú (Incantations)
+Incantations,Thần chú,Gameplay,Nghi thức luyện kim tại Vạc Thần
+Ashes,Tro Tàn,Item,Tài nguyên mở thẻ Arcana
+Psyche,Linh Hồn,Item,Tài nguyên tăng dung lượng Grasp
+Bones,Xương Trắng,Item,Tiền tệ giao dịch với thương nhân Broker
+Nectar,Tiên tửu Nectar,Item,Lễ vật tặng các vị thần & nhân vật
+Silver,Bạc,Item,Khoáng thạch chế tạo vũ khí
+Shadow,Bóng Tối,Item,Vật phẩm quý hiếm luyện từ Vạc
+Grasp,Dung lượng Tâm thức,Gameplay,Điểm giới hạn kích hoạt thẻ bài Arcana
+Fear,Nỗi Sợ,Gameplay,Độ khó tùy chỉnh (Hệ thống nhiệt độ/Pacts)
+Testament of Night,Di huấn Màn Đêm,Gameplay,Thử thách với vũ khí
+Night,Đêm hành trình,Gameplay,Số đêm đã dấn thân (Số lần chạy run)
+Rarity,Độ hiếm,Gameplay,Độ hiếm của Ân Huệ (Common→Legendary)
+Common,Phổ thông,Gameplay,Độ hiếm Cơ bản
+Rare,Hiếm,Gameplay,Độ hiếm Rare
+Epic,Sử Thi,Gameplay,Độ hiếm Epic
+Heroic,Anh Hùng,Gameplay,Độ hiếm Heroic
+Legendary,Huyền Thoại,Gameplay,Độ hiếm Legendary
+Duo,Ân Huệ Kép,Gameplay,Ân huệ kết hợp do hai vị thần ban
+Duo Boon,Ân Huệ Kép,Gameplay,Ân huệ kết hợp do hai vị thần ban
+Infusion,Truyền Nguyên Tố,Gameplay,Hiệu ứng truyền nguyên tố vào Ân Huệ
+Mega-Infused,Siêu Truyền Nguyên Tố,Gameplay,Trạng thái nhận nhiều nguyên tố từ Ân Huệ
+Pom of Power,Lựu Tăng Cường,Gameplay,Quả lựu dùng để nâng cấp Ân Huệ
+Daedalus Hammer,Búa Daedalus,Gameplay,Nâng cấp đặc biệt cho vũ khí
+God Mode,Chế Độ Thần Thoại,Gameplay,Chế độ dễ - tăng sinh lực mỗi lần chết
+Vows,Lời Thề,Gameplay,Nới lỏng/giới hạn tại Bàn thờ Nỗi Sợ
+Shrine Points,Điểm Bàn thờ,Gameplay,Điểm dùng mở khoá Bounty
+Bounties,Thử thách vũ khí,Gameplay,Nhiệm vụ đặc biệt theo từng vũ khí
+Pool of Purging,Hồ Thanh Tẩy,Gameplay,Nơi bán Ân Huệ lấy Bones
+Fated List,Danh Sách Định Mệnh,Gameplay,Bảng nhiệm vụ/Lời tiên tri
+Prophecy,Lời tiên tri,Gameplay,Nhiệm vụ cốt truyện
+Familiar,Đồng hành,Gameplay,Thú cưng hỗ trợ chiến đấu
+Witch's Staff,Trượng Phù Thủy,Weapon,Vũ khí chính của Melinoë
+Sister Blades,Song Đao,Weapon,Vũ khí đôi
+Umbral Flames,Lửa Âm,Weapon,Vũ khí lửa
+Moonstone Axe,Rìu Nguyệt,Weapon,Vũ khí rìu nặng
+Argent Skull,Đầu Lâu Bạc,Weapon,Vũ khí sọ bạc
+Black Coat,Áo Choàng Đen,Weapon,Vũ khí áo giáp
+Hammer Upgrade,Nâng Cấp Búa,Combat,Chọn nâng cấp Daedalus
+Elemental Infusion,Truyền Nguyên Tố,Gameplay,Truyền nguyên tố vào Ân Huệ
+Arcana,Lá bài Arcana,Gameplay,Thẻ cường hóa tại Bàn thờ Tro Tàn
+Insight,Thông Tuệ,Gameplay,Hệ thống nâng cấp chuyên sâu Arcana
+Aspect,Mạo Diện,Weapon,Dạng thức biến đổi của từng vũ khí
+Boon List,Bảng Ân Huệ,UI,Xem danh sách Ân Huệ đang có
+Offerings,Lễ Vật Hiến Tế,UI,Danh sách Ân Huệ hiến tế
+Interact,Tương tác,Control,Nút tương tác với nhân vật hoặc môi trường
+Codex,Danh Bạ Codex,UI,Sổ tay nhân vật & địa điểm
+Inventory,Hành Trang,UI,Kho đồ cá nhân
+Bag of Holding,Túi Thần,UI,Tên túi đồ trong game
+Broker,Thương nhân Broker,NPC,Bán hàng đổi Bones
+Stygius,Kiếm Stygius,Weapon,Kiếm trong Hades 1
+Mother,Mẹ,Character,Đề cập Persephone
+Daedalus,Daedalus,Character,Thợ thủ công huyền thoại
+Titan,Titan,Character,Thần cổ đại
+Olympian,Olympian,Character,Thần trên đỉnh Olympus
+Chthonic,Âm giới,Location,Liên quan thế giới ngầm
+Cross-Save,Lưu đám mây,Menu,Đồng bộ tiến trình
+Sync & Quit,Đồng bộ & Thoát,Menu,Thoát có up save cloud
+Undo Night,Hủy Đêm Này,Menu,Hủy tiến trình đêm hiện tại
+Give Up,Bỏ Cuộc,Menu,Chấp nhận thất bại
+Resume Game,Tiếp Tục Game,Menu,Quay lại chơi
+Damage Numbers,Chữ số sát thương,Setting,Hiện số dmg
+Vibration,Rung tay cầm,Setting,Có rung controller
+Subtitles,Phụ đề,Setting,Hiện phụ đề
+Master Volume,Âm lượng tổng,Setting,Volume tổng
+Brightness,Độ sáng,Setting,Độ sáng màn hình
+Resolution,Độ phân giải,Setting,Độ phân giải
+Fullscreen,Toàn màn hình,Setting,Chế độ fullscreen
+Language,Ngôn ngữ,Setting,Chọn ngôn ngữ
+God Mode Limit,Giới hạn chế độ thần thoại,Setting,Cap resistance God Mode
+Pause,Tạm dừng,Control,Dừng game
+Map,Bản đồ,UI,Sơ đồ khu vực
+Quest,Nhiệm vụ,Gameplay,Fated List quest
+Shop,Cửa hàng,UI,Chỗ mua bán
+Buy,Mua,UI,
+Sell,Bán,UI,
+Upgrade,Nâng cấp,UI,
+Equip,Trang bị,UI,
+Unequip,Gỡ bỏ,UI,
+Unlock,Mở khóa,UI,
+Claim,Nhận thưởng,UI,
+Pin,Ghim,UI,Theo dõi công thức
+Track,Theo dõi,UI,
+Inspect,Xem chi tiết,UI,
+Reroll,Đổi lại,UI,Làm lại lựa chọn
+Alter,Đổi lại,Control,Nút re-roll boon
+Rarify,Nâng phẩm,UI,Tăng độ hiếm boon
+Quip,Lời Dí Dỏm,Control,Nút emoticon
+Hex,Nguyền,Control,Nút Shout (Hex ability)
+Assist,Hỗ trợ,Control,Nút gọi đồng hành
+Gift,Tặng quà,Control,Nút tặng quà
+Shrine of Chance,Bàn thờ May mắn,Location,Nơi re-roll rewards
+Surface Run,Hành trình Mặt đất,Gameplay,Chạy lên mặt đất
+Underworld Run,Hành trình Âm phủ,Gameplay,Chạy dưới Âm phủ
+Chambers,Phòng,Gameplay,Phòng trong run (encounter)
+Encounter,Cuộc đối đầu,Gameplay,Combat room
+Clear,Hoàn thành,Gameplay,Hoàn thành một phòng hoặc cuộc đối đầu
+Streak,Chuỗi,Gameplay,Chuỗi lần thắng liên tiếp
+Best Time,Thời gian tốt nhất,Gameplay,Kỷ lục clear nhanh
+Run,Hành trình,Gameplay,Một lượt chơi (đêm)
+Victory,Thắng lợi,UI,Màn hình win
+Glory,Quang Vinh,UI,Win ở Surface
+Infernal Descent,Đêm Xuống Địa Ngục,Mode,Chạy Underworld
+Surface Descent,Đêm Lên Mặt Đất,Mode,Chạy Surface
+Golden Apple,Táo Vàng,Item,Vật phẩm thần thoại; nguyên liệu gắn với công thức Tiên tửu Nectar
+Sirens,Các Nàng Tiên Cá,Character,Bộ ba ca nữ gắn với Scylla
+Shade,Bóng ma,Character type,Linh hồn người chết trong Âm phủ
+Prometheus,Prometheus,Character,Titan lửa và nhà tiên tri
+Typhon,Typhon,Character,Quái vật khổng lồ tấn công Olympus
+Three Fates,Tam Nữ Thần Số Mệnh,Character,Ba nữ thần quyết định số phận
+Beautiful Mirror,Chiếc Gương Tuyệt Mỹ,Item,Gương dùng để Aphrodite tìm Melinoë
+Ambrosia,Tiên tửu Ambrosia,Item,Đồ uống thần linh dùng làm lễ vật
+Arms of Night,Vũ khí Màn Đêm,Weapon,Tên gọi chung cho các vũ khí của Melinoë
+House of Hades,Nhà Hades,Location,Dinh thự của gia đình Hades trong Hades I
+Apollo,Apollo,Character,Thần ánh sáng âm nhạc tiên tri và chữa lành; anh của Artemis
+Zeus,Zeus,Character,Chúa tể Olympus; cha của Apollo và Artemis
+Poseidon,Poseidon,Character,Thần biển; chú của Apollo
+Hera,Hera,Character,Nữ hoàng Olympus; mẹ kế của Apollo
+Athena,Athena,Character,Nữ thần trí tuệ và chiến tranh
+Demeter,Demeter,Character,Nữ thần mùa màng; bà ngoại Melinoë
+Dionysus,Dionysus,Character,Thần rượu vang và tiệc tùng
+Hestia,Hestia,Character,Nữ thần lửa bếp
+Ares,Ares,Character,Thần chiến tranh
+Hephaestus,Hephaestus,Character,Thần rèn và luyện kim
+Artemis,Artemis,Character,Nữ thần săn bắn; em gái Apollo
+Scylla,Scylla,Character,Nữ ca sĩ Siren
+Polyphemus,Polyphemus,Character,Cyclops mù canh giữ Ephyra
+Orpheus,Orpheus,Character,Thi sĩ và nhạc công huyền thoại
+Cyclops,Người khổng lồ một mắt,Creature,Giống người khổng lồ một mắt trong thần thoại Hy Lạp
+Harmonic Photon,Photon Hòa Âm,Keepsake,Kỷ vật của Apollo; trước tên là Purest Hope
+Helios,Helios,Character,Thần Mặt Trời
+Selene,Selene,Character,Nữ thần Mặt Trăng
+Gold Crowns,Đồng Vàng,Item,Đồng xu của Charon dùng trong giao dịch
+Frinos,Frinos,Familiar,Ếch khổng lồ đồng hành của Melinoë
+Raki,Raki,Familiar,Quạ đen đồng hành của Melinoë
+Toula,Toula,Familiar,Mèo đồng hành của Melinoë
+Hecuba,Hecuba,Familiar,Chó săn đồng hành của Hecate
+Gale,Gale,Familiar,Chồn đồng hành của Hecate
+
+Silver Sisters,Chị Em Ánh Bạc,Faction,Cách gọi gắn kết giữa Melinoë và Selene; viết hoa như danh xưng
+Moon Drop,Giọt Trăng,Item,Tên vật phẩm/hiệu ứng liên quan đến Selene
+Eye of Night,Con Mắt Đêm,Title,Danh xưng của Selene
+Headmistress,Sư phụ,Title,Danh xưng Selene dùng để gọi Hecate; người huấn luyện Melinoë
+Nyx,Nyx,Character,Nữ thần Đêm; mẹ nuôi của Selene và mẹ của Hecate
+Great Aunt,Bà cô,Family,Quan hệ họ hàng bậc trên; Hera tự gọi mình như vậy khi nói với Melinoë
+Fates,các Số Mệnh,Character,Tên gọi chung cho những nữ thần định đoạt số phận
+Mourning Fields,Cánh Đồng Than Khóc,Location,Vùng đất trong Âm phủ
+Twilight Curse,Lời Nguyền Chạng Vạng,Hex,Phép biến hình do Hecate sử dụng
+Strife Incarnate,Hiện Thân Xung Đột,Title,Danh xưng Hera dùng cho Eris
+Hyperion,Hyperion,Character,Titan; cha của Hera, Demeter và Hestia
+Eos,Eos,Character,Nữ thần Bình Minh; chị/em gái của Selene và Helios
+Xinth,Xinth,Weapon Aspect,Mạo Diện ẩn của Áo Choàng Đen
+Chaos,Chaos,Character,Thực thể nguyên thủy; nguồn gốc của vạn vật
+Pitch-Black Stone,Hòn Đá Đen Tuyền,Item,Đá ma thuật giúp Melinoë liên lạc với Selene
+Oath of the Unseen,Lời Thề Vô Hình,Gameplay,Bảng chọn Lời Thề và thử thách tại Bàn thờ Nỗi Sợ
+Vow of Rivals,Lời Thề Đối Thủ,Lời Thề,Thử thách khiến các đối thủ mạnh hơn
+Path of Stars,Đường Sao,Gameplay,Cơ chế nâng cấp Nguyền do Selene ban
+Moon Beam,Tia Trăng,Gameplay,Phép/ánh sáng đặc trưng của Selene
+Sky Fall,Sao Sa,Hex,Nguyền của Selene tạo đòn đánh từ trên trời

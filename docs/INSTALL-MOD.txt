@@ -1,0 +1,38 @@
+HƯỚNG DẪN CÀI MOD VIỆT HÓA (Atmosphere LayeredFS)
+==================================================
+
+Cách cài
+--------
+1. Chép nguyên thư mục `atmosphere` (trong output\) vào THƯ MỤC GỐC của thẻ nhớ Switch
+   (thẻ nhớ đã có sẵn thư mục "atmosphere" do Atmosphere tạo — gộp vào, giữ nguyên phần cũ).
+2. Kết quả đúng:  <thẻ nhớ>\atmosphere\contents\<TitleID>\romfs\...
+3. Khởi động lại máy rồi vào game — mod được nạp tự động.
+4. Gỡ mod: xoá thư mục <TitleID> tương ứng trong atmosphere\contents\.
+
+Các game có trong gói
+---------------------
+- Hogwarts Legacy          TitleID 0100F7E00C70E000
+- Hades II                 TitleID 0100A00019DE0000
+- Nintendo Switch Sports   TitleID 0100D2F00D5C0000
+
+Hogwarts Legacy — mod gồm 2 phần
+--------------------------------
+A. Hội thoại + giao diện  (BẮT BUỘC — đây là phần chính):
+     romfs\Phoenix\Content\Paks\pakchunk0-Switch_p.pak
+       -> patch pak (UE4) chứa bản dịch cho CẢ 14 ngôn ngữ của game
+          (arAE deDE enUS esES esMX frFR itIT jaJP koKR plPL ptBR ruRU zhCN zhTW),
+          nên đặt console ở ngôn ngữ nào cũng hiện tiếng Việt.
+       -> Lý do phải dùng pak: file Localization/SWITCH/*.bin của game nằm BÊN TRONG
+          pakchunk0-Switch.pak, engine mount pak TRƯỚC RomFS nên file .bin rời bị bỏ qua.
+
+B. Font tiếng Việt:
+     romfs\Engine\Content\SlateDebug\Fonts\LastResort.ttf
+       -> thay font dự phòng của UE (Lato), phủ 100% ký tự tiếng Việt dùng trong mod.
+       -> File này là file RỜI (có trong Manifest_NonUFSFiles) nên LayeredFS thay được.
+
+Ghi chú
+-------
+- Thư mục romfs\Phoenix\Content\Localization\SWITCH\*.bin (bản rời) vẫn được giữ cho
+  đầy đủ, nhưng phần chính là patch pak ở mục A.
+- Định dạng text: AVAFDICT 2.0 (Unreal Engine 4.27).
+- Không ghi đè/xoá file nào của game; toàn bộ là lớp phủ (overlay) — gỡ thư mục mod là về nguyên trạng.

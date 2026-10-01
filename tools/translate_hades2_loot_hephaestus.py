@@ -1,0 +1,302 @@
+"""Translate all 243 strings of Hephaestus in Hades II."""
+from pathlib import Path
+import sys
+
+ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT / "tools"))
+from hades2_sjson_helper import apply_translation_to_sjson
+
+SRC = ROOT / "working/0100A00019DE0000_Hades2/raw_text/en/_LootData_Hephaestus.en.sjson"
+OUT = ROOT / "translations/0100A00019DE0000_Hades2/Game/Text/en/_LootData_Hephaestus.en.sjson"
+
+translations = {
+    # Intro / Cues
+    "MelinoeField_3035": "Đến lúc bảo trì rồi.",
+    "MelinoeField_3036": "Từ lò rèn.",
+    "MelinoeField_3037": "Hephaestus...",
+    "Melinoe_0940": "Ấn ký thợ rèn...",
+    "Melinoe_0941": "Sao, ngài ấy định đo ni đóng giày cho mình một bộ giáp à? {#Emph}Nhân danh Hades! Hỡi Olympus, con xin tiếp nhận thông điệp này!",
+    "Hephaestus_0278": "Này, cô em họ mới của ta đó hả? Người ta bảo cô em đang cần vũ khí hay gì đó. {#Emph}Chà{#Prev}, cô em có sẵn một món rồi đấy chứ! Nhìn tệ hại thật, từ đằng xa đã thấy {#Emph}tay nghề {#Prev}kém cỏi rồi. Cơ mà, ta {#Emph}có thể {#Prev}nâng cấp nó...",
+
+    # Family banters / Duos
+    "Hephaestus_0119": "Lúc nào cũng tuyệt vời khi Chúa tể Zeus nhà ta ghé qua bất thình lình mà không báo trước, rồi cứ đứng kè kè nhìn qua vai xem ta rèn sắt! Lại còn thích chỉ trỏ búa ta phải giáng vào đâu nữa chứ. Nào, Cha, tiếp theo sẽ chỉ vào đâu đây?",
+    "Zeus_0162": "Ta có cần nhắc nhở con trai ngoan của ta rằng, nơi này thực tế không phải là lò rèn của {#Emph}riêng con{#Prev}, mà là một xưởng chế tác để tất cả chúng ta cùng dùng không? Và giờ ta muốn dùng nó để tương trợ cho cô em họ xa của con đằng kia! {#Emph}Hừm{#Prev}, chỉ lại cho ta cách dùng cái thứ này xem nào...",
+    "Hephaestus_0121": "Mẹ ta - Nữ hoàng đáng kính - chẳng tin nổi dạo gần đây ta với cô em lại trò chuyện rôm rả với nhau đâu, phù thủy nhỏ à. Thế nên ta phải dẫn người tới đây chứng thực, cô em hiểu mà. Cơ mà xem ra người lại muốn độc chiếm trò chuyện thay phần ta rồi...",
+    "Hera_0112": "Con trai Hephaestus của ta chỉ cần chứng minh rằng nó có thể toát ra vẻ {#Emph}tự tin {#Prev}xứng tầm với một vị thần, thay vì cái thứ kỳ quặc mà nó thường bộc lộ. Ít nhất thì nó cũng biết làm cho mình trở nên hữu dụng, đúng chứ?",
+    "Hephaestus_0123": "Gia đình này ai nấy đều sĩ diện gớm! Chú Poseidon ở đây từ chối mặc giáp trụ đầy đủ chỉ vì tự phụ mình quá nhanh nhẹn và đầu óc quá cứng, {#Emph}ờ... ý ta là {#Prev}da mặt {#Emph}quá dày{#Prev}. Chẳng phải thế sao, thưa Chú?",
+    "Poseidon_0272": "Thôi nào cháu trai, cháu biết ta trân trọng tay nghề của cháu nhường nào mà! Dẫu ta có {#Emph}chết {#Prev}cũng chẳng đời nào khoác mấy cái thứ đó lên người! Chỉ là, chỉ có kẻ {#Emph}hèn nhát {#Prev}mới ra trận với lớp giáp bọc kín từ đầu đến chân; một kẻ hèn dẫu dễ sống sót hơn trước thương tích, nhưng {#Emph}vẫn cứ là hèn!",
+    "Hephaestus_0125": "{#Emph}Này{#Prev}, phù thủy nhỏ, ta vừa tán gẫu với {#Emph}Apollo {#Prev}về chuyện đâu phải ai trong chúng ta cũng sinh ra đã có sẵn vẻ ngoài bảnh bao với cái miệng dẻo quẹo. Muốn giỏi cái gì thì phải {#Emph}đổ mồ hôi sôi nước mắt{#Prev}! Cứ như cậu ta hiểu nổi điều đó ấy!",
+    "Apollo_0102": "Ồ, em thừa sức {#Emph}tưởng tượng {#Prev}được chứ, người anh trai. Một phần của sự tài hoa là khiến mọi thứ trông thật dễ dàng nhẹ tựa lông hồng. Cứ nhìn anh rèn sắt mà xem! Với em thì cũng {#Emph}như thế{#Prev}, chỉ là ở một đống những thứ {#Emph}khác {#Prev}thôi!",
+    "Hephaestus_0127": "Bà ngoại cháu và ta bình thường chẳng mấy khi trò chuyện cùng nhau. Nhưng giờ bọn ta lại có một điểm chung đấy, phù thủy nhỏ: {#Emph}chính là cháu! Ta {#Prev}bảo cháu đang kiểm soát rất tốt mọi chuyện, nhưng... ta chẳng thể qua mặt được người như Phu nhân Demeter đâu!",
+    "Demeter_0108": "Chẳng một ai trong chúng ta {#Emph}kiểm soát tốt mọi chuyện {#Prev}cả, cháu gái. Đừng bận tâm tới lời Hephaestus làm gì! Thay vào đó hãy kết hợp sức mạnh của chúng ta... và nếu Số Mệnh mỉm cười, hãy mang lại chút trật tự bình yên cho tất cả.",
+    "Hephaestus_0129": "Hơi đâu mà ủ rũ, phù thủy nhỏ! Bất kể ngoài kia đang tao loạn thế nào, cô em phải yêu công việc mình làm, đơn giản thế thôi. Dù đừng nghe lời đó từ {#Emph}ta! {#Prev}Bậc thầy chuyên gia về tình yêu đang đứng ngay đây này!",
+    "Aphrodite_0093": "Chao ôi, cảm ơn chàng nhé, anh yêu! Mỗi chúng ta đều có biết bao yêu thương để trao đi. Và điều kỳ diệu là, càng cho đi nhiều thì ta lại càng {#Emph}giàu có! {#Prev}Thật không ngờ một thứ {#Emph}quý giá {#Prev}như thế lại có thể dồi dào vô tận!",
+    "Hephaestus_0133": "Lũ phàm nhân cứ thích dâng lời cảm tạ chúng ta, nhưng {#Emph}chúng ta {#Prev}thì biết cảm tạ ai, cô em hiểu không? Thôi thì ta cũng làm điều tương tự. Ít nhất là cảm tạ Phu nhân Hestia! Vì đã giữ cho lò rèn của ta luôn đỏ lửa hừng hực. Bà ấy thậm chí thỉnh thoảng còn ghé qua chơi nữa đấy!",
+    "Hestia_0158": "Chà, đó là vì ta {#Emph}thích {#Prev}nơi này mà, chàng trai trẻ! Bất chấp mọi tiếng búa đe lẻng xẻng đinh tai, nơi này vẫn {#Emph}bình yên{#Prev}, ít nhiều là vậy. Và cậu cũng không phải là bạn đồng hành tồi. Cơ mà, sao chúng ta không cho cô em họ thấy những thứ chúng ta có thể chắp vá {#Emph}cùng nhau?",
+    "Hephaestus_0237": "Cô em có nhận ra nét giống nhau trong gia đình giữa Ares và ta không, phù thủy nhỏ? Có thể {#Emph}hắn {#Prev}được vẻ ngoài bảnh bao, nhưng {#Emph}ta {#Prev}mới là người có trọn vẹn nét cá tính độc đáo, đúng không người anh em?",
+    "Ares_0167": "Ta thừa nhận chúng ta không có chung khuôn mẫu hành vi, hỡi Hephaestus. Nhưng nếu muốn có một cuộc tỉ thí so tài như thế, thì có lẽ đích thân Aphrodite nên là người phân xử chăng? Dĩ nhiên là nếu cậu sẵn sàng đón nhận khả năng đó.",
+
+    # Low health / damaged greetings
+    "Hephaestus_0062": "Trông cô em tơi tả chẳng khác nào một cục quặng bị nung đập bẹp dí! Cố mà giữ mình lành lặn đủ lâu để thưởng thức tuyệt tác của ta nhé.",
+    "Hephaestus_0063": "{#Emph}Eo ôi{#Prev}, cô em nát bươm hết cả rồi kìa, phù thủy nhỏ. Có khi món này lại là quá muộn màng rồi chăng! Lẽ ra nó phải phát huy tác dụng sớm hơn mới phải.",
+    "Hephaestus_0064": "Chà, trông cô em thảm hại thật đấy, và lời đó được thốt ra từ chính miệng {#Emph}ta đấy nhé! {#Prev}Nhưng này, cô em được bảo trì vũ khí miễn phí đi kèm với một lời, {#Emph}ờ... {#Prev}nhận xét không mấy êm tai.",
+    "Hephaestus_0065": "Bị ăn vài đòn dọc đường thì đã sao? Cô em chính là một phần mở rộng của vũ khí mình mang, phù thủy nhỏ ạ! Mà một món vũ khí ra trò thì thừa sức chịu đòn dai dẳng.",
+
+    # Run start / early encounters
+    "Hephaestus_0066": "Tự dưng lịch làm việc của ta trống một chỗ, nên ta nghĩ sao không giúp trang bị của cô em trở lại trạng thái tốt hơn cả lúc mới xuất xưởng ngay từ đầu nhỉ?",
+    "Hephaestus_0067": "Này, ta muốn đón đầu cô em ngay lúc vừa khởi hành! Tối nay có chương trình đặc biệt: bảo trì miễn phí cho các vũ khí bạc bí mật, nếu cô em có mang theo một món?",
+    "Hephaestus_0153": "Chúc một buổi tối tốt lành, phù thủy nhỏ! Đồ ta làm thì không nhanh, nhưng thỉnh thoảng {#Emph}bản thân ta {#Prev}cũng biết nhanh nhẹn đấy. Và ta chợt nghĩ, sao mình không đồng hành cùng cô em ngay từ vạch xuất phát, {#Emph}hả? {#Prev}Chẳng mất mát gì!",
+    "Hephaestus_0154": "Cô em tính đi đâu thế, {#Emph}hả? {#Prev}Tốt nhất đừng dấn thân vào nghịch cảnh {#Emph}bất khả thi {#Prev}khi chưa chuẩn bị kỹ càng, cầm lấy này! Để ta trang bị cho cô em thật tươm tất trong nháy mắt.",
+    "Hephaestus_0155": "Tính lên đây thăm tất cả bọn ta đấy hả, hay định thử sức? Ta đoán cô em dễ vướng vào một hai vụ {#Emph}ẩu đả {#Prev}dọc đường lắm, cơ mà... ta có thể đưa ra một gói bảo hiểm {#Emph}toàn diện {#Prev}chống lại những chuyện như thế!",
+
+    # Lore / Forge talk
+    "Hephaestus_0035": "Vậy ra cô em là phù thủy hay đại loại thế, theo như ta hiểu? Thế thì cô em cần đến {#Emph}ta {#Prev}làm gì? Biết đâu ma thuật màu mè của cô em chẳng vi diệu như người ta đồn thổi! Còn tay nghề của {#Emph}ta{#Prev}, phù thủy nhỏ à, luôn luôn đáng tin cậy.",
+    "Hephaestus_0257": "Nghe đồn cô em đã nói chuyện trực tiếp mặt đối mặt với cha mẹ ta rồi hả! Ngay cả {#Emph}ta {#Prev}còn chẳng mấy khi được làm vậy. Chắc phải run rẩy lắm khi diện kiến họ. Hoặc biết đâu lại không, xét tới những chiến tích cô em đã làm để lên được tới đó.",
+    "Hephaestus_0036": "Dạo này tăm tối thật đấy, phù thủy nhỏ, nhưng biết làm sao được? Để ta nói cho nghe {#Emph}ta {#Prev}làm được gì: ta có thể ngồi đây đổ mồ hôi bên lò rèn, đập búa chan chát vào giáp trụ vũ khí các kiểu. Trong này nóng hừng hực và ồn ào đến nỗi chẳng ai dám vào quấy rầy. Cũng không tệ chút nào!",
+    "Hephaestus_0254": "Dù cô em đã qua lại vùng này biết bao lần, cô em mới chỉ thấy lò rèn của ta đúng một lần thôi đúng không, phù thủy nhỏ? Ta cố tình làm thế đấy. Nơi này khóa chặt như một cái hầm bạc, có quá nhiều thứ quý giá. Bao gồm cả bản thân ta nữa! Cơ mà rất tiếc vì đã để lỡ cuộc gặp nhé.",
+    "Hephaestus_0252": "Ta bật mí cho cô em một bí mật nhé, phù thủy nhỏ. Phần tuyệt nhất của nghề rèn không phải là những vũ khí hay áo giáp cô em tạo ra, mà chính là khoảnh khắc thổi hồn sinh mệnh vào chúng. Ta thấy cũng giống như con cái vậy! Ngoại trừ việc tạo ra chúng khó hơn việc bảo dưỡng nhiều.",
+    "Hephaestus_0037": "Chưa từng biết gia đình mình là ai, {#Emph}hả? {#Prev}Càng đỡ rách việc nếu cô em hỏi ta. Dù cô em... đâu có hỏi ta. Có khi cho phép cô em cũng chẳng thèm hỏi, và ta thừa biết cô em đang trông chờ tay nghề của ta chứ chẳng rỗi hơi nghe triết lý, nên là, {#Emph}ừm{#Prev}... đây.",
+    "Hephaestus_0038": "Cha mẹ ta, họ chẳng mấy khi hòa thuận với nhau. Nhưng lâu lâu một lần, giữa họ lại lóe lên tia lửa, và họ lại cư xử như một vị vua và nữ hoàng thực thụ. Khiến muôn thần phải ghen tị! Cơ mà dạo gần đây, họ chỉ toàn hoảng loạn thôi.",
+    "Hephaestus_0040": "Chẳng có gì bằng một trận đòn trung thực sòng phẳng để giải quyết mâu thuẫn gia đình, {#Emph}hả? {#Prev}Đặc biệt hiệu quả khi chúng ta thậm chí còn chẳng thể giết được nhau, như chính lão già Chronos có thể làm chứng. {#Emph}Thôi kệ! {#Prev}Càng nhiều việc cho ta làm!",
+    "Hephaestus_0041": "Lão già Chronos cũng khôn ngoan phết khi chiêu mộ cả một lũ người chết đầy oán hận chống lại bọn ta, đúng không? Chúng ta từng khiến chúng bỏ mạng nơi chiến trận... âu đây cũng là quả báo công bằng. Nhưng lại là cơ hội để tuyệt kỹ của ta tỏa sáng!",
+    "Hephaestus_0042": "Cô em đã gặp gần hết cái lũ trên này rồi đấy. Giờ thì cô em hiểu vì sao ta lại cứ thích giam mình trong lò rèn này rồi chứ. Công việc thì cần giải quyết, chưa kể nó đỡ mệt óc hơn việc suốt ngày phải giáp mặt họ hàng.",
+    "Hephaestus_0137": "{#Emph}Này! {#Prev}Cô em làm gì ở {#Emph}bên này {#Prev}thế, lạc đường à? Ta tưởng cô em có việc cần lo dưới Âm giới chứ đâu phải ở đây. Biết đâu là do ta tối cổ chẳng cập nhật tin tức... cô em có cần mấy thứ này hay không thì bảo?",
+    "Hephaestus_0138": "Ta vừa nghe tin sốt dẻo nhất đây, phù thủy nhỏ, rằng cô em đang nhắm thẳng tới đỉnh núi chót vót của chúng ta! Chỉ là đừng mong đợi một màn chào đón nồng hậu khi lên tới nơi nhé, vì bọn ta đang... đang có chút bận rộn ngay lúc này?",
+    "Hephaestus_0079": "Chào mừng đến với thành phố Ephyra tráng lệ, phù thủy nhỏ! Điều quan trọng nhất cần nhớ là, bất kể chuyện gì xảy ra với cô em ở đó, {#Emph}ta {#Prev}hoàn toàn không chịu trách nhiệm đâu nhé. Ta rèn vũ khí chứ không rèn phép màu...",
+    "Hephaestus_0139": "Không phải cô em lẽ ra không thở nổi trên này hay sao? Chà, còn làm gì được ngoài việc cắn răng bước tiếp, ta luôn bảo thế! Đâu phải lúc nào cũng dễ dàng, nhưng chúng ta xoay xở được hoặc chí ít là cố gắng.",
+    "Hephaestus_0080": "Này, ban nãy cô em leo được lên tận ngọn núi rồi cơ à? Lần tới ta sẽ dẫn cô em đi tham quan lò rèn cũ một vòng, chỉ hiềm nỗi... nó bị niêm phong rồi. Tìm ra nó gần như là bất khả thi! Vì lý do an ninh mà lị.",
+    "Hephaestus_0083": "Cô em chạy biến đi đâu thế hả, phù thủy nhỏ? Nhìn cứ như chui ra từ cái rãnh cống ngầm của Âm phủ vậy, vừa lạnh vừa ướt sũng... điều kiện làm việc tồi tàn tệ hại, nhìn là biết ngay.",
+    "Hephaestus_0204": "Nghe nói đường đi của cô em phải băng qua Cánh đồng Bi ai à? May mà {#Emph}ta {#Prev}chưa từng phải thấy một nơi như thế. Sự đau khổ hệt như làn khói vậy, cứ bám riết lấy mắt mũi... khó mà rũ bỏ được!",
+    "Hephaestus_0203": "Không biết Chronos đã làm gì với Tartarus rồi? Nơi đó từng là một kiệt tác kiến trúc đồ sộ dưới thời cha mẹ cô em đấy! Nhưng tên Titan đó chẳng có chút gu thẩm mỹ nào. Chắc lão dát vàng lên mọi thứ rồi cũng nên...",
+    "Hephaestus_0140": "Cách đây hồi lâu, ta có làm cho cha mẹ cô em một món quà tân gia nho nhỏ. Mô hình thu nhỏ cung điện của Cha trên này, để lũ người Âm giới các người nhớ tới bọn ta! Tên Chronos tốt nhất là đừng có nấu chảy cái thứ đó ra...",
+    "Hephaestus_0144": "Có thấy toàn bộ những chiến thuyền của Chronos đang lầm lũi tiến về phía này không, phù thủy nhỏ? Phần lớn trong số chúng từng bị đánh chìm trước đây rồi. Chúng và đám thủy thủ ma cứ liên tục sống lại ám ảnh bọn ta! Đó mới gọi là {#Emph}tận tụy phục vụ{#Prev}, {#Emph}hả?",
+    "Hephaestus_0089": "Chẳng biết mấy trận rung chuyển gần đây là do đâu, nhưng chắc chắn không phải Poseidon, cũng chẳng phải lò rèn của ta. Ắt hẳn là điềm xấu! Cơ mà, ta chẳng hơi đâu lo lắng cho tới khi biết đích xác nó là cái gì.",
+    "Hephaestus_0206": "Cô em đã thấy kích thước của con quái vật chết tiệt đang leo lên sườn núi của chúng ta chưa, phù thủy nhỏ? Ta thì may mắn chưa thấy, nhưng... nghe bảo nó to kinh khủng khiếp! Chính là Typhon đấy! Có hắn lởn vởn quanh đây làm ta chẳng tài nào giữ vững tay búa nổi!",
+    "Hephaestus_0263": "Khoan đã... Typhon đã bị tiêu diệt rồi hay chưa? Ta chẳng thấy tăm hơi quái vật đâu nữa, mà lũ đó thì đâu biết lén lút bao giờ. Xong rồi ta lại nghe cha ta kể chuyện {#Emph}cô em {#Prev}đang dọn dẹp đám tàn dư của chúng ở đây. Chắc tàn dư của chúng bé tí tẹo!",
+    "Hephaestus_0272": "Này, con quái vật khổng lồ ngoài kia biến đi đâu mất tăm rồi? Mặt núi đã hết rung chuyển và giờ tiếng búa đe của ta lại là âm thanh ồn ào nhất trần đời. Cô em hạ gục hắn rồi à? {#Emph}Chà{#Prev}, ta thậm chí còn chưa kịp liếc nhìn một cái.",
+    "Hephaestus_0259": "Điều ta {#Emph}thực sự {#Prev}muốn biết là, làm sao cô em nổ tung được lão già Typhon thành trăm mảnh vụn thế? Ở đây chẳng có món nào làm được trò {#Emph}đó{#Prev}, ít nhất là nếu không san phẳng luôn cả đỉnh núi. Bữa nào cô em phải bật mí cho ta đấy nhé.",
+    "Hephaestus_0084": "Trên này người ta đồn Chronos đã bắt cóc Tam Nữ Thần Số Mệnh hay đại loại thế? Chà... ba mụ đó đã can thiệp vào cuộc đời chúng ta quá nhiều rồi, coi như quả báo cũng công bằng đấy chứ?",
+
+    # Weapon specific dialogues (Nocturnal Arms)
+    "Hephaestus_0050": "{#Emph}Này{#Prev}, ta xin rút lại {#Emph}toàn bộ {#Prev}những gì ta từng chê bai vũ khí của cô em lúc mới gặp nhé. Để tự bào chữa, hiếm khi ta thấy tay nghề nào vượt trội hơn của ta! Cơ mà, đừng có đi bêu riếu với ai là ta đã nói thế đấy...",
+    "Hephaestus_0051": "Ta đã vắt óc suy nghĩ về mấy món vũ khí bạc tinh xảo của cô em, cố tìm xem rốt cuộc ai có thể tạo ra những thứ như thế... và từ bao giờ? Chúng chính là Khí Giới của Đêm Tối, đúng không? Vốn chỉ dành làm phương án cứu cánh cuối cùng! Nhưng ta đoán giờ chính là lúc đó rồi.",
+    "Hephaestus_0250": "Ta sẽ là người đầu tiên nói rằng chớ nên trông mặt mà bắt hình dong, cơ mà... ta chẳng ngờ cô em lại chăm chút bảo dưỡng vũ khí kỹ đến thế, vì chúng bền bỉ kinh khủng! Và làm cho {#Emph}chúng {#Prev}tỏa sáng cũng khiến {#Emph}ta tỏa sáng.",
+    "Hephaestus_0151": "{#Emph}Này{#Prev}, cô em kiếm đâu ra bộ giáp bạc đang mặc trên người thế? Tay nghề tinh xảo hơn nhiều so với ấn tượng ban đầu của ta đấy. Che chắn không được nhiều lắm, nhưng cô em có vẻ thuộc tuýp thích tự do bay nhảy. Lúc nào cũng phải có sự đánh đổi mà!",
+    "Hephaestus_0052": "Vậy đó là Quyền Trượng Hoàng Hôn sao? Descura, đó chính là tên của nàng! Được rèn sâu không biết bao nhiêu tầng dưới lòng Đất Mẹ dưới ánh mắt dõi theo của Đêm Tối... đại loại thế.",
+    "Hephaestus_0053": "Cô em đang cầm Song Đao Lim và Oros đấy {#Emph}hả? {#Prev}Nhìn thì mỏng manh thanh mảnh, nhưng gần như bất hoại đấy! Lại còn nhẹ tựa lông hồng. {#Emph}Món này {#Prev}sẽ là một trải nghiệm tuyệt hảo đây!",
+    "Hephaestus_0057": "Khoan đã, đó là Ygnium cô em đang cầm đấy à! Ngọn Lửa của Nữ Phù Thủy Ngã Ba Địa Giới! Sao, trò đã thành thầy rồi hay sao, hay bà ta chỉ sai cô em đi làm hết mấy việc bẩn thỉu chân tay?",
+    "Hephaestus_0054": "Này, đích thị là Rìu Nguyệt Thạch Zorephet rồi! Ta chưa từng nghĩ sẽ có ngày được tận mắt nhìn thấy nó. Vài người phàm tôn sùng cây rìu hai lưỡi labrys này lắm đấy, cô em biết không? Nào! Hãy cho họ thấy thứ đáng để tin tưởng.",
+    "Hephaestus_0055": "Ta chẳng bao giờ hiểu nổi vì sao lũ người phàm lại thích rìu một lưỡi. Tội gì phải chịu thiệt một lưỡi? Hai lưỡi rìu, nhân đôi uy lực, ta luôn bảo thế! Chẳng có điểm trừ nào. Thậm chí ta đang nghiên cứu một cây rìu {#Emph}ba lưỡi {#Prev}nữa cơ! Vẫn cần thêm thời gian thử nghiệm, nhưng mà, {#Emph}ừm{#Prev}, thôi bỏ đi...",
+    "Hephaestus_0056": "Được rồi, cái đầu lâu cô em đang cầm tên là Revaal thì phải? Không hẳn là hình mẫu vũ khí trong tâm trí ta, thực tế nó còn dễ làm ta gặp ác mộng nữa là, nhưng... ta sẽ là người đầu tiên công nhận, {#Emph}cứ hiệu quả là được!",
+    "Hephaestus_0196": "Ta có nhìn nhầm không, phù thủy nhỏ... hay cô em đang khoác trên mình Áo Choàng Đen Xinth chết tiệt kia đấy? Phải nói là {#Emph}mặc {#Prev}nó mới đúng! Từng nghe kể về cách nó được ráp nối nhưng ta chưa từng tận mắt thấy bao giờ! Xem thử nó làm được trò trống gì nào.",
+    "Hephaestus_0091": "Khoan đã nào, lại thêm một vũ khí khác nữa đấy hả...? {#Emph}À, phải rồi{#Prev}, Khí Giới của Đêm Tối cùng những trò biến hình khôn lường. Biết ngay mà! Lũ phù thủy các người {#Emph}thích {#Prev}thay hình đổi dạng đủ thứ, theo như ta hiểu.",
+    "Hephaestus_0285": "Rốt cuộc cô em có bao nhiêu món vũ khí chết tiệt cả thảy vậy, phù thủy nhỏ? Ta đã mất dấu toàn bộ các hình thái của chúng từ lâu rồi, cơ mà nhiều {#Emph}dã man! {#Prev}Cô em cho ta quá nhiều thứ để tha hồ chế tác đấy!",
+    "Hephaestus_0152": "Thế cái thứ cô em đang cầm trên tay là {#Emph}cái gì {#Prev}vậy, để ta xem nào! Lại là một Hình Thái nào đó chăng, ngoại trừ việc... {#Emph}trời ạ{#Prev}, ta chưa từng thấy thứ gì tương tự trước đây. Ta bắt đầu thấy ghen tị thật sự rồi đấy!",
+
+    # Mood / Aphrodite / Relationships
+    "Hephaestus_0068": "...Cô em sẽ chẳng nhận ra đâu, phù thủy nhỏ, nhưng tối nay ta đang điên tiết đấy. Không phải do cô em gây ra đâu! May thay, những lúc điên tiết, ta lại làm việc cực kỳ năng suất. Những kiệt tác {#Emph}đỉnh nhất {#Prev}của ta đều ra lò vào lúc này...",
+    "Hephaestus_0069": "Ta không dám đảm bảo một vũ khí xứng tầm thần thánh sẽ đủ sức giúp cô em vượt qua kiếp nạn này. Nhưng ta {#Emph}có thể {#Prev}đảm bảo cô em sẽ nhận được thứ tuyệt hảo nhất trần đời.",
+    "Hephaestus_0039": "Ta với mẹ ta đã cơm chẳng lành canh chẳng ngọt ngay từ ngày đầu tiên. Nhưng cô em có trách bà ấy được không? Hãy tưởng tượng nhìn thấy Apollo và Athena rạng ngời xuất chúng, rồi thầm nghĩ, {#Emph}ôi, mình muốn tạo ra một đứa như thế! {#Prev}Thế rồi kết quả là, {#Emph}khặc khặc{#Prev}, bà ấy tạo ra ta.",
+    "Hephaestus_0044": "{#Emph}Phù{#Prev}, Aphrodite ấy mà, nàng ấy đích thực là một thế lực cuồng phong, đúng không? Và là thứ duy nhất trên đời khiến ta chịu bước chân ra khỏi lò rèn! Dẫu nàng chẳng hề bận tâm việc ta cứ chúi mũi làm việc suốt ngày đêm. Ta nghĩ hai đứa luôn có một sự thấu hiểu ngầm!",
+    "Hephaestus_0045": "Này Aphrodite dường như rất quý mến {#Emph}cô em {#Prev}đấy! Nàng ấy quý gần như tất cả mọi người, công nhận là thế, nhưng với cô em thì rất khác biệt. Nàng chẳng bao giờ thừa nhận đâu, nhưng ta đoán nàng thấy hơi cô độc trên này, cô em hiểu không? Quá nhiều người quen, nhưng chẳng có mấy tri kỷ.",
+    "Hephaestus_0136": "{#Emph}Ừm{#Prev}, ta muốn cảm ơn cô em vì đã bầu bạn cùng Aphrodite, chịu khó lắng nghe nàng tâm sự. Còn ta á? Ta thấy nói chuyện đôi khi còn mệt óc hơn cả việc thụi búa vào đe... nhưng với nàng thì không. Dù sao thì! Việc nhỏ nhưng ý nghĩa lớn.",
+    "Hephaestus_0268": "Dạo này Aphrodite hào hứng với mấy chuyện chiến trận thật đấy, nhưng nàng còn vui sướng hơn khi giai đoạn khốc liệt nhất của cuộc chiến đã qua đi. Và khi {#Emph}nàng {#Prev}hạnh phúc, ta cũng vui lây. Nên là cảm ơn cô em thêm lần nữa nhé, phù thủy nhỏ.",
+    "Hephaestus_0143": "Chẳng biết ta có bao nhiêu đứa em họ trên đời, nhưng cô em là một đứa nữa đấy, {#Emph}hả? {#Prev}Cô em nhận được chế độ đãi ngộ đặc biệt chỉ vì cha mẹ ta đã mở lời nhờ vả ta thật dịu dàng. Ta chẳng phiền làm thêm chút việc đâu!",
+    "Hephaestus_0043": "{#Emph}Ừm{#Prev}, ta chưa gặp cha cô em, nhưng... nghe kể rất nhiều về ngài ấy. Thật tiếc, có khi ta lại hòa hợp với ngài ấy hơn toàn bộ cái lũ còn lại trên này. Thích kim loại và đá quý này nọ theo như ta hiểu, nên là... ít nhất chúng ta cũng có điểm chung đó.",
+    "Hephaestus_0046": "Sống dưới sự bảo bọc của Nữ Phù Thủy Ngã Ba Địa Giới già dặn đấy {#Emph}hả? {#Prev}Ta chưa từng gặp bà ấy mặt đối mặt. Bà ta sống rất khép kín, nên ta gần như không tin nổi khi Apollo bảo bà ấy đã liên lạc báo tin quan trọng. Hóa ra, tin đó chính là {#Emph}cô em!",
+    "Hephaestus_0192": "Cô em có thấy thằng nhóc Icarus bay lượn quanh đây không? Ban đầu ta cứ ngỡ nó là một con chim ma khổng lồ nào đó, cơ mà... đúng là con trai của Daedalus rồi! Ta đoán đôi cánh mới nhất là do chính tay nó làm. Thằng bé cũng khá phết đấy!",
+    "Hephaestus_0047": "Cách đây hồi lâu, anh trai cô em có đến tìm bọn ta xin cứu viện, tên cậu ta là gì nhỉ... {#Emph}Zagreus? {#Prev}Ta chẳng thèm đoái hoài. Mọi rắc rối của cái gia đình này sẽ bốc hơi trong một đêm nếu chúng ta chịu thôi xía mũi vào chuyện của nhau! Cơ mà đứng ngoài cuộc cũng thấy hơi cắn rứt...",
+    "Hephaestus_0090": "Nghe nói cô em đụng độ gã Polyphemus chột mắt rồi hả? Thằng khốn hung hãn, to xác, toàn thịt với cơ bắp. Đáng lẽ ta nên lôi {#Emph}hắn {#Prev}vào làm việc bên lò rèn cũ. Thôi kệ! Mong là hắn không cố nhai ngấu nghiến cô em!",
+    "Hephaestus_0149": "Nghe nói Eris bị vặt trụi đôi cánh tội nghiệp rồi hả, phù thủy nhỏ! Lần tới nhớ bắt ả giao nộp Khẩu Pháo Kim Cương ra nhé, được không? Nó bắn nhanh hơn bất kỳ cây cung nào ta từng thấy! Đáng để ta soi xét kỹ càng đấy...!",
+    "Hephaestus_0195": "Vậy là chúng ta có rắc rối Titan ngay sát nách nhà mình rồi! Thật đáng tiếc cho Prometheus, nhưng nghĩ lại thì... ta đoán nếu Cha xích {#Emph}ta {#Prev}lại rồi thả Đại Bàng rỉa gan ta mỗi ngày, thì ta cũng phát điên lên thôi.",
+    "Hephaestus_0279": "Ta chẳng muốn dính dáng vào mấy chuyện bẩn thỉu xấu xa giữa Prometheus và Cha đâu. Họ sẽ chẳng sớm cùng nhau nhâm nhi Tiên tửu Ambrosia đâu... nhưng ít nhất giờ chẳng còn ai bị moi gan nữa.",
+    "Hephaestus_0191": "Cô em đã đụng độ Talos dũng mãnh rồi đúng không? Gã khổng lồ đúc hoàn toàn bằng đồng. Ta từng thề sống thề chết hắn sẽ là phát minh vĩ đại nhất của mình, cơ mà... vẫn còn vài lỗi kỹ thuật cần khắc phục. Cứ thẳng tay đừng nương nhẹ, đằng nào ta cũng phải rã hắn ra đại tu lại...",
+    "Hephaestus_0253": "Những trận xô xát với Prometheus làm ta nhớ tới một cô nàng ngày xưa, sau những biến cố tàn nhẫn, đã vô tình gieo lời nguyền rủa lên muôn loài mãi mãi về sau. Chuyện dài xưa cũ rồi, nhưng... ta luôn nghĩ biết đâu nàng ta cũng đã nguyền rủa cả chúng ta.",
+    "Hephaestus_0072": "Ta đoán cha ta sẽ giúp ích được trong vụ này! Chúa tể Zeus nhà ta khoái giúp đỡ lắm! Nhất là giúp đỡ chính mình... bao nhiêu thứ đang bị đe dọa, và người ta không thể trở thành vua của Olympus bằng cách e thẹn rụt rè được.",
+    "Hephaestus_0073": "{#Emph}À{#Prev}, chú Poseidon cũng giúp đỡ được đôi chút rồi đấy hả? {#Emph}Hê! {#Prev}Ta đoán thế còn dễ chịu hơn việc chú ấy giậm chân ầm ầm xông vào lò rèn của ta mà không gõ cửa, người ướt sũng làm hơi nước bốc lên ngùn ngụt. {#Emph}Xì. {#Prev}Đúng là chúa thích đùa!",
+    "Hephaestus_0075": "Vậy là Mẹ ban phước cho cô em dễ dàng {#Emph}thế sao? {#Prev}Sự ưu ái của Nữ hoàng Hera khó giành được lắm đấy. Còn của ta... ta đoán dễ kiếm hơn nhiều...",
+    "Hephaestus_0071": "Gã Apollo mặt búng ra sữa tiếp cận cô em trước ta đấy {#Emph}hả? {#Prev}Chà, thật là bất ngờ ghê. Cậu ta có thể giúp cô em phấn chấn tinh thần, còn {#Emph}ta {#Prev}thì nâng cấp vũ khí cho cô em. Lựa chọn khó khăn nhỉ?",
+    "Hephaestus_0074": "Phải nói thật, lúc mới gặp, ta chẳng biết nên nghĩ gì về cô em nữa. Ta vốn không phải lúc nào cũng tin tưởng lũ phù thủy các người. Cơ mà, nếu cô em xứng đáng nhận ân huệ của Aphrodite, thì cô em được hưởng trọn gói ưu đãi rồi.",
+    "Hephaestus_0076": "Khi bà già Hestia bảo bà ấy quý cô em, chừng đó là quá đủ để ta hiểu chuyện. Lò rèn này sẽ vứt đi nếu không có bà ấy! Bà nhóm lửa, ta uốn sắt, và {#Emph}cô em {#Prev}hưởng trọn thành quả.",
+    "Hephaestus_0077": "Ta cứ quên béng mất cô em là cháu gái của Demeter đấy! Bản thân ta chẳng chịu nổi việc ở cạnh bà ấy. Không có ác ý cá nhân gì đâu, chỉ là ta chẳng thể làm nên trò trống gì khi trời cứ lạnh thấu xương như thế.",
+    "Hephaestus_0242": "Nếu gặp Artemis, bảo con bé đừng lo, đợt tên tiếp theo đang trên đường chuyển tới rồi. Con bé bắn tên nhanh như gió, nhưng phải công nhận là kinh tế thật! Trung bình chắc phải một mũi tên rưỡi một mạng.",
+    "Hephaestus_0078": "Ta chẳng có chút manh mối nào về việc Hermes đang làm cái gì. Cậu ta đâu rồi? Tốt nhất là liệu mà làm cho mình có ích, nếu không ta sẽ đòi lại cả đôi dép {#Emph}lẫn {#Prev}cái mũ đấy! Rồi xem lúc đó cậu ta còn nhanh nhảu được bao nhiêu!",
+    "Hephaestus_0205": "Bình thường thì hẳn là {#Emph}Athena {#Prev}thông thái sẽ là người đầu tiên chào đón và niềm nở với cô em, cơ mà... nàng ấy đang bận mang toàn bộ vũ khí áo giáp của ta ra thử nghiệm nơi tiền tuyến. Tin tốt là, công tác {#Emph}thử nghiệm {#Prev}đang diễn ra vô cùng suôn sẻ!",
+    "Hephaestus_0193": "Thỉnh thoảng họ lại chạy đến hỏi ta, {#Emph}Ares đâu rồi? {#Prev}Cứ như ta phải biết chỉ vì bọn ta là anh em ruột thịt vậy? Đang có {#Emph}chiến tranh {#Prev}đấy! Chắc chắn hắn đang ngoài kia tận hưởng những giây phút tuyệt vời!",
+    "Hephaestus_0241": "Này, ta không thể tin nổi lão Ares suýt chút nữa bỏ lỡ phần hào hứng nhất của toàn bộ cuộc chiến này! Xuất hiện kịp lúc để đối phó Typhon, và giờ hắn xuất hiện vì {#Emph}cô em. {#Prev}Lúc nào cũng mò tới đúng nơi có đổ máu.",
+    "Hephaestus_0194": "Cô em chưa thấy Dionysus đúng không? Chắc chỉ đang say xỉn quắc cần câu ở xó xỉnh nào đó thôi. Chẳng thích nhìn cảnh mọi người đâm chém nhau... ai mà trách hắn được chứ?",
+    "Hephaestus_0070": "Chẳng biết có phải do bộ đồ bạc của cô em hay không, nhưng ban nãy ta cứ ngỡ mình đang nhìn chằm chằm vào Mặt Trăng... cái nghề của ta thì chẳng mấy khi được ngắm Trăng.",
+    "Hephaestus_0060": "Ta tự tin mình có thể nhận ra tay nghề của Daedalus, người thợ thủ công phàm trần vĩ đại nhất từng sống; và ta {#Emph}đã {#Prev}nhận ra nó! Dạo này lão già ấy vẫn bận rộn chứ? Ta dám chắc ngay cả đồ lão làm vẫn còn đôi chỗ sót lại để ta hoàn thiện thêm.",
+    "Hephaestus_0061": "{#Emph}Ồ{#Prev}, món này sẽ là một kiệt tác thực sự đây, vì Daedalus đã để lại dấu ấn của lão rồi! Ta rất muốn ban phước cho cái lão già nhiều chuyện chết tiệt ấy nếu có thể, nhưng ta chẳng bao giờ tóm được lão.",
+    "Hephaestus_0245": "Ta có thể thưởng thức vũ khí ở gần như mọi hình thù kích cỡ, cơ mà... mấy món hình dáng như cây Rìu Nguyệt Thạch của cô em ắt sẽ là món khoái khẩu nhất nếu ta bị dí dao vào cổ bắt chọn. Để xem cô em làm được trò gì với nó nào, phù thủy nhỏ!",
+    "Hephaestus_0135": "Thấy cô em vẫn giữ Mảnh Kim Cương Adamant ta gửi trước đây! Chỉ là chút sắt vụn thôi, thực lòng là thế, cơ mà... nó sáng bóng và cầm khá đầm tay. Nhờ nó mà ta định vị cô em nhanh {#Emph}như chớp!",
+    "Hephaestus_0277": "Mẩu Adamant cô em nhận từ ta... hữu dụng phết đấy chứ, {#Emph}hả? {#Prev}Hàng nguyên chất nhất có thể luôn! Ta từng không nghĩ cô em lại dùng nó để gọi ta nhiều đến thế cơ đấy, nhưng mà... ta hoàn toàn không phiền đâu.",
+    "Hephaestus_0048": "Lũ phàm nhân dạo này sống chật vật thật đấy. Đôi khi ta nghĩ chỉ tại bây giờ có quá nhiều người trong số chúng. Càng đông thì càng nhiều khổ đau và ai oán! {#Emph}Haizz{#Prev}, cuộc đời là thế! Chẳng ai được chọn sinh ra, rồi cứ thế làm những gì có thể.",
+    "Hephaestus_0049": "Này những gì ta nói trước đây, về chuyện lắm phàm nhân thì lắm đau khổ ấy? Aphrodite vừa nhắc nhở ta rằng mọi chuyện không đơn giản như thế. Và có lẽ nàng ấy đúng. Chỉ là, ta thấy những điều xấu xa lúc nào cũng dễ nhận ra hơn...",
+    "Hephaestus_0150": "Nếu có cảm thấy rung chuyển, thì chắc là do chú Poseidon đang quậy tung nơi này lên đấy. Dẫu {#Emph}có những lúc {#Prev}thủ phạm lại là ta! Khi Đất Mẹ nổi cơn thịnh nộ trước thế sự, ta cho bà ấy một lối thoát tuyệt vời để xả bớt chút hơi nước.",
+    "Hephaestus_0145": "Cái đám trên này cứ làm như thể ai nấy sinh ra cũng được ban cho tất cả tài năng trên đời ấy! Có thể Apollo với Athena thì đúng, cả Artemis với Hermes nữa... Aphrodite thì chắc chắn rồi, cơ mà, {#Emph}vấn đề là! {#Prev}Hầu hết chúng ta đều phải {#Emph}đổ mồ hôi sôi nước mắt {#Prev}trước khi {#Emph}chúng ta {#Prev}trở nên giỏi giang.",
+    "Hephaestus_0146": "Hẳn cô em thích chạy nhảy khắp nơi lắm đúng không? Còn ta, tới nước này thì ta chỉ thích ngồi thôi. Và ta cứ ngồi thế đấy! Chẳng thể tìm đâu ra đôi chân nào tuyệt hơn thế này ở bất kỳ đâu ngoại trừ trên người Aphrodite! Nhưng dẫu vậy thì...",
+    "Hephaestus_0147": "Chắc cô em nghĩ ta có tất cả mọi thứ trên này đúng không? Chà, cô em đoán đúng rồi đấy! Nhưng cứ cho là cô em không phải người duy nhất phải học mọi thứ qua cay đắng trầy vi tróc vảy đâu, phù thủy nhỏ. Ta cần phải làm những gì mình làm.",
+    "Hephaestus_0081": "Suốt ngày chiến tranh, ta hơi lo mình sẽ bị đóng khung là một gã thợ rèn vũ khí mất thôi! Ta làm ra đủ thứ đồ tinh xảo đấy chứ, cô em biết không! Trang sức này, ghế bành lộng lẫy này, thậm chí cả Người Máy Tự Hành biết đi nữa! Thế mà dạo gần đây, lúc nào cũng vũ khí, chỉ toàn vũ khí...",
+    "Hephaestus_0082": "Này, thứ lỗi về đám Người Máy Tự Hành của ta trên này nhé. Nghe đồn cô em đụng độ cả lũ bọn chúng rồi! Ta đã thử nghiệm chúng đủ mọi phương diện... ngoại trừ kịch bản éo le này. Chúng mà làm phiền cô em, cứ việc đập nát ra làm sắt vụn! Cô em sẽ làm ơn cho ta đấy.",
+    "Hephaestus_0249": "Có thể cô em từng nghĩ ta sẽ sửa sang lại đám Người Máy Tự Hành... hoặc cô em đã quen với việc đập nát chúng ngay khi vừa chạm mặt. Giờ thì cô em hiểu cảm giác của {#Emph}chúng {#Prev}rồi đấy! Dù ta không nghĩ là chúng có cảm xúc gì đâu.",
+    "Hephaestus_0258": "Chronos hẳn phải ê ẩm mình mẩy sau ngần ấy lần gặp gỡ cô em rồi nhỉ, {#Emph}hả{#Prev}, phù thủy nhỏ? Nhưng lão vẫn chưa học được một bài học đích đáng. Dẫu việc nện cho lão bẹp dí nghe thật hả hê, ta bắt đầu tự hỏi kế hoạch tiếp theo ngoài việc đó ra là gì...",
+    "Hephaestus_0092": "{#Emph}Ồ, cô em đây {#Prev}rồi! Bọn ta mất dấu cô em suốt một hồi lâu! Chắc phải xuống sâu lắm làm bọn ta không dòm ngó được nữa. Chà, cô em vẫn còn nguyên tay chân kìa! Xem ra mọi chuyện vẫn ổn thỏa chán.",
+    "Hephaestus_0148": "Có phải theo ta hiểu là cô em vừa nện cho một tên {#Emph}Titan {#Prev}nào đó một trận ra trò gần đây không? Biết đâu {#Emph}ta {#Prev}cũng có đóng góp theo cách riêng của mình? Đâu phải cô em hạ gục Chronos bằng tay không, {#Emph}đúng không? {#Prev}Tóm lại là, {#Emph}làm tốt lắm{#Prev}, phù thủy nhỏ!",
+    "Hephaestus_0260": "Cô em làm được trò đó thật đấy à? Bất kể {#Emph}trò đó {#Prev}là gì, mỗi người ở đây lại có một ý kiến riêng, cơ mà... ta đoán Typhon đã biến mất và Chronos thì bị chập cạch đầu óc rồi, nên là... nhìn chung không tệ chút nào.",
+    "Hephaestus_0261": "Vẫn phải tiếp tục leo lên đỉnh núi này, theo như ta hiểu? Coi như một món {#Emph}bảo hiểm {#Prev}phòng ngừa bất kỳ sự cố tương tự Typhon nào khác... và cô em cùng Chronos và tất cả bọn ta sẽ cùng lo liệu việc đó? Được thôi, duyệt luôn!",
+    "Hephaestus_0262": "Vậy là Ông nội Chronos lại tiếp tục dang tay giúp đỡ chúng ta đấy! Để khắc phục những gì lão đã gây ra, cơ mà vẫn thấy kỳ! Ta cứ ngỡ lão sẽ sớm trở lại bản chất cũ, cơ mà... biết đâu cô em đã nện lão đủ nhừ để lão ngoan ngoãn mãi mãi. {#Emph}Hê... {#Prev}cô em nghĩ có làm thế được với mẹ ta không?",
+    "Hephaestus_0256": "...Chẳng biết lũ Satyr, Harpy với ba cái thứ quái vật đó kiếm đâu ra quân nhu tiếp tế nữa. Biết đâu là cướp bóc từ chính những tên cô em đã xử lý đêm hôm trước? Đằng nào thì nhìn lối chế tác Cự Nhân thời cổ là ta biết ngay. Làm chắc chắn phết đấy!",
+    "Hephaestus_0273": "Ai trên này cũng cuống cuồng lên về chuyện Tam Nữ Thần Số Mệnh bỗng dưng xuất hiện không kèn không trống, ta thì thấy: thế thì đã sao? Chẳng ai biết mình đang làm cái gì, {#Emph}ba mụ đó {#Prev}lại càng mù mờ nhất. {#Emph}Chà{#Prev}, biết đâu ta chỉ đang ghen tị vì họ được nghỉ phép thôi...",
+    "Hephaestus_0274": "Chẳng hiểu sao mọi người cứ làm ầm ĩ lên về chuyện Ba Nữ Thần Số Mệnh lải nhải về một thời đại xa xôi nào đó. Cô em bảo ta là trong vòng, ta không biết nữa, tầm hai mươi thế hệ phàm trần, mọi thứ có thể đổi thay á? {#Emph}Chà {#Prev}rõ là chuyện hiển nhiên!",
+    "Hephaestus_0255": "Chà, chẳng phải khách hàng xịn nhất của ta đây sao! Ta đoán chúng ta đã đạt tới cảnh giới chẳng cần phải nói năng rườm rà nữa, cứ việc chuyên tâm vào thứ ta làm giỏi nhất. Cứ tiếp tục phát huy nhé, phù thủy nhỏ!",
+
+    # Short / Standard offerings
+    "Hephaestus_0003": "Đừng lo, cô em sẽ lại như mới trong chốc lát thôi.",
+    "Hephaestus_0004": "Này phù thủy nhỏ, để ta xem cục kim loại cô em đang cầm nào.",
+    "Hephaestus_0005": "Cô em vẫn còn sống đấy chứ, phù thủy nhỏ? Cầm lấy, thứ này sẽ giúp giữ mạng cho cô em.",
+    "Hephaestus_0006": "Vẫn đập búa đe chan chát như mọi khi, cơ mà giờ hãy để ta đập vài phát vì cô em nhé.",
+    "Hephaestus_0007": "Đoán là cô em đang cần bảo trì thêm một đợt nữa, chuyện nhỏ như con thỏ.",
+    "Hephaestus_0008": "Không tính phí như thường lệ, ta cứ ghi vào sổ nợ rồi lúc nào đó Cha sẽ thanh toán.",
+    "Hephaestus_0009": "Vậy cô em có mẩu kim loại nào để ta dễ dàng uốn nắn theo ý muốn không?",
+    "Hephaestus_0010": "Ta vừa nổi hứng muốn nện búa vào kim loại một chút đây.",
+    "Hephaestus_0011": "Này, đến hẹn bảo dưỡng định kỳ cho cái thứ đó rồi đấy.",
+    "Hephaestus_0012": "Nghề của cô em nguy hiểm thật đấy, phù thủy nhỏ. Cơ mà ta có thể cho cô em chút đồ bảo hộ ở đây.",
+    "Hephaestus_0013": "Mọi chuyện thế nào rồi, vẫn ổn cả chứ? Vẫn ổn à, tốt quá, cầm lấy này.",
+    "Hephaestus_0014": "{#Emph}Eo ôi{#Prev}, dạo này mệt mỏi kinh khủng! Đừng lo. Lúc nào ta cũng có chỗ cho cô em.",
+    "Hephaestus_0015": "{#Emph}Ờ{#Prev}, ta nghĩ ta có đúng thứ giúp cô em vừa giết địch vừa giữ mạng ở đây này, phù thủy nhỏ.",
+    "Hephaestus_0016": "Cô em biết đấy, càng rèn mấy món vũ khí đó, ta lại càng phát hiện ra nhiều điều tinh xảo...",
+    "Hephaestus_0017": "Bình thường ta chẳng cho không tay nghề của mình đâu, cơ mà dạo này đâu có bình thường.",
+    "Hephaestus_0018": "Này, cô em có cái gì ở đó thế, phù thủy nhỏ, một món vũ khí ra trò đấy hả?",
+    "Hephaestus_0019": "{#Emph}Ờ{#Prev}, thật vui khi lại gặp cô em, giờ để ta bắt tay vào việc nào.",
+    "Hephaestus_0021": "Ta chỉ làm được chừng này khi cô em cứ vác cái gậy chống đó đi lông bông thôi, cô em biết đấy.",
+    "Hephaestus_0022": "{#Emph}Ờ{#Prev}, lại là cây trượng đó à... thôi thì, ít nhất ta có thể gọt bớt mấy cái mắt gỗ xù xì.",
+    "Hephaestus_0023": "Cặp dao găm bén đấy, phù thủy nhỏ. Để ta làm cho chúng trở nên hung bạo thực sự nhé.",
+    "Hephaestus_0024": "Giơ cặp song đao hào nhoáng đó lên cho ta xem nào, ta sẽ mài cho chúng sắc lẹm hơn bao giờ hết.",
+    "Hephaestus_0025": "{#Emph}Aha{#Prev}, mang món khoái khẩu của ta ra chơi đấy hả? Chỉ cần bảo trì chút xíu là cô em sẵn sàng ngay.",
+    "Hephaestus_0026": "Ai cần ma thuật phù thủy nữa khi cô em có thể vung vẩy cây rìu như thế kia chứ?",
+    "Hephaestus_0027": "Mang mấy cái que củi đang cháy đi đánh nhau à? Thôi thì, cứ hiệu quả là được, phù thủy nhỏ.",
+    "Hephaestus_0028": "{#Emph}Ờ{#Prev}, hóa ra ngọn đuốc không chỉ dùng để soi đường! Đưa chúng đây ta xem nào.",
+    "Hephaestus_0029": "Đủ loại bạc trong cái sọ đầu lâu đó để ta tha hồ chế tác, giơ nó lên nào!",
+    "Hephaestus_0030": "{#Emph}Ồ{#Prev}, lựa chọn vũ khí đầy tà khí đấy chứ, phù thủy nhỏ.",
+    "Hephaestus_0032": "Xong việc này là cô em đi nện cho lũ quái vật một trận tỉnh người giùm ta nhé, được không?",
+    "Hephaestus_0208": "Bộ giáp đẹp đấy, phù thủy nhỏ! Cơ mà, ta đoán ta có thể thêm chút gia vị cho nó!",
+    "Hephaestus_0209": "Bộ giáp của cô em có vẻ vẫn hoạt động tốt, dẫu được bảo trì thêm chút cũng chẳng hại gì.",
+    "Hephaestus_0020": "Ta luôn bảo làm việc ca tối rất tốt cho sức khỏe mà, phù thủy nhỏ.",
+    "Hephaestus_0212": "Làm việc cho gia đình thì cô em có quyền được hưởng gói bảo hiểm gia đình.",
+    "Hephaestus_0213": "Này, cô em có sẵn đồ của Daedalus rồi à? Ta có thể chế biến dựa trên thứ đó.",
+    "Hephaestus_0214": "Cứ lên đây chơi, thời tiết đẹp lắm! Nghe đồn thế. Ta ở trong lò rèn suốt từ nãy đến giờ.",
+    "Hephaestus_0215": "Thứ lỗi nếu đám Người Máy Tự Hành của ta gây chút phiền toái cho cô em khi ở trên này nhé.",
+    "Hephaestus_0216": "Ta đâu phải người ngoài kia hứng trọn đòn thù. Việc cỏn con ta làm được là giảm bớt lực va đập cho cô em.",
+    "Hephaestus_0217": "Dưới lòng đất dạo này bận rộn chứ? Ta thấu hiểu cảm giác đó hơn bất kỳ ai ở đây.",
+    "Hephaestus_0218": "Cô em đang càn quét dữ dội đấy, phù thủy nhỏ! Tiếp tục phát huy thế nhé.",
+    "Hephaestus_0219": "Mọi việc dưới Âm phủ thế nào rồi, ổn cả chứ? Trên này thì không tệ lắm.",
+    "Hephaestus_0289": "Này {#Emph}đích thị là {#Prev}cây Rìu Nguyệt Thạch yêu thích của ta rồi! Đi bổ đôi một đứa nào đó giùm ta nhé, phù thủy nhỏ.",
+
+    # Shop / Blind / Exchange
+    "Hephaestus_0095": "Chẳng ai muốn cô em thiên vị ai cả, phù thủy nhỏ ạ, nên bọn ta có cái trò chuyển Ân huệ giấu tên này để cô em chỉ việc nhận những gì có được. {#Emph}Bất ngờ chưa!",
+    "Hephaestus_0200": "Biết đâu đang trông chờ ai khác chăng? Hoặc cũng có thể chẳng mong đợi ai cụ thể, vì đã là ân huệ thì món nào chả là ân huệ, đúng không nào?",
+    "Hephaestus_0093": "Chỗ Vàng cô em dùng để mua món này... {#Emph}chà{#Prev}, nhìn thì sáng bóng thật đấy, cơ mà... xét về kim loại thì nó {#Emph}mềm {#Prev}kinh khủng! Chẳng thể làm nổi một món vũ khí ra hồn với nó đâu, ta thử rồi!",
+    "Hephaestus_0094": "Gã Người Lái Đò của cô em đằng kia á? Hắn là một trong những khách hàng sộp nhất của ta đấy, cô em biết không! Lúc nào cũng xuất hiện đúng giờ, biết ngậm chặt miệng, toàn chuyện làm ăn, chẳng dây dưa lôi thôi.",
+    "Hephaestus_0197": "Bình thường đồ của ta có giá trên trời đấy, cơ mà... cô em được hưởng giá ưu đãi người nhà! Dù gã Charon đằng kia có thu thêm chút phí dịch vụ, cô em hiểu mà.",
+    "Hephaestus_0198": "Ta cứ liên tục nhận được những chuyến hàng chở toàn đồng tiền vàng của Chronos! Ta nấu chảy chúng ra, rồi đổ đống chất lỏng sền sệt đó lại vào lòng đất nơi nó sinh ra... để Chronos tha hồ mà đúc lại!",
+    "Hephaestus_0199": "Cái cảnh phải trả tiền để nhận ân huệ nghe nó cứ {#Emph}tầm thường {#Prev}sao ấy! Sự ưu ái của thần linh chỉ dành cho kẻ túi dày tiền nhiều thôi á? {#Emph}Này! {#Prev}Cô em thậm chí còn chẳng {#Emph}có {#Prev}túi quần nữa là.",
+
+    # Wrath & Revenge
+    "Hephaestus_0096": "Bất kỳ ai dám đụng vào ta, chúng sẽ bị nện cho bẹp dí. Không ngoại lệ! Ngay cả với {#Emph}cô em.",
+    "Hephaestus_0097": "Nếu ta không tự đứng lên bảo vệ mình, ta sẽ bị đay nghiến đến hết đời mất. Nên tốt nhất hãy chuẩn bị tinh thần đón tia lửa bay tung tóe đi.",
+    "Hephaestus_0098": "{#Emph}Ờ{#Prev}, ta thà tiếp tục nện búa vào đống sắt vụn này hơn, cơ mà... ta có thể chuyển búa sang nện {#Emph}cô em {#Prev}thay thế.",
+    "Hephaestus_0099": "Chèn ép ta, ta sẽ bật lại ngay lập tức. Và ta bật lại mạnh hơn cô em tưởng nhiều đấy...",
+    "Hephaestus_0100": "Ta sẽ không nổi trận lôi đình đâu... nhưng ta cũng chẳng chịu nằm yên chịu trận. Yêu cầu của gia đình mà lị!",
+    "Hephaestus_0101": "Cô em tự chuốc lấy cái này đấy nhé, phù thủy nhỏ! Và ý ta khi nói {#Emph}cái này{#Prev}, chính là cây búa yêu thích của ta ở đây.",
+    "Hephaestus_0102": "{#Emph}Ờ{#Prev}, ta chẳng hào hứng gì việc phải trả đũa thế này đâu, cơ mà... đó là một phần của thỏa thuận rồi, cô em hiểu mà.",
+    "Hephaestus_0103": "Không thể phủ nhận Aphrodite là lựa chọn đẹp đẽ hơn nhiều, dẫu vậy! Ta không thể để chuyện này trôi qua êm thấm được.",
+    "Hephaestus_0104": "Cô em muốn chiêm ngưỡng tay nghề của ta chứ gì, vậy thì {#Emph}được thôi! {#Prev}Có điều sẽ hơi bị ồn ào một tí đấy.",
+    "Hephaestus_0105": "Lần tới ta đề nghị che chở bảo hộ cho cô em, phù thủy nhỏ? Cô em nên khôn ngoan mà chấp nhận lấy đi.",
+    "Hephaestus_0220": "Cô em lại chọn đi đánh nhau với anh trai ta thay vì chọn ta á? Cô em nghĩ hắn lấy vũ khí áo giáp từ đâu ra hả?",
+    "Hephaestus_0222": "Ta cũng sẽ chọn Aphrodite thôi cơ mà... nàng ấy đang trông chờ ta chiến đấu vì nàng, cô em hiểu mà.",
+    "Hephaestus_0223": "Cha ta không quen với việc có ai dám bật lại mình, nhưng chúng ta có thể dạy cho ông ấy quen dần.",
+    "Hephaestus_0224": "Biết đâu ta sẽ làm mẹ ta tự hào nếu ta cư xử hằn học nhỏ nhen mà chẳng vì lý do chính đáng nào!",
+
+    # Calm down
+    "Hephaestus_0109": "Được rồi, sòng phẳng rồi nhé, hết giờ nghỉ giải lao rồi. Quay lại làm việc thôi!",
+    "Hephaestus_0110": "Đó là thứ ta thích gọi là {#Emph}đập tan mọi chi tiết khúc mắc{#Prev}. Lần tới cứ giao hết cho ta.",
+    "Hephaestus_0111": "{#Emph}Hừ! {#Prev}Được rồi, coi như ta đã nguôi giận. Nhưng đừng có chọc giận ta lần nữa kẻo ta— ta thậm chí còn chẳng biết mình sẽ làm gì đâu.",
+    "Hephaestus_0112": "Đó là mức gần nhất ta có thể đạt tới việc nổi trận lôi đình rồi đấy. Vẫn đang tập luyện thêm, nhớ đấy!",
+    "Hephaestus_0113": "Giờ thì cô em đã thấy vài mẫu sản phẩm của ta rồi đấy, hay là muốn kiếm một chút cho riêng mình?",
+    "Hephaestus_0114": "Đánh đấm cừ đấy! Dẫu trông cô em có vẻ cần được vá víu lại đôi chút.",
+    "Hephaestus_0115": "{#Emph}Thôi{#Prev}, hơi đâu mà giận dỗi vì chuyện cỏn con! Ta cũng chẳng giận đến thế đâu, nhớ đấy.",
+    "Hephaestus_0116": "Ta đang cố gắng kiềm chế cơn giận của mình. Chẳng thể bốc hỏa đùng đùng như mấy người khác trên này...",
+    "Hephaestus_0117": "Được rồi, coi như chúng ta hòa nhé! Bữa khác chúng ta có thể cãi cọ tiếp.",
+    "Hephaestus_0118": "{#Emph}Hừm{#Prev}, vừa rồi không phải là việc năng suất nhất ta làm trong ngày, cơ mà {#Emph}thôi... thứ này {#Prev}sẽ bù đắp lại.",
+
+    # Affinity / Gift
+    "Melinoe_0959": "Thưa Lãnh chúa Hephaestus! Ắt hẳn tay nghề của ngài đang được săn đón ráo riết. Con xin ghi lòng tạc dạ, và chắc chắn Khí Giới của Đêm Tối cũng thế.",
+    "Hephaestus_0085": "Nghe này ta không làm việc để nhận tiền boa. Dẫu sự sắp đặt của chúng ta không phải chuyện bình thường, và dạo gần đây hiếm khi ta có khách quen mới! Nên là, cầm lấy. Coi như trao đổi qua lại.",
+    "Melinoe_0960": "Kính tặng ngài, Hephaestus dũng mãnh! Dẫu ngài có thể chẳng mấy khi có dịp dùng tới những lễ vật này, khi ngày đêm miệt mài bên lò rèn rực lửa...",
+    "Hephaestus_0086": "Này, đây chỉ là một công việc dịch vụ bình thường thôi, không cần phải khách sáo trịnh trọng thế đâu. Cơ mà cử chỉ đẹp đấy. Cảm ơn cô em nhé.",
+    "MelinoeField_1772": "Hephaestus vĩ đại! Tay nghề của ngài vô song xuất chúng, và con cũng vô cùng biết ơn sự thẳng thắn bộc trực của ngài. Xin hãy nhận lấy lễ vật này.",
+    "Hephaestus_0087": "Mỗi lần ta nhận được lễ vật là y như rằng có kẻ muốn vòi vĩnh thứ gì đó từ ta. Cô em vốn đã nhận được dịch vụ cao cấp nhất rồi, cơ mà này, Tiên tửu Nectar là của cô em mà! Giờ là của ta rồi nhé.",
+    "MelinoeField_1773": "Thưa Lãnh chúa Hephaestus, ngài còn vĩ đại hơn nhiều so với tay nghề chế tác tài hoa của mình. Con chưa từng dám nghĩ ngài lại hào phóng với con đến thế, và con vô cùng cảm kích vì điều đó.",
+    "Hephaestus_0088": "Này phù thủy nhỏ, trong này nóng quá hay do cô em đang làm ta ngượng chín cả mặt thế hả? Cứ để ta yên ổn rèn sắt đi, không cần phải làm quá lên đâu.",
+    "MelinoeField_3728": "Một lễ vật kính dâng lên người anh họ vĩ đại Lãnh chúa Hephaestus, bậc thầy của lò rèn! Kỹ năng và tính nghệ thuật tuyệt đỉnh luôn chảy trong huyết quản gia đình ta, và đọng lại dồi dào nơi ngài. Ngài chịu đựng sức nóng khủng khiếp nhường ấy mà chẳng hề buông một lời than vãn!",
+    "Hephaestus_0189": "Ở trong lò rèn này công nhận là nóng điên đảo thật. Chắc một ngụm Nectar sẽ giúp ta hạ hỏa đôi chút! Đâu phải ta nên nhậu nhẹt trong lúc làm việc thế này, cơ mà này! Chẳng ai nhìn thấy, chẳng ai cần phải biết.",
+    "MelinoeField_3729": "Giá như chúng ta có thể hội ngộ khi không ở giữa một cuộc chiến khốc liệt, thưa Lãnh chúa Hephaestus, nhưng ít nhất con đã có cơ hội được diện kiến ngài. Sự tận tụy của ngài với nghề nghiệp là nguồn cảm hứng lớn lao! Con luôn phấn đấu để đạt được tay nghề như ngài.",
+    "Hephaestus_0190": "Này, cảm ơn nhé! Ta không biết rõ cô em cho lắm, và ta không thích vội vàng kết luận trước khi chắc chắn điều gì, cơ mà... cô em có vẻ là người đàng hoàng tử tế đấy. Tốt hơn nhiều so với những gì có thể nói về {#Emph}vài {#Prev}thành viên trong gia đình này, đúng không?",
+    "MelinoeField_4299": "Xin lắng nghe con, thưa Lãnh chúa Hephaestus, bởi vò Tiên tửu Ambrosia này là dành riêng cho ngài, người thợ rèn chăm chỉ nhất trên đỉnh Olympus lẫn dưới thế gian! Trải qua muôn vàn biến cố, ngài vẫn luôn kiên định và bình thản, và giúp con cũng giữ được tâm thế vững vàng.",
+    "Hephaestus_0251": "Cô em nghĩ ta bình thản á, {#Emph}ha! {#Prev}Thực chất bên trong, phù thủy nhỏ à, nửa thời gian là ta đang gào thét điên cuồng đấy. Ta chỉ mượn cớ nện cục sắt này vào cục sắt kia để xả bớt cơn thịnh nộ thôi. Nửa thời gian còn lại, ta thấy khá phấn chấn, khi biết gia đình ta đã tìm được một người tử tế như cô em.",
+    "MelinoeField_0645": "Con xin ghi ơn ngài vì điều này, ngài Hephaestus.",
+
+    # Shouts / Call
+    "Hephaestus_0186": "Hãy {#Emph}đập bẹp {#Prev}chúng nó nào, phù thủy nhỏ!",
+    "Hephaestus_0187": "{#Emph}Một cây búa {#Prev}dành cho cô em đây!",
+    "Hephaestus_0188": "Tia lửa sắp bay mù mịt rồi!",
+    "Hephaestus_0229": "{#Emph}Đây{#Prev}, đồ mới ra lò từ xưởng rèn của ta!",
+    "Hephaestus_0230": "Phen này sẽ là một cú nổ {#Emph}vang dội đây!",
+    "Hephaestus_0231": "Xem {#Emph}chiêu này{#Prev}, phù thủy nhỏ!",
+    "Hephaestus_0232": "Được chứ, sao lại không nào!",
+    "Hephaestus_0233": "Ta không thể từ chối một đơn hàng!",
+    "Hephaestus_0234": "Ôi thôi nào, thế là không {#Emph}công bằng!",
+    "Chronos_1265": "Thần thợ rèn ra tay...!",
+    "Chronos_1266": "Âm thanh đập đe lẻng xẻng {#Emph}gì {#Prev}đó?",
+
+    # Taunts
+    "Hephaestus_0106": "Tốt nhất hãy học cách chịu đòn giỏi hơn {#Emph}thế nữa đi{#Prev}, phù thủy nhỏ.",
+    "Hephaestus_0107": "Có thể ta là kẻ còi cọc nhất đàn, cơ mà... ta vẫn thừa sức cắn đau đấy.",
+    "Hephaestus_0108": "Cẩn thận quanh ta đấy, phù thủy nhỏ! Kẻo ta trói cô em thành một cái nút thắt bây giờ.",
+    "Hephaestus_0201": "Thấy chướng mắt là cây búa của ta giáng xuống ngay tức khắc!",
+    "Hephaestus_0202": "Ta không phải kẻ chịu để người khác bắt nạt thêm lần nào nữa đâu.",
+
+    # Quick accepts
+    "Hephaestus_0170": "Được rồi đấy!",
+    "Hephaestus_0171": "Cái đó ta làm được.",
+    "Hephaestus_0172": "Xong xuôi và {#Emph}hoàn tất.",
+    "Hephaestus_0173": "Của cô em đây!",
+    "Hephaestus_0174": "Chuyện nhỏ!",
+    "Hephaestus_0175": "Đơn giản.",
+    "Hephaestus_0176": "Làm được.",
+    "Hephaestus_0177": "Chuẩn luôn!",
+    "Hephaestus_0164": "{#Emph}Này{#Prev}, chỉ là ta thôi mà!",
+    "Hephaestus_0165": "Làm theo đơn đặt hàng nhé!",
+    "Hephaestus_0166": "Có chuyện gì thế?",
+    "Hephaestus_0167": "Đúng thứ cô em muốn rồi chứ gì?",
+    "Hephaestus_0168": "Món hời thật đấy.",
+    "Hephaestus_0169": "Bắt tay vào việc thôi!",
+}
+
+def main():
+    source_raw = SRC.read_text(encoding="utf-8-sig")
+    OUT.parent.mkdir(parents=True, exist_ok=True)
+    
+    entries_dict = {
+        k: v if isinstance(v, dict) else {"DisplayName": v}
+        for k, v in translations.items()
+    }
+    
+    updated_raw = apply_translation_to_sjson(source_raw, entries_dict)
+    OUT.write_text(updated_raw, encoding="utf-8")
+    sys.stdout.reconfigure(encoding="utf-8")
+    print(f"Đã dịch và lưu thành công {len(entries_dict)} chuỗi của Hephaestus vào: {OUT}")
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,37 @@
+# ============================================================
+#  Repo CHỈ chứa MÃ NGUỒN (script/công cụ/cấu hình/từ điển).
+#  KHÔNG chứa sản phẩm (mod) hay dữ liệu dịch/bóc tách nặng.
+# ============================================================
+
+# --- Khoá bản quyền (TUYỆT ĐỐI KHÔNG commit) ---
+**/prod.keys
+**/titlekeys.txt
+
+# --- Sản phẩm đã build (mod) ---
+output/
+
+# --- Dữ liệu dịch / bóc tách / đang làm dở ---
+working/
+translations/
+temp/
+scratch/
+input/
+
+# --- ROM ---
+*.nsp
+*.xci
+
+# --- Cache / hệ điều hành ---
+__pycache__/
+*.pyc
+.commandcode/
+Thumbs.db
+desktop.ini
+
+# --- Binary công cụ nặng (tải lại khi cần) ---
+*.dll
+*.exe
+tools/hactool/
+tools/hactoolnet/
+tools/kuriimu2/
+tools/fonts_hades2/

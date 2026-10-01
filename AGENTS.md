@@ -5,6 +5,29 @@ AI là engine dịch ngữ cảnh cao cấp, tuân thủ nghiêm ngặt bộ quy
 
 ---
 
+## 0. CẤU TRÚC THƯ MỤC (bắt buộc tuân theo)
+
+```
+Translate Game/
+├─ AGENTS.md  README.md
+├─ docs/                  STATE.md (tiến độ), INSTALL-MOD.txt (hướng dẫn cài)
+├─ glossary/              master.csv + <game>.csv
+├─ input/                 prod.keys, titlekeys (KHÔNG commit)
+├─ tools/                 toàn bộ script dùng chung
+├─ games/                 dữ liệu từng game (KHÔNG commit — .gitignore chặn)
+│   └─ <TitleID>_<Tên>/
+│       ├─ source/        dữ liệu gốc bóc từ ROM (raw_text, extracted_json, font gốc…)
+│       ├─ translations/  BẢN DỊCH TIẾNG VIỆT  ← sửa ở đây khi cần fix
+│       └─ README.md      hướng dẫn riêng của game
+└─ output/                SẢN PHẨM (mod LayeredFS) — copy vào thẻ nhớ, KHÔNG commit
+    └─ atmosphere/contents/<TitleID>/romfs/...
+```
+
+- Game **mới** → tạo `games/<TitleID>_<Tên>/{source,translations}/` (mục 5).
+- **Không** tạo lại `working/`, `translations/`, `scratch/`, `temp/` ở gốc.
+
+---
+
 ## 1. Ngôn ngữ giao tiếp
 - Trả lời bằng **tiếng Việt**.
 
@@ -55,7 +78,7 @@ AI là engine dịch ngữ cảnh cao cấp, tuân thủ nghiêm ngặt bộ quy
 3. **Dịch thuật ngữ cảnh (Translate)**:
    - Dịch giữ nguyên mã phím Switch (``, ``...) và tag điều khiển (`\u000e...`).
    - Kiểm soát độ dài ký tự tránh tràn khung UI.
-   - Lưu kết quả vào `translations/vi/`.
+   - Lưu kết quả vào `games/<TitleID>_<Tên>/translations/`.
 4. **Xử lý Font chữ (Font Patching)**:
    - Tạo bộ font hỗ trợ đầy đủ tiếng Việt bằng `tools/build_custom_font.py`.
    - Đóng gói font thành 4 file `.bfarc.zs` chuẩn Nintendo vào `output/atmosphere/contents/<TitleID>/romfs/Font/`.
@@ -84,6 +107,7 @@ AI là engine dịch ngữ cảnh cao cấp, tuân thủ nghiêm ngặt bộ quy
 
 ## 5. QUẢN LÝ DUNG LƯỢNG & ĐỒNG BỘ ONEDRIVE
 - Không lưu file ROM gốc (`.nsp`, `.xci`) trực tiếp trong thư mục OneDrive để tránh phình dung lượng.
-- Tự động dọn dẹp các tệp tạm (`scratch_*`, log rác) sau mỗi giai đoạn kiểm thử.
-- Chỉ lưu giữ các tài nguyên nhẹ: file cấu hình, script, JSON bóc tách, bản dịch và gói mod thành phẩm trong `output/`.
-- Khi làm game mới, tách cấu trúc theo Title ID / Tên game để dễ quản lý độc lập.
+- Tự động dọn dẹp file tạm (`scratch_*`, `__pycache__`, `temp_*`, ảnh thử nghiệm) sau mỗi giai đoạn kiểm thử.
+- Chỉ lưu giữ tài nguyên cần thiết: script (`tools/`), cấu hình, từ điển (`glossary/`),
+  dữ liệu gốc bóc tách + bản dịch (`games/<TitleID>_<Tên>/{source,translations}`) và thành phẩm (`output/`).
+- Khi làm game mới, tạo `games/<TitleID>_<Tên>/{source,translations}/` để quản lý độc lập.

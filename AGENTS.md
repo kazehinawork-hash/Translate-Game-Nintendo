@@ -49,7 +49,7 @@ AI là engine dịch ngữ cảnh cao cấp, tuân thủ nghiêm ngặt bộ quy
 1. **Trích xuất (Extract)**:
    - Dump RomFS từ ROM `.nsp`/`.xci` bằng `tools/hactool` + `prod.keys`.
    - Giải nén gói ngôn ngữ `.sarc.zs` bằng `zstandard` và `oead`.
-   - Trích xuất MSBT sang JSON bằng `tools/extract_msbt.py` vào `working/extracted_texts/USen/`.
+   - Trích xuất MSBT sang JSON bằng `tools/extract_msbt.py` vào `games/0100D2F00D5C0000_SwitchSports/source/raw_text_extracted/USen/`.
 2. **Đối soát từ điển (Glossary Alignment)**:
    - Kiểm tra và đồng bộ từ khóa với `glossary/master.csv` trước khi dịch.
 3. **Dịch thuật ngữ cảnh (Translate)**:

@@ -194,8 +194,8 @@ tips_dict = {
 }
 
 def main():
-    src_file = r"working/extracted_texts/USen/ProgramMsg__Tips.msbt.json"
-    dst_file = r"translations/vi/ProgramMsg__Tips.msbt.json"
+    src_file = r"games/0100D2F00D5C0000_SwitchSports/source/raw_text_extracted/USen/ProgramMsg__Tips.msbt.json"
+    dst_file = r"games/0100D2F00D5C0000_SwitchSports/translations/ProgramMsg__Tips.msbt.json"
     
     with open(src_file, "r", encoding="utf-8") as f:
         src_data = json.load(f)

@@ -6,7 +6,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "tools"))
 from hades2_sjson_helper import apply_translation_to_sjson  # noqa: E402
 
-TR = ROOT / "translations/0100A00019DE0000_Hades2/Game/Text/en/ShellText.en.sjson"
+TR = ROOT / "games/0100A00019DE0000_Hades2/translations/Game/Text/en/ShellText.en.sjson"
 translations = {
     "forceCanceledReselection": "Chưa chọn thiết bị lưu. Cần có thiết bị lưu để tiếp tục.",
     "forceDisconnectedReselectionMessage": "Thiết bị lưu đã bị ngắt kết nối. Cần có thiết bị lưu để tiếp tục.",

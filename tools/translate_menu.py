@@ -1,6 +1,6 @@
 import json
 
-with open('working/extracted_texts/USen/ProgramMsg__Menu.msbt.json', 'r', encoding='utf-8') as f:
+with open('games/0100D2F00D5C0000_SwitchSports/source/raw_text_extracted/USen/ProgramMsg__Menu.msbt.json', 'r', encoding='utf-8') as f:
     menu = json.load(f)
 
 m_vi = {}
@@ -312,7 +312,7 @@ for k, v in menu.items():
     else:
         m_vi[k] = v
 
-with open('translations/vi/ProgramMsg__Menu.msbt.json', 'w', encoding='utf-8') as f:
+with open('games/0100D2F00D5C0000_SwitchSports/translations/ProgramMsg__Menu.msbt.json', 'w', encoding='utf-8') as f:
     json.dump(m_vi, f, ensure_ascii=False, indent=2)
 
 print('Translated ProgramMsg__Menu.msbt.json successfully:', len(m_vi), 'strings')

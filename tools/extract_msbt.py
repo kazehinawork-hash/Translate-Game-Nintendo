@@ -96,6 +96,6 @@ def extract_all_texts(sarc_zs_path: str, output_json_dir: str):
 if __name__ == '__main__':
     GAME_TAG = "0100D2F00D5C0000_SwitchSports"
     extract_all_texts(
-        f'working/{GAME_TAG}/orig_mals/USen.Product.150.sarc.zs',
-        f'working/{GAME_TAG}/raw_text_extracted/USen'
+        f'games/{GAME_TAG}/source/orig_mals/USen.Product.150.sarc.zs',
+        f'games/{GAME_TAG}/source/raw_text_extracted/USen'
     )

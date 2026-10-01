@@ -20,7 +20,7 @@ for p in [translations_0_100, translations_100_200, translations_200_300,
 print(f"Total translations collected: {len(all_trans)}")
 
 # Load original file
-src_path = 'working/0100F7E00C70E000_Hogwarts/split_tasks/spells_and_potions.json'
+src_path = 'games/0100F7E00C70E000_Hogwarts/translations/spells_and_potions.json'
 with open(src_path, 'r', encoding='utf-8') as f:
     source_items = json.load(f)
 
@@ -72,7 +72,7 @@ else:
     sys.exit(1)
 
 # Write output file
-out_path = 'working/0100F7E00C70E000_Hogwarts/split_tasks/translated_spells_potions.json'
+out_path = 'games/0100F7E00C70E000_Hogwarts/translations/translated_spells_potions.json'
 with open(out_path, 'w', encoding='utf-8') as f:
     json.dump(out_list, f, ensure_ascii=False, indent=2)
 

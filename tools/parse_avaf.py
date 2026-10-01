@@ -32,7 +32,7 @@ def parse_avafdict(data):
     return entries
 
 for fname in ['MAIN-frFR.bin', 'SUB-deDE.bin', 'SUB-enUS.bin']:
-    fp = os.path.join('working/0100F7E00C70E000_Hogwarts/raw_text/en-US', fname)
+    fp = os.path.join('games/0100F7E00C70E000_Hogwarts/source/raw_text/en-US', fname)
     if os.path.exists(fp):
         with open(fp, 'rb') as f:
             data = f.read()

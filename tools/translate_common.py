@@ -1,6 +1,6 @@
 import json
 
-with open('working/extracted_texts/USen/ProgramMsg__Common.msbt.json', 'r', encoding='utf-8') as f:
+with open('games/0100D2F00D5C0000_SwitchSports/source/raw_text_extracted/USen/ProgramMsg__Common.msbt.json', 'r', encoding='utf-8') as f:
     comm = json.load(f)
 
 c_vi = {}
@@ -241,7 +241,7 @@ for k, v in comm.items():
     else:
         c_vi[k] = v
 
-with open('translations/vi/ProgramMsg__Common.msbt.json', 'w', encoding='utf-8') as f:
+with open('games/0100D2F00D5C0000_SwitchSports/translations/ProgramMsg__Common.msbt.json', 'w', encoding='utf-8') as f:
     json.dump(c_vi, f, ensure_ascii=False, indent=2)
 
 print('Translated ProgramMsg__Common.msbt.json successfully:', len(c_vi), 'strings')

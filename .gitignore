@@ -1,21 +1,22 @@
 # ============================================================
-#  Repo CHỈ chứa MÃ NGUỒN (script/công cụ/cấu hình/từ điển).
-#  KHÔNG chứa sản phẩm (mod) hay dữ liệu dịch/bóc tách nặng.
+#  Repo CHỈ chứa MÃ NGUỒN (script / công cụ / cấu hình / từ điển).
+#  KHÔNG chứa sản phẩm (mod) hay dữ liệu dịch/bóc tách.
 # ============================================================
 
 # --- Khoá bản quyền (TUYỆT ĐỐI KHÔNG commit) ---
+input/
 **/prod.keys
 **/titlekeys.txt
 
-# --- Sản phẩm đã build (mod) ---
+# --- Sản phẩm đã build (mod LayeredFS) ---
 output/
 
-# --- Dữ liệu dịch / bóc tách / đang làm dở ---
-working/
-translations/
-temp/
-scratch/
-input/
+# --- Dữ liệu từng game (nguồn bóc tách + bản dịch đang làm) ---
+#     Giữ trên máy để sửa/tra cứu, KHÔNG đẩy lên git cho nhẹ repo.
+games/
+
+# --- Lưu trữ file cũ ---
+archive/
 
 # --- ROM ---
 *.nsp

@@ -20,8 +20,8 @@ def parse_avaf(path):
         entries[k_str] = v_str
     return entries
 
-ar_main = parse_avaf('working/0100F7E00C70E000_Hogwarts/raw_text/en-US/MAIN-frFR.bin')
-zh_main = parse_avaf('working/0100F7E00C70E000_Hogwarts/raw_text/en-US/SUB-deDE.bin')
+ar_main = parse_avaf('games/0100F7E00C70E000_Hogwarts/source/raw_text/en-US/MAIN-frFR.bin')
+zh_main = parse_avaf('games/0100F7E00C70E000_Hogwarts/source/raw_text/en-US/SUB-deDE.bin')
 
 print(f'Total keys in Main: {len(ar_main)}')
 
@@ -35,7 +35,7 @@ print('Top key prefixes:')
 for p, c in sorted(categories.items(), key=lambda x: x[1], reverse=True)[:25]:
     print(f'  {p:20}: {c}')
 
-# Save a clean bilingual reference (Key, English_ID, Chinese_Source) to working/hogwarts_main_raw.json
+# Save a clean bilingual reference (Key, English_ID, Chinese_Source) to games/0100F7E00C70E000_Hogwarts/source/extracted_json/hogwarts_main_raw.json
 out_list = []
 for k, zh in zh_main.items():
     out_list.append({
@@ -44,8 +44,8 @@ for k, zh in zh_main.items():
         "Source_AR": ar_main.get(k, "")
     })
 
-os.makedirs('working/0100F7E00C70E000_Hogwarts/extracted_json', exist_ok=True)
-with open('working/0100F7E00C70E000_Hogwarts/extracted_json/hogwarts_main_raw.json', 'w', encoding='utf-8') as f:
+os.makedirs('games/0100F7E00C70E000_Hogwarts/source/extracted_json', exist_ok=True)
+with open('games/0100F7E00C70E000_Hogwarts/source/extracted_json/hogwarts_main_raw.json', 'w', encoding='utf-8') as f:
     json.dump(out_list, f, ensure_ascii=False, indent=2)
 
-print('Saved working/0100F7E00C70E000_Hogwarts/extracted_json/hogwarts_main_raw.json!')
+print('Saved games/0100F7E00C70E000_Hogwarts/source/extracted_json/hogwarts_main_raw.json!')

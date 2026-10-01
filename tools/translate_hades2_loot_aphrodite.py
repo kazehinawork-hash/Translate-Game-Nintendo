@@ -6,8 +6,8 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "tools"))
 from hades2_sjson_helper import apply_translation_to_sjson  # noqa: E402
 
-SRC = ROOT / "working/0100A00019DE0000_Hades2/raw_text/en/_LootData_Aphrodite.en.sjson"
-OUT = ROOT / "translations/0100A00019DE0000_Hades2/Game/Text/en/_LootData_Aphrodite.en.sjson"
+SRC = ROOT / "games/0100A00019DE0000_Hades2/source/raw_text/en/_LootData_Aphrodite.en.sjson"
+OUT = ROOT / "games/0100A00019DE0000_Hades2/translations/Game/Text/en/_LootData_Aphrodite.en.sjson"
 
 translations = {
     "Melinoe_0948": "Tuyệt vời, Aphrodite! Chắc nàng nhận được nhiều lễ vật hơn tất cả thần nam thần nữ khác cộng lại. Dù món này là của ta tặng!",

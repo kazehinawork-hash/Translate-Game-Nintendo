@@ -11,7 +11,7 @@ import zstandard
 import oead
 
 TITLE_ID = "0100D2F00D5C0000"
-BASE_FONT_SARC = "working/romfs_base/Font/Font.Nin_NX_NVN.bfarc.zs"
+BASE_FONT_SARC = "games/0100D2F00D5C0000_SwitchSports/source/orig_font/Font/Font.Nin_NX_NVN.bfarc.zs"
 OUTPUT_FONT_DIR = f"output/atmosphere/contents/{TITLE_ID}/romfs/Font"
 OUTPUT_FONT_FILE = f"{OUTPUT_FONT_DIR}/Font.Nin_NX_NVN.bfarc.zs"
 

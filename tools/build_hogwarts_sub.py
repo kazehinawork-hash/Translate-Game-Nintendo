@@ -1,8 +1,8 @@
 """
 build_hogwarts_sub.py — Đóng gói từ điển hội thoại (SUB) tiếng Việt cho Hogwarts Legacy.
 
-Ghép bản dịch trong `working/0100F7E00C70E000_Hogwarts/split_tasks/sub_trans/sub_*.json`
-với kho gốc tiếng Pháp (`working/.../raw_text/sub_dump/SUB-koKR.bin`) rồi pack ra `SUB-*.bin`
+Ghép bản dịch trong `games/0100F7E00C70E000_Hogwarts/translations/sub_trans/sub_*.json`
+với kho gốc tiếng Pháp (`source/raw_text/sub_dump/SUB-koKR.bin`) rồi pack ra `SUB-*.bin`
 cho 5 slot ngôn ngữ trong thư mục LayeredFS.
 
 Cách dùng (chạy từ gốc dự án):
@@ -19,7 +19,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, 'tools'))
 from avaf_codec import pack_avafdict  # noqa: E402
 
-W = os.path.join(ROOT, 'working', '0100F7E00C70E000_Hogwarts')
+W = os.path.join(ROOT, 'games', '0100F7E00C70E000_Hogwarts', 'source')
 S = os.path.join(W, 'split_tasks')
 FR_BIN = os.path.join(W, 'raw_text', 'sub_dump', 'SUB-koKR.bin')
 MOD = os.path.join(ROOT, 'output', 'atmosphere', 'contents', '0100F7E00C70E000',

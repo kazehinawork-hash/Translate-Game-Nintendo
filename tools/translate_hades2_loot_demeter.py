@@ -6,8 +6,8 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "tools"))
 from hades2_sjson_helper import apply_translation_to_sjson
 
-SRC = ROOT / "working/0100A00019DE0000_Hades2/raw_text/en/_LootData_Demeter.en.sjson"
-OUT = ROOT / "translations/0100A00019DE0000_Hades2/Game/Text/en/_LootData_Demeter.en.sjson"
+SRC = ROOT / "games/0100A00019DE0000_Hades2/source/raw_text/en/_LootData_Demeter.en.sjson"
+OUT = ROOT / "games/0100A00019DE0000_Hades2/translations/Game/Text/en/_LootData_Demeter.en.sjson"
 
 translations = {
     # Intro / Interaction cues

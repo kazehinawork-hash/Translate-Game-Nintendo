@@ -325,7 +325,7 @@ def patch_xnb_font(orig_xnb_path: str, ttf_font_path: str, out_xnb_path: str, st
     print(f"✅ Hoàn tất font {font_name} (Tổng {total_glyphs} glyphs đồng bộ)")
 
 if __name__ == '__main__':
-    orig_base = "working/0100A00019DE0000_Hades2/orig_font/bin"
+    orig_base = "games/0100A00019DE0000_Hades2/source/orig_font/bin"
     out_base = "output/atmosphere/contents/0100A00019DE0000/romfs/Fonts/bin"
 
     # Bộ Font Thuần Việt Cao Cấp: Be Vietnam Pro (Được thiết kế chuẩn mực 100% cho tiếng Việt)

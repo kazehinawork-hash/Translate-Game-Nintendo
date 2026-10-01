@@ -14,8 +14,8 @@ if sys.stdout.encoding.lower() != 'utf-8':
 
 from hades2_sjson_helper import apply_translation_to_sjson, parse_sjson_entries
 
-INPUT_FILE = "working/0100A00019DE0000_Hades2/raw_text/en/ScreenText.en.sjson"
-OUTPUT_DIR = "translations/0100A00019DE0000_Hades2/Game/Text/en"
+INPUT_FILE = "games/0100A00019DE0000_Hades2/source/raw_text/en/ScreenText.en.sjson"
+OUTPUT_DIR = "games/0100A00019DE0000_Hades2/translations/Game/Text/en"
 OUTPUT_FILE = f"{OUTPUT_DIR}/ScreenText.en.sjson"
 
 TRANSLATIONS = {

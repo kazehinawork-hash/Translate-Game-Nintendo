@@ -6,7 +6,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "tools"))
 from hades2_sjson_helper import apply_translation_to_sjson  # noqa: E402
 
-TR = ROOT / "translations/0100A00019DE0000_Hades2/Game/Text/en/_LootData_Hermes.en.sjson"
+TR = ROOT / "games/0100A00019DE0000_Hades2/translations/Game/Text/en/_LootData_Hermes.en.sjson"
 translations = {
     "MelinoeField_2002": "Hermes...!",
     "Hermes_0214": "Chúng ta thật sự hạ được hắn rồi, M! Ý ta là Typhon! Ta thấy hắn lăn xuống sườn núi tối om rồi rơi cái {#Emph}ầm! {#Prev}Sau đó lại thấy hắn từ từ đứng dậy, gầm lên giận dữ hơn bao giờ hết. Nhưng mà!",

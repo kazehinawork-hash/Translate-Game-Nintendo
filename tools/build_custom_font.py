@@ -18,7 +18,7 @@ if sys.stdout.encoding.lower() != 'utf-8':
 
 TITLE_ID = "0100D2F00D5C0000"
 GAME_TAG = "0100D2F00D5C0000_SwitchSports"
-BASE_FONT_SARC = f"working/{GAME_TAG}/orig_font/Font.Nin_NX_NVN.bfarc.zs"
+BASE_FONT_SARC = f"games/{GAME_TAG}/source/orig_font/Font.Nin_NX_NVN.bfarc.zs"
 OUTPUT_FONT_DIR = f"output/atmosphere/contents/{TITLE_ID}/romfs/Font"
 OUTPUT_FONT_FILE = f"{OUTPUT_FONT_DIR}/Font.Nin_NX_NVN.bfarc.zs"
 

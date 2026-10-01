@@ -1,6 +1,6 @@
 import json
 
-with open('working/extracted_texts/USen/ProgramMsg__Advice.msbt.json', 'r', encoding='utf-8') as f:
+with open('games/0100D2F00D5C0000_SwitchSports/source/raw_text_extracted/USen/ProgramMsg__Advice.msbt.json', 'r', encoding='utf-8') as f:
     advice = json.load(f)
 
 # Translation dictionary / mappings for Advice
@@ -344,7 +344,7 @@ for k, v in advice.items():
         elif k == 'Basketball_020': s = 'Khi phòng thủ và có dòng \u000e\u0003\u0002\u0002Cơ hội cướp bóng!\u000e\u0003\u0002 hiện trên đầu,\nbạn có thể cướp bóng \u000e\u0003\u0002\u0002kể cả khi đối phương chưa nhồi bóng đột phá\u000e\u0003\u0002.'
         adv_vi[k] = s
 
-with open('translations/vi/ProgramMsg__Advice.msbt.json', 'w', encoding='utf-8') as f:
+with open('games/0100D2F00D5C0000_SwitchSports/translations/ProgramMsg__Advice.msbt.json', 'w', encoding='utf-8') as f:
     json.dump(adv_vi, f, ensure_ascii=False, indent=2)
 
 print('Translated ProgramMsg__Advice.msbt.json successfully:', len(adv_vi))

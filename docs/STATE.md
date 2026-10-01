@@ -13,7 +13,7 @@
     - Kho SUB gốc bóc lại từ NSP bằng `nsz` + Oodle (9 từ điển ngôn ngữ) → dùng bản tiếng Pháp (`SUB-koKR.bin`, 35.431 entries) làm nguồn dịch (NSP base không có tiếng Anh).
     - Gộp trùng còn **26.296 chuỗi duy nhất**, chia 53 chunk × 500 (một số chunk tách nhỏ 250 khi quá dài) và dịch song song bằng subagent.
     - QA: keys khớp 100%, 0 sai lệch placeholder/tag (`<i>`, `\n`, `[[ ]]`...), 0 chuỗi rỗng; 77 chuỗi giữ nguyên là thán từ (`Hmm.`, `Argh…`), tên bùa trong tag (`<i>Nox</i>.`) và tên người.
-    - Truy vết nguồn: `working/0100F7E00C70E000_Hogwarts/extracted_json/hogwarts_dialogs_fr.json`, `dialogs_fr_unique.json`; bản dịch ở `working/.../split_tasks/sub_trans/sub_*.json`.
+    - Truy vết nguồn: `games/0100F7E00C70E000_Hogwarts/source/extracted_json/hogwarts_dialogs_fr.json`, `dialogs_fr_unique.json`; bản dịch ở `games/0100F7E00C70E000_Hogwarts/translations/sub_trans/sub_*.json`.
     - Đã chuẩn hóa nốt tên Pháp hóa còn sót (đối chiếu chéo bằng cột tiếng Tây Ban Nha song song): `Cheek→Deek` (234), `Pallow→Sallow` (28), `Bôbalais→Spintwitches` (12), `Campolard-en-Haut/Bas→Upper/Lower Hogsfield` (5).
   - **Kiểm toán tổng hợp cuối (MAIN + SUB):** keys khớp 100%, **0** ký tự lạ (CJK/Hàn/Nhật/Ả Rập), **0** sai lệch placeholder/tag, **0** chuỗi rỗng, **0** tên Pháp hóa sót. Font đã cài phủ **223/223** ký tự dùng trong mod.
   - **Font chữ (Giai đoạn 3): ĐÃ VÁ (font dự phòng).**
@@ -21,7 +21,7 @@
     - File font rời duy nhất là `Engine/Content/SlateDebug/Fonts/LastResort.ttf` — chính là font UE dùng dự phòng khi thiếu glyph (đúng trường hợp dấu tiếng Việt).
     - Đã thay bằng **Lato Regular** (phủ đủ 224 ký tự dùng trong bản dịch, gồm toàn bộ dấu tiếng Việt) tại:
       `output/atmosphere/contents/0100F7E00C70E000/romfs/Engine/Content/SlateDebug/Fonts/LastResort.ttf`
-    - Font gốc lưu tại `working/0100F7E00C70E000_Hogwarts/romfs_dump/LastResort.ttf` (backup).
+    - Font gốc lưu tại `games/0100F7E00C70E000_Hogwarts/source/romfs_dump/LastResort.ttf` (backup).
   - ✅ **ĐÃ XỬ LÝ việc engine bỏ qua file rời:** kiểm tra `Manifest_NonUFSFiles_Switch.txt` xác nhận
     `Phoenix/Content/Localization/SWITCH/*.bin` là **UFS (nằm trong pakchunk0-Switch.pak)**, không phải file rời
     → file `.bin` đặt rời bị engine bỏ qua (đã test thực tế: không lên tiếng Việt).
@@ -57,5 +57,5 @@
 ## 4. Hạ tầng repo & đóng gói
 - **Git**: đã khởi tạo (`git init`) + commit đầu; `.gitignore` ẩn khoá (`prod.keys`, `titlekeys.txt`), ROM, cache và dữ liệu nặng.
 - **Gói phát hành**: dùng trực tiếp thư mục `output/atmosphere/` — chép nguyên thư mục này vào gốc thẻ nhớ Switch (gộp vào `atmosphere` có sẵn). Gồm cả 3 mod: `0100F7E00C70E000`, `0100A00019DE0000`, `0100D2F00D5C0000`. Hướng dẫn cài: `docs/INSTALL-MOD.txt`.
-- **Dọn dẹp**: 35 file rác thư mục gốc đã nén vào `scratch/archive_root_scrap.zip` và xoá khỏi gốc; đã xoá toàn bộ `__pycache__`.
-- **Ghi chú**: giữ nguyên `working/` (~330 MB) theo yêu cầu.
+- **Dọn dẹp**: 35 file rác thư mục gốc đã nén vào `archive/scratch/archive_root_scrap.zip` và xoá khỏi gốc; đã xoá toàn bộ `__pycache__`.
+- **Cấu trúc**: dữ liệu mỗi game nằm trong `games/<TitleID>_<Tên>/{source,translations}`; file cũ gom vào `archive/`.

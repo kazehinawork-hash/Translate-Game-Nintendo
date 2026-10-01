@@ -12,7 +12,7 @@ os.makedirs(mod_dir, exist_ok=True)
 
 # Collect all translations
 trans_map = {}
-split_dir = 'working/0100F7E00C70E000_Hogwarts/split_tasks'
+split_dir = 'games/0100F7E00C70E000_Hogwarts/translations'
 for f in os.listdir(split_dir):
     if f.startswith('translated_') and f.endswith('.json'):
         fp = os.path.join(split_dir, f)
@@ -27,7 +27,7 @@ for f in os.listdir(split_dir):
 print(f'Total translated keys gathered: {len(trans_map)}')
 
 # Load full base dictionary to ensure all 17,737 keys are present
-raw_path = 'working/0100F7E00C70E000_Hogwarts/extracted_json/hogwarts_main_raw.json'
+raw_path = 'games/0100F7E00C70E000_Hogwarts/source/extracted_json/hogwarts_main_raw.json'
 with open(raw_path, 'r', encoding='utf-8') as f:
     base_items = json.load(f)
 

@@ -99,7 +99,7 @@ for f in nsp:
                 "Source_ES": es_dict.get(k, "")
             })
         
-        out_sub_path = 'working/0100F7E00C70E000_Hogwarts/extracted_json/hogwarts_dialogs_raw.json'
+        out_sub_path = 'games/0100F7E00C70E000_Hogwarts/source/extracted_json/hogwarts_dialogs_raw.json'
         with open(out_sub_path, 'w', encoding='utf-8') as sf:
             json.dump(sub_list, sf, ensure_ascii=False, indent=2)
         print(f'Saved {len(sub_list)} dialogues to {out_sub_path}!')

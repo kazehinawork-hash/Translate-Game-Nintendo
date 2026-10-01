@@ -6,7 +6,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "tools"))
 from hades2_sjson_helper import apply_translation_to_sjson  # noqa: E402
 
-TR = ROOT / "translations/0100A00019DE0000_Hades2/Game/Text/en/_LootData_Ares.en.sjson"
+TR = ROOT / "games/0100A00019DE0000_Hades2/translations/Game/Text/en/_LootData_Ares.en.sjson"
 translations = {
     "Ares_0055": "Tin ngươi đánh bại Titan Thời Gian đêm qua truyền đến tai chúng ta, ai nấy đều khâm phục. Nhưng ta cứ tự hỏi trước khi chết, lão có phải chịu nỗi đau tột cùng không. Có lẽ cuối cùng cũng có cách khiến lão nản chí.",
     "Ares_0056": "Khi các bậc cha ông đánh bại Titan Chronos lần đầu, ta còn chưa ra đời... đêm qua ta cũng không tận mắt thấy lão bị ngươi khuất phục. Nhưng trí tưởng tượng của ta đủ phong phú để hình dung.",

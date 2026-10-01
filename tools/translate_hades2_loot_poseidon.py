@@ -4,15 +4,15 @@ import sys
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "tools"))
-sys.path.insert(0, str(ROOT / "working"))
+sys.path.insert(0, str(ROOT / "games" / "0100A00019DE0000_Hades2" / "source"))
 
 from hades2_sjson_helper import apply_translation_to_sjson
 from poseidon_trans_part1 import translations_part1
 from poseidon_trans_part2 import translations_part2
 from poseidon_trans_part3 import translations_part3
 
-SRC = ROOT / "working/0100A00019DE0000_Hades2/raw_text/en/_LootData_Poseidon.en.sjson"
-OUT = ROOT / "translations/0100A00019DE0000_Hades2/Game/Text/en/_LootData_Poseidon.en.sjson"
+SRC = ROOT / "games/0100A00019DE0000_Hades2/source/raw_text/en/_LootData_Poseidon.en.sjson"
+OUT = ROOT / "games/0100A00019DE0000_Hades2/translations/Game/Text/en/_LootData_Poseidon.en.sjson"
 
 all_translations = {}
 all_translations.update(translations_part1)

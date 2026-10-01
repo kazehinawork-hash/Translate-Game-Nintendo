@@ -7,7 +7,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "tools"))
 from hades2_sjson_helper import _iter_text_blocks  # noqa: E402
 
-TR = ROOT / "translations/0100A00019DE0000_Hades2/Game/Text/en"
+TR = ROOT / "games/0100A00019DE0000_Hades2/translations/Game/Text/en"
 
 if sys.stdout.encoding and sys.stdout.encoding.lower() != "utf-8":
     try:

@@ -12,8 +12,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from hades2_sjson_helper import apply_translation_to_sjson, parse_sjson_entries
 
 TITLE = "0100A00019DE0000_Hades2"
-SRC = ROOT / "working" / TITLE / "raw_text" / "en"
-DST = ROOT / "translations" / TITLE / "Game" / "Text" / "en"
+SRC = ROOT / "games" / TITLE / "source" / "raw_text" / "en"
+DST = ROOT / "games" / TITLE / "translations" / "Game" / "Text" / "en"
 
 
 def load_translations(path: Path) -> dict:

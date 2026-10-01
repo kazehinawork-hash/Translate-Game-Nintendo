@@ -24,8 +24,8 @@ sys.path.insert(0, str(ROOT / 'tools'))
 from hades2_sjson_helper import parse_sjson_entries, _iter_text_blocks  # noqa: E402
 from patch_hades2_xnb_font import VIETNAMESE_ALL  # noqa: E402
 
-SRC = ROOT / 'working/0100A00019DE0000_Hades2/raw_text/en'
-TR = ROOT / 'translations/0100A00019DE0000_Hades2/Game/Text/en'
+SRC = ROOT / 'games/0100A00019DE0000_Hades2/source/raw_text/en'
+TR = ROOT / 'games/0100A00019DE0000_Hades2/translations/Game/Text/en'
 OUT = ROOT / 'output/atmosphere/contents/0100A00019DE0000/romfs'
 FONT_OUT = OUT / 'Fonts/bin'
 TAG_RE = re.compile(r'\{[^{}]*\}')

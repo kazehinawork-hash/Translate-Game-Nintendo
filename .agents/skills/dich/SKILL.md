@@ -168,7 +168,7 @@ romfs/
    - **Luôn trích file gốc thật từ pak để đối chiếu** (dùng `repak`: `Phoenix/Content/Localization/SWITCH/MAIN-<lang>.bin`)
      trước khi build — đừng tin dữ liệu bóc tách cũ.
 3. **Đóng gói mod**: `tools/build_hogwarts_mod.py` (MAIN) — gom mọi `translated_*.json` trong
-   `working/<TID>_*/split_tasks/`, ghép với từ điển gốc rồi pack ra `MAIN-*.bin`.
+   `games/<TID>_*/translations/`, ghép với từ điển gốc rồi pack ra `MAIN-*.bin`.
 4. **Khi nào cần patch pak**: nếu file cần thay KHÔNG có trong `Manifest_NonUFSFiles` (tức là UFS, nằm trong pak).
    Cách đúng vẫn là mod LayeredFS — chỉ khác là phải tạo `pakchunkX-Switch_p.pak`/patch IoStore đặt trong `romfs/.../Paks/`.
 5. **Font**: ưu tiên kiểm tra `LastResort.ttf` trước — nếu thay được thì không cần đụng tới pak (xem Giai đoạn 3.4).

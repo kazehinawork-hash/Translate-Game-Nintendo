@@ -19,8 +19,8 @@ if sys.stdout.encoding.lower() != 'utf-8':
 
 TITLE_ID = "0100D2F00D5C0000"
 GAME_TAG = "0100D2F00D5C0000_SwitchSports"
-ORIG_SARC_PATH = f"working/{GAME_TAG}/orig_mals/USen.Product.150.sarc.zs"
-TRANSLATIONS_DIR = f"translations/{GAME_TAG}"
+ORIG_SARC_PATH = f"games/{GAME_TAG}/source/orig_mals/USen.Product.150.sarc.zs"
+TRANSLATIONS_DIR = f"games/{GAME_TAG}/translations"
 OUTPUT_DIR = f"output/atmosphere/contents/{TITLE_ID}/romfs/Mals"
 OUTPUT_FILE = f"{OUTPUT_DIR}/USen.Product.150.sarc.zs"
 

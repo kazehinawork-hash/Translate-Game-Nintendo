@@ -26,7 +26,7 @@ rew_cat = {
   "EquipmentSet": "Bộ trang phục",
   "Facepaint": "Họa tiết mặt"
 }
-with open('translations/vi/ProgramMsg__Equipment__RewardCategory.msbt.json', 'w', encoding='utf-8') as f:
+with open('games/0100D2F00D5C0000_SwitchSports/translations/ProgramMsg__Equipment__RewardCategory.msbt.json', 'w', encoding='utf-8') as f:
     json.dump(rew_cat, f, ensure_ascii=False, indent=2)
 
 # 2. BodyColor
@@ -36,7 +36,7 @@ body_color = {
   "BodyColor08": "Màu cơ thể (Xanh lá)",
   "BodyColor09": "Màu cơ thể (Xanh dương)"
 }
-with open('translations/vi/ProgramMsg__Equipment__BodyColor.msbt.json', 'w', encoding='utf-8') as f:
+with open('games/0100D2F00D5C0000_SwitchSports/translations/ProgramMsg__Equipment__BodyColor.msbt.json', 'w', encoding='utf-8') as f:
     json.dump(body_color, f, ensure_ascii=False, indent=2)
 
 # 3. EyeColor
@@ -54,7 +54,7 @@ eye_color = {
   "EyeColor17": "Hổ phách",
   "EyeColor18": "Xanh hải quân"
 }
-with open('translations/vi/ProgramMsg__Equipment__EyeColor.msbt.json', 'w', encoding='utf-8') as f:
+with open('games/0100D2F00D5C0000_SwitchSports/translations/ProgramMsg__Equipment__EyeColor.msbt.json', 'w', encoding='utf-8') as f:
     json.dump(eye_color, f, ensure_ascii=False, indent=2)
 
 # 4. HairColor
@@ -73,7 +73,7 @@ hair_color = {
   "HairColor18": "Tím hoàng gia",
   "HairColor19": "Xanh hải quân"
 }
-with open('translations/vi/ProgramMsg__Equipment__HairColor.msbt.json', 'w', encoding='utf-8') as f:
+with open('games/0100D2F00D5C0000_SwitchSports/translations/ProgramMsg__Equipment__HairColor.msbt.json', 'w', encoding='utf-8') as f:
     json.dump(hair_color, f, ensure_ascii=False, indent=2)
 
 # 5. Eyebrow
@@ -89,7 +89,7 @@ eyebrow = {
   "Eyebrow08": "Lông mày cách điệu",
   "Eyebrow09": "Lông mày kẻ vạch (Slit)"
 }
-with open('translations/vi/ProgramMsg__Equipment__Eyebrow.msbt.json', 'w', encoding='utf-8') as f:
+with open('games/0100D2F00D5C0000_SwitchSports/translations/ProgramMsg__Equipment__Eyebrow.msbt.json', 'w', encoding='utf-8') as f:
     json.dump(eyebrow, f, ensure_ascii=False, indent=2)
 
 # 6. Body
@@ -109,7 +109,7 @@ body = {
   "Special10": "Vóc dáng Gấu trúc",
   "Special11": "Vóc dáng Bộ xương"
 }
-with open('translations/vi/ProgramMsg__Equipment__Body.msbt.json', 'w', encoding='utf-8') as f:
+with open('games/0100D2F00D5C0000_SwitchSports/translations/ProgramMsg__Equipment__Body.msbt.json', 'w', encoding='utf-8') as f:
     json.dump(body, f, ensure_ascii=False, indent=2)
 
 # 7. AccessoryMonocle
@@ -117,7 +117,7 @@ monocle = {
   "AccessoryEye05": "Bịt mắt một bên",
   "AccessoryEye05a": "Bịt mắt một bên (Trắng)"
 }
-with open('translations/vi/ProgramMsg__Equipment__AccessoryMonocle.msbt.json', 'w', encoding='utf-8') as f:
+with open('games/0100D2F00D5C0000_SwitchSports/translations/ProgramMsg__Equipment__AccessoryMonocle.msbt.json', 'w', encoding='utf-8') as f:
     json.dump(monocle, f, ensure_ascii=False, indent=2)
 
 print('Translated 7 customization base files successfully!')

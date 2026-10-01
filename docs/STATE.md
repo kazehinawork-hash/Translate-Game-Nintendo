@@ -59,8 +59,10 @@
 - **Engine**: Unity (IL2CPP) — engine **mới**, pipeline đang được dựng.
 - **Text**: 307 AssetBundle `Data/data_*.unity3d` (~1,36 GB), mỗi đoạn hội thoại là 1
   MonoBehaviour `TextMessageProvider` chứa **20 ngôn ngữ** (không có tiếng Việt).
-- **Trạng thái**: Giai đoạn 1 ✅ · định vị & giải mã text ✅ · phương pháp vá bundle ✅ (đã chứng minh)
-  · quét toàn bộ + dịch ⏳ · font Unity ⏳ · đóng gói ⏳.
+- **Trạng thái**: ✅ **ĐÃ BUILD MOD** — text 1.579 mục (1.507 chuỗi duy nhất) dịch xong QA 0 lỗi;
+  font `Candara` đã thay bằng Lato (đủ dấu tiếng Việt); đóng gói **89 bundle (816 MB)** tại
+  `output/atmosphere/contents/01008DD013200000/romfs/Data/`.
+- **Cách chơi**: đặt ngôn ngữ game = **English** (tiếng Việt ghi đè lên khe tiếng Anh).
 - Chi tiết + việc còn lại: `games/01008DD013200000_OriAndTheWillOfTheWisps/README.md`.
 
 ---

@@ -5,16 +5,42 @@
   + UPD `01008DD013200800` (1,4 GB)
 - **Sản phẩm (dự kiến)**: `output/atmosphere/contents/01008DD013200000/romfs/Data/data_*.unity3d`
 
-## Trạng thái: 🚧 ĐANG DỰNG PIPELINE (engine mới — Unity lần đầu)
+## Trạng thái: ✅ ĐÃ BUILD MOD (chờ test trong game)
 
 | Giai đoạn | Trạng thái |
 |---|---|
 | 1. Nhận diện engine & RomFS | ✅ Xong — Unity IL2CPP |
-| 2. Định vị & giải mã text | ✅ Xong (đã hiểu định dạng) |
-| 2b. Phương pháp vá bundle | ✅ Đã chứng minh chạy được |
-| 2c. Quét toàn bộ + dịch | ⏳ Chưa |
-| 3. Vá font Unity | ⏳ Chưa |
-| 4. Đóng gói LayeredFS | ⏳ Chưa |
+| 2. Định vị & giải mã text | ✅ Xong |
+| 2b. Phương pháp vá bundle | ✅ Đã chứng minh |
+| 2c. Quét toàn bộ + dịch | ✅ **1.579 mục / 1.507 chuỗi duy nhất — dịch xong, QA 0 lỗi** |
+| 3. Vá font Unity | ✅ **Đã thay TTF nhúng của `Candara` bằng Lato (đủ dấu tiếng Việt)** |
+| 4. Đóng gói LayeredFS | ✅ **89 bundle (88 text + 1 font), 816 MB** |
+
+## Build lại
+
+```bash
+# 1) Bóc bundle gốc ra thư mục ngoài OneDrive (ví dụ C:\...\ori_work\Data)
+#    (lần sau chỉ cần chạy lại nếu xoá; bundle gốc lấy từ NSP bằng tools/ue_romfs_tool.py)
+# 2) Dịch: games/<TID>/translations/vi_*.json  (đã xong)
+# 3) Đóng gói:
+python tools/build_ori_mod.py --src <thu_muc_bundle_goc>
+python tools/patch_font_ori.py     # vá font (xem ghi chú bên dưới)
+```
+
+## Ghi chú font
+
+- 7 Font asset trong game: `Candara` (font UI chính — **thiếu 46 dấu tiếng Việt**), `keyboard`,
+  `ProFontWindows`, `moon-tools` (font dev/ký hiệu — cũng thiếu dấu), và `Roboto-Thin/Bold/Light`
+  (đã đủ tiếng Việt).
+- Đã thay TTF nhúng của **Candara** bằng `tools/fonts_hades2/Lato-Regular.ttf` trong `data_3.unity3d`.
+- Các font dev (`keyboard`, `ProFontWindows`, `moon-tools`) **cố ý giữ nguyên** vì chúng chứa glyph
+  ký hiệu riêng — thay vào có thể hỏng icon. Nếu chơi thấy dòng nào bị ô vuông, báo để vá thêm.
+
+## Việc còn lại
+
+1. **Test trong game** (chép `output/atmosphere/` vào thẻ nhớ, đặt ngôn ngữ **English**
+   → vì tiếng Việt được ghi đè lên khe tiếng Anh).
+2. Nếu còn ô vuông ở vài chỗ → xác định font tương ứng và vá nốt.
 
 ## Text nằm ở đâu (đã xác minh)
 

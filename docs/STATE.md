@@ -54,7 +54,18 @@
 
 ---
 
-## 4. Hạ tầng repo & đóng gói
+## 4. Ori and the Will of the Wisps (Nintendo Switch)
+- **Title ID**: `01008DD013200000` (Base) + `01008DD013200800` (Update 1.2.1)
+- **Engine**: Unity (IL2CPP) — engine **mới**, pipeline đang được dựng.
+- **Text**: 307 AssetBundle `Data/data_*.unity3d` (~1,36 GB), mỗi đoạn hội thoại là 1
+  MonoBehaviour `TextMessageProvider` chứa **20 ngôn ngữ** (không có tiếng Việt).
+- **Trạng thái**: Giai đoạn 1 ✅ · định vị & giải mã text ✅ · phương pháp vá bundle ✅ (đã chứng minh)
+  · quét toàn bộ + dịch ⏳ · font Unity ⏳ · đóng gói ⏳.
+- Chi tiết + việc còn lại: `games/01008DD013200000_OriAndTheWillOfTheWisps/README.md`.
+
+---
+
+## 5. Hạ tầng repo & đóng gói
 - **Git**: đã khởi tạo (`git init`) + commit đầu; `.gitignore` ẩn khoá (`prod.keys`, `titlekeys.txt`), ROM, cache và dữ liệu nặng.
 - **Gói phát hành**: dùng trực tiếp thư mục `output/atmosphere/` — chép nguyên thư mục này vào gốc thẻ nhớ Switch (gộp vào `atmosphere` có sẵn). Gồm cả 3 mod: `0100F7E00C70E000`, `0100A00019DE0000`, `0100D2F00D5C0000`. Hướng dẫn cài: `docs/INSTALL-MOD.txt`.
 - **Dọn dẹp**: đã xoá 35 file rác ở thư mục gốc, toàn bộ `__pycache__`, và thư mục `archive/` (~5 MB phụ phẩm cũ).

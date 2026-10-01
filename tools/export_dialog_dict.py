@@ -68,7 +68,9 @@ def parse_avaf(data):
     return entries
 
 Keys.load('input/prod.keys')
-nsp_path = r'E:\ROM_Backup\HogwartsLegacy\Hogwarts Legacy [0100F7E00C70E000][USA][v0][eShop].nsp'
+from find_rom import find_rom
+nsp_path = sys.argv[1] if len(sys.argv) > 1 else str(find_rom('0100F7E00C70E000'))
+print('ROM:', nsp_path)
 nsp = Nsp.Nsp()
 nsp.open(nsp_path, 'rb')
 

@@ -39,6 +39,10 @@ flowchart TD
 ### GIAI ĐOẠN 1: NHẬN DIỆN ENGINE & KHỞI TẠO BỘ NHỚ
 1. **Xác định Game mục tiêu**:
    - Đọc `docs/STATE.md` để lấy Title ID, cấu trúc file và tiến độ hiện tại.
+   - **Tìm ROM tự động** (không hardcode đường dẫn):
+     `python tools/find_rom.py "<TitleID hoặc tên game>"` — quét `input/` rồi `E:\ROM_Backup`
+     (đổi gốc bằng biến môi trường `ROM_DIR`). ROM nên để **ngoài OneDrive** cho nhẹ máy.
+   - Tạo thư mục làm việc: `games/<TitleID>_<Tên>/{source,translations}/`.
 2. **Nhận diện Engine tự động**:
    - **Nintendo First-Party** (Switch Sports, Mario, Zelda): Định dạng `MSBT` + `SARC.zs` + `BFARC.zs` font.
    - **Unity**: Thư mục `Managed/`, file `sharedassets*.assets`, file `TextMeshPro` hoặc `I2 Localization`.

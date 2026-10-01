@@ -30,7 +30,42 @@ python tools/check_font_coverage.py tools/fonts_hades2/Lato-Regular.ttf \
   output/atmosphere/contents/0100F7E00C70E000/romfs/Phoenix/Content/Localization/SWITCH/SUB-enUS.bin
 ```
 
-## ⚠️ LỖI ĐÃ SỬA (2026-10-01): phụ đề bị tiếng Pháp
+## ⚠️ LỖI ĐÃ SỬA #2: tên riêng bị "Pháp hóa" còn sót trong SUB
+
+SUB dịch **từ tiếng Pháp**, nên một số tên riêng/thuật ngữ bị giữ theo bản Pháp hóa, trong khi
+MAIN (dịch từ tiếng Trung) dùng **tên gốc** → hai phần không khớp nhau.
+
+Cách phát hiện: quét toàn bộ SUB, tìm từ vừa **có trong cột `Source_FR`** vừa **KHÔNG có trong cột
+`Source_ES`** → ra danh sách 21 từ nghi vấn; đối chiếu tiếp với MAIN để chốt tên đúng.
+
+Ví dụ điển hình (đã sửa bằng `tools/fix_hogwarts_fr_names.py`, 353 dòng):
+
+| Bản Pháp (sai) | Tên gốc (đúng) | Bằng chứng |
+|---|---|---|
+| `Adélaïde Duchêne` | **Adelaide Oakes** | ES: "Adelaide Oakes"; MAIN: `AdelaideOakes` |
+| `Aile-Céleste` | **Highwing** | ES + MAIN `Highwing` |
+| `Pont-Désir` | **Keenbridge** | ES + MAIN `Hamlet_KeenBridge` |
+| `Bourg-Garenne` | **Brocburrow** | ES + MAIN |
+| `Fléreur` | **Kneazle** | ES "kneazle"; MAIN "Mèo Kneazle" |
+| `Lépouvantail` | **Bù Nhìn** (Scarecrow) | ES "Scarecrow" |
+| `Tressedif` | **Yew Weaver** | ES "Tejetejos"; MAIN `BroomYewWeaver` |
+| `Rubanvol` | **Wind Wisp** | ES "Volutas de Viento"; MAIN `BroomWindWisp` |
+| `Delamare` | **Affpuddle** | ES "Sir Affpuddle"; MAIN |
+| `Grottaleau` | **Marunweem** | ES + MAIN |
+| `Brode` | **Weft** | ES "Grimbald Weft"; MAIN `LORE_BellTowers_Skull` |
+| `Roland` | **Rowland** | ES "Rowland"; MAIN `Rowland Oakes` |
+| `Vivet` | **Snidget** | ES "snidget" |
+| `Bubobulb` / `Murlap` / `Horglup` / `Moremplis` / `Croup` | **Bubotuber / Murtlap / Horklump / Lethifold / Crup** | ES |
+| `Créasort` | **Spellcraft** | ES "magifórmula" |
+| `Imperium` | **Imperius** | ES "Imperius" |
+| `Têtenbulle` | **Bubble-Head** | ES "casco-burbuja" |
+| `Magyar` | **Rồng Đuôi Gai Hungary** | ES "colacuerno" (Horntail) |
+
+**Kết quả sau khi sửa:** quét lại → **0 từ Pháp hóa còn sót**; so với nguồn → SUB chỉ còn **73**
+chuỗi giữ nguyên (đều là thán từ `Hmm.` / `Argh…` và tên bùa `<i>Nox</i>.`), MAIN còn 681 nhãn
+độ phân giải/FPS hợp lệ và **0 ký tự Hán**.
+
+## ⚠️ LỖI ĐÃ SỬA #1: phụ đề bị tiếng Pháp
 
 `tools/build_hogwarts_sub.py` đọc bản dịch ở `source/split_tasks/sub_trans/` — **thư mục này
 không tồn tại**; bản dịch thật nằm ở `translations/sub_trans/`. Kết quả: `glob` trả về 0 file

@@ -10,7 +10,7 @@ Cấu trúc đã giải mã (kiểm chứng trên nhiều object):
         0x18  8 byte
         0x20  int32  nameLen
         0x24  name (nameLen byte, kết thúc bằng "TextMessageProvider") + pad 4
-        ...   int32 1
+        ...   int32 1 HOẶC 2 (cờ, thay đổi tuỳ loại message — CÓ THỂ KHÔNG CÓ)
         ...   int32 enLen
         ...   CHUỖI TIẾNG ANH (enLen byte) + pad 4
         ...   int32 1 (?) rồi mảng 20 ngôn ngữ khác (FR, IT, DE, ES, JA, PT, ZH-CN,
@@ -79,18 +79,23 @@ def parse_message(raw):
         return None
     name = raw[s:name_end].decode('utf-8', 'replace')
     pos = _align4(name_end)
-    if pos + 8 > len(raw) or _u32(raw, pos) != 1:
-        return None
-    ln = _u32(raw, pos + 4)
-    if not (1 <= ln <= 4000) or pos + 8 + ln > len(raw):
-        return None
-    try:
-        text = raw[pos + 8:pos + 8 + ln].decode('utf-8')
-    except UnicodeDecodeError:
-        return None
-    if not text.isprintable():
-        return None
-    return name, pos + 4, ln, text
+    # Sau tên có thể là: [int32 cờ][int32 len][chuỗi]  HOẶC  [int32 len][chuỗi]
+    # (giá trị cờ thay đổi tuỳ loại message: 1, 2, ...). Thử lần lượt.
+    for delta in (4, 0):
+        p = pos + delta
+        if p + 4 > len(raw):
+            continue
+        ln = _u32(raw, p)
+        if not (1 <= ln <= 4000) or p + 4 + ln > len(raw):
+            continue
+        try:
+            text = raw[p + 4:p + 4 + ln].decode('utf-8')
+        except UnicodeDecodeError:
+            continue
+        if not text.isprintable() or not any(ch.isalpha() for ch in text):
+            continue
+        return name, p, ln, text
+    return None
 
 
 def _blob(text):

@@ -30,16 +30,12 @@ OUT_DATA = os.path.join(ROOT, 'output', 'atmosphere', 'contents', TITLE, 'romfs'
 
 
 def load_vi():
+    """Doc bang dich thong nhat: translations/ori_vi.json ([{Id, EN, VI}, ...])."""
+    rows = json.load(open(os.path.join(TR, 'ori_vi.json'), encoding='utf-8'))
     uniq = json.load(open(UNIQ, encoding='utf-8'))
     unique, key2id = uniq['unique'], uniq['key2id']
-    id2vi = {}
-    for i in range(20):
-        p = os.path.join(TR, f'vi_{i:03d}.json')
-        if not os.path.exists(p):
-            break
-        for it in json.load(open(p, encoding='utf-8')):
-            id2vi[it['Id']] = it['VI']
-    vi_list = [id2vi.get(i, unique[i]) for i in range(len(unique))]
+    vi_by_en = {r['EN']: r['VI'] for r in rows}
+    vi_list = [vi_by_en.get(en, en) for en in unique]
     return vi_list, key2id
 
 

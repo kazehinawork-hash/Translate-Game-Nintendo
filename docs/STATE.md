@@ -59,9 +59,13 @@
 - **Engine**: Unity (IL2CPP) — engine **mới**, pipeline đang được dựng.
 - **Text**: 307 AssetBundle `Data/data_*.unity3d` (~1,36 GB), mỗi đoạn hội thoại là 1
   MonoBehaviour `TextMessageProvider` chứa **20 ngôn ngữ** (không có tiếng Việt).
-- **Trạng thái**: ✅ **ĐÃ BUILD MOD** — text 1.579 mục (1.507 chuỗi duy nhất) dịch xong QA 0 lỗi;
-  font `Candara` đã thay bằng Lato (đủ dấu tiếng Việt); đóng gói **89 bundle (816 MB)** tại
+- **Trạng thái**: ✅ **ĐÃ BUILD MOD** — text 1.877 mục (1.793 chuỗi duy nhất) dịch 100%, QA 0 lỗi;
+  font `Candara` đã thay bằng Lato (đủ dấu tiếng Việt); đóng gói **103 file (870,7 MB)** tại
   `output/atmosphere/contents/01008DD013200000/romfs/Data/`.
+- **Sửa bản dịch**: `games/01008DD013200000_OriAndTheWillOfTheWisps/translations/ori_vi.json`
+  (mảng `{Id, EN, VI}`) → chạy lại `python tools/build_ori_mod.py` + `python tools/patch_font_ori.py`.
+- **Lưu ý kỹ thuật**: sau tên `...TextMessageProvider`, cờ trước chuỗi có thể là 1 hoặc 2 (hoặc không có)
+  — tool đã sửa để thử cả hai (nếu chỉ nhận cờ = 1 sẽ **sót ~298 mục hội thoại**).
 - **Cách chơi**: đặt ngôn ngữ game = **English** (tiếng Việt ghi đè lên khe tiếng Anh).
 - Chi tiết + việc còn lại: `games/01008DD013200000_OriAndTheWillOfTheWisps/README.md`.
 

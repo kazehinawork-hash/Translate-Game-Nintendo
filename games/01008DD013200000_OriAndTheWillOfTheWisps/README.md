@@ -12,9 +12,20 @@
 | 1. Nhận diện engine & RomFS | ✅ Xong — Unity IL2CPP |
 | 2. Định vị & giải mã text | ✅ Xong |
 | 2b. Phương pháp vá bundle | ✅ Đã chứng minh |
-| 2c. Quét toàn bộ + dịch | ✅ **1.579 mục / 1.507 chuỗi duy nhất — dịch xong, QA 0 lỗi** |
+| 2c. Quét toàn bộ + dịch | ✅ **1.877 mục / 1.793 chuỗi duy nhất — dịch 100%, QA 0 lỗi** |
 | 3. Vá font Unity | ✅ **Đã thay TTF nhúng của `Candara` bằng Lato (đủ dấu tiếng Việt)** |
-| 4. Đóng gói LayeredFS | ✅ **89 bundle (88 text + 1 font), 816 MB** |
+| 4. Đóng gói LayeredFS | ✅ **103 bundle (102 text + 1 font), 870,7 MB** |
+
+> ⚠️ **Bài học quan trọng (đã sửa trong tool):** sau tên `...TextMessageProvider` có thể là
+> `[int32 cờ][int32 len][chuỗi]` **hoặc** `[int32 len][chuỗi]`; giá trị cờ không phải luôn = 1.
+> Rule cũ chỉ nhận cờ = 1 nên **bỏ sót 298 mục hội thoại** (data_249: 68 → 151 mục).
+> `parse_message` nay thử lần lượt `delta=4` rồi `delta=0`.
+
+## Bản dịch để sửa
+
+- **File duy nhất cần sửa:** `translations/ori_vi.json` — mảng `[{Id, EN, VI}]` (1.793 dòng).
+- Sửa `VI` → chạy lại `python tools/build_ori_mod.py` + `python tools/patch_font_ori.py` là xong.
+- (Các thư mục `translations/chunks/` và `chunks2/` chỉ là bản chia nhỏ lúc dịch, không cần đụng.)
 
 ## Build lại
 

@@ -9,7 +9,7 @@
   - **MAIN (UI/Menu/HUD): HOÀN THÀNH 100% — 17.737/17.737 chuỗi tiếng Việt.**
     - Dịch từ nguồn tiếng Trung (`Source_ZH`), chia 29 chunk × 400 chuỗi và dịch song song bằng subagent.
     - QA: 0 ký tự Hán sót, 0 sai lệch placeholder/tag, 0 chuỗi rỗng; 681 chuỗi giữ nguyên là các nhãn hợp lệ (độ phân giải `1280x720`, `120 FPS`, tên phím `Enter/Tab`, `[error:...]`).
-  - **SUB (hội thoại): HOÀN THÀNH 100% — 35.431/35.431 chuỗi tiếng Việt.**
+  - **SUB (hội thoại): đã dịch 100% — 35.431/35.431 chuỗi** (nay **đã vào mod**: 97,7% VI).
     - Kho SUB gốc bóc lại từ NSP bằng `nsz` + Oodle (9 từ điển ngôn ngữ) → dùng bản tiếng Pháp (`SUB-koKR.bin`, 35.431 entries) làm nguồn dịch (NSP base không có tiếng Anh).
     - Gộp trùng còn **26.296 chuỗi duy nhất**, chia 53 chunk × 500 (một số chunk tách nhỏ 250 khi quá dài) và dịch song song bằng subagent.
     - QA: keys khớp 100%, 0 sai lệch placeholder/tag (`<i>`, `\n`, `[[ ]]`...), 0 chuỗi rỗng; 77 chuỗi giữ nguyên là thán từ (`Hmm.`, `Argh…`), tên bùa trong tag (`<i>Nox</i>.`) và tên người.
@@ -39,6 +39,13 @@
     - `Phoenix/Content/Paks/pakchunk0-Switch_p.pak` (33,8 MB) — **phần chính, chứa text bản dịch**.
     - `Phoenix/Content/Localization/SWITCH/` — 5 `MAIN-*.bin` + 5 `SUB-*.bin` (giữ cho đầy đủ).
     - `Engine/Content/SlateDebug/Fonts/LastResort.ttf` — font tiếng Việt (file rời, LayeredFS ăn).
+  - 🐞 **BUG ĐÃ SỬA (2026-10-01): phụ đề trong game vẫn tiếng Pháp.**
+    `tools/build_hogwarts_sub.py` đọc bản dịch ở `source/split_tasks/sub_trans/` — **không tồn tại**;
+    bản dịch thật ở `translations/sub_trans/`. `glob` trả 0 file → `id2vi` rỗng → **SUB-*.bin giữ
+    nguyên tiếng Pháp** (chỉ 2,6% tiếng Việt do trùng ký tự) **mà không hề báo lỗi**.
+    → Đã sửa đường dẫn + thêm cảnh báo khi thiếu bản dịch; build lại **26.296/26.296 chuỗi**,
+    `SUB-enUS.bin` nay **97,7% tiếng Việt**; patch pak build lại (28 entry, đã verify khớp).
+    Bản dịch **chưa từng thiếu** — lỗi nằm hoàn toàn ở script build (im lặng khi nạp 0 file).
 
 ---
 

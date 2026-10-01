@@ -20,7 +20,7 @@ sys.path.insert(0, os.path.join(ROOT, 'tools'))
 from avaf_codec import pack_avafdict  # noqa: E402
 
 W = os.path.join(ROOT, 'games', '0100F7E00C70E000_Hogwarts', 'source')
-S = os.path.join(W, 'split_tasks')
+S = os.path.join(ROOT, 'games', '0100F7E00C70E000_Hogwarts', 'translations')
 FR_BIN = os.path.join(W, 'raw_text', 'sub_dump', 'SUB-koKR.bin')
 MOD = os.path.join(ROOT, 'output', 'atmosphere', 'contents', '0100F7E00C70E000',
                    'romfs', 'Phoenix', 'Content', 'Localization', 'SWITCH')
@@ -48,6 +48,10 @@ def main():
             id2vi[it['Id']] = it['VI']
 
     fr2vi = {fr: (id2vi.get(i) or fr) for i, fr in enumerate(U)}
+    missing = sum(1 for i in range(len(U)) if i not in id2vi)
+    print(f'Ban dich phu de: {len(id2vi)}/{len(U)} chuoi (thieu {missing})')
+    if missing:
+        print('  CANH BAO: con thieu ban dich -> se giu nguyen tieng Phap!')
     fr_dict = parse_avaf(FR_BIN)
     final = {k: fr2vi.get(v, v) for k, v in fr_dict.items()}
     print(f'SUB entries: {len(final)}')

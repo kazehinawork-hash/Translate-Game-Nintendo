@@ -36,6 +36,8 @@ Translate Game/
 ## 2. 🧠 BỘ NHỚ PHIÊN & TRẠNG THÁI (Session Memory) — BẮT BUỘC
 - **ĐẦU PHIÊN**:
   - Đọc `docs/STATE.md` — trạng thái game đang dịch, các file đã xong, việc đang làm, glossary đã thống nhất.
+  - Đọc `docs/BAI-HOC.md` — **bài học kinh nghiệm & checklist bàn giao**. Bắt buộc: chạy
+    `python tools/qa_text.py --game <ten_game>` và phải **PASS** trước khi báo xong.
 - **CUỐI PHIÊN / KHI XONG MỘT GIAI ĐOẠN**:
   - Cập nhật `docs/STATE.md` (tiến độ từng môn thể thao, danh mục file).
   - Tự động chạy tool build mod kiểm tra tính toàn vẹn của file.

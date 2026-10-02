@@ -115,6 +115,11 @@ flowchart TD
 ---
 
 ### GIAI ĐOẠN 5: KIỂM TOÁN TỰ ĐỘNG & BÀN GIAO (QA & HANDOFF)
+0. **BẮT BUỘC — chạy cổng QA trước khi bàn giao:** `python tools/qa_text.py --game <ten_game>`
+   phải in **PASS**. Cổng này đọc lại **thành phẩm đã build**, so với nguồn gốc và bắt:
+   thiếu/thừa key, chuỗi rỗng, ký tự lạ (CJK/Hangul/Kana/Ả Rập/Nga), lệch tag & placeholder,
+   mục `[error:...]`/`[KEY]`, `\n` sai, ký tự điều khiển, độ phủ font.
+   **Không được bàn giao nếu chưa PASS.** Danh sách bài học đầy đủ: `docs/BAI-HOC.md`.
 1. **Chạy bộ công cụ kiểm toán độc lập**:
    - `check_special_characters.py`: kiểm tra placeholder, escape sequence `\"`, không gõ nhầm `/n`.
    - Script QA riêng của từng game (`qa_<game>_mod.py`): đối soát số file, tỷ lệ hoàn thành, multiset thẻ điều khiển.
@@ -176,3 +181,25 @@ romfs/
 4. **Khi nào cần patch pak**: nếu file cần thay KHÔNG có trong `Manifest_NonUFSFiles` (tức là UFS, nằm trong pak).
    Cách đúng vẫn là mod LayeredFS — chỉ khác là phải tạo `pakchunkX-Switch_p.pak`/patch IoStore đặt trong `romfs/.../Paks/`.
 5. **Font**: ưu tiên kiểm tra `LastResort.ttf` trước — nếu thay được thì không cần đụng tới pak (xem Giai đoạn 3.4).
+
+---
+
+## PHỤ LỤC B — BÀI HỌC KINH NGHIỆM & CỔNG QA BẮT BUỘC
+
+📖 **Đọc `docs/BAI-HOC.md` trước khi build.** Tài liệu đó ghi 12 lỗi đã từng xảy ra thật, nguyên nhân
+gốc và quy tắc chống lặp. Tóm tắt các lỗi NẶNG NHẤT:
+
+| # | Lỗi | Quy tắc chống lặp |
+|---|---|---|
+| 1 | Script build glob sai đường dẫn → **nạp 0 file bản dịch** → đóng gói tiếng gốc mà không báo lỗi | Mọi script build **phải in số lượng input đã nạp**; nạp 0/thiếu → **raise**, không im lặng |
+| 2 | Codec ghi sai magic (ASCII thay vì UTF-16LE) → game hiện `[KEY]` | Luôn kiểm **roundtrip**: `pack(unpack(file_goc)) == file_goc` |
+| 3 | File rời trong `romfs/` bị bỏ qua vì engine mount pak trước | Kiểm `Manifest_NonUFSFiles_<Platform>.txt` trước khi hứa LayeredFS |
+| 4 | Hardcode "giá trị magic" khi parse → **sót 298 mục hội thoại** | Thử lần lượt các khả năng + **soát rò rỉ** (chuỗi giống câu không nằm trong tập đã trích) |
+| 5 | Regex thiếu dải ký tự → bỏ sót Hangul / báo nhầm tiếng Việt | Dùng `tools/qa_text.py` (đã có bộ ký tự đầy đủ) |
+| 6 | Dịch từ ngôn ngữ đã bản địa hóa tên riêng → sai tên | **Không đoán**: tra bằng **cột ngôn ngữ song song** (FR vs ES) + đối chiếu phần dịch từ ngôn ngữ khác |
+| 7 | Mục `[error:...]`/`[KEY]` có sẵn trong nguồn | Vá bằng **key anh em** (ví dụ `Data_ExpiresIn` dùng `{time}` → `Data_RefreshesIn` cũng `{time}`) |
+| 8 | Thay hẳn font → **mất glyph icon (PUA)** | Font có PUA đang dùng → **hợp nhất** (`tools/merge_vi_font.py`), không thay hẳn |
+| 9 | Kiểm tra bằng "niềm tin" vào script build | Sau build **phải mở lại thành phẩm** đọc và so với nguồn |
+| 10 | PowerShell + tiếng Việt trong `python -c` → hỏng ký tự | Luôn **viết script ra file** rồi chạy |
+
+**Cổng QA:** `python tools/qa_text.py --game <hogwarts|ori>` → phải **PASS** (đã chạy được cho cả 2 game).

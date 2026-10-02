@@ -212,6 +212,16 @@ def _read_sjson_dir(dirpath):
     return out
 
 
+def load_obf():
+    """Ori and the Blind Forest: Definitive Edition (Unity IL2CPP, BitmapFont)."""
+    G = os.path.join(ROOT, 'games', '010061D00DB74000_OriAndTheBlindForest')
+    OUT = os.path.join(ROOT, 'output', 'atmosphere', 'contents', '010061D00DB74000', 'romfs', 'Data')
+    ent = json.load(open(os.path.join(G, 'source', 'obf_text_all.json'), encoding='utf-8'))
+    # _scan_unity() đặt khoá dạng "<tên_file>:<path_id>" -> nguồn phải khớp định dạng đó
+    src = {f'data.unity3d:{e["path_id"]}': e['english'] for e in ent}
+    return [('Ori Blind Forest (Unity)', src, _scan_unity(OUT, set(src)))]
+
+
 def load_hades2():
     G = os.path.join(ROOT, 'games', '0100A00019DE0000_Hades2')
     OUT = os.path.join(ROOT, 'output', 'atmosphere', 'contents', '0100A00019DE0000', 'romfs', 'Game', 'Text', 'en')
@@ -244,7 +254,7 @@ def load_switchsports():
     return [('Switch Sports (MSBT)', src, built)]
 
 
-ADAPTERS = {'hogwarts': load_hogwarts, 'ori': load_ori,
+ADAPTERS = {'hogwarts': load_hogwarts, 'ori': load_ori, 'obf': load_obf,
             'hades2': load_hades2, 'switchsports': load_switchsports}
 
 

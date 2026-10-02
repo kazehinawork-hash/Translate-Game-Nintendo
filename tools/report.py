@@ -22,12 +22,14 @@ sys.path.insert(0, os.path.join(ROOT, 'tools'))
 
 GAMES = [('hogwarts', '0100F7E00C70E000', 'Hogwarts Legacy'),
          ('ori', '01008DD013200000', 'Ori and the Will of the Wisps'),
+         ('obf', '010061D00DB74000', 'Ori and the Blind Forest DE'),
          ('hades2', '0100A00019DE0000', 'Hades II'),
          ('switchsports', '0100D2F00D5C0000', 'Nintendo Switch Sports')]
 
 FOLDER = {
     'hogwarts': '0100F7E00C70E000_Hogwarts',
     'ori': '01008DD013200000_OriAndTheWillOfTheWisps',
+    'obf': '010061D00DB74000_OriAndTheBlindForest',
     'hades2': '0100A00019DE0000_Hades2',
     'switchsports': '0100D2F00D5C0000_SwitchSports',
 }

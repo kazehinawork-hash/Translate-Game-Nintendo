@@ -38,6 +38,8 @@ TITLE_DIR = {
     '0100D2F00D5C0000': 'SwitchSports',
     '01008DD013200000': 'Ori',
     '01008DD013200800': 'Ori',
+    '010061D00DB74000': 'OriBlindForest',
+    '010061D00DB74800': 'OriBlindForest',
 }
 
 

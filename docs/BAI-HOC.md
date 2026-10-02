@@ -180,6 +180,22 @@
 - **Quy tắc dự án kèm theo:** ROM chỉ nằm trong `input/` trong lúc bóc dữ liệu; **bóc xong phải chuyển
   ra `E:\ROM_Backup\<Tên game>\`**. `tools/find_rom.py` tìm cả 2 nơi nên vẫn bóc lại được khi cần.
 
+### BH-17. Kiểm tra ĐỘ PHỦ FONT ngay từ Giai đoạn 1 (đừng đợi dịch xong mới phát hiện)
+
+- **Đã gặp (Ori and the Blind Forest DE):** dịch xong 100% (659 chuỗi) mới phát hiện game dùng
+  **BitmapFont** (bảng glyph nhị phân + **texture atlas 2048×2048**), và font `candara` chỉ có
+  **25/74** ký tự tiếng Việt — thiếu toàn bộ chữ **2 dấu/dấu nặng** (`ắ ầ ậ ệ ộ ớ ợ ự ỵ`…).
+  Vá font kiểu này phải **vẽ thêm glyph vào atlas** → chi phí lớn, không như thay file `.ttf`.
+- **Hậu quả:** bản dịch xong nhưng **mod chưa dùng được**; nếu chép vào máy sẽ thấy ô trống ở chữ có dấu.
+- **QUY TẮC CHỐNG LẶP:**
+  1. Ở **Giai đoạn 1**, sau khi nhận diện engine, **kiểm tra ngay font**: loại font (TTF động / BitmapFont /
+     SpriteFont / BFARC), số glyph, **có dấu tiếng Việt chưa**, có glyph **PUA (icon)** không.
+  2. Nếu font thiếu dấu → **đánh giá chi phí vá TRƯỚC khi dịch** và báo người dùng biết đây là phần nặng.
+  3. Thứ tự ưu tiên vá font: (a) thay `.ttf` rời → (b) **hợp nhất** giữ icon → (c) vẽ thêm glyph vào atlas
+     (nặng nhất, chỉ làm khi (a)/(b) bất khả thi).
+  4. Với font bitmap: tìm **atlas texture** + **bảng glyph** qua typetree IL2CPP
+     (`tools/extract_il2cpp.py` bóc `main` + `global-metadata.dat`), rồi mới tính chuyện vẽ thêm.
+
 ---
 
 ## PHẦN 2 — BẢNG LỖI THEO GAME (để tra nhanh)
@@ -200,6 +216,7 @@
 | Switch Sports | 1.791 chuỗi **mất dấu ngắt dòng** so với bản gốc | lỗi dịch (đã kiểm chứng: chỉ là ngắt dòng, không phải icon) | ⚠️ **CẦN XEM TRONG GAME** — nếu chữ tràn khung thì phải thêm lại ngắt dòng |
 | Switch Sports | **Thay cả font Trung/Hàn/Nhật** bằng font tiếng Việt | `build_custom_font.py` copy đè 3 file font khu vực | ✅ đã sửa (BH-15) — nay chỉ vá font Latin |
 | Switch Sports | Font BFARC thiếu glyph | chưa kiểm độ phủ | ✅ đã vá |
+| Ori Blind Forest DE | **Mod chưa dùng được vì FONT** | **BitmapFont + atlas 2048×2048**, `candara` chỉ có 25/74 ký tự VI (thiếu hết chữ 2 dấu) | ⛔ **CHƯA XONG** — xem BH-17 và README của game |
 
 ---
 

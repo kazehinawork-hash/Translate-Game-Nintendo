@@ -38,22 +38,26 @@ PIPELINES = {
                             'output/atmosphere/contents/0100F7E00C70E000/romfs/Phoenix/Content/Localization/SWITCH/SUB-enUS.bin']),
         ('CỔNG QA', [PY, 'tools/qa_text.py', '--game', 'hogwarts',
                      '--font', 'tools/fonts_hades2/Lato-Regular.ttf']),
+        ('kiểm tra glossary + nhất quán', [PY, 'tools/check_glossary.py', '--game', 'hogwarts']),
     ],
     'ori': [
         ('build bundle text', [PY, 'tools/build_ori_mod.py']),
         ('vá font (thay + hợp nhất)', [PY, 'tools/patch_font_ori.py']),
         ('CỔNG QA', [PY, 'tools/qa_text.py', '--game', 'ori']),
+        ('kiểm tra glossary + nhất quán', [PY, 'tools/check_glossary.py', '--game', 'ori']),
     ],
     'hades2': [
         ('sửa lỗi QA (ngoặc/chữ lạ)', [PY, 'tools/fix_hades2_qa_bugs.py']),
         ('build mod', [PY, 'tools/build_hades2_mod.py']),
         ('font XNB', [PY, 'tools/patch_hades2_xnb_font.py']),
         ('CỔNG QA', [PY, 'tools/qa_text.py', '--game', 'hades2']),
+        ('kiểm tra glossary + nhất quán', [PY, 'tools/check_glossary.py', '--game', 'hades2']),
     ],
     'switchsports': [
-        ('font BFARC', [PY, 'tools/build_custom_font.py']),
+        ('font BFARC (CHỈ font Latin)', [PY, 'tools/build_custom_font.py']),
         ('build MSBT/SARC', [PY, 'tools/build_mod.py']),
         ('CỔNG QA', [PY, 'tools/qa_text.py', '--game', 'switchsports']),
+        ('kiểm tra glossary + nhất quán', [PY, 'tools/check_glossary.py', '--game', 'switchsports']),
     ],
 }
 

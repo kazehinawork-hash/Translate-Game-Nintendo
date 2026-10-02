@@ -54,15 +54,15 @@ def build_custom_font_mod():
     enc_bold = encrypt_bfttf(bold_ttf)
     enc_ultra = encrypt_bfttf(ultra_ttf)
 
-    # Thay thế các font hiển thị của game
+    # Thay thế CHỈ các font LATIN của game (dùng cho tiếng Anh/Việt).
+    # ⚠️ KHÔNG được thay 3 font chữ Hán/Hàn/Nhật (DFP_GBZY7_CNzh, DFPT_ZY5_TWzh,
+    #    AsiaKTITGD4-R_KRko): mod chỉ dịch khe tiếng Anh, giữ nguyên 3 font khu vực đó
+    #    để người chơi để tiếng Trung/Hàn/Nhật vẫn hiển thị đúng.
     target_fonts = {
         'scft/VDL-LOGOG-BOLD.bfotf': enc_bold,
         'scft/VDL-LOGOG-ULTRA.bfotf': enc_ultra,
         'scft/VDL-GigaJr-ExtraBold-003_Gaiji.bfotf': enc_bold,
         'scft/VDL-GigaJr-Ultra-003_Gaiji.bfotf': enc_ultra,
-        'scft/DFP_GBZY7_CNzh.bfttf': enc_bold,
-        'scft/DFPT_ZY5_TWzh.bfttf': enc_bold,
-        'scft/AsiaKTITGD4-R_KRko.bfttf': enc_bold
     }
 
     for font_name, enc_data in target_fonts.items():
@@ -81,9 +81,12 @@ def build_custom_font_mod():
     with open(OUTPUT_FONT_FILE, 'wb') as f:
         f.write(compressed_sarc)
 
-    # Đồng bộ sang các file font khu vực
+    # Dọn 3 file font khu vực (CNzh/KRko/TWzh) khỏi mod nếu có — KHÔNG ghi đè chúng.
     for extra in ['Font_CNzh.Nin_NX_NVN.bfarc.zs', 'Font_KRko.Nin_NX_NVN.bfarc.zs', 'Font_TWzh.Nin_NX_NVN.bfarc.zs']:
-        shutil.copyfile(OUTPUT_FONT_FILE, f"{OUTPUT_FONT_DIR}/{extra}")
+        p = os.path.join(OUTPUT_FONT_DIR, extra)
+        if os.path.exists(p):
+            os.remove(p)
+            print(f" [-] Đã xoá khỏi mod (giữ nguyên font gốc của game): {extra}")
 
     print(f"\n✅ ĐÃ TẠO XONG FONT TIẾNG VIỆT PHONG CÁCH NINTENDO!")
     print(f"👉 File kết quả: {OUTPUT_FONT_FILE}")

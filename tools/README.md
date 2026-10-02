@@ -12,6 +12,8 @@
 | Xem các bước | `python tools/pipeline.py <game> --list` |
 | Chỉ chạy 1 bước | `python tools/pipeline.py <game> --only qa` |
 | Cổng QA | `python tools/qa_text.py --game <game> [--font <ttf>] [--leak] [--verbose]` |
+| Từ điển + nhất quán | `python tools/check_glossary.py --game <game> [--strict] [--suggest 20]` |
+| Báo cáo toàn dự án | `python tools/report.py` (hoặc `--md`, `--no-qa`) |
 
 Pipeline **dừng ngay** nếu một bước lỗi và **không chạy QA** — chống lỗi "build dở rồi tưởng xong".
 

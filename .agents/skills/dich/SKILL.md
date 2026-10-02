@@ -120,6 +120,11 @@ flowchart TD
    thiếu/thừa key, chuỗi rỗng, ký tự lạ (CJK/Hangul/Kana/Ả Rập/Nga), lệch tag & placeholder,
    mục `[error:...]`/`[KEY]`, `\n` sai, ký tự điều khiển, độ phủ font.
    **Không được bàn giao nếu chưa PASS.** Danh sách bài học đầy đủ: `docs/BAI-HOC.md`.
+0b. **Kiểm tra từ điển & tính nhất quán:** `python tools/check_glossary.py --game <game>`
+   (lệch thuật ngữ so với `glossary/*.csv`; cùng câu nguồn mà dịch nhiều kiểu).
+   Dùng `--suggest 20` để gợi ý thuật ngữ cần bổ sung vào glossary của game.
+0c. **Báo cáo tổng hợp:** `python tools/report.py` — số chuỗi đã dịch từng game + dung lượng + QA.
+   Hoặc chạy trọn quy trình bằng `python tools/pipeline.py <game>` (build → font → QA → glossary).
 1. **Chạy bộ công cụ kiểm toán độc lập**:
    - `check_special_characters.py`: kiểm tra placeholder, escape sequence `\"`, không gõ nhầm `/n`.
    - Script QA riêng của từng game (`qa_<game>_mod.py`): đối soát số file, tỷ lệ hoàn thành, multiset thẻ điều khiển.

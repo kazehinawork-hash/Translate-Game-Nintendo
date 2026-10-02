@@ -151,6 +151,22 @@
   4. Trước khi tin cổng QA, phải **mở 1-2 ca cụ thể ra xem tận mắt** (như đã làm với Switch Sports:
      kiểm tra thấy khác biệt chỉ là ngắt dòng, không phải icon → mới hạ xuống cảnh báo).
 
+### BH-15. Thay font KHU VỰC (Trung/Hàn/Nhật) → người chơi ngôn ngữ đó MẤT CHỮ
+
+- **Triệu chứng (Switch Sports):** 4 file font trong mod **giống hệt nhau** (cùng MD5) và chỉ **139 KB**,
+  trong khi font gốc là **4 file khác nhau, 10–13 MB**. Tức là đã thay cả font Hán/Hàn bằng font Latin.
+- **Hậu quả:** ai để console ở tiếng Trung/Hàn/Nhật sẽ thấy ô vuông (mất glyph).
+- **Nguyên nhân:** `build_custom_font.py` đưa cả 3 glyph font CJK (`DFP_GBZY7_CNzh`, `DFPT_ZY5_TWzh`,
+  `AsiaKTITGD4-R_KRko`) vào danh sách thay thế, rồi **copy đè** sang `Font_CNzh/KRko/TWzh`.
+- **Cách kiểm chứng (đã làm):** giải mã BFTTF gốc (XOR key `2785117442`, magic `0xD99B871A`) rồi so
+  bảng mã: font Latin gốc có **0 glyph PUA**, font Hàn **964 PUA**, font Trung **127 PUA**
+  → icon nằm ở font khu vực, KHÔNG phải font Latin.
+- **QUY TẮC CHỐNG LẶP:**
+  1. Mod chỉ dịch **một khe ngôn ngữ** thì **chỉ thay font của khe đó**; các font khu vực khác giữ nguyên.
+  2. Kiểm tra "mod có thay font nào" bằng cách so **MD5 + kích thước** với bản gốc — trùng nhau hàng loạt là dấu hiệu sai.
+  3. Trước khi thay font, đếm **glyph PUA** của font gốc: nếu font gốc CÓ PUA thì phải **hợp nhất**
+     (`tools/merge_vi_font.py`), không được thay hẳn.
+
 ---
 
 ## PHẦN 2 — BẢNG LỖI THEO GAME (để tra nhanh)
@@ -169,6 +185,7 @@
 | Hades II | 14 chuỗi có `}` thừa, 2 chuỗi lọt chữ Trung | lỗi dịch | ✅ vá (cổng QA phát hiện) |
 | Hades II | `build_hades2_mod.py` **không build lại được** | đường dẫn tương đối cũ sau tái cấu trúc | ✅ đã sửa (BH-13) |
 | Switch Sports | 1.791 chuỗi **mất dấu ngắt dòng** so với bản gốc | lỗi dịch (đã kiểm chứng: chỉ là ngắt dòng, không phải icon) | ⚠️ **CẦN XEM TRONG GAME** — nếu chữ tràn khung thì phải thêm lại ngắt dòng |
+| Switch Sports | **Thay cả font Trung/Hàn/Nhật** bằng font tiếng Việt | `build_custom_font.py` copy đè 3 file font khu vực | ✅ đã sửa (BH-15) — nay chỉ vá font Latin |
 | Switch Sports | Font BFARC thiếu glyph | chưa kiểm độ phủ | ✅ đã vá |
 
 ---

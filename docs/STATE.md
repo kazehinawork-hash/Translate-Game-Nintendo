@@ -83,12 +83,11 @@
 - **Title ID**: `010061D00DB74000` (Base) + `010061D00DB74800` (Update v131072)
 - **Engine**: Unity **IL2CPP** 2018.4.1f1; bundle `Data/data.unity3d` (1,74 GB) + ~130 `sharedassets*.resource`
 - **Text**: MonoBehaviour `*TextMessageProvider` → **679 mục** (656 khoá), tiếng Anh
-- **Trạng thái**: text **dịch 100%** (659 chuỗi duy nhất) · tag/placeholder 0 lệch · đã vá vào bundle
-  và đóng gói · **cổng QA PASS** (`python tools/qa_text.py --game obf`)
-  → `output/atmosphere/contents/010061D00DB74000/romfs/Data/data.unity3d`
-- ⛔ **CHƯA DÙNG ĐƯỢC: FONT chưa vá.** Game dùng **BitmapFont (bảng glyph + texture atlas 2048×2048)**,
-  không phải TTF động. Font `candara` chỉ có **25/74** ký tự tiếng Việt (thiếu hết chữ 2 dấu/dấu nặng)
-  → chữ có dấu thanh sẽ không hiển thị. Kế hoạch vá: xem `games/010061D00DB74000_OriAndTheBlindForest/README.md`.
+- **Trạng thái**: ✅ **HOÀN THÀNH** — text dịch 100% (659 chuỗi) · tag/placeholder 0 lệch · **font tiếng Việt đã vá**
+  (78 glyph sinh vào atlas SDF + đổi mã ký tự, kiểm chứng bằng ảnh cắt: `ạ ắ ệ ợ ự Ứ Ờ Ư ơ` đủ dấu) ·
+  cổng QA **PASS** → `output/atmosphere/contents/010061D00DB74000/romfs/Data/data.unity3d` (1,74 GB)
+- 🔑 **Kỹ thuật font (BitmapFont/SDF atlas):** xem `games/010061D00DB74000_OriAndTheBlindForest/README.md`
+  và `tools/unity_bitmapfont.py` + `tools/patch_font_obf.py`. **Chưa test trong game** — cần người dùng kiểm.
 - Công cụ mới: `tools/extract_il2cpp.py` (bóc `main` + `global-metadata.dat` để dựng typetree).
 - ROM đã chuyển sang `E:\ROM_Backup\OriBlindForest\`.
 

@@ -41,7 +41,10 @@ Pipeline **dừng ngay** nếu một bước lỗi và **không chạy QA** — 
 | | `fix_hogwarts_main_errors.py` | Vá `[error:...]`/`[KEY]` bằng key anh em |
 | | `fix_hogwarts_fr_names.py` | Sửa tên bị Pháp hóa (đối chiếu cột FR vs ES) |
 | **Unity** (Ori) | `unity_text_tool.py` | Bóc & vá text bundle (`parse_message` linh hoạt, không hardcode magic) |
-| | `build_ori_mod.py`, `patch_font_ori.py` | Build bundle / vá font (thay hẳn + hợp nhất) |
+| | `build_ori_mod.py`, `patch_font_ori.py` | Build bundle / vá font TTF động (thay hẳn + hợp nhất giữ icon) |
+| | `unity_bitmapfont.py` | **Giải mã BitmapFont (Ori and the Blind Forest)**: bảng glyph 48B + atlas SDF + cắt glyph ra ảnh kiểm chứng |
+| | `patch_font_obf.py` | **Vá font Blind Forest**: sinh glyph tiếng Việt vào ô glyph không dùng + đổi mã ký tự, vá text cùng lượt |
+| | `extract_il2cpp.py` | Bóc `main` (ExeFS) + `global-metadata.dat` để dựng typetree IL2CPP |
 | **Supergiant** (Hades II) | `hades2_sjson_helper.py` | Đọc/ghi SJSON |
 | | `build_hades2_mod.py`, `patch_hades2_xnb_font.py` | Build mod / vá SpriteFont XNB |
 | | `harmonize_hades2_terms.py`, `qa_hades2_mod.py` | Đồng bộ thuật ngữ / QA riêng |

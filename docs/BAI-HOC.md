@@ -180,6 +180,26 @@
 - **Quy tắc dự án kèm theo:** ROM chỉ nằm trong `input/` trong lúc bóc dữ liệu; **bóc xong phải chuyển
   ra `E:\ROM_Backup\<Tên game>\`**. `tools/find_rom.py` tìm cả 2 nơi nên vẫn bóc lại được khi cần.
 
+### BH-18. Vá font BITMAP (bảng glyph + atlas SDF) — cách làm đã kiểm chứng
+
+Áp dụng cho Ori and the Blind Forest (Moon Studios `BitmapFont`). **Đã làm xong và kiểm chứng bằng ảnh.**
+
+- **Phát hiện chìa khoá:** atlas **không** tham chiếu từ font (không có PPtr nào — đã kiểm tra toàn bộ file);
+  engine ghép **theo TÊN**: Texture2D `<tên font>_0 distance map` (ví dụ `candara_0 distance map`).
+  Các Material "Font Material" có `_MainTex = null` → gán lúc chạy.
+- **Định dạng bảng glyph:** `[header][tên][block: int32 count + count×entry 48B][float metric]`,
+  entry = `[int32 mã ký tự]` + 11 float: `f0,f1 = u0,u1`, `f2,f3 = v0,v1` (**gốc dưới → phải lật**),
+  `f4 = độ lệch ngang`, `f5..f8 = quad lấy mẫu SDF`.
+- **Atlas là ảnh Alpha8**: khi decode ra RGBA thì **giá trị nằm ở kênh ALPHA** (đọc kênh L sẽ ra toàn 0 — đã dính).
+- **Cách vá an toàn (khuyên dùng, không phải mở rộng atlas):**
+  1. Xác định ký tự cần thêm = (ký tự bản dịch dùng) − (ký tự font có).
+  2. **Mượn ô của glyph không dùng** (chọn ký tự font CÓ mà bản dịch KHÔNG dùng, cùng kiểu hoa/thường, ô đủ lớn)
+     → không phải đổi kích thước atlas, **không phải dịch chuyển toàn bộ entry cũ**.
+  3. Vẽ glyph mới (từ TTF, cỡ em đo từ atlas: cap-height/x-height) vào đúng ô đó, làm mềm nhẹ cho giống SDF.
+  4. **Đổi mã ký tự** trong entry sang ký tự mới.
+- **Kiểm chứng bắt buộc:** cắt vùng ô ra **ảnh** rồi **xem bằng mắt** (đã dùng cho cả lúc giải mã lẫn lúc sinh glyph);
+  và kiểm tra ký tự bị mượn ô **không xuất hiện trong text game** (ở Blind Forest: text tiếng Anh chỉ có `’`).
+
 ### BH-17. Kiểm tra ĐỘ PHỦ FONT ngay từ Giai đoạn 1 (đừng đợi dịch xong mới phát hiện)
 
 - **Đã gặp (Ori and the Blind Forest DE):** dịch xong 100% (659 chuỗi) mới phát hiện game dùng
@@ -216,7 +236,7 @@
 | Switch Sports | 1.791 chuỗi **mất dấu ngắt dòng** so với bản gốc | lỗi dịch (đã kiểm chứng: chỉ là ngắt dòng, không phải icon) | ⚠️ **CẦN XEM TRONG GAME** — nếu chữ tràn khung thì phải thêm lại ngắt dòng |
 | Switch Sports | **Thay cả font Trung/Hàn/Nhật** bằng font tiếng Việt | `build_custom_font.py` copy đè 3 file font khu vực | ✅ đã sửa (BH-15) — nay chỉ vá font Latin |
 | Switch Sports | Font BFARC thiếu glyph | chưa kiểm độ phủ | ✅ đã vá |
-| Ori Blind Forest DE | **Mod chưa dùng được vì FONT** | **BitmapFont + atlas 2048×2048**, `candara` chỉ có 25/74 ký tự VI (thiếu hết chữ 2 dấu) | ⛔ **CHƯA XONG** — xem BH-17 và README của game |
+| Ori Blind Forest DE | Font là **BitmapFont + atlas SDF**, thiếu 78 ký tự VI | game không đọc TTF; atlas kín chỗ | ✅ **đã vá** (mượn ô glyph không dùng + sinh glyph, xem BH-18) |
 
 ---
 

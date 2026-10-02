@@ -36,3 +36,7 @@ tools/hactool/
 tools/hactoolnet/
 tools/kuriimu2/
 tools/fonts_hades2/
+# NGOẠI LỆ: Lato-Regular.ttf là ĐẦU VÀO BẮT BUỘC để build font tiếng Việt cho
+# Hogwarts Legacy + Ori (xem tools/check_font_coverage.py, tools/patch_font_ori.py).
+# Không có file này thì clone mới KHÔNG build lại được -> phải lưu trong repo.
+!tools/fonts_hades2/Lato-Regular.ttf

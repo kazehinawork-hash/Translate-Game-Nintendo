@@ -13,8 +13,11 @@ if sys.stdout.encoding.lower() != 'utf-8':
         pass
 
 TITLE_ID = "0100A00019DE0000"
-TRANSLATIONS_DIR = f"translations/{TITLE_ID}_Hades2"
-OUTPUT_DIR = f"output/atmosphere/contents/{TITLE_ID}/romfs"
+# LƯU Ý: đường dẫn phải theo CẤU TRÚC MỚI (games/<TID>_<Tên>/translations).
+# Trước đây script dùng "translations/<TID>_Hades2" (cấu trúc cũ) nên đã hỏng sau khi tái cấu trúc.
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+TRANSLATIONS_DIR = os.path.join(ROOT, "games", f"{TITLE_ID}_Hades2", "translations")
+OUTPUT_DIR = os.path.join(ROOT, "output", "atmosphere", "contents", TITLE_ID, "romfs")
 
 def build_mod():
     print(">>> Bắt đầu đóng gói bản mod Hades II sang LayeredFS...")

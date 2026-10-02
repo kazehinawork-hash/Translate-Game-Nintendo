@@ -125,6 +125,32 @@
   (`.gitignore`); chỉ commit **mã nguồn** (`tools/`, `docs/`, `glossary/`, skill).
 - **Chỉ `git push` khi người dùng yêu cầu.**
 
+### BH-13. Đường dẫn TƯƠNG ĐỐI cũ còn sót sau khi tái cấu trúc → script build chết
+
+- **Triệu chứng (Hades II):** chạy `build_hades2_mod.py` báo *"Không tìm thấy thư mục bản dịch:
+  translations/0100A00019DE0000_Hades2"* — thư mục đó **không còn tồn tại** từ khi chuyển sang
+  `games/<TID>/translations/`. Tương tự `build_font.py` trỏ vào `orig_font/Font/…` (không có).
+- **Hậu quả:** mod Hades II **không thể build lại**; muốn sửa bản dịch cũng chịu.
+- **QUY TẮC CHỐNG LẶP:**
+  1. Mọi script build phải dựng đường dẫn từ **gốc dự án**:
+     `ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))` rồi ghép `ROOT`.
+  2. Sau khi tái cấu trúc thư mục → **rà soát lại toàn bộ đường dẫn**:
+     `grep -n "['\"](translations|working|output|games|source)/" tools/*.py`
+  3. `tools/pipeline.py` sẽ chạy thử từng bước nên lỗi kiểu này lộ ra ngay.
+
+### BH-14. Cổng QA phải được HIỆU CHỈNH để không "kêu oan"
+
+- **Đã gặp khi mới làm `qa_text.py`:** báo FAIL 15.000 lỗi giả ở Switch Sports vì coi **mã điều khiển
+  Nintendo** (`\u000e…`, glyph icon `\ue0ab`) là "ký tự lạ"; báo sai cả khi `|plural(one=nội dung,
+  other=…)` được dịch (regex bắt cả phần nội dung).
+- **QUY TẮC:**
+  1. Ký tự/tag chỉ bị coi là lỗi khi **LÀ MỚI so với nguồn** (so multiset với nguồn, không so tuyệt đối).
+  2. Regex bắt placeholder phải bắt **phần đánh dấu**, không bắt nội dung bên trong.
+  3. Phân mức: **LỖI** (chặn bàn giao) vs **CẢNH BÁO** (cần xem, không chặn).
+     Hiện CẢNH BÁO gồm: khác số dòng, khác mã điều khiển/ngắt dòng, thừa key, rỗng-cả-nguồn.
+  4. Trước khi tin cổng QA, phải **mở 1-2 ca cụ thể ra xem tận mắt** (như đã làm với Switch Sports:
+     kiểm tra thấy khác biệt chỉ là ngắt dòng, không phải icon → mới hạ xuống cảnh báo).
+
 ---
 
 ## PHẦN 2 — BẢNG LỖI THEO GAME (để tra nhanh)
@@ -140,6 +166,9 @@
 | Ori | Sót 298 mục hội thoại | cờ trong `TextMessageProvider` không phải luôn = 1 | ✅ đã sửa |
 | Ori | 2 font thiếu dấu tiếng Việt | chưa kiểm độ phủ | ✅ đã vá (thay + hợp nhất) |
 | Hades II | `\n` literal / thiếu xuống dòng | không so với nguồn | ✅ đã sửa |
+| Hades II | 14 chuỗi có `}` thừa, 2 chuỗi lọt chữ Trung | lỗi dịch | ✅ vá (cổng QA phát hiện) |
+| Hades II | `build_hades2_mod.py` **không build lại được** | đường dẫn tương đối cũ sau tái cấu trúc | ✅ đã sửa (BH-13) |
+| Switch Sports | 1.791 chuỗi **mất dấu ngắt dòng** so với bản gốc | lỗi dịch (đã kiểm chứng: chỉ là ngắt dòng, không phải icon) | ⚠️ **CẦN XEM TRONG GAME** — nếu chữ tràn khung thì phải thêm lại ngắt dòng |
 | Switch Sports | Font BFARC thiếu glyph | chưa kiểm độ phủ | ✅ đã vá |
 
 ---
@@ -181,13 +210,16 @@ python tools/check_special_characters.py <thu_muc_ban_dich>
 
 | Công cụ | Việc nó làm |
 |---|---|
-| `tools/qa_text.py` | **QA tổng hợp**: rỗng, ký tự lạ, tag/placeholder, chưa dịch, `[error:`/`[KEY]`, độ phủ font |
+| `tools/pipeline.py` | **CHẠY TRỌN QUY TRÌNH** cho 1 game (build → font → đóng gói → QA), **dừng ngay nếu 1 bước lỗi** |
+| `tools/qa_text.py` | **QA tổng hợp cho cả 4 game** (`--game hogwarts\|ori\|hades2\|switchsports`): rỗng, ký tự lạ, tag/placeholder, chưa dịch, `[error:`/`[KEY]`, `\n`, mã điều khiển, độ phủ font, `--leak` soát rò rỉ |
 | `tools/check_font_coverage.py` | Font có phủ hết ký tự trong mod không (PASS/FAIL) |
 | `tools/check_special_characters.py` | Bắt `/n` gõ nhầm, `{}` lệch, ký tự CJK/Hangul/Kana/Ả Rập |
 | `tools/merge_vi_font.py` | Thêm dấu tiếng Việt vào font có sẵn **mà giữ nguyên icon** |
-| `tools/unity_text_tool.py` | Bóc & vá text Unity (dùng `parse_message` linh hoạt, không hardcode magic) |
+| `tools/unity_text_tool.py` | Bóc & vá text Unity (parse linh hoạt, không hardcode magic) |
 | `tools/fix_hogwarts_fr_names.py` | Mẫu sửa tên bị bản địa hóa (đối chiếu cột FR vs ES) |
 | `tools/fix_hogwarts_main_errors.py` | Mẫu vá `[error:...]`/`[KEY]` bằng key anh em |
+| `tools/fix_hades2_qa_bugs.py` | Mẫu vá `}` thừa + chữ Trung lọt (do cổng QA phát hiện) |
+| `tools/README.md` | **Bản đồ công cụ** theo engine — tra nhanh file nào làm việc gì |
 
 ---
 

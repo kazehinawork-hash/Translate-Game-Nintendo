@@ -14,6 +14,14 @@ Các game có trong gói
 - Hogwarts Legacy          TitleID 0100F7E00C70E000
 - Hades II                 TitleID 0100A00019DE0000
 - Nintendo Switch Sports   TitleID 0100D2F00D5C0000
+- Ori and the Will of the Wisps  TitleID 01008DD013200000
+
+Ori and the Will of the Wisps — LƯU Ý QUAN TRỌNG
+------------------------------------------------
+Sau khi chép mod, PHẢI đặt NGÔN NGỮ TRONG GAME = **English**.
+Lý do: game không có slot tiếng Việt; bản dịch được ghi ĐÈ LÊN KHE TIẾNG ANH.
+Nếu đặt ngôn ngữ khác (Pháp/Đức/Nhật…) game vẫn hiện ngôn ngữ đó như bình thường.
+Mod gồm: romfs\Data\data_*.unity3d (102 bundle text + 1 bundle font).
 
 Hogwarts Legacy — mod gồm 2 phần
 --------------------------------

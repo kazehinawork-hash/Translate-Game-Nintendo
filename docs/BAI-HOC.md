@@ -167,6 +167,19 @@
   3. Trước khi thay font, đếm **glyph PUA** của font gốc: nếu font gốc CÓ PUA thì phải **hợp nhất**
      (`tools/merge_vi_font.py`), không được thay hẳn.
 
+### BH-16. `move` trên file OneDrive báo THÀNH CÔNG nhưng KHÔNG chuyển gì
+
+- **Triệu chứng:** chuyển ROM từ `input/` (trong OneDrive) sang `E:\ROM_Backup` bằng `Move-Item` →
+  không báo lỗi, SHA256 "khớp", nhưng **file vẫn nằm nguyên trong `input/`** và thư mục đích **rỗng**.
+- **Nguyên nhân:** file trong OneDrive là **reparse point** (Files On-Demand) — thao tác move bị
+  sync engine của OneDrive nuốt.
+- **QUY TẮC CHỐNG LẶP:**
+  1. Với file trong OneDrive, **không dùng `move`** — dùng **copy → xác minh SHA256 → mới xoá** bản nguồn.
+  2. Luôn kiểm chứng lại bằng lệnh **độc lập** (`cmd /c dir /a`) sau khi thao tác, đừng tin mỗi exit code.
+  3. Công cụ có sẵn: `python tools/archive_rom.py` (làm đúng quy trình trên, tự chọn thư mục theo TitleID).
+- **Quy tắc dự án kèm theo:** ROM chỉ nằm trong `input/` trong lúc bóc dữ liệu; **bóc xong phải chuyển
+  ra `E:\ROM_Backup\<Tên game>\`**. `tools/find_rom.py` tìm cả 2 nơi nên vẫn bóc lại được khi cần.
+
 ---
 
 ## PHẦN 2 — BẢNG LỖI THEO GAME (để tra nhanh)

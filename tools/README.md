@@ -26,6 +26,7 @@ Pipeline **dừng ngay** nếu một bước lỗi và **không chạy QA** — 
 | `check_special_characters.py` | Bắt `/n` gõ nhầm, `{}` lệch, CJK/Hangul/Kana/Ả Rập |
 | `merge_vi_font.py` | Thêm dấu tiếng Việt vào font gốc **mà giữ nguyên glyph icon (PUA)** |
 | `find_rom.py` | Tìm ROM theo TitleID trong `input/` và `E:\ROM_Backup` |
+| `archive_rom.py` | **Chuyển ROM ra khỏi OneDrive** sau khi bóc xong (copy → xác minh SHA256 → xoá) — xem BH-16 |
 | `audit_translation_style.py` | Soi văn phong/độ dài bản dịch |
 
 ## 🎮 Theo engine

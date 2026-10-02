@@ -56,6 +56,11 @@ flowchart TD
    - File **NonUFS/DebugFiles = file rời** → LayeredFS thay được trực tiếp.
    - File **không có trong manifest = UFS = nằm trong pak** → file rời đặt vào `romfs/...` **sẽ KHÔNG được engine ưu tiên đọc** (UE mount pak trước RomFS). Khi đó phải đóng gói **patch pak** (xem Phụ lục A, mục 4).
    - Công cụ: `python tools/ue_romfs_tool.py list "<game.nsp>"`.
+5. **BÓC XONG THÌ CHUYỂN ROM RA KHỎI ONEDRIVE (BẮT BUỘC)**:
+   Sau khi đã có dữ liệu gốc trong `games/<TitleID>_<Tên>/source/`, chạy:
+   `python tools/archive_rom.py` → copy ROM sang `E:\ROM_Backup\<Tên game>\`, xác minh SHA256 rồi xoá bản trong `input/`.
+   ⚠️ **Không dùng `move`** — file OneDrive là reparse point, move sẽ bị nuốt (xem `docs/BAI-HOC.md` BH-16).
+   `tools/find_rom.py` tìm ROM trong cả `input/` và `E:\ROM_Backup` nên vẫn bóc lại được khi cần.
 
 ---
 

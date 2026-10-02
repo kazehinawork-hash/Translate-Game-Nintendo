@@ -83,6 +83,11 @@
 - **Bài học kinh nghiệm (BẮT BUỘC ĐỌC):** `docs/BAI-HOC.md` — 12 lỗi đã từng xảy ra thật + quy tắc
   chống lặp + checklist bàn giao. **Cổng QA bắt buộc:** `python tools/qa_text.py --game <ten_game>`
   (đã chạy PASS cho hogwarts và ori).
+- **Quản lý ROM (BẮT BUỘC):** ROM chỉ nằm trong `input/` trong lúc bóc dữ liệu; **bóc xong chuyển ngay
+  ra `E:\ROM_Backup\<Tên game>\`** bằng `python tools/archive_rom.py` (copy → xác minh SHA256 → xoá bản
+  trong input; **không dùng `move`** vì file OneDrive là reparse point — xem BH-16 trong `docs/BAI-HOC.md`).
+  Hiện `input/` **chỉ còn `prod.keys` + `titlekeys.txt`**; ROM của 4 game đã nằm ở `E:\ROM_Backup`
+  (HogwartsLegacy, Hades2, Ori, SwitchSports).
 - **Git**: đã khởi tạo (`git init`) + commit đầu; `.gitignore` ẩn khoá (`prod.keys`, `titlekeys.txt`), ROM, cache và dữ liệu nặng.
 - **Gói phát hành**: dùng trực tiếp thư mục `output/atmosphere/` — chép nguyên thư mục này vào gốc thẻ nhớ Switch (gộp vào `atmosphere` có sẵn). Gồm cả 3 mod: `0100F7E00C70E000`, `0100A00019DE0000`, `0100D2F00D5C0000`. Hướng dẫn cài: `docs/INSTALL-MOD.txt`.
 - **Dọn dẹp**: đã xoá 35 file rác ở thư mục gốc, toàn bộ `__pycache__`, và thư mục `archive/` (~5 MB phụ phẩm cũ).

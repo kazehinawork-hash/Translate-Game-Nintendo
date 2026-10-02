@@ -30,6 +30,30 @@ python tools/check_font_coverage.py tools/fonts_hades2/Lato-Regular.ttf \
   output/atmosphere/contents/0100F7E00C70E000/romfs/Phoenix/Content/Localization/SWITCH/SUB-enUS.bin
 ```
 
+## ⚠️ LỖI ĐÃ SỬA #3: 8 mục MAIN hiển thị `[error:...]` (kể cả menu)
+
+Soát toàn bộ 6.697 mục vật phẩm (`*_desc`, `*_name`, các độ hiếm `_Common/_Rare/_Epic/_Legendary`)
+phát hiện 8 mục hiển thị **`[error:...]`** ra màn hình. Lỗi **có sẵn trong nguồn gốc** (cột tiếng
+Trung cũng lỗi y hệt) nhưng **vá được** nhờ các key anh em:
+
+| Key | Giá trị lỗi | Đã vá thành | Căn cứ |
+|---|---|---|---|
+| `Category_Hair` | `[error:Menu_Hair]` | `Kiểu Tóc` | `Menu_Hairstyle` |
+| `Category_Outfit` | `[error:Menu_Outfits]` | `Trang Phục` | `Menu_Outfit`, `Category_Gear` |
+| `Category_Quests` | `[error:Menu_ActiveQuests]` | `Nhiệm Vụ Đang Thực Hiện` | `MENU_ACTIVEQUEST` |
+| `Data_RefreshesIn` | `Làm mới sau [error:time]` | `Làm mới sau {time}` | `Data_ExpiresIn` dùng `{time}` |
+| `FGC_Collect_AstronomyTower` | `... [error:%d] ...` | `Tìm {0} mẩu Kiến Thức` | các key `FGC_*` khác dùng `{0}` |
+| `FGC_Demiguise_AstronomyTower` | `... [error:%d] ...` | `Tìm {0} tượng Khỉ Tàng Hình Demiguise` | như trên |
+| `Hamlet_Halkirk_CO_BB` | `[error:Hamelt_Halkirk]` | `Bainburgh` | `FT_OL_HamletHalkirk_CO_BB` |
+| `ZSI_01` | `[ZSI_01_01_DADASide_Title]` | `Bài tập của Giáo sư Hecat 1` | chính key được tham chiếu |
+
+Công cụ: `tools/fix_hogwarts_main_errors.py`. Sau khi vá: **0 mục `[error:...]`, 0 mục `[KEY]`**.
+
+**Kiểm tra vật phẩm (sau khi vá):** 6.697 mục — 0 rỗng, 0 ký tự Hán/Nhật/Hàn, **0 lệch tag/placeholder**
+so với nguồn, **0 ký tự không có trong font** trong mod. Còn 31 mục là placeholder dev có sẵn trong
+nguồn gốc (giữ nguyên cho khớp bản gốc): `FGC_Broom_Collect_000_desc` = `TBD`, 30 mục `Outfit_073…077`
+= `Outfit 073`, và `LighthouseSubtask_UnknownState` = `???`.
+
 ## ⚠️ LỖI ĐÃ SỬA #2: tên riêng bị "Pháp hóa" còn sót trong SUB
 
 SUB dịch **từ tiếng Pháp**, nên một số tên riêng/thuật ngữ bị giữ theo bản Pháp hóa, trong khi

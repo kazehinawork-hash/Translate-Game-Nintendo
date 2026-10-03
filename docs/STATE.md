@@ -105,8 +105,17 @@
     `SecondPlay`, `AssistMode`, `Volume`, `Switch/PS4/XBoxOne`… + **bảng offset u32** ngay sau.
   - ✅ `.kit*` là **file rời RomFS** → mod LayeredFS thay trực tiếp, **không cần patch pak**.
   - ✅ Font: `fonts/unravel.fgen` (định dạng riêng, chưa giải mã).
-  - ⏳ **Còn lại:** hoàn thiện codec (ranh giới record + kích thước giải nén cho mọi record),
-    rồi mới bóc được toàn bộ kho chuỗi.
+  - ✅ **Đã bóc toàn bộ 12 phần** (`Data.kit.0..11`, 2,2 GB) ra `E:\UNR_work\parts\`.
+  - ✅ **Quét toàn bộ**: ~70.000 record. Nội dung chủ yếu là **dữ liệu asset**
+    (schema/biến vật lý, tên menu, đường dẫn scene `|/scenes/Levels/Menu/...|`) —
+    **chưa cô lập được bảng chuỗi hiển thị (localization)**.
+  - ⏳ **Còn lại:**
+    1. Đọc bảng offset thật từ `Data.kit` (1,5 MB) để lấy ranh giới record **chính xác**
+       (hiện phải tự dò → record không-nén xen kẽ làm lệch; tool: `tools/kit_extract.py`,
+       `tools/kit_scan_all.py`, `tools/kit_find_text.py`).
+    2. Từ đó tìm ra record chứa bảng dịch (nhiều khả năng khoá theo tên như `Localization`/`Text`).
+  - **Kết luận tạm:** định dạng **đã mở** (không phải tường chặn như Mario Party), nhưng việc
+    bóc kho chuỗi cần thêm thời gian — chưa thể hứa thời điểm xong.
 - **Chi tiết định dạng + việc còn lại:** `games/0100E5D00CC0C000_UnravelTwo/README.md`.
 
 ---

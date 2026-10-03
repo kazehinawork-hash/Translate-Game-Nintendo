@@ -93,6 +93,24 @@
 
 ---
 
+## 5. 🔄 ĐANG LÀM: Unravel Two (Nintendo Switch)
+- **Title ID**: `0100E5D00CC0C000` (Base) / `0100E5D00CC0C800` (Update v65536)
+- **Engine**: Native Switch (NVN), engine riêng Coldwood — **không** phải Unity/UE.
+- **Giai đoạn 1 — gần xong:**
+  - ✅ ROM có sẵn trong `input/` (Base 2,81 GB + Update 20,5 MB).
+  - ✅ **Bóc RomFS được** (`ue_romfs_tool.py list` → 22 file) — không vướng titlekey.
+  - ✅ **Đã giải mã định dạng `.kit`**: `[u32 dài][khối LZ4] → JSON` (kiểm chứng: 309 record giải nén OK).
+    Codec: `tools/kit_codec.py`.
+  - ✅ **Đã định vị kho text UI** trong `Data.kit.0` (~`0x1EFA000`): `Options`, `Pause`, `Resume`,
+    `SecondPlay`, `AssistMode`, `Volume`, `Switch/PS4/XBoxOne`… + **bảng offset u32** ngay sau.
+  - ✅ `.kit*` là **file rời RomFS** → mod LayeredFS thay trực tiếp, **không cần patch pak**.
+  - ✅ Font: `fonts/unravel.fgen` (định dạng riêng, chưa giải mã).
+  - ⏳ **Còn lại:** hoàn thiện codec (ranh giới record + kích thước giải nén cho mọi record),
+    rồi mới bóc được toàn bộ kho chuỗi.
+- **Chi tiết định dạng + việc còn lại:** `games/0100E5D00CC0C000_UnravelTwo/README.md`.
+
+---
+
 ## 6. ⛔ ĐÃ BỎ: Super Mario Party Jamboree (Nintendo Switch)
 - **Title ID**: `0100965017338000` (Base) + `0100965017338800` (Update v2.3.0), game 10/2024 (NCA3, SDK 17.5.4)
 - **Lý do bỏ (theo yêu cầu người dùng 03/10):** bộ tool hiện tại **không bóc được RomFS** của game này

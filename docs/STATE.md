@@ -126,8 +126,19 @@
     - Thẻ định dạng: `<NEWLINE>`, `<loca>…</loca>`, `<large>…</large>`
     - **Record này là bản TIẾNG PHÁP** (`Vous avez terminé l'histoire…`) → game có **một record cho
       mỗi ngôn ngữ** → cần tìm record **tiếng Anh** làm nguồn dịch.
-  - ⏳ **Còn lại:** (1) bóc đủ 12 phần → tìm record tiếng Anh; (2) dịch EN→VI; (3) viết bộ **nén** LZ4
-    (giữ nguyên kích thước record để không lệch bảng mục lục); (4) font `.fgen`; (5) đóng gói + QA.
+  - ✅ **ĐÃ DỊCH XONG 463/463 CHUỖI sang tiếng Việt (03/10):**
+    - Kho text: 468 mục (313 UI ngắn + 148 vừa + 2 dài + 5 mục `NOLOCA`/EULA **giữ nguyên**
+      vì chính game đánh dấu "không bản địa hóa").
+    - Chia 6 chunk, giao **4 subagent dịch song song** → `translations/vi_ui_01,02 / vi_mid_03,04,05 / vi_long_06.json`
+    - **QA (`tools/qa_unravel.py`): PASS** — 0 lệch thẻ `<...>`, 0 lệch placeholder, 0 chuỗi rỗng,
+      0 ký tự lạ (CJK/Hangul/Kana/Kyrillic/Ả Rập).
+  - ⏳ **Còn lại (kỹ thuật):**
+    1. **Viết bộ NÉN LZ4** để đóng gói lại record (đã có bộ GIẢI mã; cần chiều ngược lại).
+       Lưu ý: record nối nhau bằng từ điển → phải nén tuần tự; có thể phải dựng lại `Data.kit` (mục lục)
+       nếu offset tuyệt đối thay đổi.
+    2. Font `fonts/unravel.fgen` — kiểm tra đủ dấu tiếng Việt chưa (bản dịch dùng 156 ký tự).
+    3. Đóng gói LayeredFS: `output/atmosphere/contents/0100E5D00CC0C000/romfs/NVNKits/`.
+    4. Vá font + build + `qa_text.py --game unravel` + cập nhật STATE.
 - **Chi tiết định dạng + việc còn lại:** `games/0100E5D00CC0C000_UnravelTwo/README.md`.
 
 ---

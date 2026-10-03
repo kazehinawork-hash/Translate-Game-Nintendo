@@ -109,13 +109,19 @@
   - ✅ **Quét toàn bộ**: ~70.000 record. Nội dung chủ yếu là **dữ liệu asset**
     (schema/biến vật lý, tên menu, đường dẫn scene `|/scenes/Levels/Menu/...|`) —
     **chưa cô lập được bảng chuỗi hiển thị (localization)**.
-  - ⏳ **Còn lại:**
-    1. Đọc bảng offset thật từ `Data.kit` (1,5 MB) để lấy ranh giới record **chính xác**
-       (hiện phải tự dò → record không-nén xen kẽ làm lệch; tool: `tools/kit_extract.py`,
-       `tools/kit_scan_all.py`, `tools/kit_find_text.py`).
-    2. Từ đó tìm ra record chứa bảng dịch (nhiều khả năng khoá theo tên như `Localization`/`Text`).
-  - **Kết luận tạm:** định dạng **đã mở** (không phải tường chặn như Mario Party), nhưng việc
-    bóc kho chuỗi cần thêm thời gian — chưa thể hứa thời điểm xong.
+  - ✅ **ĐÃ TÌM RA KHO TEXT** trong `Data.kit.0` (3 record lớn):
+    - `@~0x7e44e73` (15 MB) — **BẢNG DỊCH**: có `LANG_RULE_NON_ENDING`, thẻ `<loca>`, nhãn `NOLOCA`,
+      và **credits thật**: `THANK_YOU`, `ROLE`, `<large>Coldwood</…>`, `Sam Addo…`, `Dick Adolfsson`,
+      `Linus…`, `Joshua Baldwin`, `Victor Bohl`, `Karl Broström`, `Håkan Dalsfelt`, `Michael Gill`…
+    - `@~0x26412df` (16,8 MB) — **script UI + khoá text**: `MENU_BUTTON_BAR_TEXT_ACTIVATE`,
+      `CONTROLLER_LOST`, `m_text = StoredGameObjectHandle()`…
+    - `@~0x644d639` (24,6 MB) — dữ liệu menu/scene.
+  - ✅ **Xác định 2 codec khác nhau** trong archive:
+    - **LZ4 → JSON** (nhiều record, đã kiểm chứng, codec: `tools/kit_extract.py`)
+    - **Codec riêng của Coldwood** (các record text ở trên) — chuỗi đọc được một phần
+      (literal xen token 2 byte) nhưng **chưa giải mã được** → chưa thể bóc/dựng lại.
+  - ⏳ **Chặn còn lại (1 việc duy nhất):** giải mã codec riêng cho record text
+    (rồi mới bóc được chuỗi → dịch → đóng gói). Cần RE thêm; **chưa hứa được thời điểm xong**.
 - **Chi tiết định dạng + việc còn lại:** `games/0100E5D00CC0C000_UnravelTwo/README.md`.
 
 ---

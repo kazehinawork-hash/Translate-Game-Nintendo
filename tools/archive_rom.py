@@ -40,6 +40,8 @@ TITLE_DIR = {
     '01008DD013200800': 'Ori',
     '010061D00DB74000': 'OriBlindForest',
     '010061D00DB74800': 'OriBlindForest',
+    '0100965017338000': 'MarioPartyJamboree',
+    '0100965017338800': 'MarioPartyJamboree',
 }
 
 

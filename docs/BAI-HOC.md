@@ -216,6 +216,26 @@
   4. Với font bitmap: tìm **atlas texture** + **bảng glyph** qua typetree IL2CPP
      (`tools/extract_il2cpp.py` bóc `main` + `global-metadata.dat`), rồi mới tính chuyện vẽ thêm.
 
+### BH-19. Game MỚI có thể vượt khả năng bộ tool — kiểm tra "bóc được RomFS chưa" NGAY
+
+**Ca thật: Super Mario Party Jamboree (10/2024) — dự án quyết định BỎ, không dịch.**
+
+- **Đã tìm ra:** NCA3, SDK 17.5.4, Master Key Revision 0x11; **titlekey nằm dạng THÔ ngay trong ticket**
+  của NSP (`tik[0x180:0x190]` = titlekey, KHÔNG mã hoá bằng titlekek — ticket loại "không ký").
+  hactool với `--titlekey=` đó **giải mã NCA thành công** (hết "section corrupted") → **keys của người dùng đủ dùng**.
+- **Chặn thật:** **không tool nào đọc được bảng RomFS** của game này:
+  `hactool` → *"Failed to read RomFS directory cache!"*; `nsz` → lỗi đọc section; `ue_romfs_tool` → 0 file.
+  (RomFS có offset metadata **vượt 4 GB** — bộ tool hiện tại chưa xử lý được.)
+- **BÀI HỌC 1 (quy trình):** ở **Giai đoạn 1**, sau khi có ROM phải chạy thử
+  `python tools/ue_romfs_tool.py list "<rom>"` — **nếu ra 0 file thì DỪNG và báo ngay**, đừng đi tiếp.
+  Kiểm tra này mất 1 giây nhưng tiết kiệm rất nhiều thời gian.
+- **BÀI HỌC 2 (kỹ thuật):** offset trong bảng **PFS0 của NSP là TƯƠNG ĐỐI** — phải cộng
+  `0x10 + count*0x18 + strtab_size` mới ra vị trí thật của NCA (tôi từng trích sai vì tưởng tuyệt đối).
+- **BÀI HỌC 3 (kỹ thuật):** NSP có nhiều loại ticket; **ticket không ký lưu titlekey dạng thô** —
+  khi đó `titlekek` trong `prod.keys` **không dùng để giải mã titlekey** được (thử cả 22 khoá đều sai là dấu hiệu).
+- **Hướng xử lý khi gặp lại:** (1) xin **NSP đã giải mã (decrypted)** của game → chạy thẳng;
+  (2) hoặc tự viết module giải mã NCA + đọc RomFS (titlekey đã biết thì làm được, nhưng là việc lớn).
+
 ---
 
 ## PHẦN 2 — BẢNG LỖI THEO GAME (để tra nhanh)

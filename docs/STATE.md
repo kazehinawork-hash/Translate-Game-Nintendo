@@ -93,7 +93,19 @@
 
 ---
 
-## 6. Hạ tầng repo & đóng gói
+## 6. ⛔ ĐÃ BỎ: Super Mario Party Jamboree (Nintendo Switch)
+- **Title ID**: `0100965017338000` (Base) + `0100965017338800` (Update v2.3.0), game 10/2024 (NCA3, SDK 17.5.4)
+- **Lý do bỏ (theo yêu cầu người dùng 03/10):** bộ tool hiện tại **không bóc được RomFS** của game này
+  (`hactool` → "Failed to read RomFS directory cache"; `nsz` → lỗi đọc section; `ue_romfs_tool` → 0 file).
+  Titlekey **đã tìm được** (ticket lưu dạng thô: `e943b92149e3e36aa9445c9167b40f36`) và hactool giải mã NCA OK,
+  nhưng phần bảng RomFS (offset metadata > 4 GB) thì chưa tool nào đọc nổi.
+- **Không tạo** thư mục game, **không có** gì trong `output/`. File tạm (10,58 GB) đã xoá.
+  ROM đã chuyển sang `E:\ROM_Backup\MarioPartyJamboree\` (2 file, SHA256 xác minh).
+- **Nếu muốn làm lại:** cần **NSP đã giải mã**, hoặc tự viết module đọc NCA/RomFS. Chi tiết: BH-19 trong `docs/BAI-HOC.md`.
+
+---
+
+## 7. Hạ tầng repo & đóng gói
 - **Bài học kinh nghiệm (BẮT BUỘC ĐỌC):** `docs/BAI-HOC.md` — 12 lỗi đã từng xảy ra thật + quy tắc
   chống lặp + checklist bàn giao. **Cổng QA bắt buộc:** `python tools/qa_text.py --game <ten_game>`
   (đã chạy PASS cho hogwarts và ori).

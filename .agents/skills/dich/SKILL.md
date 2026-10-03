@@ -43,6 +43,15 @@ flowchart TD
      `python tools/find_rom.py "<TitleID hoặc tên game>"` — quét `input/` rồi `E:\ROM_Backup`
      (đổi gốc bằng biến môi trường `ROM_DIR`). ROM nên để **ngoài OneDrive** cho nhẹ máy.
    - Tạo thư mục làm việc: `games/<TitleID>_<Tên>/{source,translations}/`.
+1b. **THỬ BÓC ROMFS NGAY — NẾU RA 0 FILE THÌ DỪNG VÀ BÁO NGƯỜI DÙNG:**
+   ```bash
+   python tools/ue_romfs_tool.py list "<game.nsp>"
+   ```
+   Ra danh sách file = làm tiếp bình thường. **Ra `0 file` = DỪNG LẠI**, báo rõ cho người dùng:
+   có thể là (a) NSP **còn mã hoá** (cần bản *decrypted* hoặc `title.keys`), hoặc (b) game **quá mới**
+   vượt khả năng bộ tool hiện tại.
+   ⚠️ Đừng đi tiếp khi chưa bóc được dữ liệu — xem `docs/BAI-HOC.md` BH-19 (ca Super Mario Party Jamboree:
+   phát hiện muộn, tốn rất nhiều thời gian mà cuối cùng phải bỏ).
 2. **Nhận diện Engine tự động**:
    - **Nintendo First-Party** (Switch Sports, Mario, Zelda): Định dạng `MSBT` + `SARC.zs` + `BFARC.zs` font.
    - **Unity**: Thư mục `Managed/`, file `sharedassets*.assets`, file `TextMeshPro` hoặc `I2 Localization`.

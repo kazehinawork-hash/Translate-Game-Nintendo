@@ -30,8 +30,8 @@
 ## Build lại
 
 ```bash
-# 1) Bóc bundle gốc ra thư mục ngoài OneDrive (ví dụ C:\...\ori_work\Data)
-#    (lần sau chỉ cần chạy lại nếu xoá; bundle gốc lấy từ NSP bằng tools/ue_romfs_tool.py)
+# 1) Bóc 307 bundle gốc ra thư mục ngoài OneDrive (ví dụ C:\...\ori_bundles\Data) — lấy ROM từ E:\ROM_Backup\Ori
+#    (thư mục tạm trước đây đã được DỌN sau khi xong; xem tools/ue_romfs_tool.py để bóc lại)
 # 2) Dịch: games/<TID>/translations/vi_*.json  (đã xong)
 # 3) Đóng gói:
 python tools/build_ori_mod.py --src <thu_muc_bundle_goc>

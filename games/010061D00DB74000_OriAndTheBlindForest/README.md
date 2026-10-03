@@ -51,8 +51,9 @@ bản dịch lẫn text tiếng Anh của game.
 ## Cách build lại
 
 ```bash
-python tools/extract_il2cpp.py "input\<game>.nsp" E:\OBF_work     # bóc main + metadata (cho typetree)
-# (data.unity3d đã bóc sẵn ở E:\OBF_work\data.unity3d)
+python tools/extract_il2cpp.py "<rom trong E:\ROM_Backup\OriBlindForest>" E:\OBF_work   # main + metadata
+python tools/ue_romfs_tool.py extract "<rom>" "Data/data.unity3d" E:\OBF_work\data.unity3d
+# (thư mục tạm E:\OBF_work đã được DỌN sau khi xong — bóc lại từ ROM trong E:\ROM_Backup khi cần build lại)
 # sửa bản dịch: games/010061D00DB74000_OriAndTheBlindForest/translations/obf_vi.json
 python tools/qa_text.py --game obf
 ```

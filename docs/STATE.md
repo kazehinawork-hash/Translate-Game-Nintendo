@@ -132,13 +132,17 @@
     - Chia 6 chunk, giao **4 subagent dịch song song** → `translations/vi_ui_01,02 / vi_mid_03,04,05 / vi_long_06.json`
     - **QA (`tools/qa_unravel.py`): PASS** — 0 lệch thẻ `<...>`, 0 lệch placeholder, 0 chuỗi rỗng,
       0 ký tự lạ (CJK/Hangul/Kana/Kyrillic/Ả Rập).
-  - ⏳ **Còn lại (kỹ thuật):**
-    1. **Viết bộ NÉN LZ4** để đóng gói lại record (đã có bộ GIẢI mã; cần chiều ngược lại).
-       Lưu ý: record nối nhau bằng từ điển → phải nén tuần tự; có thể phải dựng lại `Data.kit` (mục lục)
-       nếu offset tuyệt đối thay đổi.
-    2. Font `fonts/unravel.fgen` — kiểm tra đủ dấu tiếng Việt chưa (bản dịch dùng 156 ký tự).
-    3. Đóng gói LayeredFS: `output/atmosphere/contents/0100E5D00CC0C000/romfs/NVNKits/`.
-    4. Vá font + build + `qa_text.py --game unravel` + cập nhật STATE.
+  - ✅ **ĐÓNG GÓI XONG MOD (03/10):**
+    - Bộ **NÉN LZ4**: `tools/kit_repack.py` (khối literal hợp lệ) — giữ nguyên byte nén của record
+      không sửa, chỉ nén lại record bị thay.
+    - `tools/build_unravel_mod.py`: thay giá trị bảng dịch bằng **regex** (không phụ thuộc ranh giới
+      chunk), rồi **vá dây chuyền** các record bị ảnh hưởng do tham chiếu chéo (26 record/vòng 1 → 0/vòng 2).
+    - Thành phẩm: `output/atmosphere/contents/0100E5D00CC0C000/romfs/NVNKits/Data.kit.0` (211 MB).
+    - **Kiểm chứng (`tools/verify_unravel_mod.py`): PASS** — 12.698 record + 24 gap nguyên vẹn,
+      **chỉ đúng 6 record thay đổi** (đều chứa tiếng Việt).
+  - ⚠️ **CẦN TEST TRÊN MÁY:** font `fonts/unravel.fgen` (dạng riêng, chưa giải mã) — nếu vào game
+    thấy ô vuông thì phải vá font. Nếu không thấy tiếng Việt thì kiểm tra lại bảng ngôn ngữ theo máy.
+  - ⏳ Còn lại: vá font `.fgen` (nếu cần, sau khi test máy) + chạy `qa_text.py --game unravel`.
 - **Chi tiết định dạng + việc còn lại:** `games/0100E5D00CC0C000_UnravelTwo/README.md`.
 
 ---

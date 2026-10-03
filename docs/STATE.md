@@ -116,12 +116,18 @@
     - `@~0x26412df` (16,8 MB) — **script UI + khoá text**: `MENU_BUTTON_BAR_TEXT_ACTIVATE`,
       `CONTROLLER_LOST`, `m_text = StoredGameObjectHandle()`…
     - `@~0x644d639` (24,6 MB) — dữ liệu menu/scene.
-  - ✅ **Xác định 2 codec khác nhau** trong archive:
-    - **LZ4 → JSON** (nhiều record, đã kiểm chứng, codec: `tools/kit_extract.py`)
-    - **Codec riêng của Coldwood** (các record text ở trên) — chuỗi đọc được một phần
-      (literal xen token 2 byte) nhưng **chưa giải mã được** → chưa thể bóc/dựng lại.
-  - ⏳ **Chặn còn lại (1 việc duy nhất):** giải mã codec riêng cho record text
-    (rồi mới bóc được chuỗi → dịch → đóng gói). Cần RE thêm; **chưa hứa được thời điểm xong**.
+  - ✅ **ĐÃ GIẢI MÃ XONG CODEC (03/10) — codec thật là `LZ4 + TỪ ĐIỂN` (solid archive):**
+    - Điểm mấu chốt: token `0xb6` = 11 literal `"ichael Gill"` rồi match 6 byte lấy từ **dữ liệu
+      đã giải nén trước đó** (chữ `M` nằm ở entry trên) → phải giải mã **tuần tự, giữ từ điển 64 KB**.
+    - Kết quả `Data.kit.0`: **10.117 record** (10.116 LZ4-từ-điển + 1 raw) — parse sạch toàn file.
+    - Tool: `tools/kit_lz4dict.py` (bộ giải mã LZ4-có-từ-điển) + `tools/kit_unpack.py` (bóc + tự đồng bộ).
+  - ✅ **BÓC ĐƯỢC BẢNG DỊCH THẬT** — record `@0x865b1aa` (65.536 byte = đúng 64 KB, cỡ cửa sổ từ điển):
+    - Định dạng cực đơn giản: `KHOÁ` ⏎⏎ `giá trị` ⏎⏎ `KHOÁ` ⏎⏎ `giá trị`… (bắt đầu bằng `v0.01`)
+    - Thẻ định dạng: `<NEWLINE>`, `<loca>…</loca>`, `<large>…</large>`
+    - **Record này là bản TIẾNG PHÁP** (`Vous avez terminé l'histoire…`) → game có **một record cho
+      mỗi ngôn ngữ** → cần tìm record **tiếng Anh** làm nguồn dịch.
+  - ⏳ **Còn lại:** (1) bóc đủ 12 phần → tìm record tiếng Anh; (2) dịch EN→VI; (3) viết bộ **nén** LZ4
+    (giữ nguyên kích thước record để không lệch bảng mục lục); (4) font `.fgen`; (5) đóng gói + QA.
 - **Chi tiết định dạng + việc còn lại:** `games/0100E5D00CC0C000_UnravelTwo/README.md`.
 
 ---

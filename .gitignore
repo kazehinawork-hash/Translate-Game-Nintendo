@@ -40,3 +40,7 @@ tools/fonts_hades2/
 # Hogwarts Legacy + Ori (xem tools/check_font_coverage.py, tools/patch_font_ori.py).
 # Không có file này thì clone mới KHÔNG build lại được -> phải lưu trong repo.
 !tools/fonts_hades2/Lato-Regular.ttf
+
+# .NET build (cong cu C# trong tools/)
+bin/
+obj/

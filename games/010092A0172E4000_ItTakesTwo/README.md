@@ -23,24 +23,34 @@
 
 ⚠️ **Không có file `.locres`** của game (chỉ có của Engine) → text nằm trong **asset UE4 nhị phân**.
 
-## ⛔ ĐIỂM CHẶN
+## ⛔ ĐIỂM CHẶN → ✅ ĐÃ GIẢI QUYẾT (05/10)
 
-Text nằm trong **asset UE4 nhị phân** (`.uasset` + `.uexp`), **không phải** từ điển dễ sửa như
-`AVAFDICT` của Hogwarts. Muốn dịch phải:
-1. **Đọc/ghi được asset UE4** (parse đúng cấu trúc export + FText + `StringTable`), hoặc
-2. **Vá tại chỗ với độ dài bằng nhau** (tiếng Việt thường DÀI HƠN tiếng Anh → không khả thi cho phần lớn chuỗi), hoặc
-3. Dùng công cụ chuyên dụng (UAssetAPI/.NET) — máy chưa có.
+Ban đầu tưởng phải tự viết parser UE4. Nhưng kiểm tra máy thấy **đã có .NET 10.0.400** →
+dùng được **UAssetAPI** (thư viện chuẩn cho asset UE4).
 
-→ **Cần viết bộ parse `.uasset/.uexp`** (đây là việc lớn, tương tự việc giải mã định dạng `.kit`
-của Unravel Two trước đây).
+**Công cụ đã dựng và CHẠY ĐƯỢC:** `tools/itt_uasset_tool/` (C# + NuGet UAssetAPI)
+
+Cách đọc asset **unversioned (cooked)** — mấu chốt:
+```csharp
+// PHẢI chỉ định ObjectVersion thủ công (CLI của UAssetGUI không làm được việc này)
+new UAsset(path, ObjectVersion.VER_UE4_AUTOMATIC_VERSION /* =522, UE4.27 */,
+           ObjectVersionUE5.<first>, new List<CustomVersion>(), null, CustomSerializationFlags.None);
+```
+- `asset.SerializeJson()` → JSON (sửa chữ ở đây)
+- `UAsset.DeserializeJson(...)` + `asset.Write(path)` → ghi lại
+- **Đã kiểm chứng ROUNDTRIP**: gốc 618 byte → ghi lại 618 byte, JSON **giống hệt** → **không mất dữ liệu**
+- Đọc thử `ST_UTG_MenuLabels` thấy đúng chữ (EULA + nhãn menu)
+
+→ **Đường đi đã thông**, không cần tự viết parser nữa.
 
 ## Việc còn lại
 
-1. Viết codec đọc/ghi `.uasset`+`.uexp` cho `ST_UTG_*` và `Subtitles/*`.
-2. Bóc toàn bộ chuỗi (menu + phụ đề) → dịch (có glossary tạo TRƯỚC — BH-22).
-3. Vá font: thay `LastResort.ttf` (file rời) — giữ đủ glyph gốc + thêm dấu tiếng Việt (BH-20).
-4. Đóng gói: **patch pak** (`Nuts-Switch_p.pak`) vì text là UFS trong pak + file rời cho font/script.
-5. QA + chuyển ROM (đã chuyển: `E:\ROM_Backup\ItTakesTwo\`).
+1. Bóc **2 StringTable** (`ST_UTG_*`) + **588 file phụ đề** từ pak → dump JSON bằng công cụ trên.
+2. **Tạo glossary TRƯỚC** (BH-22 — lần trước làm sau nên phải sửa lại) rồi mới dịch.
+3. Dịch (chia chunk + subagent) → ghi JSON ngược lại thành asset.
+4. Vá font: thay `LastResort.ttf` (file rời) — giữ đủ glyph gốc + thêm dấu (BH-20).
+5. Đóng gói: **patch pak** `Nuts-Switch_p.pak` (text là UFS trong pak) + file rời cho font.
+6. QA + bàn giao.
 
 ## Ghi chú
 

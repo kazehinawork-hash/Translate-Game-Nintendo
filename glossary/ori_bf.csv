@@ -1,0 +1,24 @@
+source,target,category,note
+Spirit Gate,Cổng Tinh Linh,Structure,
+Energy Door,Cửa Năng Lượng,Structure,
+Energy Gate,Cổng Năng Lượng,Structure,
+Spirit Tree,Cây Tinh Linh,Place,Giữ nguyên tên riêng trong tên gọi
+Charge Flame,Lửa Tích Tụ,Ability,
+Climb Ability,Kỹ Năng Leo,Ability,
+Soul Link,Liên Kết Linh Hồn,Ability,
+Light Burst,Ánh Sáng Bùng Nổ,Ability,
+Spirit Wells,Giếng Tinh Linh,Structure,
+Water Vein,Mạch Nước,Item,
+Element of Waters,Nguyên Tố Nước,Item,
+Life Cell,Ô Sinh Mệnh,Item,
+Ability,Kỹ Năng,UI,
+Bash,Bật,Ability,
+Dash,Lướt,Ability,"Chuẩn của Ori là ""Lướt"" (KHÔNG dùng ""Tăng Tốc (Chạy Nhanh)"" của Switch Sports)"
+Jump,nhảy,Action,
+Hold,Giữ,UI,
+Press,Nhấn,UI,
+Ori,Ori,Character,Giữ nguyên
+Sein,Sein,Character,Giữ nguyên
+Kuro,Kuro,Character,Giữ nguyên
+Ginso,Cây Ginso,Place,
+Nibel,Nibel,Place,Giữ nguyên

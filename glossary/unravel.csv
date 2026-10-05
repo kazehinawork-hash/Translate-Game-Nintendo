@@ -1,0 +1,22 @@
+source,target,category,note
+Action,Hành động,UI,Nút hành động (thẻ <Action> giữ nguyên)
+Jump,Nhảy,Control,
+Tie,Buộc,Control,
+Untie,Tháo,Control,
+Lasso,Thòng lọng,Control,
+Walk,Đi,Control,
+Carry,Mang,Control,
+Switch,Đổi,Control,
+Back,Quay lại,UI,
+Challenge,Thử thách,Mode,
+Chapter,Chương,UI,
+Selector,Bộ chọn,UI,
+Suggest,Gợi ý,UI,
+Assist Mode,Chế Độ Hỗ Trợ,Mode,
+Volume,Âm lượng,UI,
+SecondPlay,Người chơi thứ hai,UI,
+NEWLINE,<NEWLINE>,Tag,GIỮ NGUYÊN - không dịch
+EULA,EULA,Legal,KHÔNG dịch (giữ nguyên tiếng Anh)
+CREDITS_NOLOCA,CREDITS_NOLOCA,Legal,KHÔNG dịch (game đánh dấu NOLOCA)
+Unravel,Unravel,Character,Giữ nguyên
+Yarny,Yarny,Character,Giữ nguyên

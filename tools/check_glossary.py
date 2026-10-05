@@ -38,7 +38,9 @@ GAME_GLOSSARY = {
     'hogwarts': ['master.csv', 'hogwarts_legacy.csv'],
     'hades2': ['master.csv', 'hades2.csv'],
     'ori': ['ori.csv'],
+    'obf': ['ori_bf.csv'],
     'switchsports': ['master.csv'],
+    'kirby': ['kirby.csv'],
 }
 
 

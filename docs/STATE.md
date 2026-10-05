@@ -57,7 +57,19 @@
 
 ## 3. Nintendo Switch Sports
 - **Title ID**: `0100D2F00D5C0000`
-- **Trạng thái**: Hoàn thành 100% (7 môn thể thao + font BCFNT). Mod tại `output/atmosphere/contents/0100D2F00D5C0000/`.
+- **Trạng thái**: Đã build mod (text 100% + font) — **NHƯNG có lỗi người dùng báo 03/10: UI tỷ số không hiện.**
+- **🐞 NGUYÊN NHÂN ĐÃ TÌM RA (03/10):** `tools/build_custom_font.py` **thay hẳn** 4 font Latin của
+  Nintendo (`scft/VDL-LOGOG-BOLD.bfotf`, `VDL-LOGOG-ULTRA`, `VDL-GigaJr-ExtraBold-003_Gaiji`,
+  `VDL-GigaJr-Ultra`) bằng **Nunito** → **mất 7.888 / 8.207 glyph (96%)**:
+  font gốc **8.207 glyph** (OTTO/CFF) → font mod **938 glyph** (TTF/glyf); mất trọn
+  **fullwidth/halfwidth 164/164, số trong vòng 76/76, mũi tên 13/13, hình khối 20/20** — đúng những
+  glyph mà UI tỷ số dùng để vẽ.
+- **Lỗi khác tìm thấy khi soát (`tools/qa_switchsports.py`):**
+  - thiếu 1 file dịch: `_all_strings.json` (file tổng hợp, có thể không cần)
+  - `ProgramMsg__Equipment__Hair.msbt.json` **thiếu key `Hair45`**
+  - **2 chuỗi rỗng** trong bản dịch
+- **Việc cần làm:** làm lại font theo hướng **HỢP NHẤT** (giữ 8.207 glyph gốc + thêm glyph tiếng Việt),
+  vá 3 lỗi bản dịch trên, rồi build lại. Chi tiết kỹ thuật: **BH-20** trong `docs/BAI-HOC.md`.
 
 ---
 

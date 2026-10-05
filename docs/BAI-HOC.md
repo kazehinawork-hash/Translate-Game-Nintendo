@@ -236,6 +236,31 @@
 - **Hướng xử lý khi gặp lại:** (1) xin **NSP đã giải mã (decrypted)** của game → chạy thẳng;
   (2) hoặc tự viết module giải mã NCA + đọc RomFS (titlekey đã biết thì làm được, nhưng là việc lớn).
 
+### BH-20. THAY HẲN font game = mất hàng nghìn glyph → UI (tỷ số) không hiện
+
+**Ca thật: Nintendo Switch Sports — UI tỷ số không hiển thị (người dùng báo 03/10).**
+
+- **Nguyên nhân gốc:** `tools/build_custom_font.py` **thay hẳn** 4 font Latin của Nintendo
+  (`scft/VDL-LOGOG-BOLD.bfotf`, `VDL-LOGOG-ULTRA`, `VDL-GigaJr-ExtraBold-003_Gaiji`, `VDL-GigaJr-Ultra`)
+  bằng **Nunito** (TTF 132 KB), làm **mất 7.888 / 8.207 glyph (96%)**:
+  - font gốc: **8.207 glyph** (OTTO/CFF), phủ U+0000–U+FFE8
+  - font mod: **938 glyph** (TTF/glyf)
+  - mất trọn các nhóm: **fullwidth/halfwidth 164/164**, **số trong vòng 76/76**,
+    mũi tên 13/13, hình khối 20/20, CJK punctuation 27/27
+  → UI tỷ số (dùng glyph số/ký hiệu đặc biệt) **không còn gì để vẽ**.
+- **BÀI HỌC 1:** **Không bao giờ thay hẳn font game.** Phải **hợp nhất** (giữ toàn bộ glyph gốc + thêm
+  glyph tiếng Việt) — đúng như BH-8 đã ghi, nhưng lần này bị vi phạm.
+- **BÀI HỌC 2 (cách kiểm tra BẮT BUỘC trước khi chốt font):** đếm và **so sánh số glyph** giữa
+  font gốc và font trong mod; **liệt kê glyph bị mất theo nhóm**. Nếu mất > 0 ở nhóm UI
+  (số, mũi tên, hình khối, fullwidth) → **KHÔNG được chốt**.
+- **BÀI HỌC 3 (kỹ thuật):** `.bfotf` của Nintendo = **OTF bọc XOR** (magic `D99B871A`,
+  key `2785117442`, XOR từng word 4 byte) → **giải mã/đóng gói đối xứng**.
+  Font gốc là **OTTO/CFF**, Nunito là **TTF/glyf** → `fontTools.merge.Merger` **KHÔNG hợp được**
+  hai loại khác nhau; muốn hợp nhất phải chuyển CFF→glyf trước (`Cu2QuPen` + `TTGlyphPen`,
+  rồi cập nhật `glyphOrder` + `hmtx` cho glyph mới).
+- **Trạng thái:** mod Switch Sports hiện **vẫn là font đã thay hẳn** (chưa sửa xong) — cần làm lại
+  theo hướng hợp nhất. Tool soát lỗi: `tools/qa_switchsports.py`.
+
 ---
 
 ## PHẦN 2 — BẢNG LỖI THEO GAME (để tra nhanh)

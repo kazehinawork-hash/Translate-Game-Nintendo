@@ -200,6 +200,13 @@
   - **Kiểm chứng thành phẩm (`tools/final_check_kirby.py`): PASS** — **15.975/15.975 chuỗi khớp**.
   - Mod: `output/atmosphere/contents/01004D300C5AE000/` — 380 file, 18,2 MB.
   - ROM đã chuyển `E:\ROM_Backup\Kirby\` (2 file, SHA256 xác minh).
+  - **Glossary**: ✅ **`glossary/kirby.csv`** — 36 thuật ngữ (kèm **ngoại lệ theo ngữ cảnh** cho
+    `Listen`/`Look`/`Fish`). Sau khi dịch đã soát nhất quán: 7 câu nguồn dịch 2 kiểu → đã thống nhất
+    (còn lại 3 ngoại lệ **cố ý** theo ngữ cảnh, đã ghi rõ trong glossary).
+  - **QA bản dịch cuối (`tools/qa_kirby.py`): PASS** — 2.508 chuỗi, 0 lệch key, **0 lệch mã điều khiển**,
+    0 chuỗi rỗng, 0 ký tự lạ (7 cảnh báo ngắt dòng lại — chấp nhận được).
+  - ⚠️ **Lỗi quy trình đã ghi bài học (BH-22):** glossary được tạo **SAU** khi dịch (đúng ra phải nạp
+    `glossary/master.csv` + tạo glossary game **trước** khi giao subagent). Lần sau làm đúng thứ tự.
 - **Cách chơi**: để ngôn ngữ máy = một ngôn ngữ **Latin** (English/Pháp/Đức/Ý/Tây Ban Nha/Hà Lan).
 - **Bài học**: **BH-21** trong `docs/BAI-HOC.md` (bẫy "dò khoá vòng tròn" khi gói lại `.bfotf`;
   MSBT nuốt `\0` cuối chuỗi). Chi tiết: `games/01004D300C5AE000_Kirby/README.md`.

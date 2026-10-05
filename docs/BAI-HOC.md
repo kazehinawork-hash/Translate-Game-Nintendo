@@ -287,6 +287,27 @@
   → Kirby: 11 font Latin, mỗi font giữ ~8.049 glyph (gốc 8.207, phần "mất" là ký tự điều khiển 0x00–0x1D,
   không phải glyph hiển thị).
 
+### BH-22. Glossary: phải nạp + tạo **TRƯỚC** khi dịch, và đừng "thống nhất máy móc" theo ngữ cảnh
+
+**Ca thật: Kirby and the Forgotten Land (05/10).**
+
+- 🐞 **Lỗi quy trình:** bỏ qua bước 3 Giai đoạn 1 (nạp `glossary/master.csv`) và **không tạo glossary
+  cho game mới** → dịch xong 2.508 chuỗi mới phát hiện **7 câu nguồn bị dịch 2 kiểu** và thuật ngữ
+  chính (`Mouthful Mode`) tồn tại **2 cách** ("giữ tiếng Anh" vs "Chế Độ Há Miệng").
+  → **Bắt buộc:** trước khi giao subagent, tạo `glossary/<game>.csv` + đưa danh sách thuật ngữ vào
+  prompt của subagent. Sau khi dịch, chạy kiểm tra **cùng câu nguồn → cùng bản dịch**.
+- ⚠️ **Bẫy ngược lại — KHÔNG thống nhất máy móc:** khi thấy cùng câu nguồn dịch 2 kiểu, phải **xem
+  ngữ cảnh từng chỗ**. Ví dụ thật:
+  - `Listen` — nút thường = "Nghe", nhưng `Btn_Continue` (ý "nghe tiếp") = "Nghe tiếp".
+  - `Look` — hướng dẫn = "Nhìn", nhưng `Figure.$View` (ngắm tượng) = "Ngắm".
+  - `Fish` — tên loài = "Cá", hướng dẫn câu cá = "Câu cá".
+  Thống nhất máy móc 3 chỗ này **làm hỏng** bản dịch; phải ghi **ngoại lệ theo key** vào glossary.
+- **Cách kiểm tra dùng được:** `tools/kirby_glossary_check.py` + `tools/kirby_terms.py` — gom
+  `en → {các bản dịch}` và liệt kê câu nguồn có >1 bản dịch, kèm **ngữ cảnh (file/key)** để phán đoán.
+- **QA đúng cách:** lệch **số lượng `\n`** là **cảnh báo** (xuống dòng lại cho tiếng Việt), không phải
+  lỗi; chỉ lệch **các mã điều khiển khác** mới tính là lỗi. (Bản QA đầu của Kirby báo nhầm 7 lỗi vì
+  tính cả `\n` và cả ký tự PUA nằm trong thẻ.)
+
 ---
 
 ## PHẦN 2 — BẢNG LỖI THEO GAME (để tra nhanh)

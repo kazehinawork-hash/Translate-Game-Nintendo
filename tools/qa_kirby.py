@@ -38,7 +38,7 @@ def strip_tags(s):
 
 merged = {}
 tot = 0
-bad_key = bad_ctrl = empty = bad_char = 0
+bad_key = bad_ctrl = empty = bad_char = warn_nl = 0
 for i in range(1, 11):
     tp = os.path.join(T, f'todo_{i:02d}.json')
     vp = os.path.join(T, f'vi_{i:02d}.json')
@@ -54,12 +54,16 @@ for i in range(1, 11):
         if x['key'] != y['key'] or x['file'] != y['file']:
             bad_key += 1
         s, v = x['en'], str(y.get('vi', ''))
-        if Counter(CTRL.findall(s)) != Counter(CTRL.findall(v)):
+        ctrl_s = Counter(c for c in CTRL.findall(s) if c != '\n')
+        ctrl_v = Counter(c for c in CTRL.findall(v) if c != '\n')
+        if ctrl_s != ctrl_v:
             bad_ctrl += 1
             if bad_ctrl <= 4:
                 print(f'  LECH MA [{x["file"]}/{x["key"]}]')
-                print(f'    en: {[hex(ord(c)) for c in CTRL.findall(s)][:8]}')
-                print(f'    vi: {[hex(ord(c)) for c in CTRL.findall(v)][:8]}')
+                print(f'    en: {[(hex(ord(c)), n) for c, n in ctrl_s.items()][:6]}')
+                print(f'    vi: {[(hex(ord(c)), n) for c, n in ctrl_v.items()][:6]}')
+        elif Counter(CTRL.findall(s)) != Counter(CTRL.findall(v)):
+            warn_nl += 1
         if not v.strip() and s.strip():
             empty += 1
             if empty <= 4:
@@ -71,7 +75,7 @@ for i in range(1, 11):
                 print(f'  KY TU LA [{x["file"]}/{x["key"]}]: {set(m)}')
         merged.setdefault(x['file'], {})[x['key']] = v
 
-print(f'\ntong {tot:,} chuoi | lech key {bad_key} | lech ma dieu khien {bad_ctrl} | rong {empty} | ky tu la {bad_char}')
+print(f'\ntong {tot:,} chuoi | lech key {bad_key} | lech ma dieu khien {bad_ctrl} | rong {empty} | ky tu la {bad_char} | canh bao xuong dong {warn_nl}')
 print(f'gop {len(merged)} file MSBT')
 json.dump(merged, open(os.path.join(T, 'kirby_vi.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 print('da luu translations/kirby_vi.json')

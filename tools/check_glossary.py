@@ -30,17 +30,15 @@ import qa_text as Q  # noqa: E402
 SRC_COLS = ('source', 'english', 'original', 'term', 'key', 'en')
 DST_COLS = ('target', 'vietnamese', 'vi', 'translation', 'value')
 WORD = re.compile(r"[\w'’-]+", re.UNICODE)
-# Glossary dùng CHUNG cho mọi game + glossary riêng của từng game.
-# (Không áp glossary của game này sang game khác — gây dương tính giả.)
-# LƯU Ý: `master.csv` hiện đang mang nội dung của Switch Sports (Mode/UI) → chỉ dùng cho
-# game đó; Ori chưa có glossary riêng (dùng --suggest để gợi ý rồi tạo glossary/ori.csv).
+# Glossary: `master.csv` = CHỈ chứa thuật ngữ DÙNG CHUNG thật sự (xuất hiện giống nhau ở >=2 game).
+# Glossary riêng từng game nằm ở <game>.csv. KHÔNG nhét glossary của game này sang game khác.
 GAME_GLOSSARY = {
     'hogwarts': ['master.csv', 'hogwarts_legacy.csv'],
     'hades2': ['master.csv', 'hades2.csv'],
-    'ori': ['ori.csv'],
-    'obf': ['ori_bf.csv'],
-    'switchsports': ['master.csv'],
-    'kirby': ['kirby.csv'],
+    'ori': ['master.csv', 'ori.csv'],
+    'obf': ['master.csv', 'ori_bf.csv'],
+    'switchsports': ['master.csv', 'switchsports.csv'],
+    'kirby': ['master.csv', 'kirby.csv'],
 }
 
 

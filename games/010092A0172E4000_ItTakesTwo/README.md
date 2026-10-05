@@ -1,59 +1,56 @@
-# It Takes Two (Switch) — `010092A0172E4000`
+# It Takes Two (Switch) — `010092A0172E4000`  ✅ HOÀN THÀNH
 
-- **Engine**: **Unreal Engine 4** (Hazelight, codename "Nuts"; script AngelScript gọi là "Cake")
-- **Sản phẩm**: chưa có — đang ở **Giai đoạn 1** (xem mục "Điểm chặn")
+- **Engine**: **Unreal Engine 4** (Hazelight, codename "Nuts")
+- **Mod**: `output/atmosphere/contents/010092A0172E4000/romfs/Nuts/Content/Paks/Nuts-Switch_p.pak` (491 KB)
 
-## Cấu trúc RomFS (đã bóc được — 5.691 file, 7,0 GB)
+## Cách chơi
+Copy `atmosphere/` vào thẻ nhớ Switch. **Không cần vá font** — xem mục Font bên dưới.
 
-| Đường dẫn | Nội dung |
+## Đã làm (đủ 5 giai đoạn)
+
+| Giai đoạn | Kết quả |
 |---|---|
-| `Nuts/Content/Paks/Nuts-Switch.pak` | **6,87 GB** — gần như toàn bộ dữ liệu game (191.641 entry) |
-| `Nuts/Script/Cake/**/*.as` | ~5.700 script AngelScript — **file RỜI** (thay được bằng LayeredFS) |
-| `Engine/Content/SlateDebug/Fonts/LastResort.ttf` | **font dự phòng UE** — file RỜI, thay được để có tiếng Việt |
-| `Manifest_NonUFSFiles_Switch.txt` | danh sách file rời |
-| `UE4CommandLine.txt` | |
+| 1. Engine + bóc | UE4; RomFS 5.691 file; text nằm **trong pak** (UFS) → phải đóng **patch pak** |
+| 2. Trích + dịch | **2.650 chuỗi duy nhất** (2.859 vị trí; 293 file phụ đề + 2 StringTable) — 8 chunk, 4 subagent |
+| 3. Font | **KHÔNG cần vá**: `LastResort.ttf` gốc có **388.232 glyph** và **đã đủ 100% ký tự tiếng Việt** dùng trong bản dịch |
+| 4. Đóng gói | `Nuts-Switch_p.pak` — 590 entry (295 .uasset + .uexp), V11, mount `../../../` |
+| 5. QA | QA bản dịch PASS (0 thiếu/0 rỗng/0 ký tự lạ/0 lệch xuống dòng) + **đọc lại asset từ pak thấy đúng chữ Việt** |
 
-## Vị trí TEXT (đã xác định)
+## Công cụ (mới)
 
-| Loại | File (trong pak) |
+| Tool | Việc |
 |---|---|
-| **Menu / UI** | `Nuts/Content/Untold/StringTables/ST_UTG_MenuLabels.uasset` + `.uexp` (đọc được, 5 KB, đã thấy EULA + nhãn menu) |
-| **Phụ đề** | `Nuts/Content/Cinematics/Subtitles/Generated/*.uasset` + `.uexp` — **588 file**, struct `HazeSubtitleAsset` (Lines[] → Text FText) |
-| **Bảng điều khiển** | `Nuts/Content/Untold/StringTables/ST_UTG_SwitchControllerLayouts.uasset/.uexp` |
+| `tools/itt_uasset_tool/` (C# + UAssetAPI) | `tojson` / `fromjson` cho asset UE4 — **mấu chốt: chỉ định `ObjectVersion` thủ công** (asset cooked = unversioned) |
+| `tools/itt_extract_strings.py` | Bóc chuỗi từ JSON asset (StringTable + `TextPropertyData.CultureInvariantString`) |
+| `tools/itt_terms.py` | Rút thuật ngữ → `glossary/ittakestwo.csv` (**tạo TRƯỚC khi dịch** — BH-22) |
+| `tools/itt_chunk.py`, `tools/itt_qa.py`, `tools/itt_patch_json.py`, `tools/build_itt_pak.py` | Chia chunk → QA/gộp → ghi JSON → đóng pak |
 
-⚠️ **Không có file `.locres`** của game (chỉ có của Engine) → text nằm trong **asset UE4 nhị phân**.
+## Quy trình build lại
 
-## ⛔ ĐIỂM CHẶN → ✅ ĐÃ GIẢI QUYẾT (05/10)
-
-Ban đầu tưởng phải tự viết parser UE4. Nhưng kiểm tra máy thấy **đã có .NET 10.0.400** →
-dùng được **UAssetAPI** (thư viện chuẩn cho asset UE4).
-
-**Công cụ đã dựng và CHẠY ĐƯỢC:** `tools/itt_uasset_tool/` (C# + NuGet UAssetAPI)
-
-Cách đọc asset **unversioned (cooked)** — mấu chốt:
-```csharp
-// PHẢI chỉ định ObjectVersion thủ công (CLI của UAssetGUI không làm được việc này)
-new UAsset(path, ObjectVersion.VER_UE4_AUTOMATIC_VERSION /* =522, UE4.27 */,
-           ObjectVersionUE5.<first>, new List<CustomVersion>(), null, CustomSerializationFlags.None);
+```bash
+# 1) bóc asset text tu pak (can E:\ITT_work\Nuts-Switch.pak)
+python tools/archive_rom.py                 # ROM o ROM_Backup\ItTakesTwo
+# 2) dump JSON  (E:\ITT_work\uag_tool)
+dotnet run -- tojson E:\ITT_work\assets E:\ITT_work\json 522
+# 3) boc chuoi + dich + QA
+python tools/itt_extract_strings.py ; python tools/itt_terms.py ; python tools/itt_chunk.py
+python tools/itt_qa.py                      # -> translations/itt_vi.json
+# 4) ghi nguoc: JSON -> asset -> pak
+python tools/itt_patch_json.py
+cd E:\ITT_work\uag_tool && dotnet run -- fromjson E:\ITT_work\json_vi E:\ITT_work\assets_vi 522
+python tools/build_itt_pak.py
 ```
-- `asset.SerializeJson()` → JSON (sửa chữ ở đây)
-- `UAsset.DeserializeJson(...)` + `asset.Write(path)` → ghi lại
-- **Đã kiểm chứng ROUNDTRIP**: gốc 618 byte → ghi lại 618 byte, JSON **giống hệt** → **không mất dữ liệu**
-- Đọc thử `ST_UTG_MenuLabels` thấy đúng chữ (EULA + nhãn menu)
 
-→ **Đường đi đã thông**, không cần tự viết parser nữa.
+Sửa bản dịch: `games/010092A0172E4000_ItTakesTwo/translations/vi_{1..8}.json` (dạng `{"chuỗi EN": "bản dịch"}`)
+hoặc `itt_vi.json` → chạy lại bước 4.
 
-## Việc còn lại
+## Lưu ý kỹ thuật (bài học BH-23)
 
-1. Bóc **2 StringTable** (`ST_UTG_*`) + **588 file phụ đề** từ pak → dump JSON bằng công cụ trên.
-2. **Tạo glossary TRƯỚC** (BH-22 — lần trước làm sau nên phải sửa lại) rồi mới dịch.
-3. Dịch (chia chunk + subagent) → ghi JSON ngược lại thành asset.
-4. Vá font: thay `LastResort.ttf` (file rời) — giữ đủ glyph gốc + thêm dấu (BH-20).
-5. Đóng gói: **patch pak** `Nuts-Switch_p.pak` (text là UFS trong pak) + file rời cho font.
-6. QA + bàn giao.
-
-## Ghi chú
-
-- ROM đã chuyển ra `E:\ROM_Backup\ItTakesTwo\` (4 file: base + update + 2 DLC, SHA256 xác minh).
-- Bằng chứng text đọc được: `ST_UTG_MenuLabels.uexp` chứa EULA tiếng Anh + `2022 Hazelight Studios AB`.
-- Thư mục tạm: `E:\ITT_work` (chứa `Nuts-Switch.pak` 6,39 GB + mẫu asset).
+1. Text **không** nằm trong `.locres` → nằm trong **asset UE4 nhị phân** (StringTable + phụ đề).
+2. Máy có **.NET 10** → dùng **UAssetAPI**, **không cần tự viết parser**.
+3. Asset `cooked` = **unversioned** → `new UAsset(...)` thường ném lỗi; phải dùng constructor 6 tham số
+   với **`ObjectVersion` = 522** (UE4.27).
+4. CLI của UAssetGUI **không** đặt được `ObjectVersion` (gọi sai còn mở giao diện) → viết tool C# riêng.
+5. **Luôn kiểm roundtrip** trước khi dịch (đọc → JSON → asset → đọc lại: byte y hệt).
+6. **Kiểm đường dẫn trong pak sau khi đóng** — lần đầu tôi tính sai gốc nên pak chứa `../assets_vi/...`
+   (kiểm chứng đã bắt được trước khi bàn giao).

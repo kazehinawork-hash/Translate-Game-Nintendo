@@ -213,7 +213,26 @@
 
 ---
 
-## 9. Hạ tầng repo & đóng gói
+## 10. It Takes Two (Nintendo Switch)
+- **Title ID**: `010092A0172E4000` (Base) / `010092A0172E4800` (Update) + 2 DLC
+- **Engine**: Unreal Engine 4 (Hazelight, codename "Nuts")
+- **Trạng thái**: ✅ **HOÀN THÀNH (05/10)**
+  - Text **nằm trong pak** (`Nuts/Content/Paks/Nuts-Switch.pak`, 6,87 GB) — **không có `.locres` của game**:
+    2 StringTable menu (`ST_UTG_*`) + **293 file phụ đề** (`Cinematics/Subtitles/Generated/*`, struct
+    `HazeSubtitleAsset` → `TextPropertyData.CultureInvariantString`).
+  - **Dịch 2.650 chuỗi duy nhất** (2.859 vị trí) — 8 chunk, 4 subagent. QA PASS.
+  - **Font: KHÔNG cần vá** — `LastResort.ttf` gốc có **388.232 glyph** và đã đủ 100% ký tự tiếng Việt
+    (bản vá thử đầu tiên làm mất 349k glyph → đã bỏ).
+  - **Đóng gói**: `Nuts-Switch_p.pak` (590 entry = 295 .uasset + .uexp, V11, mount `../../../`), 491 KB.
+  - **Kiểm chứng**: trích lại asset **từ trong pak** rồi đọc → chữ Việt đã vào đúng.
+- **Công cụ**: `tools/itt_uasset_tool/` (C# + UAssetAPI — **phải chỉ định `ObjectVersion` = 522** vì asset
+  cooked là unversioned), `itt_extract_strings.py`, `itt_terms.py`, `itt_chunk.py`, `itt_qa.py`,
+  `itt_patch_json.py`, `build_itt_pak.py`. Glossary: `glossary/ittakestwo.csv`.
+- **Bài học**: **BH-23**. Chi tiết: `games/010092A0172E4000_ItTakesTwo/README.md`.
+
+---
+
+## 11. Hạ tầng repo & đóng gói
 - **ĐỢT THỐNG NHẤT THUẬT NGỮ (05/10):** tạo glossary cho Ori WotW / Ori BF / Unravel Two /
   Kirby; sửa `master.csv` (trước đây chứa nội dung Switch Sports) → `switchsports.csv`,
   `master.csv` giờ chỉ còn 4 thuật ngữ **thật sự dùng chung**. Giao 3 subagent thống nhất

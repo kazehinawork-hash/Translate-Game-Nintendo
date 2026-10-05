@@ -308,6 +308,32 @@
   lỗi; chỉ lệch **các mã điều khiển khác** mới tính là lỗi. (Bản QA đầu của Kirby báo nhầm 7 lỗi vì
   tính cả `\n` và cả ký tự PUA nằm trong thẻ.)
 
+### BH-23. Asset UE4 nhị phân (It Takes Two): máy có .NET thì dùng UAssetAPI, đừng tự viết parser
+
+**Ca thật: It Takes Two (05/10). Engine Unreal Engine 4 (Hazelight, codename "Nuts").**
+
+- **Text không nằm trong `.locres`** (chỉ có locres của Engine) → nằm trong **asset UE4 nhị phân**:
+  `Nuts/Content/Untold/StringTables/ST_UTG_*.uasset` (menu/UI) và
+  `Nuts/Content/Cinematics/Subtitles/Generated/*.uasset` (588 file phụ đề, struct `HazeSubtitleAsset`).
+  Tất cả **trong pak** (UFS) → vẫn là mod LayeredFS nhưng phải đóng **patch pak**.
+- ⚠️ **BÀI HỌC 1 — KIỂM TRA `.NET` TRƯỚC KHI ĐỊNH TỰ VIẾT PARSER.** Máy đã có **.NET 10.0.400** nên
+  dùng được **UAssetAPI** (thư viện chuẩn đọc/ghi asset UE4 4.13→5.7). Tự viết parser là **không cần thiết**.
+- 🐞 **BÀI HỌC 2 — asset `cooked` là UNVERSIONED → PHẢI chỉ định `ObjectVersion` thủ công.**
+  `new UAsset(path, EngineVersion.VER_UE4_27)` ném lỗi
+  *"Cannot begin serialization of an unversioned asset before an object version is manually specified"*.
+  Cách đúng (constructor 6 tham số):
+  ```csharp
+  new UAsset(path, ObjectVersion.VER_UE4_AUTOMATIC_VERSION /* =522, UE4.27 */,
+             ObjectVersionUE5.<đầu tiên>, new List<CustomVersion>(), null, CustomSerializationFlags.None)
+  ```
+  Đối chiếu số: **UE4.27 = ObjectVersion 522**, 4.26 = 521? (tra bảng enum theo **giá trị**, tên enum
+  không chứa "4_27" như dễ đoán — phải dò theo số).
+- ⚠️ **BÀI HỌC 3 — CLI của UAssetGUI KHÔNG đặt được ObjectVersion** (`tojson <in> <out> <ver>` thiếu
+  tham số này) → thất bại và **mở giao diện**; gọi sai tham số cũng mở GUI (dễ tưởng lỗi khác).
+  Muốn dùng thì viết công cụ C# nhỏ gọi thẳng UAssetAPI (xem `tools/itt_uasset_tool/`).
+- ✅ **BẮT BUỘC kiểm `roundtrip`** trước khi dịch: đọc → `SerializeJson` → `DeserializeJson` → `Write`
+  → đọc lại. Đã kiểm: 618 byte → 618 byte, JSON giống hệt → mới tin được.
+
 ---
 
 ## PHẦN 2 — BẢNG LỖI THEO GAME (để tra nhanh)

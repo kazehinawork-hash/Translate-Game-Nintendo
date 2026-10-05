@@ -1,0 +1,4003 @@
+[
+ {
+  "en": "罗南教授",
+  "vi_variants": [
+   "Giáo Sư Ronan",
+   "Giáo sư Ronen"
+  ],
+  "vi_pho_bien": "Giáo Sư Ronan",
+  "vi_vi_du": "Giáo sư Ronen",
+  "key_vi_du": "Menu_Opponent5"
+ },
+ {
+  "en": "召唤对决",
+  "vi_variants": [
+   "Triệu Tập Tỉ Thí (Accio)",
+   "Sân Triệu Hồi"
+  ],
+  "vi_pho_bien": "Triệu Tập Tỉ Thí (Accio)",
+  "vi_vi_du": "Sân Triệu Hồi",
+  "key_vi_du": "ZAB_02_SummonersCourt_QuestTitle"
+ },
+ {
+  "en": "启用",
+  "vi_variants": [
+   "Kích hoạt",
+   "Bật"
+  ],
+  "vi_pho_bien": "Kích hoạt",
+  "vi_vi_du": "Bật",
+  "key_vi_du": "NvidiaReflex_Enabled"
+ },
+ {
+  "en": "调制",
+  "vi_variants": [
+   "Chế tạo Độc Dược",
+   "Chế tạo thuốc"
+  ],
+  "vi_pho_bien": "Chế tạo Độc Dược",
+  "vi_vi_du": "Chế tạo thuốc",
+  "key_vi_du": "Action_Brew"
+ },
+ {
+  "en": "关闭",
+  "vi_variants": [
+   "Tắt",
+   "Đóng"
+  ],
+  "vi_pho_bien": "Tắt",
+  "vi_vi_du": "Đóng",
+  "key_vi_du": "Menu_ColourBlindOff"
+ },
+ {
+  "en": "收集",
+  "vi_variants": [
+   "Thu hoạch",
+   "Thu thập"
+  ],
+  "vi_pho_bien": "Thu hoạch",
+  "vi_vi_du": "Thu thập",
+  "key_vi_du": "Menu_Beasts_Harvest"
+ },
+ {
+  "en": "退出",
+  "vi_variants": [
+   "Thoát Ra",
+   "Thoát ra",
+   "Thoát Kính Thiên Văn"
+  ],
+  "vi_pho_bien": "Thoát Ra",
+  "vi_vi_du": "Thoát ra",
+  "key_vi_du": "SettingsControl_Telescope_Exit"
+ },
+ {
+  "en": "种植",
+  "vi_variants": [
+   "Trồng trọt",
+   "Gieo Trồng"
+  ],
+  "vi_pho_bien": "Trồng trọt",
+  "vi_vi_du": "Gieo Trồng",
+  "key_vi_du": "Menu_Planting"
+ },
+ {
+  "en": "锁定",
+  "vi_variants": [
+   "Đã Khóa",
+   "Đã khóa",
+   "Khóa Mục Tiêu"
+  ],
+  "vi_pho_bien": "Đã Khóa",
+  "vi_vi_du": "Đã khóa",
+  "key_vi_du": "LockOn"
+ },
+ {
+  "en": "滚动",
+  "vi_variants": [
+   "Lăn người né tránh",
+   "Cuộn"
+  ],
+  "vi_pho_bien": "Lăn người né tránh",
+  "vi_vi_du": "Cuộn",
+  "key_vi_du": "Legend_ScrollNoButton"
+ },
+ {
+  "en": "统统石化",
+  "vi_variants": [
+   "Petrificus Totalus",
+   "Hóa Đá Toàn Thân",
+   "Bùa Hóa Đá Toàn Thân",
+   "Bùa Hóa Đá Trói Thân (Petrificus Totalus)"
+  ],
+  "vi_pho_bien": "Petrificus Totalus",
+  "vi_vi_du": "Hóa Đá Toàn Thân",
+  "key_vi_du": "Tut_display_Petrificus"
+ },
+ {
+  "en": "对话",
+  "vi_variants": [
+   "Trò chuyện",
+   "Đối Thoại"
+  ],
+  "vi_pho_bien": "Trò chuyện",
+  "vi_vi_du": "Đối Thoại",
+  "key_vi_du": "Action_Talk"
+ },
+ {
+  "en": "穿梭",
+  "vi_variants": [
+   "Du hành",
+   "Dịch Chuyển"
+  ],
+  "vi_pho_bien": "Du hành",
+  "vi_vi_du": "Dịch Chuyển",
+  "key_vi_du": "Action_Travel"
+ },
+ {
+  "en": "查看",
+  "vi_variants": [
+   "Quan Sát",
+   "Quan sát",
+   "Xem Xét",
+   "Xem"
+  ],
+  "vi_pho_bien": "Quan Sát",
+  "vi_vi_du": "Quan sát",
+  "key_vi_du": "SettingsControl_AM_LookAt"
+ },
+ {
+  "en": "等待",
+  "vi_variants": [
+   "Chờ Đợi (Đổi Giờ)",
+   "Chờ đợi"
+  ],
+  "vi_pho_bien": "Chờ Đợi (Đổi Giờ)",
+  "vi_vi_du": "Chờ đợi",
+  "key_vi_du": "Menu_Wait"
+ },
+ {
+  "en": "搅拌魔药",
+  "vi_variants": [
+   "Khuấy Thuốc",
+   "Khuấy vạc thuốc"
+  ],
+  "vi_pho_bien": "Khuấy Thuốc",
+  "vi_vi_du": "Khuấy vạc thuốc",
+  "key_vi_du": "Legend_Stir"
+ },
+ {
+  "en": "水生植物",
+  "vi_variants": [
+   "Tưới Cây Nước",
+   "Tưới nước cây"
+  ],
+  "vi_pho_bien": "Tưới Cây Nước",
+  "vi_vi_du": "Tưới nước cây",
+  "key_vi_du": "Legend_WaterPlant"
+ },
+ {
+  "en": "瞄准",
+  "vi_variants": [
+   "Ngắm Bắn",
+   "Nhắm Bắn",
+   "Ngắm"
+  ],
+  "vi_pho_bien": "Ngắm Bắn",
+  "vi_vi_du": "Nhắm Bắn",
+  "key_vi_du": "AimMode"
+ },
+ {
+  "en": "阿拉霍洞开",
+  "vi_variants": [
+   "Alohomora",
+   "Bùa Mở Khóa (Alohomora)"
+  ],
+  "vi_pho_bien": "Alohomora",
+  "vi_vi_du": "Bùa Mở Khóa (Alohomora)",
+  "key_vi_du": "Alohomora"
+ },
+ {
+  "en": "阿拉霍洞开 II",
+  "vi_variants": [
+   "Alohomora II",
+   "Bùa Mở Khóa (Alohomora) II"
+  ],
+  "vi_pho_bien": "Alohomora II",
+  "vi_vi_du": "Bùa Mở Khóa (Alohomora) II",
+  "key_vi_du": "Alohomora_L2"
+ },
+ {
+  "en": "改变",
+  "vi_variants": [
+   "Đổi",
+   "Biến đổi"
+  ],
+  "vi_pho_bien": "Đổi",
+  "vi_vi_du": "Biến đổi",
+  "key_vi_du": "Alteration"
+ },
+ {
+  "en": "戈罗德比克",
+  "vi_variants": [
+   "Grodbeck",
+   "Gorodbek"
+  ],
+  "vi_pho_bien": "Grodbeck",
+  "vi_vi_du": "Gorodbek",
+  "key_vi_du": "Anak"
+ },
+ {
+  "en": "古代魔法热点",
+  "vi_variants": [
+   "Điểm Phép Thuật Cổ Xưa",
+   "Điểm nóng Phép Thuật Cổ Xưa"
+  ],
+  "vi_pho_bien": "Điểm Phép Thuật Cổ Xưa",
+  "vi_vi_du": "Điểm nóng Phép Thuật Cổ Xưa",
+  "key_vi_du": "Map_AncientMagic"
+ },
+ {
+  "en": "多元式壁龛",
+  "vi_variants": [
+   "Hốc Tường Đa Phong Cách",
+   "Hốc tường đa dạng"
+  ],
+  "vi_pho_bien": "Hốc Tường Đa Phong Cách",
+  "vi_vi_du": "Hốc tường đa dạng",
+  "key_vi_du": "Sanc_Alcove_01_Mzoo"
+ },
+ {
+  "en": "哥特式拱门",
+  "vi_variants": [
+   "Cổng vòm Gothic",
+   "Vòm cửa Gothic"
+  ],
+  "vi_pho_bien": "Cổng vòm Gothic",
+  "vi_vi_du": "Vòm cửa Gothic",
+  "key_vi_du": "Sanc_HubArchway_01_DWIZ"
+ },
+ {
+  "en": "植被式拱门",
+  "vi_variants": [
+   "Vòm cửa Thực vật",
+   "Cổng vòm thực vật",
+   "Vòm cửa thực vật"
+  ],
+  "vi_pho_bien": "Vòm cửa Thực vật",
+  "vi_vi_du": "Cổng vòm thực vật",
+  "key_vi_du": "Sanc_HubArchway_01_HBGST"
+ },
+ {
+  "en": "多元式拱门",
+  "vi_variants": [
+   "Vòm cửa Đa dạng",
+   "Vòm cửa đa dạng",
+   "Cổng vòm đa phong cách"
+  ],
+  "vi_pho_bien": "Vòm cửa Đa dạng",
+  "vi_vi_du": "Vòm cửa đa dạng",
+  "key_vi_du": "Sanc_HubArchway_01_MZOO"
+ },
+ {
+  "en": "多元式阳台",
+  "vi_variants": [
+   "Ban công đa phong cách",
+   "Ban công đa dạng"
+  ],
+  "vi_pho_bien": "Ban công đa phong cách",
+  "vi_vi_du": "Ban công đa dạng",
+  "key_vi_du": "Architecture_Identity_Balcony_Mzoo"
+ },
+ {
+  "en": "哥特式书架",
+  "vi_variants": [
+   "Giá sách Gothic",
+   "Kệ sách Gothic",
+   "Giá Sách Gothic"
+  ],
+  "vi_pho_bien": "Giá sách Gothic",
+  "vi_vi_du": "Kệ sách Gothic",
+  "key_vi_du": "Sanc_SwampBookshelf_01_DWIZ"
+ },
+ {
+  "en": "植被式书架",
+  "vi_variants": [
+   "Giá sách thực vật",
+   "Kệ sách thực vật",
+   "Giá Sách kiểu Thực Vật",
+   "Kệ sách Thực vật"
+  ],
+  "vi_pho_bien": "Giá sách thực vật",
+  "vi_vi_du": "Kệ sách thực vật",
+  "key_vi_du": "Sanc_SwampBookshelfs_01_Hbgst"
+ },
+ {
+  "en": "多元式书架",
+  "vi_variants": [
+   "Kệ sách Đa dạng",
+   "Giá Sách kiểu Đa Phong Cách",
+   "Kệ sách đa phong cách",
+   "Giá sách đa dạng"
+  ],
+  "vi_pho_bien": "Kệ sách Đa dạng",
+  "vi_vi_du": "Giá Sách kiểu Đa Phong Cách",
+  "key_vi_du": "Sanc_SwampBookshelfs_01_Mzoo"
+ },
+ {
+  "en": "哥特式地板",
+  "vi_variants": [
+   "Sàn chính Gothic",
+   "Sàn nhà Gothic",
+   "Sàn chiếu nghỉ Gothic",
+   "Sàn Gothic",
+   "Gạch lát sàn Gothic"
+  ],
+  "vi_pho_bien": "Sàn chính Gothic",
+  "vi_vi_du": "Sàn nhà Gothic",
+  "key_vi_du": "Sanc_FloorTile_01_Dwiz"
+ },
+ {
+  "en": "植被式地板",
+  "vi_variants": [
+   "Sàn thực vật",
+   "Sàn chiếu nghỉ thực vật",
+   "Sàn nhà Thực vật",
+   "Gạch lát sàn thực vật",
+   "Sàn chính thực vật"
+  ],
+  "vi_pho_bien": "Sàn thực vật",
+  "vi_vi_du": "Sàn chiếu nghỉ thực vật",
+  "key_vi_du": "Sanc_FloorTile_01_Hbgst"
+ },
+ {
+  "en": "多元式地板",
+  "vi_variants": [
+   "Sàn đa dạng",
+   "Sàn chính đa phong cách",
+   "Sàn chiếu nghỉ đa phong cách",
+   "Sàn nhà Đa dạng",
+   "Gạch lát sàn đa phong cách"
+  ],
+  "vi_pho_bien": "Sàn đa dạng",
+  "vi_vi_du": "Sàn chính đa phong cách",
+  "key_vi_du": "Sanc_FloorTile_01_Mzoo"
+ },
+ {
+  "en": "多元式墙壁",
+  "vi_variants": [
+   "Tường đa phong cách",
+   "Tường đa dạng",
+   "Tường Đa dạng"
+  ],
+  "vi_pho_bien": "Tường đa phong cách",
+  "vi_vi_du": "Tường đa dạng",
+  "key_vi_du": "Sanc_BackCorridorWall_01_Mzoo"
+ },
+ {
+  "en": "霍格莫德",
+  "vi_variants": [
+   "Khu Vực Làng Hogsmeade",
+   "Làng Hogsmeade",
+   "Hogsmeade"
+  ],
+  "vi_pho_bien": "Khu Vực Làng Hogsmeade",
+  "vi_vi_du": "Làng Hogsmeade",
+  "key_vi_du": "AreaBoundsHogsmeade"
+ },
+ {
+  "en": "科技式扶手椅",
+  "vi_variants": [
+   "Ghế bành công nghệ",
+   "Ghế bành Khoa học"
+  ],
+  "vi_pho_bien": "Ghế bành công nghệ",
+  "vi_vi_du": "Ghế bành Khoa học",
+  "key_vi_du": "Sanc_ArmChair_01_Potnr"
+ },
+ {
+  "en": "减震止速",
+  "vi_variants": [
+   "Bùa Hãm Đà (Arresto Momentum)",
+   "Arresto Momentum"
+  ],
+  "vi_pho_bien": "Bùa Hãm Đà (Arresto Momentum)",
+  "vi_vi_du": "Arresto Momentum",
+  "key_vi_du": "ArrestoMomentum"
+ },
+ {
+  "en": "自动存档",
+  "vi_variants": [
+   "Tự động lưu",
+   "Lưu tự động"
+  ],
+  "vi_pho_bien": "Tự động lưu",
+  "vi_vi_du": "Lưu tự động",
+  "key_vi_du": "SaveGameType_Auto"
+ },
+ {
+  "en": "幼年刺背蛛",
+  "vi_variants": [
+   "Nhện Lưng Gai Con",
+   "Nhện Gai Lưng Non"
+  ],
+  "vi_pho_bien": "Nhện Lưng Gai Con",
+  "vi_vi_du": "Nhện Gai Lưng Non",
+  "key_vi_du": "SpiderWoodlouseBaby"
+ },
+ {
+  "en": "坚固长大衣",
+  "vi_variants": [
+   "Áo khoác dài chắc chắn",
+   "Áo khoác dài bền chắc"
+  ],
+  "vi_pho_bien": "Áo khoác dài chắc chắn",
+  "vi_vi_du": "Áo khoác dài bền chắc",
+  "key_vi_du": "Back_014_Basic"
+ },
+ {
+  "en": "时髦学校斗篷",
+  "vi_variants": [
+   "Áo choàng trường hợp mốt",
+   "Áo choàng trường thời thượng"
+  ],
+  "vi_pho_bien": "Áo choàng trường hợp mốt",
+  "vi_vi_du": "Áo choàng trường thời thượng",
+  "key_vi_du": "Back_034_Basic"
+ },
+ {
+  "en": "凯尔特英雄披风",
+  "vi_variants": [
+   "Áo choàng anh hùng Celt",
+   "Áo choàng vai Anh Hùng kiểu Celtic"
+  ],
+  "vi_pho_bien": "Áo choàng anh hùng Celt",
+  "vi_vi_du": "Áo choàng vai Anh Hùng kiểu Celtic",
+  "key_vi_du": "Back_106_Epic"
+ },
+ {
+  "en": "克雷格摩尔城堡",
+  "vi_variants": [
+   "Lâu Đài Arbroath",
+   "Lâu Đài Clagmar",
+   "Lâu đài Craigmoor"
+  ],
+  "vi_pho_bien": "Lâu Đài Arbroath",
+  "vi_vi_du": "Lâu Đài Clagmar",
+  "key_vi_du": "SubregionNameArbroathCastle"
+ },
+ {
+  "en": "盗猎者帐篷",
+  "vi_variants": [
+   "Lều Bọn Săn Trộm",
+   "Lều Săn Trộm"
+  ],
+  "vi_pho_bien": "Lều Bọn Săn Trộm",
+  "vi_vi_du": "Lều Săn Trộm",
+  "key_vi_du": "BanditCampA_TentInterior_05"
+ },
+ {
+  "en": "火灰蛇党据点",
+  "vi_variants": [
+   "Căn Cứ Băng Đảng Rắn Tro",
+   "Căn Cứ Băng Rắn Tro"
+  ],
+  "vi_pho_bien": "Căn Cứ Băng Đảng Rắn Tro",
+  "vi_vi_du": "Căn Cứ Băng Rắn Tro",
+  "key_vi_du": "Tent2"
+ },
+ {
+  "en": "基础施法",
+  "vi_variants": [
+   "Niệm Chú Cơ Bản",
+   "Thi Triển Cơ Bản"
+  ],
+  "vi_pho_bien": "Niệm Chú Cơ Bản",
+  "vi_vi_du": "Thi Triển Cơ Bản",
+  "key_vi_du": "BasicCast"
+ },
+ {
+  "en": "波德希尔城堡",
+  "vi_variants": [
+   "Lâu đài Bodshear",
+   "Lâu Đài Jerpoint",
+   "Lâu Đài Poidsear"
+  ],
+  "vi_pho_bien": "Lâu đài Bodshear",
+  "vi_vi_du": "Lâu Đài Jerpoint",
+  "key_vi_du": "SubregionNameJerpointCastle"
+ },
+ {
+  "en": "野兽学课程",
+  "vi_variants": [
+   "Lớp Học Sinh Vật Huyền Bí",
+   "Lớp Sinh Vật Huyền Bí"
+  ],
+  "vi_pho_bien": "Lớp Học Sinh Vật Huyền Bí",
+  "vi_vi_du": "Lớp Sinh Vật Huyền Bí",
+  "key_vi_du": "HOG_Class_Beasts"
+ },
+ {
+  "en": "野兽",
+  "vi_variants": [
+   "Sinh Vật",
+   "Sinh Vật Huyền Bí",
+   "Sinh vật huyền bí",
+   "Thú",
+   "Sinh vật",
+   "Kỳ Thú"
+  ],
+  "vi_pho_bien": "Sinh Vật",
+  "vi_vi_du": "Sinh Vật Huyền Bí",
+  "key_vi_du": "Beast"
+ },
+ {
+  "en": "兽巢",
+  "vi_variants": [
+   "Hang Ổ Sinh Vật",
+   "Ổ sinh vật"
+  ],
+  "vi_pho_bien": "Hang Ổ Sinh Vật",
+  "vi_vi_du": "Ổ sinh vật",
+  "key_vi_du": "BEASTDEN"
+ },
+ {
+  "en": "野兽陷阱",
+  "vi_variants": [
+   "Bẫy kỳ thú",
+   "Bẫy sinh vật"
+  ],
+  "vi_pho_bien": "Bẫy kỳ thú",
+  "vi_vi_du": "Bẫy sinh vật",
+  "key_vi_du": "BeastTraps"
+ },
+ {
+  "en": "南瓜田",
+  "vi_variants": [
+   "Ruộng Bí Ngô",
+   "Vườn Bí Ngô"
+  ],
+  "vi_pho_bien": "Ruộng Bí Ngô",
+  "vi_vi_du": "Vườn Bí Ngô",
+  "key_vi_du": "Biome_GroundLarge_Palette_01"
+ },
+ {
+  "en": "拱道",
+  "vi_variants": [
+   "Lối Vòm",
+   "Cổng vòm"
+  ],
+  "vi_pho_bien": "Lối Vòm",
+  "vi_vi_du": "Cổng vòm",
+  "key_vi_du": "Sanc_HubArchway_01"
+ },
+ {
+  "en": "苦根",
+  "vi_variants": [
+   "Rễ đắng",
+   "Rễ Đắng (Bitterroot)"
+  ],
+  "vi_pho_bien": "Rễ đắng",
+  "vi_vi_du": "Rễ Đắng (Bitterroot)",
+  "key_vi_du": "Bitterroot_Byproduct"
+ },
+ {
+  "en": "非洲树蛇皮",
+  "vi_variants": [
+   "Da Rắn Cây Boomslang",
+   "Da Rắn Boomslang"
+  ],
+  "vi_pho_bien": "Da Rắn Cây Boomslang",
+  "vi_vi_du": "Da Rắn Boomslang",
+  "key_vi_du": "BoomslangSkin"
+ },
+ {
+  "en": "鞠躬",
+  "vi_variants": [
+   "Cúi chào",
+   "Cúi Đầu Chào"
+  ],
+  "vi_pho_bien": "Cúi chào",
+  "vi_vi_du": "Cúi Đầu Chào",
+  "key_vi_du": "PIM_Bow"
+ },
+ {
+  "en": "剧毒爬行者",
+  "vi_variants": [
+   "Nhện Bò Độc",
+   "Nhện Độc Bò Trườn"
+  ],
+  "vi_pho_bien": "Nhện Bò Độc",
+  "vi_vi_du": "Nhện Độc Bò Trườn",
+  "key_vi_du": "SpiderVenomous"
+ },
+ {
+  "en": "刺背蛛爬行者",
+  "vi_variants": [
+   "Nhện Gai Lưng Bò",
+   "Nhện Lưng Gai Bò Trườn"
+  ],
+  "vi_pho_bien": "Nhện Gai Lưng Bò",
+  "vi_vi_du": "Nhện Lưng Gai Bò Trườn",
+  "key_vi_du": "SpiderWoodLouse"
+ },
+ {
+  "en": "狼",
+  "vi_variants": [
+   "Chó Sói",
+   "Sói"
+  ],
+  "vi_pho_bien": "Chó Sói",
+  "vi_vi_du": "Sói",
+  "key_vi_du": "BP_Wolf_C"
+ },
+ {
+  "en": "扫帚强化",
+  "vi_variants": [
+   "Cường Hóa Chổi Bay",
+   "Nâng cấp Chổi bay",
+   "Nâng cấp chổi bay"
+  ],
+  "vi_pho_bien": "Cường Hóa Chổi Bay",
+  "vi_vi_du": "Nâng cấp Chổi bay",
+  "key_vi_du": "VendorCategory_BroomUpgrades"
+ },
+ {
+  "en": "着陆平台",
+  "vi_variants": [
+   "Bệ hạ cánh",
+   "Bệ đáp chổi",
+   "Bệ Hạ Cánh"
+  ],
+  "vi_pho_bien": "Bệ hạ cánh",
+  "vi_vi_du": "Bệ đáp chổi",
+  "key_vi_du": "FGC_Broom_Landing"
+ },
+ {
+  "en": "斯莱特林学生",
+  "vi_variants": [
+   "Học Sinh Slytherin",
+   "Học sinh Nhà Slytherin"
+  ],
+  "vi_pho_bien": "Học Sinh Slytherin",
+  "vi_vi_du": "Học sinh Nhà Slytherin",
+  "key_vi_du": "Bully1"
+ },
+ {
+  "en": "收藏家的洞穴",
+  "vi_variants": [
+   "Hang Động Nhà Sưu Tập",
+   "Hang Kẻ Sưu Tầm"
+  ],
+  "vi_pho_bien": "Hang Động Nhà Sưu Tập",
+  "vi_vi_du": "Hang Kẻ Sưu Tầm",
+  "key_vi_du": "Cairn_Dungeon_8"
+ },
+ {
+  "en": "拿袋",
+  "vi_variants": [
+   "Túi Bắt Sinh Vật (Nab-Sack)",
+   "Túi Bắt Sinh Vật",
+   "Túi Bắt Thú (Nab-Sack)"
+  ],
+  "vi_pho_bien": "Túi Bắt Sinh Vật (Nab-Sack)",
+  "vi_vi_du": "Túi Bắt Sinh Vật",
+  "key_vi_du": "TUT_Display_BeastCapturing"
+ },
+ {
+  "en": "古代魔法",
+  "vi_variants": [
+   "Cổ Thuật",
+   "Phép Thuật Cổ Xưa"
+  ],
+  "vi_pho_bien": "Cổ Thuật",
+  "vi_vi_du": "Phép Thuật Cổ Xưa",
+  "key_vi_du": "TUT_display_AMBar"
+ },
+ {
+  "en": "作业",
+  "vi_variants": [
+   "Bài Tập Về Nhà",
+   "Bài Tập"
+  ],
+  "vi_pho_bien": "Bài Tập Về Nhà",
+  "vi_vi_du": "Bài Tập",
+  "key_vi_du": "TUT_Display_Assignments"
+ },
+ {
+  "en": "身型",
+  "vi_variants": [
+   "Dáng người",
+   "Vóc Dáng"
+  ],
+  "vi_pho_bien": "Dáng người",
+  "vi_vi_du": "Vóc Dáng",
+  "key_vi_du": "Menu_BodyType"
+ },
+ {
+  "en": "扫帚",
+  "vi_variants": [
+   "Kho Chổi",
+   "Chổi Bay",
+   "Chổi bay"
+  ],
+  "vi_pho_bien": "Kho Chổi",
+  "vi_vi_du": "Chổi Bay",
+  "key_vi_du": "Category_Broom"
+ },
+ {
+  "en": "已完成",
+  "vi_variants": [
+   "Đã hoàn thành",
+   "Đã Hoành Thành"
+  ],
+  "vi_pho_bien": "Đã hoàn thành",
+  "vi_vi_du": "Đã Hoành Thành",
+  "key_vi_du": "Category_Completed"
+ },
+ {
+  "en": "面容",
+  "vi_variants": [
+   "Nước Da",
+   "Nét Mặt",
+   "Nước da / Làn da"
+  ],
+  "vi_pho_bien": "Nước Da",
+  "vi_vi_du": "Nét Mặt",
+  "key_vi_du": "Menu_Marking2"
+ },
+ {
+  "en": "变幻",
+  "vi_variants": [
+   "Biến Hiện",
+   "Biến Hóa (Conjure)"
+  ],
+  "vi_pho_bien": "Biến Hiện",
+  "vi_vi_du": "Biến Hóa (Conjure)",
+  "key_vi_du": "Category_Conjuration"
+ },
+ {
+  "en": "显示选项",
+  "vi_variants": [
+   "Cài Đặt Màn Hình",
+   "Cài Đặt Hiển Thị"
+  ],
+  "vi_pho_bien": "Cài Đặt Màn Hình",
+  "vi_vi_du": "Cài Đặt Hiển Thị",
+  "key_vi_du": "Category_display"
+ },
+ {
+  "en": "面部穿戴",
+  "vi_variants": [
+   "Phụ Kiện Mặt",
+   "Trang Sức Mặt"
+  ],
+  "vi_pho_bien": "Phụ Kiện Mặt",
+  "vi_vi_du": "Trang Sức Mặt",
+  "key_vi_du": "Menu_Face"
+ },
+ {
+  "en": "为你的角色取名",
+  "vi_variants": [
+   "Đặt Tên Cho Nhân Vật Của Bạn",
+   "Đặt Tên Nhân Vật"
+  ],
+  "vi_pho_bien": "Đặt Tên Cho Nhân Vật Của Bạn",
+  "vi_vi_du": "Đặt Tên Nhân Vật",
+  "key_vi_du": "Category_Final"
+ },
+ {
+  "en": "可采集物",
+  "vi_variants": [
+   "Có Thể Hái Lượm",
+   "Vật Phẩm Thu Lượm"
+  ],
+  "vi_pho_bien": "Có Thể Hái Lượm",
+  "vi_vi_du": "Vật Phẩm Thu Lượm",
+  "key_vi_du": "FORAGABLE"
+ },
+ {
+  "en": "通用",
+  "vi_variants": [
+   "Tài Năng Tổng Hợp",
+   "Tổng Hợp",
+   "Chung"
+  ],
+  "vi_pho_bien": "Tài Năng Tổng Hợp",
+  "vi_vi_du": "Tổng Hợp",
+  "key_vi_du": "Category_general"
+ },
+ {
+  "en": "地面坐骑",
+  "vi_variants": [
+   "Thú Cưỡi Trên Mặt Đất",
+   "Thú Cưỡi Mặt Đất"
+  ],
+  "vi_pho_bien": "Thú Cưỡi Trên Mặt Đất",
+  "vi_vi_du": "Thú Cưỡi Mặt Đất",
+  "key_vi_du": "Menu_GroundMount"
+ },
+ {
+  "en": "库存",
+  "vi_variants": [
+   "Kho Đồ",
+   "Túi Đồ"
+  ],
+  "vi_pho_bien": "Kho Đồ",
+  "vi_vi_du": "Túi Đồ",
+  "key_vi_du": "TUT_Display_Inventories"
+ },
+ {
+  "en": "养育",
+  "vi_variants": [
+   "Chăn Nuôi",
+   "Nuôi Dưỡng"
+  ],
+  "vi_pho_bien": "Chăn Nuôi",
+  "vi_vi_du": "Nuôi Dưỡng",
+  "key_vi_du": "MENU_CATEGORY_NURTURING"
+ },
+ {
+  "en": "高地",
+  "vi_variants": [
+   "Vùng Đất Liền",
+   "Vùng Cao Nguyên"
+  ],
+  "vi_pho_bien": "Vùng Đất Liền",
+  "vi_vi_du": "Vùng Cao Nguyên",
+  "key_vi_du": "Category_Overland"
+ },
+ {
+  "en": "猫头鹰邮递",
+  "vi_variants": [
+   "Thư Cú Mèo",
+   "Thư Cú",
+   "Đưa Thư Bằng Cú"
+  ],
+  "vi_pho_bien": "Thư Cú Mèo",
+  "vi_vi_du": "Thư Cú",
+  "key_vi_du": "Category_Owlpost"
+ },
+ {
+  "en": "植物",
+  "vi_variants": [
+   "Thực vật",
+   "Thực Vật",
+   "Cây Ma Thuật"
+  ],
+  "vi_pho_bien": "Thực vật",
+  "vi_vi_du": "Thực Vật",
+  "key_vi_du": "Plant"
+ },
+ {
+  "en": "资源",
+  "vi_variants": [
+   "Nguyên Liệu",
+   "Tài Nguyên"
+  ],
+  "vi_pho_bien": "Nguyên Liệu",
+  "vi_vi_du": "Tài Nguyên",
+  "key_vi_du": "TUT_Display_InventoryResources"
+ },
+ {
+  "en": "咒语",
+  "vi_variants": [
+   "Thần chú",
+   "Bùa Chú"
+  ],
+  "vi_pho_bien": "Thần chú",
+  "vi_vi_du": "Bùa Chú",
+  "key_vi_du": "Category_Spell"
+ },
+ {
+  "en": "特质",
+  "vi_variants": [
+   "Đặc Tính Ma Thuật",
+   "Đặc Tính"
+  ],
+  "vi_pho_bien": "Đặc Tính Ma Thuật",
+  "vi_vi_du": "Đặc Tính",
+  "key_vi_du": "Category_Trait"
+ },
+ {
+  "en": "类别",
+  "vi_variants": [
+   "Thể loại",
+   "Danh Mục"
+  ],
+  "vi_pho_bien": "Thể loại",
+  "vi_vi_du": "Danh Mục",
+  "key_vi_du": "CategoryTitle"
+ },
+ {
+  "en": "尖音符号",
+  "vi_variants": [
+   "dấu sắc",
+   "Dấu Sắc",
+   "dấu mũ"
+  ],
+  "vi_pho_bien": "dấu sắc",
+  "vi_vi_du": "Dấu Sắc",
+  "key_vi_du": "cbi_Keyboard_A_AccentAigu_Pronunciation"
+ },
+ {
+  "en": "左中括弧",
+  "vi_variants": [
+   "dấu ngoặc vuông trái",
+   "dấu ngoặc móc trái"
+  ],
+  "vi_pho_bien": "dấu ngoặc vuông trái",
+  "vi_vi_du": "dấu ngoặc móc trái",
+  "key_vi_du": "cbi_Keyboard_LeftBrace_Pronunciation"
+ },
+ {
+  "en": "右中括弧",
+  "vi_variants": [
+   "dấu ngoặc vuông phải",
+   "dấu ngoặc móc phải"
+  ],
+  "vi_pho_bien": "dấu ngoặc vuông phải",
+  "vi_vi_du": "dấu ngoặc móc phải",
+  "key_vi_du": "cbi_Keyboard_RightBrace_Pronunciation"
+ },
+ {
+  "en": "巧克力蛙",
+  "vi_variants": [
+   "Ếch Sô-cô-la",
+   "Kẹo Ếch Sô-cô-la"
+  ],
+  "vi_pho_bien": "Ếch Sô-cô-la",
+  "vi_vi_du": "Kẹo Ếch Sô-cô-la",
+  "key_vi_du": "Chocolate_Frogs"
+ },
+ {
+  "en": "启动雕像",
+  "vi_variants": [
+   "Khởi động bức tượng",
+   "Kích hoạt các bức tượng"
+  ],
+  "vi_pho_bien": "Khởi động bức tượng",
+  "vi_vi_du": "Kích hoạt các bức tượng",
+  "key_vi_du": "COM_18_PiecingitTogether_QuestActive_TaskObj02"
+ },
+ {
+  "en": "进入地窖",
+  "vi_variants": [
+   "Vào trong hầm",
+   "Vào căn hầm"
+  ],
+  "vi_pho_bien": "Vào trong hầm",
+  "vi_vi_du": "Vào căn hầm",
+  "key_vi_du": "HER_02_ABasisforBlackmail_QuestActive_TaskObj05"
+ },
+ {
+  "en": "击败潜逃者",
+  "vi_variants": [
+   "Đánh bại Kẻ Đào Tẩu",
+   "Đánh bại Absconditor"
+  ],
+  "vi_pho_bien": "Đánh bại Kẻ Đào Tẩu",
+  "vi_vi_du": "Đánh bại Absconditor",
+  "key_vi_du": "FGC_Kill_Named_Spider_Acromantula_1"
+ },
+ {
+  "en": "同伴",
+  "vi_variants": [
+   "Bạn đồng hành",
+   "Đồng Hành",
+   "Người Đồng Hành"
+  ],
+  "vi_pho_bien": "Bạn đồng hành",
+  "vi_vi_du": "Đồng Hành",
+  "key_vi_du": "Menu_Companion"
+ },
+ {
+  "en": "确认",
+  "vi_variants": [
+   "Xác nhận",
+   "Xác Nhận Đặt",
+   "Xác Nhận"
+  ],
+  "vi_pho_bien": "Xác nhận",
+  "vi_vi_du": "Xác Nhận Đặt",
+  "key_vi_du": "SettingsControl_UMGConfirm"
+ },
+ {
+  "en": "变幻咒语",
+  "vi_variants": [
+   "Bùa Triệu Vật",
+   "Bùa Biến Hiện",
+   "Bùa Biến Hiện (Conjuration)"
+  ],
+  "vi_pho_bien": "Bùa Triệu Vật",
+  "vi_vi_du": "Bùa Biến Hiện",
+  "key_vi_du": "Conjuration"
+ },
+ {
+  "en": "森林饲养所",
+  "vi_variants": [
+   "Khu Bảo Tồn Rừng",
+   "Khu Nuôi Dưỡng Rừng"
+  ],
+  "vi_pho_bien": "Khu Bảo Tồn Rừng",
+  "vi_vi_du": "Khu Nuôi Dưỡng Rừng",
+  "key_vi_du": "Forest_Biome"
+ },
+ {
+  "en": "草原饲养所",
+  "vi_variants": [
+   "Khu Nuôi Dưỡng Đồng Cỏ",
+   "Khu Nuôi Đồng Cỏ"
+  ],
+  "vi_pho_bien": "Khu Nuôi Dưỡng Đồng Cỏ",
+  "vi_vi_du": "Khu Nuôi Đồng Cỏ",
+  "key_vi_du": "Conjuration_Breadcrumb_Biome_Grassland"
+ },
+ {
+  "en": "变幻幻术配方",
+  "vi_variants": [
+   "Bản Vẽ Biến Hình",
+   "Công Thức Biến Hiện"
+  ],
+  "vi_pho_bien": "Bản Vẽ Biến Hình",
+  "vi_vi_du": "Công Thức Biến Hiện",
+  "key_vi_du": "VendorCategory_TransfigurationSpellcrafts"
+ },
+ {
+  "en": "硬件基准",
+  "vi_variants": [
+   "Đo Hiệu Năng Phần Cứng",
+   "Đánh giá phần cứng"
+  ],
+  "vi_pho_bien": "Đo Hiệu Năng Phần Cứng",
+  "vi_vi_du": "Đánh giá phần cứng",
+  "key_vi_du": "CREATEBENCHMARK"
+ },
+ {
+  "en": "飞行",
+  "vi_variants": [
+   "Cất Cánh Bay",
+   "Bay Lượn"
+  ],
+  "vi_pho_bien": "Cất Cánh Bay",
+  "vi_vi_du": "Bay Lượn",
+  "key_vi_du": "CreatureAttribute_Flying"
+ },
+ {
+  "en": "野兽饲料",
+  "vi_variants": [
+   "Thức ăn sinh vật huyền bí",
+   "Thức Ăn Thú",
+   "Thức Ăn Sinh Vật"
+  ],
+  "vi_pho_bien": "Thức ăn sinh vật huyền bí",
+  "vi_vi_du": "Thức Ăn Thú",
+  "key_vi_du": "TUT_Display_BeastFeed"
+ },
+ {
+  "en": "野兽抚摸刷",
+  "vi_variants": [
+   "Bàn Chải Chăm Sóc Sinh Vật",
+   "Bàn Chải Vuốt Thú"
+  ],
+  "vi_pho_bien": "Bàn Chải Chăm Sóc Sinh Vật",
+  "vi_vi_du": "Bàn Chải Vuốt Thú",
+  "key_vi_du": "TUT_Display_BeastBrush"
+ },
+ {
+  "en": "探索",
+  "vi_variants": [
+   "Khám Phá",
+   "Thám Hiểm",
+   "Khám Phá Thế Giới",
+   "Khám phá"
+  ],
+  "vi_pho_bien": "Khám Phá",
+  "vi_vi_du": "Thám Hiểm",
+  "key_vi_du": "CurrentMission_Exploring"
+ },
+ {
+  "en": "鲜血诅咒",
+  "vi_variants": [
+   "Lời Nguyền Nối Máu",
+   "Lời Nguyền Máu"
+  ],
+  "vi_pho_bien": "Lời Nguyền Nối Máu",
+  "vi_vi_du": "Lời Nguyền Máu",
+  "key_vi_du": "DAC_CurseReflect1"
+ },
+ {
+  "en": "算术占卜教室",
+  "vi_variants": [
+   "Lớp Học Thuật Số",
+   "Lớp Học Số Thuật"
+  ],
+  "vi_pho_bien": "Lớp Học Thuật Số",
+  "vi_vi_du": "Lớp Học Số Thuật",
+  "key_vi_du": "LORE_CentralTower_ArithmancyClass"
+ },
+ {
+  "en": "球遁鸟",
+  "vi_variants": [
+   "Chim Diricawl",
+   "Lông chim Diricawl"
+  ],
+  "vi_pho_bien": "Chim Diricawl",
+  "vi_vi_du": "Lông chim Diricawl",
+  "key_vi_du": "Diricawl"
+ },
+ {
+  "en": "白鲜",
+  "vi_variants": [
+   "Bạch Tiên (Dittany)",
+   "Cây Bạch Tiên (Dittany)"
+  ],
+  "vi_pho_bien": "Bạch Tiên (Dittany)",
+  "vi_vi_du": "Cây Bạch Tiên (Dittany)",
+  "key_vi_du": "Dittany"
+ },
+ {
+  "en": "茱萸和毒菇",
+  "vi_variants": [
+   "Tiệm Cỏ Chó & Nấm Độc (Dogweed & Deathcap)",
+   "Dogweed và Deathcap"
+  ],
+  "vi_pho_bien": "Tiệm Cỏ Chó & Nấm Độc (Dogweed & Deathcap)",
+  "vi_vi_du": "Dogweed và Deathcap",
+  "key_vi_du": "DogweedAndDeathcap"
+ },
+ {
+  "en": "盔甲护身专精",
+  "vi_variants": [
+   "Tinh Thông Bùa Khiên Che Chắn (Protego)",
+   "Chuyên Sâu Bùa Khiên Che Chắn (Protego)"
+  ],
+  "vi_pho_bien": "Tinh Thông Bùa Khiên Che Chắn (Protego)",
+  "vi_vi_du": "Chuyên Sâu Bùa Khiên Che Chắn (Protego)",
+  "key_vi_du": "Talent_Core_ProtegoReflect"
+ },
+ {
+  "en": "礼堂入口",
+  "vi_variants": [
+   "Sảnh Vào",
+   "Lối vào Đại Sảnh"
+  ],
+  "vi_pho_bien": "Sảnh Vào",
+  "vi_vi_du": "Lối vào Đại Sảnh",
+  "key_vi_du": "EntranceHall"
+ },
+ {
+  "en": "非凡",
+  "vi_variants": [
+   "Sử Thi",
+   "Phi thường"
+  ],
+  "vi_pho_bien": "Sử Thi",
+  "vi_vi_du": "Phi thường",
+  "key_vi_du": "EPIC"
+ },
+ {
+  "en": "使用魔法通道",
+  "vi_variants": [
+   "Dùng lối đi phép thuật",
+   "Sử dụng lối đi ma thuật"
+  ],
+  "vi_pho_bien": "Dùng lối đi phép thuật",
+  "vi_vi_du": "Sử dụng lối đi ma thuật",
+  "key_vi_du": "EVJ_DepthofaMine_QuestActive_TaskObj07"
+ },
+ {
+  "en": "击败守卫",
+  "vi_variants": [
+   "Đánh bại lính canh",
+   "Đánh bại vệ binh"
+  ],
+  "vi_pho_bien": "Đánh bại lính canh",
+  "vi_vi_du": "Đánh bại vệ binh",
+  "key_vi_du": "EVT_01_DepthOfAMountain_QuestActive_TaskObj04"
+ },
+ {
+  "en": "退回主菜单",
+  "vi_variants": [
+   "Về menu chính",
+   "Quay về menu chính",
+   "Về Màn Hình Chính"
+  ],
+  "vi_pho_bien": "Về menu chính",
+  "vi_vi_du": "Quay về menu chính",
+  "key_vi_du": "Popup_LoginStatusChanged_ReturnToMainMenu"
+ },
+ {
+  "en": "大爆爆",
+  "vi_variants": [
+   "Expulso",
+   "Bùa Nổ Công Phá (Bombarda)"
+  ],
+  "vi_pho_bien": "Expulso",
+  "vi_vi_du": "Bùa Nổ Công Phá (Bombarda)",
+  "key_vi_du": "Spell_Expulso"
+ },
+ {
+  "en": "幽灵",
+  "vi_variants": [
+   "Hồn Ma",
+   "Bóng Ma",
+   "Bóng ma"
+  ],
+  "vi_pho_bien": "Hồn Ma",
+  "vi_vi_du": "Bóng Ma",
+  "key_vi_du": "GhostFemaleA"
+ },
+ {
+  "en": "精神病院面罩",
+  "vi_variants": [
+   "Mặt Nạ Bệnh Viện Tâm Thần",
+   "Mặt Nạ Trại Điên Huyền Thoại"
+  ],
+  "vi_pho_bien": "Mặt Nạ Bệnh Viện Tâm Thần",
+  "vi_vi_du": "Mặt Nạ Trại Điên Huyền Thoại",
+  "key_vi_du": "Face_015_Epic"
+ },
+ {
+  "en": "学院塔",
+  "vi_variants": [
+   "Tháp Giáo Viên",
+   "Tháp Giảng Viên"
+  ],
+  "vi_pho_bien": "Tháp Giáo Viên",
+  "vi_vi_du": "Tháp Giảng Viên",
+  "key_vi_du": "FacultyTower"
+ },
+ {
+  "en": "肥料",
+  "vi_variants": [
+   "Phân Bón Màu Mỡ",
+   "Phân Bón"
+  ],
+  "vi_pho_bien": "Phân Bón Màu Mỡ",
+  "vi_vi_du": "Phân Bón",
+  "key_vi_du": "Fertiliser"
+ },
+ {
+  "en": "返回地图密室",
+  "vi_variants": [
+   "Quay lại Phòng Bản Đồ",
+   "Trở lại Phòng Bản Đồ"
+  ],
+  "vi_pho_bien": "Quay lại Phòng Bản Đồ",
+  "vi_vi_du": "Trở lại Phòng Bản Đồ",
+  "key_vi_du": "FGS_BeneathHogwarts_QuestAvailable_TaskObj01"
+ },
+ {
+  "en": "调制{0}个魔药",
+  "vi_variants": [
+   "Pha chế {0} độc dược",
+   "Pha chế {0} Thuốc"
+  ],
+  "vi_pho_bien": "Pha chế {0} độc dược",
+  "vi_vi_du": "Pha chế {0} Thuốc",
+  "key_vi_du": "FGC_Brew_PepperUp"
+ },
+ {
+  "en": "变幻此物体一次",
+  "vi_variants": [
+   "Biến hình vật thể này một lần",
+   "Triệu hồi vật thể này một lần"
+  ],
+  "vi_pho_bien": "Biến hình vật thể này một lần",
+  "vi_vi_du": "Triệu hồi vật thể này một lần",
+  "key_vi_du": "FGC_Conjure_MediumPotionStation"
+ },
+ {
+  "en": "击败{0}个阴尸",
+  "vi_variants": [
+   "Đánh bại {0} Âm Binh (Inferi)",
+   "Đánh bại {0} xác sống Inferius"
+  ],
+  "vi_pho_bien": "Đánh bại {0} Âm Binh (Inferi)",
+  "vi_vi_du": "Đánh bại {0} xác sống Inferius",
+  "key_vi_du": "FGC_Kill_Inferius"
+ },
+ {
+  "en": "地图密室",
+  "vi_variants": [
+   "Phòng Bản Đồ",
+   "Mật Thất Bản Đồ",
+   "Căn Phòng Bản Đồ"
+  ],
+  "vi_pho_bien": "Phòng Bản Đồ",
+  "vi_vi_du": "Mật Thất Bản Đồ",
+  "key_vi_du": "NOT_SET"
+ },
+ {
+  "en": "前往礼堂",
+  "vi_variants": [
+   "Đến Đại Sảnh Đường",
+   "Đi Đến Đại Sảnh Đường"
+  ],
+  "vi_pho_bien": "Đến Đại Sảnh Đường",
+  "vi_vi_du": "Đi Đến Đại Sảnh Đường",
+  "key_vi_du": "HCP_TheHouseCup_QuestActive_TaskObj01"
+ },
+ {
+  "en": "找到失踪的书页",
+  "vi_variants": [
+   "Tìm những trang sách thất lạc",
+   "Tìm lại những trang sách bị mất tích"
+  ],
+  "vi_pho_bien": "Tìm những trang sách thất lạc",
+  "vi_vi_du": "Tìm lại những trang sách bị mất tích",
+  "key_vi_du": "Lighthouse_05"
+ },
+ {
+  "en": "离开",
+  "vi_variants": [
+   "Thoát",
+   "Rời Khỏi",
+   "Rời đi"
+  ],
+  "vi_pho_bien": "Thoát",
+  "vi_vi_du": "Rời Khỏi",
+  "key_vi_du": "Leave"
+ },
+ {
+  "en": "实战指南书页",
+  "vi_variants": [
+   "Trang Cẩm Nang",
+   "Trang Cẩm Nang Phù Thủy"
+  ],
+  "vi_pho_bien": "Trang Cẩm Nang",
+  "vi_vi_du": "Trang Cẩm Nang Phù Thủy",
+  "key_vi_du": "FieldGuidePage"
+ },
+ {
+  "en": "流液草",
+  "vi_variants": [
+   "Cỏ Lưu Dịch (Fluxweed)",
+   "Cỏ Fluxweed"
+  ],
+  "vi_pho_bien": "Cỏ Lưu Dịch (Fluxweed)",
+  "vi_vi_du": "Cỏ Fluxweed",
+  "key_vi_du": "Fluxweed"
+ },
+ {
+  "en": "树叶品质",
+  "vi_variants": [
+   "Chất Lượng Tán Lá",
+   "Chất Lượng Cây Cỏ"
+  ],
+  "vi_pho_bien": "Chất Lượng Tán Lá",
+  "vi_vi_du": "Chất Lượng Cây Cỏ",
+  "key_vi_du": "Menu_Foilage"
+ },
+ {
+  "en": "主厅",
+  "vi_variants": [
+   "Sảnh Chính",
+   "Đại Sảnh Chính"
+  ],
+  "vi_pho_bien": "Sảnh Chính",
+  "vi_vi_du": "Đại Sảnh Chính",
+  "key_vi_du": "MainHall"
+ },
+ {
+  "en": "方庭",
+  "vi_variants": [
+   "Sân Tứ Giác",
+   "Sân Trong",
+   "Sân Trung Tâm"
+  ],
+  "vi_pho_bien": "Sân Tứ Giác",
+  "vi_vi_du": "Sân Trong",
+  "key_vi_du": "MAP_HW_SUB_QuadCourtyard_QuadCourtyard"
+ },
+ {
+  "en": "变形学庭院",
+  "vi_variants": [
+   "Sân Hóa Phép",
+   "Sân Biến Hình"
+  ],
+  "vi_pho_bien": "Sân Hóa Phép",
+  "vi_vi_du": "Sân Biến Hình",
+  "key_vi_du": "HOG_TransfigurationCourtyard"
+ },
+ {
+  "en": "奖杯室",
+  "vi_variants": [
+   "Phòng Cúp",
+   "Phòng Cúp và Kỷ Niệm Chương"
+  ],
+  "vi_pho_bien": "Phòng Cúp",
+  "vi_vi_du": "Phòng Cúp và Kỷ Niệm Chương",
+  "key_vi_du": "FT_HW_TrophyRoom"
+ },
+ {
+  "en": "地穴",
+  "vi_variants": [
+   "Hầm Bí Ẩn",
+   "Hầm Bí Mật"
+  ],
+  "vi_pho_bien": "Hầm Bí Ẩn",
+  "vi_vi_du": "Hầm Bí Mật",
+  "key_vi_du": "FT_HW_Undercroft"
+ },
+ {
+  "en": "北福特沼泽",
+  "vi_variants": [
+   "Đầm Lầy Ford Phía Bắc",
+   "Đầm Lầy Bắc Ford"
+  ],
+  "vi_pho_bien": "Đầm Lầy Ford Phía Bắc",
+  "vi_vi_du": "Đầm Lầy Bắc Ford",
+  "key_vi_du": "RegionNameNorthSwamp"
+ },
+ {
+  "en": "南海沼泽",
+  "vi_variants": [
+   "Đầm Lầy Biển Nam",
+   "Đầm Lầy Nam Hải"
+  ],
+  "vi_pho_bien": "Đầm Lầy Biển Nam",
+  "vi_vi_du": "Đầm Lầy Nam Hải",
+  "key_vi_du": "RegionNameSouthSwamp"
+ },
+ {
+  "en": "班伯格",
+  "vi_variants": [
+   "Bainburgh",
+   "Halkirk"
+  ],
+  "vi_pho_bien": "Bainburgh",
+  "vi_vi_du": "Halkirk",
+  "key_vi_du": "FT_OL_HamletHalkirk_CO_BB"
+ },
+ {
+  "en": "克罗夫特",
+  "vi_variants": [
+   "Helmsdale",
+   "Cragcroft"
+  ],
+  "vi_pho_bien": "Helmsdale",
+  "vi_vi_du": "Cragcroft",
+  "key_vi_du": "FT_OL_HamletHelmsdale_CO_BD"
+ },
+ {
+  "en": "下霍格米村",
+  "vi_variants": [
+   "Làng Hogsfield Hạ",
+   "Lower Hogsfield"
+  ],
+  "vi_pho_bien": "Làng Hogsfield Hạ",
+  "vi_vi_du": "Lower Hogsfield",
+  "key_vi_du": "FT_OL_HamletLowerHogsfield_HN_BG"
+ },
+ {
+  "en": "布洛克巴罗",
+  "vi_variants": [
+   "Brockburrow",
+   "Brocburrow"
+  ],
+  "vi_pho_bien": "Brockburrow",
+  "vi_vi_du": "Brocburrow",
+  "key_vi_du": "HAM_EddieThistlewood"
+ },
+ {
+  "en": "上霍格米村",
+  "vi_variants": [
+   "Upper Hogsfield",
+   "Làng Hogsfield Thượng"
+  ],
+  "vi_pho_bien": "Upper Hogsfield",
+  "vi_vi_du": "Làng Hogsfield Thượng",
+  "key_vi_du": "SubregionNameUpperHogsfield"
+ },
+ {
+  "en": "匹于河",
+  "vi_variants": [
+   "Vùng Pitt-upon-Ford",
+   "Pitt-upon-Ford"
+  ],
+  "vi_pho_bien": "Vùng Pitt-upon-Ford",
+  "vi_vi_du": "Pitt-upon-Ford",
+  "key_vi_du": "FT_OL_Pitt-UponFord_HN_AK"
+ },
+ {
+  "en": "月痴兽巢",
+  "vi_variants": [
+   "Hang Bê Trăng",
+   "Hang Mooncalf"
+  ],
+  "vi_pho_bien": "Hang Bê Trăng",
+  "vi_vi_du": "Hang Mooncalf",
+  "key_vi_du": "MooncalfDen"
+ },
+ {
+  "en": "花园",
+  "vi_variants": [
+   "Khu Vườn",
+   "Vườn"
+  ],
+  "vi_pho_bien": "Khu Vườn",
+  "vi_vi_du": "Vườn",
+  "key_vi_du": "HOG_Garden"
+ },
+ {
+  "en": "装备",
+  "vi_variants": [
+   "Trang Bị Nhân Vật",
+   "Trang Bị"
+  ],
+  "vi_pho_bien": "Trang Bị Nhân Vật",
+  "vi_vi_du": "Trang Bị",
+  "key_vi_du": "Gear"
+ },
+ {
+  "en": "妖精银抗性 I",
+  "vi_variants": [
+   "Kháng Yêu Tinh Bạc I",
+   "Kháng Yêu Tinh I"
+  ],
+  "vi_pho_bien": "Kháng Yêu Tinh Bạc I",
+  "vi_vi_du": "Kháng Yêu Tinh I",
+  "key_vi_du": "RECIPE_GEARTRAIT_ARMOR_GOBLIN_1"
+ },
+ {
+  "en": "妖精银抗性 II",
+  "vi_variants": [
+   "Kháng Yêu Tinh Bạc II",
+   "Kháng Yêu Tinh II"
+  ],
+  "vi_pho_bien": "Kháng Yêu Tinh Bạc II",
+  "vi_vi_du": "Kháng Yêu Tinh II",
+  "key_vi_du": "RECIPE_GEARTRAIT_ARMOR_GOBLIN_2"
+ },
+ {
+  "en": "豺狼保护 I",
+  "vi_variants": [
+   "Bảo Vệ Chó Sói I",
+   "Bảo Vệ Sói I"
+  ],
+  "vi_pho_bien": "Bảo Vệ Chó Sói I",
+  "vi_vi_du": "Bảo Vệ Sói I",
+  "key_vi_du": "Gear_Armor_Wolf_1"
+ },
+ {
+  "en": "豺狼保护 II",
+  "vi_variants": [
+   "Bảo Vệ Chó Sói II",
+   "Bảo Vệ Sói II"
+  ],
+  "vi_pho_bien": "Bảo Vệ Chó Sói II",
+  "vi_vi_du": "Bảo Vệ Sói II",
+  "key_vi_du": "Gear_Armor_Wolf_2"
+ },
+ {
+  "en": "豺狼保护 III",
+  "vi_variants": [
+   "Bảo Vệ Chó Sói III",
+   "Bảo Vệ Sói III"
+  ],
+  "vi_pho_bien": "Bảo Vệ Chó Sói III",
+  "vi_vi_du": "Bảo Vệ Sói III",
+  "key_vi_du": "Gear_Armor_Wolf_3"
+ },
+ {
+  "en": "紫色巨蟾",
+  "vi_variants": [
+   "Cóc Tía Khổng Lồ",
+   "Mụn Cóc Tím Khổng Lồ"
+  ],
+  "vi_pho_bien": "Cóc Tía Khổng Lồ",
+  "vi_vi_du": "Mụn Cóc Tím Khổng Lồ",
+  "key_vi_du": "GiantPurpleToad"
+ },
+ {
+  "en": "风雅牌巫师服装店",
+  "vi_variants": [
+   "Tiệm Trang Phục Phù Thủy Gladrags",
+   "Tiệm Trang Phục Pháp Sư Gladrags",
+   "Tiệm Trang Phục Gladrags",
+   "Tiệm May Pháp Sư Gladrags"
+  ],
+  "vi_pho_bien": "Tiệm Trang Phục Phù Thủy Gladrags",
+  "vi_vi_du": "Tiệm Trang Phục Pháp Sư Gladrags",
+  "key_vi_du": "GladragsWizardwear"
+ },
+ {
+  "en": "追随者哨兵",
+  "vi_variants": [
+   "Lính Canh Thuộc Hạ",
+   "Lính Gác Thuộc Hạ"
+  ],
+  "vi_pho_bien": "Lính Canh Thuộc Hạ",
+  "vi_vi_du": "Lính Gác Thuộc Hạ",
+  "key_vi_du": "GoblinMage_INST_B"
+ },
+ {
+  "en": "紫角兽角",
+  "vi_variants": [
+   "Sừng Graphorn",
+   "Sừng Ngưu Ma Biển (Graphorn)"
+  ],
+  "vi_pho_bien": "Sừng Graphorn",
+  "vi_vi_du": "Sừng Ngưu Ma Biển (Graphorn)",
+  "key_vi_du": "Graphorn_Byproduct"
+ },
+ {
+  "en": "乌尔特科特的头盔",
+  "vi_variants": [
+   "Mũ Giáp Arthcourt",
+   "Mũ Giáp của Urtkot"
+  ],
+  "vi_pho_bien": "Mũ Giáp Arthcourt",
+  "vi_vi_du": "Mũ Giáp của Urtkot",
+  "key_vi_du": "Quest_GT_LodgoksHelmet"
+ },
+ {
+  "en": "贝壳 – 蜜糖褐",
+  "vi_variants": [
+   "Vỏ Sò – Nâu Mật Ong",
+   "Vỏ Sò – Nâu Mật"
+  ],
+  "vi_pho_bien": "Vỏ Sò – Nâu Mật Ong",
+  "vi_vi_du": "Vỏ Sò – Nâu Mật",
+  "key_vi_du": "H000_M01"
+ },
+ {
+  "en": "军刀 – 褐",
+  "vi_variants": [
+   "Kiếm Cong – Nâu",
+   "Kiếm – Nâu"
+  ],
+  "vi_pho_bien": "Kiếm Cong – Nâu",
+  "vi_vi_du": "Kiếm – Nâu",
+  "key_vi_du": "H001_M00"
+ },
+ {
+  "en": "军刀 – 灰",
+  "vi_variants": [
+   "Kiếm – Xám",
+   "Kiếm Cong – Xám"
+  ],
+  "vi_pho_bien": "Kiếm – Xám",
+  "vi_vi_du": "Kiếm Cong – Xám",
+  "key_vi_du": "H001_M01"
+ },
+ {
+  "en": "军刀 – 灰棕",
+  "vi_variants": [
+   "Kiếm Cong – Nâu Xám",
+   "Kiếm – Nâu Xám"
+  ],
+  "vi_pho_bien": "Kiếm Cong – Nâu Xám",
+  "vi_vi_du": "Kiếm – Nâu Xám",
+  "key_vi_du": "H001_M02"
+ },
+ {
+  "en": "藤编 – 黑",
+  "vi_variants": [
+   "Mây Đan – Đen",
+   "Đan Mây – Đen"
+  ],
+  "vi_pho_bien": "Mây Đan – Đen",
+  "vi_vi_du": "Đan Mây – Đen",
+  "key_vi_du": "H003_M00"
+ },
+ {
+  "en": "藤编 – 红",
+  "vi_variants": [
+   "Mây Đan – Đỏ",
+   "Đan Mây – Đỏ"
+  ],
+  "vi_pho_bien": "Mây Đan – Đỏ",
+  "vi_vi_du": "Đan Mây – Đỏ",
+  "key_vi_du": "H003_M01"
+ },
+ {
+  "en": "藤编 – 蓝",
+  "vi_variants": [
+   "Đan Mây – Xanh Dương",
+   "Mây Đan – Xanh Dương"
+  ],
+  "vi_pho_bien": "Đan Mây – Xanh Dương",
+  "vi_vi_du": "Mây Đan – Xanh Dương",
+  "key_vi_du": "H003_M02"
+ },
+ {
+  "en": "方格 – 蓝绿",
+  "vi_variants": [
+   "Ô Vuông – Xanh Lam Lục",
+   "Ô Vuông – Xanh Ngọc"
+  ],
+  "vi_pho_bien": "Ô Vuông – Xanh Lam Lục",
+  "vi_vi_du": "Ô Vuông – Xanh Ngọc",
+  "key_vi_du": "H004_M00"
+ },
+ {
+  "en": "旋涡 – 丁香",
+  "vi_variants": [
+   "Xoáy Nước – Tím Lila",
+   "Xoáy Nước – Tử Đinh Hương"
+  ],
+  "vi_pho_bien": "Xoáy Nước – Tím Lila",
+  "vi_vi_du": "Xoáy Nước – Tử Đinh Hương",
+  "key_vi_du": "H009_M00"
+ },
+ {
+  "en": "帝国 – 金&褐",
+  "vi_variants": [
+   "Đế Chế – Vàng & Nâu",
+   "Đế Quốc – Vàng & Nâu"
+  ],
+  "vi_pho_bien": "Đế Chế – Vàng & Nâu",
+  "vi_vi_du": "Đế Quốc – Vàng & Nâu",
+  "key_vi_du": "H010_M00"
+ },
+ {
+  "en": "帝国 – 灰&银",
+  "vi_variants": [
+   "Đế Quốc – Xám & Bạc",
+   "Đế Chế – Xám & Bạc"
+  ],
+  "vi_pho_bien": "Đế Quốc – Xám & Bạc",
+  "vi_vi_du": "Đế Chế – Xám & Bạc",
+  "key_vi_du": "H010_M01"
+ },
+ {
+  "en": "飞鸟 – 褐",
+  "vi_variants": [
+   "Chim Muông – Nâu",
+   "Chim Bay – Nâu"
+  ],
+  "vi_pho_bien": "Chim Muông – Nâu",
+  "vi_vi_du": "Chim Bay – Nâu",
+  "key_vi_du": "Recipe_Wand14_Var1"
+ },
+ {
+  "en": "飞鸟 – 米黄",
+  "vi_variants": [
+   "Chim Muông – Kem",
+   "Chim Bay – Kem"
+  ],
+  "vi_pho_bien": "Chim Muông – Kem",
+  "vi_vi_du": "Chim Bay – Kem",
+  "key_vi_du": "Recipe_Wand14_Var2"
+ },
+ {
+  "en": "飞鸟 – 灰",
+  "vi_variants": [
+   "Chim Muông – Xám",
+   "Chim Bay – Xám"
+  ],
+  "vi_pho_bien": "Chim Muông – Xám",
+  "vi_vi_du": "Chim Bay – Xám",
+  "key_vi_du": "Recipe_Wand14_Var3"
+ },
+ {
+  "en": "黑魔法决斗手套",
+  "vi_variants": [
+   "Găng Tay Đấu Tay Đôi Nghệ Thuật Hắc Ám",
+   "Găng Tay Đấu Tay Đôi Hắc Ám"
+  ],
+  "vi_pho_bien": "Găng Tay Đấu Tay Đôi Nghệ Thuật Hắc Ám",
+  "vi_vi_du": "Găng Tay Đấu Tay Đôi Hắc Ám",
+  "key_vi_du": "Hand_035_Epic"
+ },
+ {
+  "en": "黑色圆顶礼帽",
+  "vi_variants": [
+   "Mũ Quả Dưa Đen Hảo Hạng",
+   "Mũ Quả Dưa Đen Tinh Xảo",
+   "Mũ Quả Dưa Đen Tiêu Chuẩn"
+  ],
+  "vi_pho_bien": "Mũ Quả Dưa Đen Hảo Hạng",
+  "vi_vi_du": "Mũ Quả Dưa Đen Tinh Xảo",
+  "key_vi_du": "Head_008_Rare"
+ },
+ {
+  "en": "血红软呢帽",
+  "vi_variants": [
+   "Mũ Fedora Đỏ Máu Hảo Hạng",
+   "Mũ Fedora Đỏ Máu Tinh Xảo",
+   "Mũ Fedora Đỏ Máu Tiêu Chuẩn"
+  ],
+  "vi_pho_bien": "Mũ Fedora Đỏ Máu Hảo Hạng",
+  "vi_vi_du": "Mũ Fedora Đỏ Máu Tinh Xảo",
+  "key_vi_du": "Head_010_Rare"
+ },
+ {
+  "en": "花草软呢帽",
+  "vi_variants": [
+   "Mũ Fedora Hoa Cỏ Tinh Xảo",
+   "Mũ Fedora Hoa Cỏ Tiêu Chuẩn",
+   "Mũ Fedora Hoa Cỏ Hảo Hạng"
+  ],
+  "vi_pho_bien": "Mũ Fedora Hoa Cỏ Tinh Xảo",
+  "vi_vi_du": "Mũ Fedora Hoa Cỏ Tiêu Chuẩn",
+  "key_vi_du": "Head_012_Rare"
+ },
+ {
+  "en": "店主的礼帽",
+  "vi_variants": [
+   "Mũ Chóp Cao Của Chủ Tiệm Tinh Xảo",
+   "Mũ Chóp Cao Của Chủ Tiệm Tiêu Chuẩn",
+   "Mũ Chóp Cao Của Chủ Tiệm Huyền Thoại",
+   "Mũ Chóp Cao Của Chủ Tiệm Phi Phàm",
+   "Mũ Chóp Cao Của Chủ Tiệm Hảo Hạng"
+  ],
+  "vi_pho_bien": "Mũ Chóp Cao Của Chủ Tiệm Tinh Xảo",
+  "vi_vi_du": "Mũ Chóp Cao Của Chủ Tiệm Tiêu Chuẩn",
+  "key_vi_du": "Head_014_Legendary"
+ },
+ {
+  "en": "一年级礼帽",
+  "vi_variants": [
+   "Mũ Chóp Cao Năm Nhất Tinh Xảo",
+   "Mũ Chóp Cao Năm Nhất Tiêu Chuẩn",
+   "Mũ Chóp Cao Năm Nhất Hảo Hạng"
+  ],
+  "vi_pho_bien": "Mũ Chóp Cao Năm Nhất Tinh Xảo",
+  "vi_vi_du": "Mũ Chóp Cao Năm Nhất Tiêu Chuẩn",
+  "key_vi_du": "Head_015_Rare"
+ },
+ {
+  "en": "毛帽",
+  "vi_variants": [
+   "Mũ Len Ấm Áp Phi Phàm",
+   "Mũ Len Ấm Áp Hảo Hạng",
+   "Mũ Len Ấm Áp Tinh Xảo"
+  ],
+  "vi_pho_bien": "Mũ Len Ấm Áp Phi Phàm",
+  "vi_vi_du": "Mũ Len Ấm Áp Hảo Hạng",
+  "key_vi_du": "Head_016_Rare"
+ },
+ {
+  "en": "坚固软呢帽",
+  "vi_variants": [
+   "Mũ Fedora Kiên Cố Tinh Xảo",
+   "Mũ Fedora Kiên Cố Tiêu Chuẩn",
+   "Mũ Fedora Kiên Cố Hảo Hạng"
+  ],
+  "vi_pho_bien": "Mũ Fedora Kiên Cố Tinh Xảo",
+  "vi_vi_du": "Mũ Fedora Kiên Cố Tiêu Chuẩn",
+  "key_vi_du": "Head_017_Rare"
+ },
+ {
+  "en": "羊皮冬帽",
+  "vi_variants": [
+   "Mũ Mùa Đông Da Cừu Hảo Hạng",
+   "Mũ Mùa Đông Da Cừu Phi Phàm",
+   "Mũ Mùa Đông Da Cừu Tinh Xảo"
+  ],
+  "vi_pho_bien": "Mũ Mùa Đông Da Cừu Hảo Hạng",
+  "vi_vi_du": "Mũ Mùa Đông Da Cừu Phi Phàm",
+  "key_vi_du": "Head_019_Rare"
+ },
+ {
+  "en": "时髦礼帽",
+  "vi_variants": [
+   "Mũ Chóp Cao Thời Thượng Tinh Xảo",
+   "Mũ Chóp Cao Thời Thượng Hảo Hạng",
+   "Mũ Chóp Cao Thời Thượng Phi Phàm"
+  ],
+  "vi_pho_bien": "Mũ Chóp Cao Thời Thượng Tinh Xảo",
+  "vi_vi_du": "Mũ Chóp Cao Thời Thượng Hảo Hạng",
+  "key_vi_du": "Head_020_Rare"
+ },
+ {
+  "en": "街童帽",
+  "vi_variants": [
+   "Mũ Trẻ Bụi Đời Hảo Hạng",
+   "Mũ Trẻ Bụi Đời Huyền Thoại",
+   "Mũ Trẻ Bụi Đời Tinh Xảo",
+   "Mũ Trẻ Bụi Đời Phi Phàm"
+  ],
+  "vi_pho_bien": "Mũ Trẻ Bụi Đời Hảo Hạng",
+  "vi_vi_du": "Mũ Trẻ Bụi Đời Huyền Thoại",
+  "key_vi_du": "Head_021_Legendary"
+ },
+ {
+  "en": "游牧帽",
+  "vi_variants": [
+   "Mũ Du Mục Tiêu Chuẩn",
+   "Mũ Du Mục Hảo Hạng",
+   "Mũ Du Mục Tinh Xảo"
+  ],
+  "vi_pho_bien": "Mũ Du Mục Tiêu Chuẩn",
+  "vi_vi_du": "Mũ Du Mục Hảo Hạng",
+  "key_vi_du": "Head_022_Rare"
+ },
+ {
+  "en": "流苏库菲帽",
+  "vi_variants": [
+   "Mũ Kufi Tua Rua Tinh Xảo",
+   "Mũ Kufi Tua Rua Hảo Hạng",
+   "Mũ Kufi Tua Rua Phi Phàm"
+  ],
+  "vi_pho_bien": "Mũ Kufi Tua Rua Tinh Xảo",
+  "vi_vi_du": "Mũ Kufi Tua Rua Hảo Hạng",
+  "key_vi_du": "Head_023_Rare"
+ },
+ {
+  "en": "蓝色睡帽",
+  "vi_variants": [
+   "Mũ Ngủ Xanh Lam Tiêu Chuẩn",
+   "Mũ Ngủ Xanh Lam Tinh Xảo",
+   "Mũ Ngủ Xanh Lam Hảo Hạng"
+  ],
+  "vi_pho_bien": "Mũ Ngủ Xanh Lam Tiêu Chuẩn",
+  "vi_vi_du": "Mũ Ngủ Xanh Lam Tinh Xảo",
+  "key_vi_du": "Head_024_Rare"
+ },
+ {
+  "en": "棕褐色睡帽",
+  "vi_variants": [
+   "Mũ Ngủ Nâu Nhạt Hảo Hạng",
+   "Mũ Ngủ Nâu Nhạt Tinh Xảo",
+   "Mũ Ngủ Nâu Nhạt Tiêu Chuẩn"
+  ],
+  "vi_pho_bien": "Mũ Ngủ Nâu Nhạt Hảo Hạng",
+  "vi_vi_du": "Mũ Ngủ Nâu Nhạt Tinh Xảo",
+  "key_vi_du": "Head_025_Rare"
+ },
+ {
+  "en": "轻型草药学家帽",
+  "vi_variants": [
+   "Mũ Thảo Dược Sĩ Gọn Nhẹ Huyền Thoại",
+   "Mũ Thảo Dược Sĩ Gọn Nhẹ Phi Phàm",
+   "Mũ Thảo Dược Sĩ Gọn Nhẹ Hảo Hạng"
+  ],
+  "vi_pho_bien": "Mũ Thảo Dược Sĩ Gọn Nhẹ Huyền Thoại",
+  "vi_vi_du": "Mũ Thảo Dược Sĩ Gọn Nhẹ Phi Phàm",
+  "key_vi_du": "Head_026_Legendary"
+ },
+ {
+  "en": "深色草药学家帽",
+  "vi_variants": [
+   "Mũ Thảo Dược Sĩ Tối Màu Tiêu Chuẩn",
+   "Mũ Thảo Dược Sĩ Tối Màu Tinh Xảo",
+   "Mũ Thảo Dược Sĩ Tối Màu Hảo Hạng"
+  ],
+  "vi_pho_bien": "Mũ Thảo Dược Sĩ Tối Màu Tiêu Chuẩn",
+  "vi_vi_du": "Mũ Thảo Dược Sĩ Tối Màu Tinh Xảo",
+  "key_vi_du": "Head_027_Rare"
+ },
+ {
+  "en": "仙子帽",
+  "vi_variants": [
+   "Mũ Yêu Tinh Tinh Xảo",
+   "Mũ Yêu Tinh Hảo Hạng",
+   "Mũ Yêu Tinh Tiêu Chuẩn"
+  ],
+  "vi_pho_bien": "Mũ Yêu Tinh Tinh Xảo",
+  "vi_vi_du": "Mũ Yêu Tinh Hảo Hạng",
+  "key_vi_du": "Head_028_Rare"
+ },
+ {
+  "en": "轻便遮阳帽",
+  "vi_variants": [
+   "Mũ Rơm Che Nắng Tiêu Chuẩn",
+   "Mũ Rơm Che Nắng Tinh Xảo",
+   "Mũ Rơm Che Nắng Hảo Hạng"
+  ],
+  "vi_pho_bien": "Mũ Rơm Che Nắng Tiêu Chuẩn",
+  "vi_vi_du": "Mũ Rơm Che Nắng Tinh Xảo",
+  "key_vi_du": "Head_029_Rare"
+ },
+ {
+  "en": "深色阳帽",
+  "vi_variants": [
+   "Mũ Che Nắng Sẫm Màu Hảo Hạng",
+   "Mũ Che Nắng Sẫm Màu Huyền Thoại",
+   "Mũ Che Nắng Sẫm Màu Phi Phàm"
+  ],
+  "vi_pho_bien": "Mũ Che Nắng Sẫm Màu Hảo Hạng",
+  "vi_vi_du": "Mũ Che Nắng Sẫm Màu Huyền Thoại",
+  "key_vi_du": "Head_030_Legendary"
+ },
+ {
+  "en": "经典魔法师帽",
+  "vi_variants": [
+   "Mũ Phù Thủy Cổ Điển Tiêu Chuẩn",
+   "Mũ Phù Thủy Cổ Điển Hảo Hạng",
+   "Mũ Phù Thủy Cổ Điển Tinh Xảo"
+  ],
+  "vi_pho_bien": "Mũ Phù Thủy Cổ Điển Tiêu Chuẩn",
+  "vi_vi_du": "Mũ Phù Thủy Cổ Điển Hảo Hạng",
+  "key_vi_du": "Head_031_Rare"
+ },
+ {
+  "en": "森林魔法师帽",
+  "vi_variants": [
+   "Mũ Phù Thủy Rừng Xanh Tinh Xảo",
+   "Mũ Phù Thủy Rừng Xanh Tiêu Chuẩn",
+   "Mũ Phù Thủy Rừng Xanh Hảo Hạng"
+  ],
+  "vi_pho_bien": "Mũ Phù Thủy Rừng Xanh Tinh Xảo",
+  "vi_vi_du": "Mũ Phù Thủy Rừng Xanh Tiêu Chuẩn",
+  "key_vi_du": "Head_032_Rare"
+ },
+ {
+  "en": "皮革平顶帽",
+  "vi_variants": [
+   "Mũ Vải Bằng Da Tinh Xảo",
+   "Mũ Vải Bằng Da Tiêu Chuẩn",
+   "Mũ Vải Bằng Da Hảo Hạng"
+  ],
+  "vi_pho_bien": "Mũ Vải Bằng Da Tinh Xảo",
+  "vi_vi_du": "Mũ Vải Bằng Da Tiêu Chuẩn",
+  "key_vi_du": "Head_033_Rare"
+ },
+ {
+  "en": "深色平顶帽",
+  "vi_variants": [
+   "Mũ Nồi Sẫm Màu Tiêu Chuẩn",
+   "Mũ Nồi Sẫm Màu Hảo Hạng",
+   "Mũ Nồi Sẫm Màu Tinh Xảo"
+  ],
+  "vi_pho_bien": "Mũ Nồi Sẫm Màu Tiêu Chuẩn",
+  "vi_vi_du": "Mũ Nồi Sẫm Màu Hảo Hạng",
+  "key_vi_du": "Head_034_Rare"
+ },
+ {
+  "en": "魔药师帽",
+  "vi_variants": [
+   "Mũ Chế Thuốc Huyền Thoại",
+   "Mũ Chế Thuốc Phi Phàm"
+  ],
+  "vi_pho_bien": "Mũ Chế Thuốc Huyền Thoại",
+  "vi_vi_du": "Mũ Chế Thuốc Phi Phàm",
+  "key_vi_du": "Head_035_Legendary"
+ },
+ {
+  "en": "翠绿帽子",
+  "vi_variants": [
+   "Mũ Xanh Ngọc Bích Hảo Hạng",
+   "Mũ Xanh Ngọc Bích Tinh Xảo",
+   "Mũ Xanh Ngọc Bích Tiêu Chuẩn"
+  ],
+  "vi_pho_bien": "Mũ Xanh Ngọc Bích Hảo Hạng",
+  "vi_vi_du": "Mũ Xanh Ngọc Bích Tinh Xảo",
+  "key_vi_du": "Head_036_Rare"
+ },
+ {
+  "en": "高礼帽",
+  "vi_variants": [
+   "Mũ Chóp Cao Quý Phái Hảo Hạng",
+   "Mũ Chóp Cao Quý Phái Tinh Xảo",
+   "Mũ Chóp Cao Quý Phái Tiêu Chuẩn"
+  ],
+  "vi_pho_bien": "Mũ Chóp Cao Quý Phái Hảo Hạng",
+  "vi_vi_du": "Mũ Chóp Cao Quý Phái Tinh Xảo",
+  "key_vi_du": "Head_037_Rare"
+ },
+ {
+  "en": "破旧礼帽",
+  "vi_variants": [
+   "Mũ Chóp Cao Cũ Kỹ Tinh Xảo",
+   "Mũ Chóp Cao Cũ Kỹ Tiêu Chuẩn",
+   "Mũ Chóp Cao Cũ Kỹ Hảo Hạng"
+  ],
+  "vi_pho_bien": "Mũ Chóp Cao Cũ Kỹ Tinh Xảo",
+  "vi_vi_du": "Mũ Chóp Cao Cũ Kỹ Tiêu Chuẩn",
+  "key_vi_du": "Head_038_Rare"
+ },
+ {
+  "en": "图案头巾",
+  "vi_variants": [
+   "Khăn Trùm Đầu Hoa Văn Tinh Xảo",
+   "Khăn Trùm Đầu Hoa Văn Hảo Hạng"
+  ],
+  "vi_pho_bien": "Khăn Trùm Đầu Hoa Văn Tinh Xảo",
+  "vi_vi_du": "Khăn Trùm Đầu Hoa Văn Hảo Hạng",
+  "key_vi_du": "Head_040_Rare"
+ },
+ {
+  "en": "灰色睡帽",
+  "vi_variants": [
+   "Mũ Ngủ Màu Xám Hảo Hạng",
+   "Mũ Ngủ Màu Xám Tiêu Chuẩn",
+   "Mũ Ngủ Màu Xám Tinh Xảo"
+  ],
+  "vi_pho_bien": "Mũ Ngủ Màu Xám Hảo Hạng",
+  "vi_vi_du": "Mũ Ngủ Màu Xám Tiêu Chuẩn",
+  "key_vi_du": "Head_041_Rare"
+ },
+ {
+  "en": "蓝色平顶帽",
+  "vi_variants": [
+   "Mũ Nồi Xanh Lam Tinh Xảo",
+   "Mũ Nồi Xanh Lam Tiêu Chuẩn",
+   "Mũ Nồi Xanh Lam Hảo Hạng"
+  ],
+  "vi_pho_bien": "Mũ Nồi Xanh Lam Tinh Xảo",
+  "vi_vi_du": "Mũ Nồi Xanh Lam Tiêu Chuẩn",
+  "key_vi_du": "Head_042_Rare"
+ },
+ {
+  "en": "靛蓝魔法师帽",
+  "vi_variants": [
+   "Mũ Phù Thủy Chàm Phi Phàm",
+   "Mũ Phù Thủy Chàm Hảo Hạng",
+   "Mũ Phù Thủy Chàm Tinh Xảo"
+  ],
+  "vi_pho_bien": "Mũ Phù Thủy Chàm Phi Phàm",
+  "vi_vi_du": "Mũ Phù Thủy Chàm Hảo Hạng",
+  "key_vi_du": "Head_043_Rare"
+ },
+ {
+  "en": "时髦魔法师帽",
+  "vi_variants": [
+   "Mũ Phù Thủy Thời Thượng Phi Phàm",
+   "Mũ Phù Thủy Thời Thượng Tinh Xảo",
+   "Mũ Phù Thủy Thời Thượng Hảo Hạng"
+  ],
+  "vi_pho_bien": "Mũ Phù Thủy Thời Thượng Phi Phàm",
+  "vi_vi_du": "Mũ Phù Thủy Thời Thượng Tinh Xảo",
+  "key_vi_du": "Head_044_Rare"
+ },
+ {
+  "en": "紫红色贝雷帽",
+  "vi_variants": [
+   "Mũ Nồi Tím Cẩm Quỳ Tinh Xảo",
+   "Mũ Nồi Tím Cẩm Quỳ Hảo Hạng",
+   "Mũ Nồi Tím Cẩm Quỳ Tiêu Chuẩn"
+  ],
+  "vi_pho_bien": "Mũ Nồi Tím Cẩm Quỳ Tinh Xảo",
+  "vi_vi_du": "Mũ Nồi Tím Cẩm Quỳ Hảo Hạng",
+  "key_vi_du": "Head_046_Rare"
+ },
+ {
+  "en": "解谜人裁缝帽",
+  "vi_variants": [
+   "Mũ Thợ May Giải Đố Phi Phàm",
+   "Mũ Thợ May Giải Đố Huyền Thoại"
+  ],
+  "vi_pho_bien": "Mũ Thợ May Giải Đố Phi Phàm",
+  "vi_vi_du": "Mũ Thợ May Giải Đố Huyền Thoại",
+  "key_vi_du": "Head_047_Legendary"
+ },
+ {
+  "en": "异想天开睡帽",
+  "vi_variants": [
+   "Mũ Ngủ Phá Cách Huyền Thoại",
+   "Mũ Ngủ Phá Cách Phi Phàm"
+  ],
+  "vi_pho_bien": "Mũ Ngủ Phá Cách Huyền Thoại",
+  "vi_vi_du": "Mũ Ngủ Phá Cách Phi Phàm",
+  "key_vi_du": "HEAD_048_LEGENDARY"
+ },
+ {
+  "en": "文艺复兴帽",
+  "vi_variants": [
+   "Mũ Phục Hưng Tinh Xảo",
+   "Mũ Phục Hưng Phi Phàm",
+   "Mũ Phục Hưng Hảo Hạng",
+   "Mũ Phục Hưng Huyền Thoại"
+  ],
+  "vi_pho_bien": "Mũ Phục Hưng Tinh Xảo",
+  "vi_vi_du": "Mũ Phục Hưng Phi Phàm",
+  "key_vi_du": "Head_049_Legendary"
+ },
+ {
+  "en": "梅花魔法师帽",
+  "vi_variants": [
+   "Mũ Phù Thủy Sắc Mận Hảo Hạng",
+   "Mũ Phù Thủy Sắc Mận Tinh Xảo",
+   "Mũ Phù Thủy Sắc Mận Phi Phàm"
+  ],
+  "vi_pho_bien": "Mũ Phù Thủy Sắc Mận Hảo Hạng",
+  "vi_vi_du": "Mũ Phù Thủy Sắc Mận Tinh Xảo",
+  "key_vi_du": "Head_050_Rare"
+ },
+ {
+  "en": "长春花礼帽",
+  "vi_variants": [
+   "Mũ Chóp Cao Dừa Cạn Hảo Hạng",
+   "Mũ Chóp Cao Dừa Cạn Phi Phàm"
+  ],
+  "vi_pho_bien": "Mũ Chóp Cao Dừa Cạn Hảo Hạng",
+  "vi_vi_du": "Mũ Chóp Cao Dừa Cạn Phi Phàm",
+  "key_vi_du": "Head_055_Rare"
+ },
+ {
+  "en": "紫红色帽子",
+  "vi_variants": [
+   "Mũ Chóp Nhọn Cẩm Quỳ Phi Phàm",
+   "Mũ Chóp Nhọn Cẩm Quỳ Hảo Hạng"
+  ],
+  "vi_pho_bien": "Mũ Chóp Nhọn Cẩm Quỳ Phi Phàm",
+  "vi_vi_du": "Mũ Chóp Nhọn Cẩm Quỳ Hảo Hạng",
+  "key_vi_du": "Head_056_Rare"
+ },
+ {
+  "en": "发条软呢帽",
+  "vi_variants": [
+   "Mũ Fedora Đồng Hồ Cót Hảo Hạng",
+   "Mũ Fedora Đồng Hồ Cót Phi Phàm"
+  ],
+  "vi_pho_bien": "Mũ Fedora Đồng Hồ Cót Hảo Hạng",
+  "vi_vi_du": "Mũ Fedora Đồng Hồ Cót Phi Phàm",
+  "key_vi_du": "Head_058_Rare"
+ },
+ {
+  "en": "条纹睡帽",
+  "vi_variants": [
+   "Mũ Ngủ Sọc Tinh Xảo",
+   "Mũ Ngủ Sọc Tiêu Chuẩn"
+  ],
+  "vi_pho_bien": "Mũ Ngủ Sọc Tinh Xảo",
+  "vi_vi_du": "Mũ Ngủ Sọc Tiêu Chuẩn",
+  "key_vi_du": "Head_060_Common"
+ },
+ {
+  "en": "草帽遮阳帽",
+  "vi_variants": [
+   "Mũ Rơm Che Nắng Huyền Thoại",
+   "Mũ Rơm Che Nắng Phi Phàm",
+   "Mũ Rơm Che Nắng Hảo Hạng"
+  ],
+  "vi_pho_bien": "Mũ Rơm Che Nắng Huyền Thoại",
+  "vi_vi_du": "Mũ Rơm Che Nắng Phi Phàm",
+  "key_vi_du": "Head_061_Legendary"
+ },
+ {
+  "en": "拼布魔法师帽",
+  "vi_variants": [
+   "Mũ Phù Thủy Chắp Vá Huyền Thoại",
+   "Mũ Phù Thủy Chắp Vá Phi Phàm",
+   "Mũ Phù Thủy Chắp Vá Hảo Hạng"
+  ],
+  "vi_pho_bien": "Mũ Phù Thủy Chắp Vá Huyền Thoại",
+  "vi_vi_du": "Mũ Phù Thủy Chắp Vá Phi Phàm",
+  "key_vi_du": "Head_062_Legendary"
+ },
+ {
+  "en": "醒目的涡纹花呢帽",
+  "vi_variants": [
+   "Mũ Họa Tiết Paisley Nổi Bật Huyền Thoại",
+   "Mũ Họa Tiết Paisley Nổi Bật Phi Phàm"
+  ],
+  "vi_pho_bien": "Mũ Họa Tiết Paisley Nổi Bật Huyền Thoại",
+  "vi_vi_du": "Mũ Họa Tiết Paisley Nổi Bật Phi Phàm",
+  "key_vi_du": "Head_063_Legendary"
+ },
+ {
+  "en": "天文帽",
+  "vi_variants": [
+   "Mũ Thiên Văn Phi Phàm",
+   "Mũ Thiên Văn Hảo Hạng",
+   "Mũ Thiên Văn Huyền Thoại"
+  ],
+  "vi_pho_bien": "Mũ Thiên Văn Phi Phàm",
+  "vi_vi_du": "Mũ Thiên Văn Hảo Hạng",
+  "key_vi_du": "Head_064_Legendary"
+ },
+ {
+  "en": "质朴的睡帽",
+  "vi_variants": [
+   "Mũ Ngủ Mộc Mạc Tinh Xảo",
+   "Mũ Ngủ Mộc Mạc Tiêu Chuẩn",
+   "Mũ Ngủ Mộc Mạc Hảo Hạng"
+  ],
+  "vi_pho_bien": "Mũ Ngủ Mộc Mạc Tinh Xảo",
+  "vi_vi_du": "Mũ Ngủ Mộc Mạc Tiêu Chuẩn",
+  "key_vi_du": "Head_065_Rare"
+ },
+ {
+  "en": "皮革魔法师帽",
+  "vi_variants": [
+   "Mũ Phù Thủy Bằng Da Hảo Hạng",
+   "Mũ Phù Thủy Bằng Da Phi Phàm",
+   "Mũ Phù Thủy Bằng Da Huyền Thoại"
+  ],
+  "vi_pho_bien": "Mũ Phù Thủy Bằng Da Hảo Hạng",
+  "vi_vi_du": "Mũ Phù Thủy Bằng Da Phi Phàm",
+  "key_vi_du": "Head_066_Legendary"
+ },
+ {
+  "en": "华丽蜘蛛网帽",
+  "vi_variants": [
+   "Mũ Mạng Nhện Hoa Lệ Huyền Thoại",
+   "Mũ Mạng Nhện Hoa Lệ Phi Phàm"
+  ],
+  "vi_pho_bien": "Mũ Mạng Nhện Hoa Lệ Huyền Thoại",
+  "vi_vi_du": "Mũ Mạng Nhện Hoa Lệ Phi Phàm",
+  "key_vi_du": "Head_067_Legendary"
+ },
+ {
+  "en": "仙子绿魔法师帽",
+  "vi_variants": [
+   "Mũ Phù Thủy Xanh Tiên Tộc Hảo Hạng",
+   "Mũ Phù Thủy Xanh Tiên Tộc Huyền Thoại",
+   "Mũ Phù Thủy Xanh Tiên Tộc Phi Phàm"
+  ],
+  "vi_pho_bien": "Mũ Phù Thủy Xanh Tiên Tộc Hảo Hạng",
+  "vi_vi_du": "Mũ Phù Thủy Xanh Tiên Tộc Huyền Thoại",
+  "key_vi_du": "Head_068_Legendary"
+ },
+ {
+  "en": "拜占庭贝雷帽",
+  "vi_variants": [
+   "Mũ Nồi Byzantine Hảo Hạng",
+   "Mũ Nồi Byzantine Tiêu Chuẩn",
+   "Mũ Nồi Byzantine Tinh Xảo"
+  ],
+  "vi_pho_bien": "Mũ Nồi Byzantine Hảo Hạng",
+  "vi_vi_du": "Mũ Nồi Byzantine Tiêu Chuẩn",
+  "key_vi_du": "Head_069_Rare"
+ },
+ {
+  "en": "稻草人魔法师帽",
+  "vi_variants": [
+   "Mũ Phù Thủy Bù Nhìn Tinh Xảo",
+   "Mũ Phù Thủy Bù Nhìn Hảo Hạng",
+   "Mũ Phù Thủy Bù Nhìn Tiêu Chuẩn"
+  ],
+  "vi_pho_bien": "Mũ Phù Thủy Bù Nhìn Tinh Xảo",
+  "vi_vi_du": "Mũ Phù Thủy Bù Nhìn Hảo Hạng",
+  "key_vi_du": "Head_070_Rare"
+ },
+ {
+  "en": "深红礼帽",
+  "vi_variants": [
+   "Mũ Chóp Cao Đỏ Thẫm Phi Phàm",
+   "Mũ Chóp Cao Đỏ Thẫm Hảo Hạng",
+   "Mũ Chóp Cao Đỏ Thẫm Tinh Xảo"
+  ],
+  "vi_pho_bien": "Mũ Chóp Cao Đỏ Thẫm Phi Phàm",
+  "vi_vi_du": "Mũ Chóp Cao Đỏ Thẫm Hảo Hạng",
+  "key_vi_du": "Head_071_Rare"
+ },
+ {
+  "en": "蕾丝魔法师帽",
+  "vi_variants": [
+   "Mũ Phù Thủy Phối Ren Phi Phàm",
+   "Mũ Phù Thủy Phối Ren Hảo Hạng",
+   "Mũ Phù Thủy Phối Ren Tinh Xảo"
+  ],
+  "vi_pho_bien": "Mũ Phù Thủy Phối Ren Phi Phàm",
+  "vi_vi_du": "Mũ Phù Thủy Phối Ren Hảo Hạng",
+  "key_vi_du": "Head_072_Rare"
+ },
+ {
+  "en": "黑魔法驻军帽",
+  "vi_variants": [
+   "Mũ Đồn Binh Nghệ Thuật Hắc Ám Hảo Hạng",
+   "Mũ Đồn Binh Nghệ Thuật Hắc Ám Huyền Thoại",
+   "Mũ Đồn Binh Nghệ Thuật Hắc Ám Tinh Xảo",
+   "Mũ Đồn Binh Nghệ Thuật Hắc Ám Phi Phàm",
+   "Mũ Đồn Binh Nghệ Thuật Hắc Ám Tiêu Chuẩn"
+  ],
+  "vi_pho_bien": "Mũ Đồn Binh Nghệ Thuật Hắc Ám Hảo Hạng",
+  "vi_vi_du": "Mũ Đồn Binh Nghệ Thuật Hắc Ám Huyền Thoại",
+  "key_vi_du": "Head_074_Legendary"
+ },
+ {
+  "en": "华丽银色礼帽",
+  "vi_variants": [
+   "Mũ Chóp Cao Bạc Lộng Lẫy Phi Phàm",
+   "Mũ Chóp Cao Bạc Lộng Lẫy Hảo Hạng",
+   "Mũ Chóp Cao Bạc Lộng Lẫy Tinh Xảo",
+   "Mũ Chóp Cao Bạc Lộng Lẫy Tiêu Chuẩn"
+  ],
+  "vi_pho_bien": "Mũ Chóp Cao Bạc Lộng Lẫy Phi Phàm",
+  "vi_vi_du": "Mũ Chóp Cao Bạc Lộng Lẫy Hảo Hạng",
+  "key_vi_du": "Head_074_Rare"
+ },
+ {
+  "en": "三把扫帚",
+  "vi_variants": [
+   "Quán Ba Cây Chổi",
+   "Quán Ba Cái Chổi"
+  ],
+  "vi_pho_bien": "Quán Ba Cây Chổi",
+  "vi_vi_du": "Quán Ba Cái Chổi",
+  "key_vi_du": "LORE_3Broom_Broomsticks"
+ },
+ {
+  "en": "珍禽异兽",
+  "vi_variants": [
+   "Trân Cầm Dị Thú",
+   "Cửa Hàng Sinh Vật Kỳ Bí",
+   "Brood & Peck — Thú Vật Kỳ Thú"
+  ],
+  "vi_pho_bien": "Trân Cầm Dị Thú",
+  "vi_vi_du": "Cửa Hàng Sinh Vật Kỳ Bí",
+  "key_vi_du": "LORE_Waggery_BurntCeiling"
+ },
+ {
+  "en": "奥利凡德",
+  "vi_variants": [
+   "Tiệm Đũa Phép Ollivanders",
+   "Ollivanders"
+  ],
+  "vi_pho_bien": "Tiệm Đũa Phép Ollivanders",
+  "vi_vi_du": "Ollivanders",
+  "key_vi_du": "VendorShopName_GerboldOllivander"
+ },
+ {
+  "en": "蜂蜜公爵",
+  "vi_variants": [
+   "Tiệm Công Kẹo Honeydukes",
+   "Tiệm Kẹo Honeydukes",
+   "Công Tước Mật Ong"
+  ],
+  "vi_pho_bien": "Tiệm Công Kẹo Honeydukes",
+  "vi_vi_du": "Tiệm Kẹo Honeydukes",
+  "key_vi_du": "SUB_HONEYDUKES"
+ },
+ {
+  "en": "J·皮聘魔药店",
+  "vi_variants": [
+   "Tiệm Độc Dược J. Pippin",
+   "Tiệm Thuốc J. Pippin",
+   "Tiệm Thuốc Phép J. Pippin"
+  ],
+  "vi_pho_bien": "Tiệm Độc Dược J. Pippin",
+  "vi_vi_du": "Tiệm Thuốc J. Pippin",
+  "key_vi_du": "LORE_Pippins_Brewing"
+ },
+ {
+  "en": "神奇萝卜",
+  "vi_variants": [
+   "Củ Cải Thần Kỳ",
+   "Tiệm Củ Cải Phép Thuật (The Magic Neep)"
+  ],
+  "vi_pho_bien": "Củ Cải Thần Kỳ",
+  "vi_vi_du": "Tiệm Củ Cải Phép Thuật (The Magic Neep)",
+  "key_vi_du": "MagicNeep"
+ },
+ {
+  "en": "巨著与卷轴",
+  "vi_variants": [
+   "Đại Thư và Cuộn Giấy",
+   "Tiệm Sách Cuộn & Cổ Thư (Tomes and Scrolls)"
+  ],
+  "vi_pho_bien": "Đại Thư và Cuộn Giấy",
+  "vi_vi_du": "Tiệm Sách Cuộn & Cổ Thư (Tomes and Scrolls)",
+  "key_vi_du": "HM_ThomasBrown"
+ },
+ {
+  "en": "佐科笑话店",
+  "vi_variants": [
+   "Tiệm Trò Chơi Khăm Zonko",
+   "Tiệm Trò Đùa Zonko"
+  ],
+  "vi_pho_bien": "Tiệm Trò Chơi Khăm Zonko",
+  "vi_vi_du": "Tiệm Trò Đùa Zonko",
+  "key_vi_du": "LORE_Zonkos_Shop"
+ },
+ {
+  "en": "天文学区",
+  "vi_variants": [
+   "Cánh Thiên Văn",
+   "Khu Thiên Văn"
+  ],
+  "vi_pho_bien": "Cánh Thiên Văn",
+  "vi_vi_du": "Khu Thiên Văn",
+  "key_vi_du": "HOG_ASTRONOMYWINGKL"
+ },
+ {
+  "en": "天文学课程",
+  "vi_variants": [
+   "Lớp Học Thiên Văn",
+   "Lớp Thiên Văn Học"
+  ],
+  "vi_pho_bien": "Lớp Học Thiên Văn",
+  "vi_vi_du": "Lớp Thiên Văn Học",
+  "key_vi_du": "HOG_Class_Astronomy"
+ },
+ {
+  "en": "魔咒课",
+  "vi_variants": [
+   "Lớp Học Bùa Chú",
+   "Lớp Bùa Chú"
+  ],
+  "vi_pho_bien": "Lớp Học Bùa Chú",
+  "vi_vi_du": "Lớp Bùa Chú",
+  "key_vi_du": "ZZC_01"
+ },
+ {
+  "en": "黑魔法防御术",
+  "vi_variants": [
+   "Phòng Thủ Chống Lại Hắc Ám Thuật",
+   "Phòng Chống Nghệ Thuật Hắc Ám"
+  ],
+  "vi_pho_bien": "Phòng Thủ Chống Lại Hắc Ám Thuật",
+  "vi_vi_du": "Phòng Chống Nghệ Thuật Hắc Ám",
+  "key_vi_du": "ZZD_01"
+ },
+ {
+  "en": "魔法史",
+  "vi_variants": [
+   "Lịch Sử Ma Thuật",
+   "Lịch Sử Phép Thuật"
+  ],
+  "vi_pho_bien": "Lịch Sử Ma Thuật",
+  "vi_vi_du": "Lịch Sử Phép Thuật",
+  "key_vi_du": "HOG_Class_HistoryofMagic"
+ },
+ {
+  "en": "魔药学课程",
+  "vi_variants": [
+   "Lớp Học Độc Dược",
+   "Lớp Độc Dược"
+  ],
+  "vi_pho_bien": "Lớp Học Độc Dược",
+  "vi_vi_du": "Lớp Độc Dược",
+  "key_vi_du": "HOG_Class_Potions"
+ },
+ {
+  "en": "钟塔区",
+  "vi_variants": [
+   "Cánh Tháp Chuông",
+   "Khu Tháp Đồng Hồ"
+  ],
+  "vi_pho_bien": "Cánh Tháp Chuông",
+  "vi_vi_du": "Khu Tháp Đồng Hồ",
+  "key_vi_du": "HOG_ENTRANCEWINGKL"
+ },
+ {
+  "en": "象形文字厅",
+  "vi_variants": [
+   "Hành Lang Tượng Hình",
+   "Sảnh Chữ Tượng Hình"
+  ],
+  "vi_pho_bien": "Hành Lang Tượng Hình",
+  "vi_vi_du": "Sảnh Chữ Tượng Hình",
+  "key_vi_du": "HOG_HieroglyphicHall"
+ },
+ {
+  "en": "图书馆附属楼",
+  "vi_variants": [
+   "Khu Phụ Cận Thư Viện",
+   "Nhà Phụ Thư Viện"
+  ],
+  "vi_pho_bien": "Khu Phụ Cận Thư Viện",
+  "vi_vi_du": "Nhà Phụ Thư Viện",
+  "key_vi_du": "HOG_LIBRARYANNEXKL"
+ },
+ {
+  "en": "校长办公室的入口",
+  "vi_variants": [
+   "Lối Vào Phòng Hiệu Trưởng",
+   "Lối vào dẫn tới Phòng Hiệu Trưởng"
+  ],
+  "vi_pho_bien": "Lối Vào Phòng Hiệu Trưởng",
+  "vi_vi_du": "Lối vào dẫn tới Phòng Hiệu Trưởng",
+  "key_vi_du": "HOG_Office_PhineasBlackEntrance"
+ },
+ {
+  "en": "密室",
+  "vi_variants": [
+   "Phòng Yêu Cầu",
+   "Phòng bí mật",
+   "Phòng Bí Mật"
+  ],
+  "vi_pho_bien": "Phòng Yêu Cầu",
+  "vi_vi_du": "Phòng bí mật",
+  "key_vi_du": "HOG_Owlery_SecretRoom"
+ },
+ {
+  "en": "接待厅",
+  "vi_variants": [
+   "Đại Sảnh Tiếp Đón",
+   "Sảnh Tiếp Tân"
+  ],
+  "vi_pho_bien": "Đại Sảnh Tiếp Đón",
+  "vi_vi_du": "Sảnh Tiếp Tân",
+  "key_vi_du": "MAP_HW_SUB_GreatHall_ReceptionHall"
+ },
+ {
+  "en": "霍克拉普汁",
+  "vi_variants": [
+   "Nước ép Horklump",
+   "Nước Ép Nấm Horklump"
+  ],
+  "vi_pho_bien": "Nước ép Horklump",
+  "vi_vi_du": "Nước Ép Nấm Horklump",
+  "key_vi_du": "HorklumpJuice"
+ },
+ {
+  "en": "你离开了任务区域",
+  "vi_variants": [
+   "Bạn đã rời khỏi khu vực làm nhiệm vụ",
+   "Bạn đã rời khỏi khu vực nhiệm vụ"
+  ],
+  "vi_pho_bien": "Bạn đã rời khỏi khu vực làm nhiệm vụ",
+  "vi_vi_du": "Bạn đã rời khỏi khu vực nhiệm vụ",
+  "key_vi_du": "HST_01_MissionFail_LeftArea"
+ },
+ {
+  "en": "阴尸",
+  "vi_variants": [
+   "Âm Binh (Inferi)",
+   "Âm Binh (Inferius)"
+  ],
+  "vi_pho_bien": "Âm Binh (Inferi)",
+  "vi_vi_du": "Âm Binh (Inferius)",
+  "key_vi_du": "InferiKL"
+ },
+ {
+  "en": "施放“原形立现”",
+  "vi_variants": [
+   "Thi triển Revelio",
+   "Thi triển \"Bùa Hiện Hình (Revelio)\""
+  ],
+  "vi_pho_bien": "Thi triển Revelio",
+  "vi_vi_du": "Thi triển \"Bùa Hiện Hình (Revelio)\"",
+  "key_vi_du": "INT_01_CP2_Intro_CastRevelio_TaskObj02d"
+ },
+ {
+  "en": "感应古代魔法",
+  "vi_variants": [
+   "Cảm nhận Cổ Đại Ma Thuật",
+   "Cảm nhận Phép Thuật Cổ Xưa"
+  ],
+  "vi_pho_bien": "Cảm nhận Cổ Đại Ma Thuật",
+  "vi_vi_du": "Cảm nhận Phép Thuật Cổ Xưa",
+  "key_vi_du": "INT_01_CP3_Intro_AMHotSpot_TaskObj03b"
+ },
+ {
+  "en": "绝音鸟",
+  "vi_variants": [
+   "Chim Jobberknoll",
+   "Lông chim Jobberknoll"
+  ],
+  "vi_pho_bien": "Chim Jobberknoll",
+  "vi_vi_du": "Lông chim Jobberknoll",
+  "key_vi_du": "Jobberknoll"
+ },
+ {
+  "en": "猫狸子",
+  "vi_variants": [
+   "Ria Mèo Kneazle",
+   "Mèo Kneazle"
+  ],
+  "vi_pho_bien": "Ria Mèo Kneazle",
+  "vi_vi_du": "Mèo Kneazle",
+  "key_vi_du": "Kneazle"
+ },
+ {
+  "en": "两耳草",
+  "vi_variants": [
+   "Cỏ Thắt Cút (Knotgrass)",
+   "Cỏ Thắt Nút (Knotgrass)"
+  ],
+  "vi_pho_bien": "Cỏ Thắt Cút (Knotgrass)",
+  "vi_vi_du": "Cỏ Thắt Nút (Knotgrass)",
+  "key_vi_du": "Map_Knotgrass"
+ },
+ {
+  "en": "草蛉虫",
+  "vi_variants": [
+   "Cánh Ruồi Chuồn (Lacewing Flies)",
+   "Ruồi Cánh Lưới (Lacewing Flies)"
+  ],
+  "vi_pho_bien": "Cánh Ruồi Chuồn (Lacewing Flies)",
+  "vi_vi_du": "Ruồi Cánh Lưới (Lacewing Flies)",
+  "key_vi_du": "LacewingFlies"
+ },
+ {
+  "en": "大型种植盆",
+  "vi_variants": [
+   "Chậu Cây Lớn",
+   "Chậu Trồng Cỡ Lớn"
+  ],
+  "vi_pho_bien": "Chậu Cây Lớn",
+  "vi_vi_du": "Chậu Trồng Cỡ Lớn",
+  "key_vi_du": "Menu_LargePot"
+ },
+ {
+  "en": "跳跳伞菌",
+  "vi_variants": [
+   "Nấm Nhảy Dù (Leaping Toadstool)",
+   "Nấm Nhảy Cót Két (Leaping Toadstool)"
+  ],
+  "vi_pho_bien": "Nấm Nhảy Dù (Leaping Toadstool)",
+  "vi_vi_du": "Nấm Nhảy Cót Két (Leaping Toadstool)",
+  "key_vi_du": "LeapingToadstool"
+ },
+ {
+  "en": "蚂蟥汁",
+  "vi_variants": [
+   "Nước Ép Đỉa (Leech Juice)",
+   "Dịch Đỉa"
+  ],
+  "vi_pho_bien": "Nước Ép Đỉa (Leech Juice)",
+  "vi_vi_du": "Dịch Đỉa",
+  "key_vi_du": "LeechJuice"
+ },
+ {
+  "en": "放弃任务",
+  "vi_variants": [
+   "Hủy Bỏ Nhiệm Vụ",
+   "Từ bỏ nhiệm vụ"
+  ],
+  "vi_pho_bien": "Hủy Bỏ Nhiệm Vụ",
+  "vi_vi_du": "Từ bỏ nhiệm vụ",
+  "key_vi_du": "Legend_AbandonQuestNB"
+ },
+ {
+  "en": "添加堆肥",
+  "vi_variants": [
+   "Bón Thêm Phân Bón",
+   "Thêm Phân Hữu Cơ"
+  ],
+  "vi_pho_bien": "Bón Thêm Phân Bón",
+  "vi_vi_du": "Thêm Phân Hữu Cơ",
+  "key_vi_du": "Legend_AddFuel"
+ },
+ {
+  "en": "使用在植物上",
+  "vi_variants": [
+   "Dùng cho cây trồng",
+   "Sử Dụng Lên Cây Trồng"
+  ],
+  "vi_pho_bien": "Dùng cho cây trồng",
+  "vi_vi_du": "Sử Dụng Lên Cây Trồng",
+  "key_vi_du": "Menu_ApplyToPlant"
+ },
+ {
+  "en": "领取奖励",
+  "vi_variants": [
+   "Nhận phần thưởng",
+   "Nhận Phần Thưởng",
+   "Nhận Thưởng"
+  ],
+  "vi_pho_bien": "Nhận phần thưởng",
+  "vi_vi_du": "Nhận Phần Thưởng",
+  "key_vi_du": "Legend_ClaimChallengeReward"
+ },
+ {
+  "en": "解除坐骑",
+  "vi_variants": [
+   "Xuống Thú Cưỡi / Chổi",
+   "Xuống Cưỡi"
+  ],
+  "vi_pho_bien": "Xuống Thú Cưỡi / Chổi",
+  "vi_vi_du": "Xuống Cưỡi",
+  "key_vi_du": "Legend_DismountNB"
+ },
+ {
+  "en": "摧毁",
+  "vi_variants": [
+   "Phá hủy",
+   "Hủy Bỏ"
+  ],
+  "vi_pho_bien": "Phá hủy",
+  "vi_vi_du": "Hủy Bỏ",
+  "key_vi_du": "Legend_DropNB"
+ },
+ {
+  "en": "下一张地图",
+  "vi_variants": [
+   "Bản Đồ Tiếp Theo",
+   "Bản Đồ Kế Tiếp"
+  ],
+  "vi_pho_bien": "Bản Đồ Tiếp Theo",
+  "vi_vi_du": "Bản Đồ Kế Tiếp",
+  "key_vi_du": "SettingsControl_UMGMapScreenNextMap"
+ },
+ {
+  "en": "拾取",
+  "vi_variants": [
+   "Nhặt Lên",
+   "Nhặt"
+  ],
+  "vi_pho_bien": "Nhặt Lên",
+  "vi_vi_du": "Nhặt",
+  "key_vi_du": "Menu_Pickup"
+ },
+ {
+  "en": "购买",
+  "vi_variants": [
+   "Mua",
+   "Mua Sắm"
+  ],
+  "vi_pho_bien": "Mua",
+  "vi_vi_du": "Mua Sắm",
+  "key_vi_du": "Legend_PurchaseNB"
+ },
+ {
+  "en": "重命名",
+  "vi_variants": [
+   "Đổi Tên Rương",
+   "Đổi tên",
+   "Đổi Tên"
+  ],
+  "vi_pho_bien": "Đổi Tên Rương",
+  "vi_vi_du": "Đổi tên",
+  "key_vi_du": "Legend_Rename"
+ },
+ {
+  "en": "重置旋转",
+  "vi_variants": [
+   "Đặt Lại Xoay Kính",
+   "Đặt Lại Góc Xoay"
+  ],
+  "vi_pho_bien": "Đặt Lại Xoay Kính",
+  "vi_vi_du": "Đặt Lại Góc Xoay",
+  "key_vi_du": "Legend_ResetRotation"
+ },
+ {
+  "en": "重置为默认",
+  "vi_variants": [
+   "Đặt Lại Điều Khiển Mặc Định",
+   "Đặt Lại Mặc Định",
+   "Đặt Lại Cài Đặt Mặc Định"
+  ],
+  "vi_pho_bien": "Đặt Lại Điều Khiển Mặc Định",
+  "vi_vi_du": "Đặt Lại Mặc Định",
+  "key_vi_du": "Legend_ResetToDefaultSettings"
+ },
+ {
+  "en": "选择",
+  "vi_variants": [
+   "Chọn",
+   "Chọn Sinh Vật"
+  ],
+  "vi_pho_bien": "Chọn",
+  "vi_vi_du": "Chọn Sinh Vật",
+  "key_vi_du": "Legend_SelectNB"
+ },
+ {
+  "en": "设置路点",
+  "vi_variants": [
+   "Đặt Điểm Mốc",
+   "Đặt Điểm Định Vị"
+  ],
+  "vi_pho_bien": "Đặt Điểm Mốc",
+  "vi_vi_du": "Đặt Điểm Định Vị",
+  "key_vi_du": "Legend_SetWaypointNB"
+ },
+ {
+  "en": "召唤",
+  "vi_variants": [
+   "Triệu Hồi",
+   "Triệu Hồi Sinh Vật"
+  ],
+  "vi_pho_bien": "Triệu Hồi",
+  "vi_vi_du": "Triệu Hồi Sinh Vật",
+  "key_vi_du": "Legend_Summon"
+ },
+ {
+  "en": "已购买",
+  "vi_variants": [
+   "Đã Mở Khóa",
+   "Đã Mua"
+  ],
+  "vi_pho_bien": "Đã Mở Khóa",
+  "vi_vi_du": "Đã Mua",
+  "key_vi_du": "MENU_PURCHASED"
+ },
+ {
+  "en": "天赋",
+  "vi_variants": [
+   "Tài Năng",
+   "Màn Hình Tài Năng"
+  ],
+  "vi_pho_bien": "Tài Năng",
+  "vi_vi_du": "Màn Hình Tài Năng",
+  "key_vi_du": "Legend_Talentsscreen"
+ },
+ {
+  "en": "放大",
+  "vi_variants": [
+   "Thu Phóng Kính (Phóng To)",
+   "Phóng To Kính Viễn Vọng",
+   "Bản Đồ: Phóng To"
+  ],
+  "vi_pho_bien": "Thu Phóng Kính (Phóng To)",
+  "vi_vi_du": "Phóng To Kính Viễn Vọng",
+  "key_vi_du": "SettingsControl_UMGMapZoomIn"
+ },
+ {
+  "en": "缩小",
+  "vi_variants": [
+   "Bản Đồ: Thu Nhỏ",
+   "Thu Phóng Kính (Thu Nhỏ)",
+   "Thu Nhỏ Kính Viễn Vọng"
+  ],
+  "vi_pho_bien": "Bản Đồ: Thu Nhỏ",
+  "vi_vi_du": "Thu Phóng Kính (Thu Nhỏ)",
+  "key_vi_du": "SettingsControl_UMGMapZoomOut"
+ },
+ {
+  "en": "撤回",
+  "vi_variants": [
+   "Hoàn Tác",
+   "Hoàn Tác Thao Tác"
+  ],
+  "vi_pho_bien": "Hoàn Tác",
+  "vi_vi_du": "Hoàn Tác Thao Tác",
+  "key_vi_du": "Legend_Undo"
+ },
+ {
+  "en": "卸下",
+  "vi_variants": [
+   "Tháo Trang Bị",
+   "Tháo Ra"
+  ],
+  "vi_pho_bien": "Tháo Trang Bị",
+  "vi_vi_du": "Tháo Ra",
+  "key_vi_du": "Legend_UnequipNB"
+ },
+ {
+  "en": "黄金球",
+  "vi_variants": [
+   "Bóng Vàng",
+   "Bóng Vàng Kim"
+  ],
+  "vi_pho_bien": "Bóng Vàng",
+  "vi_vi_du": "Bóng Vàng Kim",
+  "key_vi_du": "Toy_Goldball"
+ },
+ {
+  "en": "鼻涕球",
+  "vi_variants": [
+   "Bóng Nhớt Puffskein",
+   "Bóng Mũi"
+  ],
+  "vi_pho_bien": "Bóng Nhớt Puffskein",
+  "vi_vi_du": "Bóng Mũi",
+  "key_vi_du": "Toy_Bogeyball"
+ },
+ {
+  "en": "鬼飞球",
+  "vi_variants": [
+   "Trái Quaffle",
+   "Quả Cầu Quaffle"
+  ],
+  "vi_pho_bien": "Trái Quaffle",
+  "vi_vi_du": "Quả Cầu Quaffle",
+  "key_vi_du": "Toy_Quaffle"
+ },
+ {
+  "en": "风滚草",
+  "vi_variants": [
+   "Bóng Cỏ Khô",
+   "Cỏ Lăn Gió"
+  ],
+  "vi_pho_bien": "Bóng Cỏ Khô",
+  "vi_vi_du": "Cỏ Lăn Gió",
+  "key_vi_du": "LockItem_Nurture_Item_TwigBallToy"
+ },
+ {
+  "en": "黑巫师假人",
+  "vi_variants": [
+   "Bù Nhìn Pháp Sư Hắc Ám",
+   "Hình Nhân Phù Thủy Hắc Ám Lật Đật"
+  ],
+  "vi_pho_bien": "Bù Nhìn Pháp Sư Hắc Ám",
+  "vi_vi_du": "Hình Nhân Phù Thủy Hắc Ám Lật Đật",
+  "key_vi_du": "Toy_WizardDummy"
+ },
+ {
+  "en": "毛线球",
+  "vi_variants": [
+   "Bóng Len",
+   "Cuộn Len"
+  ],
+  "vi_pho_bien": "Bóng Len",
+  "vi_vi_du": "Cuộn Len",
+  "key_vi_du": "Toy_Yarnball"
+ },
+ {
+  "en": "织布机",
+  "vi_variants": [
+   "Khung Cửi Phù Thủy",
+   "Máy Dệt Say Mê (Enchanted Loom)"
+  ],
+  "vi_pho_bien": "Khung Cửi Phù Thủy",
+  "vi_vi_du": "Máy Dệt Say Mê (Enchanted Loom)",
+  "key_vi_du": "SettingsControls_Loom"
+ },
+ {
+  "en": "分院帽",
+  "vi_variants": [
+   "Nón Phân Loại",
+   "Chiếc Mũ Phân Loại"
+  ],
+  "vi_pho_bien": "Nón Phân Loại",
+  "vi_vi_du": "Chiếc Mũ Phân Loại",
+  "key_vi_du": "LORE_Grandstaircase_SortingHat"
+ },
+ {
+  "en": "香锦葵",
+  "vi_variants": [
+   "Hương Cẩm Quỳ (Mallowsweet)",
+   "Hương Cẩm Quỳ"
+  ],
+  "vi_pho_bien": "Hương Cẩm Quỳ (Mallowsweet)",
+  "vi_vi_du": "Hương Cẩm Quỳ",
+  "key_vi_du": "Mallowsweet"
+ },
+ {
+  "en": "七楼",
+  "vi_variants": [
+   "Tầng 7",
+   "Tầng Bảy"
+  ],
+  "vi_pho_bien": "Tầng 7",
+  "vi_vi_du": "Tầng Bảy",
+  "key_vi_du": "Map_HW_SUB_AstronomyTower_F7"
+ },
+ {
+  "en": "三楼",
+  "vi_variants": [
+   "Tầng Ba",
+   "Tầng 3"
+  ],
+  "vi_pho_bien": "Tầng Ba",
+  "vi_vi_du": "Tầng 3",
+  "key_vi_du": "Map_HW_SUB_AstronomyTower_F3"
+ },
+ {
+  "en": "月痴兽",
+  "vi_variants": [
+   "Phân Bê Trăng (Mooncalf)",
+   "Bê Trăng (Mooncalf)"
+  ],
+  "vi_pho_bien": "Phân Bê Trăng (Mooncalf)",
+  "vi_vi_du": "Bê Trăng (Mooncalf)",
+  "key_vi_du": "Mooncalf"
+ },
+ {
+  "en": "嗅嗅",
+  "vi_variants": [
+   "Thú Đào Vàng Niffler",
+   "Lông Thú Đào Vàng Niffler"
+  ],
+  "vi_pho_bien": "Thú Đào Vàng Niffler",
+  "vi_vi_du": "Lông Thú Đào Vàng Niffler",
+  "key_vi_du": "Map_NifflerHair"
+ },
+ {
+  "en": "凤凰",
+  "vi_variants": [
+   "Phượng Hoàng",
+   "Lông Phượng Hoàng"
+  ],
+  "vi_pho_bien": "Phượng Hoàng",
+  "vi_vi_du": "Lông Phượng Hoàng",
+  "key_vi_du": "Map_PhoenixFeather"
+ },
+ {
+  "en": "蒲绒绒",
+  "vi_variants": [
+   "Lông Bông Xù Puffskein",
+   "Bông Xù Puffskein"
+  ],
+  "vi_pho_bien": "Lông Bông Xù Puffskein",
+  "vi_vi_du": "Bông Xù Puffskein",
+  "key_vi_du": "Puffskein"
+ },
+ {
+  "en": "缩皱无花果",
+  "vi_variants": [
+   "Sung nhăn",
+   "Quả Sung Teo (Shrivelfig)"
+  ],
+  "vi_pho_bien": "Sung nhăn",
+  "vi_vi_du": "Quả Sung Teo (Shrivelfig)",
+  "key_vi_du": "Map_ShrivelFig"
+ },
+ {
+  "en": "夜骐",
+  "vi_variants": [
+   "Ngựa Đêm",
+   "Lông Vọng Mã (Thestral)"
+  ],
+  "vi_pho_bien": "Ngựa Đêm",
+  "vi_vi_du": "Lông Vọng Mã (Thestral)",
+  "key_vi_du": "Map_ThestralHair"
+ },
+ {
+  "en": "巨怪巢",
+  "vi_variants": [
+   "Hang Troll",
+   "Ổ Quỷ Khổng Lồ (Troll)"
+  ],
+  "vi_pho_bien": "Hang Troll",
+  "vi_vi_du": "Ổ Quỷ Khổng Lồ (Troll)",
+  "key_vi_du": "TC_X1_Y4_A"
+ },
+ {
+  "en": "独角兽",
+  "vi_variants": [
+   "Kỳ Lân",
+   "Sừng Kỳ Lân"
+  ],
+  "vi_pho_bien": "Kỳ Lân",
+  "vi_vi_du": "Sừng Kỳ Lân",
+  "key_vi_du": "Unicorn"
+ },
+ {
+  "en": "毒触手",
+  "vi_variants": [
+   "Cây Xúc Tu Độc (Venomous Tentacula)",
+   "Xúc Tu Độc"
+  ],
+  "vi_pho_bien": "Cây Xúc Tu Độc (Venomous Tentacula)",
+  "vi_vi_du": "Xúc Tu Độc",
+  "key_vi_du": "Map_VenomousTentacula"
+ },
+ {
+  "en": "现影术",
+  "vi_variants": [
+   "Hiện Ảnh Thuật",
+   "Cổng Dịch Chuyển Tức Thì",
+   "Độn Thổ"
+  ],
+  "vi_pho_bien": "Hiện Ảnh Thuật",
+  "vi_vi_du": "Cổng Dịch Chuyển Tức Thì",
+  "key_vi_du": "TUT_Display_ApparateGate"
+ },
+ {
+  "en": "中型种植盆",
+  "vi_variants": [
+   "Chậu Cây Vừa",
+   "Chậu Trồng Cỡ Trung"
+  ],
+  "vi_pho_bien": "Chậu Cây Vừa",
+  "vi_vi_du": "Chậu Trồng Cỡ Trung",
+  "key_vi_du": "Menu_MediumPlanter"
+ },
+ {
+  "en": "瞄准灵敏度",
+  "vi_variants": [
+   "Độ Nhạy Khi Ngắm",
+   "Độ nhạy khi nhắm bắn"
+  ],
+  "vi_pho_bien": "Độ Nhạy Khi Ngắm",
+  "vi_vi_du": "Độ nhạy khi nhắm bắn",
+  "key_vi_du": "Settings_CameraInputSensitivity_Aiming"
+ },
+ {
+  "en": "可变幻：",
+  "vi_variants": [
+   "Có thể Biến Hiện:",
+   "Biến Hóa:"
+  ],
+  "vi_pho_bien": "Có thể Biến Hiện:",
+  "vi_vi_du": "Biến Hóa:",
+  "key_vi_du": "Menu_Resources_To_Conjure"
+ },
+ {
+  "en": "野兽管理",
+  "vi_variants": [
+   "Quản Lý Sinh Vật",
+   "Quản lý Sinh Vật Huyền Bí"
+  ],
+  "vi_pho_bien": "Quản Lý Sinh Vật",
+  "vi_vi_du": "Quản lý Sinh Vật Huyền Bí",
+  "key_vi_du": "SettingsControl_UMGCreatureManagementScreen"
+ },
+ {
+  "en": "常见",
+  "vi_variants": [
+   "Phổ Biến",
+   "Chung"
+  ],
+  "vi_pho_bien": "Phổ Biến",
+  "vi_vi_du": "Chung",
+  "key_vi_du": "SettingsControls_Common"
+ },
+ {
+  "en": "扩张",
+  "vi_variants": [
+   "Mở Rộng",
+   "Mở Rộng Không Gian"
+  ],
+  "vi_pho_bien": "Mở Rộng",
+  "vi_vi_du": "Mở Rộng Không Gian",
+  "key_vi_du": "Menu_Expansions"
+ },
+ {
+  "en": "快速穿梭",
+  "vi_variants": [
+   "Dịch Chuyển Nhanh",
+   "Du Hành Nhanh"
+  ],
+  "vi_pho_bien": "Dịch Chuyển Nhanh",
+  "vi_vi_du": "Du Hành Nhanh",
+  "key_vi_du": "Tut_FastTravelExplain"
+ },
+ {
+  "en": "园艺工作台",
+  "vi_variants": [
+   "Bàn trồng cây",
+   "Bàn Thảo Dược Học",
+   "Bàn Trồng Cây"
+  ],
+  "vi_pho_bien": "Bàn trồng cây",
+  "vi_vi_du": "Bàn Thảo Dược Học",
+  "key_vi_du": "Menu_Herbology_Station"
+ },
+ {
+  "en": "孵化",
+  "vi_variants": [
+   "Ấp trứng",
+   "Đang Ấp"
+  ],
+  "vi_pho_bien": "Ấp trứng",
+  "vi_vi_du": "Đang Ấp",
+  "key_vi_du": "Menu_Incubating"
+ },
+ {
+  "en": "选择语言",
+  "vi_variants": [
+   "Chọn ngôn ngữ hiển thị",
+   "Chọn Ngôn Ngữ"
+  ],
+  "vi_pho_bien": "Chọn ngôn ngữ hiển thị",
+  "vi_vi_du": "Chọn Ngôn Ngữ",
+  "key_vi_du": "Menu_LanguageSelect"
+ },
+ {
+  "en": "升级",
+  "vi_variants": [
+   "Lên Cấp!",
+   "Nâng Cấp Độ"
+  ],
+  "vi_pho_bien": "Lên Cấp!",
+  "vi_vi_du": "Nâng Cấp Độ",
+  "key_vi_du": "Menu_LevelUp"
+ },
+ {
+  "en": "所需等级",
+  "vi_variants": [
+   "Cấp Độ Yêu Cầu",
+   "Yêu Cầu Cấp Độ"
+  ],
+  "vi_pho_bien": "Cấp Độ Yêu Cầu",
+  "vi_vi_du": "Yêu Cầu Cấp Độ",
+  "key_vi_du": "Menu_Loom_RequiredLevel"
+ },
+ {
+  "en": "正常",
+  "vi_variants": [
+   "Vừa",
+   "Bình Thường"
+  ],
+  "vi_pho_bien": "Vừa",
+  "vi_vi_du": "Bình Thường",
+  "key_vi_du": "Menu_Normal"
+ },
+ {
+  "en": "任务",
+  "vi_variants": [
+   "Nhiệm Vụ Bí Ẩn",
+   "Nhiệm Vụ"
+  ],
+  "vi_pho_bien": "Nhiệm Vụ Bí Ẩn",
+  "vi_vi_du": "Nhiệm Vụ",
+  "key_vi_du": "Menu_Quests"
+ },
+ {
+  "en": "所有装备均已识别",
+  "vi_variants": [
+   "Tất cả trang bị đều đã được giám định",
+   "Đã nhận diện toàn bộ trang bị"
+  ],
+  "vi_pho_bien": "Tất cả trang bị đều đã được giám định",
+  "vi_vi_du": "Đã nhận diện toàn bộ trang bị",
+  "key_vi_du": "Menu_No_Unidentified_Gear"
+ },
+ {
+  "en": "基本",
+  "vi_variants": [
+   "Căn Bản",
+   "Cơ Bản"
+  ],
+  "vi_pho_bien": "Căn Bản",
+  "vi_vi_du": "Cơ Bản",
+  "key_vi_du": "TUT_Basics"
+ },
+ {
+  "en": "兴趣点",
+  "vi_variants": [
+   "Địa Điểm Đáng Chú Ý",
+   "Điểm Đáng Chú Ý"
+  ],
+  "vi_pho_bien": "Địa Điểm Đáng Chú Ý",
+  "vi_vi_du": "Điểm Đáng Chú Ý",
+  "key_vi_du": "Tut_PointsOfInterestExplain"
+ },
+ {
+  "en": "魔药台",
+  "vi_variants": [
+   "Bàn Chế Độc Dược",
+   "Bàn pha độc dược"
+  ],
+  "vi_pho_bien": "Bàn Chế Độc Dược",
+  "vi_vi_du": "Bàn pha độc dược",
+  "key_vi_du": "Menu_Potion_Station"
+ },
+ {
+  "en": "确定要退出吗？",
+  "vi_variants": [
+   "Bạn có chắc chắn muốn thoát?",
+   "Bạn Có Chắc Muốn Thoát?"
+  ],
+  "vi_pho_bien": "Bạn có chắc chắn muốn thoát?",
+  "vi_vi_du": "Bạn Có Chắc Muốn Thoát?",
+  "key_vi_du": "Settings_QuitConfirm"
+ },
+ {
+  "en": "优质",
+  "vi_variants": [
+   "Tốt",
+   "Hiếm"
+  ],
+  "vi_pho_bien": "Tốt",
+  "vi_vi_du": "Hiếm",
+  "key_vi_du": "Menu_rare"
+ },
+ {
+  "en": "缺少输入控制",
+  "vi_variants": [
+   "Thiếu phím điều khiển",
+   "Thiếu Phím Thao Tác"
+  ],
+  "vi_pho_bien": "Thiếu phím điều khiển",
+  "vi_vi_du": "Thiếu Phím Thao Tác",
+  "key_vi_du": "Menu_Rebinding_AreYouSure"
+ },
+ {
+  "en": "小型种植盆",
+  "vi_variants": [
+   "Chậu Cây Nhỏ",
+   "Chậu trồng nhỏ"
+  ],
+  "vi_pho_bien": "Chậu Cây Nhỏ",
+  "vi_vi_du": "Chậu trồng nhỏ",
+  "key_vi_du": "Menu_SmallPot"
+ },
+ {
+  "en": "来源",
+  "vi_variants": [
+   "Nguồn",
+   "Nguồn Gốc"
+  ],
+  "vi_pho_bien": "Nguồn",
+  "vi_vi_du": "Nguồn Gốc",
+  "key_vi_du": "Source"
+ },
+ {
+  "en": "变形",
+  "vi_variants": [
+   "Biến Hình",
+   "Biến Hình Học"
+  ],
+  "vi_pho_bien": "Biến Hình",
+  "vi_vi_du": "Biến Hình Học",
+  "key_vi_du": "Spell_Transfiguration"
+ },
+ {
+  "en": "选择音频语言",
+  "vi_variants": [
+   "Chọn Ngôn Ngữ Lồng Tiếng",
+   "Chọn ngôn ngữ giọng nói trong game"
+  ],
+  "vi_pho_bien": "Chọn Ngôn Ngữ Lồng Tiếng",
+  "vi_vi_du": "Chọn ngôn ngữ giọng nói trong game",
+  "key_vi_du": "Menu_VOLanguageSelect"
+ },
+ {
+  "en": "月石",
+  "vi_variants": [
+   "Nguyệt Thạch",
+   "Đá Mặt Trăng"
+  ],
+  "vi_pho_bien": "Nguyệt Thạch",
+  "vi_vi_du": "Đá Mặt Trăng",
+  "key_vi_du": "Quest_NTR_DiffuserDeliver"
+ },
+ {
+  "en": "葬姬",
+  "vi_variants": [
+   "Táng Cơ",
+   "Sepulchria"
+  ],
+  "vi_pho_bien": "Táng Cơ",
+  "vi_vi_du": "Sepulchria",
+  "key_vi_du": "ThestralMount"
+ },
+ {
+  "en": "下移",
+  "vi_variants": [
+   "Di Chuyển Xuống",
+   "Hạ Xuống",
+   "Bản Đồ: Xuống Dưới"
+  ],
+  "vi_pho_bien": "Di Chuyển Xuống",
+  "vi_vi_du": "Hạ Xuống",
+  "key_vi_du": "SettingsControl_UMGMapScreenMove_Y_Negative"
+ },
+ {
+  "en": "左移",
+  "vi_variants": [
+   "Di Chuyển Trái",
+   "Bản Đồ: Sang Trái",
+   "Di Chuyển Sang Trái"
+  ],
+  "vi_pho_bien": "Di Chuyển Trái",
+  "vi_vi_du": "Bản Đồ: Sang Trái",
+  "key_vi_du": "SettingsControl_UMGMapScreenMove_X_Negative"
+ },
+ {
+  "en": "右移",
+  "vi_variants": [
+   "Bản Đồ: Sang Phải",
+   "Di Chuyển Phải",
+   "Di Chuyển Sang Phải"
+  ],
+  "vi_pho_bien": "Bản Đồ: Sang Phải",
+  "vi_vi_du": "Di Chuyển Phải",
+  "key_vi_du": "SettingsControl_UMGMapScreenMove_X_Positive"
+ },
+ {
+  "en": "上移",
+  "vi_variants": [
+   "Di Chuyển Lên",
+   "Bản Đồ: Lên Trên",
+   "Nâng Lên"
+  ],
+  "vi_pho_bien": "Di Chuyển Lên",
+  "vi_vi_du": "Bản Đồ: Lên Trên",
+  "key_vi_du": "SettingsControl_UMGMapScreenMove_Y_Positive"
+ },
+ {
+  "en": "第一次试炼",
+  "vi_variants": [
+   "Thử Thách Thứ Nhất",
+   "Thử Thách Đầu Tiên"
+  ],
+  "vi_pho_bien": "Thử Thách Thứ Nhất",
+  "vi_vi_du": "Thử Thách Đầu Tiên",
+  "key_vi_du": "Pensieve_Tomb_1"
+ },
+ {
+  "en": "白狼",
+  "vi_variants": [
+   "Bạch Lang",
+   "Sói trắng"
+  ],
+  "vi_pho_bien": "Bạch Lang",
+  "vi_vi_du": "Sói trắng",
+  "key_vi_du": "Named_Wolf_2"
+ },
+ {
+  "en": "“艾恩代尔大盗”",
+  "vi_variants": [
+   "\"Tên Trộm Irondale\"",
+   "“Kẻ Trộm Irondale”"
+  ],
+  "vi_pho_bien": "\"Tên Trộm Irondale\"",
+  "vi_vi_du": "“Kẻ Trộm Irondale”",
+  "key_vi_du": "Quest_COM_36_Niffler"
+ },
+ {
+  "en": "方向键",
+  "vi_variants": [
+   "Phím Điều Hướng",
+   "Nút điều hướng"
+  ],
+  "vi_pho_bien": "Phím Điều Hướng",
+  "vi_vi_du": "Nút điều hướng",
+  "key_vi_du": "P4_dpad_Pronunciation"
+ },
+ {
+  "en": "古代魔法投掷",
+  "vi_variants": [
+   "Ném Phép Thuật Cổ Xưa",
+   "Ném Đồ Vật (Cổ Thuật)",
+   "Ném Cổ Thuật"
+  ],
+  "vi_pho_bien": "Ném Phép Thuật Cổ Xưa",
+  "vi_vi_du": "Ném Đồ Vật (Cổ Thuật)",
+  "key_vi_du": "TUT_Display_Oppugno"
+ },
+ {
+  "en": "格子背心校服",
+  "vi_variants": [
+   "Đồng Phục Gile Kẻ Ô",
+   "Đồng phục áo ghi-lê kẻ ô"
+  ],
+  "vi_pho_bien": "Đồng Phục Gile Kẻ Ô",
+  "vi_vi_du": "Đồng phục áo ghi-lê kẻ ô",
+  "key_vi_du": "Outfit_004_Basic"
+ },
+ {
+  "en": "萨温节装束",
+  "vi_variants": [
+   "Trang phục Lễ hội Samhain",
+   "Trang phục Lễ Samhain"
+  ],
+  "vi_pho_bien": "Trang phục Lễ hội Samhain",
+  "vi_vi_du": "Trang phục Lễ Samhain",
+  "key_vi_du": "Outfit_110_Basic"
+ },
+ {
+  "en": "向左移动",
+  "vi_variants": [
+   "Di chuyển sang trái",
+   "Di Chuyển Trái"
+  ],
+  "vi_pho_bien": "Di chuyển sang trái",
+  "vi_vi_du": "Di Chuyển Trái",
+  "key_vi_du": "SettingsControl_UMGUINavigateLeft"
+ },
+ {
+  "en": "向右移动",
+  "vi_variants": [
+   "Di Chuyển Phải",
+   "Di chuyển sang phải"
+  ],
+  "vi_pho_bien": "Di Chuyển Phải",
+  "vi_vi_du": "Di chuyển sang phải",
+  "key_vi_du": "SettingsControl_UMGUINavigateRight"
+ },
+ {
+  "en": "切剁台",
+  "vi_variants": [
+   "Bàn thái",
+   "Bàn Cắt Thái"
+  ],
+  "vi_pho_bien": "Bàn thái",
+  "vi_vi_du": "Bàn Cắt Thái",
+  "key_vi_du": "Potions_Sub_ChoppingTables"
+ },
+ {
+  "en": "跳跳盆",
+  "vi_variants": [
+   "Nồi Nhảy",
+   "Nồi Nhảy Nhót"
+  ],
+  "vi_pho_bien": "Nồi Nhảy",
+  "vi_vi_du": "Nồi Nhảy Nhót",
+  "key_vi_du": "Sanc_HoppingPot"
+ },
+ {
+  "en": "烂烤牛肉",
+  "vi_variants": [
+   "Thịt Bò Nướng Ôi Thiu",
+   "Thịt Bò Nướng Thối"
+  ],
+  "vi_pho_bien": "Thịt Bò Nướng Ôi Thiu",
+  "vi_vi_du": "Thịt Bò Nướng Thối",
+  "key_vi_du": "Quest_FGM_GRYFF_RottenBeef"
+ },
+ {
+  "en": "寒鸦雕像",
+  "vi_variants": [
+   "Tượng Chim Jackdaw",
+   "Tượng Jackdaw"
+  ],
+  "vi_pho_bien": "Tượng Chim Jackdaw",
+  "vi_vi_du": "Tượng Jackdaw",
+  "key_vi_du": "Quest_FIG_02_JackdawStatue"
+ },
+ {
+  "en": "守护者的魔杖",
+  "vi_variants": [
+   "Đũa Phép Của Người Thủ Hộ",
+   "Đũa Phép Của Người Canh Giữ"
+  ],
+  "vi_pho_bien": "Đũa Phép Của Người Thủ Hộ",
+  "vi_vi_du": "Đũa Phép Của Người Canh Giữ",
+  "key_vi_du": "TIO_01"
+ },
+ {
+  "en": "信件",
+  "vi_variants": [
+   "Thư",
+   "Lá thư"
+  ],
+  "vi_pho_bien": "Thư",
+  "vi_vi_du": "Lá thư",
+  "key_vi_du": "QUEST_WE_DEADNPC_NOTE_CHICKENS01"
+ },
+ {
+  "en": "日记的最后一条",
+  "vi_variants": [
+   "Trang cuối cùng được ghi trong cuốn nhật ký.",
+   "Dòng ghi chép cuối cùng trong nhật ký"
+  ],
+  "vi_pho_bien": "Trang cuối cùng được ghi trong cuốn nhật ký.",
+  "vi_vi_du": "Dòng ghi chép cuối cùng trong nhật ký",
+  "key_vi_du": "QUEST_WE_DEADNPC_NOTE_EXPLODEDCAULDRON03_desc"
+ },
+ {
+  "en": "收据",
+  "vi_variants": [
+   "Biên Lai",
+   "Hóa đơn"
+  ],
+  "vi_pho_bien": "Biên Lai",
+  "vi_vi_du": "Hóa đơn",
+  "key_vi_du": "Quest_WE_DeadNPC_Note_PoisonFlowers01"
+ },
+ {
+  "en": "望远镜",
+  "vi_variants": [
+   "Kính Viễn Vọng",
+   "Kính Thiên Văn"
+  ],
+  "vi_pho_bien": "Kính Viễn Vọng",
+  "vi_vi_du": "Kính Thiên Văn",
+  "key_vi_du": "Quest_ZZS_Telescope"
+ },
+ {
+  "en": "植被式立灯",
+  "vi_variants": [
+   "Đèn đứng Thực Vật",
+   "Đèn đứng kiểu Thực Vật"
+  ],
+  "vi_pho_bien": "Đèn đứng Thực Vật",
+  "vi_vi_du": "Đèn đứng kiểu Thực Vật",
+  "key_vi_du": "Recipe_Transfiguration_Sanc_LightFixtureFreeStanding_01_Hbgst"
+ },
+ {
+  "en": "科技式地板",
+  "vi_variants": [
+   "Sàn chính khoa học",
+   "Sàn nhà Khoa học",
+   "Sàn chiếu nghỉ khoa học",
+   "Gạch lát sàn khoa học"
+  ],
+  "vi_pho_bien": "Sàn chính khoa học",
+  "vi_vi_du": "Sàn nhà Khoa học",
+  "key_vi_du": "Sanc_FloorTile_01_Potnr"
+ },
+ {
+  "en": "植被式窗户",
+  "vi_variants": [
+   "Cửa Sổ kiểu Thực Vật",
+   "Cửa sổ thực vật",
+   "Cửa sổ Thực vật"
+  ],
+  "vi_pho_bien": "Cửa Sổ kiểu Thực Vật",
+  "vi_vi_du": "Cửa sổ thực vật",
+  "key_vi_du": "Sanc_Swamp_Window_BackCorridor_01_Hbgst"
+ },
+ {
+  "en": "多元式窗户",
+  "vi_variants": [
+   "Cửa sổ đa phong cách",
+   "Cửa Sổ kiểu Đa Phong Cách",
+   "Cửa sổ Đa dạng"
+  ],
+  "vi_pho_bien": "Cửa sổ đa phong cách",
+  "vi_vi_du": "Cửa Sổ kiểu Đa Phong Cách",
+  "key_vi_du": "Sanc_Swamp_Window_BackCorridor_01_Mzoo"
+ },
+ {
+  "en": "科技式窗户",
+  "vi_variants": [
+   "Cửa Sổ kiểu Khoa Học",
+   "Cửa sổ Khoa học",
+   "Cửa sổ khoa học"
+  ],
+  "vi_pho_bien": "Cửa Sổ kiểu Khoa Học",
+  "vi_vi_du": "Cửa sổ Khoa học",
+  "key_vi_du": "Sanc_Swamp_Window_BackCorridor_01_Potnr"
+ },
+ {
+  "en": "植被式墙体拱柱",
+  "vi_variants": [
+   "Trụ Vòm Tường kiểu Thực Vật",
+   "Trụ vòm tường Thực vật"
+  ],
+  "vi_pho_bien": "Trụ Vòm Tường kiểu Thực Vật",
+  "vi_vi_du": "Trụ vòm tường Thực vật",
+  "key_vi_du": "Sanc_SwampArchBackCorridor_01_Hbgst"
+ },
+ {
+  "en": "多元式墙体拱柱",
+  "vi_variants": [
+   "Trụ Vòm Tường kiểu Đa Phong Cách",
+   "Trụ vòm tường Đa dạng"
+  ],
+  "vi_pho_bien": "Trụ Vòm Tường kiểu Đa Phong Cách",
+  "vi_vi_du": "Trụ vòm tường Đa dạng",
+  "key_vi_du": "Sanc_SwampArchBackCorridor_01_Mzoo"
+ },
+ {
+  "en": "科技式墙体拱柱",
+  "vi_variants": [
+   "Trụ Vòm Tường kiểu Khoa Học",
+   "Trụ vòm tường Khoa học"
+  ],
+  "vi_pho_bien": "Trụ Vòm Tường kiểu Khoa Học",
+  "vi_vi_du": "Trụ vòm tường Khoa học",
+  "key_vi_du": "Sanc_SwampArchBackCorridor_01_Potnr"
+ },
+ {
+  "en": "科技式书架",
+  "vi_variants": [
+   "Kệ sách Khoa học",
+   "Kệ sách khoa học",
+   "Giá Sách kiểu Khoa Học"
+  ],
+  "vi_pho_bien": "Kệ sách Khoa học",
+  "vi_vi_du": "Kệ sách khoa học",
+  "key_vi_du": "Sanc_SwampBookshelfs_01_Potnr"
+ },
+ {
+  "en": "植被式楼梯",
+  "vi_variants": [
+   "Cầu thang thực vật",
+   "Cầu thang Thực vật",
+   "Cầu Thang kiểu Thực Vật"
+  ],
+  "vi_pho_bien": "Cầu thang thực vật",
+  "vi_vi_du": "Cầu thang Thực vật",
+  "key_vi_du": "Sanc_Stairs_3x1_Hbgst"
+ },
+ {
+  "en": "多元式楼梯",
+  "vi_variants": [
+   "Cầu Thang kiểu Đa Phong Cách",
+   "Cầu thang đa phong cách",
+   "Cầu thang Đa dạng"
+  ],
+  "vi_pho_bien": "Cầu Thang kiểu Đa Phong Cách",
+  "vi_vi_du": "Cầu thang đa phong cách",
+  "key_vi_du": "Sanc_Stairs_3x1_Mzoo"
+ },
+ {
+  "en": "科技式楼梯",
+  "vi_variants": [
+   "Cầu thang khoa học",
+   "Cầu Thang kiểu Khoa Học",
+   "Cầu thang Khoa học"
+  ],
+  "vi_pho_bien": "Cầu thang khoa học",
+  "vi_vi_du": "Cầu Thang kiểu Khoa Học",
+  "key_vi_du": "Sanc_Stairs_3x1_Potnr"
+ },
+ {
+  "en": "多元式门廊",
+  "vi_variants": [
+   "Lối vào Đa dạng",
+   "Lối vào đa phong cách"
+  ],
+  "vi_pho_bien": "Lối vào Đa dạng",
+  "vi_vi_du": "Lối vào đa phong cách",
+  "key_vi_du": "Sanc_Doorway_02_Mzoo"
+ },
+ {
+  "en": "科技式拱门",
+  "vi_variants": [
+   "Cổng vòm khoa học",
+   "Vòm cửa Khoa học"
+  ],
+  "vi_pho_bien": "Cổng vòm khoa học",
+  "vi_vi_du": "Vòm cửa Khoa học",
+  "key_vi_du": "Sanc_HubArchway_01_POTNR"
+ },
+ {
+  "en": "多元式悬挂书架",
+  "vi_variants": [
+   "Kệ sách treo đa phong cách",
+   "Kệ sách treo Đa dạng"
+  ],
+  "vi_pho_bien": "Kệ sách treo đa phong cách",
+  "vi_vi_du": "Kệ sách treo Đa dạng",
+  "key_vi_du": "Sanc_Exp6_SouthCornerFloatingBookshelves_01_Mzoo"
+ },
+ {
+  "en": "魔法织布机",
+  "vi_variants": [
+   "Khung Dệt Phép Thuật",
+   "Khung Dệt Ma Thuật"
+  ],
+  "vi_pho_bien": "Khung Dệt Phép Thuật",
+  "vi_vi_du": "Khung Dệt Ma Thuật",
+  "key_vi_du": "TUT_Display_UsingLoom"
+ },
+ {
+  "en": "图腾",
+  "vi_variants": [
+   "Tôtem",
+   "Totem"
+  ],
+  "vi_pho_bien": "Tôtem",
+  "vi_vi_du": "Totem",
+  "key_vi_du": "Sanc_MultipleTotems_Wall"
+ },
+ {
+  "en": "工具轮",
+  "vi_variants": [
+   "Vòng Tròn Công Cụ",
+   "Bánh Xe Công Cụ"
+  ],
+  "vi_pho_bien": "Vòng Tròn Công Cụ",
+  "vi_vi_du": "Bánh Xe Công Cụ",
+  "key_vi_du": "TUT_Display_ToolWheel"
+ },
+ {
+  "en": "冲刺",
+  "vi_variants": [
+   "Chạy Nhanh",
+   "Nước Rút"
+  ],
+  "vi_pho_bien": "Chạy Nhanh",
+  "vi_vi_du": "Nước Rút",
+  "key_vi_du": "SettingsControl_AM_Sprint"
+ },
+ {
+  "en": "顺时针旋转",
+  "vi_variants": [
+   "Xoay Cùng Chiều Kim Đồng Hồ",
+   "Xoay Kính Cùng Chiều Kim Đồng Hồ"
+  ],
+  "vi_pho_bien": "Xoay Cùng Chiều Kim Đồng Hồ",
+  "vi_vi_du": "Xoay Kính Cùng Chiều Kim Đồng Hồ",
+  "key_vi_du": "SettingsControl_Transfig_RotateObject_Right"
+ },
+ {
+  "en": "库存界面",
+  "vi_variants": [
+   "Màn Hình Kho Đồ",
+   "Giao Diện Túi Đồ"
+  ],
+  "vi_pho_bien": "Màn Hình Kho Đồ",
+  "vi_vi_du": "Giao Diện Túi Đồ",
+  "key_vi_du": "SettingsControls_InventoryScreen"
+ },
+ {
+  "en": "变形咒语",
+  "vi_variants": [
+   "Thần chú Biến Hình",
+   "Bùa Biến Hình"
+  ],
+  "vi_pho_bien": "Thần chú Biến Hình",
+  "vi_vi_du": "Bùa Biến Hình",
+  "key_vi_du": "TransformationOverland"
+ },
+ {
+  "en": "消失不见",
+  "vi_variants": [
+   "Bùa Biến Mất (Evanesco)",
+   "Bùa Tiêu Biến",
+   "Evanesco"
+  ],
+  "vi_pho_bien": "Bùa Biến Mất (Evanesco)",
+  "vi_vi_du": "Bùa Tiêu Biến",
+  "key_vi_du": "Spell_Vanishment"
+ },
+ {
+  "en": "无前置需求",
+  "vi_variants": [
+   "Không có điều kiện tiên quyết",
+   "Không có yêu cầu tiên quyết"
+  ],
+  "vi_pho_bien": "Không có điều kiện tiên quyết",
+  "vi_vi_du": "Không có yêu cầu tiên quyết",
+  "key_vi_du": "Talent_Core_ProtegoAM_requirements"
+ },
+ {
+  "en": "幻身",
+  "vi_variants": [
+   "Huyễn Ảnh",
+   "Bùa Tàng Hình (Disillusionment)"
+  ],
+  "vi_pho_bien": "Huyễn Ảnh",
+  "vi_vi_du": "Bùa Tàng Hình (Disillusionment)",
+  "key_vi_du": "TUT_Disillusionment"
+ },
+ {
+  "en": "冥想盆保护者",
+  "vi_variants": [
+   "Người Bảo Vệ Chậu Tưởng Niệm",
+   "Hộ vệ Chậu Tưởng Niệm"
+  ],
+  "vi_pho_bien": "Người Bảo Vệ Chậu Tưởng Niệm",
+  "vi_vi_du": "Hộ vệ Chậu Tưởng Niệm",
+  "key_vi_du": "TombProtectorMini"
+ },
+ {
+  "en": "秘库",
+  "vi_variants": [
+   "Nhảy Qua Chướng Ngại",
+   "Mật Khố"
+  ],
+  "vi_pho_bien": "Nhảy Qua Chướng Ngại",
+  "vi_vi_du": "Mật Khố",
+  "key_vi_du": "VAULT_X2_Y3_A"
+ },
+ {
+  "en": "古川夫人的作业",
+  "vi_variants": [
+   "Bài Tập Của Phu Nhân Kogawa",
+   "Bài tập của Bà Kogawa"
+  ],
+  "vi_pho_bien": "Bài Tập Của Phu Nhân Kogawa",
+  "vi_vi_du": "Bài tập của Bà Kogawa",
+  "key_vi_du": "ZSG_01_GlaciusSide_Title"
+ },
+ {
+  "en": "罗南教授的作业",
+  "vi_variants": [
+   "Bài Tập Của Giáo Sư Ronan",
+   "Bài tập của Giáo sư Ronen"
+  ],
+  "vi_pho_bien": "Bài Tập Của Giáo Sư Ronan",
+  "vi_vi_du": "Bài tập của Giáo sư Ronen",
+  "key_vi_du": "ZSR_01_01_ReparoSide_Title"
+ },
+ {
+  "en": "完成练习局",
+  "vi_variants": [
+   "Hoàn thành lượt luyện tập",
+   "Hoàn thành vòng luyện tập"
+  ],
+  "vi_pho_bien": "Hoàn thành lượt luyện tập",
+  "vi_vi_du": "Hoàn thành vòng luyện tập",
+  "key_vi_du": "ZZC_01_CharmsClass_QuestActive_TaskObj02"
+ },
+ {
+  "en": "参加魔药学课程",
+  "vi_variants": [
+   "Tham dự Lớp Học Độc Dược",
+   "Tham gia lớp Độc Dược"
+  ],
+  "vi_pho_bien": "Tham dự Lớp Học Độc Dược",
+  "vi_vi_du": "Tham gia lớp Độc Dược",
+  "key_vi_du": "ZZP_01_01_BoilandTrouble_AttendPotionsClass_Task"
+ },
+ {
+  "en": "Ha ha !",
+  "vi_variants": [
+   "Ha ha!",
+   "Ha ha !"
+  ],
+  "vi_pho_bien": "Ha ha!",
+  "vi_vi_du": "Ha ha !",
+  "key_vi_du": "GhostMaleB_10057"
+ },
+ {
+  "en": "Oh non.",
+  "vi_variants": [
+   "Ồ không.",
+   "Ôi không."
+  ],
+  "vi_pho_bien": "Ồ không.",
+  "vi_vi_du": "Ôi không.",
+  "key_vi_du": "SebastianSallow_14693"
+ },
+ {
+  "en": "Oh. Oh, je vois.",
+  "vi_variants": [
+   "Ồ. Ồ, tôi hiểu rồi.",
+   "Ồ. Ồ, ta hiểu rồi."
+  ],
+  "vi_pho_bien": "Ồ. Ồ, tôi hiểu rồi.",
+  "vi_vi_du": "Ồ. Ồ, ta hiểu rồi.",
+  "key_vi_du": "ClementineWillardsey_10065"
+ },
+ {
+  "en": "Grâce à cette personne.",
+  "vi_variants": [
+   "Nhờ người này đây.",
+   "Nhờ người này."
+  ],
+  "vi_pho_bien": "Nhờ người này đây.",
+  "vi_vi_du": "Nhờ người này.",
+  "key_vi_du": "NatsaiOnai_10070"
+ },
+ {
+  "en": "Tu vois ?",
+  "vi_variants": [
+   "Cậu thấy chưa?",
+   "Thấy chưa?"
+  ],
+  "vi_pho_bien": "Cậu thấy chưa?",
+  "vi_vi_du": "Thấy chưa?",
+  "key_vi_du": "T3StudentHufflepuffFemale1_10021"
+ }
+]

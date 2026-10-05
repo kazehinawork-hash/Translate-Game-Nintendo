@@ -1,0 +1,5097 @@
+[
+ {
+  "en": "Dead Zone",
+  "vi_variants": [
+   "Vùng Chết Cần Gạt",
+   "Vùng chết"
+  ],
+  "vi_pho_bien": "Vùng Chết Cần Gạt",
+  "vi_vi_du": "Vùng chết",
+  "key_vi_du": "ShellText.en.sjson::DeadZone"
+ },
+ {
+  "en": "King Vermin",
+  "vi_variants": [
+   "Vua Sâu Động",
+   "Vua Súc Sinh"
+  ],
+  "vi_pho_bien": "Vua Sâu Động",
+  "vi_vi_du": "Vua Súc Sinh",
+  "key_vi_du": "HelpText.en.sjson::Song_MinibossTheme"
+ },
+ {
+  "en": "Vow of Rivals",
+  "vi_variants": [
+   "Lời Thề Đối Thủ",
+   "Lời Thề Đấu Thủ"
+  ],
+  "vi_pho_bien": "Lời Thề Đối Thủ",
+  "vi_vi_du": "Lời Thề Đấu Thủ",
+  "key_vi_du": "HelpText.en.sjson::ShrineUpgradeGained_Subtitle01"
+ },
+ {
+  "en": "Unraveling a Fateful Bond",
+  "vi_variants": [
+   "Gỡ Sợi Dây Định Mệnh",
+   "Gỡ Gút Định Mệnh"
+  ],
+  "vi_pho_bien": "Gỡ Sợi Dây Định Mệnh",
+  "vi_vi_du": "Gỡ Gút Định Mệnh",
+  "key_vi_du": "HelpText.en.sjson::WorldUpgradeSurfacePenaltyCure"
+ },
+ {
+  "en": "Gold Crowns",
+  "vi_variants": [
+   "Vương Miện Vàng",
+   "Vàng Vương Miện"
+  ],
+  "vi_pho_bien": "Vương Miện Vàng",
+  "vi_vi_du": "Vàng Vương Miện",
+  "key_vi_du": "HelpText.en.sjson::Money"
+ },
+ {
+  "en": "Adamant",
+  "vi_variants": [
+   "B·Thạch",
+   "Bất hoại thạch"
+  ],
+  "vi_pho_bien": "B·Thạch",
+  "vi_vi_du": "Bất hoại thạch",
+  "key_vi_du": "HelpText.en.sjson::OrePAdamant_Short"
+ },
+ {
+  "en": "Kudos",
+  "vi_variants": [
+   "Khen ngợi",
+   "Khen"
+  ],
+  "vi_pho_bien": "Khen ngợi",
+  "vi_vi_du": "Khen",
+  "key_vi_du": "HelpText.en.sjson::CosmeticsPoints_Short"
+ },
+ {
+  "en": "Rubbish",
+  "vi_variants": [
+   "Rác",
+   "Rác rưởi"
+  ],
+  "vi_pho_bien": "Rác",
+  "vi_vi_du": "Rác rưởi",
+  "key_vi_du": "HelpText.en.sjson::TrashPoints_Short"
+ },
+ {
+  "en": "Plankton",
+  "vi_variants": [
+   "Phù du",
+   "Sinh vật phù du"
+  ],
+  "vi_pho_bien": "Phù du",
+  "vi_vi_du": "Sinh vật phù du",
+  "key_vi_du": "HelpText.en.sjson::PlantQSnakereedSeed_Short"
+ },
+ {
+  "en": "Forget-Me-Not",
+  "vi_variants": [
+   "Ghim Vật Phẩm",
+   "Hoa Cúc Quên Không Quên"
+  ],
+  "vi_pho_bien": "Ghim Vật Phẩm",
+  "vi_vi_du": "Hoa Cúc Quên Không Quên",
+  "key_vi_du": "ShellText.en.sjson::ItemPin"
+ },
+ {
+  "en": "Witch of Changing",
+  "vi_variants": [
+   "Phù Thủy Thay Đổi",
+   "Phù Thủy Biến Hình"
+  ],
+  "vi_pho_bien": "Phù Thủy Thay Đổi",
+  "vi_vi_du": "Phù Thủy Biến Hình",
+  "key_vi_du": "HelpText.en.sjson::QuestCirceUpgrades"
+ },
+ {
+  "en": "Witch of Shadows",
+  "vi_variants": [
+   "Phù Thủy Bóng Đêm",
+   "Phù Thủy Bóng Tối"
+  ],
+  "vi_pho_bien": "Phù Thủy Bóng Đêm",
+  "vi_vi_du": "Phù Thủy Bóng Tối",
+  "key_vi_du": "HelpText.en.sjson::QuestMedeaCurses"
+ },
+ {
+  "en": "Evil Eye",
+  "vi_variants": [
+   "Mắt Quỷ",
+   "Con Mắt Hắc Ám"
+  ],
+  "vi_pho_bien": "Mắt Quỷ",
+  "vi_vi_du": "Con Mắt Hắc Ám",
+  "key_vi_du": "HelpText.en.sjson::Song_NemesisTheme"
+ },
+ {
+  "en": "Horror",
+  "vi_variants": [
+   "Kinh Hoàng",
+   "Ác Quỷ"
+  ],
+  "vi_pho_bien": "Kinh Hoàng",
+  "vi_vi_du": "Ác Quỷ",
+  "key_vi_du": "TraitText.en.sjson::TransformSpecialCritTalent"
+ },
+ {
+  "en": "Gifts of the Moon",
+  "vi_variants": [
+   "Món Quà Của Trăng",
+   "Lễ Vật Ánh Trăng"
+  ],
+  "vi_pho_bien": "Món Quà Của Trăng",
+  "vi_vi_du": "Lễ Vật Ánh Trăng",
+  "key_vi_du": "ScreenText.en.sjson::SpellScreenMenu_Title"
+ },
+ {
+  "en": "Charm",
+  "vi_variants": [
+   "Phù Chú",
+   "Quyến Rũ"
+  ],
+  "vi_pho_bien": "Phù Chú",
+  "vi_vi_du": "Quyến Rũ",
+  "key_vi_du": "HelpText.en.sjson::RepeatSpell"
+ },
+ {
+  "en": "Path of Stars",
+  "vi_variants": [
+   "Con Đường Sao",
+   "Con Đường Của Sao"
+  ],
+  "vi_pho_bien": "Con Đường Sao",
+  "vi_vi_du": "Con Đường Của Sao",
+  "key_vi_du": "ScreenText.en.sjson::TalentScreenMenu_Title"
+ },
+ {
+  "en": "Shrine of Hermes",
+  "vi_variants": [
+   "Điện Thờ Hermes",
+   "Bàn thờ Hermes"
+  ],
+  "vi_pho_bien": "Điện Thờ Hermes",
+  "vi_vi_du": "Bàn thờ Hermes",
+  "key_vi_du": "HelpText.en.sjson::SurfaceShop"
+ },
+ {
+  "en": "Pitch-Black Stone",
+  "vi_variants": [
+   "Hắc Thạch",
+   "Viên Đá Đen Tuyền"
+  ],
+  "vi_pho_bien": "Hắc Thạch",
+  "vi_vi_du": "Viên Đá Đen Tuyền",
+  "key_vi_du": "ScreenText.en.sjson::BountyLogScreen_Title"
+ },
+ {
+  "en": "Credits",
+  "vi_variants": [
+   "Đội ngũ thực hiện",
+   "Tác Giả"
+  ],
+  "vi_pho_bien": "Đội ngũ thực hiện",
+  "vi_vi_du": "Tác Giả",
+  "key_vi_du": "ShellText.en.sjson::SettingsMenuScreen_AboutUs"
+ },
+ {
+  "en": "Orchestration",
+  "vi_variants": [
+   "Phối Khí Dàn Nhạc",
+   "Dàn Xếp"
+  ],
+  "vi_pho_bien": "Phối Khí Dàn Nhạc",
+  "vi_vi_du": "Dàn Xếp",
+  "key_vi_du": "TraitText.en.sjson::PolymorphTeleportCastTalent"
+ },
+ {
+  "en": "Grasp of the Arcana",
+  "vi_variants": [
+   "Dung Lượng Tâm Thức Arcana",
+   "Tâm Thức Arcana"
+  ],
+  "vi_pho_bien": "Dung Lượng Tâm Thức Arcana",
+  "vi_vi_du": "Tâm Thức Arcana",
+  "key_vi_du": "ScreenText.en.sjson::MetaUpgradeCardLimit_Upgrade"
+ },
+ {
+  "en": "Cross-Saves",
+  "vi_variants": [
+   "Lưu Đa Nền Tảng",
+   "Lưu Trữ Đám Mây"
+  ],
+  "vi_pho_bien": "Lưu Đa Nền Tảng",
+  "vi_vi_du": "Lưu Trữ Đám Mây",
+  "key_vi_du": "ShellText.en.sjson::MainMenuScreen_CloudSave"
+ },
+ {
+  "en": "Notice: Corrupted Save Data",
+  "vi_variants": [
+   "Ghi Đè Lưu Trữ?",
+   "Thông báo: Dữ liệu lưu bị hỏng"
+  ],
+  "vi_pho_bien": "Ghi Đè Lưu Trữ?",
+  "vi_vi_du": "Thông báo: Dữ liệu lưu bị hỏng",
+  "key_vi_du": "ShellText.en.sjson::SaveFileOverwriteWarning"
+ },
+ {
+  "en": "Notice",
+  "vi_variants": [
+   "Thông Báo",
+   "Thông báo",
+   "Lỗi Lưu Trữ"
+  ],
+  "vi_pho_bien": "Thông Báo",
+  "vi_vi_du": "Thông báo",
+  "key_vi_du": "ShellText.en.sjson::SaveErrorGeneric"
+ },
+ {
+  "en": "Syncing Cross-Save Data",
+  "vi_variants": [
+   "Đồng Bộ Đám Mây Thành Công",
+   "Đang đồng bộ dữ liệu lưu",
+   "Đồng Bộ Đám Mây Thất Bại",
+   "Đang Đồng Bộ Đám Mây..."
+  ],
+  "vi_pho_bien": "Đồng Bộ Đám Mây Thành Công",
+  "vi_vi_du": "Đang đồng bộ dữ liệu lưu",
+  "key_vi_du": "ShellText.en.sjson::CloudSaves_SyncingDialogText"
+ },
+ {
+  "en": "Notice: Connection Failed",
+  "vi_variants": [
+   "Thông báo: Kết nối thất bại",
+   "Cần Tài Khoản Nintendo"
+  ],
+  "vi_pho_bien": "Thông báo: Kết nối thất bại",
+  "vi_vi_du": "Cần Tài Khoản Nintendo",
+  "key_vi_du": "ShellText.en.sjson::CloudSaveError_NoNintendoAccount"
+ },
+ {
+  "en": "OK...",
+  "vi_variants": [
+   "Được rồi...",
+   "Được..."
+  ],
+  "vi_pho_bien": "Được rồi...",
+  "vi_vi_du": "Được...",
+  "key_vi_du": "_AudioData.en.sjson::Melinoe_1843"
+ },
+ {
+  "en": "Let's see...",
+  "vi_variants": [
+   "Xem nào...",
+   "Để xem..."
+  ],
+  "vi_pho_bien": "Xem nào...",
+  "vi_vi_du": "Để xem...",
+  "key_vi_du": "_AudioData.en.sjson::MelinoeField_0611"
+ },
+ {
+  "en": "I can't!",
+  "vi_variants": [
+   "Ta không thể!",
+   "Ta không làm được!"
+  ],
+  "vi_pho_bien": "Ta không thể!",
+  "vi_vi_du": "Ta không làm được!",
+  "key_vi_du": "_HeroData.en.sjson::Melinoe_0226"
+ },
+ {
+  "en": "Death to Chronos.",
+  "vi_variants": [
+   "Chronos phải chết.",
+   "Tử thần gọi tên Chronos.",
+   "Tử hình Chronos.",
+   "Chronos phải diệt."
+  ],
+  "vi_pho_bien": "Chronos phải chết.",
+  "vi_vi_du": "Tử thần gọi tên Chronos.",
+  "key_vi_du": "_LootData_Selene.en.sjson::Selene_0486"
+ },
+ {
+  "en": "All right.",
+  "vi_variants": [
+   "Được rồi.",
+   "Được.",
+   "Được thôi."
+  ],
+  "vi_pho_bien": "Được rồi.",
+  "vi_vi_du": "Được.",
+  "key_vi_du": "_AudioData.en.sjson::Melinoe_0118"
+ },
+ {
+  "en": "For the Silver Sisters.",
+  "vi_variants": [
+   "Vì Chị Em Ánh Bạc.",
+   "Vì các Chị Em Bạc."
+  ],
+  "vi_pho_bien": "Vì Chị Em Ánh Bạc.",
+  "vi_vi_du": "Vì các Chị Em Bạc.",
+  "key_vi_du": "_LootData_Selene.en.sjson::Selene_0488"
+ },
+ {
+  "en": "I go.",
+  "vi_variants": [
+   "Đi thôi.",
+   "Ta đi."
+  ],
+  "vi_pho_bien": "Đi thôi.",
+  "vi_vi_du": "Ta đi.",
+  "key_vi_du": "_NPCData_Heracles.en.sjson::Heracles_0130"
+ },
+ {
+  "en": "Here we go.",
+  "vi_variants": [
+   "Bắt đầu nào.",
+   "Đi nào.",
+   "Bắt đầu thôi."
+  ],
+  "vi_pho_bien": "Bắt đầu nào.",
+  "vi_vi_du": "Đi nào.",
+  "key_vi_du": "_HeroData.en.sjson::Icarus_0212"
+ },
+ {
+  "en": "For the Unseen.",
+  "vi_variants": [
+   "Vì Vô Hình.",
+   "Vì Những Vô Hình."
+  ],
+  "vi_pho_bien": "Vì Vô Hình.",
+  "vi_vi_du": "Vì Những Vô Hình.",
+  "key_vi_du": "_AudioData.en.sjson::Melinoe_4304"
+ },
+ {
+  "en": "Olympus calls...",
+  "vi_variants": [
+   "Olympus đang gọi...",
+   "Đỉnh Olympus đang gọi..."
+  ],
+  "vi_pho_bien": "Olympus đang gọi...",
+  "vi_vi_du": "Đỉnh Olympus đang gọi...",
+  "key_vi_du": "_AudioData.en.sjson::Melinoe_2484"
+ },
+ {
+  "en": "Moonlight guide us.",
+  "vi_variants": [
+   "Nguyện ánh trăng dẫn lối chúng ta.",
+   "Ánh trăng dẫn lối chúng ta."
+  ],
+  "vi_pho_bien": "Nguyện ánh trăng dẫn lối chúng ta.",
+  "vi_vi_du": "Ánh trăng dẫn lối chúng ta.",
+  "key_vi_du": "_AudioData.en.sjson::Melinoe_1704"
+ },
+ {
+  "en": "Return.",
+  "vi_variants": [
+   "Quay về.",
+   "Trở về."
+  ],
+  "vi_pho_bien": "Quay về.",
+  "vi_vi_du": "Trở về.",
+  "key_vi_du": "_AudioData.en.sjson::Melinoe_5426"
+ },
+ {
+  "en": "For the realm.",
+  "vi_variants": [
+   "Vì vương quốc.",
+   "Vì cõi này."
+  ],
+  "vi_pho_bien": "Vì vương quốc.",
+  "vi_vi_du": "Vì cõi này.",
+  "key_vi_du": "_HeroData.en.sjson::Melinoe_0982"
+ },
+ {
+  "en": "Hi!",
+  "vi_variants": [
+   "Chào!",
+   "Này!"
+  ],
+  "vi_pho_bien": "Chào!",
+  "vi_vi_du": "Này!",
+  "key_vi_du": "_EnemyData_Polyphemus.en.sjson::Polyphemus_0101"
+ },
+ {
+  "en": "Come on!",
+  "vi_variants": [
+   "Nào!",
+   "Tới đây!",
+   "Lên nào!",
+   "Tới đi!"
+  ],
+  "vi_pho_bien": "Nào!",
+  "vi_vi_du": "Tới đây!",
+  "key_vi_du": "_EnemyData_Chronos.en.sjson::Chronos_0817"
+ },
+ {
+  "en": "Face me!",
+  "vi_variants": [
+   "Đối mặt ta!",
+   "Đối mặt với ta đi!"
+  ],
+  "vi_pho_bien": "Đối mặt ta!",
+  "vi_vi_du": "Đối mặt với ta đi!",
+  "key_vi_du": "_AudioData.en.sjson::Melinoe_0273"
+ },
+ {
+  "en": "You dare?",
+  "vi_variants": [
+   "Ngươi dám sao?",
+   "Ngươi dám?"
+  ],
+  "vi_pho_bien": "Ngươi dám sao?",
+  "vi_vi_du": "Ngươi dám?",
+  "key_vi_du": "_AudioData.en.sjson::Melinoe_1778"
+ },
+ {
+  "en": "Come.",
+  "vi_variants": [
+   "Lại đây.",
+   "Tới đây."
+  ],
+  "vi_pho_bien": "Lại đây.",
+  "vi_vi_du": "Tới đây.",
+  "key_vi_du": "_HeroData.en.sjson::Heracles_0422"
+ },
+ {
+  "en": "You again.",
+  "vi_variants": [
+   "Lại là mày.",
+   "Lại là ngươi.",
+   "Lại ngươi."
+  ],
+  "vi_pho_bien": "Lại là mày.",
+  "vi_vi_du": "Lại là ngươi.",
+  "key_vi_du": "_EnemyData_Polyphemus.en.sjson::Polyphemus_0105"
+ },
+ {
+  "en": "Well done.",
+  "vi_variants": [
+   "Làm tốt lắm.",
+   "Làm tốt.",
+   "L?m t?t l?m.",
+   "Giỏi lắm."
+  ],
+  "vi_pho_bien": "Làm tốt lắm.",
+  "vi_vi_du": "Làm tốt.",
+  "key_vi_du": "_HeroData.en.sjson::MelinoeField_2089"
+ },
+ {
+  "en": "Good.",
+  "vi_variants": [
+   "T?t.",
+   "Tốt."
+  ],
+  "vi_pho_bien": "T?t.",
+  "vi_vi_du": "Tốt.",
+  "key_vi_du": "_EnemyData_Hecate.en.sjson::Hecate_0104"
+ },
+ {
+  "en": "Wow...",
+  "vi_variants": [
+   "Ồ...",
+   "Chà..."
+  ],
+  "vi_pho_bien": "Ồ...",
+  "vi_vi_du": "Chà...",
+  "key_vi_du": "_AudioData.en.sjson::Arachne_0240"
+ },
+ {
+  "en": "Thank you!",
+  "vi_variants": [
+   "Cảm ơn!",
+   "Cảm ơn nhé!"
+  ],
+  "vi_pho_bien": "Cảm ơn!",
+  "vi_vi_du": "Cảm ơn nhé!",
+  "key_vi_du": "_FamiliarData.en.sjson::MelinoeField_3295"
+ },
+ {
+  "en": "Good work.",
+  "vi_variants": [
+   "Làm tốt lắm.",
+   "Làm tốt."
+  ],
+  "vi_pho_bien": "Làm tốt lắm.",
+  "vi_vi_du": "Làm tốt.",
+  "key_vi_du": "_NPCData_Artemis.en.sjson::Melinoe_1247"
+ },
+ {
+  "en": "Yours.",
+  "vi_variants": [
+   "Của mày.",
+   "Của ngươi."
+  ],
+  "vi_pho_bien": "Của mày.",
+  "vi_vi_du": "Của ngươi.",
+  "key_vi_du": "_NPCData_Nemesis.en.sjson::NemesisField_0061"
+ },
+ {
+  "en": "Out!",
+  "vi_variants": [
+   "Ra!",
+   "Cút!"
+  ],
+  "vi_pho_bien": "Ra!",
+  "vi_vi_du": "Cút!",
+  "key_vi_du": "_AudioData.en.sjson::Melinoe_0305"
+ },
+ {
+  "en": "There.",
+  "vi_variants": [
+   "Đấy.",
+   "Rồi.",
+   "Đó.",
+   "Kia.",
+   "Kia rồi.",
+   "Kìa.",
+   "Nè.",
+   "Kìa rồi.",
+   "Đây."
+  ],
+  "vi_pho_bien": "Đấy.",
+  "vi_vi_du": "Rồi.",
+  "key_vi_du": "_AudioData.en.sjson::Melinoe_0829"
+ },
+ {
+  "en": "There!",
+  "vi_variants": [
+   "Đây!",
+   "Đấy!",
+   "Đằng kia!",
+   "Xong!",
+   "Đó!"
+  ],
+  "vi_pho_bien": "Đây!",
+  "vi_vi_du": "Đấy!",
+  "key_vi_du": "_NPCData_Arachne.en.sjson::Arachne_0182"
+ },
+ {
+  "en": "Next.",
+  "vi_variants": [
+   "Tiếp.",
+   "Kẻ tiếp."
+  ],
+  "vi_pho_bien": "Tiếp.",
+  "vi_vi_du": "Kẻ tiếp.",
+  "key_vi_du": "_AudioData.en.sjson::Melinoe_0308"
+ },
+ {
+  "en": "Next!",
+  "vi_variants": [
+   "Kẻ tiếp!",
+   "Kẻ tiếp theo!"
+  ],
+  "vi_pho_bien": "Kẻ tiếp!",
+  "vi_vi_du": "Kẻ tiếp theo!",
+  "key_vi_du": "_EnemyData_Heracles.en.sjson::Heracles_0677"
+ },
+ {
+  "en": "More?",
+  "vi_variants": [
+   "Nữa sao?",
+   "Còn nữa?"
+  ],
+  "vi_pho_bien": "Nữa sao?",
+  "vi_vi_du": "Còn nữa?",
+  "key_vi_du": "_AudioData.en.sjson::Melinoe_0310"
+ },
+ {
+  "en": "No.",
+  "vi_variants": [
+   "Không đời nào.",
+   "Không."
+  ],
+  "vi_pho_bien": "Không đời nào.",
+  "vi_vi_du": "Không.",
+  "key_vi_du": "_EnemyData_Prometheus.en.sjson::Prometheus_0198"
+ },
+ {
+  "en": "Denied.",
+  "vi_variants": [
+   "Từ chối.",
+   "Bị từ chối."
+  ],
+  "vi_pho_bien": "Từ chối.",
+  "vi_vi_du": "Bị từ chối.",
+  "key_vi_du": "_AudioData.en.sjson::MelinoeField_0601"
+ },
+ {
+  "en": "Out.",
+  "vi_variants": [
+   "Ra.",
+   "Cút."
+  ],
+  "vi_pho_bien": "Ra.",
+  "vi_vi_du": "Cút.",
+  "key_vi_du": "_AudioData.en.sjson::MelinoeField_0604"
+ },
+ {
+  "en": "Predictable.",
+  "vi_variants": [
+   "Dễ đoán.",
+   "Quá dễ đoán."
+  ],
+  "vi_pho_bien": "Dễ đoán.",
+  "vi_vi_du": "Quá dễ đoán.",
+  "key_vi_du": "_AudioData.en.sjson::MelinoeField_0605"
+ },
+ {
+  "en": "Perish.",
+  "vi_variants": [
+   "Chết đi.",
+   "Diệt vong.",
+   "Diệt vong đi."
+  ],
+  "vi_pho_bien": "Chết đi.",
+  "vi_vi_du": "Diệt vong.",
+  "key_vi_du": "_EnemyData_Chronos.en.sjson::Chronos_0818"
+ },
+ {
+  "en": "Remember me?",
+  "vi_variants": [
+   "Nhớ ta chứ?",
+   "Còn nhớ ta không?"
+  ],
+  "vi_pho_bien": "Nhớ ta chứ?",
+  "vi_vi_du": "Còn nhớ ta không?",
+  "key_vi_du": "_AudioData.en.sjson::MelinoeField_0698"
+ },
+ {
+  "en": "Retribution.",
+  "vi_variants": [
+   "Báo Ứng.",
+   "Trừng phạt."
+  ],
+  "vi_pho_bien": "Báo Ứng.",
+  "vi_vi_du": "Trừng phạt.",
+  "key_vi_du": "_NPCData_Nemesis.en.sjson::NemesisField_0268"
+ },
+ {
+  "en": "Livestock...",
+  "vi_variants": [
+   "Gia súc...",
+   "Súc vật..."
+  ],
+  "vi_pho_bien": "Gia súc...",
+  "vi_vi_du": "Súc vật...",
+  "key_vi_du": "_AudioData.en.sjson::Chronos_0658"
+ },
+ {
+  "en": "Excellent.",
+  "vi_variants": [
+   "Xu?t s?c.",
+   "Xuất sắc.",
+   "Tuyệt lắm."
+  ],
+  "vi_pho_bien": "Xu?t s?c.",
+  "vi_vi_du": "Xuất sắc.",
+  "key_vi_du": "_AudioData.en.sjson::Melinoe_0204"
+ },
+ {
+  "en": "That's settled.",
+  "vi_variants": [
+   "Xong rồi đấy.",
+   "Xong."
+  ],
+  "vi_pho_bien": "Xong rồi đấy.",
+  "vi_vi_du": "Xong.",
+  "key_vi_du": "_NPCData_Athena.en.sjson::Athena_0051"
+ },
+ {
+  "en": "Weak.",
+  "vi_variants": [
+   "Yếu xìu.",
+   "Yếu.",
+   "Yếu ớt."
+  ],
+  "vi_pho_bien": "Yếu xìu.",
+  "vi_vi_du": "Yếu.",
+  "key_vi_du": "_EnemyData_Polyphemus.en.sjson::Polyphemus_0336"
+ },
+ {
+  "en": "Death to Chronos...",
+  "vi_variants": [
+   "Chết đi, Chronos...",
+   "Chronos phải chết...",
+   "Tử thần gọi tên Chronos..."
+  ],
+  "vi_pho_bien": "Chết đi, Chronos...",
+  "vi_vi_du": "Chronos phải chết...",
+  "key_vi_du": "_NPCData.en.sjson::Nemesis_0109"
+ },
+ {
+  "en": "Is that all?",
+  "vi_variants": [
+   "Chỉ vậy thôi sao?",
+   "Chỉ có thế thôi sao?"
+  ],
+  "vi_pho_bien": "Chỉ vậy thôi sao?",
+  "vi_vi_du": "Chỉ có thế thôi sao?",
+  "key_vi_du": "_EnemyData_Prometheus.en.sjson::Prometheus_0211"
+ },
+ {
+  "en": "Enough of this.",
+  "vi_variants": [
+   "Đủ rồi đấy.",
+   "Đủ rồi."
+  ],
+  "vi_pho_bien": "Đủ rồi đấy.",
+  "vi_vi_du": "Đủ rồi.",
+  "key_vi_du": "_EnemyData_Prometheus.en.sjson::Prometheus_0416"
+ },
+ {
+  "en": "As expected.",
+  "vi_variants": [
+   "Như dự liệu.",
+   "Đúng như dự đoán."
+  ],
+  "vi_pho_bien": "Như dự liệu.",
+  "vi_vi_du": "Đúng như dự đoán.",
+  "key_vi_du": "_AudioData.en.sjson::Melinoe_0007_V3"
+ },
+ {
+  "en": "That's that.",
+  "vi_variants": [
+   "Vậy là xong.",
+   "Thế là thế.",
+   "Thế là xong."
+  ],
+  "vi_pho_bien": "Vậy là xong.",
+  "vi_vi_du": "Thế là thế.",
+  "key_vi_du": "_NPCData_Nemesis.en.sjson::NemesisField_0342"
+ },
+ {
+  "en": "I think not.",
+  "vi_variants": [
+   "Ta nghĩ là không.",
+   "Ta không nghĩ vậy đâu.",
+   "Ta không nghĩ vậy.",
+   "Ta nghĩ là không đâu."
+  ],
+  "vi_pho_bien": "Ta nghĩ là không.",
+  "vi_vi_du": "Ta không nghĩ vậy đâu.",
+  "key_vi_du": "_EnemyData_Prometheus.en.sjson::Prometheus_0511"
+ },
+ {
+  "en": "Enough.",
+  "vi_variants": [
+   "Đủ.",
+   "Đủ rồi."
+  ],
+  "vi_pho_bien": "Đủ.",
+  "vi_vi_du": "Đủ rồi.",
+  "key_vi_du": "_AudioData.en.sjson::Melinoe_0689"
+ },
+ {
+  "en": "Keep going...",
+  "vi_variants": [
+   "Tiếp tục nào...",
+   "Đi tiếp thôi..."
+  ],
+  "vi_pho_bien": "Tiếp tục nào...",
+  "vi_vi_du": "Đi tiếp thôi...",
+  "key_vi_du": "_AudioData.en.sjson::Melinoe_0290"
+ },
+ {
+  "en": "There you are.",
+  "vi_variants": [
+   "Ngươi đây rồi.",
+   "Ngươi ở đây rồi.",
+   "Tỷ đây rồi.",
+   "Con đây rồi.",
+   "Ô, ngươi đây rồi."
+  ],
+  "vi_pho_bien": "Ngươi đây rồi.",
+  "vi_vi_du": "Ngươi ở đây rồi.",
+  "key_vi_du": "_EnemyData_Hecate.en.sjson::Hecate_0486"
+ },
+ {
+  "en": "There it is.",
+  "vi_variants": [
+   "Nó ở đó.",
+   "Nó kia kìa.",
+   "Nó kia rồi."
+  ],
+  "vi_pho_bien": "Nó ở đó.",
+  "vi_vi_du": "Nó kia kìa.",
+  "key_vi_du": "_AudioData.en.sjson::Artemis_0333"
+ },
+ {
+  "en": "Not now.",
+  "vi_variants": [
+   "Không phải lúc này.",
+   "Không phải lúc.",
+   "Giờ thì không."
+  ],
+  "vi_pho_bien": "Không phải lúc này.",
+  "vi_vi_du": "Không phải lúc.",
+  "key_vi_du": "_AudioData.en.sjson::Melinoe_0387"
+ },
+ {
+  "en": "Can't right now.",
+  "vi_variants": [
+   "Lúc này không được.",
+   "Giờ chưa được."
+  ],
+  "vi_pho_bien": "Lúc này không được.",
+  "vi_vi_du": "Giờ chưa được.",
+  "key_vi_du": "_AudioData.en.sjson::Melinoe_2385"
+ },
+ {
+  "en": "Why thank you...!",
+  "vi_variants": [
+   "Ồ, cảm ơn Người...!",
+   "Ôi, cảm ơn nhé...!"
+  ],
+  "vi_pho_bien": "Ồ, cảm ơn Người...!",
+  "vi_vi_du": "Ôi, cảm ơn nhé...!",
+  "key_vi_du": "_AudioData.en.sjson::Melinoe_0842"
+ },
+ {
+  "en": "There...",
+  "vi_variants": [
+   "Đấy...",
+   "Kia rồi...",
+   "Đó..."
+  ],
+  "vi_pho_bien": "Đấy...",
+  "vi_vi_du": "Kia rồi...",
+  "key_vi_du": "_AudioData.en.sjson::Selene_0284"
+ },
+ {
+  "en": "Steady now...",
+  "vi_variants": [
+   "Bình tĩnh...",
+   "Bình tĩnh nào..."
+  ],
+  "vi_pho_bien": "Bình tĩnh...",
+  "vi_vi_du": "Bình tĩnh nào...",
+  "key_vi_du": "_AudioData.en.sjson::MelinoeField_0677"
+ },
+ {
+  "en": "Whoa...!",
+  "vi_variants": [
+   "Chà...!",
+   "Ối...!"
+  ],
+  "vi_pho_bien": "Chà...!",
+  "vi_vi_du": "Ối...!",
+  "key_vi_du": "_AudioData.en.sjson::MelinoeField_0381"
+ },
+ {
+  "en": "Now...",
+  "vi_variants": [
+   "Ngay...",
+   "Giờ...",
+   "Giờ thì...",
+   "Bây giờ..."
+  ],
+  "vi_pho_bien": "Ngay...",
+  "vi_vi_du": "Giờ...",
+  "key_vi_du": "_EnemyData_Eris.en.sjson::ErisField_0061"
+ },
+ {
+  "en": "Together we shine.",
+  "vi_variants": [
+   "Chúng ta cùng tỏa sáng.",
+   "Cùng nhau ta tỏa sáng.",
+   "Ta cùng tỏa sáng."
+  ],
+  "vi_pho_bien": "Chúng ta cùng tỏa sáng.",
+  "vi_vi_du": "Cùng nhau ta tỏa sáng.",
+  "key_vi_du": "_NPCData_Medea.en.sjson::Medea_0098"
+ },
+ {
+  "en": "It is yours.",
+  "vi_variants": [
+   "Nó là của con.",
+   "Nó là của ngươi."
+  ],
+  "vi_pho_bien": "Nó là của con.",
+  "vi_vi_du": "Nó là của ngươi.",
+  "key_vi_du": "_AudioData.en.sjson::Selene_0124"
+ },
+ {
+  "en": "So mote it be.",
+  "vi_variants": [
+   "Nguyện như vậy.",
+   "Y như lời nguyện.",
+   "Nguyện thế.",
+   "Nguyện được như vậy."
+  ],
+  "vi_pho_bien": "Nguyện như vậy.",
+  "vi_vi_du": "Y như lời nguyện.",
+  "key_vi_du": "_NPCData_Medea.en.sjson::Medea_0088"
+ },
+ {
+  "en": "You have it.",
+  "vi_variants": [
+   "Con có nó rồi.",
+   "Con có rồi đó.",
+   "Con nhận lấy đi.",
+   "Ngươi có nó rồi."
+  ],
+  "vi_pho_bien": "Con có nó rồi.",
+  "vi_vi_du": "Con có rồi đó.",
+  "key_vi_du": "_HeroData.en.sjson::Hades_0249"
+ },
+ {
+  "en": "Let us be off.",
+  "vi_variants": [
+   "Ta lên đường thôi.",
+   "Chúng ta lên đường."
+  ],
+  "vi_pho_bien": "Ta lên đường thôi.",
+  "vi_vi_du": "Chúng ta lên đường.",
+  "key_vi_du": "_NPCData_Athena.en.sjson::Athena_0103"
+ },
+ {
+  "en": "Yes.",
+  "vi_variants": [
+   "Ừ.",
+   "Đúng.",
+   "Phải."
+  ],
+  "vi_pho_bien": "Ừ.",
+  "vi_vi_du": "Đúng.",
+  "key_vi_du": "_EnemyData_Prometheus.en.sjson::Prometheus_0188"
+ },
+ {
+  "en": "Right.",
+  "vi_variants": [
+   "Ừ.",
+   "Đúng.",
+   "Phải."
+  ],
+  "vi_pho_bien": "Ừ.",
+  "vi_vi_du": "Đúng.",
+  "key_vi_du": "_AudioData.en.sjson::Melinoe_0211"
+ },
+ {
+  "en": "Very well...",
+  "vi_variants": [
+   "Được thôi...",
+   "Tốt lắm..."
+  ],
+  "vi_pho_bien": "Được thôi...",
+  "vi_vi_du": "Tốt lắm...",
+  "key_vi_du": "_AudioData.en.sjson::Melinoe_0244"
+ },
+ {
+  "en": "Do you see?",
+  "vi_variants": [
+   "Thấy chưa?",
+   "Con thấy chứ?"
+  ],
+  "vi_pho_bien": "Thấy chưa?",
+  "vi_vi_du": "Con thấy chứ?",
+  "key_vi_du": "_AudioData.en.sjson::Selene_0409"
+ },
+ {
+  "en": "A fishing point.",
+  "vi_variants": [
+   "Điểm câu cá.",
+   "Một điểm câu cá."
+  ],
+  "vi_pho_bien": "Điểm câu cá.",
+  "vi_vi_du": "Một điểm câu cá.",
+  "key_vi_du": "_AudioData.en.sjson::Selene_0422"
+ },
+ {
+  "en": "Interesting...",
+  "vi_variants": [
+   "Thú vị đấy...",
+   "Thú vị..."
+  ],
+  "vi_pho_bien": "Thú vị đấy...",
+  "vi_vi_du": "Thú vị...",
+  "key_vi_du": "_AudioData.en.sjson::Melinoe_0241"
+ },
+ {
+  "en": "Got it.",
+  "vi_variants": [
+   "Được rồi.",
+   "Hiểu rồi."
+  ],
+  "vi_pho_bien": "Được rồi.",
+  "vi_vi_du": "Hiểu rồi.",
+  "key_vi_du": "_CosmeticsData.en.sjson::Dora_0393"
+ },
+ {
+  "en": "In you go.",
+  "vi_variants": [
+   "Vào đi nào.",
+   "Vào nhé."
+  ],
+  "vi_pho_bien": "Vào đi nào.",
+  "vi_vi_du": "Vào nhé.",
+  "key_vi_du": "_GhostAdminData.en.sjson::Melinoe_0524"
+ },
+ {
+  "en": "Mine.",
+  "vi_variants": [
+   "Của tao.",
+   "Của mình."
+  ],
+  "vi_pho_bien": "Của tao.",
+  "vi_vi_du": "Của mình.",
+  "key_vi_du": "_AudioData.en.sjson::Melinoe_0722"
+ },
+ {
+  "en": "No thank you.",
+  "vi_variants": [
+   "Không, cảm ơn.",
+   "Khỏi cảm ơn."
+  ],
+  "vi_pho_bien": "Không, cảm ơn.",
+  "vi_vi_du": "Khỏi cảm ơn.",
+  "key_vi_du": "_AudioData.en.sjson::MelinoeField_0077"
+ },
+ {
+  "en": "Salutations.",
+  "vi_variants": [
+   "Xin chào.",
+   "Chào em.",
+   "Kính chào.",
+   "Chào hỏi."
+  ],
+  "vi_pho_bien": "Xin chào.",
+  "vi_vi_du": "Chào em.",
+  "key_vi_du": "_LootData_Selene.en.sjson::Selene_0236"
+ },
+ {
+  "en": "Salutations!",
+  "vi_variants": [
+   "Kính chào!",
+   "Xin chào!"
+  ],
+  "vi_pho_bien": "Kính chào!",
+  "vi_vi_du": "Xin chào!",
+  "key_vi_du": "_NPCData_Odysseus.en.sjson::Odysseus_0215"
+ },
+ {
+  "en": "Death to Chronos!",
+  "vi_variants": [
+   "Tử hình Chronos!",
+   "Chronos phải chết!"
+  ],
+  "vi_pho_bien": "Tử hình Chronos!",
+  "vi_vi_du": "Chronos phải chết!",
+  "key_vi_du": "_EnemyData_Traps.en.sjson::MelinoeField_0441"
+ },
+ {
+  "en": "Moonlight guide you.",
+  "vi_variants": [
+   "Nguyệt quang dẫn lối cho muội.",
+   "Nguyện ánh trăng dẫn lối cho ngươi.",
+   "Nguyện ánh trăng dẫn lối.",
+   "Ánh trăng dẫn đường cho ngươi."
+  ],
+  "vi_pho_bien": "Nguyệt quang dẫn lối cho muội.",
+  "vi_vi_du": "Nguyện ánh trăng dẫn lối cho ngươi.",
+  "key_vi_du": "_AudioData.en.sjson::Melinoe_1701"
+ },
+ {
+  "en": "Blast...",
+  "vi_variants": [
+   "Tiêu rồi...",
+   "Chết...",
+   "Khốn kiếp...",
+   "Chết tiệt..."
+  ],
+  "vi_pho_bien": "Tiêu rồi...",
+  "vi_vi_du": "Chết...",
+  "key_vi_du": "_AudioData.en.sjson::MelinoeField_1471"
+ },
+ {
+  "en": "This should help.",
+  "vi_variants": [
+   "Cái này hẳn sẽ giúp ích.",
+   "Thứ này chắc giúp được."
+  ],
+  "vi_pho_bien": "Cái này hẳn sẽ giúp ích.",
+  "vi_vi_du": "Thứ này chắc giúp được.",
+  "key_vi_du": "_GhostAdminData.en.sjson::Melinoe_0520"
+ },
+ {
+  "en": "I'll take it.",
+  "vi_variants": [
+   "Ta lấy.",
+   "Để ta nhận cho.",
+   "Ta lấy nó."
+  ],
+  "vi_pho_bien": "Ta lấy.",
+  "vi_vi_du": "Để ta nhận cho.",
+  "key_vi_du": "_AudioData.en.sjson::Melinoe_0554"
+ },
+ {
+  "en": "This one.",
+  "vi_variants": [
+   "Cái này.",
+   "Lấy cái này."
+  ],
+  "vi_pho_bien": "Cái này.",
+  "vi_vi_du": "Lấy cái này.",
+  "key_vi_du": "_AudioData.en.sjson::Melinoe_0214"
+ },
+ {
+  "en": "Here's the Gold.",
+  "vi_variants": [
+   "Vàng đây.",
+   "Đây Gold."
+  ],
+  "vi_pho_bien": "Vàng đây.",
+  "vi_vi_du": "Đây Gold.",
+  "key_vi_du": "_AudioData.en.sjson::Melinoe_0557"
+ },
+ {
+  "en": "Coming right up!",
+  "vi_variants": [
+   "Ra ngay!",
+   "Có ngay đây!"
+  ],
+  "vi_pho_bien": "Ra ngay!",
+  "vi_vi_du": "Có ngay đây!",
+  "key_vi_du": "_AudioData.en.sjson::Hermes_0110"
+ },
+ {
+  "en": "You got it!",
+  "vi_variants": [
+   "Có ngay đây!",
+   "Được như ý em!",
+   "Được ngay!"
+  ],
+  "vi_pho_bien": "Có ngay đây!",
+  "vi_vi_du": "Được như ý em!",
+  "key_vi_du": "_LootData_Poseidon.en.sjson::Poseidon_0231"
+ },
+ {
+  "en": "Sure thing!",
+  "vi_variants": [
+   "Chắc chắn rồi!",
+   "Được chứ!"
+  ],
+  "vi_pho_bien": "Chắc chắn rồi!",
+  "vi_vi_du": "Được chứ!",
+  "key_vi_du": "_AudioData.en.sjson::Hermes_0112"
+ },
+ {
+  "en": "Good choice!",
+  "vi_variants": [
+   "Lựa chọn sáng suốt!",
+   "Chọn ngon đấy!"
+  ],
+  "vi_pho_bien": "Lựa chọn sáng suốt!",
+  "vi_vi_du": "Chọn ngon đấy!",
+  "key_vi_du": "_HeroData.en.sjson::Dionysus_0095"
+ },
+ {
+  "en": "All yours!",
+  "vi_variants": [
+   "Của cậu hết!",
+   "Tất cả là của ngươi!",
+   "Của ngươi hết!"
+  ],
+  "vi_pho_bien": "Của cậu hết!",
+  "vi_vi_du": "Tất cả là của ngươi!",
+  "key_vi_du": "_NPCData_Hermes.en.sjson::Hermes_0237"
+ },
+ {
+  "en": "Thank the Fates.",
+  "vi_variants": [
+   "Tạ ơn Ba Bà Định Mệnh.",
+   "Tạ ơn Số Mệnh.",
+   "Cảm ơn Ba Mệnh."
+  ],
+  "vi_pho_bien": "Tạ ơn Ba Bà Định Mệnh.",
+  "vi_vi_du": "Tạ ơn Số Mệnh.",
+  "key_vi_du": "_NPCData.en.sjson::NemesisField_0203"
+ },
+ {
+  "en": "Damn it!",
+  "vi_variants": [
+   "Khốn thật!",
+   "Chết tiệt!"
+  ],
+  "vi_pho_bien": "Khốn thật!",
+  "vi_vi_du": "Chết tiệt!",
+  "key_vi_du": "_NPCData_Artemis.en.sjson::Artemis_0083"
+ },
+ {
+  "en": "What...",
+  "vi_variants": [
+   "Cái gì...",
+   "Gì..."
+  ],
+  "vi_pho_bien": "Cái gì...",
+  "vi_vi_du": "Gì...",
+  "key_vi_du": "_AudioData.en.sjson::Melinoe_1954"
+ },
+ {
+  "en": "Why thank you.",
+  "vi_variants": [
+   "Cảm ơn nhé.",
+   "Ôi, cảm ơn nhé."
+  ],
+  "vi_pho_bien": "Cảm ơn nhé.",
+  "vi_vi_du": "Ôi, cảm ơn nhé.",
+  "key_vi_du": "_AudioData.en.sjson::Zeus_0115"
+ },
+ {
+  "en": "Music to my ears!",
+  "vi_variants": [
+   "Nghe mà vui quá!",
+   "Như nhạc bên tai!"
+  ],
+  "vi_pho_bien": "Nghe mà vui quá!",
+  "vi_vi_du": "Như nhạc bên tai!",
+  "key_vi_du": "_LootData_Apollo.en.sjson::Apollo_0218"
+ },
+ {
+  "en": "Good pick.",
+  "vi_variants": [
+   "Chọn hay.",
+   "Chọn khéo."
+  ],
+  "vi_pho_bien": "Chọn hay.",
+  "vi_vi_du": "Chọn khéo.",
+  "key_vi_du": "_NPCData_Dora.en.sjson::Dora_0674"
+ },
+ {
+  "en": "My granddaughter.",
+  "vi_variants": [
+   "Cháu gái của ta.",
+   "Cháu gái ta."
+  ],
+  "vi_pho_bien": "Cháu gái của ta.",
+  "vi_vi_du": "Cháu gái ta.",
+  "key_vi_du": "_RoomDataI.en.sjson::Chronos_0802"
+ },
+ {
+  "en": "Cheers!",
+  "vi_variants": [
+   "Cạn ly!",
+   "Cụng ly!",
+   "Dô rượu!",
+   "Tuyệt lắm!"
+  ],
+  "vi_pho_bien": "Cạn ly!",
+  "vi_vi_du": "Cụng ly!",
+  "key_vi_du": "_AudioData.en.sjson::Hephaestus_0162"
+ },
+ {
+  "en": "Darkness guide you.",
+  "vi_variants": [
+   "Nguyện bóng tối dẫn lối con.",
+   "Nguyện bóng tối dẫn lối cho ngươi.",
+   "Bóng đêm soi đường cho em."
+  ],
+  "vi_pho_bien": "Nguyện bóng tối dẫn lối con.",
+  "vi_vi_du": "Nguyện bóng tối dẫn lối cho ngươi.",
+  "key_vi_du": "_LootData_Selene.en.sjson::Selene_0237"
+ },
+ {
+  "en": "Evening.",
+  "vi_variants": [
+   "Chào buổi tối.",
+   "Chào tối."
+  ],
+  "vi_pho_bien": "Chào buổi tối.",
+  "vi_vi_du": "Chào tối.",
+  "key_vi_du": "_AudioData.en.sjson::Melinoe_4153"
+ },
+ {
+  "en": "You honor me.",
+  "vi_variants": [
+   "Ngươi làm ta vinh hạnh.",
+   "Ngài làm ta vinh hạnh quá."
+  ],
+  "vi_pho_bien": "Ngươi làm ta vinh hạnh.",
+  "vi_vi_du": "Ngài làm ta vinh hạnh quá.",
+  "key_vi_du": "_AudioData.en.sjson::MelinoeField_1529"
+ },
+ {
+  "en": "Here he comes...",
+  "vi_variants": [
+   "Hắn tới rồi kìa...",
+   "Hắn tới rồi..."
+  ],
+  "vi_pho_bien": "Hắn tới rồi kìa...",
+  "vi_vi_du": "Hắn tới rồi...",
+  "key_vi_du": "_EnemyData_Prometheus.en.sjson::Prometheus_0374"
+ },
+ {
+  "en": "Which way...",
+  "vi_variants": [
+   "Lối nào đây...",
+   "Đi lối nào..."
+  ],
+  "vi_pho_bien": "Lối nào đây...",
+  "vi_vi_du": "Đi lối nào...",
+  "key_vi_du": "_AudioData.en.sjson::Melinoe_0256"
+ },
+ {
+  "en": "One step closer...",
+  "vi_variants": [
+   "Gần hơn một bước...",
+   "Gần thêm bước..."
+  ],
+  "vi_pho_bien": "Gần hơn một bước...",
+  "vi_vi_du": "Gần thêm bước...",
+  "key_vi_du": "_AudioData.en.sjson::MelinoeField_1338"
+ },
+ {
+  "en": "Thank the Fates...",
+  "vi_variants": [
+   "Cảm ơn Ba Mệnh...",
+   "Tạ ơn Số Phận..."
+  ],
+  "vi_pho_bien": "Cảm ơn Ba Mệnh...",
+  "vi_vi_du": "Tạ ơn Số Phận...",
+  "key_vi_du": "_NPCData.en.sjson::Moros_0560"
+ },
+ {
+  "en": "You're in my way.",
+  "vi_variants": [
+   "Ngươi vướng đường ta.",
+   "Ngươi đang cản đường ta đấy.",
+   "Ngươi đang cản đường ta."
+  ],
+  "vi_pho_bien": "Ngươi vướng đường ta.",
+  "vi_vi_du": "Ngươi đang cản đường ta đấy.",
+  "key_vi_du": "_NPCData_Heracles.en.sjson::Heracles_0076"
+ },
+ {
+  "en": "Ah, yes.",
+  "vi_variants": [
+   "À, phải.",
+   "Phải rồi."
+  ],
+  "vi_pho_bien": "À, phải.",
+  "vi_vi_du": "Phải rồi.",
+  "key_vi_du": "_EnemyData_Polyphemus.en.sjson::Medea_0340"
+ },
+ {
+  "en": "Got you.",
+  "vi_variants": [
+   "Tóm được mày rồi.",
+   "Tóm được ngươi rồi.",
+   "Tóm được rồi.",
+   "Tóm được muội rồi.",
+   "Tóm được cô.",
+   "Bắt được con rồi.",
+   "Trúng rồi.",
+   "Tóm được mày."
+  ],
+  "vi_pho_bien": "Tóm được mày rồi.",
+  "vi_vi_du": "Tóm được ngươi rồi.",
+  "key_vi_du": "_EnemyData_Hecate.en.sjson::HecateField_0031"
+ },
+ {
+  "en": "Done.",
+  "vi_variants": [
+   "Xong rồi.",
+   "Xong."
+  ],
+  "vi_pho_bien": "Xong rồi.",
+  "vi_vi_du": "Xong.",
+  "key_vi_du": "_LootData_Ares.en.sjson::Ares_0132"
+ },
+ {
+  "en": "That's what you get.",
+  "vi_variants": [
+   "Đó là cái giá của ngươi.",
+   "Đó là điều mày nhận.",
+   "Đáng đời ngươi."
+  ],
+  "vi_pho_bien": "Đó là cái giá của ngươi.",
+  "vi_vi_du": "Đó là điều mày nhận.",
+  "key_vi_du": "_EnemyData_Polyphemus.en.sjson::Polyphemus_0058"
+ },
+ {
+  "en": "Until we meet again.",
+  "vi_variants": [
+   "Hẹn gặp lại.",
+   "Hẹn ngày tái ngộ."
+  ],
+  "vi_pho_bien": "Hẹn gặp lại.",
+  "vi_vi_du": "Hẹn ngày tái ngộ.",
+  "key_vi_du": "_AudioData.en.sjson::MelinoeField_0695"
+ },
+ {
+  "en": "Remember that.",
+  "vi_variants": [
+   "Nhớ đó.",
+   "Nhớ lấy đấy."
+  ],
+  "vi_pho_bien": "Nhớ đó.",
+  "vi_vi_du": "Nhớ lấy đấy.",
+  "key_vi_du": "_AudioData.en.sjson::MelinoeField_0696"
+ },
+ {
+  "en": "Noted.",
+  "vi_variants": [
+   "Đã ghi nhận.",
+   "Đã rõ."
+  ],
+  "vi_pho_bien": "Đã ghi nhận.",
+  "vi_vi_du": "Đã rõ.",
+  "key_vi_du": "_NPCData_Odysseus.en.sjson::Odysseus_0315"
+ },
+ {
+  "en": "Got something for you.",
+  "vi_variants": [
+   "Có thứ này cho ngươi.",
+   "Có quà cho muội này."
+  ],
+  "vi_pho_bien": "Có thứ này cho ngươi.",
+  "vi_vi_du": "Có quà cho muội này.",
+  "key_vi_du": "_WeaponDataAllies.en.sjson::Artemis_0229"
+ },
+ {
+  "en": "Here you go!",
+  "vi_variants": [
+   "Này, của ngươi!",
+   "Của cô em đây!",
+   "Đây cho cậu!",
+   "Của cưng đây!"
+  ],
+  "vi_pho_bien": "Này, của ngươi!",
+  "vi_vi_du": "Của cô em đây!",
+  "key_vi_du": "_LootData_Hephaestus.en.sjson::Hephaestus_0173"
+ },
+ {
+  "en": "For you!",
+  "vi_variants": [
+   "Dành cho em!",
+   "Tặng muội!",
+   "Cho cậu!",
+   "Tặng ngươi!",
+   "Cho ngươi!",
+   "Dành cho ngươi!"
+  ],
+  "vi_pho_bien": "Dành cho em!",
+  "vi_vi_du": "Tặng muội!",
+  "key_vi_du": "_NPCData_Hermes.en.sjson::Hermes_0345"
+ },
+ {
+  "en": "Surprise!",
+  "vi_variants": [
+   "Bất ngờ chưa!",
+   "Bất ngờ!"
+  ],
+  "vi_pho_bien": "Bất ngờ chưa!",
+  "vi_vi_du": "Bất ngờ!",
+  "key_vi_du": "_AudioData.en.sjson::Melinoe_2356"
+ },
+ {
+  "en": "Well look at you!",
+  "vi_variants": [
+   "Chà nhìn ngươi kìa!",
+   "Ồ nhìn ai kìa!"
+  ],
+  "vi_pho_bien": "Chà nhìn ngươi kìa!",
+  "vi_vi_du": "Ồ nhìn ai kìa!",
+  "key_vi_du": "_AudioData.en.sjson::Melinoe_3594"
+ },
+ {
+  "en": "This is for you.",
+  "vi_variants": [
+   "Cái này dành cho em.",
+   "Cái này tặng em.",
+   "Cái này dành cho ngươi."
+  ],
+  "vi_pho_bien": "Cái này dành cho em.",
+  "vi_vi_du": "Cái này tặng em.",
+  "key_vi_du": "_LootData_Aphrodite.en.sjson::Aphrodite_0115"
+ },
+ {
+  "en": "How about...",
+  "vi_variants": [
+   "Sao về...",
+   "Thế cái này thì sao..."
+  ],
+  "vi_pho_bien": "Sao về...",
+  "vi_vi_du": "Thế cái này thì sao...",
+  "key_vi_du": "_NPCData_Nemesis.en.sjson::NemesisField_0387"
+ },
+ {
+  "en": "Should work.",
+  "vi_variants": [
+   "Chắc ổn.",
+   "Chắc ổn đấy."
+  ],
+  "vi_pho_bien": "Chắc ổn.",
+  "vi_vi_du": "Chắc ổn đấy.",
+  "key_vi_du": "_KeepsakeData.en.sjson::Melinoe_0840"
+ },
+ {
+  "en": "Shall we?",
+  "vi_variants": [
+   "Chúng ta bắt đầu chứ?",
+   "Đi chứ?"
+  ],
+  "vi_pho_bien": "Chúng ta bắt đầu chứ?",
+  "vi_vi_du": "Đi chứ?",
+  "key_vi_du": "_EnemyData_Hecate.en.sjson::Hecate_0483"
+ },
+ {
+  "en": "I see...",
+  "vi_variants": [
+   "Ta thấy rồi...",
+   "Ta thấy...",
+   "Ta hiểu...",
+   "Ta hiểu rồi..."
+  ],
+  "vi_pho_bien": "Ta thấy rồi...",
+  "vi_vi_du": "Ta thấy...",
+  "key_vi_du": "_AudioData.en.sjson::Prometheus_0275"
+ },
+ {
+  "en": "That's quite enough!",
+  "vi_variants": [
+   "?? l?m r?i ??y!",
+   "Đủ lắm rồi!",
+   "Thế là đủ rồi!"
+  ],
+  "vi_pho_bien": "?? l?m r?i ??y!",
+  "vi_vi_du": "Đủ lắm rồi!",
+  "key_vi_du": "_EnemyData_Hecate.en.sjson::Hecate_0125"
+ },
+ {
+  "en": "Made it through...",
+  "vi_variants": [
+   "Vượt qua rồi...",
+   "Đã vượt qua được..."
+  ],
+  "vi_pho_bien": "Vượt qua rồi...",
+  "vi_vi_du": "Đã vượt qua được...",
+  "key_vi_du": "_AudioData.en.sjson::MelinoeField_1294"
+ },
+ {
+  "en": "I'm here...",
+  "vi_variants": [
+   "Ta tới rồi...",
+   "Ta tới nơi rồi..."
+  ],
+  "vi_pho_bien": "Ta tới rồi...",
+  "vi_vi_du": "Ta tới nơi rồi...",
+  "key_vi_du": "_RoomDataP.en.sjson::MelinoeField_2456"
+ },
+ {
+  "en": "Caught out.",
+  "vi_variants": [
+   "Bị bất ngờ rồi.",
+   "Tóm gọn.",
+   "Bị hớ rồi.",
+   "Bị tóm rồi nhé.",
+   "Bị tóm."
+  ],
+  "vi_pho_bien": "Bị bất ngờ rồi.",
+  "vi_vi_du": "Tóm gọn.",
+  "key_vi_du": "_EnemyData_Hecate.en.sjson::HecateField_0030"
+ },
+ {
+  "en": "Aw...",
+  "vi_variants": [
+   "Ui...",
+   "Ôi..."
+  ],
+  "vi_pho_bien": "Ui...",
+  "vi_vi_du": "Ôi...",
+  "key_vi_du": "_AudioData.en.sjson::Arachne_0347"
+ },
+ {
+  "en": "Not quite.",
+  "vi_variants": [
+   "Chưa hẳn.",
+   "Chưa chuẩn lắm."
+  ],
+  "vi_pho_bien": "Chưa hẳn.",
+  "vi_vi_du": "Chưa chuẩn lắm.",
+  "key_vi_du": "_AudioData.en.sjson::Artemis_0342"
+ },
+ {
+  "en": "Nice try, though!",
+  "vi_variants": [
+   "Cố hay đấy!",
+   "Dù sao cũng cố gắng rồi!"
+  ],
+  "vi_pho_bien": "Cố hay đấy!",
+  "vi_vi_du": "Dù sao cũng cố gắng rồi!",
+  "key_vi_du": "_NPCData_Skelly.en.sjson::Skelly_0700"
+ },
+ {
+  "en": "Eluded...",
+  "vi_variants": [
+   "Sổng mất rồi...",
+   "Né được rồi..."
+  ],
+  "vi_pho_bien": "Sổng mất rồi...",
+  "vi_vi_du": "Né được rồi...",
+  "key_vi_du": "_ProjectileData_EnemyF.en.sjson::HecateField_0133"
+ },
+ {
+  "en": "Caught!",
+  "vi_variants": [
+   "Bắt!",
+   "Bắt được rồi!"
+  ],
+  "vi_pho_bien": "Bắt!",
+  "vi_vi_du": "Bắt được rồi!",
+  "key_vi_du": "_AudioData.en.sjson::Odysseus_0767"
+ },
+ {
+  "en": "Are you quite done?",
+  "vi_variants": [
+   "Ngươi xong chưa vậy?",
+   "Ngươi xong chưa?"
+  ],
+  "vi_pho_bien": "Ngươi xong chưa vậy?",
+  "vi_vi_du": "Ngươi xong chưa?",
+  "key_vi_du": "_AudioData.en.sjson::Athena_0148"
+ },
+ {
+  "en": "There you are...",
+  "vi_variants": [
+   "Muội đây rồi...",
+   "Ngươi ở đây rồi..."
+  ],
+  "vi_pho_bien": "Muội đây rồi...",
+  "vi_vi_du": "Ngươi ở đây rồi...",
+  "key_vi_du": "_NPCData_Artemis.en.sjson::Artemis_0047"
+ },
+ {
+  "en": "Here it comes...",
+  "vi_variants": [
+   "Nó tới đây...",
+   "Nó tới kìa..."
+  ],
+  "vi_pho_bien": "Nó tới đây...",
+  "vi_vi_du": "Nó tới kìa...",
+  "key_vi_du": "_HeroData.en.sjson::Moros_0350"
+ },
+ {
+  "en": "Whatever!",
+  "vi_variants": [
+   "Sao cũng được!",
+   "Kệ đi!"
+  ],
+  "vi_pho_bien": "Sao cũng được!",
+  "vi_vi_du": "Kệ đi!",
+  "key_vi_du": "_AudioData.en.sjson::ErisField_0295"
+ },
+ {
+  "en": "This again...",
+  "vi_variants": [
+   "Lại trò này...",
+   "Lại thế..."
+  ],
+  "vi_pho_bien": "Lại trò này...",
+  "vi_vi_du": "Lại thế...",
+  "key_vi_du": "_NPCData_Chronos.en.sjson::MelinoeField_0193"
+ },
+ {
+  "en": "Seriously?",
+  "vi_variants": [
+   "Thật hả?",
+   "Thật?",
+   "Thật không?"
+  ],
+  "vi_pho_bien": "Thật hả?",
+  "vi_vi_du": "Thật?",
+  "key_vi_du": "_AudioData.en.sjson::NemesisField_0299"
+ },
+ {
+  "en": "How...",
+  "vi_variants": [
+   "Sao cơ...",
+   "Sao..."
+  ],
+  "vi_pho_bien": "Sao cơ...",
+  "vi_vi_du": "Sao...",
+  "key_vi_du": "_AudioData.en.sjson::NemesisField_0301"
+ },
+ {
+  "en": "The Eye of Night...",
+  "vi_variants": [
+   "Con Mắt Đêm...",
+   "Con Mắt Màn Đêm..."
+  ],
+  "vi_pho_bien": "Con Mắt Đêm...",
+  "vi_vi_du": "Con Mắt Màn Đêm...",
+  "key_vi_du": "_AudioData.en.sjson::Medea_0419"
+ },
+ {
+  "en": "Keen eye.",
+  "vi_variants": [
+   "Tinh mắt lắm.",
+   "Mắt tinh."
+  ],
+  "vi_pho_bien": "Tinh mắt lắm.",
+  "vi_vi_du": "Mắt tinh.",
+  "key_vi_du": "_NPCData_Artemis.en.sjson::Artemis_0322"
+ },
+ {
+  "en": "Help yourself.",
+  "vi_variants": [
+   "Cứ tự lấy.",
+   "Cứ tự nhiên."
+  ],
+  "vi_pho_bien": "Cứ tự lấy.",
+  "vi_vi_du": "Cứ tự nhiên.",
+  "key_vi_du": "_NPCData_Arachne.en.sjson::Arachne_0321"
+ },
+ {
+  "en": "Enough of that.",
+  "vi_variants": [
+   "Dẹp cái đó đi.",
+   "Đủ rồi đấy."
+  ],
+  "vi_pho_bien": "Dẹp cái đó đi.",
+  "vi_vi_du": "Đủ rồi đấy.",
+  "key_vi_du": "_EnemyData_Traps.en.sjson::MelinoeField_2372"
+ },
+ {
+  "en": "Now, then...",
+  "vi_variants": [
+   "Rồi, nào...",
+   "Nào, vậy thì..."
+  ],
+  "vi_pho_bien": "Rồi, nào...",
+  "vi_vi_du": "Nào, vậy thì...",
+  "key_vi_du": "_NPCData_Heracles.en.sjson::Heracles_0450"
+ },
+ {
+  "en": "Here goes...",
+  "vi_variants": [
+   "Bắt đầu nào...",
+   "Đi nào..."
+  ],
+  "vi_pho_bien": "Bắt đầu nào...",
+  "vi_vi_du": "Đi nào...",
+  "key_vi_du": "_EncounterData_Unique.en.sjson::MelinoeField_0106"
+ },
+ {
+  "en": "You got it.",
+  "vi_variants": [
+   "Có ngay.",
+   "Rõ rồi."
+  ],
+  "vi_pho_bien": "Có ngay.",
+  "vi_vi_du": "Rõ rồi.",
+  "key_vi_du": "_CosmeticsData.en.sjson::Dora_0247"
+ },
+ {
+  "en": "Sure.",
+  "vi_variants": [
+   "Chốt nhé.",
+   "Chắc luôn.",
+   "Chắc.",
+   "Ừ."
+  ],
+  "vi_pho_bien": "Chốt nhé.",
+  "vi_vi_du": "Chắc luôn.",
+  "key_vi_du": "_CosmeticsData.en.sjson::Dora_0391"
+ },
+ {
+  "en": "Say no more.",
+  "vi_variants": [
+   "Khỏi nói nữa.",
+   "Khỏi nói thêm."
+  ],
+  "vi_pho_bien": "Khỏi nói nữa.",
+  "vi_vi_du": "Khỏi nói thêm.",
+  "key_vi_du": "_NPCData_Nemesis.en.sjson::NemesisField_0116"
+ },
+ {
+  "en": "OK.",
+  "vi_variants": [
+   "Ừ.",
+   "Được.",
+   "Được thôi."
+  ],
+  "vi_pho_bien": "Ừ.",
+  "vi_vi_du": "Được.",
+  "key_vi_du": "_CosmeticsData.en.sjson::Dora_0395"
+ },
+ {
+  "en": "Yep.",
+  "vi_variants": [
+   "Ừ.",
+   "Ừm."
+  ],
+  "vi_pho_bien": "Ừ.",
+  "vi_vi_du": "Ừm.",
+  "key_vi_du": "_NPCData_Skelly.en.sjson::Skelly_0084"
+ },
+ {
+  "en": "Can do.",
+  "vi_variants": [
+   "Làm được ngay.",
+   "Làm được."
+  ],
+  "vi_pho_bien": "Làm được ngay.",
+  "vi_vi_du": "Làm được.",
+  "key_vi_du": "_CosmeticsData.en.sjson::Dora_0399"
+ },
+ {
+  "en": "Indeed!",
+  "vi_variants": [
+   "Đúng thế!",
+   "Đúng vậy!"
+  ],
+  "vi_pho_bien": "Đúng thế!",
+  "vi_vi_du": "Đúng vậy!",
+  "key_vi_du": "_EnemyData_Hecate.en.sjson::Hecate_0341"
+ },
+ {
+  "en": "Here?",
+  "vi_variants": [
+   "Ở đây?",
+   "Ở đây sao?"
+  ],
+  "vi_pho_bien": "Ở đây?",
+  "vi_vi_du": "Ở đây sao?",
+  "key_vi_du": "_NPCData_Hades.en.sjson::Hades_0133"
+ },
+ {
+  "en": "Any of these?",
+  "vi_variants": [
+   "Món nào trong này?",
+   "Mấy cái này sao?"
+  ],
+  "vi_pho_bien": "Món nào trong này?",
+  "vi_vi_du": "Mấy cái này sao?",
+  "key_vi_du": "_CosmeticsData.en.sjson::Dora_0240"
+ },
+ {
+  "en": "See anything you like?",
+  "vi_variants": [
+   "Thấy gì thích không?",
+   "Thấy món nào ưng không?",
+   "Thấy gì ưng không?"
+  ],
+  "vi_pho_bien": "Thấy gì thích không?",
+  "vi_vi_du": "Thấy món nào ưng không?",
+  "key_vi_du": "_NPCData_Hermes.en.sjson::Hermes_0233"
+ },
+ {
+  "en": "Let's see here...",
+  "vi_variants": [
+   "Để ta xem nào...",
+   "Để xem nào..."
+  ],
+  "vi_pho_bien": "Để ta xem nào...",
+  "vi_vi_du": "Để xem nào...",
+  "key_vi_du": "_NPCData_Dionysus.en.sjson::Dionysus_0075"
+ },
+ {
+  "en": "Is that...?",
+  "vi_variants": [
+   "Đó là...?",
+   "Đó là... gì vậy?"
+  ],
+  "vi_pho_bien": "Đó là...?",
+  "vi_vi_du": "Đó là... gì vậy?",
+  "key_vi_du": "_DeathLoopData.en.sjson::Melinoe_1585"
+ },
+ {
+  "en": "What is all this...?",
+  "vi_variants": [
+   "Đây là những gì vậy...?",
+   "Đây là những gì...?"
+  ],
+  "vi_pho_bien": "Đây là những gì vậy...?",
+  "vi_vi_du": "Đây là những gì...?",
+  "key_vi_du": "_ResourceData.en.sjson::MelinoeField_2950"
+ },
+ {
+  "en": "Not happening.",
+  "vi_variants": [
+   "Không được.",
+   "Mơ đi."
+  ],
+  "vi_pho_bien": "Không được.",
+  "vi_vi_du": "Mơ đi.",
+  "key_vi_du": "_HeroData.en.sjson::Melinoe_1861"
+ },
+ {
+  "en": "Hey...",
+  "vi_variants": [
+   "Này...",
+   "Chào chị..."
+  ],
+  "vi_pho_bien": "Này...",
+  "vi_vi_du": "Chào chị...",
+  "key_vi_du": "_DeathLoopData.en.sjson::Melinoe_4027"
+ },
+ {
+  "en": "Father...",
+  "vi_variants": [
+   "Cha...",
+   "Phụ vương..."
+  ],
+  "vi_pho_bien": "Cha...",
+  "vi_vi_du": "Phụ vương...",
+  "key_vi_du": "_HeroData.en.sjson::Melinoe_4017"
+ },
+ {
+  "en": "Commander...?",
+  "vi_variants": [
+   "Thưa Chỉ huy...?",
+   "Chỉ huy...?"
+  ],
+  "vi_pho_bien": "Thưa Chỉ huy...?",
+  "vi_vi_du": "Chỉ huy...?",
+  "key_vi_du": "_DeathLoopData.en.sjson::Melinoe_4954"
+ },
+ {
+  "en": "Nope!",
+  "vi_variants": [
+   "Không đời nào!",
+   "Không!",
+   "Không đâu!"
+  ],
+  "vi_pho_bien": "Không đời nào!",
+  "vi_vi_du": "Không!",
+  "key_vi_du": "_NPCData_Hermes.en.sjson::Hermes_0144"
+ },
+ {
+  "en": "As am I.",
+  "vi_variants": [
+   "Và ta cũng thế.",
+   "Ta cũng thế."
+  ],
+  "vi_pho_bien": "Và ta cũng thế.",
+  "vi_vi_du": "Ta cũng thế.",
+  "key_vi_du": "_HubPresentation.en.sjson::Melinoe_4538"
+ },
+ {
+  "en": "Farewell...",
+  "vi_variants": [
+   "Từ biệt...",
+   "Tạm biệt...",
+   "Vĩnh biệt..."
+  ],
+  "vi_pho_bien": "Từ biệt...",
+  "vi_vi_du": "Tạm biệt...",
+  "key_vi_du": "_EncounterData_Story.en.sjson::Arachne_0300"
+ },
+ {
+  "en": "Wha—?",
+  "vi_variants": [
+   "Cái—?",
+   "Hả—?"
+  ],
+  "vi_pho_bien": "Cái—?",
+  "vi_vi_du": "Hả—?",
+  "key_vi_du": "_DeathLoopData.en.sjson::Melinoe_0123"
+ },
+ {
+  "en": "How—?",
+  "vi_variants": [
+   "Làm sao—?",
+   "Sao lại—?"
+  ],
+  "vi_pho_bien": "Làm sao—?",
+  "vi_vi_du": "Sao lại—?",
+  "key_vi_du": "_DeathLoopData.en.sjson::MelinoeField_1387"
+ },
+ {
+  "en": "Be safe out there!",
+  "vi_variants": [
+   "Bảo trọng ngoài kia nhé!",
+   "Cẩn thận ngoài kia!"
+  ],
+  "vi_pho_bien": "Bảo trọng ngoài kia nhé!",
+  "vi_vi_du": "Cẩn thận ngoài kia!",
+  "key_vi_du": "_DeathLoopData.en.sjson::Zagreus_0041"
+ },
+ {
+  "en": "Return to shadow, now.",
+  "vi_variants": [
+   "Hãy trở về với bóng tối, ngay bây giờ.",
+   "Trở về với bóng tối, ngay mau."
+  ],
+  "vi_pho_bien": "Hãy trở về với bóng tối, ngay bây giờ.",
+  "vi_vi_du": "Trở về với bóng tối, ngay mau.",
+  "key_vi_du": "_DeathLoopData.en.sjson::MelinoeField_3836"
+ },
+ {
+  "en": "Return to shadow, now...",
+  "vi_variants": [
+   "Hãy trở về với bóng tối, ngay bây giờ...",
+   "Trở về với bóng tối, ngay mau..."
+  ],
+  "vi_pho_bien": "Hãy trở về với bóng tối, ngay bây giờ...",
+  "vi_vi_du": "Trở về với bóng tối, ngay mau...",
+  "key_vi_du": "_DeathLoopData.en.sjson::MelinoeField_3312"
+ },
+ {
+  "en": "Return to shadow, now!",
+  "vi_variants": [
+   "Trở về với bóng tối, ngay mau!",
+   "Hãy trở về với bóng tối, ngay bây giờ!"
+  ],
+  "vi_pho_bien": "Trở về với bóng tối, ngay mau!",
+  "vi_vi_du": "Hãy trở về với bóng tối, ngay bây giờ!",
+  "key_vi_du": "_DeathLoopData.en.sjson::MelinoeField_3314"
+ },
+ {
+  "en": "Returned...",
+  "vi_variants": [
+   "Đã trở về...",
+   "Về rồi..."
+  ],
+  "vi_pho_bien": "Đã trở về...",
+  "vi_vi_du": "Về rồi...",
+  "key_vi_du": "_NPCData.en.sjson::Hades_0187"
+ },
+ {
+  "en": "Show yourself!",
+  "vi_variants": [
+   "Hiện thân đi!",
+   "Lộ diện đi!"
+  ],
+  "vi_pho_bien": "Hiện thân đi!",
+  "vi_vi_du": "Lộ diện đi!",
+  "key_vi_du": "_EnemyData_Chronos.en.sjson::Chronos_0691"
+ },
+ {
+  "en": "Come on out!",
+  "vi_variants": [
+   "Ra mặt đi!",
+   "Ra đây nào!",
+   "Ra đây mau!"
+  ],
+  "vi_pho_bien": "Ra mặt đi!",
+  "vi_vi_du": "Ra đây nào!",
+  "key_vi_du": "_HeroData.en.sjson::MelinoeField_0904"
+ },
+ {
+  "en": "Over there...",
+  "vi_variants": [
+   "Ở đằng kia...",
+   "Đằng kia..."
+  ],
+  "vi_pho_bien": "Ở đằng kia...",
+  "vi_vi_du": "Đằng kia...",
+  "key_vi_du": "_NPCData.en.sjson::Melinoe_2116"
+ },
+ {
+  "en": "Bye now!",
+  "vi_variants": [
+   "Bye nhé!",
+   "Tạm biệt nhé!",
+   "Biến!"
+  ],
+  "vi_pho_bien": "Bye nhé!",
+  "vi_vi_du": "Tạm biệt nhé!",
+  "key_vi_du": "_NPCData_Icarus.en.sjson::Eris_0364"
+ },
+ {
+  "en": "Prepared for more?",
+  "vi_variants": [
+   "Sẵn sàng nữa chưa?",
+   "Sẵn sàng nhận thêm chưa?"
+  ],
+  "vi_pho_bien": "Sẵn sàng nữa chưa?",
+  "vi_vi_du": "Sẵn sàng nhận thêm chưa?",
+  "key_vi_du": "_EnemyData_Chronos.en.sjson::Chronos_0324"
+ },
+ {
+  "en": "What now?",
+  "vi_variants": [
+   "Giờ sao?",
+   "Gì nữa đây?",
+   "Giờ thì sao?"
+  ],
+  "vi_pho_bien": "Giờ sao?",
+  "vi_vi_du": "Gì nữa đây?",
+  "key_vi_du": "_EnemyData_Chronos.en.sjson::Chronos_0539"
+ },
+ {
+  "en": "You had it coming.",
+  "vi_variants": [
+   "Ngươi tự chuốc lấy thôi.",
+   "Đáng đời mày."
+  ],
+  "vi_pho_bien": "Ngươi tự chuốc lấy thôi.",
+  "vi_vi_du": "Đáng đời mày.",
+  "key_vi_du": "_EnemyData_Chronos.en.sjson::Chronos_0328"
+ },
+ {
+  "en": "Not finished yet?",
+  "vi_variants": [
+   "Chưa xong à?",
+   "Chưa xong nữa à?"
+  ],
+  "vi_pho_bien": "Chưa xong à?",
+  "vi_vi_du": "Chưa xong nữa à?",
+  "key_vi_du": "_EnemyData_Chronos.en.sjson::Chronos_0292"
+ },
+ {
+  "en": "Ah-{#Emph}hah...!",
+  "vi_variants": [
+   "À-{#Emph}ha...!",
+   "A-{#Emph}ha...!"
+  ],
+  "vi_pho_bien": "À-{#Emph}ha...!",
+  "vi_vi_du": "A-{#Emph}ha...!",
+  "key_vi_du": "_EnemyData_Chronos.en.sjson::Chronos_0304"
+ },
+ {
+  "en": "What is this?",
+  "vi_variants": [
+   "Cái gì đây?",
+   "Cái quái gì thế này?"
+  ],
+  "vi_pho_bien": "Cái gì đây?",
+  "vi_vi_du": "Cái quái gì thế này?",
+  "key_vi_du": "_EnemyData_Chronos.en.sjson::Chronos_0351"
+ },
+ {
+  "en": "And...?",
+  "vi_variants": [
+   "Và...?",
+   "Rồi...?"
+  ],
+  "vi_pho_bien": "Và...?",
+  "vi_vi_du": "Rồi...?",
+  "key_vi_du": "_EnemyData_Chronos.en.sjson::Chronos_0352"
+ },
+ {
+  "en": "Huh.",
+  "vi_variants": [
+   "Hử.",
+   "Hả."
+  ],
+  "vi_pho_bien": "Hử.",
+  "vi_vi_du": "Hả.",
+  "key_vi_du": "_NPCData_Nemesis.en.sjson::Melinoe_0622"
+ },
+ {
+  "en": "Please.",
+  "vi_variants": [
+   "Xin mày đấy.",
+   "Xin đi."
+  ],
+  "vi_pho_bien": "Xin mày đấy.",
+  "vi_vi_du": "Xin đi.",
+  "key_vi_du": "_NPCData_Nemesis.en.sjson::Nemesis_0299"
+ },
+ {
+  "en": "How...?",
+  "vi_variants": [
+   "Sao có thể...?",
+   "Sao... cơ?"
+  ],
+  "vi_pho_bien": "Sao có thể...?",
+  "vi_vi_du": "Sao... cơ?",
+  "key_vi_du": "_EnemyData_Prometheus.en.sjson::Prometheus_0218"
+ },
+ {
+  "en": "Not... yet...!",
+  "vi_variants": [
+   "Chưa... đâu...!",
+   "Chưa... xong... đâu...!"
+  ],
+  "vi_pho_bien": "Chưa... đâu...!",
+  "vi_vi_du": "Chưa... xong... đâu...!",
+  "key_vi_du": "_EnemyData_Chronos.en.sjson::Chronos_0405"
+ },
+ {
+  "en": "Fall!",
+  "vi_variants": [
+   "Gục đi!",
+   "Ngã xuống đi!"
+  ],
+  "vi_pho_bien": "Gục đi!",
+  "vi_vi_du": "Ngã xuống đi!",
+  "key_vi_du": "_EnemyData_Chronos.en.sjson::MelinoeField_1408"
+ },
+ {
+  "en": "Now...!",
+  "vi_variants": [
+   "Giờ thì...!",
+   "Giờ...!",
+   "Ngay...!"
+  ],
+  "vi_pho_bien": "Giờ thì...!",
+  "vi_vi_du": "Giờ...!",
+  "key_vi_du": "_EnemyData_Eris.en.sjson::ErisField_0063"
+ },
+ {
+  "en": "Now!",
+  "vi_variants": [
+   "Ngay bây giờ!",
+   "Ngay!",
+   "Giờ!"
+  ],
+  "vi_pho_bien": "Ngay bây giờ!",
+  "vi_vi_du": "Ngay!",
+  "key_vi_du": "_EnemyData_Heracles.en.sjson::Heracles_0200"
+ },
+ {
+  "en": "Behold!",
+  "vi_variants": [
+   "Hãy chiêm ngưỡng đây!",
+   "Chứng kiến đi!"
+  ],
+  "vi_pho_bien": "Hãy chiêm ngưỡng đây!",
+  "vi_vi_du": "Chứng kiến đi!",
+  "key_vi_du": "_EnemyData_Chronos.en.sjson::Chronos_0456"
+ },
+ {
+  "en": "Just in time.",
+  "vi_variants": [
+   "Đến đúng lúc lắm.",
+   "Đến vừa kịp lúc.",
+   "Vừa kịp."
+  ],
+  "vi_pho_bien": "Đến đúng lúc lắm.",
+  "vi_vi_du": "Đến vừa kịp lúc.",
+  "key_vi_du": "_NPCData.en.sjson::Chronos_1094"
+ },
+ {
+  "en": "You called?",
+  "vi_variants": [
+   "Ngươi gọi à?",
+   "Cậu gọi hả?"
+  ],
+  "vi_pho_bien": "Ngươi gọi à?",
+  "vi_vi_du": "Cậu gọi hả?",
+  "key_vi_du": "_NPCData_Hermes.en.sjson::Hermes_0124"
+ },
+ {
+  "en": "Such a night...",
+  "vi_variants": [
+   "Một đêm tuyệt diệu làm sao...",
+   "Một đêm như thế..."
+  ],
+  "vi_pho_bien": "Một đêm tuyệt diệu làm sao...",
+  "vi_vi_du": "Một đêm như thế...",
+  "key_vi_du": "_EnemyData_Chronos.en.sjson::Chronos_1230"
+ },
+ {
+  "en": "Look who!",
+  "vi_variants": [
+   "Xem ai này!",
+   "Xem ai kìa!"
+  ],
+  "vi_pho_bien": "Xem ai này!",
+  "vi_vi_du": "Xem ai kìa!",
+  "key_vi_du": "_EnemyData_Eris.en.sjson::ErisField_0053"
+ },
+ {
+  "en": "Now then...",
+  "vi_variants": [
+   "Vậy thì...",
+   "Rồi đấy..."
+  ],
+  "vi_pho_bien": "Vậy thì...",
+  "vi_vi_du": "Rồi đấy...",
+  "key_vi_du": "_EnemyData_Chronos.en.sjson::Chronos_0454"
+ },
+ {
+  "en": "Prepare!",
+  "vi_variants": [
+   "Chuẩn bị đi!",
+   "Chuẩn bị!"
+  ],
+  "vi_pho_bien": "Chuẩn bị đi!",
+  "vi_vi_du": "Chuẩn bị!",
+  "key_vi_du": "_EnemyData_Heracles.en.sjson::Heracles_0205"
+ },
+ {
+  "en": "Watch {#Emph}this!",
+  "vi_variants": [
+   "Coi chừng {#Emph}đây!",
+   "Xem {#Emph}đây!"
+  ],
+  "vi_pho_bien": "Coi chừng {#Emph}đây!",
+  "vi_vi_du": "Xem {#Emph}đây!",
+  "key_vi_du": "_EnemyData_Prometheus.en.sjson::Prometheus_0093"
+ },
+ {
+  "en": "Here!",
+  "vi_variants": [
+   "Đỡ này!",
+   "Nơi này!",
+   "Đây!",
+   "Này!",
+   "Đây này!",
+   "Của em đây!"
+  ],
+  "vi_pho_bien": "Đỡ này!",
+  "vi_vi_du": "Nơi này!",
+  "key_vi_du": "_LootData_Aphrodite.en.sjson::Aphrodite_0171"
+ },
+ {
+  "en": "You gods...",
+  "vi_variants": [
+   "Lũ thần linh các ngươi...",
+   "Lũ thần các ngươi..."
+  ],
+  "vi_pho_bien": "Lũ thần linh các ngươi...",
+  "vi_vi_du": "Lũ thần các ngươi...",
+  "key_vi_du": "_EnemyData_Chronos.en.sjson::Chronos_0543"
+ },
+ {
+  "en": "Ready...?",
+  "vi_variants": [
+   "Sẵn sàng chưa...?",
+   "Sẵn sàng...?"
+  ],
+  "vi_pho_bien": "Sẵn sàng chưa...?",
+  "vi_vi_du": "Sẵn sàng...?",
+  "key_vi_du": "_EnemyData_Prometheus.en.sjson::Prometheus_0067"
+ },
+ {
+  "en": "Another!",
+  "vi_variants": [
+   "Nữa này!",
+   "Nữa!"
+  ],
+  "vi_pho_bien": "Nữa này!",
+  "vi_vi_du": "Nữa!",
+  "key_vi_du": "_EnemyData_Zagreus.en.sjson::Zagreus_0236"
+ },
+ {
+  "en": "Hold it right there...",
+  "vi_variants": [
+   "Đứng yên ngay đó...",
+   "Giữ yên đó..."
+  ],
+  "vi_pho_bien": "Đứng yên ngay đó...",
+  "vi_vi_du": "Giữ yên đó...",
+  "key_vi_du": "_HubPresentation.en.sjson::Eris_0339"
+ },
+ {
+  "en": "Hold it.",
+  "vi_variants": [
+   "Đứng yên.",
+   "Đứng lại."
+  ],
+  "vi_pho_bien": "Đứng yên.",
+  "vi_vi_du": "Đứng lại.",
+  "key_vi_du": "_EnemyData_Polyphemus.en.sjson::Polyphemus_0192"
+ },
+ {
+  "en": "Stop.",
+  "vi_variants": [
+   "Dừng lại.",
+   "Dừng."
+  ],
+  "vi_pho_bien": "Dừng lại.",
+  "vi_vi_du": "Dừng.",
+  "key_vi_du": "_HeroData.en.sjson::MelinoeField_0271"
+ },
+ {
+  "en": "Freeze.",
+  "vi_variants": [
+   "Đứng hình.",
+   "Đóng băng."
+  ],
+  "vi_pho_bien": "Đứng hình.",
+  "vi_vi_du": "Đóng băng.",
+  "key_vi_du": "_HeroData.en.sjson::MelinoeField_1378"
+ },
+ {
+  "en": "Caught.",
+  "vi_variants": [
+   "Dính rồi.",
+   "Bắt được."
+  ],
+  "vi_pho_bien": "Dính rồi.",
+  "vi_vi_du": "Bắt được.",
+  "key_vi_du": "_EnemyData_Chronos.en.sjson::Chronos_0523"
+ },
+ {
+  "en": "Caught you.",
+  "vi_variants": [
+   "Tóm được ngươi.",
+   "Tóm được ngươi rồi.",
+   "Chộp được mày nhé."
+  ],
+  "vi_pho_bien": "Tóm được ngươi.",
+  "vi_vi_du": "Tóm được ngươi rồi.",
+  "key_vi_du": "_EnemyData_Polyphemus.en.sjson::Polyphemus_0036"
+ },
+ {
+  "en": "Slow down.",
+  "vi_variants": [
+   "Chậm lại.",
+   "Chậm lại đã."
+  ],
+  "vi_pho_bien": "Chậm lại.",
+  "vi_vi_du": "Chậm lại đã.",
+  "key_vi_du": "_EnemyData_Polyphemus.en.sjson::Polyphemus_0354"
+ },
+ {
+  "en": "Stuck!",
+  "vi_variants": [
+   "Kẹt!",
+   "Kẹt cứng!"
+  ],
+  "vi_pho_bien": "Kẹt!",
+  "vi_vi_du": "Kẹt cứng!",
+  "key_vi_du": "_HeroData.en.sjson::MelinoeField_0905"
+ },
+ {
+  "en": "Hold.",
+  "vi_variants": [
+   "Yên.",
+   "Dừng lại.",
+   "Giữ."
+  ],
+  "vi_pho_bien": "Yên.",
+  "vi_vi_du": "Dừng lại.",
+  "key_vi_du": "_EnemyData_Hecate.en.sjson::HecateField_0180"
+ },
+ {
+  "en": "Careful now.",
+  "vi_variants": [
+   "Cẩn thận đấy.",
+   "C?n th?n."
+  ],
+  "vi_pho_bien": "Cẩn thận đấy.",
+  "vi_vi_du": "C?n th?n.",
+  "key_vi_du": "_EnemyData_Hecate.en.sjson::HecateField_0042"
+ },
+ {
+  "en": "That {#Emph}does {#Prev}it!",
+  "vi_variants": [
+   "Thế {#Emph}mới {#Prev}xong!",
+   "Thế là {#Emph}xong{#Prev} nhé!"
+  ],
+  "vi_pho_bien": "Thế {#Emph}mới {#Prev}xong!",
+  "vi_vi_du": "Thế là {#Emph}xong{#Prev} nhé!",
+  "key_vi_du": "_EnemyData_Chronos.en.sjson::Chronos_0446"
+ },
+ {
+  "en": "Such power...",
+  "vi_variants": [
+   "Sức mạnh như thế...",
+   "Sức mạnh thật..."
+  ],
+  "vi_pho_bien": "Sức mạnh như thế...",
+  "vi_vi_du": "Sức mạnh thật...",
+  "key_vi_du": "_EnemyData_Chronos.en.sjson::Chronos_0599"
+ },
+ {
+  "en": "Not again...",
+  "vi_variants": [
+   "Lại nữa à...",
+   "Lại nữa sao..."
+  ],
+  "vi_pho_bien": "Lại nữa à...",
+  "vi_vi_du": "Lại nữa sao...",
+  "key_vi_du": "_HeroData.en.sjson::MelinoeField_3562"
+ },
+ {
+  "en": "Want more?",
+  "vi_variants": [
+   "Muốn nữa không?",
+   "Muốn thêm không?"
+  ],
+  "vi_pho_bien": "Muốn nữa không?",
+  "vi_vi_du": "Muốn thêm không?",
+  "key_vi_du": "_EnemyData_Eris.en.sjson::ErisField_0076"
+ },
+ {
+  "en": "How's that?",
+  "vi_variants": [
+   "Thấy thế nào hả?",
+   "Thế nào?"
+  ],
+  "vi_pho_bien": "Thấy thế nào hả?",
+  "vi_vi_du": "Thế nào?",
+  "key_vi_du": "_EnemyData_Scylla.en.sjson::Scylla_0097"
+ },
+ {
+  "en": "Got plenty more.",
+  "vi_variants": [
+   "Ta còn nhiều lắm.",
+   "Tao còn nhiều đòn lắm."
+  ],
+  "vi_pho_bien": "Ta còn nhiều lắm.",
+  "vi_vi_du": "Tao còn nhiều đòn lắm.",
+  "key_vi_du": "_EnemyData_Eris.en.sjson::ErisField_0078"
+ },
+ {
+  "en": "Again?",
+  "vi_variants": [
+   "Lại nữa à?",
+   "Lại nữa sao?",
+   "Lại à?"
+  ],
+  "vi_pho_bien": "Lại nữa à?",
+  "vi_vi_du": "Lại nữa sao?",
+  "key_vi_du": "_RoomData.en.sjson::Chronos_0760"
+ },
+ {
+  "en": "Nuh-{#Emph}uh!",
+  "vi_variants": [
+   "Đừng {#Emph}mơ!",
+   "Không-{#Emph}đời nào!"
+  ],
+  "vi_pho_bien": "Đừng {#Emph}mơ!",
+  "vi_vi_du": "Không-{#Emph}đời nào!",
+  "key_vi_du": "_EnemyData_Eris.en.sjson::ErisField_0301"
+ },
+ {
+  "en": "Really?",
+  "vi_variants": [
+   "Thật à?",
+   "Thật không?"
+  ],
+  "vi_pho_bien": "Thật à?",
+  "vi_vi_du": "Thật không?",
+  "key_vi_du": "_NPCData_Heracles.en.sjson::Heracles_0078"
+ },
+ {
+  "en": "Come on...",
+  "vi_variants": [
+   "Thôi nào...",
+   "Nào..."
+  ],
+  "vi_pho_bien": "Thôi nào...",
+  "vi_vi_du": "Nào...",
+  "key_vi_du": "_HeroData.en.sjson::MelinoeField_0593"
+ },
+ {
+  "en": "Hey hey!",
+  "vi_variants": [
+   "Chào chào!",
+   "Ê ê!"
+  ],
+  "vi_pho_bien": "Chào chào!",
+  "vi_vi_du": "Ê ê!",
+  "key_vi_du": "_EnemyData_Eris.en.sjson::ErisField_0051"
+ },
+ {
+  "en": "You made it!",
+  "vi_variants": [
+   "Bạn đến rồi!",
+   "Tới nơi rồi đấy à!"
+  ],
+  "vi_pho_bien": "Bạn đến rồi!",
+  "vi_vi_du": "Tới nơi rồi đấy à!",
+  "key_vi_du": "_NPCData_Dionysus.en.sjson::Dionysus_0055"
+ },
+ {
+  "en": "You're here!",
+  "vi_variants": [
+   "Cưng tới rồi à!",
+   "Ngươi ở đây!",
+   "Con đến rồi!",
+   "Ngươi đến rồi!"
+  ],
+  "vi_pho_bien": "Cưng tới rồi à!",
+  "vi_vi_du": "Ngươi ở đây!",
+  "key_vi_du": "_NPCData_Hades.en.sjson::Persephone_0036"
+ },
+ {
+  "en": "Excuse me?",
+  "vi_variants": [
+   "Xin lỗi nhé?",
+   "Xin lỗi?",
+   "Gì cơ?"
+  ],
+  "vi_pho_bien": "Xin lỗi nhé?",
+  "vi_vi_du": "Xin lỗi?",
+  "key_vi_du": "_EnemyData_Eris.en.sjson::ErisField_0038"
+ },
+ {
+  "en": "What's the matter?",
+  "vi_variants": [
+   "Có chuyện gì thế?",
+   "Sao thế?"
+  ],
+  "vi_pho_bien": "Có chuyện gì thế?",
+  "vi_vi_du": "Sao thế?",
+  "key_vi_du": "_EnemyData_Eris.en.sjson::Eris_0081"
+ },
+ {
+  "en": "You're not going anywhere.",
+  "vi_variants": [
+   "Cưng không đi đâu được đâu.",
+   "Ngươi không đi đâu được."
+  ],
+  "vi_pho_bien": "Cưng không đi đâu được đâu.",
+  "vi_vi_du": "Ngươi không đi đâu được.",
+  "key_vi_du": "_EnemyData_Eris.en.sjson::ErisField_0339"
+ },
+ {
+  "en": "Nice try!",
+  "vi_variants": [
+   "Thử hay đấy!",
+   "Cố gắng đấy!"
+  ],
+  "vi_pho_bien": "Thử hay đấy!",
+  "vi_vi_du": "Cố gắng đấy!",
+  "key_vi_du": "_HeroData.en.sjson::MelinoeField_0063"
+ },
+ {
+  "en": "Didn't hurt!",
+  "vi_variants": [
+   "Chẳng đau tẹo nào!",
+   "Chẳng đau!"
+  ],
+  "vi_pho_bien": "Chẳng đau tẹo nào!",
+  "vi_vi_du": "Chẳng đau!",
+  "key_vi_du": "_EnemyData_Eris.en.sjson::ErisField_0334"
+ },
+ {
+  "en": "Nice try.",
+  "vi_variants": [
+   "Thử hay đấy.",
+   "Cũng khá đấy.",
+   "Cố gắng đấy."
+  ],
+  "vi_pho_bien": "Thử hay đấy.",
+  "vi_vi_du": "Cũng khá đấy.",
+  "key_vi_du": "_NPCData_Nemesis.en.sjson::Nemesis_0199"
+ },
+ {
+  "en": "Didn't hurt.",
+  "vi_variants": [
+   "Không đau.",
+   "Chẳng đau chút nào."
+  ],
+  "vi_pho_bien": "Không đau.",
+  "vi_vi_du": "Chẳng đau chút nào.",
+  "key_vi_du": "_EnemyData_Eris.en.sjson::ErisField_0335"
+ },
+ {
+  "en": "Sorry!",
+  "vi_variants": [
+   "Rất tiếc!",
+   "Xin lỗi!",
+   "Xin lỗi nhé!"
+  ],
+  "vi_pho_bien": "Rất tiếc!",
+  "vi_vi_du": "Xin lỗi!",
+  "key_vi_du": "_EnemyData_Scylla.en.sjson::Scylla_0122"
+ },
+ {
+  "en": "Got you!",
+  "vi_variants": [
+   "Bắt được mày rồi!",
+   "Dính rồi nhé!",
+   "Bắt được cưng rồi!",
+   "Tóm được rồi!"
+  ],
+  "vi_pho_bien": "Bắt được mày rồi!",
+  "vi_vi_du": "Dính rồi nhé!",
+  "key_vi_du": "_EnemyData_Eris.en.sjson::ErisField_0060"
+ },
+ {
+  "en": "Catch!",
+  "vi_variants": [
+   "Đỡ lấy!",
+   "Đỡ này!"
+  ],
+  "vi_pho_bien": "Đỡ lấy!",
+  "vi_vi_du": "Đỡ này!",
+  "key_vi_du": "_EnemyData_Eris.en.sjson::ErisField_0072"
+ },
+ {
+  "en": "Heads up!",
+  "vi_variants": [
+   "Coi chừng phía trên!",
+   "Coi chừng!"
+  ],
+  "vi_pho_bien": "Coi chừng phía trên!",
+  "vi_vi_du": "Coi chừng!",
+  "key_vi_du": "_EnemyData_Eris.en.sjson::ErisField_0474"
+ },
+ {
+  "en": "Here I am!",
+  "vi_variants": [
+   "Ta đây!",
+   "Tao đây này!"
+  ],
+  "vi_pho_bien": "Ta đây!",
+  "vi_vi_du": "Tao đây này!",
+  "key_vi_du": "_WeaponData_Hecate.en.sjson::HecateField_0311"
+ },
+ {
+  "en": "Incoming...!",
+  "vi_variants": [
+   "Tới đây...!",
+   "Đạn tới đây...!",
+   "Coi chừng...!"
+  ],
+  "vi_pho_bien": "Tới đây...!",
+  "vi_vi_du": "Đạn tới đây...!",
+  "key_vi_du": "_HeroData.en.sjson::MelinoeField_0525"
+ },
+ {
+  "en": "Special delivery!",
+  "vi_variants": [
+   "Hàng giao tận nơi nhé!",
+   "Giao hàng đặc biệt!"
+  ],
+  "vi_pho_bien": "Hàng giao tận nơi nhé!",
+  "vi_vi_du": "Giao hàng đặc biệt!",
+  "key_vi_du": "_NPCData_Hermes.en.sjson::Hermes_0116"
+ },
+ {
+  "en": "So much for that...",
+  "vi_variants": [
+   "Hết chuyện...",
+   "Thế là công cốc rồi..."
+  ],
+  "vi_pho_bien": "Hết chuyện...",
+  "vi_vi_du": "Thế là công cốc rồi...",
+  "key_vi_du": "_EnemyData_Eris.en.sjson::ErisField_0229"
+ },
+ {
+  "en": "Come now.",
+  "vi_variants": [
+   "Nào, cố lên.",
+   "Nào nào.",
+   "Nào."
+  ],
+  "vi_pho_bien": "Nào, cố lên.",
+  "vi_vi_du": "Nào nào.",
+  "key_vi_du": "_NPCData_Arachne.en.sjson::Arachne_0162"
+ },
+ {
+  "en": "Fight back!",
+  "vi_variants": [
+   "Phản kháng đi!",
+   "Đánh lại!",
+   "Đánh trả đi!"
+  ],
+  "vi_pho_bien": "Phản kháng đi!",
+  "vi_vi_du": "Đánh lại!",
+  "key_vi_du": "_EnemyData_Hecate.en.sjson::Hecate_0343"
+ },
+ {
+  "en": "Still on your feet?",
+  "vi_variants": [
+   "Vẫn đứng được?",
+   "Vẫn đứng vững à?"
+  ],
+  "vi_pho_bien": "Vẫn đứng được?",
+  "vi_vi_du": "Vẫn đứng vững à?",
+  "key_vi_du": "_EnemyData_Hecate.en.sjson::Hecate_0345"
+ },
+ {
+  "en": "Back off.",
+  "vi_variants": [
+   "Lùi lại.",
+   "Lui lại."
+  ],
+  "vi_pho_bien": "Lùi lại.",
+  "vi_vi_du": "Lui lại.",
+  "key_vi_du": "_NPCData_Nemesis.en.sjson::NemesisField_0290"
+ },
+ {
+  "en": "Conserve your strength.",
+  "vi_variants": [
+   "Giữ gìn sức lực.",
+   "Giữ sức đi."
+  ],
+  "vi_pho_bien": "Giữ gìn sức lực.",
+  "vi_vi_du": "Giữ sức đi.",
+  "key_vi_du": "_NPCData_Athena.en.sjson::Athena_0067"
+ },
+ {
+  "en": "Hold nothing back!",
+  "vi_variants": [
+   "Đừng giữ sức!",
+   "Đừng nương tay!"
+  ],
+  "vi_pho_bien": "Đừng giữ sức!",
+  "vi_vi_du": "Đừng nương tay!",
+  "key_vi_du": "_EnemyData_Hecate.en.sjson::Hecate_0108"
+ },
+ {
+  "en": "Faster!",
+  "vi_variants": [
+   "Nhanh hơn nữa!",
+   "Nhanh lên!"
+  ],
+  "vi_pho_bien": "Nhanh hơn nữa!",
+  "vi_vi_du": "Nhanh lên!",
+  "key_vi_du": "_HeroData.en.sjson::MelinoeField_1831"
+ },
+ {
+  "en": "Again!",
+  "vi_variants": [
+   "Nữa!",
+   "Nữa đi!",
+   "Lại nữa!"
+  ],
+  "vi_pho_bien": "Nữa!",
+  "vi_vi_du": "Nữa đi!",
+  "key_vi_du": "_EnemyData_Hecate.en.sjson::Hecate_0114"
+ },
+ {
+  "en": "That's it!",
+  "vi_variants": [
+   "Đúng rồi đó!",
+   "Đúng thế!",
+   "Thế đó!"
+  ],
+  "vi_pho_bien": "Đúng rồi đó!",
+  "vi_vi_du": "Đúng thế!",
+  "key_vi_du": "_WeaponData_Polyphemus.en.sjson::Polyphemus_0049"
+ },
+ {
+  "en": "Enough!",
+  "vi_variants": [
+   "Đủ rồi!",
+   "?? r?i!"
+  ],
+  "vi_pho_bien": "Đủ rồi!",
+  "vi_vi_du": "?? r?i!",
+  "key_vi_du": "_EnemyData_Hecate.en.sjson::Hecate_0124"
+ },
+ {
+  "en": "All right, all right!",
+  "vi_variants": [
+   "Rồi, rồi!",
+   "???c r?i, ???c r?i!"
+  ],
+  "vi_pho_bien": "Rồi, rồi!",
+  "vi_vi_du": "???c r?i, ???c r?i!",
+  "key_vi_du": "_EnemyData_Hecate.en.sjson::Hecate_0131"
+ },
+ {
+  "en": "Well done!",
+  "vi_variants": [
+   "L?m t?t l?m!",
+   "Làm tốt lắm!",
+   "Giỏi lắm!"
+  ],
+  "vi_pho_bien": "L?m t?t l?m!",
+  "vi_vi_du": "Làm tốt lắm!",
+  "key_vi_du": "_NPCData.en.sjson::Odysseus_0453"
+ },
+ {
+  "en": "No...!",
+  "vi_variants": [
+   "Không...!",
+   "Không thể nào...!"
+  ],
+  "vi_pho_bien": "Không...!",
+  "vi_vi_du": "Không thể nào...!",
+  "key_vi_du": "_EnemyData_Hecate.en.sjson::MelinoeField_3872"
+ },
+ {
+  "en": "There she is.",
+  "vi_variants": [
+   "Con bé đây rồi.",
+   "Cô ấy kia."
+  ],
+  "vi_pho_bien": "Con bé đây rồi.",
+  "vi_vi_du": "Cô ấy kia.",
+  "key_vi_du": "_EnemyData_Hecate.en.sjson::Hecate_0487"
+ },
+ {
+  "en": "At last.",
+  "vi_variants": [
+   "Cuối cùng.",
+   "Cuối cùng thì.",
+   "Cuối cùng cũng đến."
+  ],
+  "vi_pho_bien": "Cuối cùng.",
+  "vi_vi_du": "Cuối cùng thì.",
+  "key_vi_du": "_NPCData_Athena.en.sjson::Athena_0066"
+ },
+ {
+  "en": "Welcome.",
+  "vi_variants": [
+   "Chào mừng.",
+   "Chào mừng con."
+  ],
+  "vi_pho_bien": "Chào mừng.",
+  "vi_vi_du": "Chào mừng con.",
+  "key_vi_du": "_EnemyData_Hecate.en.sjson::HecateField_0179"
+ },
+ {
+  "en": "Greetings, Witch.",
+  "vi_variants": [
+   "Kính chào, Phù Thủy.",
+   "Chào con, hỡi Phù thủy."
+  ],
+  "vi_pho_bien": "Kính chào, Phù Thủy.",
+  "vi_vi_du": "Chào con, hỡi Phù thủy.",
+  "key_vi_du": "_EnemyData_Hecate.en.sjson::Hecate_0068"
+ },
+ {
+  "en": "That's it.",
+  "vi_variants": [
+   "Thế thôi.",
+   "Thế là xong.",
+   "??ng r?i.",
+   "Hết rồi."
+  ],
+  "vi_pho_bien": "Thế thôi.",
+  "vi_vi_du": "Thế là xong.",
+  "key_vi_du": "_EnemyData_Hecate.en.sjson::HecateField_0043"
+ },
+ {
+  "en": "Short work.",
+  "vi_variants": [
+   "Giải quyết nhanh gọn đấy.",
+   "Xong nhanh thật."
+  ],
+  "vi_pho_bien": "Giải quyết nhanh gọn đấy.",
+  "vi_vi_du": "Xong nhanh thật.",
+  "key_vi_du": "_EnemyData_Hecate.en.sjson::HecateField_0400"
+ },
+ {
+  "en": "And now for me.",
+  "vi_variants": [
+   "Và giờ tới lượt ta.",
+   "Và giờ đến lượt ta."
+  ],
+  "vi_pho_bien": "Và giờ tới lượt ta.",
+  "vi_vi_du": "Và giờ đến lượt ta.",
+  "key_vi_du": "_EnemyData_Heracles.en.sjson::Prometheus_0388"
+ },
+ {
+  "en": "Still up?",
+  "vi_variants": [
+   "Còn đứng được à?",
+   "Vẫn đứng được à?"
+  ],
+  "vi_pho_bien": "Còn đứng được à?",
+  "vi_vi_du": "Vẫn đứng được à?",
+  "key_vi_du": "_EnemyData_Heracles.en.sjson::Heracles_0493"
+ },
+ {
+  "en": "That's right.",
+  "vi_variants": [
+   "Chính thế.",
+   "Đúng vậy."
+  ],
+  "vi_pho_bien": "Chính thế.",
+  "vi_vi_du": "Đúng vậy.",
+  "key_vi_du": "_EnemyData_Polyphemus.en.sjson::Polyphemus_0232"
+ },
+ {
+  "en": "Must have hurt.",
+  "vi_variants": [
+   "Chắc đau.",
+   "Hẳn là đau lắm đấy."
+  ],
+  "vi_pho_bien": "Chắc đau.",
+  "vi_vi_du": "Hẳn là đau lắm đấy.",
+  "key_vi_du": "_NPCData_Nemesis.en.sjson::NemesisField_0309"
+ },
+ {
+  "en": "That's it...!",
+  "vi_variants": [
+   "Đúng rồi...!",
+   "Chính là như thế...!"
+  ],
+  "vi_pho_bien": "Đúng rồi...!",
+  "vi_vi_du": "Chính là như thế...!",
+  "key_vi_du": "_EnemyData_Polyphemus.en.sjson::Medea_0418"
+ },
+ {
+  "en": "You little...",
+  "vi_variants": [
+   "Đồ nhỏ...",
+   "Nhóc con...",
+   "Cái con nhóc này..."
+  ],
+  "vi_pho_bien": "Đồ nhỏ...",
+  "vi_vi_du": "Nhóc con...",
+  "key_vi_du": "_EnemyData_Polyphemus.en.sjson::Polyphemus_0064"
+ },
+ {
+  "en": "Oh come on.",
+  "vi_variants": [
+   "Thôi nào.",
+   "Ồ thôi nào."
+  ],
+  "vi_pho_bien": "Thôi nào.",
+  "vi_vi_du": "Ồ thôi nào.",
+  "key_vi_du": "_EnemyData_Polyphemus.en.sjson::Polyphemus_0074"
+ },
+ {
+  "en": "By will of Night.",
+  "vi_variants": [
+   "Theo ý chí của Đêm.",
+   "Theo ý Đêm."
+  ],
+  "vi_pho_bien": "Theo ý chí của Đêm.",
+  "vi_vi_du": "Theo ý Đêm.",
+  "key_vi_du": "_EnemyData_Polyphemus.en.sjson::Medea_0344"
+ },
+ {
+  "en": "The Moon is full...",
+  "vi_variants": [
+   "Trăng tròn vành vạnh...",
+   "Trăng tròn..."
+  ],
+  "vi_pho_bien": "Trăng tròn vành vạnh...",
+  "vi_vi_du": "Trăng tròn...",
+  "key_vi_du": "_EnemyData_Polyphemus.en.sjson::Medea_0349"
+ },
+ {
+  "en": "Really.",
+  "vi_variants": [
+   "Thật sao.",
+   "Thật đấy à.",
+   "Thật đấy."
+  ],
+  "vi_pho_bien": "Thật sao.",
+  "vi_vi_du": "Thật đấy à.",
+  "key_vi_du": "_HeroData.en.sjson::Melinoe_0324"
+ },
+ {
+  "en": "Oh great.",
+  "vi_variants": [
+   "Ồ tuyệt thật đấy.",
+   "Tuyệt thật."
+  ],
+  "vi_pho_bien": "Ồ tuyệt thật đấy.",
+  "vi_vi_du": "Tuyệt thật.",
+  "key_vi_du": "_NPCData.en.sjson::Melinoe_3066"
+ },
+ {
+  "en": "I {#Emph}see {#Prev}you.",
+  "vi_variants": [
+   "Ta {#Emph}thấy {#Prev}ngươi rồi.",
+   "Tao {#Emph}thấy {#Prev}mày rồi nhé."
+  ],
+  "vi_pho_bien": "Ta {#Emph}thấy {#Prev}ngươi rồi.",
+  "vi_vi_du": "Tao {#Emph}thấy {#Prev}mày rồi nhé.",
+  "key_vi_du": "_WeaponData_Polyphemus.en.sjson::Polyphemus_0245"
+ },
+ {
+  "en": "Wake up down there!",
+  "vi_variants": [
+   "Dưới kia mau thức dậy đi!",
+   "Dậy đi lũ dưới kia!"
+  ],
+  "vi_pho_bien": "Dưới kia mau thức dậy đi!",
+  "vi_vi_du": "Dậy đi lũ dưới kia!",
+  "key_vi_du": "_EnemyData_Polyphemus.en.sjson::Polyphemus_0363"
+ },
+ {
+  "en": "Ah-{#Emph}ha!",
+  "vi_variants": [
+   "A-{#Emph}ha!",
+   "À-{#Emph}ha!"
+  ],
+  "vi_pho_bien": "A-{#Emph}ha!",
+  "vi_vi_du": "À-{#Emph}ha!",
+  "key_vi_du": "_EnemyData_Polyphemus.en.sjson::Polyphemus_0039"
+ },
+ {
+  "en": "You're mine.",
+  "vi_variants": [
+   "Mày là của tao.",
+   "Mi là của ta.",
+   "Ngươi là của ta."
+  ],
+  "vi_pho_bien": "Mày là của tao.",
+  "vi_vi_du": "Mi là của ta.",
+  "key_vi_du": "_HarvestData.en.sjson::Nemesis_0192"
+ },
+ {
+  "en": "No you don't!",
+  "vi_variants": [
+   "Đừng hòng thoát nhé!",
+   "Không được đâu!"
+  ],
+  "vi_pho_bien": "Đừng hòng thoát nhé!",
+  "vi_vi_du": "Không được đâu!",
+  "key_vi_du": "_NPCData_Dionysus.en.sjson::Dionysus_0069"
+ },
+ {
+  "en": "Hello!",
+  "vi_variants": [
+   "Chào con!",
+   "Xin chào!"
+  ],
+  "vi_pho_bien": "Chào con!",
+  "vi_vi_du": "Xin chào!",
+  "key_vi_du": "_NPCData_Hades.en.sjson::Persephone_0055"
+ },
+ {
+  "en": "How about {#Emph}no.",
+  "vi_variants": [
+   "Nói {#Emph}không là không.",
+   "{#Emph}Không đời nào."
+  ],
+  "vi_pho_bien": "Nói {#Emph}không là không.",
+  "vi_vi_du": "{#Emph}Không đời nào.",
+  "key_vi_du": "_RoomData.en.sjson::Chronos_0583"
+ },
+ {
+  "en": "Come on.",
+  "vi_variants": [
+   "Nào.",
+   "Nhào vô."
+  ],
+  "vi_pho_bien": "Nào.",
+  "vi_vi_du": "Nhào vô.",
+  "key_vi_du": "_EnemyData_Prometheus.en.sjson::Prometheus_0196"
+ },
+ {
+  "en": "Back off!",
+  "vi_variants": [
+   "Tránh ra mau!",
+   "Tránh ra!",
+   "Lui ra!",
+   "Lùi lại!"
+  ],
+  "vi_pho_bien": "Tránh ra mau!",
+  "vi_vi_du": "Tránh ra!",
+  "key_vi_du": "_HeroData.en.sjson::Arachne_0231"
+ },
+ {
+  "en": "See you later!",
+  "vi_variants": [
+   "Gặp sau nhé!",
+   "Hẹn gặp lại!",
+   "Hẹn gặp lại sau!"
+  ],
+  "vi_pho_bien": "Gặp sau nhé!",
+  "vi_vi_du": "Hẹn gặp lại!",
+  "key_vi_du": "_NPCData_Eris.en.sjson::ErisField_0033"
+ },
+ {
+  "en": "Go!",
+  "vi_variants": [
+   "Tiến lên!",
+   "Lên!"
+  ],
+  "vi_pho_bien": "Tiến lên!",
+  "vi_vi_du": "Lên!",
+  "key_vi_du": "_EnemyData_Prometheus.en.sjson::Prometheus_0499"
+ },
+ {
+  "en": "Burn...!",
+  "vi_variants": [
+   "Bùng cháy...!",
+   "Cháy đi...!"
+  ],
+  "vi_pho_bien": "Bùng cháy...!",
+  "vi_vi_du": "Cháy đi...!",
+  "key_vi_du": "_EnemyData_Prometheus.en.sjson::Prometheus_0514"
+ },
+ {
+  "en": "Too slow.",
+  "vi_variants": [
+   "Quá chậm.",
+   "Chậm quá rồi.",
+   "Chậm quá."
+  ],
+  "vi_pho_bien": "Quá chậm.",
+  "vi_vi_du": "Chậm quá rồi.",
+  "key_vi_du": "_EnemyData_Zagreus.en.sjson::Zagreus_0295"
+ },
+ {
+  "en": "Couldn't wait?",
+  "vi_variants": [
+   "Không đợi được?",
+   "Không thể chờ thêm được sao?"
+  ],
+  "vi_pho_bien": "Không đợi được?",
+  "vi_vi_du": "Không thể chờ thêm được sao?",
+  "key_vi_du": "_EnemyData_Prometheus.en.sjson::Prometheus_0230"
+ },
+ {
+  "en": "Hit me!",
+  "vi_variants": [
+   "Đánh tao!",
+   "Đánh ta đi!"
+  ],
+  "vi_pho_bien": "Đánh tao!",
+  "vi_vi_du": "Đánh ta đi!",
+  "key_vi_du": "_EnemyData_Scylla.en.sjson::Scylla_0108"
+ },
+ {
+  "en": "Finally...",
+  "vi_variants": [
+   "Cuối cùng cũng xong...",
+   "Cuối cùng..."
+  ],
+  "vi_pho_bien": "Cuối cùng cũng xong...",
+  "vi_vi_du": "Cuối cùng...",
+  "key_vi_du": "_EnemyData_Scylla.en.sjson::Melinoe_1102"
+ },
+ {
+  "en": "Peace and quiet.",
+  "vi_variants": [
+   "Yên tĩnh quá.",
+   "Bình yên và tĩnh lặng rồi."
+  ],
+  "vi_pho_bien": "Yên tĩnh quá.",
+  "vi_vi_du": "Bình yên và tĩnh lặng rồi.",
+  "key_vi_du": "_EnemyData_Scylla.en.sjson::MelinoeField_0098"
+ },
+ {
+  "en": "You again...",
+  "vi_variants": [
+   "Lại là cô à...",
+   "Lại là ngươi..."
+  ],
+  "vi_pho_bien": "Lại là cô à...",
+  "vi_vi_du": "Lại là ngươi...",
+  "key_vi_du": "_EnemyData_Scylla.en.sjson::Scylla_0067"
+ },
+ {
+  "en": "Look, everyone!",
+  "vi_variants": [
+   "Nhìn kìa mọi người ơi!",
+   "Nhìn kìa, mọi người!"
+  ],
+  "vi_pho_bien": "Nhìn kìa mọi người ơi!",
+  "vi_vi_du": "Nhìn kìa, mọi người!",
+  "key_vi_du": "_EnemyData_Scylla.en.sjson::Scylla_0349"
+ },
+ {
+  "en": "Whoa!",
+  "vi_variants": [
+   "Ối!",
+   "Úi!"
+  ],
+  "vi_pho_bien": "Ối!",
+  "vi_vi_du": "Úi!",
+  "key_vi_du": "_EnemyData_Traps.en.sjson::Melinoe_1928"
+ },
+ {
+  "en": "See that?",
+  "vi_variants": [
+   "Thấy không?",
+   "Thấy chưa?"
+  ],
+  "vi_pho_bien": "Thấy không?",
+  "vi_vi_du": "Thấy chưa?",
+  "key_vi_du": "_EnemyData_Traps.en.sjson::ErisField_0418"
+ },
+ {
+  "en": "You all right?",
+  "vi_variants": [
+   "Ổn chứ?",
+   "Muội ổn chứ?"
+  ],
+  "vi_pho_bien": "Ổn chứ?",
+  "vi_vi_du": "Muội ổn chứ?",
+  "key_vi_du": "_EnemyData_Zagreus.en.sjson::Zagreus_0288"
+ },
+ {
+  "en": "Still going?",
+  "vi_variants": [
+   "Vẫn trụ được chứ?",
+   "Còn tiếp?"
+  ],
+  "vi_pho_bien": "Vẫn trụ được chứ?",
+  "vi_vi_du": "Còn tiếp?",
+  "key_vi_du": "_NPCData_Nemesis.en.sjson::NemesisField_0314"
+ },
+ {
+  "en": "There we go.",
+  "vi_variants": [
+   "Rồi đó.",
+   "Đấy, thế chứ."
+  ],
+  "vi_pho_bien": "Rồi đó.",
+  "vi_vi_du": "Đấy, thế chứ.",
+  "key_vi_du": "_NPCData_Dora.en.sjson::Dora_0262"
+ },
+ {
+  "en": "Come on now.",
+  "vi_variants": [
+   "Thôi nào.",
+   "Nào, tới đi."
+  ],
+  "vi_pho_bien": "Thôi nào.",
+  "vi_vi_du": "Nào, tới đi.",
+  "key_vi_du": "_EnemyData_Zagreus.en.sjson::Zagreus_0296"
+ },
+ {
+  "en": "Easy now...!",
+  "vi_variants": [
+   "Từ từ nào...!",
+   "Bình tĩnh nào...!"
+  ],
+  "vi_pho_bien": "Từ từ nào...!",
+  "vi_vi_du": "Bình tĩnh nào...!",
+  "key_vi_du": "_WeaponData_InfestedCerberus.en.sjson::MelinoeField_1234"
+ },
+ {
+  "en": "If you insist!",
+  "vi_variants": [
+   "Nếu con đã quyết!",
+   "Nếu huynh muốn!"
+  ],
+  "vi_pho_bien": "Nếu con đã quyết!",
+  "vi_vi_du": "Nếu huynh muốn!",
+  "key_vi_du": "_NPCData.en.sjson::Hera_0224"
+ },
+ {
+  "en": "Back again?",
+  "vi_variants": [
+   "Lại quay lại à?",
+   "Lại về à?"
+  ],
+  "vi_pho_bien": "Lại quay lại à?",
+  "vi_vi_du": "Lại về à?",
+  "key_vi_du": "_EnemyData_Zagreus.en.sjson::Zagreus_0172"
+ },
+ {
+  "en": "Fine!",
+  "vi_variants": [
+   "Được!",
+   "Được thôi!"
+  ],
+  "vi_pho_bien": "Được!",
+  "vi_vi_du": "Được thôi!",
+  "key_vi_du": "_NPCData_Artemis.en.sjson::Artemis_0434"
+ },
+ {
+  "en": "Got you {#Emph}this!",
+  "vi_variants": [
+   "Tặng cậu {#Emph}cái này!",
+   "Tóm {#Emph}này!"
+  ],
+  "vi_pho_bien": "Tặng cậu {#Emph}cái này!",
+  "vi_vi_du": "Tóm {#Emph}này!",
+  "key_vi_du": "_EnemyData_Zagreus.en.sjson::Zagreus_0241"
+ },
+ {
+  "en": "Go, Toula!",
+  "vi_variants": [
+   "Đi nào, Toula!",
+   "Lên nào, Toula!"
+  ],
+  "vi_pho_bien": "Đi nào, Toula!",
+  "vi_vi_du": "Lên nào, Toula!",
+  "key_vi_du": "_FamiliarData.en.sjson::Melinoe_3970"
+ },
+ {
+  "en": "See you around.",
+  "vi_variants": [
+   "Hẹn gặp lại.",
+   "Hẹn gặp lại nhé."
+  ],
+  "vi_pho_bien": "Hẹn gặp lại.",
+  "vi_vi_du": "Hẹn gặp lại nhé.",
+  "key_vi_du": "_FamiliarPresentation.en.sjson::MelinoeField_2823"
+ },
+ {
+  "en": "Go on.",
+  "vi_variants": [
+   "Nói tiếp.",
+   "Tiếp tục đi.",
+   "Tiếp đi."
+  ],
+  "vi_pho_bien": "Nói tiếp.",
+  "vi_vi_du": "Tiếp tục đi.",
+  "key_vi_du": "_NPCData_Odysseus.en.sjson::Odysseus_0308"
+ },
+ {
+  "en": "Carefully...",
+  "vi_variants": [
+   "Nhẹ nhàng nào...",
+   "Cẩn thận nào..."
+  ],
+  "vi_pho_bien": "Nhẹ nhàng nào...",
+  "vi_vi_du": "Cẩn thận nào...",
+  "key_vi_du": "_GhostAdminData.en.sjson::Hecate_0181"
+ },
+ {
+  "en": "So it shall be.",
+  "vi_variants": [
+   "Sẽ như vậy.",
+   "Cứ như vậy đi."
+  ],
+  "vi_pho_bien": "Sẽ như vậy.",
+  "vi_vi_du": "Cứ như vậy đi.",
+  "key_vi_du": "_GhostAdminData.en.sjson::Hecate_0480"
+ },
+ {
+  "en": "By your will.",
+  "vi_variants": [
+   "Theo ý Ngài.",
+   "Theo ý con."
+  ],
+  "vi_pho_bien": "Theo ý Ngài.",
+  "vi_vi_du": "Theo ý con.",
+  "key_vi_du": "_NPCData.en.sjson::Melinoe_5068"
+ },
+ {
+  "en": "As you say.",
+  "vi_variants": [
+   "Như con nói.",
+   "Như cháu nói.",
+   "Tùy con."
+  ],
+  "vi_pho_bien": "Như con nói.",
+  "vi_vi_du": "Như cháu nói.",
+  "key_vi_du": "_NPCData.en.sjson::Demeter_0210"
+ },
+ {
+  "en": "Hear that, Selene?",
+  "vi_variants": [
+   "Nghe chứ, Selene?",
+   "Nghe thấy không, Selene?"
+  ],
+  "vi_pho_bien": "Nghe chứ, Selene?",
+  "vi_vi_du": "Nghe thấy không, Selene?",
+  "key_vi_du": "_GhostAdminData.en.sjson::Hecate_0686"
+ },
+ {
+  "en": "Victory!",
+  "vi_variants": [
+   "Thắng!",
+   "Thắng rồi!"
+  ],
+  "vi_pho_bien": "Thắng!",
+  "vi_vi_du": "Thắng rồi!",
+  "key_vi_du": "_HarvestData.en.sjson::MelinoeField_1354"
+ },
+ {
+  "en": "Got one!",
+  "vi_variants": [
+   "Được một con!",
+   "Hạ một tên!"
+  ],
+  "vi_pho_bien": "Được một con!",
+  "vi_vi_du": "Hạ một tên!",
+  "key_vi_du": "_NPCData_Icarus.en.sjson::Icarus_0305"
+ },
+ {
+  "en": "Freshly caught.",
+  "vi_variants": [
+   "Vừa câu được.",
+   "Mới bắt tươi."
+  ],
+  "vi_pho_bien": "Vừa câu được.",
+  "vi_vi_du": "Mới bắt tươi.",
+  "key_vi_du": "_HarvestData.en.sjson::Melinoe_3545"
+ },
+ {
+  "en": "Figures.",
+  "vi_variants": [
+   "Biết ngay mà.",
+   "Hiểu mà."
+  ],
+  "vi_pho_bien": "Biết ngay mà.",
+  "vi_vi_du": "Hiểu mà.",
+  "key_vi_du": "_HarvestData.en.sjson::MelinoeField_1360"
+ },
+ {
+  "en": "I'm out.",
+  "vi_variants": [
+   "Tôi chuồn.",
+   "Tao chuồn.",
+   "Ta hết rồi."
+  ],
+  "vi_pho_bien": "Tôi chuồn.",
+  "vi_vi_du": "Tao chuồn.",
+  "key_vi_du": "_HeroData.en.sjson::Melinoe_0389"
+ },
+ {
+  "en": "Got you again.",
+  "vi_variants": [
+   "Lại tóm được cô.",
+   "Lại dính nữa rồi."
+  ],
+  "vi_pho_bien": "Lại tóm được cô.",
+  "vi_vi_du": "Lại dính nữa rồi.",
+  "key_vi_du": "_HeroData.en.sjson::Medea_0393"
+ },
+ {
+  "en": "Already...?",
+  "vi_variants": [
+   "Xong rồi sao...?",
+   "Xong rồi...?"
+  ],
+  "vi_pho_bien": "Xong rồi sao...?",
+  "vi_vi_du": "Xong rồi...?",
+  "key_vi_du": "_HeroData.en.sjson::Medea_0402"
+ },
+ {
+  "en": "May I...?",
+  "vi_variants": [
+   "Cho ta xin nhé...?",
+   "Cho ta...?"
+  ],
+  "vi_pho_bien": "Cho ta xin nhé...?",
+  "vi_vi_du": "Cho ta...?",
+  "key_vi_du": "_HeroData.en.sjson::Melinoe_2368"
+ },
+ {
+  "en": "Excuse me...!",
+  "vi_variants": [
+   "Xin nhường đường...!",
+   "Xin lỗi nhé...!"
+  ],
+  "vi_pho_bien": "Xin nhường đường...!",
+  "vi_vi_du": "Xin lỗi nhé...!",
+  "key_vi_du": "_HeroData.en.sjson::MelinoeField_0589"
+ },
+ {
+  "en": "Be at peace.",
+  "vi_variants": [
+   "Hãy yên lòng.",
+   "Yên nghỉ nhé."
+  ],
+  "vi_pho_bien": "Hãy yên lòng.",
+  "vi_vi_du": "Yên nghỉ nhé.",
+  "key_vi_du": "_NPCData_Echo.en.sjson::MelinoeField_1198"
+ },
+ {
+  "en": "Farewell.",
+  "vi_variants": [
+   "Vĩnh biệt.",
+   "Tạm biệt."
+  ],
+  "vi_pho_bien": "Vĩnh biệt.",
+  "vi_vi_du": "Tạm biệt.",
+  "key_vi_du": "_HeroData.en.sjson::Melinoe_1253"
+ },
+ {
+  "en": "See you.",
+  "vi_variants": [
+   "Hẹn gặp.",
+   "Hẹn gặp lại.",
+   "Gặp lại sau."
+  ],
+  "vi_pho_bien": "Hẹn gặp.",
+  "vi_vi_du": "Hẹn gặp lại.",
+  "key_vi_du": "_NPCData_Artemis.en.sjson::Artemis_0134"
+ },
+ {
+  "en": "Nicely done.",
+  "vi_variants": [
+   "Làm tốt lắm.",
+   "Hay lắm.",
+   "Khéo lắm."
+  ],
+  "vi_pho_bien": "Làm tốt lắm.",
+  "vi_vi_du": "Hay lắm.",
+  "key_vi_du": "_NPCData_Icarus.en.sjson::MelinoeField_2233"
+ },
+ {
+  "en": "I know...!",
+  "vi_variants": [
+   "Ta biết rồi...!",
+   "Ta biết mà...!"
+  ],
+  "vi_pho_bien": "Ta biết rồi...!",
+  "vi_vi_du": "Ta biết mà...!",
+  "key_vi_du": "_HubPresentation.en.sjson::Eris_0340"
+ },
+ {
+  "en": "Stand and fight!",
+  "vi_variants": [
+   "Đứng lại mà đánh!",
+   "Đứng lại chiến đấu!"
+  ],
+  "vi_pho_bien": "Đứng lại mà đánh!",
+  "vi_vi_du": "Đứng lại chiến đấu!",
+  "key_vi_du": "_HeroData.en.sjson::HecateField_0067"
+ },
+ {
+  "en": "Here.",
+  "vi_variants": [
+   "Cầm lấy.",
+   "Đây.",
+   "Này."
+  ],
+  "vi_pho_bien": "Cầm lấy.",
+  "vi_vi_du": "Đây.",
+  "key_vi_du": "_NPCData.en.sjson::Nyx_0031"
+ },
+ {
+  "en": "Going.",
+  "vi_variants": [
+   "Đi.",
+   "Đi đây."
+  ],
+  "vi_pho_bien": "Đi.",
+  "vi_vi_du": "Đi đây.",
+  "key_vi_du": "_HeroData.en.sjson::MelinoeField_0790"
+ },
+ {
+  "en": "Wha?",
+  "vi_variants": [
+   "Gì?",
+   "Hả?"
+  ],
+  "vi_pho_bien": "Gì?",
+  "vi_vi_du": "Hả?",
+  "key_vi_du": "_NPCData_Narcissus.en.sjson::Narcissus_0235"
+ },
+ {
+  "en": "Got something for ya!",
+  "vi_variants": [
+   "Có quà cho ngươi nè!",
+   "Có quà cho ngươi đây!"
+  ],
+  "vi_pho_bien": "Có quà cho ngươi nè!",
+  "vi_vi_du": "Có quà cho ngươi đây!",
+  "key_vi_du": "_WeaponData_Polyphemus.en.sjson::Polyphemus_0225"
+ },
+ {
+  "en": "Ill-advised.",
+  "vi_variants": [
+   "Thiếu khôn ngoan.",
+   "Dại dột."
+  ],
+  "vi_pho_bien": "Thiếu khôn ngoan.",
+  "vi_vi_du": "Dại dột.",
+  "key_vi_du": "_NPCData_Heracles.en.sjson::Heracles_0100"
+ },
+ {
+  "en": "Beg pardon.",
+  "vi_variants": [
+   "Xin lỗi.",
+   "Xin nhường đường."
+  ],
+  "vi_pho_bien": "Xin lỗi.",
+  "vi_vi_du": "Xin nhường đường.",
+  "key_vi_du": "_NPCData_Athena.en.sjson::Athena_0063"
+ },
+ {
+  "en": "Out of my way.",
+  "vi_variants": [
+   "Tránh đường ta ra.",
+   "Tránh đường ta.",
+   "Tránh đường tao.",
+   "Tránh đường cho ta."
+  ],
+  "vi_pho_bien": "Tránh đường ta ra.",
+  "vi_vi_du": "Tránh đường ta.",
+  "key_vi_du": "_HeroData.en.sjson::MelinoeField_2111"
+ },
+ {
+  "en": "Stand down.",
+  "vi_variants": [
+   "Lùi lại.",
+   "Lui ra."
+  ],
+  "vi_pho_bien": "Lùi lại.",
+  "vi_vi_du": "Lui ra.",
+  "key_vi_du": "_HeroData.en.sjson::MelinoeField_2113"
+ },
+ {
+  "en": "Farewell!",
+  "vi_variants": [
+   "Tạm biệt nhé!",
+   "Tạm biệt!"
+  ],
+  "vi_pho_bien": "Tạm biệt nhé!",
+  "vi_vi_du": "Tạm biệt!",
+  "key_vi_du": "_NPCData.en.sjson::Zeus_0304"
+ },
+ {
+  "en": "There they are...",
+  "vi_variants": [
+   "Chúng kia rồi...",
+   "Họ kia rồi..."
+  ],
+  "vi_pho_bien": "Chúng kia rồi...",
+  "vi_vi_du": "Họ kia rồi...",
+  "key_vi_du": "_HeroData.en.sjson::MelinoeField_2502"
+ },
+ {
+  "en": "I have this...",
+  "vi_variants": [
+   "Ta có cái này...",
+   "Ta lo được..."
+  ],
+  "vi_pho_bien": "Ta có cái này...",
+  "vi_vi_du": "Ta lo được...",
+  "key_vi_du": "_MetaUpgradeCardScreenData.en.sjson::Melinoe_1139"
+ },
+ {
+  "en": "Lord Zeus...!",
+  "vi_variants": [
+   "Ngài Zeus...!",
+   "Chúa tể Zeus...!"
+  ],
+  "vi_pho_bien": "Ngài Zeus...!",
+  "vi_vi_du": "Chúa tể Zeus...!",
+  "key_vi_du": "_LootData_Zeus.en.sjson::Zagreus_0353"
+ },
+ {
+  "en": "Another victory.",
+  "vi_variants": [
+   "Lại một thắng lợi.",
+   "Lại một chiến thắng."
+  ],
+  "vi_pho_bien": "Lại một thắng lợi.",
+  "vi_vi_du": "Lại một chiến thắng.",
+  "key_vi_du": "_NPCData_Heracles.en.sjson::Heracles_0129"
+ },
+ {
+  "en": "Behold.",
+  "vi_variants": [
+   "Chiêm ngưỡng đi.",
+   "Hãy chiêm ngưỡng đây.",
+   "Hãy nhìn xem."
+  ],
+  "vi_pho_bien": "Chiêm ngưỡng đi.",
+  "vi_vi_du": "Hãy chiêm ngưỡng đây.",
+  "key_vi_du": "_HeroData.en.sjson::Skelly_0113"
+ },
+ {
+  "en": "Very well.",
+  "vi_variants": [
+   "Được lắm.",
+   "Được thôi.",
+   "Tốt lắm."
+  ],
+  "vi_pho_bien": "Được lắm.",
+  "vi_vi_du": "Được thôi.",
+  "key_vi_du": "_MetaUpgradeCardScreenData.en.sjson::Melinoe_0549"
+ },
+ {
+  "en": "Smart.",
+  "vi_variants": [
+   "Khôn ngoan.",
+   "Khôn."
+  ],
+  "vi_pho_bien": "Khôn ngoan.",
+  "vi_vi_du": "Khôn.",
+  "key_vi_du": "_HeroData.en.sjson::Artemis_0370"
+ },
+ {
+  "en": "Coming right up.",
+  "vi_variants": [
+   "Đến ngay.",
+   "Có ngay đây."
+  ],
+  "vi_pho_bien": "Đến ngay.",
+  "vi_vi_du": "Có ngay đây.",
+  "key_vi_du": "_HeroData.en.sjson::Dionysus_0090"
+ },
+ {
+  "en": "Absolutely.",
+  "vi_variants": [
+   "Nhất định rồi.",
+   "Chuẩn luôn.",
+   "Tuyệt đối.",
+   "Tuyệt đối luôn."
+  ],
+  "vi_pho_bien": "Nhất định rồi.",
+  "vi_vi_du": "Chuẩn luôn.",
+  "key_vi_du": "_HeroData.en.sjson::Dionysus_0094"
+ },
+ {
+  "en": "Enjoy!",
+  "vi_variants": [
+   "Tận hưởng nhé!",
+   "Tận hưởng!",
+   "Tận hưởng đi nhé!"
+  ],
+  "vi_pho_bien": "Tận hưởng nhé!",
+  "vi_vi_du": "Tận hưởng!",
+  "key_vi_du": "_HeroData.en.sjson::Dionysus_0096"
+ },
+ {
+  "en": "Cheers.",
+  "vi_variants": [
+   "Cạn ly.",
+   "Dô rượu."
+  ],
+  "vi_pho_bien": "Cạn ly.",
+  "vi_vi_du": "Dô rượu.",
+  "key_vi_du": "_HeroData.en.sjson::Dionysus_0086"
+ },
+ {
+  "en": "Be well.",
+  "vi_variants": [
+   "Bảo trọng nhé.",
+   "Bảo trọng."
+  ],
+  "vi_pho_bien": "Bảo trọng nhé.",
+  "vi_vi_du": "Bảo trọng.",
+  "key_vi_du": "_MarketData.en.sjson::Melinoe_2353"
+ },
+ {
+  "en": "Till next we meet.",
+  "vi_variants": [
+   "Hẹn ngày tái ngộ.",
+   "Hẹn lần sau gặp lại.",
+   "Hẹn gặp lại lần sau."
+  ],
+  "vi_pho_bien": "Hẹn ngày tái ngộ.",
+  "vi_vi_du": "Hẹn lần sau gặp lại.",
+  "key_vi_du": "_NPCData_Echo.en.sjson::MelinoeField_1200"
+ },
+ {
+  "en": "Take care, then.",
+  "vi_variants": [
+   "Bảo trọng đấy.",
+   "Vậy giữ gìn nhé."
+  ],
+  "vi_pho_bien": "Bảo trọng đấy.",
+  "vi_vi_du": "Vậy giữ gìn nhé.",
+  "key_vi_du": "_HeroData.en.sjson::Hades_0245"
+ },
+ {
+  "en": "Of course.",
+  "vi_variants": [
+   "Tất nhiên rồi.",
+   "Đương nhiên.",
+   "Tất nhiên.",
+   "Dĩ nhiên."
+  ],
+  "vi_pho_bien": "Tất nhiên rồi.",
+  "vi_vi_du": "Đương nhiên.",
+  "key_vi_du": "_LootData_Ares.en.sjson::Ares_0127"
+ },
+ {
+  "en": "Granted.",
+  "vi_variants": [
+   "Chuẩn tấu.",
+   "Được chấp thuận."
+  ],
+  "vi_pho_bien": "Chuẩn tấu.",
+  "vi_vi_du": "Được chấp thuận.",
+  "key_vi_du": "_HeroData.en.sjson::Hades_0250"
+ },
+ {
+  "en": "Shadows conceal you.",
+  "vi_variants": [
+   "Bóng tối che chở người.",
+   "Bóng tối sẽ che chở cho con.",
+   "Nguyện bóng tối che chở con.",
+   "Bóng tối che chở ngươi."
+  ],
+  "vi_pho_bien": "Bóng tối che chở người.",
+  "vi_vi_du": "Bóng tối sẽ che chở cho con.",
+  "key_vi_du": "_NPCData_Hecate.en.sjson::Hecate_0466"
+ },
+ {
+  "en": "Go.",
+  "vi_variants": [
+   "Đi.",
+   "Đi đi."
+  ],
+  "vi_pho_bien": "Đi.",
+  "vi_vi_du": "Đi đi.",
+  "key_vi_du": "_HeroData.en.sjson::Hades_0072"
+ },
+ {
+  "en": "Bye now.",
+  "vi_variants": [
+   "Tạm biệt nhé.",
+   "Bye nhé."
+  ],
+  "vi_pho_bien": "Tạm biệt nhé.",
+  "vi_vi_du": "Bye nhé.",
+  "key_vi_du": "_NPCData_Dora.en.sjson::Dora_0234"
+ },
+ {
+  "en": "Done!",
+  "vi_variants": [
+   "Xong!",
+   "Xong rồi!"
+  ],
+  "vi_pho_bien": "Xong!",
+  "vi_vi_du": "Xong rồi!",
+  "key_vi_du": "_LootData_Aphrodite.en.sjson::Aphrodite_0168"
+ },
+ {
+  "en": "That is for you.",
+  "vi_variants": [
+   "Cái này dành cho ngươi.",
+   "Món đó dành cho ngươi."
+  ],
+  "vi_pho_bien": "Cái này dành cho ngươi.",
+  "vi_vi_du": "Món đó dành cho ngươi.",
+  "key_vi_du": "_HeroData.en.sjson::Skelly_0121"
+ },
+ {
+  "en": "The Testament of Night.",
+  "vi_variants": [
+   "Di Huấn của Màn Đêm.",
+   "Di huấn Màn Đêm."
+  ],
+  "vi_pho_bien": "Di Huấn của Màn Đêm.",
+  "vi_vi_du": "Di huấn Màn Đêm.",
+  "key_vi_du": "_ShrineData.en.sjson::Melinoe_2867"
+ },
+ {
+  "en": "Deal!",
+  "vi_variants": [
+   "Chốt!",
+   "Chốt nhé!"
+  ],
+  "vi_pho_bien": "Chốt!",
+  "vi_vi_du": "Chốt nhé!",
+  "key_vi_du": "_HubPresentation.en.sjson::Melinoe_0677"
+ },
+ {
+  "en": "Hm.",
+  "vi_variants": [
+   "Hừm.",
+   "Hừ."
+  ],
+  "vi_pho_bien": "Hừm.",
+  "vi_vi_du": "Hừ.",
+  "key_vi_du": "_NPCData.en.sjson::Moros_0085"
+ },
+ {
+  "en": "Which one...",
+  "vi_variants": [
+   "Cái nào...",
+   "Cái nào đây..."
+  ],
+  "vi_pho_bien": "Cái nào...",
+  "vi_vi_du": "Cái nào đây...",
+  "key_vi_du": "_KeepsakeData.en.sjson::Melinoe_2642"
+ },
+ {
+  "en": "Might as well.",
+  "vi_variants": [
+   "Cũng đành vậy.",
+   "Lấy luôn cũng được."
+  ],
+  "vi_pho_bien": "Cũng đành vậy.",
+  "vi_vi_du": "Lấy luôn cũng được.",
+  "key_vi_du": "_NPCData_Nemesis.en.sjson::Nemesis_0473"
+ },
+ {
+  "en": "What's that you got?",
+  "vi_variants": [
+   "Cô cầm gì đấy?",
+   "Bạn cầm gì đấy?"
+  ],
+  "vi_pho_bien": "Cô cầm gì đấy?",
+  "vi_vi_du": "Bạn cầm gì đấy?",
+  "key_vi_du": "_NPCData_Dionysus.en.sjson::Dionysus_0133"
+ },
+ {
+  "en": "My pleasure.",
+  "vi_variants": [
+   "Vinh hạnh của tao.",
+   "Ta rất vui lòng."
+  ],
+  "vi_pho_bien": "Vinh hạnh của tao.",
+  "vi_vi_du": "Ta rất vui lòng.",
+  "key_vi_du": "_LootData_Aphrodite.en.sjson::Aphrodite_0106"
+ },
+ {
+  "en": "Sure!",
+  "vi_variants": [
+   "Chắc chắn rồi!",
+   "Được chứ!",
+   "Được thôi!"
+  ],
+  "vi_pho_bien": "Chắc chắn rồi!",
+  "vi_vi_du": "Được chứ!",
+  "key_vi_du": "_LootData_Hestia.en.sjson::Hestia_0173"
+ },
+ {
+  "en": "Of course!",
+  "vi_variants": [
+   "Dĩ nhiên!",
+   "Dĩ nhiên rồi!",
+   "Tất nhiên rồi!"
+  ],
+  "vi_pho_bien": "Dĩ nhiên!",
+  "vi_vi_du": "Dĩ nhiên rồi!",
+  "key_vi_du": "_LootData_Zeus.en.sjson::Zeus_0246"
+ },
+ {
+  "en": "Certainly!",
+  "vi_variants": [
+   "Chắc chắn rồi!",
+   "Chắc chắn!"
+  ],
+  "vi_pho_bien": "Chắc chắn rồi!",
+  "vi_vi_du": "Chắc chắn!",
+  "key_vi_du": "_LootData_Aphrodite.en.sjson::Aphrodite_0173"
+ },
+ {
+  "en": "Right!",
+  "vi_variants": [
+   "Đúng vậy!",
+   "Chuẩn luôn!"
+  ],
+  "vi_pho_bien": "Đúng vậy!",
+  "vi_vi_du": "Chuẩn luôn!",
+  "key_vi_du": "_LootData_Hephaestus.en.sjson::Hephaestus_0177"
+ },
+ {
+  "en": "As you wish.",
+  "vi_variants": [
+   "Theo ý ngươi.",
+   "Như ý cháu."
+  ],
+  "vi_pho_bien": "Theo ý ngươi.",
+  "vi_vi_du": "Như ý cháu.",
+  "key_vi_du": "_LootData_Demeter.en.sjson::Demeter_0144"
+ },
+ {
+  "en": "As you desire.",
+  "vi_variants": [
+   "Như ngươi mong muốn.",
+   "Theo ý ngươi."
+  ],
+  "vi_pho_bien": "Như ngươi mong muốn.",
+  "vi_vi_du": "Theo ý ngươi.",
+  "key_vi_du": "_LootData_Ares.en.sjson::Ares_0130"
+ },
+ {
+  "en": "And to you.",
+  "vi_variants": [
+   "Ngươi cũng vậy.",
+   "Và gửi lời tới ngươi.",
+   "Cháu cũng vậy nhé."
+  ],
+  "vi_pho_bien": "Ngươi cũng vậy.",
+  "vi_vi_du": "Và gửi lời tới ngươi.",
+  "key_vi_du": "_NPCData_Circe.en.sjson::Circe_0104"
+ },
+ {
+  "en": "For you.",
+  "vi_variants": [
+   "Cho ngươi.",
+   "Dành cho cháu.",
+   "Cho muội."
+  ],
+  "vi_pho_bien": "Cho ngươi.",
+  "vi_vi_du": "Dành cho cháu.",
+  "key_vi_du": "_NPCData_Artemis.en.sjson::Artemis_0113"
+ },
+ {
+  "en": "It is I.",
+  "vi_variants": [
+   "Chính là ta đây.",
+   "Ta đây."
+  ],
+  "vi_pho_bien": "Chính là ta đây.",
+  "vi_vi_du": "Ta đây.",
+  "key_vi_du": "_LootData_Demeter.en.sjson::Demeter_0134"
+ },
+ {
+  "en": "My greetings.",
+  "vi_variants": [
+   "Lời chào của ta.",
+   "Chào ngươi."
+  ],
+  "vi_pho_bien": "Lời chào của ta.",
+  "vi_vi_du": "Chào ngươi.",
+  "key_vi_du": "_NPCData.en.sjson::Moros_0088"
+ },
+ {
+  "en": "What's going on?",
+  "vi_variants": [
+   "Chuyện gì?",
+   "Có chuyện gì thế?"
+  ],
+  "vi_pho_bien": "Chuyện gì?",
+  "vi_vi_du": "Có chuyện gì thế?",
+  "key_vi_du": "_NPCData_Dora.en.sjson::Dora_0223"
+ },
+ {
+  "en": "It's her.",
+  "vi_variants": [
+   "Là bà ấy.",
+   "Là cô ta."
+  ],
+  "vi_pho_bien": "Là bà ấy.",
+  "vi_vi_du": "Là cô ta.",
+  "key_vi_du": "_LootData_Hera.en.sjson::Melinoe_1472"
+ },
+ {
+  "en": "Hey!",
+  "vi_variants": [
+   "Chào!",
+   "Này!"
+  ],
+  "vi_pho_bien": "Chào!",
+  "vi_vi_du": "Này!",
+  "key_vi_du": "_LootData_Hermes.en.sjson::Hermes_0130"
+ },
+ {
+  "en": "Easy.",
+  "vi_variants": [
+   "Dễ.",
+   "Dễ ợt."
+  ],
+  "vi_pho_bien": "Dễ.",
+  "vi_vi_du": "Dễ ợt.",
+  "key_vi_du": "_LootData_Hestia.en.sjson::Hestia_0177"
+ },
+ {
+  "en": "He's back...",
+  "vi_variants": [
+   "Hắn về rồi...",
+   "Bác ấy đã trở lại..."
+  ],
+  "vi_pho_bien": "Hắn về rồi...",
+  "vi_vi_du": "Bác ấy đã trở lại...",
+  "key_vi_du": "_LootData_Poseidon.en.sjson::Melinoe_1475"
+ },
+ {
+  "en": "I have returned.",
+  "vi_variants": [
+   "Ta đã trở lại.",
+   "Ta đã trở về."
+  ],
+  "vi_pho_bien": "Ta đã trở lại.",
+  "vi_vi_du": "Ta đã trở về.",
+  "key_vi_du": "_LootData_Selene.en.sjson::Selene_0118"
+ },
+ {
+  "en": "The choice is yours.",
+  "vi_variants": [
+   "Muội tự chọn.",
+   "Em có quyền lựa chọn."
+  ],
+  "vi_pho_bien": "Muội tự chọn.",
+  "vi_vi_du": "Em có quyền lựa chọn.",
+  "key_vi_du": "_LootData_Selene.en.sjson::Selene_0179"
+ },
+ {
+  "en": "Your choice?",
+  "vi_variants": [
+   "Lựa chọn của ngươi?",
+   "Em chọn gì?"
+  ],
+  "vi_pho_bien": "Lựa chọn của ngươi?",
+  "vi_vi_du": "Em chọn gì?",
+  "key_vi_du": "_LootData_Selene.en.sjson::Selene_0182"
+ },
+ {
+  "en": "Father...!",
+  "vi_variants": [
+   "Cha...!",
+   "Phụ vương...!"
+  ],
+  "vi_pho_bien": "Cha...!",
+  "vi_vi_du": "Phụ vương...!",
+  "key_vi_du": "_RoomDataI.en.sjson::MelinoeField_1519"
+ },
+ {
+  "en": "Indeed.",
+  "vi_variants": [
+   "Quả đúng như vậy.",
+   "Đúng.",
+   "Đúng vậy."
+  ],
+  "vi_pho_bien": "Quả đúng như vậy.",
+  "vi_vi_du": "Đúng.",
+  "key_vi_du": "_LootData_Zeus.en.sjson::Zeus_0311"
+ },
+ {
+  "en": "Over here.",
+  "vi_variants": [
+   "Qua đây.",
+   "Qua bên này."
+  ],
+  "vi_pho_bien": "Qua đây.",
+  "vi_vi_du": "Qua bên này.",
+  "key_vi_du": "_ObstacleData.en.sjson::Athena_0124"
+ },
+ {
+  "en": "You all right...?",
+  "vi_variants": [
+   "Muội ổn...?",
+   "Ổn chứ...?"
+  ],
+  "vi_pho_bien": "Muội ổn...?",
+  "vi_vi_du": "Ổn chứ...?",
+  "key_vi_du": "_NPCData_Icarus.en.sjson::Icarus_0122"
+ },
+ {
+  "en": "We welcome you.",
+  "vi_variants": [
+   "Bọn ta chào đón con.",
+   "Bọn ta chào đón ngươi."
+  ],
+  "vi_pho_bien": "Bọn ta chào đón con.",
+  "vi_vi_du": "Bọn ta chào đón ngươi.",
+  "key_vi_du": "_NPCData.en.sjson::Hera_0216"
+ },
+ {
+  "en": "I salute you.",
+  "vi_variants": [
+   "Ta chào ngươi.",
+   "Con xin chào Ngài."
+  ],
+  "vi_pho_bien": "Ta chào ngươi.",
+  "vi_vi_du": "Con xin chào Ngài.",
+  "key_vi_du": "_NPCData.en.sjson::Melinoe_5070"
+ },
+ {
+  "en": "Evening!",
+  "vi_variants": [
+   "Chào tối!",
+   "Chào buổi tối!"
+  ],
+  "vi_pho_bien": "Chào tối!",
+  "vi_vi_du": "Chào buổi tối!",
+  "key_vi_du": "_NPCData_Icarus.en.sjson::Icarus_0101"
+ },
+ {
+  "en": "Hey.",
+  "vi_variants": [
+   "Này.",
+   "Chào."
+  ],
+  "vi_pho_bien": "Này.",
+  "vi_vi_du": "Chào.",
+  "key_vi_du": "_NPCData_Artemis.en.sjson::Artemis_0243"
+ },
+ {
+  "en": "All clear.",
+  "vi_variants": [
+   "Sạch bóng.",
+   "Xong cả.",
+   "Sạch hết.",
+   "Sạch rồi."
+  ],
+  "vi_pho_bien": "Sạch bóng.",
+  "vi_vi_du": "Xong cả.",
+  "key_vi_du": "_NPCData_Artemis.en.sjson::Artemis_0088"
+ },
+ {
+  "en": "A brief word?",
+  "vi_variants": [
+   "Nói đôi lời?",
+   "Nói vài lời nhé?"
+  ],
+  "vi_pho_bien": "Nói đôi lời?",
+  "vi_vi_du": "Nói vài lời nhé?",
+  "key_vi_du": "_RoomDataP.en.sjson::Prometheus_0059"
+ },
+ {
+  "en": "You did it...",
+  "vi_variants": [
+   "Muội làm được...",
+   "Ngươi làm được..."
+  ],
+  "vi_pho_bien": "Muội làm được...",
+  "vi_vi_du": "Ngươi làm được...",
+  "key_vi_du": "_NPCData_Icarus.en.sjson::Icarus_0124"
+ },
+ {
+  "en": "To your success.",
+  "vi_variants": [
+   "Vì thành công của ngươi.",
+   "Chúc muội thắng."
+  ],
+  "vi_pho_bien": "Vì thành công của ngươi.",
+  "vi_vi_du": "Chúc muội thắng.",
+  "key_vi_du": "_NPCData_Moros.en.sjson::Moros_0090"
+ },
+ {
+  "en": "To victory.",
+  "vi_variants": [
+   "Về chiến thắng.",
+   "Vì chiến thắng.",
+   "Chúc khải hoàn."
+  ],
+  "vi_pho_bien": "Về chiến thắng.",
+  "vi_vi_du": "Vì chiến thắng.",
+  "key_vi_du": "_NPCData_Moros.en.sjson::Moros_0091"
+ },
+ {
+  "en": "Welcome back.",
+  "vi_variants": [
+   "Chào mừng trở lại.",
+   "Mừng trở lại."
+  ],
+  "vi_pho_bien": "Chào mừng trở lại.",
+  "vi_vi_du": "Mừng trở lại.",
+  "key_vi_du": "_NPCData.en.sjson::Zeus_0299"
+ },
+ {
+  "en": "What?",
+  "vi_variants": [
+   "Gì?",
+   "Hả?"
+  ],
+  "vi_pho_bien": "Gì?",
+  "vi_vi_du": "Hả?",
+  "key_vi_du": "_NPCData.en.sjson::Eris_0154"
+ },
+ {
+  "en": "How's it going?",
+  "vi_variants": [
+   "Sao rồi?",
+   "Dạo này sao?"
+  ],
+  "vi_pho_bien": "Sao rồi?",
+  "vi_vi_du": "Dạo này sao?",
+  "key_vi_du": "_NPCData.en.sjson::Eris_0231"
+ },
+ {
+  "en": "Hey there.",
+  "vi_variants": [
+   "Này.",
+   "Chào đằng ấy."
+  ],
+  "vi_pho_bien": "Này.",
+  "vi_vi_du": "Chào đằng ấy.",
+  "key_vi_du": "_NPCData_Narcissus.en.sjson::Narcissus_0301"
+ },
+ {
+  "en": "Hail, Sister.",
+  "vi_variants": [
+   "Chào Tỷ muội.",
+   "Chào, Chị em."
+  ],
+  "vi_pho_bien": "Chào Tỷ muội.",
+  "vi_vi_du": "Chào, Chị em.",
+  "key_vi_du": "_NPCData_Artemis.en.sjson::Melinoe_1095"
+ },
+ {
+  "en": "It is you.",
+  "vi_variants": [
+   "Là ngươi.",
+   "Chính là ngươi."
+  ],
+  "vi_pho_bien": "Là ngươi.",
+  "vi_vi_du": "Chính là ngươi.",
+  "key_vi_du": "_NPCData.en.sjson::Nyx_0026"
+ },
+ {
+  "en": "Sorry to interrupt...",
+  "vi_variants": [
+   "Xin lỗi đã làm phiền...",
+   "Xin lỗi cắt ngang..."
+  ],
+  "vi_pho_bien": "Xin lỗi đã làm phiền...",
+  "vi_vi_du": "Xin lỗi cắt ngang...",
+  "key_vi_du": "_NPCData_Icarus.en.sjson::Icarus_0126"
+ },
+ {
+  "en": "Thank you for everything.",
+  "vi_variants": [
+   "Cảm ơn anh vì mọi thứ.",
+   "Cảm ơn Ngài vì tất cả."
+  ],
+  "vi_pho_bien": "Cảm ơn anh vì mọi thứ.",
+  "vi_vi_du": "Cảm ơn Ngài vì tất cả.",
+  "key_vi_du": "_NPCData.en.sjson::Melinoe_5073"
+ },
+ {
+  "en": "I shall.",
+  "vi_variants": [
+   "Ta sẽ theo.",
+   "Con sẽ.",
+   "Ta sẽ làm."
+  ],
+  "vi_pho_bien": "Ta sẽ theo.",
+  "vi_vi_du": "Con sẽ.",
+  "key_vi_du": "_NPCData_Hecate.en.sjson::Melinoe_4732"
+ },
+ {
+  "en": "Yes?",
+  "vi_variants": [
+   "Gì đấy?",
+   "Có việc gì?"
+  ],
+  "vi_pho_bien": "Gì đấy?",
+  "vi_vi_du": "Có việc gì?",
+  "key_vi_du": "_NPCData_Athena.en.sjson::Athena_0073"
+ },
+ {
+  "en": "Good to see you!",
+  "vi_variants": [
+   "Gặp muội vui quá!",
+   "Mừng được gặp anh!"
+  ],
+  "vi_pho_bien": "Gặp muội vui quá!",
+  "vi_vi_du": "Mừng được gặp anh!",
+  "key_vi_du": "_NPCData_Artemis.en.sjson::Artemis_0309"
+ },
+ {
+  "en": "You too.",
+  "vi_variants": [
+   "Muội cũng thế nhé.",
+   "Em cũng thế."
+  ],
+  "vi_pho_bien": "Muội cũng thế nhé.",
+  "vi_vi_du": "Em cũng thế.",
+  "key_vi_du": "_NPCData.en.sjson::Zagreus_0089"
+ },
+ {
+  "en": "That's for you.",
+  "vi_variants": [
+   "Đó cho mày.",
+   "Cái này cho cháu đấy."
+  ],
+  "vi_pho_bien": "Đó cho mày.",
+  "vi_vi_du": "Cái này cho cháu đấy.",
+  "key_vi_du": "_NPCData.en.sjson::Apollo_0199"
+ },
+ {
+  "en": "Take care.",
+  "vi_variants": [
+   "Bảo trọng đấy.",
+   "Bảo trọng."
+  ],
+  "vi_pho_bien": "Bảo trọng đấy.",
+  "vi_vi_du": "Bảo trọng.",
+  "key_vi_du": "_NPCData.en.sjson::Hera_0221"
+ },
+ {
+  "en": "You, too...",
+  "vi_variants": [
+   "Ngươi cũng vậy...",
+   "Cậu cũng vậy..."
+  ],
+  "vi_pho_bien": "Ngươi cũng vậy...",
+  "vi_vi_du": "Cậu cũng vậy...",
+  "key_vi_du": "_NPCData_Hermes.en.sjson::MelinoeField_2968"
+ },
+ {
+  "en": "Oh, yes.",
+  "vi_variants": [
+   "Ồ, rồi.",
+   "Ồ, ừ."
+  ],
+  "vi_pho_bien": "Ồ, rồi.",
+  "vi_vi_du": "Ồ, ừ.",
+  "key_vi_du": "_NPCData_Arachne.en.sjson::Arachne_0176"
+ },
+ {
+  "en": "Welcome back!",
+  "vi_variants": [
+   "Chào mừng về!",
+   "Mừng về!"
+  ],
+  "vi_pho_bien": "Chào mừng về!",
+  "vi_vi_du": "Mừng về!",
+  "key_vi_du": "_NPCData_Circe.en.sjson::Circe_0081"
+ },
+ {
+  "en": "That's on the house!",
+  "vi_variants": [
+   "Cái đó miễn phí!",
+   "Miễn phí!"
+  ],
+  "vi_pho_bien": "Cái đó miễn phí!",
+  "vi_vi_du": "Miễn phí!",
+  "key_vi_du": "_NPCData_Hermes.en.sjson::Hermes_0248"
+ },
+ {
+  "en": "All yours.",
+  "vi_variants": [
+   "Tất của mày.",
+   "Của ngươi hết.",
+   "Của muội hết."
+  ],
+  "vi_pho_bien": "Tất của mày.",
+  "vi_vi_du": "Của ngươi hết.",
+  "key_vi_du": "_NPCData_Icarus.en.sjson::Icarus_0296"
+ },
+ {
+  "en": "Together we shine!",
+  "vi_variants": [
+   "Cùng nhau ta rực rỡ!",
+   "Cùng nhau tỏa sáng!"
+  ],
+  "vi_pho_bien": "Cùng nhau ta rực rỡ!",
+  "vi_vi_du": "Cùng nhau tỏa sáng!",
+  "key_vi_du": "_NPCData_Circe.en.sjson::Circe_0102"
+ },
+ {
+  "en": "You, too.",
+  "vi_variants": [
+   "Muội cũng thế.",
+   "Ngài nữa."
+  ],
+  "vi_pho_bien": "Muội cũng thế.",
+  "vi_vi_du": "Ngài nữa.",
+  "key_vi_du": "_NPCData_Artemis.en.sjson::Artemis_0245"
+ },
+ {
+  "en": "You're just in time.",
+  "vi_variants": [
+   "Ngươi tới đúng lúc.",
+   "Tỷ đến đúng lúc lắm."
+  ],
+  "vi_pho_bien": "Ngươi tới đúng lúc.",
+  "vi_vi_du": "Tỷ đến đúng lúc lắm.",
+  "key_vi_du": "_NPCData_Heracles.en.sjson::Heracles_0046"
+ },
+ {
+  "en": "Got 'em.",
+  "vi_variants": [
+   "Hạ được rồi.",
+   "Hạ hết."
+  ],
+  "vi_pho_bien": "Hạ được rồi.",
+  "vi_vi_du": "Hạ hết.",
+  "key_vi_du": "_NPCData_Artemis.en.sjson::Artemis_0055"
+ },
+ {
+  "en": "That was mine.",
+  "vi_variants": [
+   "Đó là của ta.",
+   "Con đó là của ta."
+  ],
+  "vi_pho_bien": "Đó là của ta.",
+  "vi_vi_du": "Con đó là của ta.",
+  "key_vi_du": "_NPCData_Heracles.en.sjson::Heracles_0075"
+ },
+ {
+  "en": "Check your aim.",
+  "vi_variants": [
+   "Xem lại đường ngắm đi.",
+   "Coi chừng ngắm."
+  ],
+  "vi_pho_bien": "Xem lại đường ngắm đi.",
+  "vi_vi_du": "Coi chừng ngắm.",
+  "key_vi_du": "_NPCData_Nemesis.en.sjson::NemesisField_0226"
+ },
+ {
+  "en": "If you insist.",
+  "vi_variants": [
+   "Nếu muội ép.",
+   "Nếu mày nài.",
+   "Nếu ngươi khăng khăng."
+  ],
+  "vi_pho_bien": "Nếu muội ép.",
+  "vi_vi_du": "Nếu mày nài.",
+  "key_vi_du": "_NPCData_Artemis.en.sjson::Artemis_0357"
+ },
+ {
+  "en": "Thought I'd drop in!",
+  "vi_variants": [
+   "Tiện đường ghé qua!",
+   "Tiện ghé!"
+  ],
+  "vi_pho_bien": "Tiện đường ghé qua!",
+  "vi_vi_du": "Tiện ghé!",
+  "key_vi_du": "_NPCData_Icarus.en.sjson::Icarus_0045"
+ },
+ {
+  "en": "Got to go.",
+  "vi_variants": [
+   "Phải đi rồi.",
+   "Phải đi."
+  ],
+  "vi_pho_bien": "Phải đi rồi.",
+  "vi_vi_du": "Phải đi.",
+  "key_vi_du": "_NPCData_Artemis.en.sjson::Artemis_0135"
+ },
+ {
+  "en": "Go unseen.",
+  "vi_variants": [
+   "Hãy đi mà không ai thấy.",
+   "Đi không dấu vết."
+  ],
+  "vi_pho_bien": "Hãy đi mà không ai thấy.",
+  "vi_vi_du": "Đi không dấu vết.",
+  "key_vi_du": "_NPCData_Hades.en.sjson::Hades_0256"
+ },
+ {
+  "en": "Fight on.",
+  "vi_variants": [
+   "Chiến tiếp.",
+   "Chiến tiếp đi.",
+   "Chiến tiếp nhé."
+  ],
+  "vi_pho_bien": "Chiến tiếp.",
+  "vi_vi_du": "Chiến tiếp đi.",
+  "key_vi_du": "_NPCData_Artemis.en.sjson::Melinoe_1255"
+ },
+ {
+  "en": "Come off it.",
+  "vi_variants": [
+   "Thôi ngay.",
+   "Thôi đi."
+  ],
+  "vi_pho_bien": "Thôi ngay.",
+  "vi_vi_du": "Thôi đi.",
+  "key_vi_du": "_NPCData_Nemesis.en.sjson::NemesisField_0215"
+ },
+ {
+  "en": "Got you covered!",
+  "vi_variants": [
+   "Ta bọc cho!",
+   "Ta yểm trợ!"
+  ],
+  "vi_pho_bien": "Ta bọc cho!",
+  "vi_vi_du": "Ta yểm trợ!",
+  "key_vi_du": "_NPCData_Artemis.en.sjson::Artemis_0319"
+ },
+ {
+  "en": "Rude!",
+  "vi_variants": [
+   "Vô duyên!",
+   "Vô lễ!"
+  ],
+  "vi_pho_bien": "Vô duyên!",
+  "vi_vi_du": "Vô lễ!",
+  "key_vi_du": "_NPCData_Nemesis.en.sjson::Melinoe_1567"
+ },
+ {
+  "en": "It's her...",
+  "vi_variants": [
+   "Là cô ta...",
+   "Là bà ấy..."
+  ],
+  "vi_pho_bien": "Là cô ta...",
+  "vi_vi_du": "Là bà ấy...",
+  "key_vi_du": "_NPCData_Athena.en.sjson::MelinoeField_2808"
+ },
+ {
+  "en": "And you as well.",
+  "vi_variants": [
+   "Ngươi cũng vậy.",
+   "Còn Người cũng vậy.",
+   "Người cũng vậy nhé."
+  ],
+  "vi_pho_bien": "Ngươi cũng vậy.",
+  "vi_vi_du": "Còn Người cũng vậy.",
+  "key_vi_du": "_NPCData_Charon.en.sjson::Melinoe_2010"
+ },
+ {
+  "en": "Coward...",
+  "vi_variants": [
+   "Đồ nhát...",
+   "Đồ hèn..."
+  ],
+  "vi_pho_bien": "Đồ nhát...",
+  "vi_vi_du": "Đồ hèn...",
+  "key_vi_du": "_NPCData_Chronos.en.sjson::MelinoeField_0495"
+ },
+ {
+  "en": "There you are!",
+  "vi_variants": [
+   "Con đây rồi!",
+   "Kìa rồi!"
+  ],
+  "vi_pho_bien": "Con đây rồi!",
+  "vi_vi_du": "Kìa rồi!",
+  "key_vi_du": "_NPCData_Chronos.en.sjson::Chronos_1042"
+ },
+ {
+  "en": "It's been too long!",
+  "vi_variants": [
+   "Lâu quá!",
+   "Lâu quá rồi!"
+  ],
+  "vi_pho_bien": "Lâu quá!",
+  "vi_vi_du": "Lâu quá rồi!",
+  "key_vi_du": "_NPCData_Circe.en.sjson::Circe_0304"
+ },
+ {
+  "en": "Be safe!",
+  "vi_variants": [
+   "Giữ gìn nhé!",
+   "Cẩn thận!"
+  ],
+  "vi_pho_bien": "Giữ gìn nhé!",
+  "vi_vi_du": "Cẩn thận!",
+  "key_vi_du": "_NPCData_Hermes.en.sjson::Hermes_0177"
+ },
+ {
+  "en": "We'll see.",
+  "vi_variants": [
+   "Rồi sẽ thấy.",
+   "Rồi xem.",
+   "Để xem."
+  ],
+  "vi_pho_bien": "Rồi sẽ thấy.",
+  "vi_vi_du": "Rồi xem.",
+  "key_vi_du": "_NPCData_Dionysus.en.sjson::Melinoe_1308"
+ },
+ {
+  "en": "Huh?",
+  "vi_variants": [
+   "Hả?",
+   "Hử?"
+  ],
+  "vi_pho_bien": "Hả?",
+  "vi_vi_du": "Hử?",
+  "key_vi_du": "_NPCData_Dionysus.en.sjson::Dionysus_0052"
+ },
+ {
+  "en": "Yeah, you too.",
+  "vi_variants": [
+   "Ừ, cô cũng vậy.",
+   "Ừ, mày cũng thế."
+  ],
+  "vi_pho_bien": "Ừ, cô cũng vậy.",
+  "vi_vi_du": "Ừ, mày cũng thế.",
+  "key_vi_du": "_NPCData_Dora.en.sjson::Dora_0003"
+ },
+ {
+  "en": "I know, right?",
+  "vi_variants": [
+   "Ta biết, phải?",
+   "Biết mà, đúng không?"
+  ],
+  "vi_pho_bien": "Ta biết, phải?",
+  "vi_vi_du": "Biết mà, đúng không?",
+  "key_vi_du": "_NPCData_Dora.en.sjson::Dora_0297"
+ },
+ {
+  "en": "You sure...?",
+  "vi_variants": [
+   "Chắc chứ...?",
+   "Chắc không...?"
+  ],
+  "vi_pho_bien": "Chắc chứ...?",
+  "vi_vi_du": "Chắc không...?",
+  "key_vi_du": "_NPCData_Dora.en.sjson::Melinoe_3707"
+ },
+ {
+  "en": "Bye.",
+  "vi_variants": [
+   "Tạm biệt.",
+   "Bái bai."
+  ],
+  "vi_pho_bien": "Tạm biệt.",
+  "vi_vi_du": "Bái bai.",
+  "key_vi_du": "_NPCData_Dora.en.sjson::Dora_0551"
+ },
+ {
+  "en": "Did you do it?",
+  "vi_variants": [
+   "Cô làm được không?",
+   "Làm được chưa?"
+  ],
+  "vi_pho_bien": "Cô làm được không?",
+  "vi_vi_du": "Làm được chưa?",
+  "key_vi_du": "_NPCData_Dora.en.sjson::Dora_0530"
+ },
+ {
+  "en": "Heya.",
+  "vi_variants": [
+   "Chào.",
+   "Ê, chào nhóc."
+  ],
+  "vi_pho_bien": "Chào.",
+  "vi_vi_du": "Ê, chào nhóc.",
+  "key_vi_du": "_NPCData_Dora.en.sjson::Dora_0127"
+ },
+ {
+  "en": "Where'd you come from?",
+  "vi_variants": [
+   "Từ đâu đến?",
+   "Ngươi từ đâu chui ra?"
+  ],
+  "vi_pho_bien": "Từ đâu đến?",
+  "vi_vi_du": "Ngươi từ đâu chui ra?",
+  "key_vi_du": "_NPCData_Heracles.en.sjson::Heracles_0052"
+ },
+ {
+  "en": "Anything else?",
+  "vi_variants": [
+   "Gì nữa?",
+   "Còn gì nữa không?"
+  ],
+  "vi_pho_bien": "Gì nữa?",
+  "vi_vi_du": "Còn gì nữa không?",
+  "key_vi_du": "_NPCData_Hermes.en.sjson::Hermes_0236"
+ },
+ {
+  "en": "It's you!",
+  "vi_variants": [
+   "Là con!",
+   "Là ngươi!"
+  ],
+  "vi_pho_bien": "Là con!",
+  "vi_vi_du": "Là ngươi!",
+  "key_vi_du": "_NPCData_Hades.en.sjson::Persephone_0037"
+ },
+ {
+  "en": "I trust so too.",
+  "vi_variants": [
+   "Con cũng tin vậy.",
+   "Ta cũng tin vậy."
+  ],
+  "vi_pho_bien": "Con cũng tin vậy.",
+  "vi_vi_du": "Ta cũng tin vậy.",
+  "key_vi_du": "_NPCData_Hecate.en.sjson::Melinoe_2902"
+ },
+ {
+  "en": "Understood.",
+  "vi_variants": [
+   "Rõ.",
+   "Đã rõ."
+  ],
+  "vi_pho_bien": "Rõ.",
+  "vi_vi_du": "Đã rõ.",
+  "key_vi_du": "_NPCData_Hecate.en.sjson::Melinoe_3467"
+ },
+ {
+  "en": "Surprise.",
+  "vi_variants": [
+   "Bất ngờ chưa.",
+   "Bất ngờ."
+  ],
+  "vi_pho_bien": "Bất ngờ chưa.",
+  "vi_vi_du": "Bất ngờ.",
+  "key_vi_du": "_NPCData_Nemesis.en.sjson::NemesisField_0537"
+ },
+ {
+  "en": "Destroyed.",
+  "vi_variants": [
+   "Tiêu diệt.",
+   "Bị hủy diệt."
+  ],
+  "vi_pho_bien": "Tiêu diệt.",
+  "vi_vi_du": "Bị hủy diệt.",
+  "key_vi_du": "_NPCData_Heracles.en.sjson::Heracles_0467"
+ },
+ {
+  "en": "Gone.",
+  "vi_variants": [
+   "Đi.",
+   "Đi rồi.",
+   "Tiêu rồi."
+  ],
+  "vi_pho_bien": "Đi.",
+  "vi_vi_du": "Đi rồi.",
+  "key_vi_du": "_NPCData_Heracles.en.sjson::Heracles_0468"
+ },
+ {
+  "en": "Get your own.",
+  "vi_variants": [
+   "Tự kiếm phần ngươi đi.",
+   "Lấy của riêng mày."
+  ],
+  "vi_pho_bien": "Tự kiếm phần ngươi đi.",
+  "vi_vi_du": "Lấy của riêng mày.",
+  "key_vi_du": "_NPCData_Nemesis.en.sjson::NemesisField_0295"
+ },
+ {
+  "en": "Fine.",
+  "vi_variants": [
+   "Được.",
+   "Được thôi."
+  ],
+  "vi_pho_bien": "Được.",
+  "vi_vi_du": "Được thôi.",
+  "key_vi_du": "_NPCData_Nemesis.en.sjson::Nemesis_0122"
+ },
+ {
+  "en": "Why bother.",
+  "vi_variants": [
+   "Sao mất công.",
+   "Phiền làm gì."
+  ],
+  "vi_pho_bien": "Sao mất công.",
+  "vi_vi_du": "Phiền làm gì.",
+  "key_vi_du": "_NPCData_Heracles.en.sjson::Heracles_0596"
+ },
+ {
+  "en": "Take care!",
+  "vi_variants": [
+   "Giữ gìn!",
+   "Cẩn thận!"
+  ],
+  "vi_pho_bien": "Giữ gìn!",
+  "vi_vi_du": "Cẩn thận!",
+  "key_vi_du": "_NPCData_Hermes.en.sjson::MelinoeField_3031"
+ },
+ {
+  "en": "Same.",
+  "vi_variants": [
+   "Ta cũng thế.",
+   "Cũng vậy.",
+   "Tao cũng thế."
+  ],
+  "vi_pho_bien": "Ta cũng thế.",
+  "vi_vi_du": "Cũng vậy.",
+  "key_vi_du": "_NPCData_Moros.en.sjson::Melinoe_4801"
+ },
+ {
+  "en": "Not quite...",
+  "vi_variants": [
+   "Chưa hẳn...",
+   "Suýt nữa..."
+  ],
+  "vi_pho_bien": "Chưa hẳn...",
+  "vi_vi_du": "Suýt nữa...",
+  "key_vi_du": "_RunHistoryData.en.sjson::Melinoe_3857"
+ },
+ {
+  "en": "He is.",
+  "vi_variants": [
+   "Ngài ổn.",
+   "Hắn có."
+  ],
+  "vi_pho_bien": "Ngài ổn.",
+  "vi_vi_du": "Hắn có.",
+  "key_vi_du": "_NPCData_Odysseus.en.sjson::Melinoe_0061"
+ },
+ {
+  "en": "Suit yourself.",
+  "vi_variants": [
+   "Tùy mày.",
+   "Tùy ngươi."
+  ],
+  "vi_pho_bien": "Tùy mày.",
+  "vi_vi_du": "Tùy ngươi.",
+  "key_vi_du": "_NPCData_Nemesis.en.sjson::NemesisField_0090"
+ },
+ {
+  "en": "Rude...",
+  "vi_variants": [
+   "Thô lỗ...",
+   "Vô duyên..."
+  ],
+  "vi_pho_bien": "Thô lỗ...",
+  "vi_vi_du": "Vô duyên...",
+  "key_vi_du": "_RoomDataF.en.sjson::Chronos_0940"
+ },
+ {
+  "en": "What do you know.",
+  "vi_variants": [
+   "Trùng hợp ghê.",
+   "Biết gì không."
+  ],
+  "vi_pho_bien": "Trùng hợp ghê.",
+  "vi_vi_du": "Biết gì không.",
+  "key_vi_du": "_RoomDataP.en.sjson::Prometheus_0064"
+ },
+ {
+  "en": "See you soon.",
+  "vi_variants": [
+   "Sớm gặp.",
+   "Hẹn sớm gặp."
+  ],
+  "vi_pho_bien": "Sớm gặp.",
+  "vi_vi_du": "Hẹn sớm gặp.",
+  "key_vi_du": "_NPCData_Narcissus.en.sjson::Narcissus_0136"
+ },
+ {
+  "en": "I am.",
+  "vi_variants": [
+   "Ta ổn.",
+   "Ta làm."
+  ],
+  "vi_pho_bien": "Ta ổn.",
+  "vi_vi_du": "Ta làm.",
+  "key_vi_du": "_NPCData_Odysseus.en.sjson::Melinoe_2188"
+ },
+ {
+  "en": "Wake up.",
+  "vi_variants": [
+   "Tỉnh dậy.",
+   "Tỉnh lại đi."
+  ],
+  "vi_pho_bien": "Tỉnh dậy.",
+  "vi_vi_du": "Tỉnh lại đi.",
+  "key_vi_du": "_NPCData_Nemesis.en.sjson::NemesisField_0313"
+ },
+ {
+  "en": "What else.",
+  "vi_variants": [
+   "Còn gì.",
+   "Còn gì nữa."
+  ],
+  "vi_pho_bien": "Còn gì.",
+  "vi_vi_du": "Còn gì nữa.",
+  "key_vi_du": "_NPCData_Odysseus.en.sjson::Odysseus_0307"
+ },
+ {
+  "en": "It's a deal.",
+  "vi_variants": [
+   "Chốt.",
+   "Thỏa thuận."
+  ],
+  "vi_pho_bien": "Chốt.",
+  "vi_vi_du": "Thỏa thuận.",
+  "key_vi_du": "_NPCData_Nemesis.en.sjson::NemesisField_0393"
+ },
+ {
+  "en": "Aye.",
+  "vi_variants": [
+   "Rõ.",
+   "Ừ."
+  ],
+  "vi_pho_bien": "Rõ.",
+  "vi_vi_du": "Ừ.",
+  "key_vi_du": "_NPCData_Odysseus.en.sjson::Odysseus_0304"
+ },
+ {
+  "en": "Aye...",
+  "vi_variants": [
+   "Ừ...",
+   "Rõ..."
+  ],
+  "vi_pho_bien": "Ừ...",
+  "vi_vi_du": "Rõ...",
+  "key_vi_du": "_NPCData_Odysseus.en.sjson::Odysseus_0305"
+ },
+ {
+  "en": "Oh, right...",
+  "vi_variants": [
+   "Ờ, phải rồi...",
+   "Ồ, phải rồi..."
+  ],
+  "vi_pho_bien": "Ờ, phải rồi...",
+  "vi_vi_du": "Ồ, phải rồi...",
+  "key_vi_du": "_RunHistoryData.en.sjson::Melinoe_3859"
+ },
+ {
+  "en": "At last...",
+  "vi_variants": [
+   "Cuối cùng...",
+   "Cuối cùng cũng..."
+  ],
+  "vi_pho_bien": "Cuối cùng...",
+  "vi_vi_du": "Cuối cùng cũng...",
+  "key_vi_du": "_WeaponShopData.en.sjson::Melinoe_3749"
+ },
+ {
+  "en": "Heading in.",
+  "vi_variants": [
+   "Tiến vào.",
+   "Vào trong."
+  ],
+  "vi_pho_bien": "Tiến vào.",
+  "vi_vi_du": "Vào trong.",
+  "key_vi_du": "_RoomDataN.en.sjson::MelinoeField_0364"
+ },
+ {
+  "en": "Where to from here...",
+  "vi_variants": [
+   "Đi đâu từ đây...",
+   "Từ đây đi đâu..."
+  ],
+  "vi_pho_bien": "Đi đâu từ đây...",
+  "vi_vi_du": "Từ đây đi đâu...",
+  "key_vi_du": "_RoomDataN.en.sjson::MelinoeField_0515"
+ },
+ {
+  "en": "Almost there...",
+  "vi_variants": [
+   "Sắp tới rồi...",
+   "Sắp đến rồi..."
+  ],
+  "vi_pho_bien": "Sắp tới rồi...",
+  "vi_vi_du": "Sắp đến rồi...",
+  "key_vi_du": "_RoomDataH.en.sjson::MelinoeField_0946"
+ },
+ {
+  "en": "Again we meet.",
+  "vi_variants": [
+   "Lại gặp nhau.",
+   "Lại gặp nhau rồi."
+  ],
+  "vi_pho_bien": "Lại gặp nhau.",
+  "vi_vi_du": "Lại gặp nhau rồi.",
+  "key_vi_du": "_RoomDataP.en.sjson::Prometheus_0496"
+ }
+]

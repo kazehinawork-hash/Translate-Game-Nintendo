@@ -1,0 +1,1216 @@
+[
+ {
+  "en": "Round 1",
+  "vi_variants": [
+   "Vòng 1",
+   "Hiệp 1"
+  ],
+  "vi_pho_bien": "Vòng 1",
+  "vi_vi_du": "Hiệp 1",
+  "key_vi_du": "ProgramMsg__Chanbara.msbt::Round1"
+ },
+ {
+  "en": "Try Some Kicks",
+  "vi_variants": [
+   "Thử Sút Bóng",
+   "Thử Một Vài Cú Sút"
+  ],
+  "vi_pho_bien": "Thử Sút Bóng",
+  "vi_vi_du": "Thử Một Vài Cú Sút",
+  "key_vi_du": "ProgramMsg__SoccerTutorial.msbt::Theme_Foot_Move"
+ },
+ {
+  "en": "A",
+  "vi_variants": [
+   "A",
+   "\u000e\u0002\u0002"
+  ],
+  "vi_pho_bien": "A",
+  "vi_vi_du": "\u000e\u0002\u0002",
+  "key_vi_du": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_USpt.msbt::004_b"
+ },
+ {
+  "en": "O",
+  "vi_variants": [
+   "O",
+   "The"
+  ],
+  "vi_pho_bien": "O",
+  "vi_vi_du": "The",
+  "key_vi_du": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_CNzh.msbt::368"
+ },
+ {
+  "en": "OK",
+  "vi_variants": [
+   "OK",
+   "Đồng Ý"
+  ],
+  "vi_pho_bien": "OK",
+  "vi_vi_du": "Đồng Ý",
+  "key_vi_du": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_CNzh.msbt::105"
+ },
+ {
+  "en": "爸爸",
+  "vi_variants": [
+   "Dad",
+   "Father"
+  ],
+  "vi_pho_bien": "Dad",
+  "vi_vi_du": "Father",
+  "key_vi_du": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_CNzh.msbt::016"
+ },
+ {
+  "en": "Press ",
+  "vi_variants": [
+   "Nhấn ",
+   "Bấm "
+  ],
+  "vi_pho_bien": "Nhấn ",
+  "vi_vi_du": "Bấm ",
+  "key_vi_du": "LayoutMsg__Bwl_Preparation.msbt::T_Preparation"
+ },
+ {
+  "en": "Completion Bonus",
+  "vi_variants": [
+   "Thưởng hoàn thành",
+   "Thưởng Hoàn Tất Bộ"
+  ],
+  "vi_pho_bien": "Thưởng hoàn thành",
+  "vi_vi_du": "Thưởng Hoàn Tất Bộ",
+  "key_vi_du": "LayoutMsg__Cmn_RewardList.msbt::L_RewardList00-T_CompleteBonus"
+ },
+ {
+  "en": "CPU Strength",
+  "vi_variants": [
+   "Độ khó máy (CPU)",
+   "Độ Khó Của Máy (CPU)"
+  ],
+  "vi_pho_bien": "Độ khó máy (CPU)",
+  "vi_vi_du": "Độ Khó Của Máy (CPU)",
+  "key_vi_du": "LayoutMsg__Cmn_MenuRule.msbt::L_TnsCPULevel-T_ListTitle"
+ },
+ {
+  "en": "Powerhouse",
+  "vi_variants": [
+   "Cao thủ",
+   "Siêu Đẳng"
+  ],
+  "vi_pho_bien": "Cao thủ",
+  "vi_vi_du": "Siêu Đẳng",
+  "key_vi_du": "LayoutMsg__Cmn_DlgCPUlevel.msbt::L_CPULevel-L_Btn02-T_Text"
+ },
+ {
+  "en": "Single Match",
+  "vi_variants": [
+   "Trận đơn (1 set)",
+   "1 Ván Duy Nhất"
+  ],
+  "vi_pho_bien": "Trận đơn (1 set)",
+  "vi_vi_du": "1 Ván Duy Nhất",
+  "key_vi_du": "LayoutMsg__Cmn_MenuRule.msbt::L_TnsGame-L_Choice00-T_Text"
+ },
+ {
+  "en": "Best of 3",
+  "vi_variants": [
+   "Đấu 3 thắng 2",
+   "Thắng 2 Trên 3 (Bo3)"
+  ],
+  "vi_pho_bien": "Đấu 3 thắng 2",
+  "vi_vi_du": "Thắng 2 Trên 3 (Bo3)",
+  "key_vi_du": "LayoutMsg__Cmn_MenuRule.msbt::L_TnsGame-L_Choice01-T_Text"
+ },
+ {
+  "en": "Best of 5",
+  "vi_variants": [
+   "Thắng 3 Trên 5 (Bo5)",
+   "Đấu 5 thắng 3"
+  ],
+  "vi_pho_bien": "Thắng 3 Trên 5 (Bo5)",
+  "vi_vi_du": "Đấu 5 thắng 3",
+  "key_vi_du": "LayoutMsg__Cmn_MenuRule.msbt::L_TnsGame-L_Choice02-T_Text"
+ },
+ {
+  "en": "CPU",
+  "vi_variants": [
+   "CPU",
+   "MÁY"
+  ],
+  "vi_pho_bien": "CPU",
+  "vi_vi_du": "MÁY",
+  "key_vi_du": "ProgramMsg__Common.msbt::Cpu"
+ },
+ {
+  "en": "Teams",
+  "vi_variants": [
+   "Đội hình",
+   "Chia Đội"
+  ],
+  "vi_pho_bien": "Đội hình",
+  "vi_vi_du": "Chia Đội",
+  "key_vi_du": "LayoutMsg__Cmn_MenuRule.msbt::L_TnsTeam-T_ListTitle"
+ },
+ {
+  "en": "Hitting Straight",
+  "vi_variants": [
+   "Đánh Bóng Thẳng Hướng",
+   "Đánh Bóng Thẳng"
+  ],
+  "vi_pho_bien": "Đánh Bóng Thẳng Hướng",
+  "vi_vi_du": "Đánh Bóng Thẳng",
+  "key_vi_du": "ProgramMsg__GolfTutorial.msbt::Theme_Lesson2_Shot"
+ },
+ {
+  "en": "Guest",
+  "vi_variants": [
+   "Khách",
+   "Guest"
+  ],
+  "vi_pho_bien": "Khách",
+  "vi_vi_du": "Guest",
+  "key_vi_du": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUen.msbt::093"
+ },
+ {
+  "en": "How to Play",
+  "vi_variants": [
+   "Hướng Dẫn Cách Chơi",
+   "Cách chơi"
+  ],
+  "vi_pho_bien": "Hướng Dẫn Cách Chơi",
+  "vi_vi_du": "Cách chơi",
+  "key_vi_du": "LayoutMsg__Cmn_OptionTrainingMenu.msbt::T_Training"
+ },
+ {
+  "en": "Soccer",
+  "vi_variants": [
+   "Bóng Đá",
+   "Soccer",
+   "Bóng đá"
+  ],
+  "vi_pho_bien": "Bóng Đá",
+  "vi_vi_du": "Soccer",
+  "key_vi_du": "ProgramMsg__SportsCommon.msbt::SportsName_Soccer"
+ },
+ {
+  "en": "Volleyball",
+  "vi_variants": [
+   "Bóng chuyền",
+   "Bóng Chuyền",
+   "Volleyball"
+  ],
+  "vi_pho_bien": "Bóng chuyền",
+  "vi_vi_du": "Bóng Chuyền",
+  "key_vi_du": "ProgramMsg__SportsCommon.msbt::SportsName_Volleyball"
+ },
+ {
+  "en": "Chambara",
+  "vi_variants": [
+   "Chambara",
+   "Kiếm đạo (Chambara)",
+   "Kiếm Đạo (Chambara)"
+  ],
+  "vi_pho_bien": "Chambara",
+  "vi_vi_du": "Kiếm đạo (Chambara)",
+  "key_vi_du": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_USpt.msbt::254"
+ },
+ {
+  "en": "Basketball",
+  "vi_variants": [
+   "Basketball",
+   "Bóng Rổ",
+   "Bóng rổ"
+  ],
+  "vi_pho_bien": "Basketball",
+  "vi_vi_du": "Bóng Rổ",
+  "key_vi_du": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUen.msbt::430"
+ },
+ {
+  "en": "Ávido",
+  "vi_variants": [
+   "Hungry",
+   "Avid"
+  ],
+  "vi_pho_bien": "Hungry",
+  "vi_vi_du": "Avid",
+  "key_vi_du": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_USpt.msbt::178"
+ },
+ {
+  "en": "Badminton",
+  "vi_variants": [
+   "Cầu lông",
+   "Cầu Lông",
+   "Badminton"
+  ],
+  "vi_pho_bien": "Cầu lông",
+  "vi_vi_du": "Cầu Lông",
+  "key_vi_du": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_USpt.msbt::250"
+ },
+ {
+  "en": "Colega",
+  "vi_variants": [
+   "Colleague",
+   "Staffer"
+  ],
+  "vi_pho_bien": "Colleague",
+  "vi_vi_du": "Staffer",
+  "key_vi_du": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUes.msbt::161"
+ },
+ {
+  "en": "Constante",
+  "vi_variants": [
+   "Constant",
+   "Forever",
+   "\u000e\u0002\u0002"
+  ],
+  "vi_pho_bien": "Constant",
+  "vi_vi_du": "Forever",
+  "key_vi_du": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUnl.msbt::190_b"
+ },
+ {
+  "en": "De",
+  "vi_variants": [
+   "\u000e\u0002\u0002",
+   "The"
+  ],
+  "vi_pho_bien": "\u000e\u0002\u0002",
+  "vi_vi_du": "The",
+  "key_vi_du": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_USpt.msbt::003_c"
+ },
+ {
+  "en": "E",
+  "vi_variants": [
+   "E",
+   "And"
+  ],
+  "vi_pho_bien": "E",
+  "vi_vi_du": "And",
+  "key_vi_du": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_USpt.msbt::005"
+ },
+ {
+  "en": "Encantado",
+  "vi_variants": [
+   "Greetings",
+   "Impressed"
+  ],
+  "vi_pho_bien": "Greetings",
+  "vi_vi_du": "Impressed",
+  "key_vi_du": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUes.msbt::159"
+ },
+ {
+  "en": "Eterno",
+  "vi_variants": [
+   "Eternal",
+   "Infinite"
+  ],
+  "vi_pho_bien": "Eternal",
+  "vi_vi_du": "Infinite",
+  "key_vi_du": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_USpt.msbt::128"
+ },
+ {
+  "en": "Fanático",
+  "vi_variants": [
+   "Fan of",
+   "Avid"
+  ],
+  "vi_pho_bien": "Fan of",
+  "vi_vi_du": "Avid",
+  "key_vi_du": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_USes.msbt::178"
+ },
+ {
+  "en": "Festejo",
+  "vi_variants": [
+   "Gathering",
+   "Holiday"
+  ],
+  "vi_pho_bien": "Gathering",
+  "vi_vi_du": "Holiday",
+  "key_vi_du": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_USpt.msbt::141"
+ },
+ {
+  "en": "Finalmente",
+  "vi_variants": [
+   "After All",
+   "Finally"
+  ],
+  "vi_pho_bien": "After All",
+  "vi_vi_du": "Finally",
+  "key_vi_du": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUes.msbt::408"
+ },
+ {
+  "en": "Grande",
+  "vi_variants": [
+   "Big",
+   "\u000e\u0002\u0002"
+  ],
+  "vi_pho_bien": "Big",
+  "vi_vi_du": "\u000e\u0002\u0002",
+  "key_vi_du": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUes.msbt::086_b"
+ },
+ {
+  "en": "Green",
+  "vi_variants": [
+   "Green",
+   "Xanh lá"
+  ],
+  "vi_pho_bien": "Green",
+  "vi_vi_du": "Xanh lá",
+  "key_vi_du": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_USpt.msbt::261"
+ },
+ {
+  "en": "Grupo",
+  "vi_variants": [
+   "Team",
+   "Party"
+  ],
+  "vi_pho_bien": "Team",
+  "vi_vi_du": "Party",
+  "key_vi_du": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_USpt.msbt::014"
+ },
+ {
+  "en": "Imprevisto",
+  "vi_variants": [
+   "Abrupt",
+   "Rainy Day"
+  ],
+  "vi_pho_bien": "Abrupt",
+  "vi_vi_du": "Rainy Day",
+  "key_vi_du": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUes.msbt::216"
+ },
+ {
+  "en": "Infinito",
+  "vi_variants": [
+   "Eternal",
+   "Infinite"
+  ],
+  "vi_pho_bien": "Eternal",
+  "vi_vi_du": "Infinite",
+  "key_vi_du": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUpt.msbt::128"
+ },
+ {
+  "en": "Novato",
+  "vi_variants": [
+   "Rookie",
+   "Fresh"
+  ],
+  "vi_pho_bien": "Rookie",
+  "vi_vi_du": "Fresh",
+  "key_vi_du": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_USpt.msbt::056"
+ },
+ {
+  "en": "Ocultando",
+  "vi_variants": [
+   "Hide",
+   "\u000e\u0002\u0002"
+  ],
+  "vi_pho_bien": "Hide",
+  "vi_vi_du": "\u000e\u0002\u0002",
+  "key_vi_du": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUes.msbt::137_c"
+ },
+ {
+  "en": "Pagando",
+  "vi_variants": [
+   "Paying",
+   "\u000e\u0002\u0002"
+  ],
+  "vi_pho_bien": "Paying",
+  "vi_vi_du": "\u000e\u0002\u0002",
+  "key_vi_du": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUes.msbt::293_c"
+ },
+ {
+  "en": "Pensando",
+  "vi_variants": [
+   "Thinking",
+   "\u000e\u0002\u0002"
+  ],
+  "vi_pho_bien": "Thinking",
+  "vi_vi_du": "\u000e\u0002\u0002",
+  "key_vi_du": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_USes.msbt::061_c"
+ },
+ {
+  "en": "Raro",
+  "vi_variants": [
+   "Strangely",
+   "Rare"
+  ],
+  "vi_pho_bien": "Strangely",
+  "vi_vi_du": "Rare",
+  "key_vi_du": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_USpt.msbt::110"
+ },
+ {
+  "en": "Resort",
+  "vi_variants": [
+   "Khu nghỉ dưỡng",
+   "Khu nghỉ dưỡng (Resort)",
+   "Resort"
+  ],
+  "vi_pho_bien": "Khu nghỉ dưỡng",
+  "vi_vi_du": "Khu nghỉ dưỡng (Resort)",
+  "key_vi_du": "ProgramMsg__Menu.msbt::RuleSelectPage_Button0_GolfCourse9"
+ },
+ {
+  "en": "Saltando",
+  "vi_variants": [
+   "Jump",
+   "\u000e\u0002\u0002"
+  ],
+  "vi_pho_bien": "Jump",
+  "vi_vi_du": "\u000e\u0002\u0002",
+  "key_vi_du": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUes.msbt::053_c"
+ },
+ {
+  "en": "Strike",
+  "vi_variants": [
+   "Strike",
+   "Strike!"
+  ],
+  "vi_pho_bien": "Strike",
+  "vi_vi_du": "Strike!",
+  "key_vi_du": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_USpt.msbt::123"
+ },
+ {
+  "en": "Super",
+  "vi_variants": [
+   "Extreme",
+   "Super"
+  ],
+  "vi_pho_bien": "Extreme",
+  "vi_vi_du": "Super",
+  "key_vi_du": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUes.msbt::007"
+ },
+ {
+  "en": "Back",
+  "vi_variants": [
+   "Back",
+   "Quay lại"
+  ],
+  "vi_pho_bien": "Back",
+  "vi_vi_du": "Quay lại",
+  "key_vi_du": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUen.msbt::249"
+ },
+ {
+  "en": "Best",
+  "vi_variants": [
+   "Best",
+   "Kỷ lục"
+  ],
+  "vi_pho_bien": "Best",
+  "vi_vi_du": "Kỷ lục",
+  "key_vi_du": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUen.msbt::152"
+ },
+ {
+  "en": "Block",
+  "vi_variants": [
+   "Block",
+   "Chắn Bóng"
+  ],
+  "vi_pho_bien": "Block",
+  "vi_vi_du": "Chắn Bóng",
+  "key_vi_du": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUen.msbt::149"
+ },
+ {
+  "en": "Dash",
+  "vi_variants": [
+   "Tăng tốc",
+   "Dash"
+  ],
+  "vi_pho_bien": "Tăng tốc",
+  "vi_vi_du": "Dash",
+  "key_vi_du": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUen.msbt::052"
+ },
+ {
+  "en": "Display",
+  "vi_variants": [
+   "Hiển thị",
+   "Display"
+  ],
+  "vi_pho_bien": "Hiển thị",
+  "vi_vi_du": "Display",
+  "key_vi_du": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUen.msbt::077"
+ },
+ {
+  "en": "Extreme",
+  "vi_variants": [
+   "Extreme",
+   "\u000e\u0002\u0002"
+  ],
+  "vi_pho_bien": "Extreme",
+  "vi_vi_du": "\u000e\u0002\u0002",
+  "key_vi_du": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUnl.msbt::007_b"
+ },
+ {
+  "en": "Free",
+  "vi_variants": [
+   "Free",
+   "Tự do"
+  ],
+  "vi_pho_bien": "Free",
+  "vi_vi_du": "Tự do",
+  "key_vi_du": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUen.msbt::076"
+ },
+ {
+  "en": "Goal",
+  "vi_variants": [
+   "Bàn thắng",
+   "Goal"
+  ],
+  "vi_pho_bien": "Bàn thắng",
+  "vi_vi_du": "Goal",
+  "key_vi_du": "LayoutMsg__SOC_GoalPlayer.msbt::L_PlayerInfo00-T_Goal"
+ },
+ {
+  "en": "Host",
+  "vi_variants": [
+   "Chủ phòng",
+   "Host",
+   "Chủ Phòng"
+  ],
+  "vi_pho_bien": "Chủ phòng",
+  "vi_vi_du": "Host",
+  "key_vi_du": "LayoutMsg__Cmn_Matching.msbt::L_Player00-T_Host"
+ },
+ {
+  "en": "Intense",
+  "vi_variants": [
+   "Intense",
+   "\u000e\u0002\u0002"
+  ],
+  "vi_pho_bien": "Intense",
+  "vi_vi_du": "\u000e\u0002\u0002",
+  "key_vi_du": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUnl.msbt::008_b"
+ },
+ {
+  "en": "Jump",
+  "vi_variants": [
+   "Nhảy",
+   "Jump",
+   "Bật Nhảy"
+  ],
+  "vi_pho_bien": "Nhảy",
+  "vi_vi_du": "Jump",
+  "key_vi_du": "ProgramMsg__VolleyballTutorial.msbt::Theme_Jump"
+ },
+ {
+  "en": "Music",
+  "vi_variants": [
+   "Music",
+   "Âm nhạc"
+  ],
+  "vi_pho_bien": "Music",
+  "vi_vi_du": "Âm nhạc",
+  "key_vi_du": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUen.msbt::274"
+ },
+ {
+  "en": "Party",
+  "vi_variants": [
+   "Birthday",
+   "Party"
+  ],
+  "vi_pho_bien": "Birthday",
+  "vi_vi_du": "Party",
+  "key_vi_du": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUde.msbt::071"
+ },
+ {
+  "en": "Pass",
+  "vi_variants": [
+   "Chuyền",
+   "Bump",
+   "Chuyền Bóng",
+   "Pass"
+  ],
+  "vi_pho_bien": "Chuyền",
+  "vi_vi_du": "Bump",
+  "key_vi_du": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUnl.msbt::147"
+ },
+ {
+  "en": "Positive",
+  "vi_variants": [
+   "Positive",
+   "\u000e\u0002\u0002"
+  ],
+  "vi_pho_bien": "Positive",
+  "vi_vi_du": "\u000e\u0002\u0002",
+  "key_vi_du": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUde.msbt::060_b"
+ },
+ {
+  "en": "Pure",
+  "vi_variants": [
+   "Pure",
+   "\u000e\u0002\u0002"
+  ],
+  "vi_pho_bien": "Pure",
+  "vi_vi_du": "\u000e\u0002\u0002",
+  "key_vi_du": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUnl.msbt::204_b"
+ },
+ {
+  "en": "Replay",
+  "vi_variants": [
+   "Replay",
+   "Xem lại (Replay)"
+  ],
+  "vi_pho_bien": "Replay",
+  "vi_vi_du": "Xem lại (Replay)",
+  "key_vi_du": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUen.msbt::319"
+ },
+ {
+  "en": "Spike",
+  "vi_variants": [
+   "Đập Bóng",
+   "Spike"
+  ],
+  "vi_pho_bien": "Đập Bóng",
+  "vi_vi_du": "Spike",
+  "key_vi_du": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUen.msbt::148"
+ },
+ {
+  "en": "Stamina",
+  "vi_variants": [
+   "Thể lực",
+   "Stamina"
+  ],
+  "vi_pho_bien": "Thể lực",
+  "vi_vi_du": "Stamina",
+  "key_vi_du": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUen.msbt::099"
+ },
+ {
+  "en": "Sword",
+  "vi_variants": [
+   "Kiếm đơn",
+   "Kiếm Đơn",
+   "Sword"
+  ],
+  "vi_pho_bien": "Kiếm đơn",
+  "vi_vi_du": "Kiếm Đơn",
+  "key_vi_du": "ProgramMsg__Chanbara.msbt::Weapon_Single"
+ },
+ {
+  "en": "Team",
+  "vi_variants": [
+   "Team",
+   "Party"
+  ],
+  "vi_pho_bien": "Team",
+  "vi_vi_du": "Party",
+  "key_vi_du": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUnl.msbt::014"
+ },
+ {
+  "en": "Tennis",
+  "vi_variants": [
+   "Quần Vợt (Tennis)",
+   "Tennis",
+   "Quần vợt (Tennis)"
+  ],
+  "vi_pho_bien": "Quần Vợt (Tennis)",
+  "vi_vi_du": "Tennis",
+  "key_vi_du": "ProgramMsg__SportsCommon.msbt::SportsName_Tennis"
+ },
+ {
+  "en": "Traveling",
+  "vi_variants": [
+   "Traveling",
+   "Lỗi Chạy Bước (Traveling)"
+  ],
+  "vi_pho_bien": "Traveling",
+  "vi_vi_du": "Lỗi Chạy Bước (Traveling)",
+  "key_vi_du": "ProgramMsg__Basketball.msbt::VsCall_Traveling"
+ },
+ {
+  "en": "With",
+  "vi_variants": [
+   "With",
+   "Bật"
+  ],
+  "vi_pho_bien": "With",
+  "vi_vi_du": "Bật",
+  "key_vi_du": "LayoutMsg__Cmn_FriendRoomSetting.msbt::L_VoiceChat-T_On"
+ },
+ {
+  "en": "Without",
+  "vi_variants": [
+   "Tắt",
+   "Without"
+  ],
+  "vi_pho_bien": "Tắt",
+  "vi_vi_du": "Without",
+  "key_vi_du": "LayoutMsg__Cmn_FriendRoomSetting.msbt::L_VoiceChat-T_Off"
+ },
+ {
+  "en": "LAN Play",
+  "vi_variants": [
+   "Chơi Qua Mạng LAN",
+   "Chơi Mạng LAN"
+  ],
+  "vi_pho_bien": "Chơi Qua Mạng LAN",
+  "vi_vi_du": "Chơi Mạng LAN",
+  "key_vi_du": "ProgramMsg__Menu.msbt::ModeSelect_FriendButton_Lan"
+ },
+ {
+  "en": "Continue",
+  "vi_variants": [
+   "Tiếp tục",
+   "Chơi tiếp"
+  ],
+  "vi_pho_bien": "Tiếp tục",
+  "vi_vi_du": "Chơi tiếp",
+  "key_vi_du": "ProgramMsg__CommonDialog.msbt::RestGuide_SubButton"
+ },
+ {
+  "en": "End Tutorial",
+  "vi_variants": [
+   "Dừng phần hướng dẫn",
+   "Dừng hướng dẫn"
+  ],
+  "vi_pho_bien": "Dừng phần hướng dẫn",
+  "vi_vi_du": "Dừng hướng dẫn",
+  "key_vi_du": "ProgramMsg__Menu.msbt::PauseMenuTutorial_Retire"
+ },
+ {
+  "en": "Shoot-Out",
+  "vi_variants": [
+   "Sút Luân Lưu",
+   "Đấu Luân Lưu"
+  ],
+  "vi_pho_bien": "Sút Luân Lưu",
+  "vi_vi_du": "Đấu Luân Lưu",
+  "key_vi_du": "ProgramMsg__Menu.msbt::RuleSelectPage_Button3_Soccer"
+ },
+ {
+  "en": "Special",
+  "vi_variants": [
+   "Chướng ngại vật",
+   "Đặc biệt (Special)"
+  ],
+  "vi_pho_bien": "Chướng ngại vật",
+  "vi_vi_du": "Đặc biệt (Special)",
+  "key_vi_du": "ProgramMsg__Menu.msbt::RuleSelectPage_Button1_BowlingType"
+ },
+ {
+  "en": "Beginner",
+  "vi_variants": [
+   "Mới chơi",
+   "Cơ Bản"
+  ],
+  "vi_pho_bien": "Mới chơi",
+  "vi_vi_du": "Cơ Bản",
+  "key_vi_du": "ProgramMsg__Bowling.msbt::LaneLevel_Easy"
+ },
+ {
+  "en": "Advanced",
+  "vi_variants": [
+   "Nâng cao",
+   "Cao Cấp"
+  ],
+  "vi_pho_bien": "Nâng cao",
+  "vi_vi_du": "Cao Cấp",
+  "key_vi_du": "ProgramMsg__Bowling.msbt::LaneLevel_Hard"
+ },
+ {
+  "en": "Classic",
+  "vi_variants": [
+   "Cổ điển (Classic)",
+   "Cổ điển"
+  ],
+  "vi_pho_bien": "Cổ điển (Classic)",
+  "vi_vi_du": "Cổ điển",
+  "key_vi_du": "ProgramMsg__Menu.msbt::RuleSelectPage_Button1_GolfCourse9"
+ },
+ {
+  "en": "Room ID",
+  "vi_variants": [
+   "Mã phòng (Room ID)",
+   "Mã phòng"
+  ],
+  "vi_pho_bien": "Mã phòng (Room ID)",
+  "vi_vi_du": "Mã phòng",
+  "key_vi_du": "ProgramMsg__Menu.msbt::Friend_RoomIdSwkbd_Guide"
+ },
+ {
+  "en": "Minimap",
+  "vi_variants": [
+   "Bản đồ nhỏ",
+   "Bản đồ nhỏ (Minimap)"
+  ],
+  "vi_pho_bien": "Bản đồ nhỏ",
+  "vi_vi_du": "Bản đồ nhỏ (Minimap)",
+  "key_vi_du": "ProgramMsg__Advice.msbt::SoccerTitle_004"
+ },
+ {
+  "en": "Finish!",
+  "vi_variants": [
+   "Hết Giờ!",
+   "Trận Đấu Kết Thúc!",
+   "Kết thúc!"
+  ],
+  "vi_pho_bien": "Hết Giờ!",
+  "vi_vi_du": "Trận Đấu Kết Thúc!",
+  "key_vi_du": "ProgramMsg__Basketball.msbt::ThreePoint_IndividualGameStop"
+ },
+ {
+  "en": "Round 2",
+  "vi_variants": [
+   "Hiệp 2",
+   "Vòng 2"
+  ],
+  "vi_pho_bien": "Hiệp 2",
+  "vi_vi_du": "Vòng 2",
+  "key_vi_du": "ProgramMsg__Chanbara.msbt::Round2"
+ },
+ {
+  "en": "None",
+  "vi_variants": [
+   "Không có",
+   "Không Chọn"
+  ],
+  "vi_pho_bien": "Không có",
+  "vi_vi_du": "Không Chọn",
+  "key_vi_du": "LayoutMsg__Cmn_CharacterEdit.msbt::L_BtnEdit_00-T_Off"
+ },
+ {
+  "en": "Change Controls",
+  "vi_variants": [
+   "Đổi kiểu điều khiển",
+   "Đổi Cách Điều Khiển"
+  ],
+  "vi_pho_bien": "Đổi kiểu điều khiển",
+  "vi_vi_du": "Đổi Cách Điều Khiển",
+  "key_vi_du": "LayoutMsg__Cmn_MainMenu.msbt::L_SportLogoSoc-L_LegPlay-T_Skip"
+ },
+ {
+  "en": "Here!",
+  "vi_variants": [
+   "Bên này!",
+   "Here!"
+  ],
+  "vi_pho_bien": "Bên này!",
+  "vi_vi_du": "Here!",
+  "key_vi_du": "ProgramMsg__SportsCommon.msbt::Balloon_Here"
+ },
+ {
+  "en": "Block Out",
+  "vi_variants": [
+   "Chắn Bóng Ra Ngoài",
+   "Bóng chạm chắn ra ngoài"
+  ],
+  "vi_pho_bien": "Chắn Bóng Ra Ngoài",
+  "vi_vi_du": "Bóng chạm chắn ra ngoài",
+  "key_vi_du": "ProgramMsg__Advice.msbt::VolleyballTitle_008"
+ },
+ {
+  "en": "Soccer: 1 vs. 1",
+  "vi_variants": [
+   "Bóng Đá: 1 Đấu 1",
+   "Bóng Đá: 1 vs 1"
+  ],
+  "vi_pho_bien": "Bóng Đá: 1 Đấu 1",
+  "vi_vi_du": "Bóng Đá: 1 vs 1",
+  "key_vi_du": "ProgramMsg__Common.msbt::DlgPlayAgain_Soccer1vs1"
+ },
+ {
+  "en": "Soccer: 4 vs. 4",
+  "vi_variants": [
+   "Bóng Đá: 4 vs 4",
+   "Bóng Đá: 4 Đấu 4"
+  ],
+  "vi_pho_bien": "Bóng Đá: 4 vs 4",
+  "vi_vi_du": "Bóng Đá: 4 Đấu 4",
+  "key_vi_du": "ProgramMsg__Common.msbt::DlgPlayAgain_Soccer4vs4"
+ },
+ {
+  "en": "Bowling: Standard",
+  "vi_variants": [
+   "Bowling: Standard",
+   "Bowling: Tiêu Chuẩn"
+  ],
+  "vi_pho_bien": "Bowling: Standard",
+  "vi_vi_du": "Bowling: Tiêu Chuẩn",
+  "key_vi_du": "ProgramMsg__Common.msbt::DlgPlayAgain_BowlingStandard"
+ },
+ {
+  "en": "Game!",
+  "vi_variants": [
+   "Hết Giờ!",
+   "Kết Thúc!"
+  ],
+  "vi_pho_bien": "Hết Giờ!",
+  "vi_vi_du": "Kết Thúc!",
+  "key_vi_du": "ProgramMsg__SportsCommon.msbt::GameSet_Soccer"
+ },
+ {
+  "en": "Spare",
+  "vi_variants": [
+   "Spare",
+   "Spare!"
+  ],
+  "vi_pho_bien": "Spare",
+  "vi_vi_du": "Spare!",
+  "key_vi_du": "LayoutMsg__Bwl_Replay.msbt::T_Spare"
+ },
+ {
+  "en": "Brillante",
+  "vi_variants": [
+   "Sparkling",
+   "\u000e\u0002\u0002"
+  ],
+  "vi_pho_bien": "Sparkling",
+  "vi_vi_du": "\u000e\u0002\u0002",
+  "key_vi_du": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUde.msbt::078_b"
+ },
+ {
+  "en": "Entusiasta",
+  "vi_variants": [
+   "Excited",
+   "Fan of"
+  ],
+  "vi_pho_bien": "Excited",
+  "vi_vi_du": "Fan of",
+  "key_vi_du": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUpt.msbt::101"
+ },
+ {
+  "en": "Fan",
+  "vi_variants": [
+   "Fan of",
+   "Avid"
+  ],
+  "vi_pho_bien": "Fan of",
+  "vi_vi_du": "Avid",
+  "key_vi_du": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUes.msbt::178"
+ },
+ {
+  "en": "Hallo",
+  "vi_variants": [
+   "Hello",
+   "Discover"
+  ],
+  "vi_pho_bien": "Hello",
+  "vi_vi_du": "Discover",
+  "key_vi_du": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUes.msbt::385"
+ },
+ {
+  "en": "Ídolo",
+  "vi_variants": [
+   "Hero",
+   "Star"
+  ],
+  "vi_pho_bien": "Hero",
+  "vi_vi_du": "Star",
+  "key_vi_du": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_USes.msbt::063"
+ },
+ {
+  "en": "Remate",
+  "vi_variants": [
+   "Smash",
+   "Spike"
+  ],
+  "vi_pho_bien": "Smash",
+  "vi_vi_du": "Spike",
+  "key_vi_du": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUes.msbt::251"
+ },
+ {
+  "en": "Press the buttons.",
+  "vi_variants": [
+   "Bấm các nút.",
+   "Nhấn các nút trên tay cầm."
+  ],
+  "vi_pho_bien": "Bấm các nút.",
+  "vi_vi_du": "Nhấn các nút trên tay cầm.",
+  "key_vi_du": "LayoutMsg__Bwl_JoyconHowToHold.msbt::T_Discription"
+ },
+ {
+  "en": "Semifinals Result",
+  "vi_variants": [
+   "Kết quả Vòng Bán kết",
+   "Kết Quả Bán Kết"
+  ],
+  "vi_pho_bien": "Kết quả Vòng Bán kết",
+  "vi_vi_du": "Kết Quả Bán Kết",
+  "key_vi_du": "ProgramMsg__Bowling.msbt::ResultRank_SemiFinal"
+ },
+ {
+  "en": "Finals Result",
+  "vi_variants": [
+   "Kết Quả Chung Kết",
+   "Kết quả Vòng Chung kết"
+  ],
+  "vi_pho_bien": "Kết Quả Chung Kết",
+  "vi_vi_du": "Kết quả Vòng Chung kết",
+  "key_vi_du": "ProgramMsg__Bowling.msbt::ResultRank_Final"
+ },
+ {
+  "en": "Nice!",
+  "vi_variants": [
+   "Tuyệt vời!",
+   "Sút Đẹp Lắm!"
+  ],
+  "vi_pho_bien": "Tuyệt vời!",
+  "vi_vi_du": "Sút Đẹp Lắm!",
+  "key_vi_du": "ProgramMsg__Soccer.msbt::Nice_Shoot"
+ },
+ {
+  "en": "Body",
+  "vi_variants": [
+   "Vóc dáng đặc biệt",
+   "Vóc dáng"
+  ],
+  "vi_pho_bien": "Vóc dáng đặc biệt",
+  "vi_vi_du": "Vóc dáng",
+  "key_vi_du": "LayoutMsg__Cmn_CharacterMenu.msbt::L_BtnTransform-T_Text"
+ },
+ {
+  "en": "Accessory",
+  "vi_variants": [
+   "Mũ nón",
+   "Kính mắt",
+   "Bịt mắt",
+   "Khẩu trang & Râu",
+   "Phụ kiện đầu"
+  ],
+  "vi_pho_bien": "Mũ nón",
+  "vi_vi_du": "Kính mắt",
+  "key_vi_du": "ProgramMsg__Equipment__RewardCategory.msbt::AccessoryMonocle"
+ },
+ {
+  "en": "Striking",
+  "vi_variants": [
+   "Vung Kiếm Tấn Công",
+   "Tấn Công"
+  ],
+  "vi_pho_bien": "Vung Kiếm Tấn Công",
+  "vi_vi_du": "Tấn Công",
+  "key_vi_du": "ProgramMsg__ChanbaraTutorial.msbt::Theme_OneSword_Slash"
+ },
+ {
+  "en": "Guarding",
+  "vi_variants": [
+   "Đỡ Đòn Phòng Thủ",
+   "Phòng Thủ"
+  ],
+  "vi_pho_bien": "Đỡ Đòn Phòng Thủ",
+  "vi_vi_du": "Phòng Thủ",
+  "key_vi_du": "ProgramMsg__ChanbaraTutorial.msbt::Theme_OneSword_Guard"
+ },
+ {
+  "en": "Bunker",
+  "vi_variants": [
+   "Hố cát (Bunker)",
+   "Rơi vào hố cát",
+   "Hideout"
+  ],
+  "vi_pho_bien": "Hố cát (Bunker)",
+  "vi_vi_du": "Rơi vào hố cát",
+  "key_vi_du": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUnl.msbt::234"
+ },
+ {
+  "en": "Energie",
+  "vi_variants": [
+   "Charge",
+   "Stamina"
+  ],
+  "vi_pho_bien": "Charge",
+  "vi_vi_du": "Stamina",
+  "key_vi_du": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUde.msbt::255"
+ },
+ {
+  "en": "Perfect",
+  "vi_variants": [
+   "Nice",
+   "Hoàn hảo!"
+  ],
+  "vi_pho_bien": "Nice",
+  "vi_vi_du": "Hoàn hảo!",
+  "key_vi_du": "ProgramMsg__Advice.msbt::BasketballTitle_004"
+ },
+ {
+  "en": "Rivale",
+  "vi_variants": [
+   "Rival",
+   "\u000e\u0002\u0002"
+  ],
+  "vi_pho_bien": "Rival",
+  "vi_vi_du": "\u000e\u0002\u0002",
+  "key_vi_du": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUnl.msbt::129_b"
+ },
+ {
+  "en": "Driving",
+  "vi_variants": [
+   "Đột phá (Drive)",
+   "Đột Phá",
+   "Đột Phá (Dẫn Bóng)"
+  ],
+  "vi_pho_bien": "Đột phá (Drive)",
+  "vi_vi_du": "Đột Phá",
+  "key_vi_du": "ProgramMsg__BasketballTutorial.msbt::Theme_VS_Dribble"
+ },
+ {
+  "en": "Stealing the Ball",
+  "vi_variants": [
+   "Cướp Bóng",
+   "Cướp bóng (Steal)",
+   "Cướp Bóng (Steal)"
+  ],
+  "vi_pho_bien": "Cướp Bóng",
+  "vi_vi_du": "Cướp bóng (Steal)",
+  "key_vi_du": "ProgramMsg__BasketballTutorial.msbt::Theme_VS_Steal"
+ },
+ {
+  "en": "Return to title screen?",
+  "vi_variants": [
+   "Trở về màn hình tiêu đề chính?",
+   "Quay về màn hình tiêu đề?"
+  ],
+  "vi_pho_bien": "Trở về màn hình tiêu đề chính?",
+  "vi_vi_du": "Quay về màn hình tiêu đề?",
+  "key_vi_du": "ProgramMsg__CommonDialog.msbt::BackToTitle_Content"
+ },
+ {
+  "en": "Decided by Deuce",
+  "vi_variants": [
+   "Thắng giằng co (Deuce)",
+   "Decided by Deuce"
+  ],
+  "vi_pho_bien": "Thắng giằng co (Deuce)",
+  "vi_vi_du": "Decided by Deuce",
+  "key_vi_du": "ProgramMsg__Common.msbt::RewardPointType_Bad_Deuce"
+ },
+ {
+  "en": "Long-Rally Bonus",
+  "vi_variants": [
+   "Long-Rally Bonus",
+   "Thưởng pha giằng co dài"
+  ],
+  "vi_pho_bien": "Long-Rally Bonus",
+  "vi_vi_du": "Thưởng pha giằng co dài",
+  "key_vi_du": "ProgramMsg__Common.msbt::RewardPointType_Bad_LongRally"
+ },
+ {
+  "en": "Left",
+  "vi_variants": [
+   "Tay trái / Chân trái",
+   "Tay Trái",
+   "Chân Trái",
+   "Tay trái"
+  ],
+  "vi_pho_bien": "Tay trái / Chân trái",
+  "vi_vi_du": "Tay Trái",
+  "key_vi_du": "LayoutMsg__Cmn_OptionUserSetting.msbt::L_DominantHand_SOC-L_Choice00-T_Text"
+ },
+ {
+  "en": "Right",
+  "vi_variants": [
+   "Chân Phải",
+   "Tay phải / Chân phải",
+   "Tay Phải",
+   "Tay phải"
+  ],
+  "vi_pho_bien": "Chân Phải",
+  "vi_vi_du": "Tay phải / Chân phải",
+  "key_vi_du": "LayoutMsg__Cmn_OptionUserSetting.msbt::L_DominantHand_SOC-L_Choice01-T_Text"
+ },
+ {
+  "en": "Dein",
+  "vi_variants": [
+   "Your",
+   "\u000e\u0002\u0002"
+  ],
+  "vi_pho_bien": "Your",
+  "vi_vi_du": "\u000e\u0002\u0002",
+  "key_vi_du": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUde.msbt::348_c"
+ }
+]

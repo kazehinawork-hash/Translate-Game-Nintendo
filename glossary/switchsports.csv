@@ -54,3 +54,50 @@ Bogey,Bogey,Sport_Golf,+1 gậy
 Dunk,Úp Rổ (Dunk),Sport_Basketball,Nhảy úp rổ trực diện
 Three-Pointer,Cú Ném 3 Điểm,Sport_Basketball,Ném từ ngoài vạch 3 điểm
 Rebound,Bắt Bóng Bật Bảng,Sport_Basketball,Tranh bóng bật ra từ bảng rổ
+Try Some Kicks,Thử Sút Bóng,Tutorial,
+Completion Bonus,Thưởng Hoàn Thành,UI,Nhãn danh sách phần thưởng
+CPU Strength,Độ Khó Của Máy (CPU),UI,
+Powerhouse,Cao Thủ,UI,Cấp độ CPU cao nhất
+Single Match,1 Ván Duy Nhất,UI,Độ dài trận tennis
+Best of 3,Thắng 2 Trên 3 (Bo3),UI,
+Best of 5,Thắng 3 Trên 5 (Bo5),UI,
+CPU,MÁY,UI,Đối thủ do máy điều khiển
+Teams,Đội hình,UI,
+Hitting Straight,Đánh Bóng Thẳng,Tutorial_Golf,
+How to Play,Hướng Dẫn Cách Chơi,UI,
+Resort,Khu nghỉ dưỡng (Resort),Sport_Golf,Sân golf
+Host,Chủ Phòng,UI,
+LAN Play,Chơi Qua Mạng LAN,Mode,
+Continue,Tiếp tục,UI,
+End Tutorial,Dừng hướng dẫn,UI,
+Shoot-Out,Sút Luân Lưu,Sport_Soccer,
+Beginner,Mới chơi,UI,Cấp độ khó Bowling
+Intermediate,Trung cấp,UI,Cấp độ khó Bowling
+Advanced,Nâng cao,UI,Cấp độ khó Bowling
+Classic,Cổ điển (Classic),Sport_Golf,Sân golf
+Room ID,Mã phòng (Room ID),UI,
+Minimap,Bản đồ nhỏ,UI,
+Finish!,Trận Đấu Kết Thúc!,UI,Băng-rôn kết thúc trận
+Game!,Kết Thúc!,UI,Băng-rôn kết thúc game
+None,Không có,UI,
+Change Controls,Đổi Cách Điều Khiển,UI,
+Here!,Bên này!,UI,
+Block Out,Chắn Bóng Ra Ngoài,Sport_Volleyball,
+Soccer: 1 vs. 1,Bóng Đá: 1 vs 1,UI,
+Soccer: 4 vs. 4,Bóng Đá: 4 vs 4,UI,
+Bowling: Standard,Bowling: Tiêu Chuẩn,UI,
+Press the buttons.,Bấm các nút trên tay cầm.,UI,
+Semifinals Result,Kết Quả Bán Kết,UI,
+Finals Result,Kết Quả Chung Kết,UI,
+Body,Vóc dáng,UI,
+Striking,Tấn Công,Action,Chambara (đồng bộ với Offense)
+Guarding,Phòng Thủ,Action,Chambara (đồng bộ với Defense)
+Driving,Đột Phá (Dẫn Bóng),Action,Bóng rổ
+Stealing the Ball,Cướp Bóng (Steal),Action,Bóng rổ
+Return to title screen?,Quay về màn hình tiêu đề?,UI,
+Decided by Deuce,Thắng giằng co (Deuce),UI,Điểm thưởng
+Long-Rally Bonus,Thưởng pha giằng co dài,UI,Điểm thưởng
+Press,Bấm,UI,Nút bấm: thống nhất dùng Bấm (không dùng Nhấn)
+Left,Tay Trái,UI,Chân Trái khi môn là Bóng Đá
+Right,Tay Phải,UI,Chân Phải khi môn là Bóng Đá
+OK,OK,UI,Nút xác nhận - thống nhất OK

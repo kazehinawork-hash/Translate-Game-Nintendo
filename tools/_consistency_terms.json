@@ -1,0 +1,8320 @@
+{
+ "switchsports": [
+  [
+   "Round 1",
+   [
+    "Vòng 1",
+    "Hiệp 1"
+   ],
+   "ProgramMsg__Chanbara.msbt::Round1"
+  ],
+  [
+   "Try Some Kicks",
+   [
+    "Thử Sút Bóng",
+    "Thử Một Vài Cú Sút"
+   ],
+   "ProgramMsg__SoccerTutorial.msbt::Theme_Foot_Move"
+  ],
+  [
+   "A",
+   [
+    "A",
+    "\u000e\u0002\u0002"
+   ],
+   "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_USpt.msbt::004_b"
+  ],
+  [
+   "O",
+   [
+    "O",
+    "The"
+   ],
+   "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_CNzh.msbt::368"
+  ],
+  [
+   "OK",
+   [
+    "OK",
+    "Đồng Ý"
+   ],
+   "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_CNzh.msbt::105"
+  ],
+  [
+   "爸爸",
+   [
+    "Dad",
+    "Father"
+   ],
+   "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_CNzh.msbt::016"
+  ],
+  [
+   "Press ",
+   [
+    "Nhấn ",
+    "Bấm "
+   ],
+   "LayoutMsg__Bwl_Preparation.msbt::T_Preparation"
+  ],
+  [
+   "Completion Bonus",
+   [
+    "Thưởng hoàn thành",
+    "Thưởng Hoàn Tất Bộ"
+   ],
+   "LayoutMsg__Cmn_RewardList.msbt::L_RewardList00-T_CompleteBonus"
+  ],
+  [
+   "CPU Strength",
+   [
+    "Độ khó máy (CPU)",
+    "Độ Khó Của Máy (CPU)"
+   ],
+   "LayoutMsg__Cmn_MenuRule.msbt::L_TnsCPULevel-T_ListTitle"
+  ],
+  [
+   "Powerhouse",
+   [
+    "Cao thủ",
+    "Siêu Đẳng"
+   ],
+   "LayoutMsg__Cmn_DlgCPUlevel.msbt::L_CPULevel-L_Btn02-T_Text"
+  ],
+  [
+   "Single Match",
+   [
+    "Trận đơn (1 set)",
+    "1 Ván Duy Nhất"
+   ],
+   "LayoutMsg__Cmn_MenuRule.msbt::L_TnsGame-L_Choice00-T_Text"
+  ],
+  [
+   "Best of 3",
+   [
+    "Đấu 3 thắng 2",
+    "Thắng 2 Trên 3 (Bo3)"
+   ],
+   "LayoutMsg__Cmn_MenuRule.msbt::L_TnsGame-L_Choice01-T_Text"
+  ],
+  [
+   "Best of 5",
+   [
+    "Thắng 3 Trên 5 (Bo5)",
+    "Đấu 5 thắng 3"
+   ],
+   "LayoutMsg__Cmn_MenuRule.msbt::L_TnsGame-L_Choice02-T_Text"
+  ],
+  [
+   "CPU",
+   [
+    "CPU",
+    "MÁY"
+   ],
+   "ProgramMsg__Common.msbt::Cpu"
+  ],
+  [
+   "Teams",
+   [
+    "Đội hình",
+    "Chia Đội"
+   ],
+   "LayoutMsg__Cmn_MenuRule.msbt::L_TnsTeam-T_ListTitle"
+  ],
+  [
+   "Hitting Straight",
+   [
+    "Đánh Bóng Thẳng Hướng",
+    "Đánh Bóng Thẳng"
+   ],
+   "ProgramMsg__GolfTutorial.msbt::Theme_Lesson2_Shot"
+  ],
+  [
+   "Guest",
+   [
+    "Khách",
+    "Guest"
+   ],
+   "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUen.msbt::093"
+  ],
+  [
+   "How to Play",
+   [
+    "Hướng Dẫn Cách Chơi",
+    "Cách chơi"
+   ],
+   "LayoutMsg__Cmn_OptionTrainingMenu.msbt::T_Training"
+  ],
+  [
+   "Soccer",
+   [
+    "Bóng Đá",
+    "Soccer",
+    "Bóng đá"
+   ],
+   "ProgramMsg__SportsCommon.msbt::SportsName_Soccer"
+  ],
+  [
+   "Volleyball",
+   [
+    "Bóng chuyền",
+    "Bóng Chuyền",
+    "Volleyball"
+   ],
+   "ProgramMsg__SportsCommon.msbt::SportsName_Volleyball"
+  ],
+  [
+   "Chambara",
+   [
+    "Chambara",
+    "Kiếm đạo (Chambara)",
+    "Kiếm Đạo (Chambara)"
+   ],
+   "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_USpt.msbt::254"
+  ],
+  [
+   "Basketball",
+   [
+    "Basketball",
+    "Bóng Rổ",
+    "Bóng rổ"
+   ],
+   "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUen.msbt::430"
+  ],
+  [
+   "Ávido",
+   [
+    "Hungry",
+    "Avid"
+   ],
+   "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_USpt.msbt::178"
+  ],
+  [
+   "Badminton",
+   [
+    "Cầu lông",
+    "Cầu Lông",
+    "Badminton"
+   ],
+   "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_USpt.msbt::250"
+  ],
+  [
+   "Colega",
+   [
+    "Colleague",
+    "Staffer"
+   ],
+   "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUes.msbt::161"
+  ],
+  [
+   "Constante",
+   [
+    "Constant",
+    "Forever",
+    "\u000e\u0002\u0002"
+   ],
+   "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUnl.msbt::190_b"
+  ],
+  [
+   "De",
+   [
+    "\u000e\u0002\u0002",
+    "The"
+   ],
+   "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_USpt.msbt::003_c"
+  ],
+  [
+   "E",
+   [
+    "E",
+    "And"
+   ],
+   "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_USpt.msbt::005"
+  ],
+  [
+   "Encantado",
+   [
+    "Greetings",
+    "Impressed"
+   ],
+   "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUes.msbt::159"
+  ],
+  [
+   "Eterno",
+   [
+    "Eternal",
+    "Infinite"
+   ],
+   "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_USpt.msbt::128"
+  ],
+  [
+   "Fanático",
+   [
+    "Fan of",
+    "Avid"
+   ],
+   "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_USes.msbt::178"
+  ],
+  [
+   "Festejo",
+   [
+    "Gathering",
+    "Holiday"
+   ],
+   "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_USpt.msbt::141"
+  ],
+  [
+   "Finalmente",
+   [
+    "After All",
+    "Finally"
+   ],
+   "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUes.msbt::408"
+  ],
+  [
+   "Grande",
+   [
+    "Big",
+    "\u000e\u0002\u0002"
+   ],
+   "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUes.msbt::086_b"
+  ],
+  [
+   "Green",
+   [
+    "Green",
+    "Xanh lá"
+   ],
+   "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_USpt.msbt::261"
+  ],
+  [
+   "Grupo",
+   [
+    "Team",
+    "Party"
+   ],
+   "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_USpt.msbt::014"
+  ],
+  [
+   "Imprevisto",
+   [
+    "Abrupt",
+    "Rainy Day"
+   ],
+   "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUes.msbt::216"
+  ],
+  [
+   "Infinito",
+   [
+    "Eternal",
+    "Infinite"
+   ],
+   "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUpt.msbt::128"
+  ],
+  [
+   "Novato",
+   [
+    "Rookie",
+    "Fresh"
+   ],
+   "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_USpt.msbt::056"
+  ],
+  [
+   "Ocultando",
+   [
+    "Hide",
+    "\u000e\u0002\u0002"
+   ],
+   "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUes.msbt::137_c"
+  ],
+  [
+   "Pagando",
+   [
+    "Paying",
+    "\u000e\u0002\u0002"
+   ],
+   "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUes.msbt::293_c"
+  ],
+  [
+   "Pensando",
+   [
+    "Thinking",
+    "\u000e\u0002\u0002"
+   ],
+   "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_USes.msbt::061_c"
+  ],
+  [
+   "Raro",
+   [
+    "Strangely",
+    "Rare"
+   ],
+   "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_USpt.msbt::110"
+  ],
+  [
+   "Resort",
+   [
+    "Khu nghỉ dưỡng",
+    "Khu nghỉ dưỡng (Resort)",
+    "Resort"
+   ],
+   "ProgramMsg__Menu.msbt::RuleSelectPage_Button0_GolfCourse9"
+  ],
+  [
+   "Saltando",
+   [
+    "Jump",
+    "\u000e\u0002\u0002"
+   ],
+   "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUes.msbt::053_c"
+  ],
+  [
+   "Strike",
+   [
+    "Strike",
+    "Strike!"
+   ],
+   "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_USpt.msbt::123"
+  ],
+  [
+   "Super",
+   [
+    "Extreme",
+    "Super"
+   ],
+   "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUes.msbt::007"
+  ],
+  [
+   "Back",
+   [
+    "Back",
+    "Quay lại"
+   ],
+   "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUen.msbt::249"
+  ],
+  [
+   "Best",
+   [
+    "Best",
+    "Kỷ lục"
+   ],
+   "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUen.msbt::152"
+  ],
+  [
+   "Block",
+   [
+    "Block",
+    "Chắn Bóng"
+   ],
+   "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUen.msbt::149"
+  ],
+  [
+   "Dash",
+   [
+    "Tăng tốc",
+    "Dash"
+   ],
+   "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUen.msbt::052"
+  ],
+  [
+   "Display",
+   [
+    "Hiển thị",
+    "Display"
+   ],
+   "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUen.msbt::077"
+  ],
+  [
+   "Extreme",
+   [
+    "Extreme",
+    "\u000e\u0002\u0002"
+   ],
+   "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUnl.msbt::007_b"
+  ],
+  [
+   "Free",
+   [
+    "Free",
+    "Tự do"
+   ],
+   "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUen.msbt::076"
+  ],
+  [
+   "Goal",
+   [
+    "Bàn thắng",
+    "Goal"
+   ],
+   "LayoutMsg__SOC_GoalPlayer.msbt::L_PlayerInfo00-T_Goal"
+  ],
+  [
+   "Host",
+   [
+    "Chủ phòng",
+    "Host",
+    "Chủ Phòng"
+   ],
+   "LayoutMsg__Cmn_Matching.msbt::L_Player00-T_Host"
+  ],
+  [
+   "Intense",
+   [
+    "Intense",
+    "\u000e\u0002\u0002"
+   ],
+   "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUnl.msbt::008_b"
+  ],
+  [
+   "Jump",
+   [
+    "Nhảy",
+    "Jump",
+    "Bật Nhảy"
+   ],
+   "ProgramMsg__VolleyballTutorial.msbt::Theme_Jump"
+  ],
+  [
+   "Music",
+   [
+    "Music",
+    "Âm nhạc"
+   ],
+   "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUen.msbt::274"
+  ],
+  [
+   "Party",
+   [
+    "Birthday",
+    "Party"
+   ],
+   "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUde.msbt::071"
+  ],
+  [
+   "Pass",
+   [
+    "Chuyền",
+    "Bump",
+    "Chuyền Bóng",
+    "Pass"
+   ],
+   "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUnl.msbt::147"
+  ],
+  [
+   "Positive",
+   [
+    "Positive",
+    "\u000e\u0002\u0002"
+   ],
+   "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUde.msbt::060_b"
+  ],
+  [
+   "Pure",
+   [
+    "Pure",
+    "\u000e\u0002\u0002"
+   ],
+   "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUnl.msbt::204_b"
+  ],
+  [
+   "Replay",
+   [
+    "Replay",
+    "Xem lại (Replay)"
+   ],
+   "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUen.msbt::319"
+  ],
+  [
+   "Spike",
+   [
+    "Đập Bóng",
+    "Spike"
+   ],
+   "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUen.msbt::148"
+  ],
+  [
+   "Stamina",
+   [
+    "Thể lực",
+    "Stamina"
+   ],
+   "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUen.msbt::099"
+  ],
+  [
+   "Sword",
+   [
+    "Kiếm đơn",
+    "Kiếm Đơn",
+    "Sword"
+   ],
+   "ProgramMsg__Chanbara.msbt::Weapon_Single"
+  ],
+  [
+   "Team",
+   [
+    "Team",
+    "Party"
+   ],
+   "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUnl.msbt::014"
+  ],
+  [
+   "Tennis",
+   [
+    "Quần Vợt (Tennis)",
+    "Tennis",
+    "Quần vợt (Tennis)"
+   ],
+   "ProgramMsg__SportsCommon.msbt::SportsName_Tennis"
+  ],
+  [
+   "Traveling",
+   [
+    "Traveling",
+    "Lỗi Chạy Bước (Traveling)"
+   ],
+   "ProgramMsg__Basketball.msbt::VsCall_Traveling"
+  ],
+  [
+   "With",
+   [
+    "With",
+    "Bật"
+   ],
+   "LayoutMsg__Cmn_FriendRoomSetting.msbt::L_VoiceChat-T_On"
+  ],
+  [
+   "Without",
+   [
+    "Tắt",
+    "Without"
+   ],
+   "LayoutMsg__Cmn_FriendRoomSetting.msbt::L_VoiceChat-T_Off"
+  ],
+  [
+   "LAN Play",
+   [
+    "Chơi Qua Mạng LAN",
+    "Chơi Mạng LAN"
+   ],
+   "ProgramMsg__Menu.msbt::ModeSelect_FriendButton_Lan"
+  ],
+  [
+   "Continue",
+   [
+    "Tiếp tục",
+    "Chơi tiếp"
+   ],
+   "ProgramMsg__CommonDialog.msbt::RestGuide_SubButton"
+  ],
+  [
+   "End Tutorial",
+   [
+    "Dừng phần hướng dẫn",
+    "Dừng hướng dẫn"
+   ],
+   "ProgramMsg__Menu.msbt::PauseMenuTutorial_Retire"
+  ],
+  [
+   "Shoot-Out",
+   [
+    "Sút Luân Lưu",
+    "Đấu Luân Lưu"
+   ],
+   "ProgramMsg__Menu.msbt::RuleSelectPage_Button3_Soccer"
+  ],
+  [
+   "Special",
+   [
+    "Chướng ngại vật",
+    "Đặc biệt (Special)"
+   ],
+   "ProgramMsg__Menu.msbt::RuleSelectPage_Button1_BowlingType"
+  ],
+  [
+   "Beginner",
+   [
+    "Mới chơi",
+    "Cơ Bản"
+   ],
+   "ProgramMsg__Bowling.msbt::LaneLevel_Easy"
+  ],
+  [
+   "Advanced",
+   [
+    "Nâng cao",
+    "Cao Cấp"
+   ],
+   "ProgramMsg__Bowling.msbt::LaneLevel_Hard"
+  ],
+  [
+   "Classic",
+   [
+    "Cổ điển (Classic)",
+    "Cổ điển"
+   ],
+   "ProgramMsg__Menu.msbt::RuleSelectPage_Button1_GolfCourse9"
+  ],
+  [
+   "Room ID",
+   [
+    "Mã phòng (Room ID)",
+    "Mã phòng"
+   ],
+   "ProgramMsg__Menu.msbt::Friend_RoomIdSwkbd_Guide"
+  ],
+  [
+   "Minimap",
+   [
+    "Bản đồ nhỏ",
+    "Bản đồ nhỏ (Minimap)"
+   ],
+   "ProgramMsg__Advice.msbt::SoccerTitle_004"
+  ],
+  [
+   "Finish!",
+   [
+    "Hết Giờ!",
+    "Trận Đấu Kết Thúc!",
+    "Kết thúc!"
+   ],
+   "ProgramMsg__Basketball.msbt::ThreePoint_IndividualGameStop"
+  ],
+  [
+   "Round 2",
+   [
+    "Hiệp 2",
+    "Vòng 2"
+   ],
+   "ProgramMsg__Chanbara.msbt::Round2"
+  ],
+  [
+   "None",
+   [
+    "Không có",
+    "Không Chọn"
+   ],
+   "LayoutMsg__Cmn_CharacterEdit.msbt::L_BtnEdit_00-T_Off"
+  ],
+  [
+   "Change Controls",
+   [
+    "Đổi kiểu điều khiển",
+    "Đổi Cách Điều Khiển"
+   ],
+   "LayoutMsg__Cmn_MainMenu.msbt::L_SportLogoSoc-L_LegPlay-T_Skip"
+  ],
+  [
+   "Here!",
+   [
+    "Bên này!",
+    "Here!"
+   ],
+   "ProgramMsg__SportsCommon.msbt::Balloon_Here"
+  ],
+  [
+   "Block Out",
+   [
+    "Chắn Bóng Ra Ngoài",
+    "Bóng chạm chắn ra ngoài"
+   ],
+   "ProgramMsg__Advice.msbt::VolleyballTitle_008"
+  ],
+  [
+   "Soccer: 1 vs. 1",
+   [
+    "Bóng Đá: 1 Đấu 1",
+    "Bóng Đá: 1 vs 1"
+   ],
+   "ProgramMsg__Common.msbt::DlgPlayAgain_Soccer1vs1"
+  ],
+  [
+   "Soccer: 4 vs. 4",
+   [
+    "Bóng Đá: 4 vs 4",
+    "Bóng Đá: 4 Đấu 4"
+   ],
+   "ProgramMsg__Common.msbt::DlgPlayAgain_Soccer4vs4"
+  ],
+  [
+   "Bowling: Standard",
+   [
+    "Bowling: Standard",
+    "Bowling: Tiêu Chuẩn"
+   ],
+   "ProgramMsg__Common.msbt::DlgPlayAgain_BowlingStandard"
+  ],
+  [
+   "Game!",
+   [
+    "Hết Giờ!",
+    "Kết Thúc!"
+   ],
+   "ProgramMsg__SportsCommon.msbt::GameSet_Soccer"
+  ],
+  [
+   "Spare",
+   [
+    "Spare",
+    "Spare!"
+   ],
+   "LayoutMsg__Bwl_Replay.msbt::T_Spare"
+  ],
+  [
+   "Brillante",
+   [
+    "Sparkling",
+    "\u000e\u0002\u0002"
+   ],
+   "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUde.msbt::078_b"
+  ],
+  [
+   "Entusiasta",
+   [
+    "Excited",
+    "Fan of"
+   ],
+   "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUpt.msbt::101"
+  ],
+  [
+   "Fan",
+   [
+    "Fan of",
+    "Avid"
+   ],
+   "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUes.msbt::178"
+  ],
+  [
+   "Hallo",
+   [
+    "Hello",
+    "Discover"
+   ],
+   "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUes.msbt::385"
+  ],
+  [
+   "Ídolo",
+   [
+    "Hero",
+    "Star"
+   ],
+   "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_USes.msbt::063"
+  ],
+  [
+   "Remate",
+   [
+    "Smash",
+    "Spike"
+   ],
+   "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUes.msbt::251"
+  ],
+  [
+   "Press the buttons.",
+   [
+    "Bấm các nút.",
+    "Nhấn các nút trên tay cầm."
+   ],
+   "LayoutMsg__Bwl_JoyconHowToHold.msbt::T_Discription"
+  ],
+  [
+   "Semifinals Result",
+   [
+    "Kết quả Vòng Bán kết",
+    "Kết Quả Bán Kết"
+   ],
+   "ProgramMsg__Bowling.msbt::ResultRank_SemiFinal"
+  ],
+  [
+   "Finals Result",
+   [
+    "Kết Quả Chung Kết",
+    "Kết quả Vòng Chung kết"
+   ],
+   "ProgramMsg__Bowling.msbt::ResultRank_Final"
+  ],
+  [
+   "Nice!",
+   [
+    "Tuyệt vời!",
+    "Sút Đẹp Lắm!"
+   ],
+   "ProgramMsg__Soccer.msbt::Nice_Shoot"
+  ],
+  [
+   "Body",
+   [
+    "Vóc dáng đặc biệt",
+    "Vóc dáng"
+   ],
+   "LayoutMsg__Cmn_CharacterMenu.msbt::L_BtnTransform-T_Text"
+  ],
+  [
+   "Accessory",
+   [
+    "Mũ nón",
+    "Kính mắt",
+    "Bịt mắt",
+    "Khẩu trang & Râu",
+    "Phụ kiện đầu"
+   ],
+   "ProgramMsg__Equipment__RewardCategory.msbt::AccessoryMonocle"
+  ],
+  [
+   "Striking",
+   [
+    "Vung Kiếm Tấn Công",
+    "Tấn Công"
+   ],
+   "ProgramMsg__ChanbaraTutorial.msbt::Theme_OneSword_Slash"
+  ],
+  [
+   "Guarding",
+   [
+    "Đỡ Đòn Phòng Thủ",
+    "Phòng Thủ"
+   ],
+   "ProgramMsg__ChanbaraTutorial.msbt::Theme_OneSword_Guard"
+  ],
+  [
+   "Bunker",
+   [
+    "Hố cát (Bunker)",
+    "Rơi vào hố cát",
+    "Hideout"
+   ],
+   "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUnl.msbt::234"
+  ],
+  [
+   "Energie",
+   [
+    "Charge",
+    "Stamina"
+   ],
+   "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUde.msbt::255"
+  ],
+  [
+   "Perfect",
+   [
+    "Nice",
+    "Hoàn hảo!"
+   ],
+   "ProgramMsg__Advice.msbt::BasketballTitle_004"
+  ],
+  [
+   "Rivale",
+   [
+    "Rival",
+    "\u000e\u0002\u0002"
+   ],
+   "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUnl.msbt::129_b"
+  ],
+  [
+   "Driving",
+   [
+    "Đột phá (Drive)",
+    "Đột Phá",
+    "Đột Phá (Dẫn Bóng)"
+   ],
+   "ProgramMsg__BasketballTutorial.msbt::Theme_VS_Dribble"
+  ],
+  [
+   "Stealing the Ball",
+   [
+    "Cướp Bóng",
+    "Cướp bóng (Steal)",
+    "Cướp Bóng (Steal)"
+   ],
+   "ProgramMsg__BasketballTutorial.msbt::Theme_VS_Steal"
+  ],
+  [
+   "Return to title screen?",
+   [
+    "Trở về màn hình tiêu đề chính?",
+    "Quay về màn hình tiêu đề?"
+   ],
+   "ProgramMsg__CommonDialog.msbt::BackToTitle_Content"
+  ],
+  [
+   "Decided by Deuce",
+   [
+    "Thắng giằng co (Deuce)",
+    "Decided by Deuce"
+   ],
+   "ProgramMsg__Common.msbt::RewardPointType_Bad_Deuce"
+  ],
+  [
+   "Long-Rally Bonus",
+   [
+    "Long-Rally Bonus",
+    "Thưởng pha giằng co dài"
+   ],
+   "ProgramMsg__Common.msbt::RewardPointType_Bad_LongRally"
+  ],
+  [
+   "Left",
+   [
+    "Tay trái / Chân trái",
+    "Tay Trái",
+    "Chân Trái",
+    "Tay trái"
+   ],
+   "LayoutMsg__Cmn_OptionUserSetting.msbt::L_DominantHand_SOC-L_Choice00-T_Text"
+  ],
+  [
+   "Right",
+   [
+    "Chân Phải",
+    "Tay phải / Chân phải",
+    "Tay Phải",
+    "Tay phải"
+   ],
+   "LayoutMsg__Cmn_OptionUserSetting.msbt::L_DominantHand_SOC-L_Choice01-T_Text"
+  ],
+  [
+   "Dein",
+   [
+    "Your",
+    "\u000e\u0002\u0002"
+   ],
+   "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUde.msbt::348_c"
+  ]
+ ],
+ "hades2": [
+  [
+   "Dead Zone",
+   [
+    "Vùng Chết Cần Gạt",
+    "Vùng chết"
+   ],
+   "ShellText.en.sjson::DeadZone"
+  ],
+  [
+   "King Vermin",
+   [
+    "Vua Sâu Động",
+    "Vua Súc Sinh"
+   ],
+   "HelpText.en.sjson::Song_MinibossTheme"
+  ],
+  [
+   "Vow of Rivals",
+   [
+    "Lời Thề Đối Thủ",
+    "Lời Thề Đấu Thủ"
+   ],
+   "HelpText.en.sjson::ShrineUpgradeGained_Subtitle01"
+  ],
+  [
+   "Unraveling a Fateful Bond",
+   [
+    "Gỡ Sợi Dây Định Mệnh",
+    "Gỡ Gút Định Mệnh"
+   ],
+   "HelpText.en.sjson::WorldUpgradeSurfacePenaltyCure"
+  ],
+  [
+   "Gold Crowns",
+   [
+    "Vương Miện Vàng",
+    "Vàng Vương Miện"
+   ],
+   "HelpText.en.sjson::Money"
+  ],
+  [
+   "Adamant",
+   [
+    "B·Thạch",
+    "Bất hoại thạch"
+   ],
+   "HelpText.en.sjson::OrePAdamant_Short"
+  ],
+  [
+   "Kudos",
+   [
+    "Khen ngợi",
+    "Khen"
+   ],
+   "HelpText.en.sjson::CosmeticsPoints_Short"
+  ],
+  [
+   "Rubbish",
+   [
+    "Rác",
+    "Rác rưởi"
+   ],
+   "HelpText.en.sjson::TrashPoints_Short"
+  ],
+  [
+   "Plankton",
+   [
+    "Phù du",
+    "Sinh vật phù du"
+   ],
+   "HelpText.en.sjson::PlantQSnakereedSeed_Short"
+  ],
+  [
+   "Forget-Me-Not",
+   [
+    "Ghim Vật Phẩm",
+    "Hoa Cúc Quên Không Quên"
+   ],
+   "ShellText.en.sjson::ItemPin"
+  ],
+  [
+   "Witch of Changing",
+   [
+    "Phù Thủy Thay Đổi",
+    "Phù Thủy Biến Hình"
+   ],
+   "HelpText.en.sjson::QuestCirceUpgrades"
+  ],
+  [
+   "Witch of Shadows",
+   [
+    "Phù Thủy Bóng Đêm",
+    "Phù Thủy Bóng Tối"
+   ],
+   "HelpText.en.sjson::QuestMedeaCurses"
+  ],
+  [
+   "Evil Eye",
+   [
+    "Mắt Quỷ",
+    "Con Mắt Hắc Ám"
+   ],
+   "HelpText.en.sjson::Song_NemesisTheme"
+  ],
+  [
+   "Horror",
+   [
+    "Kinh Hoàng",
+    "Ác Quỷ"
+   ],
+   "TraitText.en.sjson::TransformSpecialCritTalent"
+  ],
+  [
+   "Gifts of the Moon",
+   [
+    "Món Quà Của Trăng",
+    "Lễ Vật Ánh Trăng"
+   ],
+   "ScreenText.en.sjson::SpellScreenMenu_Title"
+  ],
+  [
+   "Charm",
+   [
+    "Phù Chú",
+    "Quyến Rũ"
+   ],
+   "HelpText.en.sjson::RepeatSpell"
+  ],
+  [
+   "Path of Stars",
+   [
+    "Con Đường Sao",
+    "Con Đường Của Sao"
+   ],
+   "ScreenText.en.sjson::TalentScreenMenu_Title"
+  ],
+  [
+   "Shrine of Hermes",
+   [
+    "Điện Thờ Hermes",
+    "Bàn thờ Hermes"
+   ],
+   "HelpText.en.sjson::SurfaceShop"
+  ],
+  [
+   "Pitch-Black Stone",
+   [
+    "Hắc Thạch",
+    "Viên Đá Đen Tuyền"
+   ],
+   "ScreenText.en.sjson::BountyLogScreen_Title"
+  ],
+  [
+   "Credits",
+   [
+    "Đội ngũ thực hiện",
+    "Tác Giả"
+   ],
+   "ShellText.en.sjson::SettingsMenuScreen_AboutUs"
+  ],
+  [
+   "Orchestration",
+   [
+    "Phối Khí Dàn Nhạc",
+    "Dàn Xếp"
+   ],
+   "TraitText.en.sjson::PolymorphTeleportCastTalent"
+  ],
+  [
+   "Grasp of the Arcana",
+   [
+    "Dung Lượng Tâm Thức Arcana",
+    "Tâm Thức Arcana"
+   ],
+   "ScreenText.en.sjson::MetaUpgradeCardLimit_Upgrade"
+  ],
+  [
+   "Cross-Saves",
+   [
+    "Lưu Đa Nền Tảng",
+    "Lưu Trữ Đám Mây"
+   ],
+   "ShellText.en.sjson::MainMenuScreen_CloudSave"
+  ],
+  [
+   "Notice: Corrupted Save Data",
+   [
+    "Ghi Đè Lưu Trữ?",
+    "Thông báo: Dữ liệu lưu bị hỏng"
+   ],
+   "ShellText.en.sjson::SaveFileOverwriteWarning"
+  ],
+  [
+   "Notice",
+   [
+    "Thông Báo",
+    "Thông báo",
+    "Lỗi Lưu Trữ"
+   ],
+   "ShellText.en.sjson::SaveErrorGeneric"
+  ],
+  [
+   "Syncing Cross-Save Data",
+   [
+    "Đồng Bộ Đám Mây Thành Công",
+    "Đang đồng bộ dữ liệu lưu",
+    "Đồng Bộ Đám Mây Thất Bại",
+    "Đang Đồng Bộ Đám Mây..."
+   ],
+   "ShellText.en.sjson::CloudSaves_SyncingDialogText"
+  ],
+  [
+   "Notice: Connection Failed",
+   [
+    "Thông báo: Kết nối thất bại",
+    "Cần Tài Khoản Nintendo"
+   ],
+   "ShellText.en.sjson::CloudSaveError_NoNintendoAccount"
+  ],
+  [
+   "OK...",
+   [
+    "Được rồi...",
+    "Được..."
+   ],
+   "_AudioData.en.sjson::Melinoe_1843"
+  ],
+  [
+   "Let's see...",
+   [
+    "Xem nào...",
+    "Để xem..."
+   ],
+   "_AudioData.en.sjson::MelinoeField_0611"
+  ],
+  [
+   "I can't!",
+   [
+    "Ta không thể!",
+    "Ta không làm được!"
+   ],
+   "_HeroData.en.sjson::Melinoe_0226"
+  ],
+  [
+   "Death to Chronos.",
+   [
+    "Chronos phải chết.",
+    "Tử thần gọi tên Chronos.",
+    "Tử hình Chronos.",
+    "Chronos phải diệt."
+   ],
+   "_LootData_Selene.en.sjson::Selene_0486"
+  ],
+  [
+   "All right.",
+   [
+    "Được rồi.",
+    "Được.",
+    "Được thôi."
+   ],
+   "_AudioData.en.sjson::Melinoe_0118"
+  ],
+  [
+   "For the Silver Sisters.",
+   [
+    "Vì Chị Em Ánh Bạc.",
+    "Vì các Chị Em Bạc."
+   ],
+   "_LootData_Selene.en.sjson::Selene_0488"
+  ],
+  [
+   "I go.",
+   [
+    "Đi thôi.",
+    "Ta đi."
+   ],
+   "_NPCData_Heracles.en.sjson::Heracles_0130"
+  ],
+  [
+   "Here we go.",
+   [
+    "Bắt đầu nào.",
+    "Đi nào.",
+    "Bắt đầu thôi."
+   ],
+   "_HeroData.en.sjson::Icarus_0212"
+  ],
+  [
+   "For the Unseen.",
+   [
+    "Vì Vô Hình.",
+    "Vì Những Vô Hình."
+   ],
+   "_AudioData.en.sjson::Melinoe_4304"
+  ],
+  [
+   "Olympus calls...",
+   [
+    "Olympus đang gọi...",
+    "Đỉnh Olympus đang gọi..."
+   ],
+   "_AudioData.en.sjson::Melinoe_2484"
+  ],
+  [
+   "Moonlight guide us.",
+   [
+    "Nguyện ánh trăng dẫn lối chúng ta.",
+    "Ánh trăng dẫn lối chúng ta."
+   ],
+   "_AudioData.en.sjson::Melinoe_1704"
+  ],
+  [
+   "Return.",
+   [
+    "Quay về.",
+    "Trở về."
+   ],
+   "_AudioData.en.sjson::Melinoe_5426"
+  ],
+  [
+   "For the realm.",
+   [
+    "Vì vương quốc.",
+    "Vì cõi này."
+   ],
+   "_HeroData.en.sjson::Melinoe_0982"
+  ],
+  [
+   "Hi!",
+   [
+    "Chào!",
+    "Này!"
+   ],
+   "_EnemyData_Polyphemus.en.sjson::Polyphemus_0101"
+  ],
+  [
+   "Come on!",
+   [
+    "Nào!",
+    "Tới đây!",
+    "Lên nào!",
+    "Tới đi!"
+   ],
+   "_EnemyData_Chronos.en.sjson::Chronos_0817"
+  ],
+  [
+   "Face me!",
+   [
+    "Đối mặt ta!",
+    "Đối mặt với ta đi!"
+   ],
+   "_AudioData.en.sjson::Melinoe_0273"
+  ],
+  [
+   "You dare?",
+   [
+    "Ngươi dám sao?",
+    "Ngươi dám?"
+   ],
+   "_AudioData.en.sjson::Melinoe_1778"
+  ],
+  [
+   "Come.",
+   [
+    "Lại đây.",
+    "Tới đây."
+   ],
+   "_HeroData.en.sjson::Heracles_0422"
+  ],
+  [
+   "You again.",
+   [
+    "Lại là mày.",
+    "Lại là ngươi.",
+    "Lại ngươi."
+   ],
+   "_EnemyData_Polyphemus.en.sjson::Polyphemus_0105"
+  ],
+  [
+   "Well done.",
+   [
+    "Làm tốt lắm.",
+    "Làm tốt.",
+    "L?m t?t l?m.",
+    "Giỏi lắm."
+   ],
+   "_HeroData.en.sjson::MelinoeField_2089"
+  ],
+  [
+   "Good.",
+   [
+    "T?t.",
+    "Tốt."
+   ],
+   "_EnemyData_Hecate.en.sjson::Hecate_0104"
+  ],
+  [
+   "Wow...",
+   [
+    "Ồ...",
+    "Chà..."
+   ],
+   "_AudioData.en.sjson::Arachne_0240"
+  ],
+  [
+   "Thank you!",
+   [
+    "Cảm ơn!",
+    "Cảm ơn nhé!"
+   ],
+   "_FamiliarData.en.sjson::MelinoeField_3295"
+  ],
+  [
+   "Good work.",
+   [
+    "Làm tốt lắm.",
+    "Làm tốt."
+   ],
+   "_NPCData_Artemis.en.sjson::Melinoe_1247"
+  ],
+  [
+   "Yours.",
+   [
+    "Của mày.",
+    "Của ngươi."
+   ],
+   "_NPCData_Nemesis.en.sjson::NemesisField_0061"
+  ],
+  [
+   "Out!",
+   [
+    "Ra!",
+    "Cút!"
+   ],
+   "_AudioData.en.sjson::Melinoe_0305"
+  ],
+  [
+   "There.",
+   [
+    "Đấy.",
+    "Rồi.",
+    "Đó.",
+    "Kia.",
+    "Kia rồi.",
+    "Kìa.",
+    "Nè.",
+    "Kìa rồi.",
+    "Đây."
+   ],
+   "_AudioData.en.sjson::Melinoe_0829"
+  ],
+  [
+   "There!",
+   [
+    "Đây!",
+    "Đấy!",
+    "Đằng kia!",
+    "Xong!",
+    "Đó!"
+   ],
+   "_NPCData_Arachne.en.sjson::Arachne_0182"
+  ],
+  [
+   "Next.",
+   [
+    "Tiếp.",
+    "Kẻ tiếp."
+   ],
+   "_AudioData.en.sjson::Melinoe_0308"
+  ],
+  [
+   "Next!",
+   [
+    "Kẻ tiếp!",
+    "Kẻ tiếp theo!"
+   ],
+   "_EnemyData_Heracles.en.sjson::Heracles_0677"
+  ],
+  [
+   "More?",
+   [
+    "Nữa sao?",
+    "Còn nữa?"
+   ],
+   "_AudioData.en.sjson::Melinoe_0310"
+  ],
+  [
+   "No.",
+   [
+    "Không đời nào.",
+    "Không."
+   ],
+   "_EnemyData_Prometheus.en.sjson::Prometheus_0198"
+  ],
+  [
+   "Denied.",
+   [
+    "Từ chối.",
+    "Bị từ chối."
+   ],
+   "_AudioData.en.sjson::MelinoeField_0601"
+  ],
+  [
+   "Out.",
+   [
+    "Ra.",
+    "Cút."
+   ],
+   "_AudioData.en.sjson::MelinoeField_0604"
+  ],
+  [
+   "Predictable.",
+   [
+    "Dễ đoán.",
+    "Quá dễ đoán."
+   ],
+   "_AudioData.en.sjson::MelinoeField_0605"
+  ],
+  [
+   "Perish.",
+   [
+    "Chết đi.",
+    "Diệt vong.",
+    "Diệt vong đi."
+   ],
+   "_EnemyData_Chronos.en.sjson::Chronos_0818"
+  ],
+  [
+   "Remember me?",
+   [
+    "Nhớ ta chứ?",
+    "Còn nhớ ta không?"
+   ],
+   "_AudioData.en.sjson::MelinoeField_0698"
+  ],
+  [
+   "Retribution.",
+   [
+    "Báo Ứng.",
+    "Trừng phạt."
+   ],
+   "_NPCData_Nemesis.en.sjson::NemesisField_0268"
+  ],
+  [
+   "Livestock...",
+   [
+    "Gia súc...",
+    "Súc vật..."
+   ],
+   "_AudioData.en.sjson::Chronos_0658"
+  ],
+  [
+   "Excellent.",
+   [
+    "Xu?t s?c.",
+    "Xuất sắc.",
+    "Tuyệt lắm."
+   ],
+   "_AudioData.en.sjson::Melinoe_0204"
+  ],
+  [
+   "That's settled.",
+   [
+    "Xong rồi đấy.",
+    "Xong."
+   ],
+   "_NPCData_Athena.en.sjson::Athena_0051"
+  ],
+  [
+   "Weak.",
+   [
+    "Yếu xìu.",
+    "Yếu.",
+    "Yếu ớt."
+   ],
+   "_EnemyData_Polyphemus.en.sjson::Polyphemus_0336"
+  ],
+  [
+   "Death to Chronos...",
+   [
+    "Chết đi, Chronos...",
+    "Chronos phải chết...",
+    "Tử thần gọi tên Chronos..."
+   ],
+   "_NPCData.en.sjson::Nemesis_0109"
+  ],
+  [
+   "Is that all?",
+   [
+    "Chỉ vậy thôi sao?",
+    "Chỉ có thế thôi sao?"
+   ],
+   "_EnemyData_Prometheus.en.sjson::Prometheus_0211"
+  ],
+  [
+   "Enough of this.",
+   [
+    "Đủ rồi đấy.",
+    "Đủ rồi."
+   ],
+   "_EnemyData_Prometheus.en.sjson::Prometheus_0416"
+  ],
+  [
+   "As expected.",
+   [
+    "Như dự liệu.",
+    "Đúng như dự đoán."
+   ],
+   "_AudioData.en.sjson::Melinoe_0007_V3"
+  ],
+  [
+   "That's that.",
+   [
+    "Vậy là xong.",
+    "Thế là thế.",
+    "Thế là xong."
+   ],
+   "_NPCData_Nemesis.en.sjson::NemesisField_0342"
+  ],
+  [
+   "I think not.",
+   [
+    "Ta nghĩ là không.",
+    "Ta không nghĩ vậy đâu.",
+    "Ta không nghĩ vậy.",
+    "Ta nghĩ là không đâu."
+   ],
+   "_EnemyData_Prometheus.en.sjson::Prometheus_0511"
+  ],
+  [
+   "Enough.",
+   [
+    "Đủ.",
+    "Đủ rồi."
+   ],
+   "_AudioData.en.sjson::Melinoe_0689"
+  ],
+  [
+   "Keep going...",
+   [
+    "Tiếp tục nào...",
+    "Đi tiếp thôi..."
+   ],
+   "_AudioData.en.sjson::Melinoe_0290"
+  ],
+  [
+   "There you are.",
+   [
+    "Ngươi đây rồi.",
+    "Ngươi ở đây rồi.",
+    "Tỷ đây rồi.",
+    "Con đây rồi.",
+    "Ô, ngươi đây rồi."
+   ],
+   "_EnemyData_Hecate.en.sjson::Hecate_0486"
+  ],
+  [
+   "There it is.",
+   [
+    "Nó ở đó.",
+    "Nó kia kìa.",
+    "Nó kia rồi."
+   ],
+   "_AudioData.en.sjson::Artemis_0333"
+  ],
+  [
+   "Not now.",
+   [
+    "Không phải lúc này.",
+    "Không phải lúc.",
+    "Giờ thì không."
+   ],
+   "_AudioData.en.sjson::Melinoe_0387"
+  ],
+  [
+   "Can't right now.",
+   [
+    "Lúc này không được.",
+    "Giờ chưa được."
+   ],
+   "_AudioData.en.sjson::Melinoe_2385"
+  ],
+  [
+   "Why thank you...!",
+   [
+    "Ồ, cảm ơn Người...!",
+    "Ôi, cảm ơn nhé...!"
+   ],
+   "_AudioData.en.sjson::Melinoe_0842"
+  ],
+  [
+   "There...",
+   [
+    "Đấy...",
+    "Kia rồi...",
+    "Đó..."
+   ],
+   "_AudioData.en.sjson::Selene_0284"
+  ],
+  [
+   "Steady now...",
+   [
+    "Bình tĩnh...",
+    "Bình tĩnh nào..."
+   ],
+   "_AudioData.en.sjson::MelinoeField_0677"
+  ],
+  [
+   "Whoa...!",
+   [
+    "Chà...!",
+    "Ối...!"
+   ],
+   "_AudioData.en.sjson::MelinoeField_0381"
+  ],
+  [
+   "Now...",
+   [
+    "Ngay...",
+    "Giờ...",
+    "Giờ thì...",
+    "Bây giờ..."
+   ],
+   "_EnemyData_Eris.en.sjson::ErisField_0061"
+  ],
+  [
+   "Together we shine.",
+   [
+    "Chúng ta cùng tỏa sáng.",
+    "Cùng nhau ta tỏa sáng.",
+    "Ta cùng tỏa sáng."
+   ],
+   "_NPCData_Medea.en.sjson::Medea_0098"
+  ],
+  [
+   "It is yours.",
+   [
+    "Nó là của con.",
+    "Nó là của ngươi."
+   ],
+   "_AudioData.en.sjson::Selene_0124"
+  ],
+  [
+   "So mote it be.",
+   [
+    "Nguyện như vậy.",
+    "Y như lời nguyện.",
+    "Nguyện thế.",
+    "Nguyện được như vậy."
+   ],
+   "_NPCData_Medea.en.sjson::Medea_0088"
+  ],
+  [
+   "You have it.",
+   [
+    "Con có nó rồi.",
+    "Con có rồi đó.",
+    "Con nhận lấy đi.",
+    "Ngươi có nó rồi."
+   ],
+   "_HeroData.en.sjson::Hades_0249"
+  ],
+  [
+   "Let us be off.",
+   [
+    "Ta lên đường thôi.",
+    "Chúng ta lên đường."
+   ],
+   "_NPCData_Athena.en.sjson::Athena_0103"
+  ],
+  [
+   "Yes.",
+   [
+    "Ừ.",
+    "Đúng.",
+    "Phải."
+   ],
+   "_EnemyData_Prometheus.en.sjson::Prometheus_0188"
+  ],
+  [
+   "Right.",
+   [
+    "Ừ.",
+    "Đúng.",
+    "Phải."
+   ],
+   "_AudioData.en.sjson::Melinoe_0211"
+  ],
+  [
+   "Very well...",
+   [
+    "Được thôi...",
+    "Tốt lắm..."
+   ],
+   "_AudioData.en.sjson::Melinoe_0244"
+  ],
+  [
+   "Do you see?",
+   [
+    "Thấy chưa?",
+    "Con thấy chứ?"
+   ],
+   "_AudioData.en.sjson::Selene_0409"
+  ],
+  [
+   "A fishing point.",
+   [
+    "Điểm câu cá.",
+    "Một điểm câu cá."
+   ],
+   "_AudioData.en.sjson::Selene_0422"
+  ],
+  [
+   "Interesting...",
+   [
+    "Thú vị đấy...",
+    "Thú vị..."
+   ],
+   "_AudioData.en.sjson::Melinoe_0241"
+  ],
+  [
+   "Got it.",
+   [
+    "Được rồi.",
+    "Hiểu rồi."
+   ],
+   "_CosmeticsData.en.sjson::Dora_0393"
+  ],
+  [
+   "In you go.",
+   [
+    "Vào đi nào.",
+    "Vào nhé."
+   ],
+   "_GhostAdminData.en.sjson::Melinoe_0524"
+  ],
+  [
+   "Mine.",
+   [
+    "Của tao.",
+    "Của mình."
+   ],
+   "_AudioData.en.sjson::Melinoe_0722"
+  ],
+  [
+   "No thank you.",
+   [
+    "Không, cảm ơn.",
+    "Khỏi cảm ơn."
+   ],
+   "_AudioData.en.sjson::MelinoeField_0077"
+  ],
+  [
+   "Salutations.",
+   [
+    "Xin chào.",
+    "Chào em.",
+    "Kính chào.",
+    "Chào hỏi."
+   ],
+   "_LootData_Selene.en.sjson::Selene_0236"
+  ],
+  [
+   "Salutations!",
+   [
+    "Kính chào!",
+    "Xin chào!"
+   ],
+   "_NPCData_Odysseus.en.sjson::Odysseus_0215"
+  ],
+  [
+   "Death to Chronos!",
+   [
+    "Tử hình Chronos!",
+    "Chronos phải chết!"
+   ],
+   "_EnemyData_Traps.en.sjson::MelinoeField_0441"
+  ],
+  [
+   "Moonlight guide you.",
+   [
+    "Nguyệt quang dẫn lối cho muội.",
+    "Nguyện ánh trăng dẫn lối cho ngươi.",
+    "Nguyện ánh trăng dẫn lối.",
+    "Ánh trăng dẫn đường cho ngươi."
+   ],
+   "_AudioData.en.sjson::Melinoe_1701"
+  ],
+  [
+   "Blast...",
+   [
+    "Tiêu rồi...",
+    "Chết...",
+    "Khốn kiếp...",
+    "Chết tiệt..."
+   ],
+   "_AudioData.en.sjson::MelinoeField_1471"
+  ],
+  [
+   "This should help.",
+   [
+    "Cái này hẳn sẽ giúp ích.",
+    "Thứ này chắc giúp được."
+   ],
+   "_GhostAdminData.en.sjson::Melinoe_0520"
+  ],
+  [
+   "I'll take it.",
+   [
+    "Ta lấy.",
+    "Để ta nhận cho.",
+    "Ta lấy nó."
+   ],
+   "_AudioData.en.sjson::Melinoe_0554"
+  ],
+  [
+   "This one.",
+   [
+    "Cái này.",
+    "Lấy cái này."
+   ],
+   "_AudioData.en.sjson::Melinoe_0214"
+  ],
+  [
+   "Here's the Gold.",
+   [
+    "Vàng đây.",
+    "Đây Gold."
+   ],
+   "_AudioData.en.sjson::Melinoe_0557"
+  ],
+  [
+   "Coming right up!",
+   [
+    "Ra ngay!",
+    "Có ngay đây!"
+   ],
+   "_AudioData.en.sjson::Hermes_0110"
+  ],
+  [
+   "You got it!",
+   [
+    "Có ngay đây!",
+    "Được như ý em!",
+    "Được ngay!"
+   ],
+   "_LootData_Poseidon.en.sjson::Poseidon_0231"
+  ],
+  [
+   "Sure thing!",
+   [
+    "Chắc chắn rồi!",
+    "Được chứ!"
+   ],
+   "_AudioData.en.sjson::Hermes_0112"
+  ],
+  [
+   "Good choice!",
+   [
+    "Lựa chọn sáng suốt!",
+    "Chọn ngon đấy!"
+   ],
+   "_HeroData.en.sjson::Dionysus_0095"
+  ],
+  [
+   "All yours!",
+   [
+    "Của cậu hết!",
+    "Tất cả là của ngươi!",
+    "Của ngươi hết!"
+   ],
+   "_NPCData_Hermes.en.sjson::Hermes_0237"
+  ],
+  [
+   "Thank the Fates.",
+   [
+    "Tạ ơn Ba Bà Định Mệnh.",
+    "Tạ ơn Số Mệnh.",
+    "Cảm ơn Ba Mệnh."
+   ],
+   "_NPCData.en.sjson::NemesisField_0203"
+  ],
+  [
+   "Damn it!",
+   [
+    "Khốn thật!",
+    "Chết tiệt!"
+   ],
+   "_NPCData_Artemis.en.sjson::Artemis_0083"
+  ],
+  [
+   "What...",
+   [
+    "Cái gì...",
+    "Gì..."
+   ],
+   "_AudioData.en.sjson::Melinoe_1954"
+  ],
+  [
+   "Why thank you.",
+   [
+    "Cảm ơn nhé.",
+    "Ôi, cảm ơn nhé."
+   ],
+   "_AudioData.en.sjson::Zeus_0115"
+  ],
+  [
+   "Music to my ears!",
+   [
+    "Nghe mà vui quá!",
+    "Như nhạc bên tai!"
+   ],
+   "_LootData_Apollo.en.sjson::Apollo_0218"
+  ],
+  [
+   "Good pick.",
+   [
+    "Chọn hay.",
+    "Chọn khéo."
+   ],
+   "_NPCData_Dora.en.sjson::Dora_0674"
+  ],
+  [
+   "My granddaughter.",
+   [
+    "Cháu gái của ta.",
+    "Cháu gái ta."
+   ],
+   "_RoomDataI.en.sjson::Chronos_0802"
+  ],
+  [
+   "Cheers!",
+   [
+    "Cạn ly!",
+    "Cụng ly!",
+    "Dô rượu!",
+    "Tuyệt lắm!"
+   ],
+   "_AudioData.en.sjson::Hephaestus_0162"
+  ],
+  [
+   "Darkness guide you.",
+   [
+    "Nguyện bóng tối dẫn lối con.",
+    "Nguyện bóng tối dẫn lối cho ngươi.",
+    "Bóng đêm soi đường cho em."
+   ],
+   "_LootData_Selene.en.sjson::Selene_0237"
+  ],
+  [
+   "Evening.",
+   [
+    "Chào buổi tối.",
+    "Chào tối."
+   ],
+   "_AudioData.en.sjson::Melinoe_4153"
+  ],
+  [
+   "You honor me.",
+   [
+    "Ngươi làm ta vinh hạnh.",
+    "Ngài làm ta vinh hạnh quá."
+   ],
+   "_AudioData.en.sjson::MelinoeField_1529"
+  ],
+  [
+   "Here he comes...",
+   [
+    "Hắn tới rồi kìa...",
+    "Hắn tới rồi..."
+   ],
+   "_EnemyData_Prometheus.en.sjson::Prometheus_0374"
+  ],
+  [
+   "Which way...",
+   [
+    "Lối nào đây...",
+    "Đi lối nào..."
+   ],
+   "_AudioData.en.sjson::Melinoe_0256"
+  ],
+  [
+   "One step closer...",
+   [
+    "Gần hơn một bước...",
+    "Gần thêm bước..."
+   ],
+   "_AudioData.en.sjson::MelinoeField_1338"
+  ],
+  [
+   "Thank the Fates...",
+   [
+    "Cảm ơn Ba Mệnh...",
+    "Tạ ơn Số Phận..."
+   ],
+   "_NPCData.en.sjson::Moros_0560"
+  ],
+  [
+   "You're in my way.",
+   [
+    "Ngươi vướng đường ta.",
+    "Ngươi đang cản đường ta đấy.",
+    "Ngươi đang cản đường ta."
+   ],
+   "_NPCData_Heracles.en.sjson::Heracles_0076"
+  ],
+  [
+   "Ah, yes.",
+   [
+    "À, phải.",
+    "Phải rồi."
+   ],
+   "_EnemyData_Polyphemus.en.sjson::Medea_0340"
+  ],
+  [
+   "Got you.",
+   [
+    "Tóm được mày rồi.",
+    "Tóm được ngươi rồi.",
+    "Tóm được rồi.",
+    "Tóm được muội rồi.",
+    "Tóm được cô.",
+    "Bắt được con rồi.",
+    "Trúng rồi.",
+    "Tóm được mày."
+   ],
+   "_EnemyData_Hecate.en.sjson::HecateField_0031"
+  ],
+  [
+   "Done.",
+   [
+    "Xong rồi.",
+    "Xong."
+   ],
+   "_LootData_Ares.en.sjson::Ares_0132"
+  ],
+  [
+   "That's what you get.",
+   [
+    "Đó là cái giá của ngươi.",
+    "Đó là điều mày nhận.",
+    "Đáng đời ngươi."
+   ],
+   "_EnemyData_Polyphemus.en.sjson::Polyphemus_0058"
+  ],
+  [
+   "Until we meet again.",
+   [
+    "Hẹn gặp lại.",
+    "Hẹn ngày tái ngộ."
+   ],
+   "_AudioData.en.sjson::MelinoeField_0695"
+  ],
+  [
+   "Remember that.",
+   [
+    "Nhớ đó.",
+    "Nhớ lấy đấy."
+   ],
+   "_AudioData.en.sjson::MelinoeField_0696"
+  ],
+  [
+   "Noted.",
+   [
+    "Đã ghi nhận.",
+    "Đã rõ."
+   ],
+   "_NPCData_Odysseus.en.sjson::Odysseus_0315"
+  ],
+  [
+   "Got something for you.",
+   [
+    "Có thứ này cho ngươi.",
+    "Có quà cho muội này."
+   ],
+   "_WeaponDataAllies.en.sjson::Artemis_0229"
+  ],
+  [
+   "Here you go!",
+   [
+    "Này, của ngươi!",
+    "Của cô em đây!",
+    "Đây cho cậu!",
+    "Của cưng đây!"
+   ],
+   "_LootData_Hephaestus.en.sjson::Hephaestus_0173"
+  ],
+  [
+   "For you!",
+   [
+    "Dành cho em!",
+    "Tặng muội!",
+    "Cho cậu!",
+    "Tặng ngươi!",
+    "Cho ngươi!",
+    "Dành cho ngươi!"
+   ],
+   "_NPCData_Hermes.en.sjson::Hermes_0345"
+  ],
+  [
+   "Surprise!",
+   [
+    "Bất ngờ chưa!",
+    "Bất ngờ!"
+   ],
+   "_AudioData.en.sjson::Melinoe_2356"
+  ],
+  [
+   "Well look at you!",
+   [
+    "Chà nhìn ngươi kìa!",
+    "Ồ nhìn ai kìa!"
+   ],
+   "_AudioData.en.sjson::Melinoe_3594"
+  ],
+  [
+   "This is for you.",
+   [
+    "Cái này dành cho em.",
+    "Cái này tặng em.",
+    "Cái này dành cho ngươi."
+   ],
+   "_LootData_Aphrodite.en.sjson::Aphrodite_0115"
+  ],
+  [
+   "How about...",
+   [
+    "Sao về...",
+    "Thế cái này thì sao..."
+   ],
+   "_NPCData_Nemesis.en.sjson::NemesisField_0387"
+  ],
+  [
+   "Should work.",
+   [
+    "Chắc ổn.",
+    "Chắc ổn đấy."
+   ],
+   "_KeepsakeData.en.sjson::Melinoe_0840"
+  ],
+  [
+   "Shall we?",
+   [
+    "Chúng ta bắt đầu chứ?",
+    "Đi chứ?"
+   ],
+   "_EnemyData_Hecate.en.sjson::Hecate_0483"
+  ],
+  [
+   "I see...",
+   [
+    "Ta thấy rồi...",
+    "Ta thấy...",
+    "Ta hiểu...",
+    "Ta hiểu rồi..."
+   ],
+   "_AudioData.en.sjson::Prometheus_0275"
+  ],
+  [
+   "That's quite enough!",
+   [
+    "?? l?m r?i ??y!",
+    "Đủ lắm rồi!",
+    "Thế là đủ rồi!"
+   ],
+   "_EnemyData_Hecate.en.sjson::Hecate_0125"
+  ],
+  [
+   "Made it through...",
+   [
+    "Vượt qua rồi...",
+    "Đã vượt qua được..."
+   ],
+   "_AudioData.en.sjson::MelinoeField_1294"
+  ],
+  [
+   "I'm here...",
+   [
+    "Ta tới rồi...",
+    "Ta tới nơi rồi..."
+   ],
+   "_RoomDataP.en.sjson::MelinoeField_2456"
+  ],
+  [
+   "Caught out.",
+   [
+    "Bị bất ngờ rồi.",
+    "Tóm gọn.",
+    "Bị hớ rồi.",
+    "Bị tóm rồi nhé.",
+    "Bị tóm."
+   ],
+   "_EnemyData_Hecate.en.sjson::HecateField_0030"
+  ],
+  [
+   "Aw...",
+   [
+    "Ui...",
+    "Ôi..."
+   ],
+   "_AudioData.en.sjson::Arachne_0347"
+  ],
+  [
+   "Not quite.",
+   [
+    "Chưa hẳn.",
+    "Chưa chuẩn lắm."
+   ],
+   "_AudioData.en.sjson::Artemis_0342"
+  ],
+  [
+   "Nice try, though!",
+   [
+    "Cố hay đấy!",
+    "Dù sao cũng cố gắng rồi!"
+   ],
+   "_NPCData_Skelly.en.sjson::Skelly_0700"
+  ],
+  [
+   "Eluded...",
+   [
+    "Sổng mất rồi...",
+    "Né được rồi..."
+   ],
+   "_ProjectileData_EnemyF.en.sjson::HecateField_0133"
+  ],
+  [
+   "Caught!",
+   [
+    "Bắt!",
+    "Bắt được rồi!"
+   ],
+   "_AudioData.en.sjson::Odysseus_0767"
+  ],
+  [
+   "Are you quite done?",
+   [
+    "Ngươi xong chưa vậy?",
+    "Ngươi xong chưa?"
+   ],
+   "_AudioData.en.sjson::Athena_0148"
+  ],
+  [
+   "There you are...",
+   [
+    "Muội đây rồi...",
+    "Ngươi ở đây rồi..."
+   ],
+   "_NPCData_Artemis.en.sjson::Artemis_0047"
+  ],
+  [
+   "Here it comes...",
+   [
+    "Nó tới đây...",
+    "Nó tới kìa..."
+   ],
+   "_HeroData.en.sjson::Moros_0350"
+  ],
+  [
+   "Whatever!",
+   [
+    "Sao cũng được!",
+    "Kệ đi!"
+   ],
+   "_AudioData.en.sjson::ErisField_0295"
+  ],
+  [
+   "This again...",
+   [
+    "Lại trò này...",
+    "Lại thế..."
+   ],
+   "_NPCData_Chronos.en.sjson::MelinoeField_0193"
+  ],
+  [
+   "Seriously?",
+   [
+    "Thật hả?",
+    "Thật?",
+    "Thật không?"
+   ],
+   "_AudioData.en.sjson::NemesisField_0299"
+  ],
+  [
+   "How...",
+   [
+    "Sao cơ...",
+    "Sao..."
+   ],
+   "_AudioData.en.sjson::NemesisField_0301"
+  ],
+  [
+   "The Eye of Night...",
+   [
+    "Con Mắt Đêm...",
+    "Con Mắt Màn Đêm..."
+   ],
+   "_AudioData.en.sjson::Medea_0419"
+  ],
+  [
+   "Keen eye.",
+   [
+    "Tinh mắt lắm.",
+    "Mắt tinh."
+   ],
+   "_NPCData_Artemis.en.sjson::Artemis_0322"
+  ],
+  [
+   "Help yourself.",
+   [
+    "Cứ tự lấy.",
+    "Cứ tự nhiên."
+   ],
+   "_NPCData_Arachne.en.sjson::Arachne_0321"
+  ],
+  [
+   "Enough of that.",
+   [
+    "Dẹp cái đó đi.",
+    "Đủ rồi đấy."
+   ],
+   "_EnemyData_Traps.en.sjson::MelinoeField_2372"
+  ],
+  [
+   "Now, then...",
+   [
+    "Rồi, nào...",
+    "Nào, vậy thì..."
+   ],
+   "_NPCData_Heracles.en.sjson::Heracles_0450"
+  ],
+  [
+   "Here goes...",
+   [
+    "Bắt đầu nào...",
+    "Đi nào..."
+   ],
+   "_EncounterData_Unique.en.sjson::MelinoeField_0106"
+  ],
+  [
+   "You got it.",
+   [
+    "Có ngay.",
+    "Rõ rồi."
+   ],
+   "_CosmeticsData.en.sjson::Dora_0247"
+  ],
+  [
+   "Sure.",
+   [
+    "Chốt nhé.",
+    "Chắc luôn.",
+    "Chắc.",
+    "Ừ."
+   ],
+   "_CosmeticsData.en.sjson::Dora_0391"
+  ],
+  [
+   "Say no more.",
+   [
+    "Khỏi nói nữa.",
+    "Khỏi nói thêm."
+   ],
+   "_NPCData_Nemesis.en.sjson::NemesisField_0116"
+  ],
+  [
+   "OK.",
+   [
+    "Ừ.",
+    "Được.",
+    "Được thôi."
+   ],
+   "_CosmeticsData.en.sjson::Dora_0395"
+  ],
+  [
+   "Yep.",
+   [
+    "Ừ.",
+    "Ừm."
+   ],
+   "_NPCData_Skelly.en.sjson::Skelly_0084"
+  ],
+  [
+   "Can do.",
+   [
+    "Làm được ngay.",
+    "Làm được."
+   ],
+   "_CosmeticsData.en.sjson::Dora_0399"
+  ],
+  [
+   "Indeed!",
+   [
+    "Đúng thế!",
+    "Đúng vậy!"
+   ],
+   "_EnemyData_Hecate.en.sjson::Hecate_0341"
+  ],
+  [
+   "Here?",
+   [
+    "Ở đây?",
+    "Ở đây sao?"
+   ],
+   "_NPCData_Hades.en.sjson::Hades_0133"
+  ],
+  [
+   "Any of these?",
+   [
+    "Món nào trong này?",
+    "Mấy cái này sao?"
+   ],
+   "_CosmeticsData.en.sjson::Dora_0240"
+  ],
+  [
+   "See anything you like?",
+   [
+    "Thấy gì thích không?",
+    "Thấy món nào ưng không?",
+    "Thấy gì ưng không?"
+   ],
+   "_NPCData_Hermes.en.sjson::Hermes_0233"
+  ],
+  [
+   "Let's see here...",
+   [
+    "Để ta xem nào...",
+    "Để xem nào..."
+   ],
+   "_NPCData_Dionysus.en.sjson::Dionysus_0075"
+  ],
+  [
+   "Is that...?",
+   [
+    "Đó là...?",
+    "Đó là... gì vậy?"
+   ],
+   "_DeathLoopData.en.sjson::Melinoe_1585"
+  ],
+  [
+   "What is all this...?",
+   [
+    "Đây là những gì vậy...?",
+    "Đây là những gì...?"
+   ],
+   "_ResourceData.en.sjson::MelinoeField_2950"
+  ],
+  [
+   "Not happening.",
+   [
+    "Không được.",
+    "Mơ đi."
+   ],
+   "_HeroData.en.sjson::Melinoe_1861"
+  ],
+  [
+   "Hey...",
+   [
+    "Này...",
+    "Chào chị..."
+   ],
+   "_DeathLoopData.en.sjson::Melinoe_4027"
+  ],
+  [
+   "Father...",
+   [
+    "Cha...",
+    "Phụ vương..."
+   ],
+   "_HeroData.en.sjson::Melinoe_4017"
+  ],
+  [
+   "Commander...?",
+   [
+    "Thưa Chỉ huy...?",
+    "Chỉ huy...?"
+   ],
+   "_DeathLoopData.en.sjson::Melinoe_4954"
+  ],
+  [
+   "Nope!",
+   [
+    "Không đời nào!",
+    "Không!",
+    "Không đâu!"
+   ],
+   "_NPCData_Hermes.en.sjson::Hermes_0144"
+  ],
+  [
+   "As am I.",
+   [
+    "Và ta cũng thế.",
+    "Ta cũng thế."
+   ],
+   "_HubPresentation.en.sjson::Melinoe_4538"
+  ],
+  [
+   "Farewell...",
+   [
+    "Từ biệt...",
+    "Tạm biệt...",
+    "Vĩnh biệt..."
+   ],
+   "_EncounterData_Story.en.sjson::Arachne_0300"
+  ],
+  [
+   "Wha—?",
+   [
+    "Cái—?",
+    "Hả—?"
+   ],
+   "_DeathLoopData.en.sjson::Melinoe_0123"
+  ],
+  [
+   "How—?",
+   [
+    "Làm sao—?",
+    "Sao lại—?"
+   ],
+   "_DeathLoopData.en.sjson::MelinoeField_1387"
+  ],
+  [
+   "Be safe out there!",
+   [
+    "Bảo trọng ngoài kia nhé!",
+    "Cẩn thận ngoài kia!"
+   ],
+   "_DeathLoopData.en.sjson::Zagreus_0041"
+  ],
+  [
+   "Return to shadow, now.",
+   [
+    "Hãy trở về với bóng tối, ngay bây giờ.",
+    "Trở về với bóng tối, ngay mau."
+   ],
+   "_DeathLoopData.en.sjson::MelinoeField_3836"
+  ],
+  [
+   "Return to shadow, now...",
+   [
+    "Hãy trở về với bóng tối, ngay bây giờ...",
+    "Trở về với bóng tối, ngay mau..."
+   ],
+   "_DeathLoopData.en.sjson::MelinoeField_3312"
+  ],
+  [
+   "Return to shadow, now!",
+   [
+    "Trở về với bóng tối, ngay mau!",
+    "Hãy trở về với bóng tối, ngay bây giờ!"
+   ],
+   "_DeathLoopData.en.sjson::MelinoeField_3314"
+  ],
+  [
+   "Returned...",
+   [
+    "Đã trở về...",
+    "Về rồi..."
+   ],
+   "_NPCData.en.sjson::Hades_0187"
+  ],
+  [
+   "Show yourself!",
+   [
+    "Hiện thân đi!",
+    "Lộ diện đi!"
+   ],
+   "_EnemyData_Chronos.en.sjson::Chronos_0691"
+  ],
+  [
+   "Come on out!",
+   [
+    "Ra mặt đi!",
+    "Ra đây nào!",
+    "Ra đây mau!"
+   ],
+   "_HeroData.en.sjson::MelinoeField_0904"
+  ],
+  [
+   "Over there...",
+   [
+    "Ở đằng kia...",
+    "Đằng kia..."
+   ],
+   "_NPCData.en.sjson::Melinoe_2116"
+  ],
+  [
+   "Bye now!",
+   [
+    "Bye nhé!",
+    "Tạm biệt nhé!",
+    "Biến!"
+   ],
+   "_NPCData_Icarus.en.sjson::Eris_0364"
+  ],
+  [
+   "Prepared for more?",
+   [
+    "Sẵn sàng nữa chưa?",
+    "Sẵn sàng nhận thêm chưa?"
+   ],
+   "_EnemyData_Chronos.en.sjson::Chronos_0324"
+  ],
+  [
+   "What now?",
+   [
+    "Giờ sao?",
+    "Gì nữa đây?",
+    "Giờ thì sao?"
+   ],
+   "_EnemyData_Chronos.en.sjson::Chronos_0539"
+  ],
+  [
+   "You had it coming.",
+   [
+    "Ngươi tự chuốc lấy thôi.",
+    "Đáng đời mày."
+   ],
+   "_EnemyData_Chronos.en.sjson::Chronos_0328"
+  ],
+  [
+   "Not finished yet?",
+   [
+    "Chưa xong à?",
+    "Chưa xong nữa à?"
+   ],
+   "_EnemyData_Chronos.en.sjson::Chronos_0292"
+  ],
+  [
+   "Ah-{#Emph}hah...!",
+   [
+    "À-{#Emph}ha...!",
+    "A-{#Emph}ha...!"
+   ],
+   "_EnemyData_Chronos.en.sjson::Chronos_0304"
+  ],
+  [
+   "What is this?",
+   [
+    "Cái gì đây?",
+    "Cái quái gì thế này?"
+   ],
+   "_EnemyData_Chronos.en.sjson::Chronos_0351"
+  ],
+  [
+   "And...?",
+   [
+    "Và...?",
+    "Rồi...?"
+   ],
+   "_EnemyData_Chronos.en.sjson::Chronos_0352"
+  ],
+  [
+   "Huh.",
+   [
+    "Hử.",
+    "Hả."
+   ],
+   "_NPCData_Nemesis.en.sjson::Melinoe_0622"
+  ],
+  [
+   "Please.",
+   [
+    "Xin mày đấy.",
+    "Xin đi."
+   ],
+   "_NPCData_Nemesis.en.sjson::Nemesis_0299"
+  ],
+  [
+   "How...?",
+   [
+    "Sao có thể...?",
+    "Sao... cơ?"
+   ],
+   "_EnemyData_Prometheus.en.sjson::Prometheus_0218"
+  ],
+  [
+   "Not... yet...!",
+   [
+    "Chưa... đâu...!",
+    "Chưa... xong... đâu...!"
+   ],
+   "_EnemyData_Chronos.en.sjson::Chronos_0405"
+  ],
+  [
+   "Fall!",
+   [
+    "Gục đi!",
+    "Ngã xuống đi!"
+   ],
+   "_EnemyData_Chronos.en.sjson::MelinoeField_1408"
+  ],
+  [
+   "Now...!",
+   [
+    "Giờ thì...!",
+    "Giờ...!",
+    "Ngay...!"
+   ],
+   "_EnemyData_Eris.en.sjson::ErisField_0063"
+  ],
+  [
+   "Now!",
+   [
+    "Ngay bây giờ!",
+    "Ngay!",
+    "Giờ!"
+   ],
+   "_EnemyData_Heracles.en.sjson::Heracles_0200"
+  ],
+  [
+   "Behold!",
+   [
+    "Hãy chiêm ngưỡng đây!",
+    "Chứng kiến đi!"
+   ],
+   "_EnemyData_Chronos.en.sjson::Chronos_0456"
+  ],
+  [
+   "Just in time.",
+   [
+    "Đến đúng lúc lắm.",
+    "Đến vừa kịp lúc.",
+    "Vừa kịp."
+   ],
+   "_NPCData.en.sjson::Chronos_1094"
+  ],
+  [
+   "You called?",
+   [
+    "Ngươi gọi à?",
+    "Cậu gọi hả?"
+   ],
+   "_NPCData_Hermes.en.sjson::Hermes_0124"
+  ],
+  [
+   "Such a night...",
+   [
+    "Một đêm tuyệt diệu làm sao...",
+    "Một đêm như thế..."
+   ],
+   "_EnemyData_Chronos.en.sjson::Chronos_1230"
+  ],
+  [
+   "Look who!",
+   [
+    "Xem ai này!",
+    "Xem ai kìa!"
+   ],
+   "_EnemyData_Eris.en.sjson::ErisField_0053"
+  ],
+  [
+   "Now then...",
+   [
+    "Vậy thì...",
+    "Rồi đấy..."
+   ],
+   "_EnemyData_Chronos.en.sjson::Chronos_0454"
+  ],
+  [
+   "Prepare!",
+   [
+    "Chuẩn bị đi!",
+    "Chuẩn bị!"
+   ],
+   "_EnemyData_Heracles.en.sjson::Heracles_0205"
+  ],
+  [
+   "Watch {#Emph}this!",
+   [
+    "Coi chừng {#Emph}đây!",
+    "Xem {#Emph}đây!"
+   ],
+   "_EnemyData_Prometheus.en.sjson::Prometheus_0093"
+  ],
+  [
+   "Here!",
+   [
+    "Đỡ này!",
+    "Nơi này!",
+    "Đây!",
+    "Này!",
+    "Đây này!",
+    "Của em đây!"
+   ],
+   "_LootData_Aphrodite.en.sjson::Aphrodite_0171"
+  ],
+  [
+   "You gods...",
+   [
+    "Lũ thần linh các ngươi...",
+    "Lũ thần các ngươi..."
+   ],
+   "_EnemyData_Chronos.en.sjson::Chronos_0543"
+  ],
+  [
+   "Ready...?",
+   [
+    "Sẵn sàng chưa...?",
+    "Sẵn sàng...?"
+   ],
+   "_EnemyData_Prometheus.en.sjson::Prometheus_0067"
+  ],
+  [
+   "Another!",
+   [
+    "Nữa này!",
+    "Nữa!"
+   ],
+   "_EnemyData_Zagreus.en.sjson::Zagreus_0236"
+  ],
+  [
+   "Hold it right there...",
+   [
+    "Đứng yên ngay đó...",
+    "Giữ yên đó..."
+   ],
+   "_HubPresentation.en.sjson::Eris_0339"
+  ],
+  [
+   "Hold it.",
+   [
+    "Đứng yên.",
+    "Đứng lại."
+   ],
+   "_EnemyData_Polyphemus.en.sjson::Polyphemus_0192"
+  ],
+  [
+   "Stop.",
+   [
+    "Dừng lại.",
+    "Dừng."
+   ],
+   "_HeroData.en.sjson::MelinoeField_0271"
+  ],
+  [
+   "Freeze.",
+   [
+    "Đứng hình.",
+    "Đóng băng."
+   ],
+   "_HeroData.en.sjson::MelinoeField_1378"
+  ],
+  [
+   "Caught.",
+   [
+    "Dính rồi.",
+    "Bắt được."
+   ],
+   "_EnemyData_Chronos.en.sjson::Chronos_0523"
+  ],
+  [
+   "Caught you.",
+   [
+    "Tóm được ngươi.",
+    "Tóm được ngươi rồi.",
+    "Chộp được mày nhé."
+   ],
+   "_EnemyData_Polyphemus.en.sjson::Polyphemus_0036"
+  ],
+  [
+   "Slow down.",
+   [
+    "Chậm lại.",
+    "Chậm lại đã."
+   ],
+   "_EnemyData_Polyphemus.en.sjson::Polyphemus_0354"
+  ],
+  [
+   "Stuck!",
+   [
+    "Kẹt!",
+    "Kẹt cứng!"
+   ],
+   "_HeroData.en.sjson::MelinoeField_0905"
+  ],
+  [
+   "Hold.",
+   [
+    "Yên.",
+    "Dừng lại.",
+    "Giữ."
+   ],
+   "_EnemyData_Hecate.en.sjson::HecateField_0180"
+  ],
+  [
+   "Careful now.",
+   [
+    "Cẩn thận đấy.",
+    "C?n th?n."
+   ],
+   "_EnemyData_Hecate.en.sjson::HecateField_0042"
+  ],
+  [
+   "That {#Emph}does {#Prev}it!",
+   [
+    "Thế {#Emph}mới {#Prev}xong!",
+    "Thế là {#Emph}xong{#Prev} nhé!"
+   ],
+   "_EnemyData_Chronos.en.sjson::Chronos_0446"
+  ],
+  [
+   "Such power...",
+   [
+    "Sức mạnh như thế...",
+    "Sức mạnh thật..."
+   ],
+   "_EnemyData_Chronos.en.sjson::Chronos_0599"
+  ],
+  [
+   "Not again...",
+   [
+    "Lại nữa à...",
+    "Lại nữa sao..."
+   ],
+   "_HeroData.en.sjson::MelinoeField_3562"
+  ],
+  [
+   "Want more?",
+   [
+    "Muốn nữa không?",
+    "Muốn thêm không?"
+   ],
+   "_EnemyData_Eris.en.sjson::ErisField_0076"
+  ],
+  [
+   "How's that?",
+   [
+    "Thấy thế nào hả?",
+    "Thế nào?"
+   ],
+   "_EnemyData_Scylla.en.sjson::Scylla_0097"
+  ],
+  [
+   "Got plenty more.",
+   [
+    "Ta còn nhiều lắm.",
+    "Tao còn nhiều đòn lắm."
+   ],
+   "_EnemyData_Eris.en.sjson::ErisField_0078"
+  ],
+  [
+   "Again?",
+   [
+    "Lại nữa à?",
+    "Lại nữa sao?",
+    "Lại à?"
+   ],
+   "_RoomData.en.sjson::Chronos_0760"
+  ],
+  [
+   "Nuh-{#Emph}uh!",
+   [
+    "Đừng {#Emph}mơ!",
+    "Không-{#Emph}đời nào!"
+   ],
+   "_EnemyData_Eris.en.sjson::ErisField_0301"
+  ],
+  [
+   "Really?",
+   [
+    "Thật à?",
+    "Thật không?"
+   ],
+   "_NPCData_Heracles.en.sjson::Heracles_0078"
+  ],
+  [
+   "Come on...",
+   [
+    "Thôi nào...",
+    "Nào..."
+   ],
+   "_HeroData.en.sjson::MelinoeField_0593"
+  ],
+  [
+   "Hey hey!",
+   [
+    "Chào chào!",
+    "Ê ê!"
+   ],
+   "_EnemyData_Eris.en.sjson::ErisField_0051"
+  ],
+  [
+   "You made it!",
+   [
+    "Bạn đến rồi!",
+    "Tới nơi rồi đấy à!"
+   ],
+   "_NPCData_Dionysus.en.sjson::Dionysus_0055"
+  ],
+  [
+   "You're here!",
+   [
+    "Cưng tới rồi à!",
+    "Ngươi ở đây!",
+    "Con đến rồi!",
+    "Ngươi đến rồi!"
+   ],
+   "_NPCData_Hades.en.sjson::Persephone_0036"
+  ],
+  [
+   "Excuse me?",
+   [
+    "Xin lỗi nhé?",
+    "Xin lỗi?",
+    "Gì cơ?"
+   ],
+   "_EnemyData_Eris.en.sjson::ErisField_0038"
+  ],
+  [
+   "What's the matter?",
+   [
+    "Có chuyện gì thế?",
+    "Sao thế?"
+   ],
+   "_EnemyData_Eris.en.sjson::Eris_0081"
+  ],
+  [
+   "You're not going anywhere.",
+   [
+    "Cưng không đi đâu được đâu.",
+    "Ngươi không đi đâu được."
+   ],
+   "_EnemyData_Eris.en.sjson::ErisField_0339"
+  ],
+  [
+   "Nice try!",
+   [
+    "Thử hay đấy!",
+    "Cố gắng đấy!"
+   ],
+   "_HeroData.en.sjson::MelinoeField_0063"
+  ],
+  [
+   "Didn't hurt!",
+   [
+    "Chẳng đau tẹo nào!",
+    "Chẳng đau!"
+   ],
+   "_EnemyData_Eris.en.sjson::ErisField_0334"
+  ],
+  [
+   "Nice try.",
+   [
+    "Thử hay đấy.",
+    "Cũng khá đấy.",
+    "Cố gắng đấy."
+   ],
+   "_NPCData_Nemesis.en.sjson::Nemesis_0199"
+  ],
+  [
+   "Didn't hurt.",
+   [
+    "Không đau.",
+    "Chẳng đau chút nào."
+   ],
+   "_EnemyData_Eris.en.sjson::ErisField_0335"
+  ],
+  [
+   "Sorry!",
+   [
+    "Rất tiếc!",
+    "Xin lỗi!",
+    "Xin lỗi nhé!"
+   ],
+   "_EnemyData_Scylla.en.sjson::Scylla_0122"
+  ],
+  [
+   "Got you!",
+   [
+    "Bắt được mày rồi!",
+    "Dính rồi nhé!",
+    "Bắt được cưng rồi!",
+    "Tóm được rồi!"
+   ],
+   "_EnemyData_Eris.en.sjson::ErisField_0060"
+  ],
+  [
+   "Catch!",
+   [
+    "Đỡ lấy!",
+    "Đỡ này!"
+   ],
+   "_EnemyData_Eris.en.sjson::ErisField_0072"
+  ],
+  [
+   "Heads up!",
+   [
+    "Coi chừng phía trên!",
+    "Coi chừng!"
+   ],
+   "_EnemyData_Eris.en.sjson::ErisField_0474"
+  ],
+  [
+   "Here I am!",
+   [
+    "Ta đây!",
+    "Tao đây này!"
+   ],
+   "_WeaponData_Hecate.en.sjson::HecateField_0311"
+  ],
+  [
+   "Incoming...!",
+   [
+    "Tới đây...!",
+    "Đạn tới đây...!",
+    "Coi chừng...!"
+   ],
+   "_HeroData.en.sjson::MelinoeField_0525"
+  ],
+  [
+   "Special delivery!",
+   [
+    "Hàng giao tận nơi nhé!",
+    "Giao hàng đặc biệt!"
+   ],
+   "_NPCData_Hermes.en.sjson::Hermes_0116"
+  ],
+  [
+   "So much for that...",
+   [
+    "Hết chuyện...",
+    "Thế là công cốc rồi..."
+   ],
+   "_EnemyData_Eris.en.sjson::ErisField_0229"
+  ],
+  [
+   "Come now.",
+   [
+    "Nào, cố lên.",
+    "Nào nào.",
+    "Nào."
+   ],
+   "_NPCData_Arachne.en.sjson::Arachne_0162"
+  ],
+  [
+   "Fight back!",
+   [
+    "Phản kháng đi!",
+    "Đánh lại!",
+    "Đánh trả đi!"
+   ],
+   "_EnemyData_Hecate.en.sjson::Hecate_0343"
+  ],
+  [
+   "Still on your feet?",
+   [
+    "Vẫn đứng được?",
+    "Vẫn đứng vững à?"
+   ],
+   "_EnemyData_Hecate.en.sjson::Hecate_0345"
+  ],
+  [
+   "Back off.",
+   [
+    "Lùi lại.",
+    "Lui lại."
+   ],
+   "_NPCData_Nemesis.en.sjson::NemesisField_0290"
+  ],
+  [
+   "Conserve your strength.",
+   [
+    "Giữ gìn sức lực.",
+    "Giữ sức đi."
+   ],
+   "_NPCData_Athena.en.sjson::Athena_0067"
+  ],
+  [
+   "Hold nothing back!",
+   [
+    "Đừng giữ sức!",
+    "Đừng nương tay!"
+   ],
+   "_EnemyData_Hecate.en.sjson::Hecate_0108"
+  ],
+  [
+   "Faster!",
+   [
+    "Nhanh hơn nữa!",
+    "Nhanh lên!"
+   ],
+   "_HeroData.en.sjson::MelinoeField_1831"
+  ],
+  [
+   "Again!",
+   [
+    "Nữa!",
+    "Nữa đi!",
+    "Lại nữa!"
+   ],
+   "_EnemyData_Hecate.en.sjson::Hecate_0114"
+  ],
+  [
+   "That's it!",
+   [
+    "Đúng rồi đó!",
+    "Đúng thế!",
+    "Thế đó!"
+   ],
+   "_WeaponData_Polyphemus.en.sjson::Polyphemus_0049"
+  ],
+  [
+   "Enough!",
+   [
+    "Đủ rồi!",
+    "?? r?i!"
+   ],
+   "_EnemyData_Hecate.en.sjson::Hecate_0124"
+  ],
+  [
+   "All right, all right!",
+   [
+    "Rồi, rồi!",
+    "???c r?i, ???c r?i!"
+   ],
+   "_EnemyData_Hecate.en.sjson::Hecate_0131"
+  ],
+  [
+   "Well done!",
+   [
+    "L?m t?t l?m!",
+    "Làm tốt lắm!",
+    "Giỏi lắm!"
+   ],
+   "_NPCData.en.sjson::Odysseus_0453"
+  ],
+  [
+   "No...!",
+   [
+    "Không...!",
+    "Không thể nào...!"
+   ],
+   "_EnemyData_Hecate.en.sjson::MelinoeField_3872"
+  ],
+  [
+   "There she is.",
+   [
+    "Con bé đây rồi.",
+    "Cô ấy kia."
+   ],
+   "_EnemyData_Hecate.en.sjson::Hecate_0487"
+  ],
+  [
+   "At last.",
+   [
+    "Cuối cùng.",
+    "Cuối cùng thì.",
+    "Cuối cùng cũng đến."
+   ],
+   "_NPCData_Athena.en.sjson::Athena_0066"
+  ],
+  [
+   "Welcome.",
+   [
+    "Chào mừng.",
+    "Chào mừng con."
+   ],
+   "_EnemyData_Hecate.en.sjson::HecateField_0179"
+  ],
+  [
+   "Greetings, Witch.",
+   [
+    "Kính chào, Phù Thủy.",
+    "Chào con, hỡi Phù thủy."
+   ],
+   "_EnemyData_Hecate.en.sjson::Hecate_0068"
+  ],
+  [
+   "That's it.",
+   [
+    "Thế thôi.",
+    "Thế là xong.",
+    "??ng r?i.",
+    "Hết rồi."
+   ],
+   "_EnemyData_Hecate.en.sjson::HecateField_0043"
+  ],
+  [
+   "Short work.",
+   [
+    "Giải quyết nhanh gọn đấy.",
+    "Xong nhanh thật."
+   ],
+   "_EnemyData_Hecate.en.sjson::HecateField_0400"
+  ],
+  [
+   "And now for me.",
+   [
+    "Và giờ tới lượt ta.",
+    "Và giờ đến lượt ta."
+   ],
+   "_EnemyData_Heracles.en.sjson::Prometheus_0388"
+  ],
+  [
+   "Still up?",
+   [
+    "Còn đứng được à?",
+    "Vẫn đứng được à?"
+   ],
+   "_EnemyData_Heracles.en.sjson::Heracles_0493"
+  ],
+  [
+   "That's right.",
+   [
+    "Chính thế.",
+    "Đúng vậy."
+   ],
+   "_EnemyData_Polyphemus.en.sjson::Polyphemus_0232"
+  ],
+  [
+   "Must have hurt.",
+   [
+    "Chắc đau.",
+    "Hẳn là đau lắm đấy."
+   ],
+   "_NPCData_Nemesis.en.sjson::NemesisField_0309"
+  ],
+  [
+   "That's it...!",
+   [
+    "Đúng rồi...!",
+    "Chính là như thế...!"
+   ],
+   "_EnemyData_Polyphemus.en.sjson::Medea_0418"
+  ],
+  [
+   "You little...",
+   [
+    "Đồ nhỏ...",
+    "Nhóc con...",
+    "Cái con nhóc này..."
+   ],
+   "_EnemyData_Polyphemus.en.sjson::Polyphemus_0064"
+  ],
+  [
+   "Oh come on.",
+   [
+    "Thôi nào.",
+    "Ồ thôi nào."
+   ],
+   "_EnemyData_Polyphemus.en.sjson::Polyphemus_0074"
+  ],
+  [
+   "By will of Night.",
+   [
+    "Theo ý chí của Đêm.",
+    "Theo ý Đêm."
+   ],
+   "_EnemyData_Polyphemus.en.sjson::Medea_0344"
+  ],
+  [
+   "The Moon is full...",
+   [
+    "Trăng tròn vành vạnh...",
+    "Trăng tròn..."
+   ],
+   "_EnemyData_Polyphemus.en.sjson::Medea_0349"
+  ],
+  [
+   "Really.",
+   [
+    "Thật sao.",
+    "Thật đấy à.",
+    "Thật đấy."
+   ],
+   "_HeroData.en.sjson::Melinoe_0324"
+  ],
+  [
+   "Oh great.",
+   [
+    "Ồ tuyệt thật đấy.",
+    "Tuyệt thật."
+   ],
+   "_NPCData.en.sjson::Melinoe_3066"
+  ],
+  [
+   "I {#Emph}see {#Prev}you.",
+   [
+    "Ta {#Emph}thấy {#Prev}ngươi rồi.",
+    "Tao {#Emph}thấy {#Prev}mày rồi nhé."
+   ],
+   "_WeaponData_Polyphemus.en.sjson::Polyphemus_0245"
+  ],
+  [
+   "Wake up down there!",
+   [
+    "Dưới kia mau thức dậy đi!",
+    "Dậy đi lũ dưới kia!"
+   ],
+   "_EnemyData_Polyphemus.en.sjson::Polyphemus_0363"
+  ],
+  [
+   "Ah-{#Emph}ha!",
+   [
+    "A-{#Emph}ha!",
+    "À-{#Emph}ha!"
+   ],
+   "_EnemyData_Polyphemus.en.sjson::Polyphemus_0039"
+  ],
+  [
+   "You're mine.",
+   [
+    "Mày là của tao.",
+    "Mi là của ta.",
+    "Ngươi là của ta."
+   ],
+   "_HarvestData.en.sjson::Nemesis_0192"
+  ],
+  [
+   "No you don't!",
+   [
+    "Đừng hòng thoát nhé!",
+    "Không được đâu!"
+   ],
+   "_NPCData_Dionysus.en.sjson::Dionysus_0069"
+  ],
+  [
+   "Hello!",
+   [
+    "Chào con!",
+    "Xin chào!"
+   ],
+   "_NPCData_Hades.en.sjson::Persephone_0055"
+  ],
+  [
+   "How about {#Emph}no.",
+   [
+    "Nói {#Emph}không là không.",
+    "{#Emph}Không đời nào."
+   ],
+   "_RoomData.en.sjson::Chronos_0583"
+  ],
+  [
+   "Come on.",
+   [
+    "Nào.",
+    "Nhào vô."
+   ],
+   "_EnemyData_Prometheus.en.sjson::Prometheus_0196"
+  ],
+  [
+   "Back off!",
+   [
+    "Tránh ra mau!",
+    "Tránh ra!",
+    "Lui ra!",
+    "Lùi lại!"
+   ],
+   "_HeroData.en.sjson::Arachne_0231"
+  ],
+  [
+   "See you later!",
+   [
+    "Gặp sau nhé!",
+    "Hẹn gặp lại!",
+    "Hẹn gặp lại sau!"
+   ],
+   "_NPCData_Eris.en.sjson::ErisField_0033"
+  ],
+  [
+   "Go!",
+   [
+    "Tiến lên!",
+    "Lên!"
+   ],
+   "_EnemyData_Prometheus.en.sjson::Prometheus_0499"
+  ],
+  [
+   "Burn...!",
+   [
+    "Bùng cháy...!",
+    "Cháy đi...!"
+   ],
+   "_EnemyData_Prometheus.en.sjson::Prometheus_0514"
+  ],
+  [
+   "Too slow.",
+   [
+    "Quá chậm.",
+    "Chậm quá rồi.",
+    "Chậm quá."
+   ],
+   "_EnemyData_Zagreus.en.sjson::Zagreus_0295"
+  ],
+  [
+   "Couldn't wait?",
+   [
+    "Không đợi được?",
+    "Không thể chờ thêm được sao?"
+   ],
+   "_EnemyData_Prometheus.en.sjson::Prometheus_0230"
+  ],
+  [
+   "Hit me!",
+   [
+    "Đánh tao!",
+    "Đánh ta đi!"
+   ],
+   "_EnemyData_Scylla.en.sjson::Scylla_0108"
+  ],
+  [
+   "Finally...",
+   [
+    "Cuối cùng cũng xong...",
+    "Cuối cùng..."
+   ],
+   "_EnemyData_Scylla.en.sjson::Melinoe_1102"
+  ],
+  [
+   "Peace and quiet.",
+   [
+    "Yên tĩnh quá.",
+    "Bình yên và tĩnh lặng rồi."
+   ],
+   "_EnemyData_Scylla.en.sjson::MelinoeField_0098"
+  ],
+  [
+   "You again...",
+   [
+    "Lại là cô à...",
+    "Lại là ngươi..."
+   ],
+   "_EnemyData_Scylla.en.sjson::Scylla_0067"
+  ],
+  [
+   "Look, everyone!",
+   [
+    "Nhìn kìa mọi người ơi!",
+    "Nhìn kìa, mọi người!"
+   ],
+   "_EnemyData_Scylla.en.sjson::Scylla_0349"
+  ],
+  [
+   "Whoa!",
+   [
+    "Ối!",
+    "Úi!"
+   ],
+   "_EnemyData_Traps.en.sjson::Melinoe_1928"
+  ],
+  [
+   "See that?",
+   [
+    "Thấy không?",
+    "Thấy chưa?"
+   ],
+   "_EnemyData_Traps.en.sjson::ErisField_0418"
+  ],
+  [
+   "You all right?",
+   [
+    "Ổn chứ?",
+    "Muội ổn chứ?"
+   ],
+   "_EnemyData_Zagreus.en.sjson::Zagreus_0288"
+  ],
+  [
+   "Still going?",
+   [
+    "Vẫn trụ được chứ?",
+    "Còn tiếp?"
+   ],
+   "_NPCData_Nemesis.en.sjson::NemesisField_0314"
+  ],
+  [
+   "There we go.",
+   [
+    "Rồi đó.",
+    "Đấy, thế chứ."
+   ],
+   "_NPCData_Dora.en.sjson::Dora_0262"
+  ],
+  [
+   "Come on now.",
+   [
+    "Thôi nào.",
+    "Nào, tới đi."
+   ],
+   "_EnemyData_Zagreus.en.sjson::Zagreus_0296"
+  ],
+  [
+   "Easy now...!",
+   [
+    "Từ từ nào...!",
+    "Bình tĩnh nào...!"
+   ],
+   "_WeaponData_InfestedCerberus.en.sjson::MelinoeField_1234"
+  ],
+  [
+   "If you insist!",
+   [
+    "Nếu con đã quyết!",
+    "Nếu huynh muốn!"
+   ],
+   "_NPCData.en.sjson::Hera_0224"
+  ],
+  [
+   "Back again?",
+   [
+    "Lại quay lại à?",
+    "Lại về à?"
+   ],
+   "_EnemyData_Zagreus.en.sjson::Zagreus_0172"
+  ],
+  [
+   "Fine!",
+   [
+    "Được!",
+    "Được thôi!"
+   ],
+   "_NPCData_Artemis.en.sjson::Artemis_0434"
+  ],
+  [
+   "Got you {#Emph}this!",
+   [
+    "Tặng cậu {#Emph}cái này!",
+    "Tóm {#Emph}này!"
+   ],
+   "_EnemyData_Zagreus.en.sjson::Zagreus_0241"
+  ],
+  [
+   "Go, Toula!",
+   [
+    "Đi nào, Toula!",
+    "Lên nào, Toula!"
+   ],
+   "_FamiliarData.en.sjson::Melinoe_3970"
+  ],
+  [
+   "See you around.",
+   [
+    "Hẹn gặp lại.",
+    "Hẹn gặp lại nhé."
+   ],
+   "_FamiliarPresentation.en.sjson::MelinoeField_2823"
+  ],
+  [
+   "Go on.",
+   [
+    "Nói tiếp.",
+    "Tiếp tục đi.",
+    "Tiếp đi."
+   ],
+   "_NPCData_Odysseus.en.sjson::Odysseus_0308"
+  ],
+  [
+   "Carefully...",
+   [
+    "Nhẹ nhàng nào...",
+    "Cẩn thận nào..."
+   ],
+   "_GhostAdminData.en.sjson::Hecate_0181"
+  ],
+  [
+   "So it shall be.",
+   [
+    "Sẽ như vậy.",
+    "Cứ như vậy đi."
+   ],
+   "_GhostAdminData.en.sjson::Hecate_0480"
+  ],
+  [
+   "By your will.",
+   [
+    "Theo ý Ngài.",
+    "Theo ý con."
+   ],
+   "_NPCData.en.sjson::Melinoe_5068"
+  ],
+  [
+   "As you say.",
+   [
+    "Như con nói.",
+    "Như cháu nói.",
+    "Tùy con."
+   ],
+   "_NPCData.en.sjson::Demeter_0210"
+  ],
+  [
+   "Hear that, Selene?",
+   [
+    "Nghe chứ, Selene?",
+    "Nghe thấy không, Selene?"
+   ],
+   "_GhostAdminData.en.sjson::Hecate_0686"
+  ],
+  [
+   "Victory!",
+   [
+    "Thắng!",
+    "Thắng rồi!"
+   ],
+   "_HarvestData.en.sjson::MelinoeField_1354"
+  ],
+  [
+   "Got one!",
+   [
+    "Được một con!",
+    "Hạ một tên!"
+   ],
+   "_NPCData_Icarus.en.sjson::Icarus_0305"
+  ],
+  [
+   "Freshly caught.",
+   [
+    "Vừa câu được.",
+    "Mới bắt tươi."
+   ],
+   "_HarvestData.en.sjson::Melinoe_3545"
+  ],
+  [
+   "Figures.",
+   [
+    "Biết ngay mà.",
+    "Hiểu mà."
+   ],
+   "_HarvestData.en.sjson::MelinoeField_1360"
+  ],
+  [
+   "I'm out.",
+   [
+    "Tôi chuồn.",
+    "Tao chuồn.",
+    "Ta hết rồi."
+   ],
+   "_HeroData.en.sjson::Melinoe_0389"
+  ],
+  [
+   "Got you again.",
+   [
+    "Lại tóm được cô.",
+    "Lại dính nữa rồi."
+   ],
+   "_HeroData.en.sjson::Medea_0393"
+  ],
+  [
+   "Already...?",
+   [
+    "Xong rồi sao...?",
+    "Xong rồi...?"
+   ],
+   "_HeroData.en.sjson::Medea_0402"
+  ],
+  [
+   "May I...?",
+   [
+    "Cho ta xin nhé...?",
+    "Cho ta...?"
+   ],
+   "_HeroData.en.sjson::Melinoe_2368"
+  ],
+  [
+   "Excuse me...!",
+   [
+    "Xin nhường đường...!",
+    "Xin lỗi nhé...!"
+   ],
+   "_HeroData.en.sjson::MelinoeField_0589"
+  ],
+  [
+   "Be at peace.",
+   [
+    "Hãy yên lòng.",
+    "Yên nghỉ nhé."
+   ],
+   "_NPCData_Echo.en.sjson::MelinoeField_1198"
+  ],
+  [
+   "Farewell.",
+   [
+    "Vĩnh biệt.",
+    "Tạm biệt."
+   ],
+   "_HeroData.en.sjson::Melinoe_1253"
+  ],
+  [
+   "See you.",
+   [
+    "Hẹn gặp.",
+    "Hẹn gặp lại.",
+    "Gặp lại sau."
+   ],
+   "_NPCData_Artemis.en.sjson::Artemis_0134"
+  ],
+  [
+   "Nicely done.",
+   [
+    "Làm tốt lắm.",
+    "Hay lắm.",
+    "Khéo lắm."
+   ],
+   "_NPCData_Icarus.en.sjson::MelinoeField_2233"
+  ],
+  [
+   "I know...!",
+   [
+    "Ta biết rồi...!",
+    "Ta biết mà...!"
+   ],
+   "_HubPresentation.en.sjson::Eris_0340"
+  ],
+  [
+   "Stand and fight!",
+   [
+    "Đứng lại mà đánh!",
+    "Đứng lại chiến đấu!"
+   ],
+   "_HeroData.en.sjson::HecateField_0067"
+  ],
+  [
+   "Here.",
+   [
+    "Cầm lấy.",
+    "Đây.",
+    "Này."
+   ],
+   "_NPCData.en.sjson::Nyx_0031"
+  ],
+  [
+   "Going.",
+   [
+    "Đi.",
+    "Đi đây."
+   ],
+   "_HeroData.en.sjson::MelinoeField_0790"
+  ],
+  [
+   "Wha?",
+   [
+    "Gì?",
+    "Hả?"
+   ],
+   "_NPCData_Narcissus.en.sjson::Narcissus_0235"
+  ],
+  [
+   "Got something for ya!",
+   [
+    "Có quà cho ngươi nè!",
+    "Có quà cho ngươi đây!"
+   ],
+   "_WeaponData_Polyphemus.en.sjson::Polyphemus_0225"
+  ],
+  [
+   "Ill-advised.",
+   [
+    "Thiếu khôn ngoan.",
+    "Dại dột."
+   ],
+   "_NPCData_Heracles.en.sjson::Heracles_0100"
+  ],
+  [
+   "Beg pardon.",
+   [
+    "Xin lỗi.",
+    "Xin nhường đường."
+   ],
+   "_NPCData_Athena.en.sjson::Athena_0063"
+  ],
+  [
+   "Out of my way.",
+   [
+    "Tránh đường ta ra.",
+    "Tránh đường ta.",
+    "Tránh đường tao.",
+    "Tránh đường cho ta."
+   ],
+   "_HeroData.en.sjson::MelinoeField_2111"
+  ],
+  [
+   "Stand down.",
+   [
+    "Lùi lại.",
+    "Lui ra."
+   ],
+   "_HeroData.en.sjson::MelinoeField_2113"
+  ],
+  [
+   "Farewell!",
+   [
+    "Tạm biệt nhé!",
+    "Tạm biệt!"
+   ],
+   "_NPCData.en.sjson::Zeus_0304"
+  ],
+  [
+   "There they are...",
+   [
+    "Chúng kia rồi...",
+    "Họ kia rồi..."
+   ],
+   "_HeroData.en.sjson::MelinoeField_2502"
+  ],
+  [
+   "I have this...",
+   [
+    "Ta có cái này...",
+    "Ta lo được..."
+   ],
+   "_MetaUpgradeCardScreenData.en.sjson::Melinoe_1139"
+  ],
+  [
+   "Lord Zeus...!",
+   [
+    "Ngài Zeus...!",
+    "Chúa tể Zeus...!"
+   ],
+   "_LootData_Zeus.en.sjson::Zagreus_0353"
+  ],
+  [
+   "Another victory.",
+   [
+    "Lại một thắng lợi.",
+    "Lại một chiến thắng."
+   ],
+   "_NPCData_Heracles.en.sjson::Heracles_0129"
+  ],
+  [
+   "Behold.",
+   [
+    "Chiêm ngưỡng đi.",
+    "Hãy chiêm ngưỡng đây.",
+    "Hãy nhìn xem."
+   ],
+   "_HeroData.en.sjson::Skelly_0113"
+  ],
+  [
+   "Very well.",
+   [
+    "Được lắm.",
+    "Được thôi.",
+    "Tốt lắm."
+   ],
+   "_MetaUpgradeCardScreenData.en.sjson::Melinoe_0549"
+  ],
+  [
+   "Smart.",
+   [
+    "Khôn ngoan.",
+    "Khôn."
+   ],
+   "_HeroData.en.sjson::Artemis_0370"
+  ],
+  [
+   "Coming right up.",
+   [
+    "Đến ngay.",
+    "Có ngay đây."
+   ],
+   "_HeroData.en.sjson::Dionysus_0090"
+  ],
+  [
+   "Absolutely.",
+   [
+    "Nhất định rồi.",
+    "Chuẩn luôn.",
+    "Tuyệt đối.",
+    "Tuyệt đối luôn."
+   ],
+   "_HeroData.en.sjson::Dionysus_0094"
+  ],
+  [
+   "Enjoy!",
+   [
+    "Tận hưởng nhé!",
+    "Tận hưởng!",
+    "Tận hưởng đi nhé!"
+   ],
+   "_HeroData.en.sjson::Dionysus_0096"
+  ],
+  [
+   "Cheers.",
+   [
+    "Cạn ly.",
+    "Dô rượu."
+   ],
+   "_HeroData.en.sjson::Dionysus_0086"
+  ],
+  [
+   "Be well.",
+   [
+    "Bảo trọng nhé.",
+    "Bảo trọng."
+   ],
+   "_MarketData.en.sjson::Melinoe_2353"
+  ],
+  [
+   "Till next we meet.",
+   [
+    "Hẹn ngày tái ngộ.",
+    "Hẹn lần sau gặp lại.",
+    "Hẹn gặp lại lần sau."
+   ],
+   "_NPCData_Echo.en.sjson::MelinoeField_1200"
+  ],
+  [
+   "Take care, then.",
+   [
+    "Bảo trọng đấy.",
+    "Vậy giữ gìn nhé."
+   ],
+   "_HeroData.en.sjson::Hades_0245"
+  ],
+  [
+   "Of course.",
+   [
+    "Tất nhiên rồi.",
+    "Đương nhiên.",
+    "Tất nhiên.",
+    "Dĩ nhiên."
+   ],
+   "_LootData_Ares.en.sjson::Ares_0127"
+  ],
+  [
+   "Granted.",
+   [
+    "Chuẩn tấu.",
+    "Được chấp thuận."
+   ],
+   "_HeroData.en.sjson::Hades_0250"
+  ],
+  [
+   "Shadows conceal you.",
+   [
+    "Bóng tối che chở người.",
+    "Bóng tối sẽ che chở cho con.",
+    "Nguyện bóng tối che chở con.",
+    "Bóng tối che chở ngươi."
+   ],
+   "_NPCData_Hecate.en.sjson::Hecate_0466"
+  ],
+  [
+   "Go.",
+   [
+    "Đi.",
+    "Đi đi."
+   ],
+   "_HeroData.en.sjson::Hades_0072"
+  ],
+  [
+   "Bye now.",
+   [
+    "Tạm biệt nhé.",
+    "Bye nhé."
+   ],
+   "_NPCData_Dora.en.sjson::Dora_0234"
+  ],
+  [
+   "Done!",
+   [
+    "Xong!",
+    "Xong rồi!"
+   ],
+   "_LootData_Aphrodite.en.sjson::Aphrodite_0168"
+  ],
+  [
+   "That is for you.",
+   [
+    "Cái này dành cho ngươi.",
+    "Món đó dành cho ngươi."
+   ],
+   "_HeroData.en.sjson::Skelly_0121"
+  ],
+  [
+   "The Testament of Night.",
+   [
+    "Di Huấn của Màn Đêm.",
+    "Di huấn Màn Đêm."
+   ],
+   "_ShrineData.en.sjson::Melinoe_2867"
+  ],
+  [
+   "Deal!",
+   [
+    "Chốt!",
+    "Chốt nhé!"
+   ],
+   "_HubPresentation.en.sjson::Melinoe_0677"
+  ],
+  [
+   "Hm.",
+   [
+    "Hừm.",
+    "Hừ."
+   ],
+   "_NPCData.en.sjson::Moros_0085"
+  ],
+  [
+   "Which one...",
+   [
+    "Cái nào...",
+    "Cái nào đây..."
+   ],
+   "_KeepsakeData.en.sjson::Melinoe_2642"
+  ],
+  [
+   "Might as well.",
+   [
+    "Cũng đành vậy.",
+    "Lấy luôn cũng được."
+   ],
+   "_NPCData_Nemesis.en.sjson::Nemesis_0473"
+  ],
+  [
+   "What's that you got?",
+   [
+    "Cô cầm gì đấy?",
+    "Bạn cầm gì đấy?"
+   ],
+   "_NPCData_Dionysus.en.sjson::Dionysus_0133"
+  ],
+  [
+   "My pleasure.",
+   [
+    "Vinh hạnh của tao.",
+    "Ta rất vui lòng."
+   ],
+   "_LootData_Aphrodite.en.sjson::Aphrodite_0106"
+  ],
+  [
+   "Sure!",
+   [
+    "Chắc chắn rồi!",
+    "Được chứ!",
+    "Được thôi!"
+   ],
+   "_LootData_Hestia.en.sjson::Hestia_0173"
+  ],
+  [
+   "Of course!",
+   [
+    "Dĩ nhiên!",
+    "Dĩ nhiên rồi!",
+    "Tất nhiên rồi!"
+   ],
+   "_LootData_Zeus.en.sjson::Zeus_0246"
+  ],
+  [
+   "Certainly!",
+   [
+    "Chắc chắn rồi!",
+    "Chắc chắn!"
+   ],
+   "_LootData_Aphrodite.en.sjson::Aphrodite_0173"
+  ],
+  [
+   "Right!",
+   [
+    "Đúng vậy!",
+    "Chuẩn luôn!"
+   ],
+   "_LootData_Hephaestus.en.sjson::Hephaestus_0177"
+  ],
+  [
+   "As you wish.",
+   [
+    "Theo ý ngươi.",
+    "Như ý cháu."
+   ],
+   "_LootData_Demeter.en.sjson::Demeter_0144"
+  ],
+  [
+   "As you desire.",
+   [
+    "Như ngươi mong muốn.",
+    "Theo ý ngươi."
+   ],
+   "_LootData_Ares.en.sjson::Ares_0130"
+  ],
+  [
+   "And to you.",
+   [
+    "Ngươi cũng vậy.",
+    "Và gửi lời tới ngươi.",
+    "Cháu cũng vậy nhé."
+   ],
+   "_NPCData_Circe.en.sjson::Circe_0104"
+  ],
+  [
+   "For you.",
+   [
+    "Cho ngươi.",
+    "Dành cho cháu.",
+    "Cho muội."
+   ],
+   "_NPCData_Artemis.en.sjson::Artemis_0113"
+  ],
+  [
+   "It is I.",
+   [
+    "Chính là ta đây.",
+    "Ta đây."
+   ],
+   "_LootData_Demeter.en.sjson::Demeter_0134"
+  ],
+  [
+   "My greetings.",
+   [
+    "Lời chào của ta.",
+    "Chào ngươi."
+   ],
+   "_NPCData.en.sjson::Moros_0088"
+  ],
+  [
+   "What's going on?",
+   [
+    "Chuyện gì?",
+    "Có chuyện gì thế?"
+   ],
+   "_NPCData_Dora.en.sjson::Dora_0223"
+  ],
+  [
+   "It's her.",
+   [
+    "Là bà ấy.",
+    "Là cô ta."
+   ],
+   "_LootData_Hera.en.sjson::Melinoe_1472"
+  ],
+  [
+   "Hey!",
+   [
+    "Chào!",
+    "Này!"
+   ],
+   "_LootData_Hermes.en.sjson::Hermes_0130"
+  ],
+  [
+   "Easy.",
+   [
+    "Dễ.",
+    "Dễ ợt."
+   ],
+   "_LootData_Hestia.en.sjson::Hestia_0177"
+  ],
+  [
+   "He's back...",
+   [
+    "Hắn về rồi...",
+    "Bác ấy đã trở lại..."
+   ],
+   "_LootData_Poseidon.en.sjson::Melinoe_1475"
+  ],
+  [
+   "I have returned.",
+   [
+    "Ta đã trở lại.",
+    "Ta đã trở về."
+   ],
+   "_LootData_Selene.en.sjson::Selene_0118"
+  ],
+  [
+   "The choice is yours.",
+   [
+    "Muội tự chọn.",
+    "Em có quyền lựa chọn."
+   ],
+   "_LootData_Selene.en.sjson::Selene_0179"
+  ],
+  [
+   "Your choice?",
+   [
+    "Lựa chọn của ngươi?",
+    "Em chọn gì?"
+   ],
+   "_LootData_Selene.en.sjson::Selene_0182"
+  ],
+  [
+   "Father...!",
+   [
+    "Cha...!",
+    "Phụ vương...!"
+   ],
+   "_RoomDataI.en.sjson::MelinoeField_1519"
+  ],
+  [
+   "Indeed.",
+   [
+    "Quả đúng như vậy.",
+    "Đúng.",
+    "Đúng vậy."
+   ],
+   "_LootData_Zeus.en.sjson::Zeus_0311"
+  ],
+  [
+   "Over here.",
+   [
+    "Qua đây.",
+    "Qua bên này."
+   ],
+   "_ObstacleData.en.sjson::Athena_0124"
+  ],
+  [
+   "You all right...?",
+   [
+    "Muội ổn...?",
+    "Ổn chứ...?"
+   ],
+   "_NPCData_Icarus.en.sjson::Icarus_0122"
+  ],
+  [
+   "We welcome you.",
+   [
+    "Bọn ta chào đón con.",
+    "Bọn ta chào đón ngươi."
+   ],
+   "_NPCData.en.sjson::Hera_0216"
+  ],
+  [
+   "I salute you.",
+   [
+    "Ta chào ngươi.",
+    "Con xin chào Ngài."
+   ],
+   "_NPCData.en.sjson::Melinoe_5070"
+  ],
+  [
+   "Evening!",
+   [
+    "Chào tối!",
+    "Chào buổi tối!"
+   ],
+   "_NPCData_Icarus.en.sjson::Icarus_0101"
+  ],
+  [
+   "Hey.",
+   [
+    "Này.",
+    "Chào."
+   ],
+   "_NPCData_Artemis.en.sjson::Artemis_0243"
+  ],
+  [
+   "All clear.",
+   [
+    "Sạch bóng.",
+    "Xong cả.",
+    "Sạch hết.",
+    "Sạch rồi."
+   ],
+   "_NPCData_Artemis.en.sjson::Artemis_0088"
+  ],
+  [
+   "A brief word?",
+   [
+    "Nói đôi lời?",
+    "Nói vài lời nhé?"
+   ],
+   "_RoomDataP.en.sjson::Prometheus_0059"
+  ],
+  [
+   "You did it...",
+   [
+    "Muội làm được...",
+    "Ngươi làm được..."
+   ],
+   "_NPCData_Icarus.en.sjson::Icarus_0124"
+  ],
+  [
+   "To your success.",
+   [
+    "Vì thành công của ngươi.",
+    "Chúc muội thắng."
+   ],
+   "_NPCData_Moros.en.sjson::Moros_0090"
+  ],
+  [
+   "To victory.",
+   [
+    "Về chiến thắng.",
+    "Vì chiến thắng.",
+    "Chúc khải hoàn."
+   ],
+   "_NPCData_Moros.en.sjson::Moros_0091"
+  ],
+  [
+   "Welcome back.",
+   [
+    "Chào mừng trở lại.",
+    "Mừng trở lại."
+   ],
+   "_NPCData.en.sjson::Zeus_0299"
+  ],
+  [
+   "What?",
+   [
+    "Gì?",
+    "Hả?"
+   ],
+   "_NPCData.en.sjson::Eris_0154"
+  ],
+  [
+   "How's it going?",
+   [
+    "Sao rồi?",
+    "Dạo này sao?"
+   ],
+   "_NPCData.en.sjson::Eris_0231"
+  ],
+  [
+   "Hey there.",
+   [
+    "Này.",
+    "Chào đằng ấy."
+   ],
+   "_NPCData_Narcissus.en.sjson::Narcissus_0301"
+  ],
+  [
+   "Hail, Sister.",
+   [
+    "Chào Tỷ muội.",
+    "Chào, Chị em."
+   ],
+   "_NPCData_Artemis.en.sjson::Melinoe_1095"
+  ],
+  [
+   "It is you.",
+   [
+    "Là ngươi.",
+    "Chính là ngươi."
+   ],
+   "_NPCData.en.sjson::Nyx_0026"
+  ],
+  [
+   "Sorry to interrupt...",
+   [
+    "Xin lỗi đã làm phiền...",
+    "Xin lỗi cắt ngang..."
+   ],
+   "_NPCData_Icarus.en.sjson::Icarus_0126"
+  ],
+  [
+   "Thank you for everything.",
+   [
+    "Cảm ơn anh vì mọi thứ.",
+    "Cảm ơn Ngài vì tất cả."
+   ],
+   "_NPCData.en.sjson::Melinoe_5073"
+  ],
+  [
+   "I shall.",
+   [
+    "Ta sẽ theo.",
+    "Con sẽ.",
+    "Ta sẽ làm."
+   ],
+   "_NPCData_Hecate.en.sjson::Melinoe_4732"
+  ],
+  [
+   "Yes?",
+   [
+    "Gì đấy?",
+    "Có việc gì?"
+   ],
+   "_NPCData_Athena.en.sjson::Athena_0073"
+  ],
+  [
+   "Good to see you!",
+   [
+    "Gặp muội vui quá!",
+    "Mừng được gặp anh!"
+   ],
+   "_NPCData_Artemis.en.sjson::Artemis_0309"
+  ],
+  [
+   "You too.",
+   [
+    "Muội cũng thế nhé.",
+    "Em cũng thế."
+   ],
+   "_NPCData.en.sjson::Zagreus_0089"
+  ],
+  [
+   "That's for you.",
+   [
+    "Đó cho mày.",
+    "Cái này cho cháu đấy."
+   ],
+   "_NPCData.en.sjson::Apollo_0199"
+  ],
+  [
+   "Take care.",
+   [
+    "Bảo trọng đấy.",
+    "Bảo trọng."
+   ],
+   "_NPCData.en.sjson::Hera_0221"
+  ],
+  [
+   "You, too...",
+   [
+    "Ngươi cũng vậy...",
+    "Cậu cũng vậy..."
+   ],
+   "_NPCData_Hermes.en.sjson::MelinoeField_2968"
+  ],
+  [
+   "Oh, yes.",
+   [
+    "Ồ, rồi.",
+    "Ồ, ừ."
+   ],
+   "_NPCData_Arachne.en.sjson::Arachne_0176"
+  ],
+  [
+   "Welcome back!",
+   [
+    "Chào mừng về!",
+    "Mừng về!"
+   ],
+   "_NPCData_Circe.en.sjson::Circe_0081"
+  ],
+  [
+   "That's on the house!",
+   [
+    "Cái đó miễn phí!",
+    "Miễn phí!"
+   ],
+   "_NPCData_Hermes.en.sjson::Hermes_0248"
+  ],
+  [
+   "All yours.",
+   [
+    "Tất của mày.",
+    "Của ngươi hết.",
+    "Của muội hết."
+   ],
+   "_NPCData_Icarus.en.sjson::Icarus_0296"
+  ],
+  [
+   "Together we shine!",
+   [
+    "Cùng nhau ta rực rỡ!",
+    "Cùng nhau tỏa sáng!"
+   ],
+   "_NPCData_Circe.en.sjson::Circe_0102"
+  ],
+  [
+   "You, too.",
+   [
+    "Muội cũng thế.",
+    "Ngài nữa."
+   ],
+   "_NPCData_Artemis.en.sjson::Artemis_0245"
+  ],
+  [
+   "You're just in time.",
+   [
+    "Ngươi tới đúng lúc.",
+    "Tỷ đến đúng lúc lắm."
+   ],
+   "_NPCData_Heracles.en.sjson::Heracles_0046"
+  ],
+  [
+   "Got 'em.",
+   [
+    "Hạ được rồi.",
+    "Hạ hết."
+   ],
+   "_NPCData_Artemis.en.sjson::Artemis_0055"
+  ],
+  [
+   "That was mine.",
+   [
+    "Đó là của ta.",
+    "Con đó là của ta."
+   ],
+   "_NPCData_Heracles.en.sjson::Heracles_0075"
+  ],
+  [
+   "Check your aim.",
+   [
+    "Xem lại đường ngắm đi.",
+    "Coi chừng ngắm."
+   ],
+   "_NPCData_Nemesis.en.sjson::NemesisField_0226"
+  ],
+  [
+   "If you insist.",
+   [
+    "Nếu muội ép.",
+    "Nếu mày nài.",
+    "Nếu ngươi khăng khăng."
+   ],
+   "_NPCData_Artemis.en.sjson::Artemis_0357"
+  ],
+  [
+   "Thought I'd drop in!",
+   [
+    "Tiện đường ghé qua!",
+    "Tiện ghé!"
+   ],
+   "_NPCData_Icarus.en.sjson::Icarus_0045"
+  ],
+  [
+   "Got to go.",
+   [
+    "Phải đi rồi.",
+    "Phải đi."
+   ],
+   "_NPCData_Artemis.en.sjson::Artemis_0135"
+  ],
+  [
+   "Go unseen.",
+   [
+    "Hãy đi mà không ai thấy.",
+    "Đi không dấu vết."
+   ],
+   "_NPCData_Hades.en.sjson::Hades_0256"
+  ],
+  [
+   "Fight on.",
+   [
+    "Chiến tiếp.",
+    "Chiến tiếp đi.",
+    "Chiến tiếp nhé."
+   ],
+   "_NPCData_Artemis.en.sjson::Melinoe_1255"
+  ],
+  [
+   "Come off it.",
+   [
+    "Thôi ngay.",
+    "Thôi đi."
+   ],
+   "_NPCData_Nemesis.en.sjson::NemesisField_0215"
+  ],
+  [
+   "Got you covered!",
+   [
+    "Ta bọc cho!",
+    "Ta yểm trợ!"
+   ],
+   "_NPCData_Artemis.en.sjson::Artemis_0319"
+  ],
+  [
+   "Rude!",
+   [
+    "Vô duyên!",
+    "Vô lễ!"
+   ],
+   "_NPCData_Nemesis.en.sjson::Melinoe_1567"
+  ],
+  [
+   "It's her...",
+   [
+    "Là cô ta...",
+    "Là bà ấy..."
+   ],
+   "_NPCData_Athena.en.sjson::MelinoeField_2808"
+  ],
+  [
+   "And you as well.",
+   [
+    "Ngươi cũng vậy.",
+    "Còn Người cũng vậy.",
+    "Người cũng vậy nhé."
+   ],
+   "_NPCData_Charon.en.sjson::Melinoe_2010"
+  ],
+  [
+   "Coward...",
+   [
+    "Đồ nhát...",
+    "Đồ hèn..."
+   ],
+   "_NPCData_Chronos.en.sjson::MelinoeField_0495"
+  ],
+  [
+   "There you are!",
+   [
+    "Con đây rồi!",
+    "Kìa rồi!"
+   ],
+   "_NPCData_Chronos.en.sjson::Chronos_1042"
+  ],
+  [
+   "It's been too long!",
+   [
+    "Lâu quá!",
+    "Lâu quá rồi!"
+   ],
+   "_NPCData_Circe.en.sjson::Circe_0304"
+  ],
+  [
+   "Be safe!",
+   [
+    "Giữ gìn nhé!",
+    "Cẩn thận!"
+   ],
+   "_NPCData_Hermes.en.sjson::Hermes_0177"
+  ],
+  [
+   "We'll see.",
+   [
+    "Rồi sẽ thấy.",
+    "Rồi xem.",
+    "Để xem."
+   ],
+   "_NPCData_Dionysus.en.sjson::Melinoe_1308"
+  ],
+  [
+   "Huh?",
+   [
+    "Hả?",
+    "Hử?"
+   ],
+   "_NPCData_Dionysus.en.sjson::Dionysus_0052"
+  ],
+  [
+   "Yeah, you too.",
+   [
+    "Ừ, cô cũng vậy.",
+    "Ừ, mày cũng thế."
+   ],
+   "_NPCData_Dora.en.sjson::Dora_0003"
+  ],
+  [
+   "I know, right?",
+   [
+    "Ta biết, phải?",
+    "Biết mà, đúng không?"
+   ],
+   "_NPCData_Dora.en.sjson::Dora_0297"
+  ],
+  [
+   "You sure...?",
+   [
+    "Chắc chứ...?",
+    "Chắc không...?"
+   ],
+   "_NPCData_Dora.en.sjson::Melinoe_3707"
+  ],
+  [
+   "Bye.",
+   [
+    "Tạm biệt.",
+    "Bái bai."
+   ],
+   "_NPCData_Dora.en.sjson::Dora_0551"
+  ],
+  [
+   "Did you do it?",
+   [
+    "Cô làm được không?",
+    "Làm được chưa?"
+   ],
+   "_NPCData_Dora.en.sjson::Dora_0530"
+  ],
+  [
+   "Heya.",
+   [
+    "Chào.",
+    "Ê, chào nhóc."
+   ],
+   "_NPCData_Dora.en.sjson::Dora_0127"
+  ],
+  [
+   "Where'd you come from?",
+   [
+    "Từ đâu đến?",
+    "Ngươi từ đâu chui ra?"
+   ],
+   "_NPCData_Heracles.en.sjson::Heracles_0052"
+  ],
+  [
+   "Anything else?",
+   [
+    "Gì nữa?",
+    "Còn gì nữa không?"
+   ],
+   "_NPCData_Hermes.en.sjson::Hermes_0236"
+  ],
+  [
+   "It's you!",
+   [
+    "Là con!",
+    "Là ngươi!"
+   ],
+   "_NPCData_Hades.en.sjson::Persephone_0037"
+  ],
+  [
+   "I trust so too.",
+   [
+    "Con cũng tin vậy.",
+    "Ta cũng tin vậy."
+   ],
+   "_NPCData_Hecate.en.sjson::Melinoe_2902"
+  ],
+  [
+   "Understood.",
+   [
+    "Rõ.",
+    "Đã rõ."
+   ],
+   "_NPCData_Hecate.en.sjson::Melinoe_3467"
+  ],
+  [
+   "Surprise.",
+   [
+    "Bất ngờ chưa.",
+    "Bất ngờ."
+   ],
+   "_NPCData_Nemesis.en.sjson::NemesisField_0537"
+  ],
+  [
+   "Destroyed.",
+   [
+    "Tiêu diệt.",
+    "Bị hủy diệt."
+   ],
+   "_NPCData_Heracles.en.sjson::Heracles_0467"
+  ],
+  [
+   "Gone.",
+   [
+    "Đi.",
+    "Đi rồi.",
+    "Tiêu rồi."
+   ],
+   "_NPCData_Heracles.en.sjson::Heracles_0468"
+  ],
+  [
+   "Get your own.",
+   [
+    "Tự kiếm phần ngươi đi.",
+    "Lấy của riêng mày."
+   ],
+   "_NPCData_Nemesis.en.sjson::NemesisField_0295"
+  ],
+  [
+   "Fine.",
+   [
+    "Được.",
+    "Được thôi."
+   ],
+   "_NPCData_Nemesis.en.sjson::Nemesis_0122"
+  ],
+  [
+   "Why bother.",
+   [
+    "Sao mất công.",
+    "Phiền làm gì."
+   ],
+   "_NPCData_Heracles.en.sjson::Heracles_0596"
+  ],
+  [
+   "Take care!",
+   [
+    "Giữ gìn!",
+    "Cẩn thận!"
+   ],
+   "_NPCData_Hermes.en.sjson::MelinoeField_3031"
+  ],
+  [
+   "Same.",
+   [
+    "Ta cũng thế.",
+    "Cũng vậy.",
+    "Tao cũng thế."
+   ],
+   "_NPCData_Moros.en.sjson::Melinoe_4801"
+  ],
+  [
+   "Not quite...",
+   [
+    "Chưa hẳn...",
+    "Suýt nữa..."
+   ],
+   "_RunHistoryData.en.sjson::Melinoe_3857"
+  ],
+  [
+   "He is.",
+   [
+    "Ngài ổn.",
+    "Hắn có."
+   ],
+   "_NPCData_Odysseus.en.sjson::Melinoe_0061"
+  ],
+  [
+   "Suit yourself.",
+   [
+    "Tùy mày.",
+    "Tùy ngươi."
+   ],
+   "_NPCData_Nemesis.en.sjson::NemesisField_0090"
+  ],
+  [
+   "Rude...",
+   [
+    "Thô lỗ...",
+    "Vô duyên..."
+   ],
+   "_RoomDataF.en.sjson::Chronos_0940"
+  ],
+  [
+   "What do you know.",
+   [
+    "Trùng hợp ghê.",
+    "Biết gì không."
+   ],
+   "_RoomDataP.en.sjson::Prometheus_0064"
+  ],
+  [
+   "See you soon.",
+   [
+    "Sớm gặp.",
+    "Hẹn sớm gặp."
+   ],
+   "_NPCData_Narcissus.en.sjson::Narcissus_0136"
+  ],
+  [
+   "I am.",
+   [
+    "Ta ổn.",
+    "Ta làm."
+   ],
+   "_NPCData_Odysseus.en.sjson::Melinoe_2188"
+  ],
+  [
+   "Wake up.",
+   [
+    "Tỉnh dậy.",
+    "Tỉnh lại đi."
+   ],
+   "_NPCData_Nemesis.en.sjson::NemesisField_0313"
+  ],
+  [
+   "What else.",
+   [
+    "Còn gì.",
+    "Còn gì nữa."
+   ],
+   "_NPCData_Odysseus.en.sjson::Odysseus_0307"
+  ],
+  [
+   "It's a deal.",
+   [
+    "Chốt.",
+    "Thỏa thuận."
+   ],
+   "_NPCData_Nemesis.en.sjson::NemesisField_0393"
+  ],
+  [
+   "Aye.",
+   [
+    "Rõ.",
+    "Ừ."
+   ],
+   "_NPCData_Odysseus.en.sjson::Odysseus_0304"
+  ],
+  [
+   "Aye...",
+   [
+    "Ừ...",
+    "Rõ..."
+   ],
+   "_NPCData_Odysseus.en.sjson::Odysseus_0305"
+  ],
+  [
+   "Oh, right...",
+   [
+    "Ờ, phải rồi...",
+    "Ồ, phải rồi..."
+   ],
+   "_RunHistoryData.en.sjson::Melinoe_3859"
+  ],
+  [
+   "At last...",
+   [
+    "Cuối cùng...",
+    "Cuối cùng cũng..."
+   ],
+   "_WeaponShopData.en.sjson::Melinoe_3749"
+  ],
+  [
+   "Heading in.",
+   [
+    "Tiến vào.",
+    "Vào trong."
+   ],
+   "_RoomDataN.en.sjson::MelinoeField_0364"
+  ],
+  [
+   "Where to from here...",
+   [
+    "Đi đâu từ đây...",
+    "Từ đây đi đâu..."
+   ],
+   "_RoomDataN.en.sjson::MelinoeField_0515"
+  ],
+  [
+   "Almost there...",
+   [
+    "Sắp tới rồi...",
+    "Sắp đến rồi..."
+   ],
+   "_RoomDataH.en.sjson::MelinoeField_0946"
+  ],
+  [
+   "Again we meet.",
+   [
+    "Lại gặp nhau.",
+    "Lại gặp nhau rồi."
+   ],
+   "_RoomDataP.en.sjson::Prometheus_0496"
+  ]
+ ],
+ "hogwarts": [
+  [
+   "罗南教授",
+   [
+    "Giáo Sư Ronan",
+    "Giáo sư Ronen"
+   ],
+   "Menu_Opponent5"
+  ],
+  [
+   "召唤对决",
+   [
+    "Triệu Tập Tỉ Thí (Accio)",
+    "Sân Triệu Hồi"
+   ],
+   "ZAB_02_SummonersCourt_QuestTitle"
+  ],
+  [
+   "启用",
+   [
+    "Kích hoạt",
+    "Bật"
+   ],
+   "NvidiaReflex_Enabled"
+  ],
+  [
+   "调制",
+   [
+    "Chế tạo Độc Dược",
+    "Chế tạo thuốc"
+   ],
+   "Action_Brew"
+  ],
+  [
+   "关闭",
+   [
+    "Tắt",
+    "Đóng"
+   ],
+   "Menu_ColourBlindOff"
+  ],
+  [
+   "收集",
+   [
+    "Thu hoạch",
+    "Thu thập"
+   ],
+   "Menu_Beasts_Harvest"
+  ],
+  [
+   "退出",
+   [
+    "Thoát Ra",
+    "Thoát ra",
+    "Thoát Kính Thiên Văn"
+   ],
+   "SettingsControl_Telescope_Exit"
+  ],
+  [
+   "种植",
+   [
+    "Trồng trọt",
+    "Gieo Trồng"
+   ],
+   "Menu_Planting"
+  ],
+  [
+   "锁定",
+   [
+    "Đã Khóa",
+    "Đã khóa",
+    "Khóa Mục Tiêu"
+   ],
+   "LockOn"
+  ],
+  [
+   "滚动",
+   [
+    "Lăn người né tránh",
+    "Cuộn"
+   ],
+   "Legend_ScrollNoButton"
+  ],
+  [
+   "统统石化",
+   [
+    "Petrificus Totalus",
+    "Hóa Đá Toàn Thân",
+    "Bùa Hóa Đá Toàn Thân",
+    "Bùa Hóa Đá Trói Thân (Petrificus Totalus)"
+   ],
+   "Tut_display_Petrificus"
+  ],
+  [
+   "对话",
+   [
+    "Trò chuyện",
+    "Đối Thoại"
+   ],
+   "Action_Talk"
+  ],
+  [
+   "穿梭",
+   [
+    "Du hành",
+    "Dịch Chuyển"
+   ],
+   "Action_Travel"
+  ],
+  [
+   "查看",
+   [
+    "Quan Sát",
+    "Quan sát",
+    "Xem Xét",
+    "Xem"
+   ],
+   "SettingsControl_AM_LookAt"
+  ],
+  [
+   "等待",
+   [
+    "Chờ Đợi (Đổi Giờ)",
+    "Chờ đợi"
+   ],
+   "Menu_Wait"
+  ],
+  [
+   "搅拌魔药",
+   [
+    "Khuấy Thuốc",
+    "Khuấy vạc thuốc"
+   ],
+   "Legend_Stir"
+  ],
+  [
+   "水生植物",
+   [
+    "Tưới Cây Nước",
+    "Tưới nước cây"
+   ],
+   "Legend_WaterPlant"
+  ],
+  [
+   "瞄准",
+   [
+    "Ngắm Bắn",
+    "Nhắm Bắn",
+    "Ngắm"
+   ],
+   "AimMode"
+  ],
+  [
+   "阿拉霍洞开",
+   [
+    "Alohomora",
+    "Bùa Mở Khóa (Alohomora)"
+   ],
+   "Alohomora"
+  ],
+  [
+   "阿拉霍洞开 II",
+   [
+    "Alohomora II",
+    "Bùa Mở Khóa (Alohomora) II"
+   ],
+   "Alohomora_L2"
+  ],
+  [
+   "改变",
+   [
+    "Đổi",
+    "Biến đổi"
+   ],
+   "Alteration"
+  ],
+  [
+   "戈罗德比克",
+   [
+    "Grodbeck",
+    "Gorodbek"
+   ],
+   "Anak"
+  ],
+  [
+   "古代魔法热点",
+   [
+    "Điểm Phép Thuật Cổ Xưa",
+    "Điểm nóng Phép Thuật Cổ Xưa"
+   ],
+   "Map_AncientMagic"
+  ],
+  [
+   "多元式壁龛",
+   [
+    "Hốc Tường Đa Phong Cách",
+    "Hốc tường đa dạng"
+   ],
+   "Sanc_Alcove_01_Mzoo"
+  ],
+  [
+   "哥特式拱门",
+   [
+    "Cổng vòm Gothic",
+    "Vòm cửa Gothic"
+   ],
+   "Sanc_HubArchway_01_DWIZ"
+  ],
+  [
+   "植被式拱门",
+   [
+    "Vòm cửa Thực vật",
+    "Cổng vòm thực vật",
+    "Vòm cửa thực vật"
+   ],
+   "Sanc_HubArchway_01_HBGST"
+  ],
+  [
+   "多元式拱门",
+   [
+    "Vòm cửa Đa dạng",
+    "Vòm cửa đa dạng",
+    "Cổng vòm đa phong cách"
+   ],
+   "Sanc_HubArchway_01_MZOO"
+  ],
+  [
+   "多元式阳台",
+   [
+    "Ban công đa phong cách",
+    "Ban công đa dạng"
+   ],
+   "Architecture_Identity_Balcony_Mzoo"
+  ],
+  [
+   "哥特式书架",
+   [
+    "Giá sách Gothic",
+    "Kệ sách Gothic",
+    "Giá Sách Gothic"
+   ],
+   "Sanc_SwampBookshelf_01_DWIZ"
+  ],
+  [
+   "植被式书架",
+   [
+    "Giá sách thực vật",
+    "Kệ sách thực vật",
+    "Giá Sách kiểu Thực Vật",
+    "Kệ sách Thực vật"
+   ],
+   "Sanc_SwampBookshelfs_01_Hbgst"
+  ],
+  [
+   "多元式书架",
+   [
+    "Kệ sách Đa dạng",
+    "Giá Sách kiểu Đa Phong Cách",
+    "Kệ sách đa phong cách",
+    "Giá sách đa dạng"
+   ],
+   "Sanc_SwampBookshelfs_01_Mzoo"
+  ],
+  [
+   "哥特式地板",
+   [
+    "Sàn chính Gothic",
+    "Sàn nhà Gothic",
+    "Sàn chiếu nghỉ Gothic",
+    "Sàn Gothic",
+    "Gạch lát sàn Gothic"
+   ],
+   "Sanc_FloorTile_01_Dwiz"
+  ],
+  [
+   "植被式地板",
+   [
+    "Sàn thực vật",
+    "Sàn chiếu nghỉ thực vật",
+    "Sàn nhà Thực vật",
+    "Gạch lát sàn thực vật",
+    "Sàn chính thực vật"
+   ],
+   "Sanc_FloorTile_01_Hbgst"
+  ],
+  [
+   "多元式地板",
+   [
+    "Sàn đa dạng",
+    "Sàn chính đa phong cách",
+    "Sàn chiếu nghỉ đa phong cách",
+    "Sàn nhà Đa dạng",
+    "Gạch lát sàn đa phong cách"
+   ],
+   "Sanc_FloorTile_01_Mzoo"
+  ],
+  [
+   "多元式墙壁",
+   [
+    "Tường đa phong cách",
+    "Tường đa dạng",
+    "Tường Đa dạng"
+   ],
+   "Sanc_BackCorridorWall_01_Mzoo"
+  ],
+  [
+   "霍格莫德",
+   [
+    "Khu Vực Làng Hogsmeade",
+    "Làng Hogsmeade",
+    "Hogsmeade"
+   ],
+   "AreaBoundsHogsmeade"
+  ],
+  [
+   "科技式扶手椅",
+   [
+    "Ghế bành công nghệ",
+    "Ghế bành Khoa học"
+   ],
+   "Sanc_ArmChair_01_Potnr"
+  ],
+  [
+   "减震止速",
+   [
+    "Bùa Hãm Đà (Arresto Momentum)",
+    "Arresto Momentum"
+   ],
+   "ArrestoMomentum"
+  ],
+  [
+   "自动存档",
+   [
+    "Tự động lưu",
+    "Lưu tự động"
+   ],
+   "SaveGameType_Auto"
+  ],
+  [
+   "幼年刺背蛛",
+   [
+    "Nhện Lưng Gai Con",
+    "Nhện Gai Lưng Non"
+   ],
+   "SpiderWoodlouseBaby"
+  ],
+  [
+   "坚固长大衣",
+   [
+    "Áo khoác dài chắc chắn",
+    "Áo khoác dài bền chắc"
+   ],
+   "Back_014_Basic"
+  ],
+  [
+   "时髦学校斗篷",
+   [
+    "Áo choàng trường hợp mốt",
+    "Áo choàng trường thời thượng"
+   ],
+   "Back_034_Basic"
+  ],
+  [
+   "凯尔特英雄披风",
+   [
+    "Áo choàng anh hùng Celt",
+    "Áo choàng vai Anh Hùng kiểu Celtic"
+   ],
+   "Back_106_Epic"
+  ],
+  [
+   "克雷格摩尔城堡",
+   [
+    "Lâu Đài Arbroath",
+    "Lâu Đài Clagmar",
+    "Lâu đài Craigmoor"
+   ],
+   "SubregionNameArbroathCastle"
+  ],
+  [
+   "盗猎者帐篷",
+   [
+    "Lều Bọn Săn Trộm",
+    "Lều Săn Trộm"
+   ],
+   "BanditCampA_TentInterior_05"
+  ],
+  [
+   "火灰蛇党据点",
+   [
+    "Căn Cứ Băng Đảng Rắn Tro",
+    "Căn Cứ Băng Rắn Tro"
+   ],
+   "Tent2"
+  ],
+  [
+   "基础施法",
+   [
+    "Niệm Chú Cơ Bản",
+    "Thi Triển Cơ Bản"
+   ],
+   "BasicCast"
+  ],
+  [
+   "波德希尔城堡",
+   [
+    "Lâu đài Bodshear",
+    "Lâu Đài Jerpoint",
+    "Lâu Đài Poidsear"
+   ],
+   "SubregionNameJerpointCastle"
+  ],
+  [
+   "野兽学课程",
+   [
+    "Lớp Học Sinh Vật Huyền Bí",
+    "Lớp Sinh Vật Huyền Bí"
+   ],
+   "HOG_Class_Beasts"
+  ],
+  [
+   "野兽",
+   [
+    "Sinh Vật",
+    "Sinh Vật Huyền Bí",
+    "Sinh vật huyền bí",
+    "Thú",
+    "Sinh vật",
+    "Kỳ Thú"
+   ],
+   "Beast"
+  ],
+  [
+   "兽巢",
+   [
+    "Hang Ổ Sinh Vật",
+    "Ổ sinh vật"
+   ],
+   "BEASTDEN"
+  ],
+  [
+   "野兽陷阱",
+   [
+    "Bẫy kỳ thú",
+    "Bẫy sinh vật"
+   ],
+   "BeastTraps"
+  ],
+  [
+   "南瓜田",
+   [
+    "Ruộng Bí Ngô",
+    "Vườn Bí Ngô"
+   ],
+   "Biome_GroundLarge_Palette_01"
+  ],
+  [
+   "拱道",
+   [
+    "Lối Vòm",
+    "Cổng vòm"
+   ],
+   "Sanc_HubArchway_01"
+  ],
+  [
+   "苦根",
+   [
+    "Rễ đắng",
+    "Rễ Đắng (Bitterroot)"
+   ],
+   "Bitterroot_Byproduct"
+  ],
+  [
+   "非洲树蛇皮",
+   [
+    "Da Rắn Cây Boomslang",
+    "Da Rắn Boomslang"
+   ],
+   "BoomslangSkin"
+  ],
+  [
+   "鞠躬",
+   [
+    "Cúi chào",
+    "Cúi Đầu Chào"
+   ],
+   "PIM_Bow"
+  ],
+  [
+   "剧毒爬行者",
+   [
+    "Nhện Bò Độc",
+    "Nhện Độc Bò Trườn"
+   ],
+   "SpiderVenomous"
+  ],
+  [
+   "刺背蛛爬行者",
+   [
+    "Nhện Gai Lưng Bò",
+    "Nhện Lưng Gai Bò Trườn"
+   ],
+   "SpiderWoodLouse"
+  ],
+  [
+   "狼",
+   [
+    "Chó Sói",
+    "Sói"
+   ],
+   "BP_Wolf_C"
+  ],
+  [
+   "扫帚强化",
+   [
+    "Cường Hóa Chổi Bay",
+    "Nâng cấp Chổi bay",
+    "Nâng cấp chổi bay"
+   ],
+   "VendorCategory_BroomUpgrades"
+  ],
+  [
+   "着陆平台",
+   [
+    "Bệ hạ cánh",
+    "Bệ đáp chổi",
+    "Bệ Hạ Cánh"
+   ],
+   "FGC_Broom_Landing"
+  ],
+  [
+   "斯莱特林学生",
+   [
+    "Học Sinh Slytherin",
+    "Học sinh Nhà Slytherin"
+   ],
+   "Bully1"
+  ],
+  [
+   "收藏家的洞穴",
+   [
+    "Hang Động Nhà Sưu Tập",
+    "Hang Kẻ Sưu Tầm"
+   ],
+   "Cairn_Dungeon_8"
+  ],
+  [
+   "拿袋",
+   [
+    "Túi Bắt Sinh Vật (Nab-Sack)",
+    "Túi Bắt Sinh Vật",
+    "Túi Bắt Thú (Nab-Sack)"
+   ],
+   "TUT_Display_BeastCapturing"
+  ],
+  [
+   "古代魔法",
+   [
+    "Cổ Thuật",
+    "Phép Thuật Cổ Xưa"
+   ],
+   "TUT_display_AMBar"
+  ],
+  [
+   "作业",
+   [
+    "Bài Tập Về Nhà",
+    "Bài Tập"
+   ],
+   "TUT_Display_Assignments"
+  ],
+  [
+   "身型",
+   [
+    "Dáng người",
+    "Vóc Dáng"
+   ],
+   "Menu_BodyType"
+  ],
+  [
+   "扫帚",
+   [
+    "Kho Chổi",
+    "Chổi Bay",
+    "Chổi bay"
+   ],
+   "Category_Broom"
+  ],
+  [
+   "已完成",
+   [
+    "Đã hoàn thành",
+    "Đã Hoành Thành"
+   ],
+   "Category_Completed"
+  ],
+  [
+   "面容",
+   [
+    "Nước Da",
+    "Nét Mặt",
+    "Nước da / Làn da"
+   ],
+   "Menu_Marking2"
+  ],
+  [
+   "变幻",
+   [
+    "Biến Hiện",
+    "Biến Hóa (Conjure)"
+   ],
+   "Category_Conjuration"
+  ],
+  [
+   "显示选项",
+   [
+    "Cài Đặt Màn Hình",
+    "Cài Đặt Hiển Thị"
+   ],
+   "Category_display"
+  ],
+  [
+   "面部穿戴",
+   [
+    "Phụ Kiện Mặt",
+    "Trang Sức Mặt"
+   ],
+   "Menu_Face"
+  ],
+  [
+   "为你的角色取名",
+   [
+    "Đặt Tên Cho Nhân Vật Của Bạn",
+    "Đặt Tên Nhân Vật"
+   ],
+   "Category_Final"
+  ],
+  [
+   "可采集物",
+   [
+    "Có Thể Hái Lượm",
+    "Vật Phẩm Thu Lượm"
+   ],
+   "FORAGABLE"
+  ],
+  [
+   "通用",
+   [
+    "Tài Năng Tổng Hợp",
+    "Tổng Hợp",
+    "Chung"
+   ],
+   "Category_general"
+  ],
+  [
+   "地面坐骑",
+   [
+    "Thú Cưỡi Trên Mặt Đất",
+    "Thú Cưỡi Mặt Đất"
+   ],
+   "Menu_GroundMount"
+  ],
+  [
+   "库存",
+   [
+    "Kho Đồ",
+    "Túi Đồ"
+   ],
+   "TUT_Display_Inventories"
+  ],
+  [
+   "养育",
+   [
+    "Chăn Nuôi",
+    "Nuôi Dưỡng"
+   ],
+   "MENU_CATEGORY_NURTURING"
+  ],
+  [
+   "高地",
+   [
+    "Vùng Đất Liền",
+    "Vùng Cao Nguyên"
+   ],
+   "Category_Overland"
+  ],
+  [
+   "猫头鹰邮递",
+   [
+    "Thư Cú Mèo",
+    "Thư Cú",
+    "Đưa Thư Bằng Cú"
+   ],
+   "Category_Owlpost"
+  ],
+  [
+   "植物",
+   [
+    "Thực vật",
+    "Thực Vật",
+    "Cây Ma Thuật"
+   ],
+   "Plant"
+  ],
+  [
+   "资源",
+   [
+    "Nguyên Liệu",
+    "Tài Nguyên"
+   ],
+   "TUT_Display_InventoryResources"
+  ],
+  [
+   "咒语",
+   [
+    "Thần chú",
+    "Bùa Chú"
+   ],
+   "Category_Spell"
+  ],
+  [
+   "特质",
+   [
+    "Đặc Tính Ma Thuật",
+    "Đặc Tính"
+   ],
+   "Category_Trait"
+  ],
+  [
+   "类别",
+   [
+    "Thể loại",
+    "Danh Mục"
+   ],
+   "CategoryTitle"
+  ],
+  [
+   "尖音符号",
+   [
+    "dấu sắc",
+    "Dấu Sắc",
+    "dấu mũ"
+   ],
+   "cbi_Keyboard_A_AccentAigu_Pronunciation"
+  ],
+  [
+   "左中括弧",
+   [
+    "dấu ngoặc vuông trái",
+    "dấu ngoặc móc trái"
+   ],
+   "cbi_Keyboard_LeftBrace_Pronunciation"
+  ],
+  [
+   "右中括弧",
+   [
+    "dấu ngoặc vuông phải",
+    "dấu ngoặc móc phải"
+   ],
+   "cbi_Keyboard_RightBrace_Pronunciation"
+  ],
+  [
+   "巧克力蛙",
+   [
+    "Ếch Sô-cô-la",
+    "Kẹo Ếch Sô-cô-la"
+   ],
+   "Chocolate_Frogs"
+  ],
+  [
+   "启动雕像",
+   [
+    "Khởi động bức tượng",
+    "Kích hoạt các bức tượng"
+   ],
+   "COM_18_PiecingitTogether_QuestActive_TaskObj02"
+  ],
+  [
+   "进入地窖",
+   [
+    "Vào trong hầm",
+    "Vào căn hầm"
+   ],
+   "HER_02_ABasisforBlackmail_QuestActive_TaskObj05"
+  ],
+  [
+   "击败潜逃者",
+   [
+    "Đánh bại Kẻ Đào Tẩu",
+    "Đánh bại Absconditor"
+   ],
+   "FGC_Kill_Named_Spider_Acromantula_1"
+  ],
+  [
+   "同伴",
+   [
+    "Bạn đồng hành",
+    "Đồng Hành",
+    "Người Đồng Hành"
+   ],
+   "Menu_Companion"
+  ],
+  [
+   "确认",
+   [
+    "Xác nhận",
+    "Xác Nhận Đặt",
+    "Xác Nhận"
+   ],
+   "SettingsControl_UMGConfirm"
+  ],
+  [
+   "变幻咒语",
+   [
+    "Bùa Triệu Vật",
+    "Bùa Biến Hiện",
+    "Bùa Biến Hiện (Conjuration)"
+   ],
+   "Conjuration"
+  ],
+  [
+   "森林饲养所",
+   [
+    "Khu Bảo Tồn Rừng",
+    "Khu Nuôi Dưỡng Rừng"
+   ],
+   "Forest_Biome"
+  ],
+  [
+   "草原饲养所",
+   [
+    "Khu Nuôi Dưỡng Đồng Cỏ",
+    "Khu Nuôi Đồng Cỏ"
+   ],
+   "Conjuration_Breadcrumb_Biome_Grassland"
+  ],
+  [
+   "变幻幻术配方",
+   [
+    "Bản Vẽ Biến Hình",
+    "Công Thức Biến Hiện"
+   ],
+   "VendorCategory_TransfigurationSpellcrafts"
+  ],
+  [
+   "硬件基准",
+   [
+    "Đo Hiệu Năng Phần Cứng",
+    "Đánh giá phần cứng"
+   ],
+   "CREATEBENCHMARK"
+  ],
+  [
+   "飞行",
+   [
+    "Cất Cánh Bay",
+    "Bay Lượn"
+   ],
+   "CreatureAttribute_Flying"
+  ],
+  [
+   "野兽饲料",
+   [
+    "Thức ăn sinh vật huyền bí",
+    "Thức Ăn Thú",
+    "Thức Ăn Sinh Vật"
+   ],
+   "TUT_Display_BeastFeed"
+  ],
+  [
+   "野兽抚摸刷",
+   [
+    "Bàn Chải Chăm Sóc Sinh Vật",
+    "Bàn Chải Vuốt Thú"
+   ],
+   "TUT_Display_BeastBrush"
+  ],
+  [
+   "探索",
+   [
+    "Khám Phá",
+    "Thám Hiểm",
+    "Khám Phá Thế Giới",
+    "Khám phá"
+   ],
+   "CurrentMission_Exploring"
+  ],
+  [
+   "鲜血诅咒",
+   [
+    "Lời Nguyền Nối Máu",
+    "Lời Nguyền Máu"
+   ],
+   "DAC_CurseReflect1"
+  ],
+  [
+   "算术占卜教室",
+   [
+    "Lớp Học Thuật Số",
+    "Lớp Học Số Thuật"
+   ],
+   "LORE_CentralTower_ArithmancyClass"
+  ],
+  [
+   "球遁鸟",
+   [
+    "Chim Diricawl",
+    "Lông chim Diricawl"
+   ],
+   "Diricawl"
+  ],
+  [
+   "白鲜",
+   [
+    "Bạch Tiên (Dittany)",
+    "Cây Bạch Tiên (Dittany)"
+   ],
+   "Dittany"
+  ],
+  [
+   "茱萸和毒菇",
+   [
+    "Tiệm Cỏ Chó & Nấm Độc (Dogweed & Deathcap)",
+    "Dogweed và Deathcap"
+   ],
+   "DogweedAndDeathcap"
+  ],
+  [
+   "盔甲护身专精",
+   [
+    "Tinh Thông Bùa Khiên Che Chắn (Protego)",
+    "Chuyên Sâu Bùa Khiên Che Chắn (Protego)"
+   ],
+   "Talent_Core_ProtegoReflect"
+  ],
+  [
+   "礼堂入口",
+   [
+    "Sảnh Vào",
+    "Lối vào Đại Sảnh"
+   ],
+   "EntranceHall"
+  ],
+  [
+   "非凡",
+   [
+    "Sử Thi",
+    "Phi thường"
+   ],
+   "EPIC"
+  ],
+  [
+   "使用魔法通道",
+   [
+    "Dùng lối đi phép thuật",
+    "Sử dụng lối đi ma thuật"
+   ],
+   "EVJ_DepthofaMine_QuestActive_TaskObj07"
+  ],
+  [
+   "击败守卫",
+   [
+    "Đánh bại lính canh",
+    "Đánh bại vệ binh"
+   ],
+   "EVT_01_DepthOfAMountain_QuestActive_TaskObj04"
+  ],
+  [
+   "退回主菜单",
+   [
+    "Về menu chính",
+    "Quay về menu chính",
+    "Về Màn Hình Chính"
+   ],
+   "Popup_LoginStatusChanged_ReturnToMainMenu"
+  ],
+  [
+   "大爆爆",
+   [
+    "Expulso",
+    "Bùa Nổ Công Phá (Bombarda)"
+   ],
+   "Spell_Expulso"
+  ],
+  [
+   "幽灵",
+   [
+    "Hồn Ma",
+    "Bóng Ma",
+    "Bóng ma"
+   ],
+   "GhostFemaleA"
+  ],
+  [
+   "精神病院面罩",
+   [
+    "Mặt Nạ Bệnh Viện Tâm Thần",
+    "Mặt Nạ Trại Điên Huyền Thoại"
+   ],
+   "Face_015_Epic"
+  ],
+  [
+   "学院塔",
+   [
+    "Tháp Giáo Viên",
+    "Tháp Giảng Viên"
+   ],
+   "FacultyTower"
+  ],
+  [
+   "肥料",
+   [
+    "Phân Bón Màu Mỡ",
+    "Phân Bón"
+   ],
+   "Fertiliser"
+  ],
+  [
+   "返回地图密室",
+   [
+    "Quay lại Phòng Bản Đồ",
+    "Trở lại Phòng Bản Đồ"
+   ],
+   "FGS_BeneathHogwarts_QuestAvailable_TaskObj01"
+  ],
+  [
+   "调制{0}个魔药",
+   [
+    "Pha chế {0} độc dược",
+    "Pha chế {0} Thuốc"
+   ],
+   "FGC_Brew_PepperUp"
+  ],
+  [
+   "变幻此物体一次",
+   [
+    "Biến hình vật thể này một lần",
+    "Triệu hồi vật thể này một lần"
+   ],
+   "FGC_Conjure_MediumPotionStation"
+  ],
+  [
+   "击败{0}个阴尸",
+   [
+    "Đánh bại {0} Âm Binh (Inferi)",
+    "Đánh bại {0} xác sống Inferius"
+   ],
+   "FGC_Kill_Inferius"
+  ],
+  [
+   "地图密室",
+   [
+    "Phòng Bản Đồ",
+    "Mật Thất Bản Đồ",
+    "Căn Phòng Bản Đồ"
+   ],
+   "NOT_SET"
+  ],
+  [
+   "前往礼堂",
+   [
+    "Đến Đại Sảnh Đường",
+    "Đi Đến Đại Sảnh Đường"
+   ],
+   "HCP_TheHouseCup_QuestActive_TaskObj01"
+  ],
+  [
+   "找到失踪的书页",
+   [
+    "Tìm những trang sách thất lạc",
+    "Tìm lại những trang sách bị mất tích"
+   ],
+   "Lighthouse_05"
+  ],
+  [
+   "离开",
+   [
+    "Thoát",
+    "Rời Khỏi",
+    "Rời đi"
+   ],
+   "Leave"
+  ],
+  [
+   "实战指南书页",
+   [
+    "Trang Cẩm Nang",
+    "Trang Cẩm Nang Phù Thủy"
+   ],
+   "FieldGuidePage"
+  ],
+  [
+   "流液草",
+   [
+    "Cỏ Lưu Dịch (Fluxweed)",
+    "Cỏ Fluxweed"
+   ],
+   "Fluxweed"
+  ],
+  [
+   "树叶品质",
+   [
+    "Chất Lượng Tán Lá",
+    "Chất Lượng Cây Cỏ"
+   ],
+   "Menu_Foilage"
+  ],
+  [
+   "主厅",
+   [
+    "Sảnh Chính",
+    "Đại Sảnh Chính"
+   ],
+   "MainHall"
+  ],
+  [
+   "方庭",
+   [
+    "Sân Tứ Giác",
+    "Sân Trong",
+    "Sân Trung Tâm"
+   ],
+   "MAP_HW_SUB_QuadCourtyard_QuadCourtyard"
+  ],
+  [
+   "变形学庭院",
+   [
+    "Sân Hóa Phép",
+    "Sân Biến Hình"
+   ],
+   "HOG_TransfigurationCourtyard"
+  ],
+  [
+   "奖杯室",
+   [
+    "Phòng Cúp",
+    "Phòng Cúp và Kỷ Niệm Chương"
+   ],
+   "FT_HW_TrophyRoom"
+  ],
+  [
+   "地穴",
+   [
+    "Hầm Bí Ẩn",
+    "Hầm Bí Mật"
+   ],
+   "FT_HW_Undercroft"
+  ],
+  [
+   "北福特沼泽",
+   [
+    "Đầm Lầy Ford Phía Bắc",
+    "Đầm Lầy Bắc Ford"
+   ],
+   "RegionNameNorthSwamp"
+  ],
+  [
+   "南海沼泽",
+   [
+    "Đầm Lầy Biển Nam",
+    "Đầm Lầy Nam Hải"
+   ],
+   "RegionNameSouthSwamp"
+  ],
+  [
+   "班伯格",
+   [
+    "Bainburgh",
+    "Halkirk"
+   ],
+   "FT_OL_HamletHalkirk_CO_BB"
+  ],
+  [
+   "克罗夫特",
+   [
+    "Helmsdale",
+    "Cragcroft"
+   ],
+   "FT_OL_HamletHelmsdale_CO_BD"
+  ],
+  [
+   "下霍格米村",
+   [
+    "Làng Hogsfield Hạ",
+    "Lower Hogsfield"
+   ],
+   "FT_OL_HamletLowerHogsfield_HN_BG"
+  ],
+  [
+   "布洛克巴罗",
+   [
+    "Brockburrow",
+    "Brocburrow"
+   ],
+   "HAM_EddieThistlewood"
+  ],
+  [
+   "上霍格米村",
+   [
+    "Upper Hogsfield",
+    "Làng Hogsfield Thượng"
+   ],
+   "SubregionNameUpperHogsfield"
+  ],
+  [
+   "匹于河",
+   [
+    "Vùng Pitt-upon-Ford",
+    "Pitt-upon-Ford"
+   ],
+   "FT_OL_Pitt-UponFord_HN_AK"
+  ],
+  [
+   "月痴兽巢",
+   [
+    "Hang Bê Trăng",
+    "Hang Mooncalf"
+   ],
+   "MooncalfDen"
+  ],
+  [
+   "花园",
+   [
+    "Khu Vườn",
+    "Vườn"
+   ],
+   "HOG_Garden"
+  ],
+  [
+   "装备",
+   [
+    "Trang Bị Nhân Vật",
+    "Trang Bị"
+   ],
+   "Gear"
+  ],
+  [
+   "妖精银抗性 I",
+   [
+    "Kháng Yêu Tinh Bạc I",
+    "Kháng Yêu Tinh I"
+   ],
+   "RECIPE_GEARTRAIT_ARMOR_GOBLIN_1"
+  ],
+  [
+   "妖精银抗性 II",
+   [
+    "Kháng Yêu Tinh Bạc II",
+    "Kháng Yêu Tinh II"
+   ],
+   "RECIPE_GEARTRAIT_ARMOR_GOBLIN_2"
+  ],
+  [
+   "豺狼保护 I",
+   [
+    "Bảo Vệ Chó Sói I",
+    "Bảo Vệ Sói I"
+   ],
+   "Gear_Armor_Wolf_1"
+  ],
+  [
+   "豺狼保护 II",
+   [
+    "Bảo Vệ Chó Sói II",
+    "Bảo Vệ Sói II"
+   ],
+   "Gear_Armor_Wolf_2"
+  ],
+  [
+   "豺狼保护 III",
+   [
+    "Bảo Vệ Chó Sói III",
+    "Bảo Vệ Sói III"
+   ],
+   "Gear_Armor_Wolf_3"
+  ],
+  [
+   "紫色巨蟾",
+   [
+    "Cóc Tía Khổng Lồ",
+    "Mụn Cóc Tím Khổng Lồ"
+   ],
+   "GiantPurpleToad"
+  ],
+  [
+   "风雅牌巫师服装店",
+   [
+    "Tiệm Trang Phục Phù Thủy Gladrags",
+    "Tiệm Trang Phục Pháp Sư Gladrags",
+    "Tiệm Trang Phục Gladrags",
+    "Tiệm May Pháp Sư Gladrags"
+   ],
+   "GladragsWizardwear"
+  ],
+  [
+   "追随者哨兵",
+   [
+    "Lính Canh Thuộc Hạ",
+    "Lính Gác Thuộc Hạ"
+   ],
+   "GoblinMage_INST_B"
+  ],
+  [
+   "紫角兽角",
+   [
+    "Sừng Graphorn",
+    "Sừng Ngưu Ma Biển (Graphorn)"
+   ],
+   "Graphorn_Byproduct"
+  ],
+  [
+   "乌尔特科特的头盔",
+   [
+    "Mũ Giáp Arthcourt",
+    "Mũ Giáp của Urtkot"
+   ],
+   "Quest_GT_LodgoksHelmet"
+  ],
+  [
+   "贝壳 – 蜜糖褐",
+   [
+    "Vỏ Sò – Nâu Mật Ong",
+    "Vỏ Sò – Nâu Mật"
+   ],
+   "H000_M01"
+  ],
+  [
+   "军刀 – 褐",
+   [
+    "Kiếm Cong – Nâu",
+    "Kiếm – Nâu"
+   ],
+   "H001_M00"
+  ],
+  [
+   "军刀 – 灰",
+   [
+    "Kiếm – Xám",
+    "Kiếm Cong – Xám"
+   ],
+   "H001_M01"
+  ],
+  [
+   "军刀 – 灰棕",
+   [
+    "Kiếm Cong – Nâu Xám",
+    "Kiếm – Nâu Xám"
+   ],
+   "H001_M02"
+  ],
+  [
+   "藤编 – 黑",
+   [
+    "Mây Đan – Đen",
+    "Đan Mây – Đen"
+   ],
+   "H003_M00"
+  ],
+  [
+   "藤编 – 红",
+   [
+    "Mây Đan – Đỏ",
+    "Đan Mây – Đỏ"
+   ],
+   "H003_M01"
+  ],
+  [
+   "藤编 – 蓝",
+   [
+    "Đan Mây – Xanh Dương",
+    "Mây Đan – Xanh Dương"
+   ],
+   "H003_M02"
+  ],
+  [
+   "方格 – 蓝绿",
+   [
+    "Ô Vuông – Xanh Lam Lục",
+    "Ô Vuông – Xanh Ngọc"
+   ],
+   "H004_M00"
+  ],
+  [
+   "旋涡 – 丁香",
+   [
+    "Xoáy Nước – Tím Lila",
+    "Xoáy Nước – Tử Đinh Hương"
+   ],
+   "H009_M00"
+  ],
+  [
+   "帝国 – 金&褐",
+   [
+    "Đế Chế – Vàng & Nâu",
+    "Đế Quốc – Vàng & Nâu"
+   ],
+   "H010_M00"
+  ],
+  [
+   "帝国 – 灰&银",
+   [
+    "Đế Quốc – Xám & Bạc",
+    "Đế Chế – Xám & Bạc"
+   ],
+   "H010_M01"
+  ],
+  [
+   "飞鸟 – 褐",
+   [
+    "Chim Muông – Nâu",
+    "Chim Bay – Nâu"
+   ],
+   "Recipe_Wand14_Var1"
+  ],
+  [
+   "飞鸟 – 米黄",
+   [
+    "Chim Muông – Kem",
+    "Chim Bay – Kem"
+   ],
+   "Recipe_Wand14_Var2"
+  ],
+  [
+   "飞鸟 – 灰",
+   [
+    "Chim Muông – Xám",
+    "Chim Bay – Xám"
+   ],
+   "Recipe_Wand14_Var3"
+  ],
+  [
+   "黑魔法决斗手套",
+   [
+    "Găng Tay Đấu Tay Đôi Nghệ Thuật Hắc Ám",
+    "Găng Tay Đấu Tay Đôi Hắc Ám"
+   ],
+   "Hand_035_Epic"
+  ],
+  [
+   "黑色圆顶礼帽",
+   [
+    "Mũ Quả Dưa Đen Hảo Hạng",
+    "Mũ Quả Dưa Đen Tinh Xảo",
+    "Mũ Quả Dưa Đen Tiêu Chuẩn"
+   ],
+   "Head_008_Rare"
+  ],
+  [
+   "血红软呢帽",
+   [
+    "Mũ Fedora Đỏ Máu Hảo Hạng",
+    "Mũ Fedora Đỏ Máu Tinh Xảo",
+    "Mũ Fedora Đỏ Máu Tiêu Chuẩn"
+   ],
+   "Head_010_Rare"
+  ],
+  [
+   "花草软呢帽",
+   [
+    "Mũ Fedora Hoa Cỏ Tinh Xảo",
+    "Mũ Fedora Hoa Cỏ Tiêu Chuẩn",
+    "Mũ Fedora Hoa Cỏ Hảo Hạng"
+   ],
+   "Head_012_Rare"
+  ],
+  [
+   "店主的礼帽",
+   [
+    "Mũ Chóp Cao Của Chủ Tiệm Tinh Xảo",
+    "Mũ Chóp Cao Của Chủ Tiệm Tiêu Chuẩn",
+    "Mũ Chóp Cao Của Chủ Tiệm Huyền Thoại",
+    "Mũ Chóp Cao Của Chủ Tiệm Phi Phàm",
+    "Mũ Chóp Cao Của Chủ Tiệm Hảo Hạng"
+   ],
+   "Head_014_Legendary"
+  ],
+  [
+   "一年级礼帽",
+   [
+    "Mũ Chóp Cao Năm Nhất Tinh Xảo",
+    "Mũ Chóp Cao Năm Nhất Tiêu Chuẩn",
+    "Mũ Chóp Cao Năm Nhất Hảo Hạng"
+   ],
+   "Head_015_Rare"
+  ],
+  [
+   "毛帽",
+   [
+    "Mũ Len Ấm Áp Phi Phàm",
+    "Mũ Len Ấm Áp Hảo Hạng",
+    "Mũ Len Ấm Áp Tinh Xảo"
+   ],
+   "Head_016_Rare"
+  ],
+  [
+   "坚固软呢帽",
+   [
+    "Mũ Fedora Kiên Cố Tinh Xảo",
+    "Mũ Fedora Kiên Cố Tiêu Chuẩn",
+    "Mũ Fedora Kiên Cố Hảo Hạng"
+   ],
+   "Head_017_Rare"
+  ],
+  [
+   "羊皮冬帽",
+   [
+    "Mũ Mùa Đông Da Cừu Hảo Hạng",
+    "Mũ Mùa Đông Da Cừu Phi Phàm",
+    "Mũ Mùa Đông Da Cừu Tinh Xảo"
+   ],
+   "Head_019_Rare"
+  ],
+  [
+   "时髦礼帽",
+   [
+    "Mũ Chóp Cao Thời Thượng Tinh Xảo",
+    "Mũ Chóp Cao Thời Thượng Hảo Hạng",
+    "Mũ Chóp Cao Thời Thượng Phi Phàm"
+   ],
+   "Head_020_Rare"
+  ],
+  [
+   "街童帽",
+   [
+    "Mũ Trẻ Bụi Đời Hảo Hạng",
+    "Mũ Trẻ Bụi Đời Huyền Thoại",
+    "Mũ Trẻ Bụi Đời Tinh Xảo",
+    "Mũ Trẻ Bụi Đời Phi Phàm"
+   ],
+   "Head_021_Legendary"
+  ],
+  [
+   "游牧帽",
+   [
+    "Mũ Du Mục Tiêu Chuẩn",
+    "Mũ Du Mục Hảo Hạng",
+    "Mũ Du Mục Tinh Xảo"
+   ],
+   "Head_022_Rare"
+  ],
+  [
+   "流苏库菲帽",
+   [
+    "Mũ Kufi Tua Rua Tinh Xảo",
+    "Mũ Kufi Tua Rua Hảo Hạng",
+    "Mũ Kufi Tua Rua Phi Phàm"
+   ],
+   "Head_023_Rare"
+  ],
+  [
+   "蓝色睡帽",
+   [
+    "Mũ Ngủ Xanh Lam Tiêu Chuẩn",
+    "Mũ Ngủ Xanh Lam Tinh Xảo",
+    "Mũ Ngủ Xanh Lam Hảo Hạng"
+   ],
+   "Head_024_Rare"
+  ],
+  [
+   "棕褐色睡帽",
+   [
+    "Mũ Ngủ Nâu Nhạt Hảo Hạng",
+    "Mũ Ngủ Nâu Nhạt Tinh Xảo",
+    "Mũ Ngủ Nâu Nhạt Tiêu Chuẩn"
+   ],
+   "Head_025_Rare"
+  ],
+  [
+   "轻型草药学家帽",
+   [
+    "Mũ Thảo Dược Sĩ Gọn Nhẹ Huyền Thoại",
+    "Mũ Thảo Dược Sĩ Gọn Nhẹ Phi Phàm",
+    "Mũ Thảo Dược Sĩ Gọn Nhẹ Hảo Hạng"
+   ],
+   "Head_026_Legendary"
+  ],
+  [
+   "深色草药学家帽",
+   [
+    "Mũ Thảo Dược Sĩ Tối Màu Tiêu Chuẩn",
+    "Mũ Thảo Dược Sĩ Tối Màu Tinh Xảo",
+    "Mũ Thảo Dược Sĩ Tối Màu Hảo Hạng"
+   ],
+   "Head_027_Rare"
+  ],
+  [
+   "仙子帽",
+   [
+    "Mũ Yêu Tinh Tinh Xảo",
+    "Mũ Yêu Tinh Hảo Hạng",
+    "Mũ Yêu Tinh Tiêu Chuẩn"
+   ],
+   "Head_028_Rare"
+  ],
+  [
+   "轻便遮阳帽",
+   [
+    "Mũ Rơm Che Nắng Tiêu Chuẩn",
+    "Mũ Rơm Che Nắng Tinh Xảo",
+    "Mũ Rơm Che Nắng Hảo Hạng"
+   ],
+   "Head_029_Rare"
+  ],
+  [
+   "深色阳帽",
+   [
+    "Mũ Che Nắng Sẫm Màu Hảo Hạng",
+    "Mũ Che Nắng Sẫm Màu Huyền Thoại",
+    "Mũ Che Nắng Sẫm Màu Phi Phàm"
+   ],
+   "Head_030_Legendary"
+  ],
+  [
+   "经典魔法师帽",
+   [
+    "Mũ Phù Thủy Cổ Điển Tiêu Chuẩn",
+    "Mũ Phù Thủy Cổ Điển Hảo Hạng",
+    "Mũ Phù Thủy Cổ Điển Tinh Xảo"
+   ],
+   "Head_031_Rare"
+  ],
+  [
+   "森林魔法师帽",
+   [
+    "Mũ Phù Thủy Rừng Xanh Tinh Xảo",
+    "Mũ Phù Thủy Rừng Xanh Tiêu Chuẩn",
+    "Mũ Phù Thủy Rừng Xanh Hảo Hạng"
+   ],
+   "Head_032_Rare"
+  ],
+  [
+   "皮革平顶帽",
+   [
+    "Mũ Vải Bằng Da Tinh Xảo",
+    "Mũ Vải Bằng Da Tiêu Chuẩn",
+    "Mũ Vải Bằng Da Hảo Hạng"
+   ],
+   "Head_033_Rare"
+  ],
+  [
+   "深色平顶帽",
+   [
+    "Mũ Nồi Sẫm Màu Tiêu Chuẩn",
+    "Mũ Nồi Sẫm Màu Hảo Hạng",
+    "Mũ Nồi Sẫm Màu Tinh Xảo"
+   ],
+   "Head_034_Rare"
+  ],
+  [
+   "魔药师帽",
+   [
+    "Mũ Chế Thuốc Huyền Thoại",
+    "Mũ Chế Thuốc Phi Phàm"
+   ],
+   "Head_035_Legendary"
+  ],
+  [
+   "翠绿帽子",
+   [
+    "Mũ Xanh Ngọc Bích Hảo Hạng",
+    "Mũ Xanh Ngọc Bích Tinh Xảo",
+    "Mũ Xanh Ngọc Bích Tiêu Chuẩn"
+   ],
+   "Head_036_Rare"
+  ],
+  [
+   "高礼帽",
+   [
+    "Mũ Chóp Cao Quý Phái Hảo Hạng",
+    "Mũ Chóp Cao Quý Phái Tinh Xảo",
+    "Mũ Chóp Cao Quý Phái Tiêu Chuẩn"
+   ],
+   "Head_037_Rare"
+  ],
+  [
+   "破旧礼帽",
+   [
+    "Mũ Chóp Cao Cũ Kỹ Tinh Xảo",
+    "Mũ Chóp Cao Cũ Kỹ Tiêu Chuẩn",
+    "Mũ Chóp Cao Cũ Kỹ Hảo Hạng"
+   ],
+   "Head_038_Rare"
+  ],
+  [
+   "图案头巾",
+   [
+    "Khăn Trùm Đầu Hoa Văn Tinh Xảo",
+    "Khăn Trùm Đầu Hoa Văn Hảo Hạng"
+   ],
+   "Head_040_Rare"
+  ],
+  [
+   "灰色睡帽",
+   [
+    "Mũ Ngủ Màu Xám Hảo Hạng",
+    "Mũ Ngủ Màu Xám Tiêu Chuẩn",
+    "Mũ Ngủ Màu Xám Tinh Xảo"
+   ],
+   "Head_041_Rare"
+  ],
+  [
+   "蓝色平顶帽",
+   [
+    "Mũ Nồi Xanh Lam Tinh Xảo",
+    "Mũ Nồi Xanh Lam Tiêu Chuẩn",
+    "Mũ Nồi Xanh Lam Hảo Hạng"
+   ],
+   "Head_042_Rare"
+  ],
+  [
+   "靛蓝魔法师帽",
+   [
+    "Mũ Phù Thủy Chàm Phi Phàm",
+    "Mũ Phù Thủy Chàm Hảo Hạng",
+    "Mũ Phù Thủy Chàm Tinh Xảo"
+   ],
+   "Head_043_Rare"
+  ],
+  [
+   "时髦魔法师帽",
+   [
+    "Mũ Phù Thủy Thời Thượng Phi Phàm",
+    "Mũ Phù Thủy Thời Thượng Tinh Xảo",
+    "Mũ Phù Thủy Thời Thượng Hảo Hạng"
+   ],
+   "Head_044_Rare"
+  ],
+  [
+   "紫红色贝雷帽",
+   [
+    "Mũ Nồi Tím Cẩm Quỳ Tinh Xảo",
+    "Mũ Nồi Tím Cẩm Quỳ Hảo Hạng",
+    "Mũ Nồi Tím Cẩm Quỳ Tiêu Chuẩn"
+   ],
+   "Head_046_Rare"
+  ],
+  [
+   "解谜人裁缝帽",
+   [
+    "Mũ Thợ May Giải Đố Phi Phàm",
+    "Mũ Thợ May Giải Đố Huyền Thoại"
+   ],
+   "Head_047_Legendary"
+  ],
+  [
+   "异想天开睡帽",
+   [
+    "Mũ Ngủ Phá Cách Huyền Thoại",
+    "Mũ Ngủ Phá Cách Phi Phàm"
+   ],
+   "HEAD_048_LEGENDARY"
+  ],
+  [
+   "文艺复兴帽",
+   [
+    "Mũ Phục Hưng Tinh Xảo",
+    "Mũ Phục Hưng Phi Phàm",
+    "Mũ Phục Hưng Hảo Hạng",
+    "Mũ Phục Hưng Huyền Thoại"
+   ],
+   "Head_049_Legendary"
+  ],
+  [
+   "梅花魔法师帽",
+   [
+    "Mũ Phù Thủy Sắc Mận Hảo Hạng",
+    "Mũ Phù Thủy Sắc Mận Tinh Xảo",
+    "Mũ Phù Thủy Sắc Mận Phi Phàm"
+   ],
+   "Head_050_Rare"
+  ],
+  [
+   "长春花礼帽",
+   [
+    "Mũ Chóp Cao Dừa Cạn Hảo Hạng",
+    "Mũ Chóp Cao Dừa Cạn Phi Phàm"
+   ],
+   "Head_055_Rare"
+  ],
+  [
+   "紫红色帽子",
+   [
+    "Mũ Chóp Nhọn Cẩm Quỳ Phi Phàm",
+    "Mũ Chóp Nhọn Cẩm Quỳ Hảo Hạng"
+   ],
+   "Head_056_Rare"
+  ],
+  [
+   "发条软呢帽",
+   [
+    "Mũ Fedora Đồng Hồ Cót Hảo Hạng",
+    "Mũ Fedora Đồng Hồ Cót Phi Phàm"
+   ],
+   "Head_058_Rare"
+  ],
+  [
+   "条纹睡帽",
+   [
+    "Mũ Ngủ Sọc Tinh Xảo",
+    "Mũ Ngủ Sọc Tiêu Chuẩn"
+   ],
+   "Head_060_Common"
+  ],
+  [
+   "草帽遮阳帽",
+   [
+    "Mũ Rơm Che Nắng Huyền Thoại",
+    "Mũ Rơm Che Nắng Phi Phàm",
+    "Mũ Rơm Che Nắng Hảo Hạng"
+   ],
+   "Head_061_Legendary"
+  ],
+  [
+   "拼布魔法师帽",
+   [
+    "Mũ Phù Thủy Chắp Vá Huyền Thoại",
+    "Mũ Phù Thủy Chắp Vá Phi Phàm",
+    "Mũ Phù Thủy Chắp Vá Hảo Hạng"
+   ],
+   "Head_062_Legendary"
+  ],
+  [
+   "醒目的涡纹花呢帽",
+   [
+    "Mũ Họa Tiết Paisley Nổi Bật Huyền Thoại",
+    "Mũ Họa Tiết Paisley Nổi Bật Phi Phàm"
+   ],
+   "Head_063_Legendary"
+  ],
+  [
+   "天文帽",
+   [
+    "Mũ Thiên Văn Phi Phàm",
+    "Mũ Thiên Văn Hảo Hạng",
+    "Mũ Thiên Văn Huyền Thoại"
+   ],
+   "Head_064_Legendary"
+  ],
+  [
+   "质朴的睡帽",
+   [
+    "Mũ Ngủ Mộc Mạc Tinh Xảo",
+    "Mũ Ngủ Mộc Mạc Tiêu Chuẩn",
+    "Mũ Ngủ Mộc Mạc Hảo Hạng"
+   ],
+   "Head_065_Rare"
+  ],
+  [
+   "皮革魔法师帽",
+   [
+    "Mũ Phù Thủy Bằng Da Hảo Hạng",
+    "Mũ Phù Thủy Bằng Da Phi Phàm",
+    "Mũ Phù Thủy Bằng Da Huyền Thoại"
+   ],
+   "Head_066_Legendary"
+  ],
+  [
+   "华丽蜘蛛网帽",
+   [
+    "Mũ Mạng Nhện Hoa Lệ Huyền Thoại",
+    "Mũ Mạng Nhện Hoa Lệ Phi Phàm"
+   ],
+   "Head_067_Legendary"
+  ],
+  [
+   "仙子绿魔法师帽",
+   [
+    "Mũ Phù Thủy Xanh Tiên Tộc Hảo Hạng",
+    "Mũ Phù Thủy Xanh Tiên Tộc Huyền Thoại",
+    "Mũ Phù Thủy Xanh Tiên Tộc Phi Phàm"
+   ],
+   "Head_068_Legendary"
+  ],
+  [
+   "拜占庭贝雷帽",
+   [
+    "Mũ Nồi Byzantine Hảo Hạng",
+    "Mũ Nồi Byzantine Tiêu Chuẩn",
+    "Mũ Nồi Byzantine Tinh Xảo"
+   ],
+   "Head_069_Rare"
+  ],
+  [
+   "稻草人魔法师帽",
+   [
+    "Mũ Phù Thủy Bù Nhìn Tinh Xảo",
+    "Mũ Phù Thủy Bù Nhìn Hảo Hạng",
+    "Mũ Phù Thủy Bù Nhìn Tiêu Chuẩn"
+   ],
+   "Head_070_Rare"
+  ],
+  [
+   "深红礼帽",
+   [
+    "Mũ Chóp Cao Đỏ Thẫm Phi Phàm",
+    "Mũ Chóp Cao Đỏ Thẫm Hảo Hạng",
+    "Mũ Chóp Cao Đỏ Thẫm Tinh Xảo"
+   ],
+   "Head_071_Rare"
+  ],
+  [
+   "蕾丝魔法师帽",
+   [
+    "Mũ Phù Thủy Phối Ren Phi Phàm",
+    "Mũ Phù Thủy Phối Ren Hảo Hạng",
+    "Mũ Phù Thủy Phối Ren Tinh Xảo"
+   ],
+   "Head_072_Rare"
+  ],
+  [
+   "黑魔法驻军帽",
+   [
+    "Mũ Đồn Binh Nghệ Thuật Hắc Ám Hảo Hạng",
+    "Mũ Đồn Binh Nghệ Thuật Hắc Ám Huyền Thoại",
+    "Mũ Đồn Binh Nghệ Thuật Hắc Ám Tinh Xảo",
+    "Mũ Đồn Binh Nghệ Thuật Hắc Ám Phi Phàm",
+    "Mũ Đồn Binh Nghệ Thuật Hắc Ám Tiêu Chuẩn"
+   ],
+   "Head_074_Legendary"
+  ],
+  [
+   "华丽银色礼帽",
+   [
+    "Mũ Chóp Cao Bạc Lộng Lẫy Phi Phàm",
+    "Mũ Chóp Cao Bạc Lộng Lẫy Hảo Hạng",
+    "Mũ Chóp Cao Bạc Lộng Lẫy Tinh Xảo",
+    "Mũ Chóp Cao Bạc Lộng Lẫy Tiêu Chuẩn"
+   ],
+   "Head_074_Rare"
+  ],
+  [
+   "三把扫帚",
+   [
+    "Quán Ba Cây Chổi",
+    "Quán Ba Cái Chổi"
+   ],
+   "LORE_3Broom_Broomsticks"
+  ],
+  [
+   "珍禽异兽",
+   [
+    "Trân Cầm Dị Thú",
+    "Cửa Hàng Sinh Vật Kỳ Bí",
+    "Brood & Peck — Thú Vật Kỳ Thú"
+   ],
+   "LORE_Waggery_BurntCeiling"
+  ],
+  [
+   "奥利凡德",
+   [
+    "Tiệm Đũa Phép Ollivanders",
+    "Ollivanders"
+   ],
+   "VendorShopName_GerboldOllivander"
+  ],
+  [
+   "蜂蜜公爵",
+   [
+    "Tiệm Công Kẹo Honeydukes",
+    "Tiệm Kẹo Honeydukes",
+    "Công Tước Mật Ong"
+   ],
+   "SUB_HONEYDUKES"
+  ],
+  [
+   "J·皮聘魔药店",
+   [
+    "Tiệm Độc Dược J. Pippin",
+    "Tiệm Thuốc J. Pippin",
+    "Tiệm Thuốc Phép J. Pippin"
+   ],
+   "LORE_Pippins_Brewing"
+  ],
+  [
+   "神奇萝卜",
+   [
+    "Củ Cải Thần Kỳ",
+    "Tiệm Củ Cải Phép Thuật (The Magic Neep)"
+   ],
+   "MagicNeep"
+  ],
+  [
+   "巨著与卷轴",
+   [
+    "Đại Thư và Cuộn Giấy",
+    "Tiệm Sách Cuộn & Cổ Thư (Tomes and Scrolls)"
+   ],
+   "HM_ThomasBrown"
+  ],
+  [
+   "佐科笑话店",
+   [
+    "Tiệm Trò Chơi Khăm Zonko",
+    "Tiệm Trò Đùa Zonko"
+   ],
+   "LORE_Zonkos_Shop"
+  ],
+  [
+   "天文学区",
+   [
+    "Cánh Thiên Văn",
+    "Khu Thiên Văn"
+   ],
+   "HOG_ASTRONOMYWINGKL"
+  ],
+  [
+   "天文学课程",
+   [
+    "Lớp Học Thiên Văn",
+    "Lớp Thiên Văn Học"
+   ],
+   "HOG_Class_Astronomy"
+  ],
+  [
+   "魔咒课",
+   [
+    "Lớp Học Bùa Chú",
+    "Lớp Bùa Chú"
+   ],
+   "ZZC_01"
+  ],
+  [
+   "黑魔法防御术",
+   [
+    "Phòng Thủ Chống Lại Hắc Ám Thuật",
+    "Phòng Chống Nghệ Thuật Hắc Ám"
+   ],
+   "ZZD_01"
+  ],
+  [
+   "魔法史",
+   [
+    "Lịch Sử Ma Thuật",
+    "Lịch Sử Phép Thuật"
+   ],
+   "HOG_Class_HistoryofMagic"
+  ],
+  [
+   "魔药学课程",
+   [
+    "Lớp Học Độc Dược",
+    "Lớp Độc Dược"
+   ],
+   "HOG_Class_Potions"
+  ],
+  [
+   "钟塔区",
+   [
+    "Cánh Tháp Chuông",
+    "Khu Tháp Đồng Hồ"
+   ],
+   "HOG_ENTRANCEWINGKL"
+  ],
+  [
+   "象形文字厅",
+   [
+    "Hành Lang Tượng Hình",
+    "Sảnh Chữ Tượng Hình"
+   ],
+   "HOG_HieroglyphicHall"
+  ],
+  [
+   "图书馆附属楼",
+   [
+    "Khu Phụ Cận Thư Viện",
+    "Nhà Phụ Thư Viện"
+   ],
+   "HOG_LIBRARYANNEXKL"
+  ],
+  [
+   "校长办公室的入口",
+   [
+    "Lối Vào Phòng Hiệu Trưởng",
+    "Lối vào dẫn tới Phòng Hiệu Trưởng"
+   ],
+   "HOG_Office_PhineasBlackEntrance"
+  ],
+  [
+   "密室",
+   [
+    "Phòng Yêu Cầu",
+    "Phòng bí mật",
+    "Phòng Bí Mật"
+   ],
+   "HOG_Owlery_SecretRoom"
+  ],
+  [
+   "接待厅",
+   [
+    "Đại Sảnh Tiếp Đón",
+    "Sảnh Tiếp Tân"
+   ],
+   "MAP_HW_SUB_GreatHall_ReceptionHall"
+  ],
+  [
+   "霍克拉普汁",
+   [
+    "Nước ép Horklump",
+    "Nước Ép Nấm Horklump"
+   ],
+   "HorklumpJuice"
+  ],
+  [
+   "你离开了任务区域",
+   [
+    "Bạn đã rời khỏi khu vực làm nhiệm vụ",
+    "Bạn đã rời khỏi khu vực nhiệm vụ"
+   ],
+   "HST_01_MissionFail_LeftArea"
+  ],
+  [
+   "阴尸",
+   [
+    "Âm Binh (Inferi)",
+    "Âm Binh (Inferius)"
+   ],
+   "InferiKL"
+  ],
+  [
+   "施放“原形立现”",
+   [
+    "Thi triển Revelio",
+    "Thi triển \"Bùa Hiện Hình (Revelio)\""
+   ],
+   "INT_01_CP2_Intro_CastRevelio_TaskObj02d"
+  ],
+  [
+   "感应古代魔法",
+   [
+    "Cảm nhận Cổ Đại Ma Thuật",
+    "Cảm nhận Phép Thuật Cổ Xưa"
+   ],
+   "INT_01_CP3_Intro_AMHotSpot_TaskObj03b"
+  ],
+  [
+   "绝音鸟",
+   [
+    "Chim Jobberknoll",
+    "Lông chim Jobberknoll"
+   ],
+   "Jobberknoll"
+  ],
+  [
+   "猫狸子",
+   [
+    "Ria Mèo Kneazle",
+    "Mèo Kneazle"
+   ],
+   "Kneazle"
+  ],
+  [
+   "两耳草",
+   [
+    "Cỏ Thắt Cút (Knotgrass)",
+    "Cỏ Thắt Nút (Knotgrass)"
+   ],
+   "Map_Knotgrass"
+  ],
+  [
+   "草蛉虫",
+   [
+    "Cánh Ruồi Chuồn (Lacewing Flies)",
+    "Ruồi Cánh Lưới (Lacewing Flies)"
+   ],
+   "LacewingFlies"
+  ],
+  [
+   "大型种植盆",
+   [
+    "Chậu Cây Lớn",
+    "Chậu Trồng Cỡ Lớn"
+   ],
+   "Menu_LargePot"
+  ],
+  [
+   "跳跳伞菌",
+   [
+    "Nấm Nhảy Dù (Leaping Toadstool)",
+    "Nấm Nhảy Cót Két (Leaping Toadstool)"
+   ],
+   "LeapingToadstool"
+  ],
+  [
+   "蚂蟥汁",
+   [
+    "Nước Ép Đỉa (Leech Juice)",
+    "Dịch Đỉa"
+   ],
+   "LeechJuice"
+  ],
+  [
+   "放弃任务",
+   [
+    "Hủy Bỏ Nhiệm Vụ",
+    "Từ bỏ nhiệm vụ"
+   ],
+   "Legend_AbandonQuestNB"
+  ],
+  [
+   "添加堆肥",
+   [
+    "Bón Thêm Phân Bón",
+    "Thêm Phân Hữu Cơ"
+   ],
+   "Legend_AddFuel"
+  ],
+  [
+   "使用在植物上",
+   [
+    "Dùng cho cây trồng",
+    "Sử Dụng Lên Cây Trồng"
+   ],
+   "Menu_ApplyToPlant"
+  ],
+  [
+   "领取奖励",
+   [
+    "Nhận phần thưởng",
+    "Nhận Phần Thưởng",
+    "Nhận Thưởng"
+   ],
+   "Legend_ClaimChallengeReward"
+  ],
+  [
+   "解除坐骑",
+   [
+    "Xuống Thú Cưỡi / Chổi",
+    "Xuống Cưỡi"
+   ],
+   "Legend_DismountNB"
+  ],
+  [
+   "摧毁",
+   [
+    "Phá hủy",
+    "Hủy Bỏ"
+   ],
+   "Legend_DropNB"
+  ],
+  [
+   "下一张地图",
+   [
+    "Bản Đồ Tiếp Theo",
+    "Bản Đồ Kế Tiếp"
+   ],
+   "SettingsControl_UMGMapScreenNextMap"
+  ],
+  [
+   "拾取",
+   [
+    "Nhặt Lên",
+    "Nhặt"
+   ],
+   "Menu_Pickup"
+  ],
+  [
+   "购买",
+   [
+    "Mua",
+    "Mua Sắm"
+   ],
+   "Legend_PurchaseNB"
+  ],
+  [
+   "重命名",
+   [
+    "Đổi Tên Rương",
+    "Đổi tên",
+    "Đổi Tên"
+   ],
+   "Legend_Rename"
+  ],
+  [
+   "重置旋转",
+   [
+    "Đặt Lại Xoay Kính",
+    "Đặt Lại Góc Xoay"
+   ],
+   "Legend_ResetRotation"
+  ],
+  [
+   "重置为默认",
+   [
+    "Đặt Lại Điều Khiển Mặc Định",
+    "Đặt Lại Mặc Định",
+    "Đặt Lại Cài Đặt Mặc Định"
+   ],
+   "Legend_ResetToDefaultSettings"
+  ],
+  [
+   "选择",
+   [
+    "Chọn",
+    "Chọn Sinh Vật"
+   ],
+   "Legend_SelectNB"
+  ],
+  [
+   "设置路点",
+   [
+    "Đặt Điểm Mốc",
+    "Đặt Điểm Định Vị"
+   ],
+   "Legend_SetWaypointNB"
+  ],
+  [
+   "召唤",
+   [
+    "Triệu Hồi",
+    "Triệu Hồi Sinh Vật"
+   ],
+   "Legend_Summon"
+  ],
+  [
+   "已购买",
+   [
+    "Đã Mở Khóa",
+    "Đã Mua"
+   ],
+   "MENU_PURCHASED"
+  ],
+  [
+   "天赋",
+   [
+    "Tài Năng",
+    "Màn Hình Tài Năng"
+   ],
+   "Legend_Talentsscreen"
+  ],
+  [
+   "放大",
+   [
+    "Thu Phóng Kính (Phóng To)",
+    "Phóng To Kính Viễn Vọng",
+    "Bản Đồ: Phóng To"
+   ],
+   "SettingsControl_UMGMapZoomIn"
+  ],
+  [
+   "缩小",
+   [
+    "Bản Đồ: Thu Nhỏ",
+    "Thu Phóng Kính (Thu Nhỏ)",
+    "Thu Nhỏ Kính Viễn Vọng"
+   ],
+   "SettingsControl_UMGMapZoomOut"
+  ],
+  [
+   "撤回",
+   [
+    "Hoàn Tác",
+    "Hoàn Tác Thao Tác"
+   ],
+   "Legend_Undo"
+  ],
+  [
+   "卸下",
+   [
+    "Tháo Trang Bị",
+    "Tháo Ra"
+   ],
+   "Legend_UnequipNB"
+  ],
+  [
+   "黄金球",
+   [
+    "Bóng Vàng",
+    "Bóng Vàng Kim"
+   ],
+   "Toy_Goldball"
+  ],
+  [
+   "鼻涕球",
+   [
+    "Bóng Nhớt Puffskein",
+    "Bóng Mũi"
+   ],
+   "Toy_Bogeyball"
+  ],
+  [
+   "鬼飞球",
+   [
+    "Trái Quaffle",
+    "Quả Cầu Quaffle"
+   ],
+   "Toy_Quaffle"
+  ],
+  [
+   "风滚草",
+   [
+    "Bóng Cỏ Khô",
+    "Cỏ Lăn Gió"
+   ],
+   "LockItem_Nurture_Item_TwigBallToy"
+  ],
+  [
+   "黑巫师假人",
+   [
+    "Bù Nhìn Pháp Sư Hắc Ám",
+    "Hình Nhân Phù Thủy Hắc Ám Lật Đật"
+   ],
+   "Toy_WizardDummy"
+  ],
+  [
+   "毛线球",
+   [
+    "Bóng Len",
+    "Cuộn Len"
+   ],
+   "Toy_Yarnball"
+  ],
+  [
+   "织布机",
+   [
+    "Khung Cửi Phù Thủy",
+    "Máy Dệt Say Mê (Enchanted Loom)"
+   ],
+   "SettingsControls_Loom"
+  ],
+  [
+   "分院帽",
+   [
+    "Nón Phân Loại",
+    "Chiếc Mũ Phân Loại"
+   ],
+   "LORE_Grandstaircase_SortingHat"
+  ],
+  [
+   "香锦葵",
+   [
+    "Hương Cẩm Quỳ (Mallowsweet)",
+    "Hương Cẩm Quỳ"
+   ],
+   "Mallowsweet"
+  ],
+  [
+   "七楼",
+   [
+    "Tầng 7",
+    "Tầng Bảy"
+   ],
+   "Map_HW_SUB_AstronomyTower_F7"
+  ],
+  [
+   "三楼",
+   [
+    "Tầng Ba",
+    "Tầng 3"
+   ],
+   "Map_HW_SUB_AstronomyTower_F3"
+  ],
+  [
+   "月痴兽",
+   [
+    "Phân Bê Trăng (Mooncalf)",
+    "Bê Trăng (Mooncalf)"
+   ],
+   "Mooncalf"
+  ],
+  [
+   "嗅嗅",
+   [
+    "Thú Đào Vàng Niffler",
+    "Lông Thú Đào Vàng Niffler"
+   ],
+   "Map_NifflerHair"
+  ],
+  [
+   "凤凰",
+   [
+    "Phượng Hoàng",
+    "Lông Phượng Hoàng"
+   ],
+   "Map_PhoenixFeather"
+  ],
+  [
+   "蒲绒绒",
+   [
+    "Lông Bông Xù Puffskein",
+    "Bông Xù Puffskein"
+   ],
+   "Puffskein"
+  ],
+  [
+   "缩皱无花果",
+   [
+    "Sung nhăn",
+    "Quả Sung Teo (Shrivelfig)"
+   ],
+   "Map_ShrivelFig"
+  ],
+  [
+   "夜骐",
+   [
+    "Ngựa Đêm",
+    "Lông Vọng Mã (Thestral)"
+   ],
+   "Map_ThestralHair"
+  ],
+  [
+   "巨怪巢",
+   [
+    "Hang Troll",
+    "Ổ Quỷ Khổng Lồ (Troll)"
+   ],
+   "TC_X1_Y4_A"
+  ],
+  [
+   "独角兽",
+   [
+    "Kỳ Lân",
+    "Sừng Kỳ Lân"
+   ],
+   "Unicorn"
+  ],
+  [
+   "毒触手",
+   [
+    "Cây Xúc Tu Độc (Venomous Tentacula)",
+    "Xúc Tu Độc"
+   ],
+   "Map_VenomousTentacula"
+  ],
+  [
+   "现影术",
+   [
+    "Hiện Ảnh Thuật",
+    "Cổng Dịch Chuyển Tức Thì",
+    "Độn Thổ"
+   ],
+   "TUT_Display_ApparateGate"
+  ],
+  [
+   "中型种植盆",
+   [
+    "Chậu Cây Vừa",
+    "Chậu Trồng Cỡ Trung"
+   ],
+   "Menu_MediumPlanter"
+  ],
+  [
+   "瞄准灵敏度",
+   [
+    "Độ Nhạy Khi Ngắm",
+    "Độ nhạy khi nhắm bắn"
+   ],
+   "Settings_CameraInputSensitivity_Aiming"
+  ],
+  [
+   "可变幻：",
+   [
+    "Có thể Biến Hiện:",
+    "Biến Hóa:"
+   ],
+   "Menu_Resources_To_Conjure"
+  ],
+  [
+   "野兽管理",
+   [
+    "Quản Lý Sinh Vật",
+    "Quản lý Sinh Vật Huyền Bí"
+   ],
+   "SettingsControl_UMGCreatureManagementScreen"
+  ],
+  [
+   "常见",
+   [
+    "Phổ Biến",
+    "Chung"
+   ],
+   "SettingsControls_Common"
+  ],
+  [
+   "扩张",
+   [
+    "Mở Rộng",
+    "Mở Rộng Không Gian"
+   ],
+   "Menu_Expansions"
+  ],
+  [
+   "快速穿梭",
+   [
+    "Dịch Chuyển Nhanh",
+    "Du Hành Nhanh"
+   ],
+   "Tut_FastTravelExplain"
+  ],
+  [
+   "园艺工作台",
+   [
+    "Bàn trồng cây",
+    "Bàn Thảo Dược Học",
+    "Bàn Trồng Cây"
+   ],
+   "Menu_Herbology_Station"
+  ],
+  [
+   "孵化",
+   [
+    "Ấp trứng",
+    "Đang Ấp"
+   ],
+   "Menu_Incubating"
+  ],
+  [
+   "选择语言",
+   [
+    "Chọn ngôn ngữ hiển thị",
+    "Chọn Ngôn Ngữ"
+   ],
+   "Menu_LanguageSelect"
+  ],
+  [
+   "升级",
+   [
+    "Lên Cấp!",
+    "Nâng Cấp Độ"
+   ],
+   "Menu_LevelUp"
+  ],
+  [
+   "所需等级",
+   [
+    "Cấp Độ Yêu Cầu",
+    "Yêu Cầu Cấp Độ"
+   ],
+   "Menu_Loom_RequiredLevel"
+  ],
+  [
+   "正常",
+   [
+    "Vừa",
+    "Bình Thường"
+   ],
+   "Menu_Normal"
+  ],
+  [
+   "任务",
+   [
+    "Nhiệm Vụ Bí Ẩn",
+    "Nhiệm Vụ"
+   ],
+   "Menu_Quests"
+  ],
+  [
+   "所有装备均已识别",
+   [
+    "Tất cả trang bị đều đã được giám định",
+    "Đã nhận diện toàn bộ trang bị"
+   ],
+   "Menu_No_Unidentified_Gear"
+  ],
+  [
+   "基本",
+   [
+    "Căn Bản",
+    "Cơ Bản"
+   ],
+   "TUT_Basics"
+  ],
+  [
+   "兴趣点",
+   [
+    "Địa Điểm Đáng Chú Ý",
+    "Điểm Đáng Chú Ý"
+   ],
+   "Tut_PointsOfInterestExplain"
+  ],
+  [
+   "魔药台",
+   [
+    "Bàn Chế Độc Dược",
+    "Bàn pha độc dược"
+   ],
+   "Menu_Potion_Station"
+  ],
+  [
+   "确定要退出吗？",
+   [
+    "Bạn có chắc chắn muốn thoát?",
+    "Bạn Có Chắc Muốn Thoát?"
+   ],
+   "Settings_QuitConfirm"
+  ],
+  [
+   "优质",
+   [
+    "Tốt",
+    "Hiếm"
+   ],
+   "Menu_rare"
+  ],
+  [
+   "缺少输入控制",
+   [
+    "Thiếu phím điều khiển",
+    "Thiếu Phím Thao Tác"
+   ],
+   "Menu_Rebinding_AreYouSure"
+  ],
+  [
+   "小型种植盆",
+   [
+    "Chậu Cây Nhỏ",
+    "Chậu trồng nhỏ"
+   ],
+   "Menu_SmallPot"
+  ],
+  [
+   "来源",
+   [
+    "Nguồn",
+    "Nguồn Gốc"
+   ],
+   "Source"
+  ],
+  [
+   "变形",
+   [
+    "Biến Hình",
+    "Biến Hình Học"
+   ],
+   "Spell_Transfiguration"
+  ],
+  [
+   "选择音频语言",
+   [
+    "Chọn Ngôn Ngữ Lồng Tiếng",
+    "Chọn ngôn ngữ giọng nói trong game"
+   ],
+   "Menu_VOLanguageSelect"
+  ],
+  [
+   "月石",
+   [
+    "Nguyệt Thạch",
+    "Đá Mặt Trăng"
+   ],
+   "Quest_NTR_DiffuserDeliver"
+  ],
+  [
+   "葬姬",
+   [
+    "Táng Cơ",
+    "Sepulchria"
+   ],
+   "ThestralMount"
+  ],
+  [
+   "下移",
+   [
+    "Di Chuyển Xuống",
+    "Hạ Xuống",
+    "Bản Đồ: Xuống Dưới"
+   ],
+   "SettingsControl_UMGMapScreenMove_Y_Negative"
+  ],
+  [
+   "左移",
+   [
+    "Di Chuyển Trái",
+    "Bản Đồ: Sang Trái",
+    "Di Chuyển Sang Trái"
+   ],
+   "SettingsControl_UMGMapScreenMove_X_Negative"
+  ],
+  [
+   "右移",
+   [
+    "Bản Đồ: Sang Phải",
+    "Di Chuyển Phải",
+    "Di Chuyển Sang Phải"
+   ],
+   "SettingsControl_UMGMapScreenMove_X_Positive"
+  ],
+  [
+   "上移",
+   [
+    "Di Chuyển Lên",
+    "Bản Đồ: Lên Trên",
+    "Nâng Lên"
+   ],
+   "SettingsControl_UMGMapScreenMove_Y_Positive"
+  ],
+  [
+   "第一次试炼",
+   [
+    "Thử Thách Thứ Nhất",
+    "Thử Thách Đầu Tiên"
+   ],
+   "Pensieve_Tomb_1"
+  ],
+  [
+   "白狼",
+   [
+    "Bạch Lang",
+    "Sói trắng"
+   ],
+   "Named_Wolf_2"
+  ],
+  [
+   "“艾恩代尔大盗”",
+   [
+    "\"Tên Trộm Irondale\"",
+    "“Kẻ Trộm Irondale”"
+   ],
+   "Quest_COM_36_Niffler"
+  ],
+  [
+   "方向键",
+   [
+    "Phím Điều Hướng",
+    "Nút điều hướng"
+   ],
+   "P4_dpad_Pronunciation"
+  ],
+  [
+   "古代魔法投掷",
+   [
+    "Ném Phép Thuật Cổ Xưa",
+    "Ném Đồ Vật (Cổ Thuật)",
+    "Ném Cổ Thuật"
+   ],
+   "TUT_Display_Oppugno"
+  ],
+  [
+   "格子背心校服",
+   [
+    "Đồng Phục Gile Kẻ Ô",
+    "Đồng phục áo ghi-lê kẻ ô"
+   ],
+   "Outfit_004_Basic"
+  ],
+  [
+   "萨温节装束",
+   [
+    "Trang phục Lễ hội Samhain",
+    "Trang phục Lễ Samhain"
+   ],
+   "Outfit_110_Basic"
+  ],
+  [
+   "向左移动",
+   [
+    "Di chuyển sang trái",
+    "Di Chuyển Trái"
+   ],
+   "SettingsControl_UMGUINavigateLeft"
+  ],
+  [
+   "向右移动",
+   [
+    "Di Chuyển Phải",
+    "Di chuyển sang phải"
+   ],
+   "SettingsControl_UMGUINavigateRight"
+  ],
+  [
+   "切剁台",
+   [
+    "Bàn thái",
+    "Bàn Cắt Thái"
+   ],
+   "Potions_Sub_ChoppingTables"
+  ],
+  [
+   "跳跳盆",
+   [
+    "Nồi Nhảy",
+    "Nồi Nhảy Nhót"
+   ],
+   "Sanc_HoppingPot"
+  ],
+  [
+   "烂烤牛肉",
+   [
+    "Thịt Bò Nướng Ôi Thiu",
+    "Thịt Bò Nướng Thối"
+   ],
+   "Quest_FGM_GRYFF_RottenBeef"
+  ],
+  [
+   "寒鸦雕像",
+   [
+    "Tượng Chim Jackdaw",
+    "Tượng Jackdaw"
+   ],
+   "Quest_FIG_02_JackdawStatue"
+  ],
+  [
+   "守护者的魔杖",
+   [
+    "Đũa Phép Của Người Thủ Hộ",
+    "Đũa Phép Của Người Canh Giữ"
+   ],
+   "TIO_01"
+  ],
+  [
+   "信件",
+   [
+    "Thư",
+    "Lá thư"
+   ],
+   "QUEST_WE_DEADNPC_NOTE_CHICKENS01"
+  ],
+  [
+   "日记的最后一条",
+   [
+    "Trang cuối cùng được ghi trong cuốn nhật ký.",
+    "Dòng ghi chép cuối cùng trong nhật ký"
+   ],
+   "QUEST_WE_DEADNPC_NOTE_EXPLODEDCAULDRON03_desc"
+  ],
+  [
+   "收据",
+   [
+    "Biên Lai",
+    "Hóa đơn"
+   ],
+   "Quest_WE_DeadNPC_Note_PoisonFlowers01"
+  ],
+  [
+   "望远镜",
+   [
+    "Kính Viễn Vọng",
+    "Kính Thiên Văn"
+   ],
+   "Quest_ZZS_Telescope"
+  ],
+  [
+   "植被式立灯",
+   [
+    "Đèn đứng Thực Vật",
+    "Đèn đứng kiểu Thực Vật"
+   ],
+   "Recipe_Transfiguration_Sanc_LightFixtureFreeStanding_01_Hbgst"
+  ],
+  [
+   "科技式地板",
+   [
+    "Sàn chính khoa học",
+    "Sàn nhà Khoa học",
+    "Sàn chiếu nghỉ khoa học",
+    "Gạch lát sàn khoa học"
+   ],
+   "Sanc_FloorTile_01_Potnr"
+  ],
+  [
+   "植被式窗户",
+   [
+    "Cửa Sổ kiểu Thực Vật",
+    "Cửa sổ thực vật",
+    "Cửa sổ Thực vật"
+   ],
+   "Sanc_Swamp_Window_BackCorridor_01_Hbgst"
+  ],
+  [
+   "多元式窗户",
+   [
+    "Cửa sổ đa phong cách",
+    "Cửa Sổ kiểu Đa Phong Cách",
+    "Cửa sổ Đa dạng"
+   ],
+   "Sanc_Swamp_Window_BackCorridor_01_Mzoo"
+  ],
+  [
+   "科技式窗户",
+   [
+    "Cửa Sổ kiểu Khoa Học",
+    "Cửa sổ Khoa học",
+    "Cửa sổ khoa học"
+   ],
+   "Sanc_Swamp_Window_BackCorridor_01_Potnr"
+  ],
+  [
+   "植被式墙体拱柱",
+   [
+    "Trụ Vòm Tường kiểu Thực Vật",
+    "Trụ vòm tường Thực vật"
+   ],
+   "Sanc_SwampArchBackCorridor_01_Hbgst"
+  ],
+  [
+   "多元式墙体拱柱",
+   [
+    "Trụ Vòm Tường kiểu Đa Phong Cách",
+    "Trụ vòm tường Đa dạng"
+   ],
+   "Sanc_SwampArchBackCorridor_01_Mzoo"
+  ],
+  [
+   "科技式墙体拱柱",
+   [
+    "Trụ Vòm Tường kiểu Khoa Học",
+    "Trụ vòm tường Khoa học"
+   ],
+   "Sanc_SwampArchBackCorridor_01_Potnr"
+  ],
+  [
+   "科技式书架",
+   [
+    "Kệ sách Khoa học",
+    "Kệ sách khoa học",
+    "Giá Sách kiểu Khoa Học"
+   ],
+   "Sanc_SwampBookshelfs_01_Potnr"
+  ],
+  [
+   "植被式楼梯",
+   [
+    "Cầu thang thực vật",
+    "Cầu thang Thực vật",
+    "Cầu Thang kiểu Thực Vật"
+   ],
+   "Sanc_Stairs_3x1_Hbgst"
+  ],
+  [
+   "多元式楼梯",
+   [
+    "Cầu Thang kiểu Đa Phong Cách",
+    "Cầu thang đa phong cách",
+    "Cầu thang Đa dạng"
+   ],
+   "Sanc_Stairs_3x1_Mzoo"
+  ],
+  [
+   "科技式楼梯",
+   [
+    "Cầu thang khoa học",
+    "Cầu Thang kiểu Khoa Học",
+    "Cầu thang Khoa học"
+   ],
+   "Sanc_Stairs_3x1_Potnr"
+  ],
+  [
+   "多元式门廊",
+   [
+    "Lối vào Đa dạng",
+    "Lối vào đa phong cách"
+   ],
+   "Sanc_Doorway_02_Mzoo"
+  ],
+  [
+   "科技式拱门",
+   [
+    "Cổng vòm khoa học",
+    "Vòm cửa Khoa học"
+   ],
+   "Sanc_HubArchway_01_POTNR"
+  ],
+  [
+   "多元式悬挂书架",
+   [
+    "Kệ sách treo đa phong cách",
+    "Kệ sách treo Đa dạng"
+   ],
+   "Sanc_Exp6_SouthCornerFloatingBookshelves_01_Mzoo"
+  ],
+  [
+   "魔法织布机",
+   [
+    "Khung Dệt Phép Thuật",
+    "Khung Dệt Ma Thuật"
+   ],
+   "TUT_Display_UsingLoom"
+  ],
+  [
+   "图腾",
+   [
+    "Tôtem",
+    "Totem"
+   ],
+   "Sanc_MultipleTotems_Wall"
+  ],
+  [
+   "工具轮",
+   [
+    "Vòng Tròn Công Cụ",
+    "Bánh Xe Công Cụ"
+   ],
+   "TUT_Display_ToolWheel"
+  ],
+  [
+   "冲刺",
+   [
+    "Chạy Nhanh",
+    "Nước Rút"
+   ],
+   "SettingsControl_AM_Sprint"
+  ],
+  [
+   "顺时针旋转",
+   [
+    "Xoay Cùng Chiều Kim Đồng Hồ",
+    "Xoay Kính Cùng Chiều Kim Đồng Hồ"
+   ],
+   "SettingsControl_Transfig_RotateObject_Right"
+  ],
+  [
+   "库存界面",
+   [
+    "Màn Hình Kho Đồ",
+    "Giao Diện Túi Đồ"
+   ],
+   "SettingsControls_InventoryScreen"
+  ],
+  [
+   "变形咒语",
+   [
+    "Thần chú Biến Hình",
+    "Bùa Biến Hình"
+   ],
+   "TransformationOverland"
+  ],
+  [
+   "消失不见",
+   [
+    "Bùa Biến Mất (Evanesco)",
+    "Bùa Tiêu Biến",
+    "Evanesco"
+   ],
+   "Spell_Vanishment"
+  ],
+  [
+   "无前置需求",
+   [
+    "Không có điều kiện tiên quyết",
+    "Không có yêu cầu tiên quyết"
+   ],
+   "Talent_Core_ProtegoAM_requirements"
+  ],
+  [
+   "幻身",
+   [
+    "Huyễn Ảnh",
+    "Bùa Tàng Hình (Disillusionment)"
+   ],
+   "TUT_Disillusionment"
+  ],
+  [
+   "冥想盆保护者",
+   [
+    "Người Bảo Vệ Chậu Tưởng Niệm",
+    "Hộ vệ Chậu Tưởng Niệm"
+   ],
+   "TombProtectorMini"
+  ],
+  [
+   "秘库",
+   [
+    "Nhảy Qua Chướng Ngại",
+    "Mật Khố"
+   ],
+   "VAULT_X2_Y3_A"
+  ],
+  [
+   "古川夫人的作业",
+   [
+    "Bài Tập Của Phu Nhân Kogawa",
+    "Bài tập của Bà Kogawa"
+   ],
+   "ZSG_01_GlaciusSide_Title"
+  ],
+  [
+   "罗南教授的作业",
+   [
+    "Bài Tập Của Giáo Sư Ronan",
+    "Bài tập của Giáo sư Ronen"
+   ],
+   "ZSR_01_01_ReparoSide_Title"
+  ],
+  [
+   "完成练习局",
+   [
+    "Hoàn thành lượt luyện tập",
+    "Hoàn thành vòng luyện tập"
+   ],
+   "ZZC_01_CharmsClass_QuestActive_TaskObj02"
+  ],
+  [
+   "参加魔药学课程",
+   [
+    "Tham dự Lớp Học Độc Dược",
+    "Tham gia lớp Độc Dược"
+   ],
+   "ZZP_01_01_BoilandTrouble_AttendPotionsClass_Task"
+  ],
+  [
+   "Ha ha !",
+   [
+    "Ha ha!",
+    "Ha ha !"
+   ],
+   "GhostMaleB_10057"
+  ],
+  [
+   "Oh non.",
+   [
+    "Ồ không.",
+    "Ôi không."
+   ],
+   "SebastianSallow_14693"
+  ],
+  [
+   "Oh. Oh, je vois.",
+   [
+    "Ồ. Ồ, tôi hiểu rồi.",
+    "Ồ. Ồ, ta hiểu rồi."
+   ],
+   "ClementineWillardsey_10065"
+  ],
+  [
+   "Grâce à cette personne.",
+   [
+    "Nhờ người này đây.",
+    "Nhờ người này."
+   ],
+   "NatsaiOnai_10070"
+  ],
+  [
+   "Tu vois ?",
+   [
+    "Cậu thấy chưa?",
+    "Thấy chưa?"
+   ],
+   "T3StudentHufflepuffFemale1_10021"
+  ]
+ ],
+ "ori": [],
+ "obf": []
+}

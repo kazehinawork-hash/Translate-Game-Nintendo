@@ -70,6 +70,18 @@
   - **2 chuỗi rỗng** trong bản dịch
 - **Việc cần làm:** làm lại font theo hướng **HỢP NHẤT** (giữ 8.207 glyph gốc + thêm glyph tiếng Việt),
   vá 3 lỗi bản dịch trên, rồi build lại. Chi tiết kỹ thuật: **BH-20** trong `docs/BAI-HOC.md`.
+- ✅ **ĐÃ SỬA XONG (03/10):**
+  - **Font:** `tools/patch_font_switchsports.py` — thay 4 font Latin bằng **Arial Unicode MS**
+    (ARIALUNI.TTF) rồi **subset** đúng bằng *cmap font gốc ∪ mọi ký tự dùng trong bản dịch*.
+    Kết quả: font mod **8.334 glyph** (font gốc 8.207) — **không thiếu ký tự tiếng Việt nào**,
+    và đã có lại **số fullwidth ０-９, số trong vòng ①, mũi tên →, hình khối ■** (thứ UI tỷ số dùng).
+    SARC font = **7,03 MB** (gốc 10,08 MB). Lưu ý: style đổi từ Nunito (bo tròn) sang Arial Unicode —
+    đánh đổi để đảm bảo hiển thị đúng.
+    ⚠️ **Bài học quan trọng:** danh sách giữ glyph phải lấy từ **ký tự THỰC DÙNG trong bản dịch**
+    (không chỉ từ cmap gốc) — lần đầu làm vậy nên **thiếu 16 ký tự hoa tiếng Việt** (`Ơ Ư Ả Ấ Ậ Ắ Ề Ể Ồ Ổ Ộ Ớ Ờ Ở Ợ Ủ`).
+  - **Bản dịch:** bu key thiếu `Hair45` = "Rẽ ngôi giữa" trong `ProgramMsg__Equipment__Hair.msbt.json`
+    (2 chuỗi "rỗng" còn lại là **rỗng cả trong bản gốc** → không phải lỗi). Build lại: **250 file dịch**.
+  - Mod: `output/atmosphere/contents/0100D2F00D5C0000/romfs/` — font 7,03 MB + `Mals/USen.Product.150.sarc.zs` 313 KB.
 
 ---
 

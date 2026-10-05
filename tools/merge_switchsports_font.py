@@ -3,6 +3,7 @@
 - Goc la OTTO (CFF) -> chuyen sang TTF (glyf) bang Cu2QuPen.
 - Copy tung glyph con thieu tu Nunito (kem ca glyph thanh phan neu la composite).
 """
+import collections
 import copy
 import io
 import os
@@ -61,7 +62,9 @@ def otf_to_ttf(font, max_err=1.0):
         gs[n].draw(Cu2QuPen(pen, max_err))
         q[n] = pen.glyph()
     glyf.glyphs = q
-    del font['CFF ']
+    for tag in ('CFF ', 'CFF2', 'VORG'):
+        if tag in font:
+            del font[tag]
     glyf.compile(font)
     font['maxp'] = maxp = newTable('maxp')
     maxp.tableVersion = 0x00010000
@@ -116,15 +119,29 @@ def add_missing(orig, nun, need):
                 todo += [c.glyphName for c in g.components]
         uni.cmap[cp] = src
         added += 1
-    # cap nhat glyph order + bu hmtx cho moi glyph
+    # cap nhat glyph order + DUNG LAI hmtx/maxp cho day du
     for gname in og.glyphs:
         if gname not in order:
             order.append(gname)
     orig.setGlyphOrder(order)
-    default_aw = oh.metrics.get('.notdef', (1000, 0))[0]
+    orig['glyf'].glyphOrder = order
+    # cung cap moi ten trong glyph order (ke ca ten den tu post/CFF cu)
+    try:
+        for extra in (orig['post'].glyphOrder or []):
+            if extra not in order:
+                order.append(extra)
+    except Exception:
+        pass
+    default_aw = oh.metrics.get('.notdef', (1000, 0))[0] if '.notdef' in oh.metrics else 1000
+    full = collections.defaultdict(lambda: (default_aw, 0))
     for gname in order:
-        if gname not in oh.metrics:
-            oh.metrics[gname] = (default_aw, 0)
+        if gname in oh.metrics:
+            full[gname] = oh.metrics[gname]
+    new_hmtx = newTable('hmtx')
+    new_hmtx.metrics = full
+    orig['hmtx'] = new_hmtx
+    orig['maxp'].numGlyphs = len(order)
+    orig['maxp'].compile(orig)
     return added
 
 
@@ -145,7 +162,13 @@ def main():
         need = [c for c in range(0x20, 0x300)] + vips
         added = add_missing(otf, nun, need)
         out = io.BytesIO()
-        otf.save(out)
+        try:
+            otf.save(out)
+        except Exception as e:
+            import traceback
+            print('    LOI khi luu font:')
+            traceback.print_exc()
+            raise
         data = out.getvalue()
         cm = set(TTFont(io.BytesIO(data), lazy=True).getBestCmap())
         miss = [hex(c) for c in vips if c not in cm]

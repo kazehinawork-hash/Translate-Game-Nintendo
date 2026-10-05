@@ -258,8 +258,13 @@
   Font gốc là **OTTO/CFF**, Nunito là **TTF/glyf** → `fontTools.merge.Merger` **KHÔNG hợp được**
   hai loại khác nhau; muốn hợp nhất phải chuyển CFF→glyf trước (`Cu2QuPen` + `TTGlyphPen`,
   rồi cập nhật `glyphOrder` + `hmtx` cho glyph mới).
-- **Trạng thái:** mod Switch Sports hiện **vẫn là font đã thay hẳn** (chưa sửa xong) — cần làm lại
-  theo hướng hợp nhất. Tool soát lỗi: `tools/qa_switchsports.py`.
+- **BÀI HỌC 4 (cách làm ĐÚNG — đã áp dụng và PASS):** dùng một font có độ phủ rộng
+  (**Arial Unicode MS** — 38.928 glyph, có fullwidth/circled/arrows/shapes + tiếng Việt),
+  rồi **subset** lại với danh sách = *cmap font gốc* ∪ *mọi ký tự THỰC DÙNG trong bản dịch*.
+  ⚠️ Nếu chỉ lấy theo cmap gốc sẽ **thiếu ký tự** — lần đầu làm vậy nên sót **16 ký tự HOA
+  tiếng Việt** (`Ơ Ư Ả Ấ Ậ Ắ Ề Ể Ồ Ổ Ộ Ớ Ờ Ở Ợ Ủ`) mà bản dịch lại có dùng.
+  Kết quả sau khi sửa: font mod **8.334 glyph** (gốc 8.207), SARC **7,03 MB** (gốc 10,08 MB).
+- **Trạng thái:** ✅ **ĐÃ SỬA XONG** — tool `tools/patch_font_switchsports.py`; soát lỗi: `tools/qa_switchsports.py`.
 
 ---
 

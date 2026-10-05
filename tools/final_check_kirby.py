@@ -18,6 +18,9 @@ MODF = os.path.join(ROOT, 'output', 'atmosphere', 'contents', TID, 'romfs', 'fon
 MODM = os.path.join(ROOT, 'output', 'atmosphere', 'contents', TID, 'romfs', 'msg', 'Kirby15')
 
 vi = json.load(open(os.path.join(G, 'translations', 'kirby_vi.json'), encoding='utf-8'))
+# cung ngoai le ngu canh nhu build_kirby_mod.py (de so dung nhu nhau)
+for _f, _kv in {'Dialog.msbt': {'Btn_Continue': 'Nghe tiếp'}, 'Figure.msbt': {'$View': 'Ngắm'}}.items():
+    vi.setdefault(_f, {}).update(_kv)
 used = {c for e in vi.values() for v in e.values() for c in str(v) if c.isprintable()}
 
 print('=== FONT ===')

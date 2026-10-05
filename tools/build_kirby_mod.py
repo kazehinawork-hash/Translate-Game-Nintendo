@@ -22,7 +22,17 @@ LATIN = ['US_English', 'EU_English', 'US_French', 'US_Spanish', 'EU_French', 'EU
 SKIP = {'JP_Japanese', 'CN_Chinese', 'TW_Chinese', 'KR_Korean'}
 
 vi = json.load(open(os.path.join(G, 'translations', 'kirby_vi.json'), encoding='utf-8'))
-print(f'ban dich: {len(vi)} file MSBT, {sum(len(v) for v in vi.values()):,} chuoi')
+
+# Ngoai le theo NGU CANH (khong the thong nhat may moc).
+# Ghi de ngay trong build de khong phu thuoc trang thai file nguon (OneDrive hay tra ban cu).
+CTX_OVERRIDE = {
+    'Dialog.msbt': {'Btn_Continue': 'Nghe tiếp'},
+    'Figure.msbt': {'$View': 'Ngắm'},
+}
+for _f, _kv in CTX_OVERRIDE.items():
+    vi.setdefault(_f, {}).update(_kv)
+print(f'ban dich: {len(vi)} file MSBT, {sum(len(v) for v in vi.values()):,} chuoi '
+      f'(+ {sum(len(v) for v in CTX_OVERRIDE.values())} ngoai le ngu canh)')
 
 n_ok = n_skip = n_err = 0
 for lang in sorted(os.listdir(SRC)):

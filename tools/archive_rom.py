@@ -42,6 +42,8 @@ TITLE_DIR = {
     '010061D00DB74800': 'OriBlindForest',
     '0100965017338000': 'MarioPartyJamboree',
     '0100965017338800': 'MarioPartyJamboree',
+    '0100E5D00CC0C000': 'UnravelTwo',
+    '0100E5D00CC0C800': 'UnravelTwo',
 }
 
 

@@ -46,6 +46,10 @@ TITLE_DIR = {
     '0100E5D00CC0C800': 'UnravelTwo',
     '01004D300C5AE000': 'Kirby',
     '01004D300C5AE800': 'Kirby',
+    '010092A0172E4000': 'ItTakesTwo',
+    '010092A0172E4800': 'ItTakesTwo',
+    '010092A0172E5001': 'ItTakesTwo',
+    '010092A0172E5002': 'ItTakesTwo',
 }
 
 

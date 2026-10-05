@@ -214,6 +214,14 @@
 ---
 
 ## 9. Hạ tầng repo & đóng gói
+- **ĐỢT THỐNG NHẤT THUẬT NGỮ (05/10):** tạo glossary cho Ori WotW / Ori BF / Unravel Two /
+  Kirby; sửa `master.csv` (trước đây chứa nội dung Switch Sports) → `switchsports.csv`,
+  `master.csv` giờ chỉ còn 4 thuật ngữ **thật sự dùng chung**. Giao 3 subagent thống nhất
+  thuật ngữ cho hades2 (586→193), hogwarts (480→260), switchsports (145→101) và build lại mod.
+  Ori WotW đã bóc lại bundle + build lại với 4 tên gọi đã sửa. Danh sách còn lại (chủ yếu là
+  khác ngữ cảnh hợp lệ): `games/_consistency/*.json`.
+- **Glossary hiện có:** `master.csv` (4), `hogwarts_legacy.csv`, `hades2.csv`, `switchsports.csv`,
+  `ori.csv`, `ori_bf.csv`, `unravel.csv`, `kirby.csv`.
 - **Bài học kinh nghiệm (BẮT BUỘC ĐỌC):** `docs/BAI-HOC.md` — 12 lỗi đã từng xảy ra thật + quy tắc
   chống lặp + checklist bàn giao. **Cổng QA bắt buộc:** `python tools/qa_text.py --game <ten_game>`
   (đã chạy PASS cho hogwarts và ori).

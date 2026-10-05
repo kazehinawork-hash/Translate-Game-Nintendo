@@ -44,6 +44,8 @@ TITLE_DIR = {
     '0100965017338800': 'MarioPartyJamboree',
     '0100E5D00CC0C000': 'UnravelTwo',
     '0100E5D00CC0C800': 'UnravelTwo',
+    '01004D300C5AE000': 'Kirby',
+    '01004D300C5AE800': 'Kirby',
 }
 
 

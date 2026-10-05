@@ -10,6 +10,11 @@ import struct
 import zstandard
 import oead
 
+try:
+    sys.stdout.reconfigure(encoding='utf-8')
+except Exception:
+    pass
+
 def parse_msbt_bytes(data: bytes):
     bom = '<'
     pos = 32

@@ -115,6 +115,23 @@ def cmd_extract(nsp_path, romfs_path, out_file):
     raise SystemExit(f'Khong thay file: {romfs_path}')
 
 
+def cmd_extract_dir(nsp_path, prefix, out_dir):
+    """Trich TAT CA file trong RomFS co tien to `prefix` ra thu muc out_dir (giu cau truc)."""
+    nca, fs, f = _open_nca(nsp_path)
+    base, dOff, files = _walk(fs)
+    want = prefix.replace('\\', '/').lstrip('/').lower()
+    sel = [(p, o, s) for p, o, s in files if p.lower().startswith(want)]
+    print(f'# {len(sel)} file khop "{prefix}"')
+    for path, off, size in sel:
+        out_path = os.path.join(out_dir, *path.split('/'))
+        os.makedirs(os.path.dirname(out_path), exist_ok=True)
+        fs.seek(base + dOff + off)
+        data = fs.read(size)
+        with open(out_path, 'wb') as g:
+            g.write(data)
+    print(f'# da ghi {len(sel)} file vao {out_dir}')
+
+
 def main():
     if len(sys.argv) < 3:
         print(__doc__)
@@ -124,6 +141,8 @@ def main():
         cmd_list(sys.argv[2])
     elif cmd == 'extract':
         cmd_extract(sys.argv[2], sys.argv[3], sys.argv[4])
+    elif cmd == 'extract-dir':
+        cmd_extract_dir(sys.argv[2], sys.argv[3], sys.argv[4])
     else:
         print(__doc__)
 

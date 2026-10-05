@@ -183,7 +183,30 @@
 
 ---
 
-## 7. Hạ tầng repo & đóng gói
+## 8. Kirby and the Forgotten Land (Nintendo Switch)
+- **Title ID**: `01004D300C5AE000` (Base) / `01004D300C5AE800` (Update v1.1.0)
+- **Engine**: Nintendo/HAL (engine "basil") — first-party, **MSBT** + font **BFFNT/BFOTF**
+- **Trạng thái**: ✅ **HOÀN THÀNH — đã đóng gói mod (05/10)**
+  - **Kho text**: `msg/Kirby15/<LANG>/*.msbt` — **13 ngôn ngữ × 42 file** (+ `Kirby15.msbp`), bóc đủ 547 file.
+  - **Dịch**: **2.508 chuỗi** (41 file MSBT) sang tiếng Việt — 10 chunk, giao 5+2 subagent.
+    - **QA (`tools/qa_kirby.py`): PASS** — 0 lệch key, 0 sai mã điều khiển, 0 chuỗi rỗng, 0 ký tự lạ.
+  - **Font**: 11 font Latin trong `font/ScalableFontBin/*.bfotf.cmp`
+    - Định dạng đã giải mã: `.cmp` = `[u32 size][zstd]`; bên trong `.bfotf` = **OTF bọc XOR**
+      (magic Kirby `0x36F81A1E`).
+    - Đã vá: thay bằng **subset Arial Unicode MS** (giữ cmap gốc ∪ ký tự dùng trong bản dịch) — mỗi font
+      ~8.049 glyph (gốc 8.207; phần "mất" là ký tự điều khiển 0x00–0x1D). **Đọc lại OK** cả 11 font.
+  - **Đóng gói**: **369 file MSBT ở 9 khe ngôn ngữ Latin** (`US/EU_English, French, Spanish, German,
+    Italian, Dutch`) + 11 font. **Giữ nguyên JP/CN/TW/KR** (không phá font khu vực).
+  - **Kiểm chứng thành phẩm (`tools/final_check_kirby.py`): PASS** — **15.975/15.975 chuỗi khớp**.
+  - Mod: `output/atmosphere/contents/01004D300C5AE000/` — 380 file, 18,2 MB.
+  - ROM đã chuyển `E:\ROM_Backup\Kirby\` (2 file, SHA256 xác minh).
+- **Cách chơi**: để ngôn ngữ máy = một ngôn ngữ **Latin** (English/Pháp/Đức/Ý/Tây Ban Nha/Hà Lan).
+- **Bài học**: **BH-21** trong `docs/BAI-HOC.md` (bẫy "dò khoá vòng tròn" khi gói lại `.bfotf`;
+  MSBT nuốt `\0` cuối chuỗi). Chi tiết: `games/01004D300C5AE000_Kirby/README.md`.
+
+---
+
+## 9. Hạ tầng repo & đóng gói
 - **Bài học kinh nghiệm (BẮT BUỘC ĐỌC):** `docs/BAI-HOC.md` — 12 lỗi đã từng xảy ra thật + quy tắc
   chống lặp + checklist bàn giao. **Cổng QA bắt buộc:** `python tools/qa_text.py --game <ten_game>`
   (đã chạy PASS cho hogwarts và ori).

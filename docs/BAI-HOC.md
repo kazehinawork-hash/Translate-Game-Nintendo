@@ -266,6 +266,27 @@
   Kết quả sau khi sửa: font mod **8.334 glyph** (gốc 8.207), SARC **7,03 MB** (gốc 10,08 MB).
 - **Trạng thái:** ✅ **ĐÃ SỬA XONG** — tool `tools/patch_font_switchsports.py`; soát lỗi: `tools/qa_switchsports.py`.
 
+### BH-21. Nintendo First-Party (Kirby): `.cmp` = zstd, `.bfotf` = OTF bọc XOR — và bẫy "dò khoá vòng tròn"
+
+**Ca thật: Kirby and the Forgotten Land (05/10).**
+
+- **`.cmp`** = `[u32 uncompressed_size][zstd frame]` (magic zstd `28 b5 2f fd`).
+- **`.bfotf`** (bên trong `.cmp`) = `[u32 magic][u32 ?][từng word 4 byte ^ key] → OTF`.
+  Kirby dùng magic **`0x36F81A1E`** (Switch Sports dùng `0xD99B871A`) → **magic khác nhau theo game**.
+- 🐞 **BẪY NẶNG (đã dính và sửa):** dò khoá bằng cách "thử XOR rồi xem 4 byte đầu có ra `OTTO` không"
+  là **vòng tròn** — vì khoá được suy ra từ chính 4 byte đó, nên nhánh `OTTO` **luôn** cho ra `OTTO`
+  kể cả khi font thật là **TTF** (`00 01 00 00`). Kết quả: gói lại font bằng **sai khoá** → file hỏng,
+  game không đọc được (`KeyError: 'cmap'`, số bảng trong header vô lý ~20.000).
+  **Cách đúng:** với mỗi khoá ứng viên, **thử parse font** (`TTFont(...).getBestCmap()`) — khoá nào
+  cho ra font đọc được mới là khoá đúng. Sau khi gói **phải đọc lại** để xác nhận.
+- **MSBT:** `\0` ở cuối chuỗi bị coi là ký tự kết thúc → nếu bản dịch **kết thúc bằng thẻ điều khiển
+  chứa `\0`** thì byte cuối bị mất (game đọc thẻ cụt). Cách sửa: thêm khoảng trắng sau thẻ cuối.
+- **Cấu trúc chuẩn first-party:** text ở `msg/<GameTag>/<LANG>/*.msbt` (13 ngôn ngữ), font ở
+  `font/ScalableFontBin/*` — **chỉ vá các khe Latin**, giữ nguyên JP/CN/TW/KR để không phá font khu vực.
+- **Font gốc là OTF (CFF)** → `Merger` không hợp được với TTF; dùng cách của BH-20 (subset Arial Unicode MS)
+  → Kirby: 11 font Latin, mỗi font giữ ~8.049 glyph (gốc 8.207, phần "mất" là ký tự điều khiển 0x00–0x1D,
+  không phải glyph hiển thị).
+
 ---
 
 ## PHẦN 2 — BẢNG LỖI THEO GAME (để tra nhanh)

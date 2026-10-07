@@ -355,6 +355,52 @@ hậu quả:
 
 ---
 
+### BH-25. 🐞 XML: xuống dòng trong THUỘC TÍNH phải là `&#xA;` — KHÔNG được ghi ký tự xuống dòng thật
+
+**Ca thật: MONOPOLY (07/10).** Kho text Oasis lưu chuỗi trong **thuộc tính** XML:
+
+```xml
+<t id="201" text="Authentication failed. &#xA;Please try again."/>
+```
+
+Bản build đầu ghi **ký tự xuống dòng thật** vào thuộc tính. Chuẩn XML **bắt buộc chuẩn hoá giá trị
+thuộc tính** (attribute-value normalization): mọi `\n`, `\r`, `\t` **thật** trong thuộc tính **bị biến
+thành dấu cách** khi parser đọc. Hậu quả: **124 mục mất ngắt dòng**, game hiện một dòng dài
+(`Authentication failed.  Please try again.` — thậm chí 2 dấu cách).
+
+Chỉ phát hiện được khi QA **đọc lại thành phẩm** và **đếm số `\n`** so với nguồn; script build không báo gì.
+
+**Quy tắc:**
+1. Ghi text vào **thuộc tính** XML → luôn escape `\n → &#xA;`, `\r → &#xD;`, `\t → &#x9;`.
+2. Đọc ra thì `html.unescape()` đã trả về ký tự thật — so sánh bình thường.
+3. QA **bắt buộc** đếm số `\n` nguồn ↔ thành phẩm, không chỉ so tag/placeholder.
+
+---
+
+### BH-26. UnityPy: `env.save()` phải có `pack='original'` — và cách vá TextAsset ở mức RAW
+
+**Ca thật: MONOPOLY (07/10).** Bundle `data.unity3d` gốc **520 MB** (có nén). Gọi `env.file.save()`
+không tham số → ghi ra **1,27 GB** (mất nén):
+
+```python
+env.save(pack='original', out_path=<thu_muc_ra>)   # giữ nguyên kiểu nén của bundle gốc
+```
+
+**Cấu trúc RAW của một `TextAsset`** (để vá ở mức byte thay vì re-serialize cả object):
+
+```
+[int32 nameLen][name (UTF-8)][đệm 0 cho tròn 4][int32 dataLen][data]
+```
+
+→ Dựng lại đúng chuỗi này rồi `obj.set_raw_data(buf)`.
+
+⚠️ TextAsset Unity có thể có **tiền tố byte lạ trước nội dung thật** (MONOPOLY: vài byte BOM hỏng trước
+thẻ `<`). Khi parse phải **bỏ mọi thứ trước `<` đầu tiên** rồi mới `decode('utf-16')`.
+
+Sau build **phải mở lại thành phẩm** và so **số object** (198.295) + **số mục** (2.063) với bản gốc.
+
+---
+
 ## PHẦN 2 — BẢNG LỖI THEO GAME (để tra nhanh)
 
 | Game | Lỗi đã gặp | Nguyên nhân | Trạng thái |
@@ -374,6 +420,9 @@ hậu quả:
 | Switch Sports | **Thay cả font Trung/Hàn/Nhật** bằng font tiếng Việt | `build_custom_font.py` copy đè 3 file font khu vực | ✅ đã sửa (BH-15) — nay chỉ vá font Latin |
 | Switch Sports | Font BFARC thiếu glyph | chưa kiểm độ phủ | ✅ đã vá |
 | Ori Blind Forest DE | Font là **BitmapFont + atlas SDF**, thiếu 78 ký tự VI | game không đọc TTF; atlas kín chỗ | ✅ **đã vá** (mượn ô glyph không dùng + sinh glyph, xem BH-18) |
+| MONOPOLY | **124 mục mất ngắt dòng** (game hiện 1 dòng dài) | ghi `\n` thật vào thuộc tính XML → bị chuẩn hoá thành dấu cách | ✅ đã sửa (BH-25) |
+| MONOPOLY | Bundle 520 MB → **1,27 GB** khi build | `env.save()` thiếu `pack='original'` | ✅ đã sửa (BH-26) |
+| MONOPOLY | 2 font **KabelBold/KabelMedium** (OTF/CFF) thiếu 88 dấu | `fontTools.merge` không ghép được glyf (Arial) ↔ CFF (Kabel) | ⚠️ **CHƯA VÁ** — cần chơi thử để biết có dùng tới không |
 
 ---
 

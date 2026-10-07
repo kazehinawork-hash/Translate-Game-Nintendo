@@ -242,16 +242,24 @@
     và `oasis__global` (**file master**: `<languages>`, `<characters>`, `<teams>`, `<sections>` — ngôn ngữ gốc `English` `master="true"`).
   - ⚠️ TextAsset có **tiền tố byte lạ** trước thẻ `<` → khi parse phải bỏ phần trước `<` rồi mới `decode('utf-16')`.
 - **Kết quả đã build:**
-  - ✅ Dịch **1.704 chuỗi duy nhất** (3 subagent, chunk 350) → **thay 2.036 mục** trong XML; kiểm chứng lại bundle: **1.932 mục hiện tiếng Việt**.
+  - ✅ Dịch **1.704 chuỗi duy nhất** (3 subagent, chunk 350) → **thay 2.036 mục** trong XML.
+  - ✅ **QA cuối PASS** (`tools/mono_final_qa.py`, đối chiếu từng mục gốc ↔ thành phẩm):
+    198.295 object khớp · 2.063 mục khớp · 0 key thiếu/thừa · **0 lệch placeholder/tag** ·
+    **0 lệch xuống dòng** · 0 ký tự ngoài (CJK/Hangul/Nga…) · 0 ký tự điều khiển · 0 chuỗi rỗng.
+    **1.926 mục đã dịch.**
   - ✅ Glossary tạo **TRƯỚC khi dịch** (BH-22): `glossary/monopoly.csv` (47 thuật ngữ chuẩn + gợi ý).
   - ✅ Thành phẩm: `output/atmosphere/contents/01002C201BC40000/romfs/Data/data.unity3d` (**522 MB**, giữ nguyên nén gốc).
   - ✅ `Data/data.unity3d` là **file rời trong RomFS** → **LayeredFS thay trực tiếp, KHÔNG cần patch pak**.
+- 🐛 **Lỗi nặng đã tìm ra & sửa ở lần QA cuối (BH-25):** nguồn lưu ngắt dòng bằng tham chiếu ký tự
+  `&#xA;` trong thuộc tính XML; bản build đầu ghi **xuống dòng THẬT** → XML chuẩn hoá thuộc tính biến
+  thành **dấu cách** → mất ngắt dòng ở **124 mục**. Đã sửa `esc_attr()` (`\n→&#xA;`, `\r→&#xD;`, `\t→&#x9;`).
 - ⏳ **Font — cần test trong game:**
   - Game có 80 font TTF đóng trong bundle. **74 font đã đủ ký tự tiếng Việt** ([A-Za-z] + dấu).
   - 6 font còn thiếu: `NotoSans-CondensedBold`, `aline_font`, `LiberationSans` **chỉ thiếu `┿`** (ký hiệu tiền của chính game);
     `PerfectDOSVGA437` (font kiểu DOS) thiếu 93; **`KabelBold` + `KabelMedium` thiếu 88 ký tự có dấu** ← đáng lo nhất.
-  - `fontTools.merge` **lỗi** trên 2 font Kabel (`NotImplementedType … .cff`) → chưa ghép được. Cần chơi thử xem
-    phần tiêu đề dùng Kabel có bị ô vuông không.
+  - **Nguyên nhân ghép font thất bại:** 2 font Kabel là **OTF/CFF** (`CFF `, `sfntVersion = OTTO`),
+    còn `fontTools.merge` chỉ ghép được khi cùng định dạng outline (Arial là `glyf`/TrueType).
+    → Muốn ghép phải **dựng lại CFF** (`FontBuilder(isTTF=False)` + `T2CharStringPen`), chưa làm.
 - 🐛 **Lỗi công cụ đã gặp & sửa:** file `inspect.py` trong thư mục script tạm **che module chuẩn `inspect`**
   → `import UnityPy` chạy nhầm script cũ. Xem **BH-24**.
 - 🐛 **Bài học mới:** `env.save()` **không có** `pack='original'` sẽ xuất bundle **không nén** (520 MB → 1,27 GB).

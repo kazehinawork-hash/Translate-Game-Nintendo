@@ -51,6 +51,33 @@ Text **không** nằm trong `.locres`/CSV rời mà trong các **TextAsset** bê
 
 `Data/data.unity3d` là **file rời trong RomFS** → **LayeredFS thay trực tiếp, KHÔNG cần patch pak**.
 
+## QA cuối (`tools/mono_final_qa.py`) — PASS
+
+| Hạng mục | Kết quả |
+|---|---|
+| Số object trong bundle | 198.295 = 198.295 ✅ |
+| Số mục | 2.063 = 2.063 ✅ |
+| Key thiếu / thừa | 0 / 0 ✅ |
+| Lệch placeholder & tag (`{0}`, `%s`, `<b>`, `&#xA;`…) | **0** ✅ |
+| Lệch xuống dòng | **0** ✅ |
+| Ký tự ngoài (CJK/Hangul/Kana/Nga/Ả Rập) | **0** ✅ |
+| Ký tự điều khiển | **0** ✅ |
+| Chuỗi rỗng | **0** ✅ |
+
+**1.926 mục đã dịch** (khác bản gốc), phần còn lại là mục giữ nguyên hợp lệ (`Ubisoft Connect`, `OK`, `AI`, `{0}`, charset).
+
+### 🐛 Lỗi đã tìm ra & sửa trong lần QA cuối
+
+Nguồn lưu xuống dòng bằng **tham chiếu ký tự `&#xA;`** trong thuộc tính XML (KHÔNG phải ký tự xuống dòng thật):
+
+```xml
+<t id="201" text="Authentication failed. &#xA;Please try again."/>
+```
+
+Bản build đầu ghi **xuống dòng thật** → XML chuẩn hoá giá trị thuộc tính biến nó thành **dấu cách**
+→ **mất ngắt dòng** ở **124 mục**. Đã sửa `esc_attr()` trong `mono_build_mod.py` để escape
+`\n → &#xA;`, `\r → &#xD;`, `\t → &#x9;` — QA lại: **0 lệch**.
+
 ## Font (cần chơi thử)
 
 80 font TTF đóng trong bundle. **74 font đã đủ ký tự tiếng Việt**.
@@ -75,8 +102,9 @@ Nếu chơi thử thấy ô vuông ở tiêu đề → cần xử lý riêng 2 f
 | `tools/mono_qa_merge.py` | QA + gộp `vi_*.json` → `mono_vi.json` |
 | `tools/mono_build_mod.py` | Ghi bản dịch vào XML + đóng gói bundle |
 | `tools/mono_verify.py` | Đọc lại bundle thành phẩm để kiểm chứng |
-| `tools/mono_font_check2.py` | Kiểm độ phủ tiếng Việt của 80 font |
-| `tools/mono_patch_font2.py` | Ghép glyph tiếng Việt vào font thiếu |
+| `tools/mono_final_qa.py` | **QA cuối**: đối chiếu TỪNG MỤC gốc ↔ thành phẩm |
+| `tools/mono_font_check.py` | Kiểm độ phủ tiếng Việt của 80 font |
+| `tools/mono_patch_font.py` | Ghép glyph tiếng Việt vào font thiếu |
 
 ## Ghi chú
 

@@ -25,6 +25,14 @@ LANG_FILES = ['oasis_englishgb']          # co the them cac file ngon ngu khac
 TEXT_ATTR = re.compile(rb'text="(.*?)"')
 
 
+def esc_attr(s):
+    """Escape gia tri thuoc tinh XML. QUAN TRONG: \\n phai la &#xA; (KHONG duoc ghi
+    xuong dong THAT - XML chuan hoa thuoc tinh se bien no thanh dau cach => mat ngat dong)."""
+    s = html.escape(s, quote=True)
+    return (s.replace('\r\n', '&#xA;').replace('\n', '&#xA;')
+             .replace('\r', '&#xD;').replace('\t', '&#x9;'))
+
+
 def patch_asset(o):
     d = o.read()
     if getattr(d, 'm_Name', '') not in LANG_FILES:
@@ -43,7 +51,7 @@ def patch_asset(o):
         en = html.unescape(raw_txt)
         if en in vi:
             n += 1
-            return 'text="' + html.escape(vi[en], quote=True) + '"'
+            return 'text="' + esc_attr(vi[en]) + '"'
         return m.group(0)
 
     body2 = re.sub(r'text="([^"]*)"', sub, body)

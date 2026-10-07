@@ -1,41 +1,85 @@
 # MONOPOLY (2024) (Switch) — `01002C201BC40000`
 
-- **Engine**: **Unity IL2CPP** (giống Ori) — nhà phát hành **Ubisoft** (có `Plugins/ubiservices.nro`)
-- **Trạng thái**: 🔄 **Giai đoạn 1** (đã nhận diện xong — xem "Điểm chặn")
+- **Engine**: **Unity IL2CPP** — nhà phát hành **Ubisoft** (có `Plugins/ubiservices.nro`)
+- **Trạng thái**: ✅ **Đã dịch xong text + đóng gói mod** (font cần chơi thử để xác nhận)
 
 ## Cấu trúc RomFS (208 file, 1.016 MB)
 
 | Đường dẫn | Nội dung |
 |---|---|
 | `Data/data.unity3d` | **520 MB** — bundle chính, **198.295 object** (MonoBehaviour 30.593) ← **text nằm ở đây** |
-| `Data/Managed/Metadata/global-metadata.dat` | 24 MB — metadata IL2CPP (cần để dựng typetree) |
-| `Data/StreamingAssets/Audio/GeneratedSoundBanks/Switch/<LANG>/VO.bnk` | audio lồng tiếng theo **7 ngôn ngữ** (English(US), French, German, Italian, Japanese, Spanish, Brasilian Portuguese) |
+| `Data/Managed/Metadata/global-metadata.dat` | 24 MB — metadata IL2CPP |
+| `Data/StreamingAssets/Audio/GeneratedSoundBanks/Switch/<LANG>/VO.bnk` | audio lồng tiếng theo **7 ngôn ngữ** |
 | `Data/StreamingAssets/defaultKeyBindings.json`, `defaultboard.json` | cấu hình (không phải text hiển thị) |
 | `Plugins/ubiservices.nro`, `cimgui.nro` | plugin |
 
-→ **Không có** thư mục `Localization` / `.locres` / bảng CSV — text nằm trong **asset Unity**.
+## Kho text: hệ thống **"Oasis"** của Ubisoft
 
-## Kiểm kê object trong bundle (đã chạy)
+Text **không** nằm trong `.locres`/CSV rời mà trong các **TextAsset** bên trong `Data/data.unity3d`:
 
+- `oasis_englishgb` — **2.063 chuỗi** tiếng Anh (nguồn dịch)
+- `oasis_french`, `oasis_german`, `oasis_spanish`, `oasis_italian`, `oasis_dutch`, `oasis_polish`,
+  `oasis_russian`, `oasis_japanese`, `oasis_korean`, `oasis_traditional_chinese`,
+  `oasis_simplified_chinese`, `oasis_brazilianportuguese` — 12 bản ngôn ngữ khác
+- `oasis__global` — **file master**: `<languages>` (14, `English` = `master="true"`), `<characters>`, `<teams>`, `<sections>`
+- `credits` — danh sách ghi công (có markup `<H1>`, `<T>`, `<N>`)
+
+### Định dạng
+
+```xml
+<?xml version="1.0" encoding="utf-16"?>
+<oasis oasisVersion="5.1.7518498.0" toolVersion="2.0.0"
+       xmlns="http://schemas.ubisoft.com/oasis/2011/extractor">
+  <translations language="EnglishGB">
+    <t id="2" text="Online"/>
+    <t id="4" text="Credits"/>
+    ...
 ```
-198.295 object:  GameObject 56.795 · Transform 38.950 · MonoBehaviour 30.593
-                 RectTransform 17.845 · CanvasRenderer 13.045 · Texture2D 1.661 · Canvas 281
-```
 
-## Việc còn lại
+⚠️ TextAsset có **tiền tố byte hỏng** trước thẻ `<` đầu tiên — parse phải bỏ phần trước `<` rồi mới `decode('utf-16')`.
 
-1. Dựng **typetree IL2CPP** (`python tools/extract_il2cpp.py <rom> E:\MONO_work` — như đã làm cho Ori)
-   để đọc được các MonoBehaviour theo **tên trường** thay vì offset.
-2. Tìm kho text thật trong `data.unity3d` (MonoBehaviour/UI Text) → bóc chuỗi.
-3. **Tạo glossary TRƯỚC** (BH-22) → dịch (chunk + subagent).
-4. Vá font (kiểm đủ glyph gốc — BH-20).
-5. Đóng gói: bundle là **file rời** (`Data/data.unity3d`) → **LayeredFS thay trực tiếp**, không cần patch pak.
-6. QA + bàn giao.
+## Đã làm
+
+1. Bóc 2.063 chuỗi từ `oasis_englishgb` → `translations/mono_en.json`.
+2. **Tạo glossary TRƯỚC** (BH-22) → `glossary/monopoly.csv` (47 thuật ngữ chuẩn Monopoly + 300 gợi ý).
+3. Dịch **1.704 chuỗi duy nhất** bằng 3 subagent (`todo_*.json` → `vi_*.json`) → `mono_vi.json`.
+4. Ghi lại vào XML (thay thuộc tính `text="…"`) → đóng gói lại TextAsset → bundle.
+5. Kiểm chứng bundle mới: **1.932 mục hiện tiếng Việt** / 2.063 (phần còn lại là mục giữ nguyên hợp lệ:
+   `Ubisoft Connect`, `OK`, `AI`, `{0}`, chuỗi charset…).
+
+**Thành phẩm**: `output/atmosphere/contents/01002C201BC40000/romfs/Data/data.unity3d` (522 MB)
+
+`Data/data.unity3d` là **file rời trong RomFS** → **LayeredFS thay trực tiếp, KHÔNG cần patch pak**.
+
+## Font (cần chơi thử)
+
+80 font TTF đóng trong bundle. **74 font đã đủ ký tự tiếng Việt**.
+
+6 font còn thiếu:
+
+| Font | Glyph | Thiếu |
+|---|---|---|
+| `NotoSans-CondensedBold`, `aline_font`, `LiberationSans` | 871–2.793 | chỉ `┿` (ký hiệu tiền của chính game) |
+| `PerfectDOSVGA437` | 256 | 93 (font kiểu DOS) |
+| **`KabelBold`, `KabelMedium`** | 574–575 | **88 ký tự có dấu** ← đáng lo nhất |
+
+`fontTools.merge` **lỗi** trên 2 font Kabel (`NotImplementedType … .cff`) → chưa ghép được.
+Nếu chơi thử thấy ô vuông ở tiêu đề → cần xử lý riêng 2 font này.
+
+## Công cụ
+
+| Script | Việc |
+|---|---|
+| `tools/mono_extract.py` | Bóc chuỗi từ kho Oasis → `mono_en.json` |
+| `tools/mono_glossary_chunk.py` | Tạo `glossary/monopoly.csv` + chia chunk |
+| `tools/mono_qa_merge.py` | QA + gộp `vi_*.json` → `mono_vi.json` |
+| `tools/mono_build_mod.py` | Ghi bản dịch vào XML + đóng gói bundle |
+| `tools/mono_verify.py` | Đọc lại bundle thành phẩm để kiểm chứng |
+| `tools/mono_font_check2.py` | Kiểm độ phủ tiếng Việt của 80 font |
+| `tools/mono_patch_font2.py` | Ghép glyph tiếng Việt vào font thiếu |
 
 ## Ghi chú
 
-- ROM đã chuyển `E:\ROM_Backup\Monopoly\` (2 file, SHA256 xác minh).
-- Bản base 1,12 GB + update v1.6 (682 MB) — **bản update có thể chứa thêm text/nội dung** (cần đối chiếu khi bóc).
-- Thư mục tạm: `E:\MONO_work` (bundle + metadata đã bóc).
-- 🐞 **Đã gặp và sửa lỗi công cụ**: file `inspect.py` trong thư mục script tạm **che module chuẩn `inspect`**
-  → `import UnityPy` chạy nhầm script cũ, `fontTools` báo lỗi lạ. Xem **BH-24**.
+- ROM ở `E:\ROM_Backup\Monopoly\`. Thư mục tạm: `E:\MONO_work`.
+- 🐛 **BH-24**: file `inspect.py` trong thư mục script tạm **che module chuẩn `inspect`** → `import UnityPy` chạy nhầm.
+- 🐛 `env.save()` phải có `pack='original'`, nếu không bundle xuất ra **không nén** (520 MB → 1,27 GB).

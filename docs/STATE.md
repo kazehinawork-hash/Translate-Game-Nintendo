@@ -232,21 +232,30 @@
 
 ---
 
-## 11. 🔄 ĐANG LÀM: MONOPOLY (2024) (Nintendo Switch)
+## 11. ✅ XONG PHẦN TEXT: MONOPOLY (2024) (Nintendo Switch)
 - **Title ID**: `01002C201BC40000` (Base) / `01002C201BC40800` (Update v1.6)
-- **Engine**: **Unity IL2CPP** (giống Ori) — nhà phát hành Ubisoft
-- **Giai đoạn 1 — xong phần nhận diện:**
-  - ✅ ROM có sẵn; **bóc RomFS OK** (208 file, 1.016 MB).
-  - ✅ Cấu trúc: `Data/data.unity3d` (**520 MB, 198.295 object** — MonoBehaviour 30.593) ← text nằm đây;
-    `Data/Managed/Metadata/global-metadata.dat` (24 MB); audio lồng tiếng **7 ngôn ngữ**.
-  - ✅ **Không có** `Localization`/`.locres` → text nằm trong **asset Unity**.
-  - ✅ Đã kiểm kê object bằng UnityPy.
-  - ⏳ **Còn lại:** dựng **typetree IL2CPP** (`tools/extract_il2cpp.py`) → tìm + bóc kho text →
-    **tạo glossary TRƯỚC** (BH-22) → dịch → font → đóng gói (bundle là **file rời** →
-    **LayeredFS thay trực tiếp**, không cần patch pak) → QA.
-  - ROM đã chuyển `E:\ROM_Backup\Monopoly\` (2 file, SHA256 xác minh).
-- 🐞 **Lỗi công cụ đã gặp & sửa:** file `inspect.py` trong thư mục script tạm **che module chuẩn `inspect`**
-  → `import UnityPy` chạy nhầm script cũ; `fontTools` báo lỗi lạ. Xem **BH-24**.
+- **Engine**: **Unity IL2CPP** — nhà phát hành Ubisoft
+- **Kho text = hệ thống "Oasis" của Ubisoft** (không phải file rời `.locres`):
+  - Nằm trong **TextAsset** bên trong `Data/data.unity3d`, định dạng **XML UTF-16**:
+    `<oasis><translations language="EnglishGB"><t id="2" text="Online"/>…`
+  - `oasis_englishgb` = **2.063 chuỗi** (nguồn dịch); kèm 12 file ngôn ngữ khác (FR/DE/ES/JA/KO/ZH/RU/IT/NL/PL/PT-BR…)
+    và `oasis__global` (**file master**: `<languages>`, `<characters>`, `<teams>`, `<sections>` — ngôn ngữ gốc `English` `master="true"`).
+  - ⚠️ TextAsset có **tiền tố byte lạ** trước thẻ `<` → khi parse phải bỏ phần trước `<` rồi mới `decode('utf-16')`.
+- **Kết quả đã build:**
+  - ✅ Dịch **1.704 chuỗi duy nhất** (3 subagent, chunk 350) → **thay 2.036 mục** trong XML; kiểm chứng lại bundle: **1.932 mục hiện tiếng Việt**.
+  - ✅ Glossary tạo **TRƯỚC khi dịch** (BH-22): `glossary/monopoly.csv` (47 thuật ngữ chuẩn + gợi ý).
+  - ✅ Thành phẩm: `output/atmosphere/contents/01002C201BC40000/romfs/Data/data.unity3d` (**522 MB**, giữ nguyên nén gốc).
+  - ✅ `Data/data.unity3d` là **file rời trong RomFS** → **LayeredFS thay trực tiếp, KHÔNG cần patch pak**.
+- ⏳ **Font — cần test trong game:**
+  - Game có 80 font TTF đóng trong bundle. **74 font đã đủ ký tự tiếng Việt** ([A-Za-z] + dấu).
+  - 6 font còn thiếu: `NotoSans-CondensedBold`, `aline_font`, `LiberationSans` **chỉ thiếu `┿`** (ký hiệu tiền của chính game);
+    `PerfectDOSVGA437` (font kiểu DOS) thiếu 93; **`KabelBold` + `KabelMedium` thiếu 88 ký tự có dấu** ← đáng lo nhất.
+  - `fontTools.merge` **lỗi** trên 2 font Kabel (`NotImplementedType … .cff`) → chưa ghép được. Cần chơi thử xem
+    phần tiêu đề dùng Kabel có bị ô vuông không.
+- 🐛 **Lỗi công cụ đã gặp & sửa:** file `inspect.py` trong thư mục script tạm **che module chuẩn `inspect`**
+  → `import UnityPy` chạy nhầm script cũ. Xem **BH-24**.
+- 🐛 **Bài học mới:** `env.save()` **không có** `pack='original'` sẽ xuất bundle **không nén** (520 MB → 1,27 GB).
+  Luôn dùng `env.save(pack='original', out_path=…)`.
 - Chi tiết: `games/01002C201BC40000_Monopoly/README.md`.
 
 ---

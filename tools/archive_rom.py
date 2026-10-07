@@ -50,6 +50,8 @@ TITLE_DIR = {
     '010092A0172E4800': 'ItTakesTwo',
     '010092A0172E5001': 'ItTakesTwo',
     '010092A0172E5002': 'ItTakesTwo',
+    '01002C201BC40000': 'Monopoly',
+    '01002C201BC40800': 'Monopoly',
 }
 
 

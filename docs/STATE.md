@@ -232,7 +232,26 @@
 
 ---
 
-## 11. Hạ tầng repo & đóng gói
+## 11. 🔄 ĐANG LÀM: MONOPOLY (2024) (Nintendo Switch)
+- **Title ID**: `01002C201BC40000` (Base) / `01002C201BC40800` (Update v1.6)
+- **Engine**: **Unity IL2CPP** (giống Ori) — nhà phát hành Ubisoft
+- **Giai đoạn 1 — xong phần nhận diện:**
+  - ✅ ROM có sẵn; **bóc RomFS OK** (208 file, 1.016 MB).
+  - ✅ Cấu trúc: `Data/data.unity3d` (**520 MB, 198.295 object** — MonoBehaviour 30.593) ← text nằm đây;
+    `Data/Managed/Metadata/global-metadata.dat` (24 MB); audio lồng tiếng **7 ngôn ngữ**.
+  - ✅ **Không có** `Localization`/`.locres` → text nằm trong **asset Unity**.
+  - ✅ Đã kiểm kê object bằng UnityPy.
+  - ⏳ **Còn lại:** dựng **typetree IL2CPP** (`tools/extract_il2cpp.py`) → tìm + bóc kho text →
+    **tạo glossary TRƯỚC** (BH-22) → dịch → font → đóng gói (bundle là **file rời** →
+    **LayeredFS thay trực tiếp**, không cần patch pak) → QA.
+  - ROM đã chuyển `E:\ROM_Backup\Monopoly\` (2 file, SHA256 xác minh).
+- 🐞 **Lỗi công cụ đã gặp & sửa:** file `inspect.py` trong thư mục script tạm **che module chuẩn `inspect`**
+  → `import UnityPy` chạy nhầm script cũ; `fontTools` báo lỗi lạ. Xem **BH-24**.
+- Chi tiết: `games/01002C201BC40000_Monopoly/README.md`.
+
+---
+
+## 12. Hạ tầng repo & đóng gói
 - **ĐỢT THỐNG NHẤT THUẬT NGỮ (05/10):** tạo glossary cho Ori WotW / Ori BF / Unravel Two /
   Kirby; sửa `master.csv` (trước đây chứa nội dung Switch Sports) → `switchsports.csv`,
   `master.csv` giờ chỉ còn 4 thuật ngữ **thật sự dùng chung**. Giao 3 subagent thống nhất

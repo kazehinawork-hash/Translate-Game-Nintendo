@@ -334,6 +334,25 @@
 - ✅ **BẮT BUỘC kiểm `roundtrip`** trước khi dịch: đọc → `SerializeJson` → `DeserializeJson` → `Write`
   → đọc lại. Đã kiểm: 618 byte → 618 byte, JSON giống hệt → mới tin được.
 
+### BH-24. 🐞 ĐỪNG đặt tên script tạm trùng module chuẩn Python — nó CHE mất module thật
+
+**Ca thật: MONOPOLY (05/10).** Trong thư mục scratchpad có file **`inspect.py`** (script tạm tôi tạo ở lượt trước).
+Vì Python đặt **thư mục chứa script lên đầu `sys.path`**, mọi `import inspect` (thư viện chuẩn) đều lấy file đó →
+hậu quả:
+- `import UnityPy` (bên trong nó import `inspect`) → **chạy nhầm script cũ**, in ra output của việc khác hoàn toàn
+  (mất gần 10 phút mới hiểu vì tưởng "output bị lặp").
+- `fontTools` báo lỗi khó hiểu: `AttributeError: module 'inspect' has no attribute 'signature'`.
+
+**Quy tắc:**
+1. KHÔNG đặt tên script tạm trùng module chuẩn: `inspect.py`, `json.py`, `os.py`, `sys.py`, `re.py`, `time.py`,
+   `random.py`, `copy.py`, `io.py`, `struct.py`, `collections.py`, `types.py`, `test.py`, `code.py`, `string.py`.
+2. Nếu triệu chứng là "output lạ / lặp lại / module thiếu thuộc tính kỳ lạ" → **kiểm tra ngay** có file trùng tên
+   module trong thư mục script hay không:
+   ```powershell
+   Get-ChildItem <thu_muc_script> -Filter *.py | Where-Object { $_.BaseName -in @('inspect','json','os','sys','re','time','random','copy','io','struct','collections') }
+   ```
+3. Chạy script tạm từ thư mục **sạch** (hoặc `python -P` / đặt `PYTHONSAFEPATH=1`) cũng phòng được.
+
 ---
 
 ## PHẦN 2 — BẢNG LỖI THEO GAME (để tra nhanh)

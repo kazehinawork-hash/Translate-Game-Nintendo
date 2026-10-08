@@ -465,7 +465,50 @@ Phải **bỏ các run mã điều khiển** trước khi gom ký tự.
 
 ---
 
-## PHẦN 2 — BẢNG LỖI THEO GAME (để tra nhanh)
+### BH-29. 🚨 MỘT GAME CÓ THỂ CÓ **NHIỀU BỘ FONT** — phải vá HẾT; `TTGlyphPen` KHÔNG tự duỗi glyph ghép
+
+**Ca thật: Kirby (08/10).** Sau khi vá xong **11 font `.bfotf` (CFF)** và kiểm chứng bằng `fontTools`
+(đủ glyph, đúng upem), **game VẪN ô vuông**. Nguyên nhân: thư mục `font/ScalableFontBin` còn **34 font
+`.bfttf` (glyf)** mà mod **không có**:
+
+| Bộ | File | upem | cmap |
+|---|---|---|---|
+| `FOT-*.bfotf`, `VDL-*.bfotf` | 11 | 1000 | 8.2k–9.8k (CFF) |
+| `CHI-*.bfttf` | 11 | 1024 | 7.6k |
+| `KOR-*.bfttf` | 11 | 1000 | 18.3k |
+| `TWN-*.bfttf` | 11 | 1024 | 14.6k |
+| `K15-LocalCharacter-M.bfttf` | 1 | 1024 | **219** ← font "ký tự bản địa" |
+
+**Quy tắc:** sau khi vá font, **liệt kê HẾT file font trong thư mục** và vá **tất cả**, đừng cho rằng
+bộ đầu tiên là bộ game dùng. Kiểm bằng: `Get-ChildItem <font_dir> -Recurse -Include *.bfotf*,*.bfttf*`.
+
+**Bẫy phụ — `TTGlyphPen(glyphSet)` KHÔNG duỗi glyph ghép.** Glyph tiếng Việt của Arial là glyph **ghép**
+(tham chiếu `acute`/`breve`/`tilde`/`circumflex`). `TTGlyphPen(gs)` **giữ nguyên dạng ghép** → khi
+`font.save()` sẽ chết vì font đích không có các tên thành phần đó:
+
+```
+KeyError: 'acute'   (hoặc 'breve' / 'tilde' / 'circumflex')
+```
+
+Cách đúng — duỗi hẳn thành glyph đơn:
+
+```python
+from fontTools.pens.recordingPen import DecomposingRecordingPen
+rec = DecomposingRecordingPen(sup_gs)
+sup_gs[sup_cmap[cp]].draw(TransformPen(rec, (scale, 0, 0, scale, 0, 0)))
+pen = TTGlyphPen(None)
+rec.replay(pen)
+g = pen.glyph()          # <- glyph DON, khong con component
+```
+
+**Kiểm chứng font bằng PIXEL, đừng chỉ tin `getBestCmap()`:** `getBestCmap()` báo "có glyph" nhưng
+FreeType/game vẫn có thể vẽ `.notdef`. Cách kiểm chắc chắn — render ký tự cần và **so với `.notdef`**
+(ký tự PUA chắc chắn không có):
+
+```python
+ink('ạ') != ink('\ue123')   # phải khác nhau thì mới thật sự có glyph
+```
+
 
 | Game | Lỗi đã gặp | Nguyên nhân | Trạng thái |
 |---|---|---|---|
@@ -490,6 +533,7 @@ Phải **bỏ các run mã điều khiển** trước khi gom ký tự.
 | Switch Sports | **Vào game báo lỗi software** (crash) | `.zs` nén lại bằng windowLog 22 trong khi gốc là 21 → decoder game từ chối frame | ✅ **đã sửa** (BH-27) — nén khớp tham số gốc |
 | Switch Sports | Còn 173 chuỗi UI chưa dịch | các key có trong json nhưng value vẫn là tiếng Anh | ✅ **đã dịch** (còn 21 mục giữ nguyên có chủ đích: nhãn golf) |
 | Kirby | **Ô vuông khi hiển thị** | thay hẳn font CFF/upem1000 bằng TTF/upem2048 → mất 262–340 glyph | ✅ **đã sửa** (BH-28) — dựng lại CFF giữ đủ glyph |
+| Kirby | **Vẫn ô vuông sau khi vá `.bfotf`** | game còn dùng 34 font `.bfttf` (CHI/KOR/TWN/K15) mà mod KHÔNG có | ✅ **đã sửa** (BH-29) — vá hết 45 file font |
 | Unravel Two | **Treo ở logo Nintendo Switch** | `Data.kit.0` trong mod **lớn hơn gốc 1.460.324 byte** (repack LZ4 literal-only) | ⚠️ **CHƯA VÁ** — cần encoder LZ4-có-từ-điển để giữ đúng kích thước file |
 | Ori WotW / It Takes Two | Ô vuông | font nằm **trong bundle Unity / pak**, mod không có file font rời | ⏳ cần vá font trong bundle/pak |
 

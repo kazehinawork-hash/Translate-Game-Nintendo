@@ -13,7 +13,8 @@ import sys
 sys.path.insert(0, r'E:\OneDrive\3.家 Jiā Home\99. 其他 Qítā Other\96.Translate Game\tools')
 sys.stdout.reconfigure(encoding='utf-8')
 from kit_patch import decode_all
-from kit_repack import lz4_literal_block
+from kit_repack import HIST_KEEP
+from kit_lz4dict_encode import encode_block
 
 ROOT = r'E:\OneDrive\3.家 Jiā Home\99. 其他 Qítā Other\96.Translate Game'
 GAME = os.path.join(ROOT, 'games', '0100E5D00CC0C000_UnravelTwo')
@@ -23,16 +24,31 @@ PART0 = r'E:\UNR_work\parts\Data.kit.0'
 
 
 def rebuild(data, recs, gaps, changes):
+    """Dung lai file: record doi -> nen bang LZ4-CO-TU-DIEN (khong phai literal-only).
+
+    ⚠️ Truoc day dung `lz4_literal_block` -> record bang dich 64 KB phinh thanh ~1,5 MB
+    (=> file mod LON HON goc 1,46 MB, nghi lam game treo o logo). Nay nen co match,
+    va phai theo dung lich su tu dien (HIST_KEEP) nhu luc giai ma.
+    """
     events = [(g[0], 0, g[1]) for g in gaps] + [(r[0], 1, r) for r in recs]
     events.sort(key=lambda e: (e[0], e[1]))
     buf = bytearray()
+    hist = b''
     for eoff, k, obj in events:
         if k == 0:
             buf += obj
             continue
         roff, rln, rpl, rout, rkind = obj
-        blk = lz4_literal_block(changes[roff]) if roff in changes else rpl
-        buf += struct.pack('<I', len(blk)) + blk
+        if roff in changes:
+            cur = changes[roff]
+            blk = encode_block(cur, hist[-HIST_KEEP:])
+            buf += struct.pack('<I', len(blk)) + blk
+        else:
+            cur = rout
+            buf += struct.pack('<I', len(rpl)) + rpl
+        hist += cur
+        if len(hist) > 4 * HIST_KEEP:          # cat thua (amortized, tranh copy moi record)
+            hist = hist[-HIST_KEEP:]
     return bytes(buf)
 
 
@@ -75,7 +91,7 @@ def main():
     print(f'{len(changes)} record can thay | tong {n_rep} gia tri')
 
     cur = rebuild(data, recs, gaps, changes)
-    # va day chuyen
+    # va day chuyen: record nao lech do tham chieu cheo -> TRA VE BYTE GOC (bo khoi changes)
     for it in range(6):
         recs2, gaps2 = decode_all(cur)
         if len(recs2) != len(recs):
@@ -86,7 +102,7 @@ def main():
         if not bad:
             break
         for i in bad:
-            changes[recs[i][0]] = recs[i][3]
+            changes.pop(recs[i][0], None)      # giu nguyen byte goc -> kich thuoc khong doi
         cur = rebuild(data, recs, gaps, changes)
 
     recs3, _ = decode_all(cur)

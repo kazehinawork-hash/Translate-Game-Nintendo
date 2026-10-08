@@ -136,6 +136,19 @@
   dựng lại CFF, **vẽ lại toàn bộ glyph gốc** (0 glyph mất) + thêm glyph tiếng Việt **scale về upem 1000**,
   giữ `GPOS/GSUB/GDEF/VORG/BASE`. Kiểm chứng **11/11 font**: CFF ✓, upem 1000 → 1000 ✓, **mất 0 glyph** ✓.
 - ✅ QA Kirby (`tools/qa_kirby.py`): **2.508 chuỗi, 0 lệch mã điều khiển, 0 ký tự lạ** → **PASS**.
+- 🔥 **VẪN Ô VUÔNG sau khi vá `.bfotf` (08/10) → đã tìm ra và sửa:** thư mục
+  `font/ScalableFontBin` còn **34 font `.bfttf` (glyf)** mà mod **KHÔNG có** — bộ `CHI-*` (11, upem 1024,
+  cmap 7.6k), `KOR-*` (11, upem 1000, cmap 18.3k), `TWN-*` (11, upem 1024, cmap 14.6k) và
+  **`K15-LocalCharacter-M.bfttf`** (cmap chỉ 219 — font "ký tự bản địa"). Game dùng bộ này cho chữ Latin.
+  → Đã vá **cả 34 file** bằng `tools/add_glyphs_glyf.py` + `tools/patch_font_kirby_bfttf.py`
+    (thêm glyph vào thẳng bảng `glyf`/`hmtx`/`cmap`, giữ nguyên toàn bộ glyph gốc + upem).
+  → **Tổng 45 file font đã vá** (11 CFF + 34 glyf).
+- ✅ **Kiểm chứng bằng PIXEL** (`tools/kirby_bfttf_verify.py` + `tools/font_pixel_check.py`):
+  render `ạ` phải KHÁC `.notdef` — cả 4 font đại diện đều **ĐẠT** ✓
+  (chỉ tin `getBestCmap()` là KHÔNG đủ — fontTools báo có glyph nhưng FreeType/game vẫn có thể vẽ ô vuông).
+- 📌 Bẫy phụ (BH-29): `TTGlyphPen(glyphSet)` **không** duỗi glyph ghép → `font.save()` chết với
+  `KeyError: 'acute'/'breve'/'tilde'/'circumflex'`. Phải dùng `DecomposingRecordingPen` rồi replay vào
+  `TTGlyphPen(None)`.
 - 📌 Ghi chú: dãy `\x0e\x00\x03\x04䷿Ｏ` trong text là **mã điều khiển GỐC của game** (có trong cả
   EN/JP/CN/FR) — **không phải lỗi dịch**.
 

@@ -14,7 +14,7 @@ from build_mod import replace_msbt_txt2
 ROOT = r'E:\OneDrive\3.家 Jiā Home\99. 其他 Qítā Other\96.Translate Game'
 TID = '01004D300C5AE000'
 G = os.path.join(ROOT, 'games', f'{TID}_Kirby')
-SRC = os.path.join(G, 'source', 'msg', 'Kirby15')
+SRC = os.path.join(ROOT, 'dump', TID, 'romfs', 'msg', 'Kirby15')   # nguon THAT v1.1.0 (tu ban dump)
 OUT = os.path.join(ROOT, 'output', 'atmosphere', 'contents', TID, 'romfs', 'msg', 'Kirby15')
 
 LATIN = ['US_English', 'EU_English', 'US_French', 'US_Spanish', 'EU_French', 'EU_German',

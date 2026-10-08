@@ -137,10 +137,18 @@ def build_mod():
     print(f"\n>>> Tạo file SARC mới ({count} file đã được Việt hóa)...")
     new_sarc_data = sarc_writer.write()[1]
 
-    # 4. Nén Zstandard
-    print(">>> Nén Zstandard (.zs)...")
-    cctx = zstandard.ZstdCompressor(level=16)
-    compressed_data = cctx.compress(new_sarc_data)
+    # 4. Nén Zstandard — BẮT BUỘC khớp tham số frame của file gốc. Nếu nén bằng tham số
+    #    mặc định (windowLog 22 trong khi gốc là 21) thì decoder của game có thể TỪ CHỐI
+    #    frame -> game báo lỗi software / không hiện tiếng Việt.
+    print(">>> Nén Zstandard (.zs) — khớp tham số frame của file gốc...")
+    try:
+        from zs_util import compress_like
+    except ImportError:
+        from tools.zs_util import compress_like
+    with open(ORIG_SARC_PATH, 'rb') as f:
+        _orig_zs = f.read()
+    compressed_data = compress_like(_orig_zs, new_sarc_data)
+    print(f"    windowLog: gốc {_orig_zs[5] >> 3} -> mới {compressed_data[5] >> 3}")
 
     # 5. Lưu vào output Atmosphere
     os.makedirs(OUTPUT_DIR, exist_ok=True)

@@ -1,0 +1,1281 @@
+[
+ {
+  "file": "LayoutMsg__Bad_Guide.msbt",
+  "key": "T_Guide",
+  "en": "Serve by swinging the controller\nfrom \u000e\u0000\u0003\u0002\u0000low to high\u000e\u0000\u0003\u0002￿.",
+  "masked": "Serve by swinging the controller\nfrom [[1]]low to high[[2]].",
+  "tokens": [
+   "\u000e\u0000\u0003\u0002\u0000",
+   "\u000e\u0000\u0003\u0002￿"
+  ]
+ },
+ {
+  "file": "LayoutMsg__Cmn_DlgControllerStrap.msbt",
+  "key": "T_Guide00",
+  "en": "Is the Joy-Con \u000e\u0000\u0003\u0002\u0000strap\u000e\u0000\u0003\u0002￿ attached?\nDon't forget the strap for the next sport you play too!",
+  "masked": "Is the Joy-Con [[1]]strap[[2]] attached?\nDon't forget the strap for the next sport you play too!",
+  "tokens": [
+   "\u000e\u0000\u0003\u0002\u0000",
+   "\u000e\u0000\u0003\u0002￿"
+  ]
+ },
+ {
+  "file": "LayoutMsg__Cmn_DlgLegBand.msbt",
+  "key": "T_TextArea",
+  "en": "When using the leg strap, you can kick the\nball in the game by \u000e\u0000\u0003\u0002\u0000moving your leg\u000e\u0000\u0003\u0002￿!",
+  "masked": "When using the leg strap, you can kick the\nball in the game by [[1]]moving your leg[[2]]!",
+  "tokens": [
+   "\u000e\u0000\u0003\u0002\u0000",
+   "\u000e\u0000\u0003\u0002￿"
+  ]
+ },
+ {
+  "file": "LayoutMsg__Cmn_DlgTrialMode.msbt",
+  "key": "T_TextArea",
+  "en": "None of the users in this session are\nmembers of Nintendo Switch Online.\nPlease enjoy \u000e\u0000\u0003\u0002\u0000Trial Mode\u000e\u0000\u0003\u0002￿. Your opponents\nwill be CPU controlled.",
+  "masked": "None of the users in this session are\nmembers of Nintendo Switch Online.\nPlease enjoy [[1]]Trial Mode[[2]]. Your opponents\nwill be CPU controlled.",
+  "tokens": [
+   "\u000e\u0000\u0003\u0002\u0000",
+   "\u000e\u0000\u0003\u0002￿"
+  ]
+ },
+ {
+  "file": "LayoutMsg__Cmn_FriendRoomRule.msbt",
+  "key": "T_4P",
+  "en": "Up to \u000e\u0000\u0003\u0002\u00004 players\u000e\u0000\u0003\u0002￿",
+  "masked": "Up to [[1]]4 players[[2]]",
+  "tokens": [
+   "\u000e\u0000\u0003\u0002\u0000",
+   "\u000e\u0000\u0003\u0002￿"
+  ]
+ },
+ {
+  "file": "LayoutMsg__Cmn_FriendRoomRule.msbt",
+  "key": "T_8P",
+  "en": "Up to \u000e\u0000\u0003\u0002\u00008 players\u000e\u0000\u0003\u0002￿",
+  "masked": "Up to [[1]]8 players[[2]]",
+  "tokens": [
+   "\u000e\u0000\u0003\u0002\u0000",
+   "\u000e\u0000\u0003\u0002￿"
+  ]
+ },
+ {
+  "file": "LayoutMsg__Cmn_FriendRoomRule.msbt",
+  "key": "T_Info",
+  "en": "The \u000e\u0000\u0003\u0002\u0000number of players \u000e\u0000\u0003\u0002￿and Nintendo Switch \u000e\u0000\u0003\u0002\u0000consoles\u000e\u0000\u0003\u0002￿ will determine which sports\nare playable. In some cases, you may need to create a new room and divide your\ngroup so that you are not over the limit on players or consoles that a sport allows.\n\nFor Soccer, each player must also have \u000e\u0000\u0003\u0002\u00002\u000e\u0000\u0003\u0002￿ Joy-Con controllers.",
+  "masked": "The [[1]]number of players [[2]]and Nintendo Switch [[3]]consoles[[4]] will determine which sports\nare playable. In some cases, you may need to create a new room and divide your\ngroup so that you are not over the limit on players or consoles that a sport allows.\n\nFor Soccer, each player must also have [[5]]2[[6]] Joy-Con controllers.",
+  "tokens": [
+   "\u000e\u0000\u0003\u0002\u0000",
+   "\u000e\u0000\u0003\u0002￿",
+   "\u000e\u0000\u0003\u0002\u0000",
+   "\u000e\u0000\u0003\u0002￿",
+   "\u000e\u0000\u0003\u0002\u0000",
+   "\u000e\u0000\u0003\u0002￿"
+  ]
+ },
+ {
+  "file": "LayoutMsg__Cmn_FriendRoomRule.msbt",
+  "key": "T_TwoSwhitch",
+  "en": "On \u000e\u0000\u0003\u0002\u00002\u000e\u0000\u0003\u0002￿ Nintendo Switch \u000e\u0000\u0003\u0002\u0000systems\u000e\u0000\u0003\u0002￿",
+  "masked": "On [[1]]2[[2]] Nintendo Switch [[3]]systems[[4]]",
+  "tokens": [
+   "\u000e\u0000\u0003\u0002\u0000",
+   "\u000e\u0000\u0003\u0002￿",
+   "\u000e\u0000\u0003\u0002\u0000",
+   "\u000e\u0000\u0003\u0002￿"
+  ]
+ },
+ {
+  "file": "LayoutMsg__Cmn_JoyconHowToHold.msbt",
+  "key": "L_LegBandGuide-T_JoyCon",
+  "en": "Joy-Con (L)",
+  "masked": "Joy-Con (L)",
+  "tokens": []
+ },
+ {
+  "file": "LayoutMsg__Cmn_RankLegend.msbt",
+  "key": "T_Text",
+  "en": "You have been promoted to A Rank or higher in all sports,\nmaking you a certified \u000e\u0000\u0003\u0002\u0000Legend\u000e\u0000\u0003\u0002￿! You make Spocco Square a\nworld-class place to compete!",
+  "masked": "You have been promoted to A Rank or higher in all sports,\nmaking you a certified [[1]]Legend[[2]]! You make Spocco Square a\nworld-class place to compete!",
+  "tokens": [
+   "\u000e\u0000\u0003\u0002\u0000",
+   "\u000e\u0000\u0003\u0002￿"
+  ]
+ },
+ {
+  "file": "LayoutMsg__Cmn_RewardPoint.msbt",
+  "key": "T_TrialAttention",
+  "en": "You can earn up to \u000e\u0000\u0003\u0002\u00002\u000e\u0000\u0003\u0002￿ items \u000e\u0000\u0003\u0002\u0000per week \u000e\u0000\u0003\u0002￿(more items can\nbe obtained as a Nintendo Switch Online member).",
+  "masked": "You can earn up to [[1]]2[[2]] items [[3]]per week [[4]](more items can\nbe obtained as a Nintendo Switch Online member).",
+  "tokens": [
+   "\u000e\u0000\u0003\u0002\u0000",
+   "\u000e\u0000\u0003\u0002￿",
+   "\u000e\u0000\u0003\u0002\u0000",
+   "\u000e\u0000\u0003\u0002￿"
+  ]
+ },
+ {
+  "file": "LayoutMsg__Glf_HoleResult.msbt",
+  "key": "T_ChipIn",
+  "en": "Chip In!",
+  "masked": "Chip In!",
+  "tokens": []
+ },
+ {
+  "file": "LayoutMsg__Glf_HoleResult.msbt",
+  "key": "T_DoubleBogey",
+  "en": "Double Bogey",
+  "masked": "Double Bogey",
+  "tokens": []
+ },
+ {
+  "file": "LayoutMsg__Glf_HoleResult.msbt",
+  "key": "T_HoleInOne",
+  "en": "Hole in One!",
+  "masked": "Hole in One!",
+  "tokens": []
+ },
+ {
+  "file": "LayoutMsg__Glf_HoleResult.msbt",
+  "key": "T_TripleBogey",
+  "en": "Triple Bogey",
+  "masked": "Triple Bogey",
+  "tokens": []
+ },
+ {
+  "file": "LayoutMsg__SOC_GuideLegBand.msbt",
+  "key": "T_Guide",
+  "en": "\u000e\u0000\u0003\u0002\u0000Swing your leg up \u000e\u0000\u0003\u0002￿with the leg strap\nattached, and try kicking.",
+  "masked": "[[1]]Swing your leg up [[2]]with the leg strap\nattached, and try kicking.",
+  "tokens": [
+   "\u000e\u0000\u0003\u0002\u0000",
+   "\u000e\u0000\u0003\u0002￿"
+  ]
+ },
+ {
+  "file": "LayoutMsg__SOC_WearLegBand.msbt",
+  "key": "L_LegBandGuide-T_Description1",
+  "en": "Insert the Joy-Con (\u000e\u0000\u0003\u0002\u0000L\u000e\u0000\u0003\u0002￿)\ninto the pocket on the\nleg strap.",
+  "masked": "Insert the [[1]]Joy-Con ([[2]]L[[3]])\ninto the pocket on the\nleg strap.",
+  "tokens": [
+   "",
+   "\u000e\u0000\u0003\u0002\u0000",
+   "\u000e\u0000\u0003\u0002￿"
+  ]
+ },
+ {
+  "file": "LayoutMsg__SOC_WearLegBand.msbt",
+  "key": "L_LegBandGuide-T_Description2",
+  "en": "Pass the strap through\nthe hole, and wrap it\naround your \u000e\u0000\u0003\u0002\u0000kicking leg\u000e\u0000\u0003\u0002￿.",
+  "masked": "Pass the strap through\nthe hole, and wrap it\naround your [[1]]kicking leg[[2]].",
+  "tokens": [
+   "\u000e\u0000\u0003\u0002\u0000",
+   "\u000e\u0000\u0003\u0002￿"
+  ]
+ },
+ {
+  "file": "LayoutMsg__SOC_WearLegBand.msbt",
+  "key": "L_LegBandGuide-T_Description3",
+  "en": "Position the leg strap\nat the \u000e\u0000\u0003\u0002\u0000center \u000e\u0000\u0003\u0002￿of your\nthigh, then \u000e\u0000\u0003\u0002\u0000stand still\u000e\u0000\u0003\u0002￿\nfor a moment.",
+  "masked": "Position the leg strap\nat the [[1]]center [[2]]of your\nthigh, then [[3]]stand still[[4]]\nfor a moment.",
+  "tokens": [
+   "\u000e\u0000\u0003\u0002\u0000",
+   "\u000e\u0000\u0003\u0002￿",
+   "\u000e\u0000\u0003\u0002\u0000",
+   "\u000e\u0000\u0003\u0002￿"
+  ]
+ },
+ {
+  "file": "LayoutMsg__SOC_WearLegBand.msbt",
+  "key": "L_LegBandGuide-T_JoyCon",
+  "en": "Joy-Con (L)",
+  "masked": "Joy-Con (L)",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__Common.msbt",
+  "key": "DlgControllerSelect_Attention_Chanbara",
+  "en": "You cannot choose Twin Swords.",
+  "masked": "You cannot choose Twin Swords.",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__Common.msbt",
+  "key": "DlgControllerSelect_Leg",
+  "en": "Each person uses a leg strap",
+  "masked": "Each person uses a leg strap",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__Common.msbt",
+  "key": "DlgControllerSelect_LegShare",
+  "en": "Take turns using 1 leg strap",
+  "masked": "Take turns using 1 leg strap",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__Common.msbt",
+  "key": "DlgControllerSelect_One",
+  "en": "Play with 1 Joy-Con controller each",
+  "masked": "Play with 1 Joy-Con controller each",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__Common.msbt",
+  "key": "DlgControllerSelect_OneByOne",
+  "en": "Each person uses 1 Joy-Con",
+  "masked": "Each person uses 1 Joy-Con",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__Common.msbt",
+  "key": "DlgControllerSelect_ShareEveryone",
+  "en": "Everyone uses 1 Joy-Con",
+  "masked": "Everyone uses 1 Joy-Con",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__Common.msbt",
+  "key": "DlgControllerSelect_ShareTeam",
+  "en": "Each team uses 1 Joy-Con",
+  "masked": "Each team uses 1 Joy-Con",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__Common.msbt",
+  "key": "DlgControllerSelect_Two",
+  "en": "Play with 2 Joy-Con controllers each",
+  "masked": "Play with 2 Joy-Con controllers each",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__Common.msbt",
+  "key": "DlgController_Dual",
+  "en": "This sport is played with two\ncontrollers. Reconfiguring the\nJoy-Con controllers.",
+  "masked": "This sport is played with two\ncontrollers. Reconfiguring the\nJoy-Con controllers.",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__Common.msbt",
+  "key": "DlgController_Single",
+  "en": "This sport is played with one\ncontroller. Reconfiguring the\nJoy-Con controllers.",
+  "masked": "This sport is played with one\ncontroller. Reconfiguring the\nJoy-Con controllers.",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__Common.msbt",
+  "key": "PlayerTitle_Slot1_2",
+  "en": "\u000e\u0002\u0001\u0002촀 \u000e\u0002\u0001\u0002촁",
+  "masked": "[[1]] [[2]]",
+  "tokens": [
+   "\u000e\u0002\u0001\u0002촀",
+   "\u000e\u0002\u0001\u0002촁"
+  ]
+ },
+ {
+  "file": "ProgramMsg__Common.msbt",
+  "key": "RewardPointType_Bad_SuperSmash",
+  "en": "Repeat Super Smashes",
+  "masked": "Repeat Super Smashes",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__Common.msbt",
+  "key": "RewardPointType_Base",
+  "en": "Play Bonus",
+  "masked": "Play Bonus",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__Common.msbt",
+  "key": "RewardPointType_Campaign",
+  "en": "Event Bonus",
+  "masked": "Event Bonus",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__Common.msbt",
+  "key": "RewardPointType_Glf_HoleInOne",
+  "en": "Hole in One!",
+  "masked": "Hole in One!",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__Common.msbt",
+  "key": "RewardPointType_Order",
+  "en": "Ranking Bonus",
+  "masked": "Ranking Bonus",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__Common.msbt",
+  "key": "RewardPointType_Soc_NicePlay",
+  "en": "Hustle Award",
+  "masked": "Hustle Award",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__Common.msbt",
+  "key": "RewardPointType_Tns_RocketServe",
+  "en": "Repeat Rocket Serves",
+  "masked": "Repeat Rocket Serves",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__Common.msbt",
+  "key": "RewardPointType_Win",
+  "en": "Victory Bonus",
+  "masked": "Victory Bonus",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUen.msbt",
+  "key": "111",
+  "en": "100 Bits",
+  "masked": "100 Bits",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUen.msbt",
+  "key": "158",
+  "en": "Good Night",
+  "masked": "Good Night",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUen.msbt",
+  "key": "220",
+  "en": "Not Sure",
+  "masked": "Not Sure",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUen.msbt",
+  "key": "222",
+  "en": "Rainy Day",
+  "masked": "Rainy Day",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUen.msbt",
+  "key": "241",
+  "en": "I Wonder",
+  "masked": "I Wonder",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUen.msbt",
+  "key": "252",
+  "en": "Drop Shot",
+  "masked": "Drop Shot",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUen.msbt",
+  "key": "362",
+  "en": "Blood Type",
+  "masked": "Blood Type",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUen.msbt",
+  "key": "374",
+  "en": "I'm Sorry",
+  "masked": "I'm Sorry",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUen.msbt",
+  "key": "376",
+  "en": "No Thanks",
+  "masked": "No Thanks",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUen.msbt",
+  "key": "377",
+  "en": "Good Luck",
+  "masked": "Good Luck",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUen.msbt",
+  "key": "408",
+  "en": "After All",
+  "masked": "After All",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_USen.msbt",
+  "key": "111",
+  "en": "100 Bits",
+  "masked": "100 Bits",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_USen.msbt",
+  "key": "158",
+  "en": "Good Night",
+  "masked": "Good Night",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_USen.msbt",
+  "key": "220",
+  "en": "Not Sure",
+  "masked": "Not Sure",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_USen.msbt",
+  "key": "222",
+  "en": "Rainy Day",
+  "masked": "Rainy Day",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_USen.msbt",
+  "key": "241",
+  "en": "I Wonder",
+  "masked": "I Wonder",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_USen.msbt",
+  "key": "252",
+  "en": "Drop Shot",
+  "masked": "Drop Shot",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_USen.msbt",
+  "key": "362",
+  "en": "Blood Type",
+  "masked": "Blood Type",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_USen.msbt",
+  "key": "374",
+  "en": "I'm Sorry",
+  "masked": "I'm Sorry",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_USen.msbt",
+  "key": "376",
+  "en": "No Thanks",
+  "masked": "No Thanks",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_USen.msbt",
+  "key": "377",
+  "en": "Good Luck",
+  "masked": "Good Luck",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_USen.msbt",
+  "key": "408",
+  "en": "After All",
+  "masked": "After All",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__Golf.msbt",
+  "key": "Commentary_ChipIn",
+  "en": "Chip In!",
+  "masked": "Chip In!",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__Golf.msbt",
+  "key": "Commentary_DoubleBogey",
+  "en": "Double Bogey",
+  "masked": "Double Bogey",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__Golf.msbt",
+  "key": "Commentary_HoleInOne",
+  "en": "Hole in One!",
+  "masked": "Hole in One!",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__Golf.msbt",
+  "key": "Commentary_TripleBogey",
+  "en": "Triple Bogey",
+  "masked": "Triple Bogey",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__Golf.msbt",
+  "key": "CourseIn_Par",
+  "en": "Par \u000e\u0002\u0000\u0004\u0001",
+  "masked": "Par [[1]]",
+  "tokens": [
+   "\u000e\u0002\u0000\u0004\u0001"
+  ]
+ },
+ {
+  "file": "ProgramMsg__Golf.msbt",
+  "key": "GolfScoreType_DoubleBogey",
+  "en": "Double Bogey",
+  "masked": "Double Bogey",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__Golf.msbt",
+  "key": "GolfScoreType_HoleInOne",
+  "en": "Hole in One!",
+  "masked": "Hole in One!",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__Golf.msbt",
+  "key": "GolfScoreType_TripleBogey",
+  "en": "Triple Bogey",
+  "masked": "Triple Bogey",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__Golf.msbt",
+  "key": "L_Distance-T_Par",
+  "en": "Par \u000e\u0002\u0000\u0004\u0001",
+  "masked": "Par [[1]]",
+  "tokens": [
+   "\u000e\u0002\u0000\u0004\u0001"
+  ]
+ },
+ {
+  "file": "ProgramMsg__Golf.msbt",
+  "key": "WindVelocity",
+  "en": "\u000e\u0002\u0000\u0004\u0002\u0000 mph",
+  "masked": "[[1]] mph",
+  "tokens": [
+   "\u000e\u0002\u0000\u0004\u0002\u0000"
+  ]
+ },
+ {
+  "file": "ProgramMsg__Menu.msbt",
+  "key": "OnlineAttention_Gest",
+  "en": "Play online and compete with players from around\nthe world.\n\nOther players will be able to see your nickname and\nin-game appearance, which may be stored on the\ndevices of players with whom you've played online.\n\nCommunity Guidelines apply and can be found on\nNintendo's website. Remember to please treat others\nwith respect while playing online.\n\nNote: Sometimes your opponent will be a CPU.",
+  "masked": "Play online and compete with players from around\nthe world.\n\nOther players will be able to see your nickname and\nin-game appearance, which may be stored on the\ndevices of players with whom you've played online.\n\nCommunity Guidelines apply and can be found on\nNintendo's website. Remember to please treat others\nwith respect while playing online.\n\nNote: Sometimes your opponent will be a CPU.",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__Menu.msbt",
+  "key": "OnlineAttention_NoGest",
+  "en": "Play online and compete with players from around\nthe world.\n\nOther players will be able to see your nickname,\nin-game appearance, title, and other play data. Your\nnickname, in-game appearance, and title might be\nstored on the devices of players with whom you've\nplayed in Play Globally.\n\nCommunity Guidelines apply and can be found on\nNintendo's website. Remember to please treat others\nwith respect while playing online.\n\nNote: Sometimes your opponent will be a CPU.",
+  "masked": "Play online and compete with players from around\nthe world.\n\nOther players will be able to see your nickname,\nin-game appearance, title, and other play data. Your\nnickname, in-game appearance, and title might be\nstored on the devices of players with whom you've\nplayed in Play Globally.\n\nCommunity Guidelines apply and can be found on\nNintendo's website. Remember to please treat others\nwith respect while playing online.\n\nNote: Sometimes your opponent will be a CPU.",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Art_Management",
+  "en": "Art Management",
+  "masked": "Art Management",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Art_Progress_Management",
+  "en": "Art-Progress Management",
+  "masked": "Art-Progress Management",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Asian_Localization_Coordination",
+  "en": "Asian Localization Coordination",
+  "masked": "Asian Localization Coordination",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Assistant_Director",
+  "en": "Assistant Director",
+  "masked": "Assistant Director",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Associate_Lead_Character_Art",
+  "en": "Associate Lead - Character Art",
+  "masked": "Associate Lead - Character Art",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Associate_Lead_Character_Modeling",
+  "en": "Associate Lead - Character Modeling",
+  "masked": "Associate Lead - Character Modeling",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Associate_Lead_Landscape_Modeling",
+  "en": "Associate Lead - Landscape Modeling",
+  "masked": "Associate Lead - Landscape Modeling",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Associate_Lead_Player_Animation",
+  "en": "Associate Lead - Player Animation",
+  "masked": "Associate Lead - Player Animation",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Associate_Lead_VFX_Art",
+  "en": "Associate Lead - VFX Art",
+  "masked": "Associate Lead - VFX Art",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Brazilian_Portuguese_Voice",
+  "en": "Brazilian Portuguese Voice",
+  "masked": "Brazilian Portuguese Voice",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Character_Art",
+  "en": "Character Art",
+  "masked": "Character Art",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Character_Modeling",
+  "en": "Character Modeling",
+  "masked": "Character Modeling",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Chinese_Voice",
+  "en": "Chinese Voice",
+  "masked": "Chinese Voice",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Chinese_Voice_Director",
+  "en": "Chinese Voice Director",
+  "masked": "Chinese Voice Director",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_City_Landscape_Modeling",
+  "en": "City-Landscape Modeling",
+  "masked": "City-Landscape Modeling",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Cutscene_Design",
+  "en": "Cutscene Design",
+  "masked": "Cutscene Design",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Debug_Support",
+  "en": "Debug Support",
+  "masked": "Debug Support",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Design_Support",
+  "en": "Design Support",
+  "masked": "Design Support",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Dutch_Voice",
+  "en": "Dutch Voice",
+  "masked": "Dutch Voice",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Dutch_Voice_Director",
+  "en": "Dutch Voice Director",
+  "masked": "Dutch Voice Director",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Engineering_Support",
+  "en": "Engineering Support",
+  "masked": "Engineering Support",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_English_Voice",
+  "en": "English Voice",
+  "masked": "English Voice",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_European_Portuguese_Voice",
+  "en": "European Portuguese Voice",
+  "masked": "European Portuguese Voice",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_European_Portuguese_Voice_Director",
+  "en": "European Portuguese Voice Director",
+  "masked": "European Portuguese Voice Director",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_European_Spanish_Voice",
+  "en": "European Spanish Voice",
+  "masked": "European Spanish Voice",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_European_Spanish_Voice_Director",
+  "en": "European Spanish Voice Director",
+  "masked": "European Spanish Voice Director",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_French_Voice",
+  "en": "French Voice",
+  "masked": "French Voice",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_French_Voice_Director",
+  "en": "French Voice Director",
+  "masked": "French Voice Director",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Game_Design_Support",
+  "en": "Game Design Support",
+  "masked": "Game Design Support",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_German_Voice",
+  "en": "German Voice",
+  "masked": "German Voice",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_German_Voice_Director",
+  "en": "German Voice Director",
+  "masked": "German Voice Director",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Header_Title",
+  "en": "NINTENDO SWITCH SPORTS Staff",
+  "masked": "NINTENDO SWITCH SPORTS Staff",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Header_Title_Bsk_00",
+  "en": "NINTENDO SWITCH SPORTS",
+  "masked": "NINTENDO SWITCH SPORTS",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Header_Title_Bsk_01",
+  "en": "Basketball Staff",
+  "masked": "Basketball Staff",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Italian_Voice",
+  "en": "Italian Voice",
+  "masked": "Italian Voice",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Italian_Voice_Director",
+  "en": "Italian Voice Director",
+  "masked": "Italian Voice Director",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Japanese_Voice",
+  "en": "Japanese Voice",
+  "masked": "Japanese Voice",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Korean_Voice",
+  "en": "Korean Voice",
+  "masked": "Korean Voice",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Korean_Voice_Director",
+  "en": "Korean Voice Director",
+  "masked": "Korean Voice Director",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Landscape_Direction",
+  "en": "Landscape Direction",
+  "masked": "Landscape Direction",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Landscape_Modeling",
+  "en": "Landscape Modeling",
+  "masked": "Landscape Modeling",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Landscape_Support",
+  "en": "Landscape Support",
+  "masked": "Landscape Support",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Last_Best_Score",
+  "en": "High score: \u000e\u0002\u0000\u0004\u0003",
+  "masked": "High score: [[1]]",
+  "tokens": [
+   "\u000e\u0002\u0000\u0004\u0003"
+  ]
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Latin_American_Spanish_Voice",
+  "en": "Latin American Spanish Voice",
+  "masked": "Latin American Spanish Voice",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Lead_Artists",
+  "en": "Lead Artists",
+  "masked": "Lead Artists",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Lead_Character_Animation",
+  "en": "Lead - Character Animation",
+  "masked": "Lead - Character Animation",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Lead_Character_Art",
+  "en": "Lead - Character Art",
+  "masked": "Lead - Character Art",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Lead_Game_Designer",
+  "en": "Lead Game Designer",
+  "masked": "Lead Game Designer",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Lead_Landscape_Art",
+  "en": "Lead - Landscape Art",
+  "masked": "Lead - Landscape Art",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Lead_Programmer",
+  "en": "Lead Programmer",
+  "masked": "Lead Programmer",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Lead_UI_Design",
+  "en": "Lead - UI Design",
+  "masked": "Lead - UI Design",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Lead_VFX_Art",
+  "en": "Lead - VFX Art",
+  "masked": "Lead - VFX Art",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Lighting_Shader_Art",
+  "en": "Lighting/Shader Art",
+  "masked": "Lighting/Shader Art",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Logo_Animation",
+  "en": "Logo Animation",
+  "masked": "Logo Animation",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Logo_Art",
+  "en": "Logo Art",
+  "masked": "Logo Art",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Movie_Editor",
+  "en": "Movie Editor",
+  "masked": "Movie Editor",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_NHL_Quality_Assurance",
+  "en": "NHL Quality Assurance",
+  "masked": "NHL Quality Assurance",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_NHL_Translation",
+  "en": "NHL Translation",
+  "masked": "NHL Translation",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_NHT_Quality_Assurance",
+  "en": "NHT Quality Assurance",
+  "masked": "NHT Quality Assurance",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_NHT_Translation",
+  "en": "NHT Translation",
+  "masked": "NHT Translation",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_NOA_Audio_Engineer",
+  "en": "NOA Audio Engineer",
+  "masked": "NOA Audio Engineer",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_NOA_Language_QA",
+  "en": "NOA Language QA",
+  "masked": "NOA Language QA",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_NOA_Localization",
+  "en": "NOA Localization",
+  "masked": "NOA Localization",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_NOA_Localization_Management",
+  "en": "NOA Localization Management",
+  "masked": "NOA Localization Management",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_NOE_Localisation_Producers",
+  "en": "NOE Localisation Producers",
+  "masked": "NOE Localisation Producers",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_NOE_Quality_Assurance",
+  "en": "NOE Quality Assurance",
+  "masked": "NOE Quality Assurance",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_NOE_Translation",
+  "en": "NOE Translation",
+  "masked": "NOE Translation",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_NOK_Quality_Assurance",
+  "en": "NOK Quality Assurance",
+  "masked": "NOK Quality Assurance",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_NOK_Translation",
+  "en": "NOK Translation",
+  "masked": "NOK Translation",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_NPC_Animation",
+  "en": "NPC Animation",
+  "masked": "NPC Animation",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Object_Art",
+  "en": "Object Art",
+  "masked": "Object Art",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Player_Animation",
+  "en": "Player Animation",
+  "masked": "Player Animation",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Player_Animation_Support",
+  "en": "Player-Animation Support",
+  "masked": "Player-Animation Support",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Production_Coordination",
+  "en": "Production Coordination",
+  "masked": "Production Coordination",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Production_Management",
+  "en": "Production Management",
+  "masked": "Production Management",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Program_Directors",
+  "en": "Program Directors",
+  "masked": "Program Directors",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Program_Support",
+  "en": "Program Support",
+  "masked": "Program Support",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Project_Management",
+  "en": "Project Management",
+  "masked": "Project Management",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Project_Management_Support",
+  "en": "Project Management Support",
+  "masked": "Project Management Support",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Russian_Voice",
+  "en": "Russian Voice",
+  "masked": "Russian Voice",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Russian_Voice_Director",
+  "en": "Russian Voice Director",
+  "masked": "Russian Voice Director",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Score",
+  "en": "Your score this time: \u000e\u0002\u0000\u0004\u0003",
+  "masked": "Your score this time: [[1]]",
+  "tokens": [
+   "\u000e\u0002\u0000\u0004\u0003"
+  ]
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Score_Updated",
+  "en": "Your score: \u000e\u0000\u0003\u0002\u0000\u000e\u0002\u0000\u0004\u0003\u0000\u000e\u0000\u0003\u0002￿",
+  "masked": "Your score: [[1]]",
+  "tokens": [
+   "\u000e\u0000\u0003\u0002\u0000\u000e\u0002\u0000\u0004\u0003\u0000\u000e\u0000\u0003\u0002￿"
+  ]
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Sound_Support",
+  "en": "Sound Support",
+  "masked": "Sound Support",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Stamp_Illustration",
+  "en": "Stamp Illustration",
+  "masked": "Stamp Illustration",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Testing_Eighting",
+  "en": "Testing - Eighting",
+  "masked": "Testing - Eighting",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Testing_Lead_Eighting",
+  "en": "Testing Lead - Eighting",
+  "masked": "Testing Lead - Eighting",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Testing_Mario_Club",
+  "en": "Testing - Mario Club",
+  "masked": "Testing - Mario Club",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Testing_NOA_Product_Testing",
+  "en": "Testing - NOA Product Testing",
+  "masked": "Testing - NOA Product Testing",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Thank_you_for_playing",
+  "en": "Thanks for playing!",
+  "masked": "Thanks for playing!",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_UI_Design",
+  "en": "UI Design",
+  "masked": "UI Design",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_UI_Design_Support",
+  "en": "UI Design Support",
+  "masked": "UI Design Support",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_UI_Direction",
+  "en": "UI Direction",
+  "masked": "UI Direction",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_VFX_Direction",
+  "en": "VFX Direction",
+  "masked": "VFX Direction",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_VFX_Support",
+  "en": "VFX Support",
+  "masked": "VFX Support",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_VFX_Technical_Support",
+  "en": "VFX Technical Support",
+  "masked": "VFX Technical Support",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_Very_Special_Thanks",
+  "en": "Very Special Thanks",
+  "masked": "Very Special Thanks",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_iQue_Localization_Coordination",
+  "en": "iQue Localization Coordination",
+  "masked": "iQue Localization Coordination",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_iQue_Quality_Assurance",
+  "en": "iQue Quality Assurance",
+  "masked": "iQue Quality Assurance",
+  "tokens": []
+ },
+ {
+  "file": "ProgramMsg__StaffRoll.msbt",
+  "key": "Stf_iQue_Translation",
+  "en": "iQue Translation",
+  "masked": "iQue Translation",
+  "tokens": []
+ }
+]

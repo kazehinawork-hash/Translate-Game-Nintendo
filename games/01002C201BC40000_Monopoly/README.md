@@ -43,40 +43,55 @@ Text **không** nằm trong `.locres`/CSV rời mà trong các **TextAsset** bê
 1. Bóc 2.063 chuỗi từ `oasis_englishgb` → `translations/mono_en.json`.
 2. **Tạo glossary TRƯỚC** (BH-22) → `glossary/monopoly.csv` (47 thuật ngữ chuẩn Monopoly + 300 gợi ý).
 3. Dịch **1.704 chuỗi duy nhất** bằng 3 subagent (`todo_*.json` → `vi_*.json`) → `mono_vi.json`.
-4. Ghi lại vào XML (thay thuộc tính `text="…"`) → đóng gói lại TextAsset → bundle.
-5. Kiểm chứng bundle mới: **1.932 mục hiện tiếng Việt** / 2.063 (phần còn lại là mục giữ nguyên hợp lệ:
-   `Ubisoft Connect`, `OK`, `AI`, `{0}`, chuỗi charset…).
+4. Ghi lại vào XML → đóng gói lại TextAsset → bundle.
+5. **Vá CẢ 13 file ngôn ngữ** — quan trọng: game có 14 ngôn ngữ (13 file + 1 master `English`).
+   Thay thế **theo `id`** (id giống nhau giữa mọi ngôn ngữ) chứ không theo chuỗi, nên chọn ngôn ngữ nào
+   trong game cũng ra tiếng Việt — giống cách làm Hogwarts (patch pak chứa đủ 14 ngôn ngữ).
+   Tổng **26.819 mục** được thay. `oasis__global` là file master, không có `<translations>` → bỏ qua.
 
 **Thành phẩm**: `output/atmosphere/contents/01002C201BC40000/romfs/Data/data.unity3d` (522 MB)
 
 `Data/data.unity3d` là **file rời trong RomFS** → **LayeredFS thay trực tiếp, KHÔNG cần patch pak**.
 
-## QA cuối (`tools/mono_final_qa.py`) — PASS
+## QA cuối (`tools/mono_final_qa.py`) — PASS CẢ 13 FILE
 
 | Hạng mục | Kết quả |
 |---|---|
 | Số object trong bundle | 198.295 = 198.295 ✅ |
-| Số mục | 2.063 = 2.063 ✅ |
-| Key thiếu / thừa | 0 / 0 ✅ |
-| Lệch placeholder & tag (`{0}`, `%s`, `<b>`, `&#xA;`…) | **0** ✅ |
+| Số `id` mỗi file | 2.063 = 2.063 ✅ |
+| Số file ngôn ngữ | 13 = 13 ✅ |
+| Lệch tag/placeholder (`{0}`, `%s`, `<b>`…) | **0** ✅ |
 | Lệch xuống dòng | **0** ✅ |
-| Ký tự ngoài (CJK/Hangul/Kana/Nga/Ả Rập) | **0** ✅ |
-| Ký tự điều khiển | **0** ✅ |
+| Ký tự ngoài **mới sinh** (CJK/Hangul/Kana/Nga/Ả Rập) | **0** ✅ |
 | Chuỗi rỗng | **0** ✅ |
+| `id` thiếu / thừa | 0 / 0 ✅ |
+| **id khớp giữa các ngôn ngữ** | ✅ đã kiểm chứng |
 
-**1.926 mục đã dịch** (khác bản gốc), phần còn lại là mục giữ nguyên hợp lệ (`Ubisoft Connect`, `OK`, `AI`, `{0}`, charset).
+Kiểm chứng id khớp (đây là mấu chốt khi vá theo id):
 
-### 🐛 Lỗi đã tìm ra & sửa trong lần QA cuối
+```
+id 5:  Play (EN) · Spielen (DE) · プレイ (JA) · Jugar (ES) · Играть (RU)  →  "Chơi"
+id 6:  News · Neuigkeiten · ニュース · Noticias · Новости               →  "Tin tức"
+id 7:  Help And Options · Hilfe und Optionen · ヘルプとオプション …     →  "Trợ giúp và Tuỳ chọn"
+```
 
-Nguồn lưu xuống dòng bằng **tham chiếu ký tự `&#xA;`** trong thuộc tính XML (KHÔNG phải ký tự xuống dòng thật):
+### 🐛 Hai lỗi đã tìm ra & sửa trong lần QA cuối
+
+**(1) Mất ngắt dòng ở 124 mục.** Nguồn lưu xuống dòng bằng **tham chiếu ký tự `&#xA;`**
+trong thuộc tính XML (KHÔNG phải ký tự xuống dòng thật):
 
 ```xml
 <t id="201" text="Authentication failed. &#xA;Please try again."/>
 ```
 
-Bản build đầu ghi **xuống dòng thật** → XML chuẩn hoá giá trị thuộc tính biến nó thành **dấu cách**
-→ **mất ngắt dòng** ở **124 mục**. Đã sửa `esc_attr()` trong `mono_build_mod.py` để escape
-`\n → &#xA;`, `\r → &#xD;`, `\t → &#x9;` — QA lại: **0 lệch**.
+Bản build đầu ghi **xuống dòng thật** → XML **chuẩn hoá giá trị thuộc tính** biến nó thành **dấu cách**
+→ mất ngắt dòng. Đã sửa `esc_attr()`: `\n → &#xA;`, `\r → &#xD;`, `\t → &#x9;`.
+
+**(2) Lỗi căn chỉnh 4 byte.** `set_raw_data()` cho TextAsset phải **đệm cuối cho tròn 4 byte**,
+nếu không UnityPy đọc lại báo `Expected to read N bytes, but only read N+2`.
+
+Ngoài ra: một số file có **NUL ở cuối** (`oasis_french`) và XML **hỏng sẵn** (dòng 2068) →
+các file dịch phải vá bằng **regex theo `id`**, không dùng XML parser.
 
 ## Font (cần chơi thử)
 

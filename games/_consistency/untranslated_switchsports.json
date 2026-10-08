@@ -1,0 +1,25 @@
+{
+ "Switch Sports (MSBT)": {
+  "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_EUen.msbt::111": "100 Bits",
+  "ProgramMsg__StaffRoll.msbt::Stf_Header_Title_Bsk_00": "NINTENDO SWITCH SPORTS",
+  "ProgramMsg__Golf.msbt::L_Distance-T_Par": "Par \u000e\u0002\u0000\u0004\u0001",
+  "ProgramMsg__Golf.msbt::WindVelocity": "\u000e\u0002\u0000\u0004\u0002\u0000 mph",
+  "ProgramMsg__Golf.msbt::CourseIn_Par": "Par \u000e\u0002\u0000\u0004\u0001",
+  "ProgramMsg__Golf.msbt::GolfScoreType_HoleInOne": "Hole in One!",
+  "ProgramMsg__Golf.msbt::GolfScoreType_DoubleBogey": "Double Bogey",
+  "ProgramMsg__Golf.msbt::GolfScoreType_TripleBogey": "Triple Bogey",
+  "ProgramMsg__Golf.msbt::Commentary_HoleInOne": "Hole in One!",
+  "ProgramMsg__Golf.msbt::Commentary_ChipIn": "Chip In!",
+  "ProgramMsg__Golf.msbt::Commentary_DoubleBogey": "Double Bogey",
+  "ProgramMsg__Golf.msbt::Commentary_TripleBogey": "Triple Bogey",
+  "ProgramMsg__Equipment__PlayerTitle_gen__PlayerTitle_gen_USen.msbt::111": "100 Bits",
+  "LayoutMsg__Glf_HoleResult.msbt::T_HoleInOne": "Hole in One!",
+  "LayoutMsg__Glf_HoleResult.msbt::T_ChipIn": "Chip In!",
+  "LayoutMsg__Glf_HoleResult.msbt::T_DoubleBogey": "Double Bogey",
+  "LayoutMsg__Glf_HoleResult.msbt::T_TripleBogey": "Triple Bogey",
+  "LayoutMsg__SOC_WearLegBand.msbt::L_LegBandGuide-T_JoyCon": "Joy-Con (L)",
+  "ProgramMsg__Common.msbt::RewardPointType_Glf_HoleInOne": "Hole in One!",
+  "ProgramMsg__Common.msbt::PlayerTitle_Slot1_2": "\u000e\u0002\u0001\u0002촀 \u000e\u0002\u0001\u0002촁",
+  "LayoutMsg__Cmn_JoyconHowToHold.msbt::L_LegBandGuide-T_JoyCon": "Joy-Con (L)"
+ }
+}

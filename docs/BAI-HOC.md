@@ -397,7 +397,71 @@ env.save(pack='original', out_path=<thu_muc_ra>)   # giữ nguyên kiểu nén c
 ⚠️ TextAsset Unity có thể có **tiền tố byte lạ trước nội dung thật** (MONOPOLY: vài byte BOM hỏng trước
 thẻ `<`). Khi parse phải **bỏ mọi thứ trước `<` đầu tiên** rồi mới `decode('utf-16')`.
 
+**BẮT BUỘC đệm cuối cho tròn 4 byte** — Unity căn chỉnh từng trường theo 4 byte. Thiếu đệm → đọc lại báo
+`ValueError: Expected to read N bytes, but only read N+2`:
+
+```python
+buf = struct.pack('<i', len(name)) + name
+while len(buf) % 4: buf += b'\x00'          # đệm sau tên
+buf += struct.pack('<i', len(data)) + data
+while len(buf) % 4: buf += b'\x00'          # đệm cuối object
+o.set_raw_data(buf)
+```
+
+**Vá nhiều file ngôn ngữ: thay theo `ID`, không theo chuỗi.** MONOPOLY có 13 file ngôn ngữ cùng bộ
+**id** (id 5 = `Play`/`Spielen`/`プレイ`/`Jugar`/`Играть`). Nếu khớp theo chuỗi thì chỉ được ~100 mục
+(trùng tên riêng); khớp theo **id** được đủ 2.063/file. Và **đừng dùng XML parser** cho các file dịch:
+một số file có **NUL ở cuối** hoặc **XML hỏng sẵn** — dùng regex `<t ... id=".." text="..">` là đủ.
+
 Sau build **phải mở lại thành phẩm** và so **số object** (198.295) + **số mục** (2.063) với bản gốc.
+
+---
+
+### BH-27. 🚨 NÉN LẠI `.zs` / `.cmp` → PHẢI KHỚP THAM SỐ FRAME CỦA FILE GỐC (windowLog)
+
+**Ca thật: Nintendo Switch Sports (07/10).** File gốc `.zs` của Nintendo dùng **windowLog = 21**
+(byte window descriptor `0x58`). Tool build dùng `zstandard.ZstdCompressor(level=16)` mặc định →
+ra **windowLog = 22** (`0x60`). Decoder của game **từ chối frame** → vào game **báo lỗi software**
+(hoặc không hiện tiếng Việt). Đây là **nguyên nhân crash**, không phải lỗi văn bản.
+
+**Quy tắc:** mọi lần nén lại file của Nintendo phải **đọc tham số từ chính file gốc** rồi nén lại y hệt:
+
+```python
+from zs_util import compress_like          # tools/zs_util.py
+new_zs = compress_like(open(file_goc, 'rb').read(), du_lieu_moi)
+```
+
+Kèm theo — **`.cmp` của Kirby có thêm 4 byte kích thước ở đầu**: `[u32 uncompressed_size][zstd frame]`;
+`.zs` của Switch Sports thì **không** có tiền tố. Phải nhận đúng định dạng trước khi so tham số.
+
+**Dấu hiệu nhận biết:** game chạy được với mod file rời/`.pak`/`.msbt` nhưng **crash** ở game có `.zs`/`.cmp`.
+
+---
+
+### BH-28. Vá font CFF/OTF: ĐỪNG thay bằng TTF — phải GIỮ định dạng + unitsPerEm
+
+**Ca thật: Kirby and the Forgotten Land (07/10).** Font gốc là **OTF/CFF, unitsPerEm = 1000,
+8.207–9.804 glyph**. Tool cũ (`patch_font_kirby.py`) **thay hẳn** bằng subset Arial Unicode →
+**TTF/glyf, unitsPerEm = 2048**, và **mất 262–340 glyph gốc** (đúng lỗi BH-20) → **ô vuông trong game**.
+
+**Kiểm tra bắt buộc sau khi vá font** (chỉ 2 dòng, phát hiện ngay):
+```python
+print('CFF ' in f, f['head'].unitsPerEm, len(f.getBestCmap()))   # phải giống HỆT font gốc
+```
+
+**Cách vá đúng** — `tools/rebuild_cff_font.py` (đã kiểm chứng 11/11 font Kirby):
+- Dựng lại CFF bằng `FontBuilder`, **vẽ lại toàn bộ glyph gốc** qua `T2CharStringPen` → **0 glyph mất**
+- Thêm glyph tiếng Việt từ font nguồn, **scale về đúng unitsPerEm của font đích**
+- Chép lại `GPOS/GSUB/GDEF/VORG/BASE` nếu có
+- ⚠️ **KHÔNG chép `vhea`/`vmtx`**: trong fontTools chúng **dùng chung metrics với `hmtx`**
+  → chép vào sẽ làm `hmtx` hỏng khi đã thêm glyph mới (`KeyError` lúc compile).
+- ⚠️ `fontTools.merge.Merger` **không ghép được** `glyf` (TTF) với `CFF ` (OTF) — lỗi
+  `NotImplementedType ... has no attribute 'cff'`. Phải tự dựng lại như trên.
+- ⚠️ `cffLib.CharStrings` **không cho thêm glyph mới** (`__setitem__` chỉ để GHI ĐÈ) → phải dựng lại CFF.
+
+**Lưu ý khi gom "ký tự cần có" trong bản dịch:** các **tham số mã điều khiển** (vd `䷿Ｏ` sau
+`\x0e\x00\x03\x04`) bị tính nhầm thành ký tự văn bản → sinh yêu cầu glyph không cần thiết.
+Phải **bỏ các run mã điều khiển** trước khi gom ký tự.
 
 ---
 
@@ -423,6 +487,11 @@ Sau build **phải mở lại thành phẩm** và so **số object** (198.295) +
 | MONOPOLY | **124 mục mất ngắt dòng** (game hiện 1 dòng dài) | ghi `\n` thật vào thuộc tính XML → bị chuẩn hoá thành dấu cách | ✅ đã sửa (BH-25) |
 | MONOPOLY | Bundle 520 MB → **1,27 GB** khi build | `env.save()` thiếu `pack='original'` | ✅ đã sửa (BH-26) |
 | MONOPOLY | 2 font **KabelBold/KabelMedium** (OTF/CFF) thiếu 88 dấu | `fontTools.merge` không ghép được glyf (Arial) ↔ CFF (Kabel) | ⚠️ **CHƯA VÁ** — cần chơi thử để biết có dùng tới không |
+| Switch Sports | **Vào game báo lỗi software** (crash) | `.zs` nén lại bằng windowLog 22 trong khi gốc là 21 → decoder game từ chối frame | ✅ **đã sửa** (BH-27) — nén khớp tham số gốc |
+| Switch Sports | Còn 173 chuỗi UI chưa dịch | các key có trong json nhưng value vẫn là tiếng Anh | ✅ **đã dịch** (còn 21 mục giữ nguyên có chủ đích: nhãn golf) |
+| Kirby | **Ô vuông khi hiển thị** | thay hẳn font CFF/upem1000 bằng TTF/upem2048 → mất 262–340 glyph | ✅ **đã sửa** (BH-28) — dựng lại CFF giữ đủ glyph |
+| Unravel Two | **Treo ở logo Nintendo Switch** | `Data.kit.0` trong mod **lớn hơn gốc 1.460.324 byte** (repack LZ4 literal-only) | ⚠️ **CHƯA VÁ** — cần encoder LZ4-có-từ-điển để giữ đúng kích thước file |
+| Ori WotW / It Takes Two | Ô vuông | font nằm **trong bundle Unity / pak**, mod không có file font rời | ⏳ cần vá font trong bundle/pak |
 
 ---
 

@@ -117,6 +117,28 @@
 
 ---
 
+## 3. Nintendo Switch Sports
+- ✅ **ĐÃ SỬA LỖI CRASH (07/10):** vào game báo lỗi software vì file `.zs` được nén lại bằng
+  **windowLog 22** trong khi file gốc dùng **21** → decoder của game **từ chối frame**.
+  Đã sửa tận gốc: `tools/build_mod.py` + `tools/build_custom_font.py` nay dùng
+  `tools/zs_util.py::compress_like(file_goc, du_lieu_moi)` để **nén khớp tham số gốc**. (BH-27)
+- ✅ **ĐÃ DỊCH NỐT 173 CHUỖI UI** còn tiếng Anh (hướng dẫn chơi, hộp thoại tay cầm, thưởng,
+  nhãn golf, 99 chức danh Staff Roll). Chưa dịch **173 → 21** (21 mục còn lại là **nhãn golf giữ
+  nguyên tiếng Anh có chủ đích** + 1 chuỗi chỉ có mã điều khiển). QA `qa_text.py --game switchsports`: **PASS**.
+  Công cụ: `list_untranslated.py`, `sws_prepare/apply_untranslated.py` (che mã điều khiển thành token `[[n]]`).
+- Thành phẩm: `output/atmosphere/contents/0100D2F00D5C0000/romfs/{Mals,Font}/` (4,6 MB).
+
+## 4b. Kirby and the Forgotten Land — SỬA LỖI Ô VUÔNG (07/10)
+- 🐛 **Nguyên nhân gốc:** 11 font `font/ScalableFontBin/*.bfotf.cmp` gốc là **OTF/CFF, unitsPerEm 1000,
+  8.207–9.804 glyph**; tool cũ **thay hẳn** bằng subset Arial Unicode → **TTF/glyf, upem 2048** và
+  **mất 262–340 glyph gốc** (đúng lỗi BH-20) → **ô vuông trong game**.
+- ✅ **Đã sửa bằng `tools/rebuild_cff_font.py` + `tools/patch_font_kirby_v2.py`:**
+  dựng lại CFF, **vẽ lại toàn bộ glyph gốc** (0 glyph mất) + thêm glyph tiếng Việt **scale về upem 1000**,
+  giữ `GPOS/GSUB/GDEF/VORG/BASE`. Kiểm chứng **11/11 font**: CFF ✓, upem 1000 → 1000 ✓, **mất 0 glyph** ✓.
+- ✅ QA Kirby (`tools/qa_kirby.py`): **2.508 chuỗi, 0 lệch mã điều khiển, 0 ký tự lạ** → **PASS**.
+- 📌 Ghi chú: dãy `\x0e\x00\x03\x04䷿Ｏ` trong text là **mã điều khiển GỐC của game** (có trong cả
+  EN/JP/CN/FR) — **không phải lỗi dịch**.
+
 ## 5. 🔄 ĐANG LÀM: Unravel Two (Nintendo Switch)
 - **Title ID**: `0100E5D00CC0C000` (Base) / `0100E5D00CC0C800` (Update v65536)
 - **Engine**: Native Switch (NVN), engine riêng Coldwood — **không** phải Unity/UE.
@@ -166,6 +188,14 @@
       **chỉ đúng 6 record thay đổi** (đều chứa tiếng Việt).
   - ⚠️ **CẦN TEST TRÊN MÁY:** font `fonts/unravel.fgen` (dạng riêng, chưa giải mã) — nếu vào game
     thấy ô vuông thì phải vá font. Nếu không thấy tiếng Việt thì kiểm tra lại bảng ngôn ngữ theo máy.
+  - 🐛 **NGHI VẤN CHÍNH của "treo ở logo Nintendo Switch" (07/10):** file `Data.kit.0` trong mod
+    là **211.149.762 byte**, còn bản gốc `E:\UNR_work\parts\Data.kit.0` là **209.689.438 byte**
+    → **LỚN HƠN 1.460.324 byte**. `kit_repack.py` nén record bị sửa bằng **khối LZ4 literal-only
+    (không dùng match)** nên phình to; game rất có thể kiểm tra kích thước file theo index
+    (`Data.kit`, 1,4 MB) → treo ngay khi nạp.
+    **Hướng sửa:** viết encoder **LZ4-có-từ-điển** (giữ cửa sổ 64 KB như `kit_lz4dict.decode_block`)
+    để record sửa nằm **trong đúng ngân sách byte cũ**, giữ **kích thước file bằng đúng bản gốc**.
+  - 🧹 Đã xoá file rác `README.md` nằm lẫn trong thư mục mod.
   - ⏳ Còn lại: vá font `.fgen` (nếu cần, sau khi test máy) + chạy `qa_text.py --game unravel`.
 - **Chi tiết định dạng + việc còn lại:** `games/0100E5D00CC0C000_UnravelTwo/README.md`.
 
@@ -243,16 +273,23 @@
   - ⚠️ TextAsset có **tiền tố byte lạ** trước thẻ `<` → khi parse phải bỏ phần trước `<` rồi mới `decode('utf-16')`.
 - **Kết quả đã build:**
   - ✅ Dịch **1.704 chuỗi duy nhất** (3 subagent, chunk 350) → **thay 2.036 mục** trong XML.
-  - ✅ **QA cuối PASS** (`tools/mono_final_qa.py`, đối chiếu từng mục gốc ↔ thành phẩm):
-    198.295 object khớp · 2.063 mục khớp · 0 key thiếu/thừa · **0 lệch placeholder/tag** ·
-    **0 lệch xuống dòng** · 0 ký tự ngoài (CJK/Hangul/Nga…) · 0 ký tự điều khiển · 0 chuỗi rỗng.
-    **1.926 mục đã dịch.**
+  - ✅ **Vá CẢ 13 file ngôn ngữ** (theo **`id`**, không theo chuỗi) = **26.819 mục** → chọn ngôn ngữ nào
+    trong game cũng ra tiếng Việt (giống cách làm Hogwarts): FR/DE/ES/IT/NL/PL/RU/JA/KO/ZH-Hans/ZH-Hant/PT-BR/EnglishGB.
+    `oasis__global` là file master (không có `<translations>`) nên bỏ qua đúng.
+  - ✅ **QA cuối PASS** (`tools/mono_final_qa.py`, đối chiếu từng mục gốc ↔ thành phẩm, cả 13 file):
+    198.295 object khớp · 2.063 id/file khớp · **0 lệch tag** · **0 lệch xuống dòng** ·
+    **0 ký tự lạ mới sinh** · 0 chuỗi rỗng · 0 id thiếu/thừa. **id khớp giữa các ngôn ngữ** đã kiểm chứng
+    (id 5 = Play/Spielen/プレイ/Jugar/Играть → đều ra "Chơi").
   - ✅ Glossary tạo **TRƯỚC khi dịch** (BH-22): `glossary/monopoly.csv` (47 thuật ngữ chuẩn + gợi ý).
   - ✅ Thành phẩm: `output/atmosphere/contents/01002C201BC40000/romfs/Data/data.unity3d` (**522 MB**, giữ nguyên nén gốc).
   - ✅ `Data/data.unity3d` là **file rời trong RomFS** → **LayeredFS thay trực tiếp, KHÔNG cần patch pak**.
 - 🐛 **Lỗi nặng đã tìm ra & sửa ở lần QA cuối (BH-25):** nguồn lưu ngắt dòng bằng tham chiếu ký tự
   `&#xA;` trong thuộc tính XML; bản build đầu ghi **xuống dòng THẬT** → XML chuẩn hoá thuộc tính biến
   thành **dấu cách** → mất ngắt dòng ở **124 mục**. Đã sửa `esc_attr()` (`\n→&#xA;`, `\r→&#xD;`, `\t→&#x9;`).
+- 🐛 **Lỗi thứ 2 (BH-26):** `set_raw_data()` cho TextAsset phải **đệm cuối cho tròn 4 byte**,
+  nếu không UnityPy đọc lại báo `Expected to read N bytes, but only read N+2`.
+  Cũng lưu ý một số file có **NUL ở cuối** (oasis_french) và XML **hỏng sẵn** → **không dùng XML parser**
+  cho file dịch, chỉ thay `<t id=".." text="..">` bằng regex theo id.
 - ⏳ **Font — cần test trong game:**
   - Game có 80 font TTF đóng trong bundle. **74 font đã đủ ký tự tiếng Việt** ([A-Za-z] + dấu).
   - 6 font còn thiếu: `NotoSans-CondensedBold`, `aline_font`, `LiberationSans` **chỉ thiếu `┿`** (ký hiệu tiền của chính game);

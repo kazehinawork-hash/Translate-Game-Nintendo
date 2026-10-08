@@ -73,9 +73,12 @@ def build_custom_font_mod():
     print(">>> Đóng gói SARC font...")
     new_sarc_bytes = sarc_writer.write()[1]
 
-    print(">>> Nén Zstandard (.zs)...")
-    cctx = zstandard.ZstdCompressor(level=16)
-    compressed_sarc = cctx.compress(new_sarc_bytes)
+    print(">>> Nén Zstandard (.zs) — khớp tham số frame của font gốc...")
+    try:
+        from zs_util import compress_like
+    except ImportError:
+        from tools.zs_util import compress_like
+    compressed_sarc = compress_like(open(BASE_FONT_SARC, 'rb').read(), new_sarc_bytes)
 
     os.makedirs(OUTPUT_FONT_DIR, exist_ok=True)
     with open(OUTPUT_FONT_FILE, 'wb') as f:

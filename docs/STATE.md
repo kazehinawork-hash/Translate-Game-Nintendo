@@ -284,13 +284,25 @@
 
 ## 11. ✅ XONG PHẦN TEXT: MONOPOLY (2024) (Nintendo Switch)
 - **Title ID**: `01002C201BC40000` (Base) / `01002C201BC40800` (Update v1.6)
-- **Engine**: **Unity IL2CPP** — nhà phát hành Ubisoft
-- **Kho text = hệ thống "Oasis" của Ubisoft** (không phải file rời `.locres`):
-  - Nằm trong **TextAsset** bên trong `Data/data.unity3d`, định dạng **XML UTF-16**:
-    `<oasis><translations language="EnglishGB"><t id="2" text="Online"/>…`
-  - `oasis_englishgb` = **2.063 chuỗi** (nguồn dịch); kèm 12 file ngôn ngữ khác (FR/DE/ES/JA/KO/ZH/RU/IT/NL/PL/PT-BR…)
-    và `oasis__global` (**file master**: `<languages>`, `<characters>`, `<teams>`, `<sections>` — ngôn ngữ gốc `English` `master="true"`).
-  - ⚠️ TextAsset có **tiền tố byte lạ** trước thẻ `<` → khi parse phải bỏ phần trước `<` rồi mới `decode('utf-16')`.
+- 🚨 **SỬA LỖI TREO SPLASH (09/10) — NGUYÊN NHÂN: LỆCH PHIÊN BẢN.**
+  - Bản mod đầu tiên được build từ bundle **base v1.0** (`E:\MONO_work\data.unity3d`) trong khi máy chạy
+    **v1.6** → game treo ở màn hình splash.
+  - Bằng chứng: bundle base = **520.071.132** byte / **198.295 object**; bundle v1.6 = **534.254.661** byte /
+    **199.781 object**; các file Oasis base **2.063 mục** vs v1.6 **2.106 mục (+43)**.
+  - **Cách lấy bundle v1.6:** trong emulator (Eden/yuzu) chuột phải game → **Dump RomFS** →
+    **Dump Mode: FULL** → chọn thư mục (ở đây: `dump/01002C201BC40000/romfs/`).
+    ✅ **Đây là cách chuẩn để lấy dữ liệu game — không cần máy Switch, không vướng giải mã NCA/titlekey.**
+  - ⛔ Đã thử và KHÔNG dùng được để bóc bản update: `nsz` (ra rác), `hactool` (Invalid NCA header),
+    `nstool --basenca` (Hash layer 0 failed hash validation — vì là **Patch NCA**). Chỉ cần Dump RomFS từ emulator.
+- **Kết quả build lại từ bundle v1.6:**
+  - ✅ Thay **2.106 mục** ở **cả 13 file ngôn ngữ** = **27.378 chỗ**, theo **id**.
+  - ✅ Dịch thêm **72 chuỗi mới của v1.6** → **CHƯA DỊCH: 0** (2.106/2.106 mục tiếng Việt).
+  - ✅ QA (`tools/mono_final_qa.py`, đối chiếu với bundle v1.6 gốc): 199.781 object khớp · 2.106 id/file ·
+    **0 lệch tag · 0 lệch xuống dòng · 0 ký tự lạ · 0 chuỗi rỗng** → **PASS**.
+  - Thành phẩm: `output/atmosphere/contents/01002C201BC40000/romfs/Data/data.unity3d`
+    (**536.471.432 byte**, gốc v1.6 534.254.661 — chênh 2,2 MB do văn bản tiếng Việt dài hơn).
+- **Kho text = hệ thống "Oasis" của Ubisoft** (TextAsset trong `Data/data.unity3d`, XML UTF-16):
+  `<oasis><translations language="EnglishGB"><t id="2" text="Online"/>…` — 13 file ngôn ngữ.
 - **Kết quả đã build:**
   - ✅ Dịch **1.704 chuỗi duy nhất** (3 subagent, chunk 350) → **thay 2.036 mục** trong XML.
   - ✅ **Vá CẢ 13 file ngôn ngữ** (theo **`id`**, không theo chuỗi) = **26.819 mục** → chọn ngôn ngữ nào

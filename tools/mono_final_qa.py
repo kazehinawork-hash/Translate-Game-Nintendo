@@ -8,7 +8,7 @@ import xml.etree.ElementTree as ET
 sys.stdout.reconfigure(encoding='utf-8')
 ROOT = r'E:\OneDrive\3.家 Jiā Home\99. 其他 Qítā Other\96.Translate Game'
 TID = '01002C201BC40000'
-SRC = r'E:\MONO_work\data.unity3d'
+SRC = os.path.join(ROOT, 'dump', '01002C201BC40000', 'romfs', 'Data', 'data.unity3d')  # bundle goc v1.6
 DST = os.path.join(ROOT, 'output', 'atmosphere', 'contents', TID, 'romfs', 'Data', 'data.unity3d')
 NS = '{http://schemas.ubisoft.com/oasis/2011/extractor}'
 

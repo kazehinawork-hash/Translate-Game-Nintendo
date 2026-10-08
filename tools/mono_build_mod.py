@@ -22,7 +22,7 @@ print(f'{len(vi):,} ban dich')
 NS = '{http://schemas.ubisoft.com/oasis/2011/extractor}'
 import UnityPy
 
-SRC = r'E:\MONO_work\data.unity3d'
+SRC = os.path.join(ROOT, 'dump', '01002C201BC40000', 'romfs', 'Data', 'data.unity3d')  # bundle v1.6
 OUT = os.path.join(ROOT, 'output', 'atmosphere', 'contents', TID, 'romfs', 'Data')
 os.makedirs(OUT, exist_ok=True)
 

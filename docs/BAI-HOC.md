@@ -509,6 +509,51 @@ FreeType/game vẫn có thể vẽ `.notdef`. Cách kiểm chắc chắn — ren
 ink('ạ') != ink('\ue123')   # phải khác nhau thì mới thật sự có glyph
 ```
 
+---
+
+### BH-30. 🔎 Kirby: font KHÔNG phải TTF chuẩn — có **XBIN config theo vùng** điều khiển bảng ký tự
+
+**Ca thật: Kirby (08/10) — CHƯA XONG.** Sau khi vá đủ **45 file** trong `font/ScalableFontBin/`
+(11 `.bfotf` CFF + 34 `.bfttf` glyf, mỗi file giữ nguyên toàn bộ glyph gốc + upem) thì **game VẪN ô vuông**.
+Đào sâu RomFS thật mới thấy bức tranh đầy đủ:
+
+```
+font/
+├─ ScalableFontBin/          45 file: .bfotf (CFF) + .bfttf (glyf)   <- đã vá
+└─ Region/
+   ├─ STD/  CHI/  KOR/  TWN/
+   │   ├─ <TÊN_FONT>.bin          <- XBIN: magic 'XBIN' + version 4.12 + khối YAML
+   │   ├─ <TÊN_FONT>-ASCII.bin    <- biến thể CHỈ ASCII
+   │   └─ Ext-*.bffnt.cmp         <- font BITMAP (.bffnt) cho ký tự mở rộng
+```
+
+**Ba phát hiện quan trọng:**
+
+1. **`.bfttf` KHÔNG phải TTF chuẩn.** Kiểm tra bảng: file gốc **không có** `maxp`, `post`… —
+   đây là định dạng **rút gọn riêng của Nintendo**. Khi vá bằng fontTools rồi `font.save()`,
+   fontTools **tự thêm lại** các bảng chuẩn (`maxp`, `post`, `name`, `OS/2`) và sắp xếp lại
+   → **đổi cấu trúc font** → rất dễ bị loader của game từ chối (rồi rơi về font gốc → ô vuông).
+
+2. **`font/Region/<VÙNG>/*.bin` là XBIN chứa YAML** — gần như chắc chắn là **cấu hình font**
+   (font nào, cỡ nào, **bảng ký tự nào được phép**). Có cả biến thể `-ASCII`
+   → nghi vấn lớn: vùng EU/US chỉ cho phép **ASCII** → ký tự có dấu **không bao giờ được hỏi**
+   tới font scalable → rơi xuống `Ext-*.bffnt` (bitmap) → **ô vuông**.
+
+3. **`Ext-*.bffnt.cmp` là font BITMAP** (`bffnt`) — không phải TTF. Muốn vá phải dùng cách của BH-18
+   (mượn ô glyph trống + sinh glyph vào atlas), không dùng fontTools.
+
+**Quy tắc rút ra:**
+- Với game Nintendo first-party, **đừng giả định font là TTF/OTF chuẩn**. Kiểm **DANH SÁCH BẢNG** của file gốc
+  trước: `sorted(TTFont(bytes).keys())`; thiếu `maxp`/`post` ⇒ định dạng rút gọn,
+  **mọi `save()` của fontTools sẽ phá cấu trúc**.
+- **Luôn liệt kê TOÀN BỘ thư mục `font/` (kể cả `Region/`)** bằng danh sách RomFS thật, không chỉ thư mục font chính.
+- Kiểm chứng font phải bằng **render pixel** (so với `.notdef`), không chỉ `getBestCmap()`.
+
+**Hướng sửa tiếp (chưa làm):** giải mã XBIN (`XBIN` + `4.12` + YAML) của `font/Region/<VÙNG>/*.bin`
+để xem bảng ký tự bị giới hạn thế nào; nếu đúng là ASCII-only thì mở rộng bảng ký tự trong config,
+hoặc vá `Ext-*.bffnt` (bitmap) theo BH-18.
+
+
 
 | Game | Lỗi đã gặp | Nguyên nhân | Trạng thái |
 |---|---|---|---|
@@ -533,7 +578,8 @@ ink('ạ') != ink('\ue123')   # phải khác nhau thì mới thật sự có gly
 | Switch Sports | **Vào game báo lỗi software** (crash) | `.zs` nén lại bằng windowLog 22 trong khi gốc là 21 → decoder game từ chối frame | ✅ **đã sửa** (BH-27) — nén khớp tham số gốc |
 | Switch Sports | Còn 173 chuỗi UI chưa dịch | các key có trong json nhưng value vẫn là tiếng Anh | ✅ **đã dịch** (còn 21 mục giữ nguyên có chủ đích: nhãn golf) |
 | Kirby | **Ô vuông khi hiển thị** | thay hẳn font CFF/upem1000 bằng TTF/upem2048 → mất 262–340 glyph | ✅ **đã sửa** (BH-28) — dựng lại CFF giữ đủ glyph |
-| Kirby | **Vẫn ô vuông sau khi vá `.bfotf`** | game còn dùng 34 font `.bfttf` (CHI/KOR/TWN/K15) mà mod KHÔNG có | ✅ **đã sửa** (BH-29) — vá hết 45 file font |
+| Kirby | **Vẫn ô vuông sau khi vá `.bfotf`** | game còn dùng 34 font `.bfttf` (CHI/KOR/TWN/K15) mà mod KHÔNG có | ✅ đã bổ sung đủ 45 file (BH-29) |
+| Kirby | **Vẫn ô vuông sau khi vá đủ 45 font** | `.bfttf` là định dạng rút gọn của Nintendo (không có `maxp`) → fontTools `save()` đổi cấu trúc; thêm nữa `font/Region/<VÙNG>/*.bin` (XBIN/YAML) quy định bảng ký tự được phép, `Ext-*.bffnt` là font BITMAP | ⚠️ **CHƯA XONG** — xem BH-30 |
 | Unravel Two | **Treo ở logo Nintendo Switch** | `Data.kit.0` trong mod **lớn hơn gốc 1.460.324 byte** (repack LZ4 literal-only) | ⚠️ **CHƯA VÁ** — cần encoder LZ4-có-từ-điển để giữ đúng kích thước file |
 | Ori WotW / It Takes Two | Ô vuông | font nằm **trong bundle Unity / pak**, mod không có file font rời | ⏳ cần vá font trong bundle/pak |
 

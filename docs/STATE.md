@@ -146,6 +146,13 @@
 - ✅ **Kiểm chứng bằng PIXEL** (`tools/kirby_bfttf_verify.py` + `tools/font_pixel_check.py`):
   render `ạ` phải KHÁC `.notdef` — cả 4 font đại diện đều **ĐẠT** ✓
   (chỉ tin `getBestCmap()` là KHÔNG đủ — fontTools báo có glyph nhưng FreeType/game vẫn có thể vẽ ô vuông).
+- ⚠️ **NHƯNG VÀO GAME VẪN Ô VUÔNG (08/10) — CHƯA XONG. Nguyên nhân sâu hơn (BH-30):**
+  - RomFS thật còn `font/Region/<STD|CHI|KOR|TWN>/` chứa **cấu hình font dạng XBIN+YAML**
+    (`<FONT>.bin`, có cả biến thể **`-ASCII`**) và **font BITMAP `Ext-*.bffnt.cmp`** — mod không có.
+  - `.bfttf` **không phải TTF chuẩn**: file gốc **thiếu bảng `maxp`/`post`** (định dạng rút gọn của
+    Nintendo). `fontTools.save()` tự thêm lại các bảng chuẩn → **đổi cấu trúc** → loader game dễ từ chối.
+  - **Hướng sửa tiếp:** giải mã XBIN để xem bảng ký tự bị giới hạn (nghi ASCII-only với vùng EU/US),
+    rồi mở rộng bảng ký tự trong config và/hoặc vá `Ext-*.bffnt` theo cách bitmap (BH-18).
 - 📌 Bẫy phụ (BH-29): `TTGlyphPen(glyphSet)` **không** duỗi glyph ghép → `font.save()` chết với
   `KeyError: 'acute'/'breve'/'tilde'/'circumflex'`. Phải dùng `DecomposingRecordingPen` rồi replay vào
   `TTGlyphPen(None)`.

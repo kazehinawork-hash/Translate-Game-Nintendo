@@ -44,3 +44,5 @@ tools/fonts_hades2/
 # .NET build (cong cu C# trong tools/)
 bin/
 obj/
+
+dump/

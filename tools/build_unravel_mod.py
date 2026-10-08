@@ -91,7 +91,9 @@ def main():
     print(f'{len(changes)} record can thay | tong {n_rep} gia tri')
 
     cur = rebuild(data, recs, gaps, changes)
-    # va day chuyen: record nao lech do tham chieu cheo -> TRA VE BYTE GOC (bo khoi changes)
+    # va day chuyen: record bi lech do tham chieu cheo (match tro vao vung da doi)
+    # KHONG the "giu byte goc" duoc — phai NEN LAI chinh record do voi lich su MOI,
+    # de no giai ma ra dung noi dung GOC.
     for it in range(6):
         recs2, gaps2 = decode_all(cur)
         if len(recs2) != len(recs):
@@ -102,7 +104,7 @@ def main():
         if not bad:
             break
         for i in bad:
-            changes.pop(recs[i][0], None)      # giu nguyen byte goc -> kich thuoc khong doi
+            changes[recs[i][0]] = recs[i][3]     # nen lai -> giai ma ra noi dung goc
         cur = rebuild(data, recs, gaps, changes)
 
     recs3, _ = decode_all(cur)

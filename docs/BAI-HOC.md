@@ -616,6 +616,32 @@ recs = [(t,c,o,l) for (t,c,o,l) in read_records(data) if t not in {'vmtx','vhea'
 # ghi lại header + recs + phần dữ liệu còn lại
 ```
 
+---
+
+### BH-35. 🚨 FONT KIRBY = CFF **KIỂU CID** (`Adobe-Japan1-3`) + bị cắt `Private` → KHÔNG công cụ nào tự ghi được
+
+Đây là **chốt chặn cuối cùng** của Kirby. Đã xác minh bằng cách mổ trực tiếp file:
+
+| Phát hiện | Chi tiết |
+|---|---|
+| Kiểu font | `.bfotf` = **OTTO/CFF keyed by CID**; charset = `['.notdef','cid00001','cid00002',…]`; `ROS = ('Adobe','Japan1',3)` |
+| Bị cắt | `topDict.Private = None` (và `FDArray[0]` cũng vậy) → ghi charstring mới là **`AttributeError: 'NoneType' has no attribute 'nominalWidthX'`** |
+| Tên glyph | **Bắt buộc** dạng `cidNNNNN` — đặt `uniXXXX` là `KeyError` |
+| fontTools | Không ghi nổi: `cs[...] = charstring`, `charStringsIndex.append()`, tự tạo `Private`, `fontTools.merge` — **tất cả đều sập** ở bước save/compile |
+| `.bfttf` | **Thiếu hẳn bảng `head`** → không phải font độc lập, `TTFont` báo `KeyError: 'head'`, FontForge báo `Open failed` |
+| FontForge (script) | Crash (`0xC0000005`) khi `mergeFonts` vào font CID này |
+
+**Kết luận:** không nên vá font Kirby bằng script. Muốn xong thì phải làm **thủ công trên giao diện FontForge**
+(mở `.otf` → `Element ▸ Merge Fonts` → chọn `games/_consistency/vi_only.ttf` → `File ▸ Generate Fonts`),
+vì GUI hiển thị lỗi và xử lý được font CID, còn chạy script thì crash.
+
+**Đã chuẩn bị sẵn cho việc thủ công:**
+- `games/01004D300C5AE000_Kirby/font_edit/` — 45 font đã **giải mã** thành `.otf`/`.ttf` (+ file `.key`)
+- `games/_consistency/vi_only.ttf` — font **nhỏ 215 glyph**, đúng 214 ký tự tiếng Việt cần thêm
+- `tools/kirby_font_decrypt.py` — giải mã font gốc ra file thường
+- `tools/kirby_font_reencrypt.py` — mã hoá lại + **đọc lại xác minh** sau khi sửa
+
+
 
 
 

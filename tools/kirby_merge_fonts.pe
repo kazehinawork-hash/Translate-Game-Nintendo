@@ -10,7 +10,10 @@ import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DIR = os.path.join(ROOT, 'games', '01004D300C5AE000_Kirby', 'font_edit')
-NUN = os.path.join(ROOT, 'tools', 'Nunito-Bold.ttf')
+# Dung ban Nunito DA LOC (chi 214 ky tu can) de khong ghi de glyph Latin goc cua game
+NUN = os.path.join(ROOT, 'games', '_consistency', 'nunito_sub.ttf')
+if not os.path.exists(NUN):
+    NUN = os.path.join(ROOT, 'tools', 'Nunito-Bold.ttf')
 
 names = sorted(n for n in os.listdir(DIR) if n.endswith(('.otf', '.ttf')))
 print('se xu ly %d font' % len(names))

@@ -1,0 +1,32 @@
+#!/usr/bin/env fontforge
+# Gop glyph tieng Viet tu Nunito vao tung font Kirby.
+# Chay:  fontforge -script tools/kirby_merge_fonts.pe
+#
+# FontForge xu ly duoc font CFF kieu CID (Adobe-Japan1) va DICT Private bi thieu,
+# nhung thu ma fontTools khong ghi noi.
+
+import os
+import sys
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DIR = os.path.join(ROOT, 'games', '01004D300C5AE000_Kirby', 'font_edit')
+NUN = os.path.join(ROOT, 'tools', 'Nunito-Bold.ttf')
+
+names = sorted(n for n in os.listdir(DIR) if n.endswith(('.otf', '.ttf')))
+print('se xu ly %d font' % len(names))
+
+done = 0
+for n in names:
+    p = os.path.join(DIR, n)
+    try:
+        f = fontforge.open(p)
+        f.mergeFonts(NUN)
+        f.generate(p)
+        f.close()
+        done += 1
+        print('  [ok] %s' % n)
+    except Exception as e:
+        print('  [loi] %s: %s' % (n, e))
+
+print('xong %d/%d font' % (done, len(names)))
+print('tiep theo: python tools/kirby_font_reencrypt.py')

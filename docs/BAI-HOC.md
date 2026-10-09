@@ -553,6 +553,70 @@ font/
 để xem bảng ký tự bị giới hạn thế nào; nếu đúng là ASCII-only thì mở rộng bảng ký tự trong config,
 hoặc vá `Ext-*.bffnt` (bitmap) theo BH-18.
 
+---
+
+### BH-31. 🚨 GAME CÓ **BỘ LỌC KÝ TỰ THEO NGÔN NGỮ** — chặn TRƯỚC cả font
+
+**Ca thật: Kirby (09/10).** Vá font xong (đủ glyph, upem đúng) mà chữ có dấu **vẫn ô vuông**.
+Thủ phạm là `msg/Kirby15/<NGÔN_NGỮ>/Filter.bin`:
+- Là **XBIN** chứa **DANH SÁCH KÝ TỰ dạng UTF-16LE** (không phải dải, không phải bitmap).
+- **Kích thước tỉ lệ với bộ chữ của ngôn ngữ**: English 6.172 b · French 6.396 · JP 21.828 · CN 31.064.
+- Tiếng Anh = **chỉ A–Z a–z 0–9 và vài ký hiệu** → mọi ký tự có dấu bị **lọc bỏ trước khi tới font**
+  → game vẽ ô vuông, **bất kể font có glyph hay không**.
+
+**Bằng chứng quyết định:** thay tạm `Filter.bin` của tiếng Pháp cho tiếng Anh →
+chữ **1 dấu** (`ô ơ ú à`) **hiện được ngay**; chữ **2 dấu** (`ằ ố ớ ợ`) vẫn vuông vì khối
+`U+1EA0–0x1EFF` chưa có trong danh sách của tiếng Pháp.
+
+**Cách vá:** danh sách **font** trong Filter giống hệt nhau ở mọi ngôn ngữ (31 font) → lấy Filter của
+ngôn ngữ có bộ chữ lớn (JP) làm nền, rồi **thay các ô Kana/Kanji (không dùng) bằng ký tự cần thêm**
+(`tools/kirby_filter_patch.py`). Chỉ sửa trong các **đoạn chuỗi dài ≥ 8 mã liên tiếp khác 0** để
+không đụng vào offset/number của XBIN.
+
+---
+
+### BH-32. `.bfotf`/`.bfttf` = TTF/OTF **+ XOR** — nhưng game VẪN từ chối font ngoài
+
+- Theo [hadashisora/NintyFont](https://github.com/hadashisora/NintyFont): *"BFTTF/BFOTF — a simple
+  XOR encryption on top of normal TTF/OTF fonts."* → về nguyên tắc thay font khác được.
+- **Thực tế Kirby:** thay cả 45 font bằng **Nunito** (phủ đủ tiếng Việt, frame zstd đã chuẩn, đọc lại
+  xác minh PASS) → game **treo ngay ở màn hình `Launching...`**.
+  ⇒ Game **kén định dạng font gốc của Nintendo**, không nhận TTF/OTF ngoài.
+- Vậy hướng đúng vẫn là **thêm glyph vào chính font gốc** (giữ nguyên cấu trúc bảng).
+
+---
+
+### BH-33. 🚨 NÉN LẠI FILE FONT → PHẢI **MỞ LẠI ĐỌC** để xác minh (không chỉ kiểm lúc nạp)
+
+**Ca thật: Kirby (09/10) — nguyên nhân gốc của cả một chuỗi thất bại.**
+`compress_like()` (dùng chung cho `.zs`/`.cmp`) sinh ra frame zstd mà **python-zstandard không đọc
+lại được** (`error determining content size from frame header`). Frame **gốc của Nintendo thì đọc OK**.
+
+⇒ Mọi lần vá font trước đó đều **vô hiệu trong im lặng**: file ghi ra không giải nén được → game bỏ
+qua → quay về font gốc → ô vuông. Script build **không hề báo lỗi**.
+
+**Quy tắc:** sau khi ghi file nén, **bắt buộc**:
+```python
+new = compress_like(orig, data)
+assert zstandard.ZstdDecompressor().decompress(new[...]) == data   # đọc lại phải ra đúng dữ liệu
+```
+Với Kirby nên dùng **frame zstd chuẩn** (`ZstdCompressor(level=15).compress`) thay vì bắt chước frame gốc.
+
+---
+
+### BH-34. Font Nintendo có bảng bị **cắt ngắn** (`vmtx`) → fontTools không load nổi
+
+`.bfttf` của Kirby khai `maxp` ~7.755 glyph nhưng bảng `vmtx` chỉ có **3.077 byte** (cần 31.020) →
+fontTools báo `TTLibError: not enough 'vmtx' table data`.
+
+**Cách xử lý:** `vmtx`/`vhea` là đo bảng **chiều dọc**, không dùng cho chữ Latin →
+**bỏ 2 tag này khỏi bảng mục lục sfnt** (giữ nguyên dữ liệu, thành mồ côi) rồi mới cho fontTools đọc:
+```python
+recs = [(t,c,o,l) for (t,c,o,l) in read_records(data) if t not in {'vmtx','vhea'}]
+# ghi lại header + recs + phần dữ liệu còn lại
+```
+
+
 
 
 | Game | Lỗi đã gặp | Nguyên nhân | Trạng thái |

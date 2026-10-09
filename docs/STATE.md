@@ -334,6 +334,19 @@
 - 🐛 **Bài học mới:** `env.save()` **không có** `pack='original'` sẽ xuất bundle **không nén** (520 MB → 1,27 GB).
   Luôn dùng `env.save(pack='original', out_path=…)`.
 - Chi tiết: `games/01002C201BC40000_Monopoly/README.md`.
+- 🚨 **MOD KHÔNG HIỆN TIẾNG VIỆT (fix 09/10) — MOD PHẢI ĐẶT Ở CẢ 2 TITLE ID.**
+  - Triệu chứng: vào game vẫn **tiếng Anh**; bundle thành phẩm đọc lại **CÓ** tiếng Việt
+    (2.106 mục, 1.974 mục có ký tự Việt: `Chơi`, `Trực tuyến`, `Ghi công`…) → **mod đúng, game không nạp**.
+  - Nguyên nhân: game đang chạy **v1.6 = bản UPDATE**. Khi có update, máy nạp `Data/data.unity3d`
+    **từ NCA update**, nên mod đặt ở ID **base** bị bỏ qua.
+  - **Quy luật TitleID của Switch:** base kết thúc `...000` → update đổi thành `...800`
+    (`01002C201BC40000` → **`01002C201BC40800`**). Kiểm chứng bằng tên file update thật:
+    `MONOPOLY 2024 [01002C201BC40800][v393216][US][Update v1.6].nsp`.
+  - **Cách sửa:** đặt `romfs/Data/data.unity3d` (bản dịch) ở **CẢ HAI** ID:
+    `output/atmosphere/contents/01002C201BC40000/` **và** `01002C201BC40800/`. ⛔ Đừng chỉ đặt 1 chỗ.
+  - ⚠️ Đối chiếu với **Kirby**: Kirby **không có update** nên mod ở ID base là đúng và chạy được —
+    đó là lý do dễ tưởng "cách cài giống nhau là xong".
+
 
 ---
 

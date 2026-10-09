@@ -641,6 +641,41 @@ vì GUI hiển thị lỗi và xử lý được font CID, còn chạy script th
 - `tools/kirby_font_decrypt.py` — giải mã font gốc ra file thường
 - `tools/kirby_font_reencrypt.py` — mã hoá lại + **đọc lại xác minh** sau khi sửa
 
+---
+
+### BH-36. ✅ CÔNG THỨC CHUẨN VÁ FONT KIRBY (đã chạy thành công 11/11 font)
+
+Sau BH-35, tìm ra **đúng thứ tự thao tác**. Sai một bước là hỏng cả font:
+
+```python
+f = fontforge.open(otf)
+f.cidFlatten()          # ← BẮT BUỘC và PHẢI LÀM TRƯỚC KHI MERGE
+f.mergeFonts(vi_only)   # font nhỏ 215 glyph
+f.generate(otf, flags=('opentype',))
+```
+
+**Ba cái bẫy đã sập vào, ghi lại để đừng lặp:**
+
+| Bẫy | Hậu quả | Cách đúng |
+|---|---|---|
+| `mergeFonts` **trước** `cidFlatten` | FontForge **crash** (`0xC0000005`) | **`cidFlatten()` trước** |
+| Nhiều font trong **cùng 1 tiến trình** FontForge | Font sau báo `Glyph object is not valid, the font may have been closed` | **Mỗi font một tiến trình riêng** |
+| Dùng chế độ **"Replace"** trong hộp `Merge Fonts` của GUI | Font **bị thay** bằng đúng font nhỏ: 8.251 ký tự → **232**; chữ Latin mất sạch | Phải chọn **"Merge"**, không phải "Replace" |
+
+**Xác minh bắt buộc sau khi gộp** (không tin cảm giác):
+1. Số glyph phải **tăng nhẹ** (9354 → 9451), **không được tụt** (tụt = đã bị Replace)
+2. `cmap` phải còn **≥ 8000 ký tự** và **ASCII 94/95 có nét** (chữ Latin gốc phải còn)
+3. 10 ký tự tiếng Việt đại diện phải **có nét vẽ thật** (không chỉ có tên trong cmap)
+
+**Công cụ đã hoàn chỉnh:**
+- `tools/kirby_build_vi_font.py` — dựng `vi_only.ttf` (215 glyph)
+- `tools/kirby_ff_merge_one.py` — gộp **1 font / 1 tiến trình**
+- `tools/kirby_font_reencrypt.py` — mã hoá lại + đọc lại xác minh
+- `tools/kirby_verify_mod_fonts.py` — kiểm tra thành phẩm trong `output/`
+
+**Kết quả:** 11/11 font `.bfotf` trong mod đủ ký tự tiếng Việt, mod 109,8 MB.
+
+
 
 
 

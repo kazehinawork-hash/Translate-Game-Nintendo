@@ -201,8 +201,9 @@ for fn in sorted(os.listdir(DUMP)):
         print(f'  [-] {fn[:40]}: khong them duoc glyph nao')
         n_fail += 1
         continue
-    # CAT bang muc luc ve dung danh sach bang cua font goc
-    pruned = prune_sfnt(patched, set(tabs))
+    # KHONG cat bang muc luc (giu nguyen ket qua fontTools).
+    # Ly do: ban "cat bang" truoc do lam hong lien ket glyph (chu goc cung bi vuong).
+    pruned = patched
     data = write_cmp(pruned, key)
     open(os.path.join(MOD, fn), 'wb').write(data)
     # DOC LAI XAC MINH

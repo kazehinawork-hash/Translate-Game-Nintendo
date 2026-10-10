@@ -53,6 +53,17 @@ Text **không** nằm trong `.locres`/CSV rời mà trong các **TextAsset** bê
 
 `Data/data.unity3d` là **file rời trong RomFS** → **LayeredFS thay trực tiếp, KHÔNG cần patch pak**.
 
+## ⚠️ Cài trên máy Switch — chỉ đặt ĐÚNG 1 TitleID (BH-43)
+
+Mod build sẵn cả 2 ID: `01002C201BC40000` (base **v1.0**) và `01002C201BC40800` (update **v1.6**).
+Khi cài vào `atmosphere/contents/`, **chỉ dùng 1** ID khớp phiên bản máy đang chạy:
+
+- máy có **update v1.6** → chỉ `01002C201BC40800/romfs/Data/data.unity3d`
+- máy chơi **base v1.0** (không update) → chỉ `01002C201BC40000/romfs/Data/data.unity3d`
+
+⛔ **Đặt cả 2 cùng lúc → TREO màn hình chờ** (hai phiên bản bundle khác nhau bị nạp lẫn).
+Eden (Add-Ons) tự tách theo từng title nên chỉ nạp 1 → chạy đúng; trên Switch phải tự chọn đúng 1.
+
 ## QA cuối (`tools/mono_final_qa.py`) — PASS CẢ 13 FILE
 
 | Hạng mục | Kết quả |

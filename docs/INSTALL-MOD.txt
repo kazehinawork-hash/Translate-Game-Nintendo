@@ -16,6 +16,18 @@ Các game có trong gói
 - Nintendo Switch Sports   TitleID 0100D2F00D5C0000
 - Ori and the Will of the Wisps   TitleID 01008DD013200000
 - Ori and the Blind Forest (DE)   TitleID 010061D00DB74000
+- Kirby and the Forgotten Land    TitleID 01004D300C5AE000
+- It Takes Two                    TitleID 010092A0172E4000
+- MONOPOLY (2024)                 TitleID 01002C201BC40000   (xem mục "có bản UPDATE" bên dưới)
+
+Game CÓ BẢN UPDATE — chỉ đặt ĐÚNG 1 TitleID (QUAN TRỌNG)
+--------------------------------------------------------
+Mod phải nằm ở ID khớp PHIÊN BẢN MÁY ĐANG CHẠY, và CHỈ đặt 1 ID:
+  - máy ĐÃ CÀI update  -> dùng ID của bản update (base ...000 -> update ...800)
+  - máy CHỈ có base     -> dùng ID base
+Đặt CẢ HAI (base + update) cùng lúc -> TREO MÀN HÌNH CHỜ (hai phiên bản bundle bị nạp lẫn).
+Ví dụ MONOPOLY: máy đang chạy update v1.6 -> CHỈ dùng TitleID 01002C201BC40800.
+(Bản mod build từ base v1.0 là cho máy KHÔNG cài update — đặt chung với bản update là hỏng.)
 
 Ori and the Blind Forest (DE) — LƯU Ý QUAN TRỌNG
 ------------------------------------------------

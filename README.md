@@ -117,8 +117,9 @@ Bản đồ đầy đủ theo engine: **`tools/README.md`**. Vài nhóm chính:
 
 Chi tiết cài đặt: `docs/INSTALL-MOD.txt`.
 
-> ⚠️ Nếu game có **bản update**, mod phải đặt ở **ID của bản update** (base `…000` → update `…800`).
-> Ví dụ MONOPOLY: chép cả `01002C201BC40000/` **và** `01002C201BC40800/`.
+> ⚠️ Nếu game có **bản update**, mod phải đặt ở **ID khớp phiên bản máy đang chạy** (base `…000` → update `…800`),
+> và **chỉ đặt ĐÚNG 1 ID** — đặt cả hai (base v1.0 + update v1.6) sẽ **treo màn hình chờ**.
+> Ví dụ MONOPOLY: máy có update v1.6 → chỉ dùng `01002C201BC40800/`; chơi base (không update) → chỉ `01002C201BC40000/`.
 
 ---
 

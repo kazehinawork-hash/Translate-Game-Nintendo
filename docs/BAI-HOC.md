@@ -817,6 +817,28 @@ f.generate(otf, flags=('opentype',))
 
 ---
 
+### BH-43. 🚨 Mod LayeredFS cho game CÓ UPDATE: chỉ đặt ĐÚNG 1 TitleID khớp phiên bản — đặt cả 2 là TREO
+
+**Ca thật: MONOPOLY (10/10).**
+
+- **Triệu chứng:** mod hiện tiếng Việt ngon trên **Eden** (chỉ bật **1** mod ở ID update `01002C201BC40800`),
+  nhưng trên **máy Switch**:
+  - chép **1 folder** → **không** có tiếng Việt;
+  - chép **cả 2 folder** (`…000` base + `…800` update) → **treo màn hình chờ**.
+- **Nguyên nhân:** base và update là **hai phiên bản bundle khác nhau** (base v1.0 ↔ update v1.6).
+  Đặt cả hai vào `atmosphere/contents/` → engine nạp lẫn lộn hai phiên bản → **treo**.
+  Còn đặt sai ID (chỉ `…000` trong khi máy chạy update) → update ghi đè → **không thấy tiếng Việt**.
+- **QUY TẮC (Switch, game có update):**
+  1. Xác định **phiên bản máy đang chạy**: có update hay chỉ base.
+  2. **Chỉ đặt mod ở ĐÚNG 1 TitleID**: có update → `…800`; chỉ base → `…000`.
+  3. ⛔ **Không bao giờ đặt cả 2** — sẽ treo.
+  4. Mod phải build từ **đúng phiên bản** đó (v1.6 → bundle v1.6; v1.0 → bundle v1.0).
+- **Phân biệt Eden vs Switch:** Eden quản mod theo từng title (Add-Ons) nên dễ chỉ thấy 1 mod (update) → chạy đúng.
+  Switch dùng chung `atmosphere/contents/` → dễ chép dư folder gây treo. **Cài Switch thì làm y hệt Eden: chỉ 1 ID.**
+- Công cụ: `tools/mono_build_dual.py` build sẵn cả 2 ID, nhưng **khi cài chỉ dùng 1**.
+
+---
+
 | Game | Lỗi đã gặp | Nguyên nhân | Trạng thái |
 |---|---|---|---|
 | Hogwarts | Toàn bộ chuỗi hiện `[KEY]` | magic AVAFDICT ghi ASCII thay vì UTF-16LE | ✅ đã sửa |
@@ -844,6 +866,7 @@ f.generate(otf, flags=('opentype',))
 | Kirby | **Vẫn ô vuông sau khi vá `.bfotf`** | game còn dùng 34 font `.bfttf` (CHI/KOR/TWN/K15) mà mod KHÔNG có | ✅ đã bổ sung đủ 45 file (BH-29) |
 | Kirby | **Vẫn ô vuông sau khi vá đủ 45 font** | `.bfttf` là định dạng rút gọn của Nintendo (không có `maxp`) → fontTools `save()` đổi cấu trúc; thêm nữa `font/Region/<VÙNG>/*.bin` (XBIN/YAML) quy định bảng ký tự được phép, `Ext-*.bffnt` là font BITMAP | ✅ **đã sửa** (BH-30→42) — Filter.bin mở bảng ký tự + ghép glyph từ font gốc |
 | Kirby | **Chữ tiếng Việt LỆCH KIỂU** (có dấu đậm/sắc khác chữ thường) | glyph VI lấy từ font ngoài **Nunito**; `font_edit` bị FontForge ghi đè bản trộn | ✅ **đã sửa** (BH-42) — ghép từ chính font gốc (dùng dấu combining có sẵn) |
+| MONOPOLY | **Switch: chép mod cả 2 ID → treo màn hình chờ** | đặt cả base v1.0 **và** update v1.6 vào `atmosphere/contents/` → engine nạp lẫn hai phiên bản | ✅ xử lý (BH-43) — **chỉ đặt ĐÚNG 1 ID** khớp phiên bản máy |
 | Unravel Two | **Treo ở logo Nintendo Switch** | `Data.kit.0` trong mod **lớn hơn gốc 1.460.324 byte** (repack LZ4 literal-only) | ⚠️ **CHƯA VÁ** — cần encoder LZ4-có-từ-điển để giữ đúng kích thước file |
 | Ori WotW / It Takes Two | Ô vuông | font nằm **trong bundle Unity / pak**, mod không có file font rời | ⏳ cần vá font trong bundle/pak |
 

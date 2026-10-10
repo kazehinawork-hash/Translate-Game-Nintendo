@@ -1,7 +1,8 @@
-"""QA CUOI MONOPOLY: kiem chung CA 2 ban mod theo dung cap phien ban.
+"""QA CUOI MONOPOLY: kiem chung ban mod DANG PHAT HANH.
 
-- BASE  v1.0 : output/.../01002C201BC40000  <-> bundle goc v1.0 (E:\\MONO_work\\data.unity3d)
-- UPDATE v1.6: output/.../01002C201BC40800  <-> dump v1.6 (dump/01002C201BC40000/romfs/Data/data.unity3d)
+Layout hien tai (da kiem chung chay that tren Switch/Atmosphere):
+  output/atmosphere/contents/01002C201BC40000/romfs/Data/data.unity3d  = bundle v1.6 (ID base)
+  -> doi chieu voi dump goc v1.6:  dump/01002C201BC40000/romfs/Data/data.unity3d
 
 Chay tu goc du an: python tools/mono_final_qa.py
 """
@@ -23,11 +24,8 @@ FOREIGN = re.compile(r'[\u3000-\u303f\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff\uff
                      r'\u0600-\u06ff\ufb50-\ufdff\ufe70-\ufeFF\u0400-\u04ff]')
 
 PAIRS = [
-    ('BASE v1.0', os.path.join(ROOT, 'output', 'atmosphere', 'contents',
-                               '01002C201BC40000', 'romfs', 'Data', 'data.unity3d'),
-     r'E:\MONO_work\data.unity3d'),
-    ('UPDATE v1.6', os.path.join(ROOT, 'output', 'atmosphere', 'contents',
-                                 '01002C201BC40800', 'romfs', 'Data', 'data.unity3d'),
+    ('MOD Switch (ID base 01002C201BC40000 = bundle v1.6)',
+     os.path.join(ROOT, 'output', 'atmosphere', 'contents', '01002C201BC40000', 'romfs', 'Data', 'data.unity3d'),
      os.path.join(ROOT, 'dump', '01002C201BC40000', 'romfs', 'Data', 'data.unity3d')),
 ]
 

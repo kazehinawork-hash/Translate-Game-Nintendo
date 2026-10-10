@@ -675,10 +675,117 @@ f.generate(otf, flags=('opentype',))
 
 **Kết quả:** 11/11 font `.bfotf` trong mod đủ ký tự tiếng Việt, mod 109,8 MB.
 
+---
 
+### BH-37. 🚨 Unity `TextAsset`: LỆCH OFFSET NHỊ PHÂN do lặp header → Engine fallback `[NO_ID]...`
 
+**Ca thật: MONOPOLY 2024 (10/10).**
 
+- **Triệu chứng:** Vào game toàn bộ giao diện/menu/cài đặt biến thành:
+  `[NO_ID]MENU/SETTINGS/TITLE`, `[NO_ID]Menu/Settings/Game`, `[NO_ID]Menu/Generic/Back`...
+- **Nguyên nhân gốc:**
+  - Cấu trúc nhị phân của `TextAsset` trong Unity là:
+    `[int32 name_len][name UTF-8][đệm 0 cho tròn 4][int32 data_len][dữ liệu text/xml][đệm 0 cho tròn 4]`
+  - Script build cũ khi đọc dữ liệu raw bằng `get_raw_data()` đã cắt nhầm cả phần header `name_len + name + data_len` đưa vào `prefix`.
+  - Khi đóng gói lại bằng `struct.pack('<i', len(name)) + ...` thì vô tình **bọc thêm một lần header nữa**.
+  - Kết quả: Offset của XML bị đẩy lùi, chuỗi bắt đầu sai vị trí. Engine localization (Oasis của Ubisoft) không đọc được XML từ điển và kích hoạt cơ chế fallback: tự in ra đường dẫn phân cấp hierarchy nội bộ của GameObject (`[NO_ID]Menu/...`).
+  - Thêm nữa: `env.save()` của UnityPy nếu lưu trực tiếp vào thư mục có thể tạo ra file 0 byte nếu không gọi qua `BundleFile.save(packer='original')`.
+- **QUY TẮC CHỐNG LẶP:**
+  1. Với `TextAsset` Unity, luôn giải mã offset payload chính xác:
+     ```python
+     name_len = int.from_bytes(raw[:4], 'little')
+     offset = 4 + name_len
+     while offset % 4 != 0: offset += 1
+     data_len = int.from_bytes(raw[offset:offset+4], 'little')
+     payload = raw[offset+4 : offset+4+data_len]
+     ```
+  2. Giữ nguyên BOM UTF-16LE (`\xff\xfe`) nếu file gốc có BOM.
+  3. Ghi bundle ra file bằng `bf = list(env.files.values())[0]; data = bf.save(packer='original'); open(dst, 'wb').write(data)` để tránh bị ghi file 0 byte.
+  4. Sau khi build, luôn kiểm tra lại `d = o.read()` và đọc lại XML từ object để đảm bảo chuỗi không bị `[NO_ID]` hay thụt lùi offset.
 
+---
+
+### BH-38. 🚨 Kirby / Nintendo HAL: TUYỆT ĐỐI KHÔNG DÙNG `cidFlatten()` — phải giữ NGUYÊN cấu trúc CID-Keyed (`Adobe-Japan1-3`)
+
+**Ca thật: Kirby and the Forgotten Land (10/10).**
+
+- **Triệu chứng:** Vào game toàn bộ chữ có dấu (kể cả những chữ có sẵn trong tiếng Latin/Pháp như `ó, ô, ê, à, é`) đều biến thành ô vuông `□` (`B□n c□ mu□n k□t n□i...`, `[□h□ng □□ng] [Đ□ng]`).
+- **Nguyên nhân gốc:**
+  - Font gốc của Nintendo HAL (`.bfotf`) là **OTTO/CFF dạng CID-Keyed** với `ROS = ('Adobe', 'Japan1', 3)` và `FDArray[0]`.
+  - Khi dùng `cidFlatten()` của FontForge, font bị biến đổi thành **Name-Keyed font thông thường** (`is_CID = False`).
+  - Loader font của engine Kirby **từ chối nạp font khi mất cấu trúc CID-Keyed**. Khi bị từ chối, engine rơi về font tối thiểu hoặc font bitmap dự phòng không có chữ có dấu $\to$ Tất cả các chữ có dấu đều bị ô vuông!
+- **CÁCH XỬ LÝ CHUẨN XÁC 100%:**
+  1. **Không dùng FontForge flatten**: Giữ nguyên `is_CID = True` và bảng `ROS = ('Adobe', 'Japan1', 3)`.
+  2. Bơm trực tiếp các glyph tiếng Việt vào các slot **CID chưa dùng (unused CIDs)** trong font gốc (mỗi font có sẵn 1.300–5.900 unused CIDs).
+  3. Gán `charstring.private = top.FDArray[0].Private` cho từng glyph thêm mới để tránh crash `AttributeError: nominalWidthX`.
+  4. Vá tương tự cho cả 34 font TrueType `.bfttf` (gồm font chữ Latin `K15-LocalCharacter-M`).
+  5. Đóng gói mã hóa XOR với magic `0x36F81A1E` và nén zstandard level 15 chuẩn.
+- **Công cụ:** `tools/kirby_patch_all_fonts_native.py`.
+
+---
+
+### BH-39. 🚨 Kirby / Nintendo HAL: `Filter.bin` phân bổ whitelist ký tự THEO TỪNG FONT ĐỘC LẬP và BẮT BUỘC SẮP XẾP TĂNG DẦN (Binary Search)
+
+**Ca thật: Kirby and the Forgotten Land (10/10).**
+
+- **Triệu chứng:** Người dùng phản hồi "vẫn bị trắng tinh không thấy chữ đâu" kèm ảnh chụp màn hình:
+  - Đoạn thoại chính: `B□n c□ mu□n k□t n□i...`
+  - Nút bên trái: `[□h□ng  □□ng]` (chữ `K` hoa biến thành `□`, chữ `d` và `ù` thành `□`)
+  - Nút bên phải: `[D□ng]` (chữ `D` hiện được, nhưng chữ `ù` thành `□`)
+- **Nguyên nhân gốc rễ sâu kín:**
+  1. File `romfs/msg/Kirby15/<LANG>/Filter.bin` (XBIN4) chứa **31 danh sách ký tự riêng biệt** cho 31 font:
+     - Nút bấm dialog dùng **Font #0 (`FOT-ComicReggaeStd-B`)**, font này gốc **chỉ có 50 ký tự** (thậm chí thiếu cả các chữ cái tiếng Anh cơ bản như `K, J, Q, X, Z`!). Do đó chữ `K` in hoa trong nút `Không dùng` bị gãy thành `□`.
+     - Đoạn thoại dùng **Font #2 (`FOT-RodinNTLGPro-B`)**, font này không có các chữ có dấu.
+  2. Trước đó script cũ chỉ bơm vào Font #0 mà bỏ quên 30 font còn lại, và chỉ bơm ký tự có mã `> 127` mà không bổ sung các ký tự ASCII bị thiếu.
+  3. **Yêu cầu sống còn của HAL Engine:** Mọi mảng ký tự trong `Filter.bin` **BẮT BUỘC PHẢI SẮP XẾP TĂNG DẦN (`chars.sort()`)** để thuật toán Binary Search của engine nạp được.
+  4. Các font văn bản chính (Font #2, #3, #11, #17, #18) yêu cầu mỗi ký tự phải khai báo **4 lần liên tiếp** (`repeat = 4`).
+- **GIẢI PHÁP TRIỆT ĐỂ:**
+  - Script chuẩn: `tools/kirby_build_filter_universal.py`.
+  - Bổ sung **100% trọn vẹn cả bảng chữ cái ASCII printable (0x20..0x7E) VÀ 144 ký tự tiếng Việt có dấu** vào TẤT CẢ các font trong 31 font.
+  - Sắp xếp tăng dần 100% cho mọi font.
+  - Tự động đóng gói XBIN4 và phân phối đồng bộ vào toàn bộ các thư mục ngôn ngữ trong mod `output/atmosphere/contents/01004D300C5AE000/romfs/msg/Kirby15/`.
+
+---
+
+### BH-40. 🚨 Kirby / Nintendo HAL: Trường độ dài trong header font `.cmp` (byte 4..7) BẮT BUỘC MÃ HÓA XOR cùng key (`len(font) ^ key`)
+
+**Ca thật: Kirby and the Forgotten Land (10/10).**
+
+- **Triệu chứng:** Dù đã vá đủ glyph và sửa `Filter.bin`, vào game toàn bộ chữ có dấu vẫn bị ô vuông `□` trắng tinh.
+- **Nguyên nhân gốc rễ:**
+  - Header của file font Kirby giải nén gồm:
+    - Byte 0..3: `MAGIC_KIRBY` (`0x36F81A1E`)
+    - Byte 4..7: **Độ dài font giải mã đã được mã hóa XOR** (`len(font) ^ key`)
+    - Byte 8..: Dữ liệu font mã hóa XOR
+  - Trong script vá trước đó, dòng pack header ghi `len(new_otf)` dạng plaintext mà quên XOR với `key`.
+  - Kết quả: Khi engine HAL nạp font, nó đọc byte 4..7 và XOR với `key` để tính dung lượng buffer cần cấp phát. Vì không được mã hóa từ trước, phép XOR này biến giá trị độ dài thành một số rác khổng lồ (> 1,2 GB). Engine lập tức hủy nạp font do tràn bộ nhớ / corrupt header $\to$ Mất toàn bộ 45 font bản mod và rơi về ô vuông `□`!
+- **GIẢI PHÁP TRIỆT ĐỂ:**
+  - Trong `tools/kirby_patch_all_fonts_native.py`:
+    `hdr = struct.pack('>II', MAGIC_KIRBY, len(new_otf) ^ key)`
+  - Đã rebuild lại toàn bộ 45 font `.bfotf.cmp` và `.bfttf.cmp` với header `match = True` từng byte.
+
+### BH-41. 🚨 Font Nintendo / HAL Engine: Bơm glyph vào font CFF/TTF BẮT BUỘC KHÓA CHUẨN ADVANCE WIDTH & CÂN BẰNG BEARING (LSB/RSB)
+
+**Ca thật: Kirby and the Forgotten Land (10/10).**
+
+- **Triệu chứng:** Sau khi nạp font thành công, chữ tiếng Việt đã hiện lên nhưng người dùng phản hồi: *"hiển thị rồi nhưng hơi xấu nhỉ"*:
+  - Chữ có dấu (`ạ`, `ả`, `ồ`, `ố`, `đ`...) bị thụt vào trong, dính vào chữ bên cạnh hoặc cách xa một cách bất thường.
+  - Chữ `Đ` in hoa nét bị thô, méo hoặc lệch độ đậm so với các chữ cái Latin xung quanh.
+- **Nguyên nhân gốc rễ:**
+  1. **Advance Width bị gán cứng hoặc lệch chuẩn**: Script vá cũ đặt cứng độ rộng `width = 500` cho mọi ký tự thêm mới (`pen = T2CharStringPen(500, cs)`), trong khi:
+     - Chữ gốc trong font `FOT-RodinNTLGPro-B` có độ rộng riêng biệt: `a` (602), `o` (649), `e` (612), `d` (656), `D` (791)...
+     - Độ rộng 500 nhỏ hơn nhiều so với `a` (602) hay `o` (649), khiến các từ như `Bạn` (`ạ` hẹp 500) hoặc `không` (`ồ` hẹp 500) bị co rúm lại, chữ dính sát vào nhau rất xấu.
+  2. **Ký tự bị lệch biên (Left Side Bearing - LSB = 0)**: Glyph nguồn từ font ngoài có bounding box bắt đầu từ x = 0, trong khi các chữ Latin gốc trong Rodin luôn có lề an toàn LSB từ 40 đến 70 đơn vị. Khi đặt ở x = 0, chữ bị dính sát vào mép trái.
+  3. **Bỏ quên ký tự `Đ` bản địa**: Font gốc của Nintendo đã có sẵn ký tự `Eth` (U+00D0 / `cid00179`) có hình dáng chính là chữ `Đ` với nét vẽ chuẩn xác 100% theo phong cách Rodin / VDL. Việc cố lấy chữ `Đ` từ font ngoài vừa lệch nét vừa làm hỏng độ hài hòa.
+- **GIẢI PHÁP TRIỆT ĐỂ (BALANCED METRICS PIPELINE):**
+  1. **Khóa Advance Width theo Base Latin**: Mọi ký tự tiếng Việt có dấu (`ạ, ả, ã, á, à...`) phải kế thừa chính xác Advance Width của ký tự Latin cơ sở (`a` $\to$ 602, `o` $\to$ 649, `e` $\to$ 612, `d` $\to$ 656, `D` $\to$ 791).
+  2. **Căn giữa glyph (Center Align Bearing)**:
+     - Tính độ lệch dịch chuyển: `shift_x = (target_w - orig_w) / 2.0`.
+     - Vẽ glyph qua biến đổi tịnh tiến: `TransformPen(pen, (1, 0, 0, 1, shift_x, 0))` để glyph nằm ngay chính giữa lề, triệt tiêu hoàn toàn hiện tượng dính/chèn chữ.
+  3. **Tận dụng ký tự bản địa chuẩn**: Map trực tiếp Unicode `0x0110` (`Đ`) sang `Eth` (`0x00D0`) có sẵn trong bảng mã gốc của font.
+- **Công cụ:** Đã tích hợp đầy đủ vào [tools/kirby_patch_all_fonts_native.py](file:///E:/OneDrive/3.家%20Jiā%20Home/99.%20其他%20Qítā%20Other/96.Translate%20Game/tools/kirby_patch_all_fonts_native.py).
+
+---
 
 | Game | Lỗi đã gặp | Nguyên nhân | Trạng thái |
 |---|---|---|---|
@@ -699,6 +806,7 @@ f.generate(otf, flags=('opentype',))
 | Ori Blind Forest DE | Font là **BitmapFont + atlas SDF**, thiếu 78 ký tự VI | game không đọc TTF; atlas kín chỗ | ✅ **đã vá** (mượn ô glyph không dùng + sinh glyph, xem BH-18) |
 | MONOPOLY | **124 mục mất ngắt dòng** (game hiện 1 dòng dài) | ghi `\n` thật vào thuộc tính XML → bị chuẩn hoá thành dấu cách | ✅ đã sửa (BH-25) |
 | MONOPOLY | Bundle 520 MB → **1,27 GB** khi build | `env.save()` thiếu `pack='original'` | ✅ đã sửa (BH-26) |
+| MONOPOLY | **Hiện toàn bộ `[NO_ID]Menu/...`** thay vì chữ | Đóng gói TextAsset bị lặp header nhị phân (offset lệch) → engine Oasis fallback in tên đường dẫn GameObject | ✅ **đã sửa** (BH-37) |
 | MONOPOLY | 2 font **KabelBold/KabelMedium** (OTF/CFF) thiếu 88 dấu | `fontTools.merge` không ghép được glyf (Arial) ↔ CFF (Kabel) | ⚠️ **CHƯA VÁ** — cần chơi thử để biết có dùng tới không |
 | Switch Sports | **Vào game báo lỗi software** (crash) | `.zs` nén lại bằng windowLog 22 trong khi gốc là 21 → decoder game từ chối frame | ✅ **đã sửa** (BH-27) — nén khớp tham số gốc |
 | Switch Sports | Còn 173 chuỗi UI chưa dịch | các key có trong json nhưng value vẫn là tiếng Anh | ✅ **đã dịch** (còn 21 mục giữ nguyên có chủ đích: nhãn golf) |

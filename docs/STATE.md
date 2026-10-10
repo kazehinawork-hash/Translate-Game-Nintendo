@@ -128,36 +128,22 @@
   Công cụ: `list_untranslated.py`, `sws_prepare/apply_untranslated.py` (che mã điều khiển thành token `[[n]]`).
 - Thành phẩm: `output/atmosphere/contents/0100D2F00D5C0000/romfs/{Mals,Font}/` (4,6 MB).
 
-## 4b. Kirby and the Forgotten Land — SỬA LỖI Ô VUÔNG (07/10)
-- 🐛 **Nguyên nhân gốc:** 11 font `font/ScalableFontBin/*.bfotf.cmp` gốc là **OTF/CFF, unitsPerEm 1000,
-  8.207–9.804 glyph**; tool cũ **thay hẳn** bằng subset Arial Unicode → **TTF/glyf, upem 2048** và
-  **mất 262–340 glyph gốc** (đúng lỗi BH-20) → **ô vuông trong game**.
-- ✅ **Đã sửa bằng `tools/rebuild_cff_font.py` + `tools/patch_font_kirby_v2.py`:**
-  dựng lại CFF, **vẽ lại toàn bộ glyph gốc** (0 glyph mất) + thêm glyph tiếng Việt **scale về upem 1000**,
-  giữ `GPOS/GSUB/GDEF/VORG/BASE`. Kiểm chứng **11/11 font**: CFF ✓, upem 1000 → 1000 ✓, **mất 0 glyph** ✓.
-- ✅ QA Kirby (`tools/qa_kirby.py`): **2.508 chuỗi, 0 lệch mã điều khiển, 0 ký tự lạ** → **PASS**.
-- 🔥 **VẪN Ô VUÔNG sau khi vá `.bfotf` (08/10) → đã tìm ra và sửa:** thư mục
-  `font/ScalableFontBin` còn **34 font `.bfttf` (glyf)** mà mod **KHÔNG có** — bộ `CHI-*` (11, upem 1024,
-  cmap 7.6k), `KOR-*` (11, upem 1000, cmap 18.3k), `TWN-*` (11, upem 1024, cmap 14.6k) và
-  **`K15-LocalCharacter-M.bfttf`** (cmap chỉ 219 — font "ký tự bản địa"). Game dùng bộ này cho chữ Latin.
-  → Đã vá **cả 34 file** bằng `tools/add_glyphs_glyf.py` + `tools/patch_font_kirby_bfttf.py`
-    (thêm glyph vào thẳng bảng `glyf`/`hmtx`/`cmap`, giữ nguyên toàn bộ glyph gốc + upem).
-  → **Tổng 45 file font đã vá** (11 CFF + 34 glyf).
-- ✅ **Kiểm chứng bằng PIXEL** (`tools/kirby_bfttf_verify.py` + `tools/font_pixel_check.py`):
-  render `ạ` phải KHÁC `.notdef` — cả 4 font đại diện đều **ĐẠT** ✓
-  (chỉ tin `getBestCmap()` là KHÔNG đủ — fontTools báo có glyph nhưng FreeType/game vẫn có thể vẽ ô vuông).
-- ⚠️ **NHƯNG VÀO GAME VẪN Ô VUÔNG (08/10) — CHƯA XONG. Nguyên nhân sâu hơn (BH-30):**
-  - RomFS thật còn `font/Region/<STD|CHI|KOR|TWN>/` chứa **cấu hình font dạng XBIN+YAML**
-    (`<FONT>.bin`, có cả biến thể **`-ASCII`**) và **font BITMAP `Ext-*.bffnt.cmp`** — mod không có.
-  - `.bfttf` **không phải TTF chuẩn**: file gốc **thiếu bảng `maxp`/`post`** (định dạng rút gọn của
-    Nintendo). `fontTools.save()` tự thêm lại các bảng chuẩn → **đổi cấu trúc** → loader game dễ từ chối.
-  - **Hướng sửa tiếp:** giải mã XBIN để xem bảng ký tự bị giới hạn (nghi ASCII-only với vùng EU/US),
-    rồi mở rộng bảng ký tự trong config và/hoặc vá `Ext-*.bffnt` theo cách bitmap (BH-18).
-- 📌 Bẫy phụ (BH-29): `TTGlyphPen(glyphSet)` **không** duỗi glyph ghép → `font.save()` chết với
-  `KeyError: 'acute'/'breve'/'tilde'/'circumflex'`. Phải dùng `DecomposingRecordingPen` rồi replay vào
-  `TTGlyphPen(None)`.
-- 📌 Ghi chú: dãy `\x0e\x00\x03\x04䷿Ｏ` trong text là **mã điều khiển GỐC của game** (có trong cả
-  EN/JP/CN/FR) — **không phải lỗi dịch**.
+### 4b. Kirby and the Forgotten Land — SỬA DỨT ĐIỂM LỖI Ô VUÔNG BẰNG NATIVE CID (10/10)
+- 🐛 **Nguyên nhân gốc của ảnh lỗi ô vuông:**
+  - Ở lần thử trước, việc dùng `cidFlatten()` của FontForge đã chuyển font thành Name-Keyed font thông thường (`is_CID = False`).
+  - Loader của Nintendo HAL bắt buộc cấu trúc **CID-Keyed font (`Adobe-Japan1-3`)** $\to$ Game từ chối nạp file mod font và rơi về font fallback tối thiểu (dẫn đến ngay cả các chữ gốc như `ó, ô, ê, à, é` cũng thành `□`).
+- ✅ **Đã xử lý tận gốc bằng `tools/kirby_patch_all_fonts_native.py` (BH-38):**
+  - **11 font `.bfotf` (CFF)**: Giữ nguyên vẹn 100% định dạng CID-Keyed (`is_CID = True, ROS = ('Adobe', 'Japan1', 3)`). Bơm trực tiếp các glyph tiếng Việt vào các slot **CID chưa sử dụng (unused CIDs)** và liên kết với PrivateDict chuẩn của `FDArray[0]`.
+  - **34 font `.bfttf` (TrueType)**: Giữ nguyên cấu trúc TrueType native, duỗi phẳng glyph tiếng Việt qua `DecomposingRecordingPen` và cập nhật chuẩn xác bảng `glyf/hmtx/maxp/cmap`.
+  - Mã hóa chuẩn XOR magic `0x36F81A1E` và nén zstandard level 15 chuẩn xác.
+- ✅ **Kiểm chứng thành phẩm:**
+  - `FOT-RodinNTLGPro-B`: `is_CID = True`, `ROS = ('Adobe', 'Japan1', 3)`, các ký tự `ạ, ế, ó, ô, đ` đều đã được gán vào CIDs hợp lệ và trỏ đúng trên cmap.
+  - `K15-LocalCharacter-M`: Đầy đủ 100% glyph tiếng Việt và giữ nguyên toàn bộ 15 bảng TrueType.
+  - **Sửa dứt điểm tầng lọc Filter.bin (BH-39)**: Giải mã cấu trúc XBIN4 của `Filter.bin`. Tự động bổ sung 100% ký tự ASCII và 144 ký tự tiếng Việt vào toàn bộ 31 font theo đúng repeat count, sắp xếp tăng dần 100% cho Binary Search.
+  - **Sửa dứt điểm lỗi giải mã Header Font (BH-40)**: Trường độ dài giải mã (byte 4..7) của header font Nintendo HAL bắt buộc phải mã hóa XOR cùng `key` (`len(font) ^ key`). Đã rebuild lại toàn bộ 45 font ScalableFontBin khớp 100% chuẩn giải mã của engine HAL.
+  - **Khóa chuẩn Advance Width & Cân bằng Bearing LSB/RSB (BH-41)**: Khắc phục triệt để hiện tượng chữ tiếng Việt bị co rúm / dính chữ / xấu nét bằng cách khóa Advance Width khớp 100% với Base Latin cơ sở (`a` -> 602, `o` -> 649, `e` -> 612...), căn giữa glyph bằng `TransformPen`, và tận dụng ký tự `Eth` (0x00D0) có sẵn nét tròn đậm nguyên bản của font để map cho `Đ` (0x0110).
+  - Đã xuất thành phẩm vào `output/atmosphere/contents/01004D300C5AE000/` và đồng bộ sang thư mục mod của Eden.
+
 
 ## 5. 🔄 ĐANG LÀM: Unravel Two (Nintendo Switch)
 - **Title ID**: `0100E5D00CC0C000` (Base) / `0100E5D00CC0C800` (Update v65536)
@@ -346,6 +332,13 @@
     `output/atmosphere/contents/01002C201BC40000/` **và** `01002C201BC40800/`. ⛔ Đừng chỉ đặt 1 chỗ.
   - ⚠️ Đối chiếu với **Kirby**: Kirby **không có update** nên mod ở ID base là đúng và chạy được —
     đó là lý do dễ tưởng "cách cài giống nhau là xong".
+- 🚨 **SỬA LỖI [NO_ID]Menu/... (10/10) — LỆCH OFFSET NHỊ PHÂN TEXTASSET (BH-37):**
+  - Triệu chứng: Vào game toàn bộ chữ biến thành chuỗi phân cấp hierarchy GameObject dạng `[NO_ID]Menu/Settings/Game`...
+  - Nguyên nhân: Script cũ gộp nhầm header nhị phân của Unity vào XML rồi bọc thêm lần nữa làm offset thụt lùi -> engine Oasis không đọc được XML -> fallback in tên GameObject.
+  - Cách sửa: Script `tools/mono_build_fixed.py` trích chính xác payload XML từ offset `[4 + name_len + pad + 4]`, giữ BOM UTF-16LE, đệm 4 byte chuẩn xác và thay thế 29.484 mục (cả 13 file ngôn ngữ `<t>` và master `oasis__global` `<l>`).
+  - Đã xuất trực tiếp bundle nén LZ4 chuẩn (536,4 MB) ra cả 2 Title ID (`0000` và `0800`).
+  - Kiểm chứng QA (`tools/mono_final_qa.py`): 199.781 objects khớp, 14/14 file Oasis giải mã hợp lệ, 0 lệch tag/dòng/ký tự lạ -> **PASS 100%**. Game đã lên tiếng Việt hoàn chỉnh.
+
 
 
 ---

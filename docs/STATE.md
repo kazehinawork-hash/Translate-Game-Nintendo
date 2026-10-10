@@ -327,21 +327,16 @@
 - 🐛 **Bài học mới:** `env.save()` **không có** `pack='original'` sẽ xuất bundle **không nén** (520 MB → 1,27 GB).
   Luôn dùng `env.save(pack='original', out_path=…)`.
 - Chi tiết: `games/01002C201BC40000_Monopoly/README.md`.
-- 🚨 **MOD CHỈ HIỆN TIẾNG VIỆT KHI ĐẶT Ở ĐÚNG 1 TITLE ID KHỚP PHIÊN BẢN ĐANG CHẠY (sửa lại 10/10).**
-  - Triệu chứng: vào game vẫn **tiếng Anh**; bundle thành phẩm đọc lại **CÓ** tiếng Việt
-    (2.106 mục, 1.974 mục có ký tự Việt: `Chơi`, `Trực tuyến`, `Ghi công`…) → **mod đúng, game không nạp**.
-  - Nguyên nhân: game đang chạy **v1.6 = bản UPDATE**. Khi có update, máy nạp `Data/data.unity3d`
-    **từ NCA update**, nên mod đặt ở ID **base** bị bỏ qua.
-  - **Quy luật TitleID của Switch:** base kết thúc `...000` → update đổi thành `...800`
-    (`01002C201BC40000` → **`01002C201BC40800`**). Kiểm chứng bằng tên file update thật:
-    `MONOPOLY 2024 [01002C201BC40800][v393216][US][Update v1.6].nsp`.
-  - **Cách đặt mod (QUAN TRỌNG):** chỉ đặt mod ở **ĐÚNG 1 ID** khớp phiên bản máy đang chạy:
-    - máy có **update v1.6** → chỉ `01002C201BC40800/romfs/Data/data.unity3d`
-    - máy chơi **base v1.0** (không update) → chỉ `01002C201BC40000/romfs/Data/data.unity3d`
-  - ⛔ **KHÔNG đặt cả 2 ID cùng lúc.** Hai folder là **2 phiên bản bundle khác nhau** (base v1.0 vs update v1.6)
-    → engine nạp lẫn lộn → **TREO màn hình chờ** (đã bị người dùng báo thật, 10/10).
-  - ⚠️ Đối chiếu với **Kirby**: Kirby **không có update** nên mod ở ID base là đúng và chạy được —
-    đó là lý do dễ tưởng "cách cài giống nhau là xong".
+- 🚨 **CÀI MOD (game có update): dùng ID *base* + bundle ĐÚNG PHIÊN BẢN — ĐÃ KIỂM CHỨNG CHẠY THẬT (10/10).**
+  - Triệu chứng đã gặp trên Switch: đặt ở ID update `…800` → **không** lên tiếng Việt; đặt **cả 2** folder → **TREO màn hình chờ**.
+  - Nguyên nhân: **Atmosphere key LayeredFS theo ID *base* (ID chương trình) và đè lên RomFS đã GỘP (base + update)** —
+    khác **Eden/yuzu** (nạp theo ID *update*). Nên folder phải là `…000`, nhưng **nội dung phải là bundle khớp
+    phiên bản máy đang chạy** (v1.6).
+  - **Cách cài ĐÚNG (Switch, máy có update v1.6):** chỉ **1** folder
+    `output/atmosphere/contents/01002C201BC40000/romfs/Data/data.unity3d` = **bundle v1.6** (đã set sẵn trong `output/`).
+  - **Eden/yuzu:** dùng folder `…800` (như đang chạy) — Eden nạp mod theo ID update.
+  - ⛔ Không đặt cả 2 folder; không để bundle v1.0 ở máy chạy v1.6 (lệch phiên bản → treo/không ăn).
+  - ⚠️ Đối chiếu với **Kirby**: Kirby **không có update** nên mod ở ID base là đúng và chạy được (trùng hợp đúng luôn).
 - 🚨 **SỬA LỖI [NO_ID]Menu/... (10/10) — LỆCH OFFSET NHỊ PHÂN TEXTASSET (BH-37):**
   - Triệu chứng: Vào game toàn bộ chữ biến thành chuỗi phân cấp hierarchy GameObject dạng `[NO_ID]Menu/Settings/Game`...
   - Nguyên nhân: Script cũ gộp nhầm header nhị phân của Unity vào XML rồi bọc thêm lần nữa làm offset thụt lùi -> engine Oasis không đọc được XML -> fallback in tên GameObject.

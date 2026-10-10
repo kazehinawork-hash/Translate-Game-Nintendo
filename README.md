@@ -117,9 +117,10 @@ Bản đồ đầy đủ theo engine: **`tools/README.md`**. Vài nhóm chính:
 
 Chi tiết cài đặt: `docs/INSTALL-MOD.txt`.
 
-> ⚠️ Nếu game có **bản update**, mod phải đặt ở **ID khớp phiên bản máy đang chạy** (base `…000` → update `…800`),
-> và **chỉ đặt ĐÚNG 1 ID** — đặt cả hai (base v1.0 + update v1.6) sẽ **treo màn hình chờ**.
-> Ví dụ MONOPOLY: máy có update v1.6 → chỉ dùng `01002C201BC40800/`; chơi base (không update) → chỉ `01002C201BC40000/`.
+> ⚠️ **Game có bản update (như MONOPOLY):** trên **Switch/Atmosphere**, LayeredFS key theo **ID base** và đè lên
+> romfs đã gộp (base + update) → đặt mod ở **`01002C201BC40000/`** nhưng **nội dung phải là bundle đúng phiên bản
+> máy chạy** (v1.6). **Chỉ đặt 1 folder** — đặt cả hai sẽ **treo màn hình chờ**.
+> **Eden/yuzu** thì nạp theo **ID update** (`…800`).
 
 ---
 

@@ -53,16 +53,20 @@ Text **không** nằm trong `.locres`/CSV rời mà trong các **TextAsset** bê
 
 `Data/data.unity3d` là **file rời trong RomFS** → **LayeredFS thay trực tiếp, KHÔNG cần patch pak**.
 
-## ⚠️ Cài trên máy Switch — chỉ đặt ĐÚNG 1 TitleID (BH-43)
+## ⚠️ Cài trên máy Switch (BH-43) — ID base + bundle đúng phiên bản
 
-Mod build sẵn cả 2 ID: `01002C201BC40000` (base **v1.0**) và `01002C201BC40800` (update **v1.6**).
-Khi cài vào `atmosphere/contents/`, **chỉ dùng 1** ID khớp phiên bản máy đang chạy:
+Atmosphere key LayeredFS theo **ID base** và đè lên **romfs đã gộp (base + update)**. Vì vậy:
 
-- máy có **update v1.6** → chỉ `01002C201BC40800/romfs/Data/data.unity3d`
-- máy chơi **base v1.0** (không update) → chỉ `01002C201BC40000/romfs/Data/data.unity3d`
+- **Switch (máy chạy update v1.6):** đặt **`01002C201BC40000/romfs/Data/data.unity3d`** với nội dung là **bundle v1.6**
+  (chính là file trong `output/atmosphere/contents/01002C201BC40000/`).
+- ⛔ **Chỉ 1 folder** — đặt cả `…000` lẫn `…800` → **TREO màn hình chờ**. Đặt `…800` đơn lẻ → không lên tiếng Việt.
+- **Eden/yuzu:** nạp theo **ID update** → dùng folder `01002C201BC40800`.
 
-⛔ **Đặt cả 2 cùng lúc → TREO màn hình chờ** (hai phiên bản bundle khác nhau bị nạp lẫn).
-Eden (Add-Ons) tự tách theo từng title nên chỉ nạp 1 → chạy đúng; trên Switch phải tự chọn đúng 1.
+## Kiểm tra an toàn (không hại hình ảnh)
+
+Đã đối chiếu **từng loại object** giữa bundle gốc và bundle mod: **chỉ `TextAsset` đổi** (14 file `oasis_*`),
+còn `Texture2D/Sprite/Material/Mesh/Font/Shader/VideoClip/Audio/UI…` **giống y nguyên** → mod chỉ thay chữ,
+không thể làm mất/lỗi hình.
 
 ## QA cuối (`tools/mono_final_qa.py`) — PASS CẢ 13 FILE
 

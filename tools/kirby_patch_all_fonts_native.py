@@ -158,9 +158,21 @@ def patch_bfotf(fn, need):
 
     top = f['CFF '].cff.topDictIndex[0]
     cs = top.CharStrings
-    priv = top.FDArray[0].Private
+    order = list(f.getGlyphOrder())
+    cid_e = cm.get(ord('e'))
+    gid_e = order.index(cid_e) if cid_e else 0
+    target_fd = top.FDSelect[gid_e]
+    target_priv = top.FDArray[target_fd].Private
+    nom_w = getattr(target_priv, 'nominalWidthX', 0)
     used_cids = set(cm.values())
     unused = [cid for cid in cs.keys() if cid not in used_cids and cid != '.notdef']
+
+    # Map Eth (0x00D0) -> Đ (0x0110) neu font co san
+    if 0x00D0 in cm:
+        cid_eth = cm[0x00D0]
+        for sub in f['cmap'].tables:
+            if sub.isUnicode():
+                sub.cmap[0x0110] = cid_eth
 
     def compose(ch):
         if ch in ('đ', 'Đ'):
@@ -210,7 +222,7 @@ def patch_bfotf(fn, need):
             val += tapered_stroke([(bb[0] - 25 * s, y), (bb[2] + 25 * s, y)], stem * 0.9, stem * 0.9)
         return val, W
 
-    todo = [c for c in need if ord(c) not in cm]
+    todo = [c for c in need if ord(c) not in f.getBestCmap()]
     made = 0
     for i, ch in enumerate(todo):
         r = compose(ch)
@@ -218,11 +230,15 @@ def patch_bfotf(fn, need):
             continue
         val, W = r
         cid = unused[i]
-        pen = T2CharStringPen(W, cs)
+        gid = order.index(cid)
+        top.FDSelect[gid] = target_fd
+
+        cff_w = W - nom_w
+        pen = T2CharStringPen(cff_w, cs)
         for op, args in val:
             getattr(pen, op)(*args)
         t2 = pen.getCharString()
-        t2.private = priv
+        t2.private = target_priv
         cs[cid] = t2
         f['hmtx'].metrics[cid] = (int(W), int(v_bounds(val)[0]))
         for sub in f['cmap'].tables:

@@ -817,25 +817,50 @@ f.generate(otf, flags=('opentype',))
 
 ---
 
-### BH-43. 🚨 Mod LayeredFS cho game CÓ UPDATE: chỉ đặt ĐÚNG 1 TitleID khớp phiên bản — đặt cả 2 là TREO
+### BH-43. 🚨 Mod LayeredFS cho game CÓ UPDATE: Atmosphere key theo ID *base* + bundle đúng phiên bản
 
-**Ca thật: MONOPOLY (10/10).**
+**Ca thật: MONOPOLY (10/10) — đã kiểm chứng chạy trên Switch.**
 
-- **Triệu chứng:** mod hiện tiếng Việt ngon trên **Eden** (chỉ bật **1** mod ở ID update `01002C201BC40800`),
-  nhưng trên **máy Switch**:
-  - chép **1 folder** → **không** có tiếng Việt;
-  - chép **cả 2 folder** (`…000` base + `…800` update) → **treo màn hình chờ**.
-- **Nguyên nhân:** base và update là **hai phiên bản bundle khác nhau** (base v1.0 ↔ update v1.6).
-  Đặt cả hai vào `atmosphere/contents/` → engine nạp lẫn lộn hai phiên bản → **treo**.
-  Còn đặt sai ID (chỉ `…000` trong khi máy chạy update) → update ghi đè → **không thấy tiếng Việt**.
+- **Triệu chứng đã gặp:**
+  - Trên **Eden** (chỉ bật 1 mod ở ID update `…800`) → **hiện tiếng Việt**.
+  - Trên **Switch**: đặt `…800` → **không** lên tiếng Việt; đặt **cả 2** folder (`…000` + `…800`) → **treo màn hình chờ**.
+- **Nguyên nhân:**
+  - **Atmosphere** key LayeredFS theo ID ***base*** (ID chương trình) và đè lên **RomFS đã GỘP (base + update)**
+    → folder phải là `…000`. Nhưng vì RomFS đã gộp, **nội dung file phải là bundle ĐÚNG phiên bản máy chạy** (v1.6).
+  - **Eden/yuzu** nạp mod theo ID ***update*** (`…800`) → vì thế Eden chạy được với `…800` mà Switch thì không.
+  - Đặt cả 2 folder = nạp lẫn hai phiên bản bundle (v1.0 + v1.6) → **treo**.
 - **QUY TẮC (Switch, game có update):**
-  1. Xác định **phiên bản máy đang chạy**: có update hay chỉ base.
-  2. **Chỉ đặt mod ở ĐÚNG 1 TitleID**: có update → `…800`; chỉ base → `…000`.
-  3. ⛔ **Không bao giờ đặt cả 2** — sẽ treo.
-  4. Mod phải build từ **đúng phiên bản** đó (v1.6 → bundle v1.6; v1.0 → bundle v1.0).
-- **Phân biệt Eden vs Switch:** Eden quản mod theo từng title (Add-Ons) nên dễ chỉ thấy 1 mod (update) → chạy đúng.
-  Switch dùng chung `atmosphere/contents/` → dễ chép dư folder gây treo. **Cài Switch thì làm y hệt Eden: chỉ 1 ID.**
-- Công cụ: `tools/mono_build_dual.py` build sẵn cả 2 ID, nhưng **khi cài chỉ dùng 1**.
+  1. Đặt mod ở **ID base** (`…000`), **nội dung build từ đúng phiên bản máy chạy** (v1.6 → bundle v1.6).
+  2. **Chỉ 1 folder** — không đặt thêm folder ID update.
+  3. Game **không có update** (như Kirby) → bundle v1.0, ID base — cũng đúng luôn.
+- **KIỂM CHỨNG AN TOÀN (không hại hình ảnh):** so **đa tập (multiset) hash từng loại object** giữa bundle gốc và bundle mod —
+  `Texture2D/Sprite/Material/Mesh/Font/Shader/VideoClip/Audio/UI` **giống y nguyên**, **chỉ `TextAsset` đổi**.
+  → mod chỉ thay chữ, không thể làm mất/lỗi hình.
+  (⚠️ **Không** so theo `path_id` — trong bundle này `path_id` **trùng 125.765 lần**, so theo nó sẽ báo sai "0 thay đổi".)
+- Công cụ: `tools/mono_build_dual.py` (build cả 2 phiên bản); khi cài **chỉ chọn 1**.
+
+### BH-44. 🚨 CFF Type 2 (Adobe/Nintendo): KHOẢNG CÁCH CHỮ BỊ RỘNG BẤT THƯỜNG do quên trừ `nominalWidthX`
+
+**Ca thật: Kirby and the Forgotten Land (10/10).**
+
+- **Triệu chứng:** Vào game thấy các chữ có dấu bị đẩy ra xa nhau bất thường (ví dụ: `Tiế   p`, `tụ   c`, `tệ   p` — chữ cái có dấu cách một khoảng trống lớn rồi mới tới ký tự tiếp theo).
+- **Nguyên nhân gốc rễ (Đặc tả nhị phân CFF Type 2 CharString):**
+  - Trong CFF Type 2, độ rộng ký tự hiển thị (Rendered Advance Width) được tính theo công thức:
+    $$\text{Rendered Width} = \text{Opcode First Number} + \text{nominalWidthX}$$
+  - Mỗi font CFF có `Private Dict` chứa thông số `nominalWidthX` riêng biệt cho từng nhóm ký tự trong `FDArray` (ví dụ `FOT-ComicReggaeStd-B` có `nominalWidthX = 704` ở `FDSelect[12]`, `FOT-RodinNTLGPro-B` có `nominalWidthX = 500` ở `FDSelect[0]`).
+  - Khi dùng `T2CharStringPen(W, cs)` với $W = 623$ (độ rộng mong muốn), Pen đã ghi thẳng giá trị `623` vào bytecode đầu tiên.
+  - Khi engine của Nintendo giải mã, nó tính: $\text{Width} = 623 + 704 = 1.327$ đơn vị! Độ rộng bị phóng to gấp đôi, tạo ra khoảng cách khổng lồ đẩy ký tự tiếp theo văng ra xa!
+- **QUY TẮC BẮT BUỘC KHI GHI CHARSTRING CFF TYPE 2:**
+  1. Xác định `target_fd` của nhóm ký tự Latin (`top.FDSelect[gid_e]`).
+  2. Gán đúng `target_fd` cho glyph slot mới: `top.FDSelect[gid] = target_fd`.
+  3. Đọc `nom_w = getattr(top.FDArray[target_fd].Private, 'nominalWidthX', 0)`.
+  4. Truyền vào `T2CharStringPen` giá trị **Delta Width**:
+     ```python
+     cff_w = W - nom_w
+     pen = T2CharStringPen(cff_w, cs)
+     ```
+  5. Khi đó engine HAL đọc: $(W - \text{nom\_w}) + \text{nom\_w} \equiv W$ (khớp chính xác 100% độ rộng mong muốn).
+- **Công cụ:** `tools/kirby_patch_all_fonts_native.py`.
 
 ---
 
@@ -866,7 +891,7 @@ f.generate(otf, flags=('opentype',))
 | Kirby | **Vẫn ô vuông sau khi vá `.bfotf`** | game còn dùng 34 font `.bfttf` (CHI/KOR/TWN/K15) mà mod KHÔNG có | ✅ đã bổ sung đủ 45 file (BH-29) |
 | Kirby | **Vẫn ô vuông sau khi vá đủ 45 font** | `.bfttf` là định dạng rút gọn của Nintendo (không có `maxp`) → fontTools `save()` đổi cấu trúc; thêm nữa `font/Region/<VÙNG>/*.bin` (XBIN/YAML) quy định bảng ký tự được phép, `Ext-*.bffnt` là font BITMAP | ✅ **đã sửa** (BH-30→42) — Filter.bin mở bảng ký tự + ghép glyph từ font gốc |
 | Kirby | **Chữ tiếng Việt LỆCH KIỂU** (có dấu đậm/sắc khác chữ thường) | glyph VI lấy từ font ngoài **Nunito**; `font_edit` bị FontForge ghi đè bản trộn | ✅ **đã sửa** (BH-42) — ghép từ chính font gốc (dùng dấu combining có sẵn) |
-| MONOPOLY | **Switch: chép mod cả 2 ID → treo màn hình chờ** | đặt cả base v1.0 **và** update v1.6 vào `atmosphere/contents/` → engine nạp lẫn hai phiên bản | ✅ xử lý (BH-43) — **chỉ đặt ĐÚNG 1 ID** khớp phiên bản máy |
+| MONOPOLY | **Switch: đặt `…800` → không lên tiếng Việt; đặt cả 2 ID → treo** | Atmosphere key LayeredFS theo **ID base** và đè lên romfs đã gộp (base + update) | ✅ đã sửa (BH-43) — đặt ở **ID base** với **bundle đúng phiên bản (v1.6)**, chỉ 1 folder |
 | Unravel Two | **Treo ở logo Nintendo Switch** | `Data.kit.0` trong mod **lớn hơn gốc 1.460.324 byte** (repack LZ4 literal-only) | ⚠️ **CHƯA VÁ** — cần encoder LZ4-có-từ-điển để giữ đúng kích thước file |
 | Ori WotW / It Takes Two | Ô vuông | font nằm **trong bundle Unity / pak**, mod không có file font rời | ⏳ cần vá font trong bundle/pak |
 

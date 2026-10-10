@@ -20,14 +20,15 @@ Các game có trong gói
 - It Takes Two                    TitleID 010092A0172E4000
 - MONOPOLY (2024)                 TitleID 01002C201BC40000   (xem mục "có bản UPDATE" bên dưới)
 
-Game CÓ BẢN UPDATE — chỉ đặt ĐÚNG 1 TitleID (QUAN TRỌNG)
---------------------------------------------------------
-Mod phải nằm ở ID khớp PHIÊN BẢN MÁY ĐANG CHẠY, và CHỈ đặt 1 ID:
-  - máy ĐÃ CÀI update  -> dùng ID của bản update (base ...000 -> update ...800)
-  - máy CHỈ có base     -> dùng ID base
-Đặt CẢ HAI (base + update) cùng lúc -> TREO MÀN HÌNH CHỜ (hai phiên bản bundle bị nạp lẫn).
-Ví dụ MONOPOLY: máy đang chạy update v1.6 -> CHỈ dùng TitleID 01002C201BC40800.
-(Bản mod build từ base v1.0 là cho máy KHÔNG cài update — đặt chung với bản update là hỏng.)
+Game CÓ BẢN UPDATE — cài trên SWITCH: ID base + bundle đúng phiên bản (QUAN TRỌNG)
+----------------------------------------------------------------------------------
+Atmosphere key LayeredFS theo ID *base* và đè lên romfs đã GỘP (base + update), nên:
+  - Đặt mod ở ID base (base ...000), NHƯNG nội dung phải là bundle ĐÚNG phiên bản máy đang chạy.
+  - CHỈ đặt 1 folder. Đặt cả base + update -> TREO MÀN HÌNH CHỜ.
+Ví dụ MONOPOLY (máy chạy update v1.6):
+  atmosphere/contents/01002C201BC40000/romfs/Data/data.unity3d   (bundle v1.6)
+  -> KHÔNG đặt thêm folder 01002C201BC40800.
+Eden/yuzu thì nạp mod theo ID *update* nên dùng folder ...800 (trong %APPDATA%/eden/load/).
 
 Ori and the Blind Forest (DE) — LƯU Ý QUAN TRỌNG
 ------------------------------------------------

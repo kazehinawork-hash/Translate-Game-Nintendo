@@ -17,6 +17,8 @@ output/
 games/*/source/
 games/*/translations/
 games/*/_misc/
+# font_edit/ = font đã giải mã (TÁI TẠO được bằng tools/kirby_font_decrypt.py) — không theo dõi cho nhẹ repo
+games/*/font_edit/
 
 # --- ROM ---
 *.nsp

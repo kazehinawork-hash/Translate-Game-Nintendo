@@ -1,249 +1,256 @@
-"""Kirby and the Forgotten Land: Vá TRIỆT ĐỂ toàn bộ 45 font ScalableFontBin.
+"""Kirby and the Forgotten Land: ghep glyph tieng Viet TU CHINH font goc (11 font CFF .bfotf).
 
-- Với 11 font .bfotf: Giữ NGUYÊN cấu trúc CID-Keyed ('Adobe', 'Japan1', 3)
-  + Thêm 97 glyph tiếng Việt vào các unused CID slots (từ font vi_only.ttf)
-  + Gán PrivateDict chuẩn của FDArray[0]
-  + Mã hóa XOR khớp magic 0x36F81A1E
-  + Nén zstandard khớp định dạng .cmp
+Cach lam (khong dung font ngoai => kieu chu dong nhat voi game):
+  1. Giai ma .bfotf.cmp -> OTF (XOR magic 0x36F81A1E + zstd).
+  2. Voi moi ky tu tieng Viet con thieu: ghep tu chinh font:
+       - chu cai co so (a,e,i,o,u,y,d,...) lay nguyen tu font;
+       - dau sac/huyen/nga/mu/breve lay tu GLYPH DAU ROI (combining) co san trong font;
+       - chi VE THEM 2 dau: moc (horn: o+u) va dau hoi (hook).
+     Giu nguyen advance width = chu cai co so => khong lech khoang cach.
+  3. Chen vao cac CID chua dung, cap nhat cmap, dong goi lai .bfotf.cmp.
 
-- Với 34 font .bfttf (gồm K15-LocalCharacter-M và các bộ CHI, KOR, TWN):
-  + Giữ NGUYÊN cấu trúc TrueType (glyf/hmtx)
-  + Thêm glyphs tiếng Việt duỗi phẳng qua DecomposingRecordingPen + TTGlyphPen
-  + Cập nhật bảng glyf, hmtx, maxp và cmap Unicode
-  + Mã hóa XOR khớp magic 0x36F81A1E
-  + Nén zstandard khớp định dạng .cmp
-
-Chạy: python tools/kirby_patch_all_fonts_native.py
+Chay: python tools/kirby_patch_all_fonts_native.py   (tu goc du an)
 """
 import io
+import json
+import math
 import os
 import struct
 import sys
-import zstandard
-from fontTools.ttLib import TTFont
-from fontTools.pens.t2CharStringPen import T2CharStringPen
-from fontTools.pens.recordingPen import DecomposingRecordingPen
-from fontTools.pens.ttGlyphPen import TTGlyphPen
-from fontTools.pens.transformPen import TransformPen
+import unicodedata
 
 sys.stdout.reconfigure(encoding='utf-8')
-ROOT = r'E:\OneDrive\3.家 Jiā Home\99. 其他 Qítā Other\96.Translate Game'
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TID = '01004D300C5AE000'
 SRC_DIR = os.path.join(ROOT, 'games', f'{TID}_Kirby', 'source', 'font', 'ScalableFontBin')
 OUT_DIR = os.path.join(ROOT, 'output', 'atmosphere', 'contents', TID, 'romfs', 'font', 'ScalableFontBin')
 os.makedirs(OUT_DIR, exist_ok=True)
 
-VI_FONT_PATH = os.path.join(ROOT, 'games', '_consistency', 'vi_only.ttf')
-f_vi = TTFont(VI_FONT_PATH)
-gs_vi = f_vi.getGlyphSet()
-cm_vi = f_vi.getBestCmap()
-upem_vi = f_vi['head'].unitsPerEm
-print(f'Da nap vi_only.ttf: {len(cm_vi)} ky tu, upem={upem_vi}')
+import zstandard
+from fontTools.ttLib import TTFont
+from fontTools.pens.recordingPen import DecomposingRecordingPen
+from fontTools.pens.t2CharStringPen import T2CharStringPen
 
 MAGIC_KIRBY = 0x36F81A1E
+CAND = (0x4F54544F, 0x00010000, 0x74746366)
 compressor = zstandard.ZstdCompressor(level=15)
 decompressor = zstandard.ZstdDecompressor()
 
-
-BASE_ASCII_MAP = {
-    'A': 'A', 'Á': 'A', 'À': 'A', 'Ả': 'A', 'Ã': 'A', 'Ạ': 'A',
-    'Ă': 'A', 'Ắ': 'A', 'Ằ': 'A', 'Ẳ': 'A', 'Ẵ': 'A', 'Ặ': 'A',
-    'Â': 'A', 'Ấ': 'A', 'Ầ': 'A', 'Ẩ': 'A', 'Ẫ': 'A', 'Ậ': 'A',
-    'a': 'a', 'á': 'a', 'à': 'a', 'ả': 'a', 'ã': 'a', 'ạ': 'a',
-    'ă': 'a', 'ắ': 'a', 'ằ': 'a', 'ẳ': 'a', 'ẵ': 'a', 'ặ': 'a',
-    'â': 'a', 'ấ': 'a', 'ầ': 'a', 'ẩ': 'a', 'ẫ': 'a', 'ậ': 'a',
-    'E': 'E', 'É': 'E', 'È': 'E', 'Ẻ': 'E', 'Ẽ': 'E', 'Ẹ': 'E',
-    'Ê': 'E', 'Ế': 'E', 'Ề': 'E', 'Ể': 'E', 'Ễ': 'E', 'Ệ': 'E',
-    'e': 'e', 'é': 'e', 'è': 'e', 'ẻ': 'e', 'ẽ': 'e', 'ẹ': 'e',
-    'ê': 'e', 'ế': 'e', 'ề': 'e', 'ể': 'e', 'ễ': 'e', 'ệ': 'e',
-    'I': 'I', 'Í': 'I', 'Ì': 'I', 'Ỉ': 'I', 'Ĩ': 'I', 'Ị': 'I',
-    'i': 'i', 'í': 'i', 'ì': 'i', 'ỉ': 'i', 'ĩ': 'i', 'ị': 'i',
-    'O': 'O', 'Ó': 'O', 'Ò': 'O', 'Ỏ': 'O', 'Õ': 'O', 'Ọ': 'O',
-    'Ô': 'O', 'Ố': 'O', 'Ồ': 'O', 'Ổ': 'O', 'Ỗ': 'O', 'Ộ': 'O',
-    'Ơ': 'O', 'Ớ': 'O', 'Ờ': 'O', 'Ở': 'O', 'Ỡ': 'O', 'Ợ': 'O',
-    'o': 'o', 'ó': 'o', 'ò': 'o', 'ỏ': 'o', 'õ': 'o', 'ọ': 'o',
-    'ô': 'o', 'ố': 'o', 'ồ': 'o', 'ổ': 'o', 'ỗ': 'o', 'ộ': 'o',
-    'ơ': 'o', 'ớ': 'o', 'ờ': 'o', 'ở': 'o', 'ỡ': 'o', 'ợ': 'o',
-    'U': 'U', 'Ú': 'U', 'Ù': 'U', 'Ủ': 'U', 'Ũ': 'U', 'Ụ': 'U',
-    'Ư': 'U', 'Ứ': 'U', 'Ừ': 'U', 'Ử': 'U', 'Ữ': 'U', 'Ự': 'U',
-    'u': 'u', 'ú': 'u', 'ù': 'u', 'ủ': 'u', 'ũ': 'u', 'ụ': 'u',
-    'ư': 'u', 'ứ': 'u', 'ừ': 'u', 'ử': 'u', 'ữ': 'u', 'ự': 'u',
-    'Y': 'Y', 'Ý': 'Y', 'Ỳ': 'Y', 'Ỷ': 'Y', 'Ỹ': 'Y', 'Ỵ': 'Y',
-    'y': 'y', 'ý': 'y', 'ỳ': 'y', 'ỷ': 'y', 'ỹ': 'y', 'ỵ': 'y',
-    'Đ': 'D', 'đ': 'd'
-}
+# Nguon dau roi (combining) co san trong cac font nay
+COMB = {0x0300: 'grave', 0x0301: 'acute', 0x0302: 'circumflex', 0x0303: 'tilde',
+        0x0306: 'breve', 0x0307: 'dot'}
+SHAPE_MARKS = (0x0302, 0x0306)
+TONE_ABOVE = (0x0301, 0x0300, 0x0303)
 
 
-def patch_bfotf(fn):
-    base = fn[:-10]
-    otf_path = os.path.join(ROOT, 'games', f'{TID}_Kirby', 'font_edit', f'{base}.otf')
-    if not os.path.exists(otf_path):
-        return
-    p_src = os.path.join(SRC_DIR, fn)
-    raw = open(p_src, 'rb').read()
-    d = decompressor.decompress(raw[4:])
+def unwrap(raw):
+    d = decompressor.decompress(raw[4:], max_output_size=256 << 20)
+    assert struct.unpack_from('>I', d, 0)[0] == MAGIC_KIRBY, 'magic sai'
     w8, = struct.unpack_from('>I', d, 8)
-    key = w8 ^ 0x4F54544F  # OTTO
-    body = b''.join(struct.pack('>I', struct.unpack_from('>I', d, i)[0] ^ key)
-                    for i in range(8, len(d), 4))
-    assert body[:4] == b'OTTO', f'{fn} fail decipher OTTO'
+    for e in CAND:
+        key = w8 ^ e
+        body = b''.join(struct.pack('>I', struct.unpack_from('>I', d, i)[0] ^ key)
+                        for i in range(8, len(d), 4))
+        if body[:4] == struct.pack('>I', e):
+            return body, key
+    raise ValueError('khong giai ma duoc')
 
+
+def wrap(otf, key):
+    pad = (4 - (len(otf) % 4)) % 4
+    if pad:
+        otf += b'\x00' * pad
+    enc = b''.join(struct.pack('>I', struct.unpack_from('>I', otf, i)[0] ^ key)
+                   for i in range(0, len(otf), 4))
+    hdr = struct.pack('>II', MAGIC_KIRBY, len(otf) ^ key)
+    data = hdr + enc
+    return len(data).to_bytes(4, 'little') + compressor.compress(data)
+
+
+def v_bounds(value):
+    xs = []; ys = []
+    for op, args in value:
+        for a in args:
+            if a is None:
+                continue
+            xs.append(a[0]); ys.append(a[1])
+    return (min(xs), min(ys), max(xs), max(ys)) if xs else None
+
+
+def v_translate(value, dx, dy):
+    out = []
+    for op, args in value:
+        if op == 'closePath':
+            out.append((op, ()))
+        else:
+            out.append((op, tuple(None if a is None else (a[0] + dx, a[1] + dy) for a in args)))
+    return out
+
+
+def crescent(cx, cy, r, t, a0, a1, n=24):
+    outp = []; inp = []
+    for i in range(n + 1):
+        a = a0 + (a1 - a0) * i / n
+        outp.append((cx + (r + t / 2) * math.cos(a), cy + (r + t / 2) * math.sin(a)))
+        inp.append((cx + (r - t / 2) * math.cos(a), cy + (r - t / 2) * math.sin(a)))
+    pts = outp + list(reversed(inp))
+    val = [('moveTo', (pts[0],))] + [('lineTo', (p,)) for p in pts[1:]] + [('closePath', ())]
+    return val
+
+
+def tapered_stroke(center, w0, w1):
+    n = len(center)
+    left = []; right = []
+    for i, p in enumerate(center):
+        if i == 0:
+            dx = center[1][0] - p[0]; dy = center[1][1] - p[1]
+        elif i == n - 1:
+            dx = p[0] - center[i - 1][0]; dy = p[1] - center[i - 1][1]
+        else:
+            dx = center[i + 1][0] - center[i - 1][0]; dy = center[i + 1][1] - center[i - 1][1]
+        L = math.hypot(dx, dy) or 1.0
+        nx, ny = -dy / L, dx / L
+        w = (w0 + (w1 - w0) * i / (n - 1)) / 2.0 if n > 1 else w0 / 2
+        left.append((p[0] + nx * w, p[1] + ny * w))
+        right.append((p[0] - nx * w, p[1] - ny * w))
+    pts = left + list(reversed(right))
+    val = [('moveTo', (pts[0],))] + [('lineTo', (p,)) for p in pts[1:]] + [('closePath', ())]
+    return val
+
+
+def needed_chars():
+    vi = json.load(open(os.path.join(ROOT, 'games', f'{TID}_Kirby', 'translations', 'kirby_vi.json'),
+                        encoding='utf-8'))
+    used = set()
+    for ents in vi.values():
+        for v in ents.values():
+            used |= set(str(v))
+
+    def is_real(ch):
+        o = ord(ch)
+        return o > 0x7F and not ((0x3000 <= o <= 0x9FFF) or (0xAC00 <= o <= 0xD7FF) or (0xF900 <= o <= 0xFFFF))
+    return sorted({c for c in used if is_real(c)})
+
+
+def patch_bfotf(fn, need):
+    raw = open(os.path.join(SRC_DIR, fn), 'rb').read()
+    body, key = unwrap(raw)
     f = TTFont(io.BytesIO(body))
-    cm_src = f.getBestCmap()
+    gs = f.getGlyphSet()
+    cm = f.getBestCmap()
+    hmtx = f['hmtx'].metrics
+    upem = f['head'].unitsPerEm
+
+    def value_of(name):
+        pen = DecomposingRecordingPen(gs)
+        gs[name].draw(pen)
+        return pen.value
+
+    mark = {cp: value_of(cm[cp]) for cp in COMB if cp in cm}
+    # x-height va be net do tu chinh font
+    def gb(cp):
+        return v_bounds(value_of(cm[cp])) if cp in cm else None
+    o_b = gb(0x006F) or gb(0x004F)
+    l_b = gb(0x006C) or gb(0x0069)
+    xh = o_b[3] if o_b else int(upem * 0.55)
+    stem = (l_b[2] - l_b[0]) if l_b else int(upem * 0.14)
+    s = xh / 567.0
+
     top = f['CFF '].cff.topDictIndex[0]
     cs = top.CharStrings
     priv = top.FDArray[0].Private
-    hmtx_src = f['hmtx'].metrics
-
-    # 1. Tận dụng Eth (0x00D0) có sẵn nét tuyệt đẹp của chính font để gán cho Đ (0x0110)
-    if 0x00D0 in cm_src:
-        cid_eth = cm_src[0x00D0]
-        for sub in f['cmap'].tables:
-            if sub.isUnicode():
-                sub.cmap[0x0110] = cid_eth
-
-    f_edit = TTFont(otf_path)
-    cm_edit = f_edit.getBestCmap()
-    gs_edit = f_edit.getGlyphSet()
-    hmtx_edit = f_edit['hmtx'].metrics
-
-    used_cids = set(f.getBestCmap().values())
+    used_cids = set(cm.values())
     unused = [cid for cid in cs.keys() if cid not in used_cids and cid != '.notdef']
 
-    added_codes = [c for c in sorted(cm_edit) if c not in f.getBestCmap() and c <= 0xFFFF]
-    for idx, code in enumerate(added_codes):
-        cid = unused[idx]
-        gn = cm_edit[code]
-        w_vi, lsb_vi = hmtx_edit[gn]
-        ch = chr(code)
-        base_ch = BASE_ASCII_MAP.get(ch)
-        if base_ch and ord(base_ch) in cm_src:
-            base_cid = cm_src[ord(base_ch)]
-            target_w, _ = hmtx_src[base_cid]
-            shift_x = (target_w - w_vi) / 2.0
+    def compose(ch):
+        if ch in ('đ', 'Đ'):
+            base_cp, nfd_marks = (ord('d'), [0x0335]) if ch == 'đ' else (ord('D'), [0x0335])
         else:
-            target_w = w_vi
-            shift_x = 0.0
+            nfd = unicodedata.normalize('NFD', ch)
+            base_cp = ord(nfd[0])
+            nfd_marks = [ord(c) for c in nfd[1:]]
+        if base_cp not in cm:
+            return None
+        bv = value_of(cm[base_cp])
+        bb = v_bounds(bv)
+        cx = (bb[0] + bb[2]) / 2.0
+        val = list(bv)
+        W = hmtx[cm[base_cp]][0]
+        top_y = bb[3]
 
-        pen = T2CharStringPen(target_w, cs)
-        if abs(shift_x) > 0.1:
-            gs_edit[gn].draw(TransformPen(pen, (1, 0, 0, 1, shift_x, 0)))
-        else:
-            gs_edit[gn].draw(pen)
+        shape = 0x0302 if 0x0302 in nfd_marks else (0x0306 if 0x0306 in nfd_marks else
+                                                    ('horn' if 0x031B in nfd_marks else None))
+        if shape in SHAPE_MARKS:
+            m = mark[shape]
+            mb = v_bounds(m)
+            mm = v_translate(m, cx - (mb[0] + mb[2]) / 2.0, 0)
+            val += mm
+            top_y = v_bounds(mm)[3]
+        elif shape == 'horn':
+            x1 = bb[2]
+            center = [(x1 - 15 * s, top_y - 20 * s), (x1 + 38 * s, top_y + 18 * s),
+                      (x1 + 52 * s, top_y + 78 * s)]
+            val += tapered_stroke(center, stem * 1.0, stem * 0.5)
 
-        t2cs = pen.getCharString()
-        t2cs.private = priv
-        cs[cid] = t2cs
-        f['hmtx'].metrics[cid] = (int(target_w), int(lsb_vi + shift_x))
+        tone = next((cp for cp in (0x0301, 0x0300, 0x0303, 0x0309, 0x0323) if cp in nfd_marks), None)
+        if tone in TONE_ABOVE:
+            m = mark[tone]
+            mb = v_bounds(m)
+            dy = (top_y + 8 * s) - mb[1] if shape in SHAPE_MARKS else 0
+            val += v_translate(m, cx - (mb[0] + mb[2]) / 2.0, dy)
+        elif tone == 0x0309:
+            val += crescent(cx, top_y + 40 * s, 95 * s, stem * 0.72,
+                            math.radians(200), math.radians(20))
+        elif tone == 0x0323:
+            dot = mark[0x0307]
+            db = v_bounds(dot)
+            val += v_translate(dot, cx - (db[0] + db[2]) / 2.0, (bb[1] - 45 * s) - db[3])
+        elif tone == 0x0335:
+            y = bb[1] + (bb[3] - bb[1]) * 0.80
+            val += tapered_stroke([(bb[0] - 25 * s, y), (bb[2] + 25 * s, y)], stem * 0.9, stem * 0.9)
+        return val, W
+
+    todo = [c for c in need if ord(c) not in cm]
+    made = 0
+    for i, ch in enumerate(todo):
+        r = compose(ch)
+        if r is None:
+            continue
+        val, W = r
+        cid = unused[i]
+        pen = T2CharStringPen(W, cs)
+        for op, args in val:
+            getattr(pen, op)(*args)
+        t2 = pen.getCharString()
+        t2.private = priv
+        cs[cid] = t2
+        f['hmtx'].metrics[cid] = (int(W), int(v_bounds(val)[0]))
         for sub in f['cmap'].tables:
             if sub.isUnicode():
-                sub.cmap[code] = cid
+                sub.cmap[ord(ch)] = cid
+        made += 1
 
     buf = io.BytesIO()
     f.save(buf)
     new_otf = buf.getvalue()
-
-    pad_len = (4 - (len(new_otf) % 4)) % 4
-    if pad_len:
-        new_otf += b'\x00' * pad_len
-    enc_words = [struct.pack('>I', struct.unpack_from('>I', new_otf, i)[0] ^ key)
-                 for i in range(0, len(new_otf), 4)]
-    hdr = struct.pack('>II', MAGIC_KIRBY, len(new_otf) ^ key)
-    enc_data = hdr + b''.join(enc_words)
-    cmp_data = len(enc_data).to_bytes(4, 'little') + compressor.compress(enc_data)
-
-    p_out = os.path.join(OUT_DIR, fn)
-    with open(p_out, 'wb') as out_f:
-        out_f.write(cmp_data)
-    print(f'  [+] {fn:<36} -> Added {len(added_codes):>2} CID glyphs (balanced metrics) -> {len(cmp_data):,} bytes')
+    out = wrap(new_otf, key)
+    open(os.path.join(OUT_DIR, fn), 'wb').write(out)
+    # doc lai xac minh
+    chk_body, _ = unwrap(out)
+    cm2 = TTFont(io.BytesIO(chk_body)).getBestCmap()
+    left = [c for c in need if ord(c) not in cm2]
+    print(f'  [+] {fn:<36} them {made:>3} glyph | con thieu {len(left)} | {len(out):,} bytes')
 
 
-def patch_bfttf(fn):
-    p_src = os.path.join(SRC_DIR, fn)
-    raw = open(p_src, 'rb').read()
-    d = decompressor.decompress(raw[4:])
-    w8, = struct.unpack_from('>I', d, 8)
-    key = w8 ^ 0x00010000  # TTF
-    body = b''.join(struct.pack('>I', struct.unpack_from('>I', d, i)[0] ^ key)
-                    for i in range(8, len(d), 4))
-    assert body[:4] == b'\x00\x01\x00\x00', f'{fn} fail decipher TTF'
-
-    f = TTFont(io.BytesIO(body))
-    upem_target = f['head'].unitsPerEm
-    scale = upem_target / upem_vi
-
-    cm = f.getBestCmap()
-    glyf = f['glyf']
-    hmtx = f['hmtx']
-    order = list(f.getGlyphOrder())
-
-    # Map Eth (0x00D0) -> Đ (0x0110) nếu có sẵn
-    if 0x00D0 in cm:
-        eth_gname = cm[0x00D0]
-        for sub in f['cmap'].tables:
-            if sub.isUnicode():
-                sub.cmap[0x0110] = eth_gname
-
-    added = 0
-    for code, gname in sorted(cm_vi.items()):
-        if code in f.getBestCmap():
-            continue
-        new_gname = f'uni{code:04X}'
-        orig_w = gs_vi[gname].width * scale
-        ch = chr(code)
-        base_ch = BASE_ASCII_MAP.get(ch)
-        if base_ch and ord(base_ch) in cm:
-            base_gn = cm[ord(base_ch)]
-            target_w = hmtx[base_gn][0]
-            shift_x = (target_w - orig_w) / 2.0
-        else:
-            target_w = int(orig_w)
-            shift_x = 0.0
-
-        rec = DecomposingRecordingPen(gs_vi)
-        gs_vi[gname].draw(TransformPen(rec, (scale, 0, 0, scale, shift_x, 0)))
-        pen = TTGlyphPen(None)
-        rec.replay(pen)
-        g = pen.glyph()
-        glyf[new_gname] = g
-        hmtx[new_gname] = (int(target_w), int(shift_x))
-        for sub in f['cmap'].tables:
-            if sub.isUnicode():
-                sub.cmap[code] = new_gname
-        order.append(new_gname)
-        added += 1
-
-    glyf.glyphOrder = order
-    f.setGlyphOrder(order)
-    f['maxp'].numGlyphs = len(order)
-
-    buf = io.BytesIO()
-    f.save(buf)
-    new_ttf = buf.getvalue()
-
-    pad_len = (4 - (len(new_ttf) % 4)) % 4
-    if pad_len:
-        new_ttf += b'\x00' * pad_len
-    enc_words = [struct.pack('>I', struct.unpack_from('>I', new_ttf, i)[0] ^ key)
-                 for i in range(0, len(new_ttf), 4)]
-    hdr = struct.pack('>II', MAGIC_KIRBY, len(new_ttf) ^ key)
-    enc_data = hdr + b''.join(enc_words)
-    cmp_data = len(enc_data).to_bytes(4, 'little') + compressor.compress(enc_data)
-
-    p_out = os.path.join(OUT_DIR, fn)
-    with open(p_out, 'wb') as out_f:
-        out_f.write(cmp_data)
-    print(f'  [+] {fn:<36} -> Added {added:>2} TTF glyphs (balanced metrics) -> {len(cmp_data):,} bytes')
+def main():
+    need = needed_chars()
+    print(f'Ky tu tieng Viet can: {len(need)}')
+    print('=== GHEP GLYPH TIENG VIET CHO 11 FONT CFF (.bfotf) ===')
+    for fn in sorted(os.listdir(SRC_DIR)):
+        if fn.endswith('.bfotf.cmp'):
+            patch_bfotf(fn, need)
+    print('\nHoan tat ghep 11 font CFF Kirby!')
 
 
-print('=== BAT DAU VA 11 FONT BFOTF (CID-KEYED) ===')
-for fn in sorted(os.listdir(SRC_DIR)):
-    if fn.endswith('.bfotf.cmp'):
-        patch_bfotf(fn)
-
-print('\n=== BAT DAU VA 34 FONT BFTTF (TRUETYPE) ===')
-for fn in sorted(os.listdir(SRC_DIR)):
-    if fn.endswith('.bfttf.cmp'):
-        patch_bfttf(fn)
-
-print('\nHoan tat vá toan bo 45 font ScalableFontBin cho Kirby!')
+if __name__ == '__main__':
+    main()

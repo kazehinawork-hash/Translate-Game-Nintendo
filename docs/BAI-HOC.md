@@ -787,6 +787,36 @@ f.generate(otf, flags=('opentype',))
 
 ---
 
+### BH-42. 🎨 Chữ tiếng Việt LỆCH KIỂU vì lấy glyph từ font NGOÀI (Nunito) + bẫy thư mục `font_edit` bị ghi đè
+
+**Ca thật: Kirby and the Forgotten Land (10/10).**
+
+- **Triệu chứng:** Kirby đã hiện tiếng Việt nhưng người dùng báo *"hiển thị chưa được đẹp lắm"* —
+  trong **cùng một chữ**, chữ cái không dấu (`C, h, n…`) là font Nintendo **Fot-Rodin**, còn ký tự có dấu
+  (`ơ, ư, ự, ợ…`) đậm và sắc hơn (kiểu **Nunito**), trông như hai font dán vào nhau.
+- **Nguyên nhân gốc rễ (2 tầng):**
+  1. Glyph tiếng Việt được lấy từ `games/_consistency/vi_only.ttf` — font này chính là **Nunito-Bold** (bo tròn),
+     KHÔNG phải font của game.
+  2. 🐞 **Bẫy chí mạng:** thư mục `games/<TID>_Kirby/font_edit/*.otf` **đã bị FontForge ghi đè** bản trộn Nunito
+     từ lần trước. Script "native" đọc `TTFont(otf_path)` trong `font_edit/` để lấy glyph → **lấy nhầm glyph Nunito**.
+     Kiểm tra: font **nguyên bản từ dump** chỉ có **40/146** ký tự VI, nhưng `font_edit` (bị bẩn) có **143/146**.
+- **Phát hiện then chốt:** font gốc Kirby **CÓ SẴN GLYPH DẤU RỜI (combining)**: `U+0300 huyền, 0301 sắc,
+  0302 mũ, 0303 ngã, 0306 breve, 0307 chấm` → chỉ cần GHÉP, không cần font ngoài.
+- **GIẢI PHÁP (đã làm — giữ đúng kiểu chữ Nintendo):** ghép ký tự VI **từ chính font gốc**:
+  - chữ cái cơ sở lấy nguyên từ font;
+  - dấu (sắc/huyền/mũ/ngã/breve) lấy từ **glyph dấu rời** có sẵn của font;
+  - chỉ **VẼ THÊM 2 dấu**: **móc (horn)** cho `ơ ư` và **dấu hỏi (hook)** — đo bề dày nét theo font;
+  - `đ/Đ` = chữ `d/D` + gạch ngang; **advance width = chữ cái cơ sở** → không co giãn/dính chữ.
+  - **Kiểm chứng bằng render ảnh** (font mới vs Nunito) trước khi build đủ 11 font.
+- **QUY TẮC CHỐNG LẶP:**
+  1. **Trước khi ghép, kiểm font gốc có glyph dấu rời/combining nào** — nếu có, dùng nó; tuyệt đối không đưa font ngoài vào.
+  2. **KHÔNG tin thư mục `font_edit`** — luôn giải mã lại font từ `dump/`/`source/`; nếu nó từng bị công cụ khác ghi đè thì đã bẩn.
+  3. **Kiểm chứng kiểu chữ bằng render ảnh**, không chỉ `getBestCmap()`.
+- **Công cụ:** `tools/kirby_patch_all_fonts_native.py` (ghép glyph) + `tools/kirby_build_filter_universal.py` (Filter.bin).
+  Kết quả: **11/11 font CFF** phủ đủ **146 ký tự VI**, mod **109,5 MB**, đã đồng bộ vào Eden.
+
+---
+
 | Game | Lỗi đã gặp | Nguyên nhân | Trạng thái |
 |---|---|---|---|
 | Hogwarts | Toàn bộ chuỗi hiện `[KEY]` | magic AVAFDICT ghi ASCII thay vì UTF-16LE | ✅ đã sửa |
@@ -812,7 +842,8 @@ f.generate(otf, flags=('opentype',))
 | Switch Sports | Còn 173 chuỗi UI chưa dịch | các key có trong json nhưng value vẫn là tiếng Anh | ✅ **đã dịch** (còn 21 mục giữ nguyên có chủ đích: nhãn golf) |
 | Kirby | **Ô vuông khi hiển thị** | thay hẳn font CFF/upem1000 bằng TTF/upem2048 → mất 262–340 glyph | ✅ **đã sửa** (BH-28) — dựng lại CFF giữ đủ glyph |
 | Kirby | **Vẫn ô vuông sau khi vá `.bfotf`** | game còn dùng 34 font `.bfttf` (CHI/KOR/TWN/K15) mà mod KHÔNG có | ✅ đã bổ sung đủ 45 file (BH-29) |
-| Kirby | **Vẫn ô vuông sau khi vá đủ 45 font** | `.bfttf` là định dạng rút gọn của Nintendo (không có `maxp`) → fontTools `save()` đổi cấu trúc; thêm nữa `font/Region/<VÙNG>/*.bin` (XBIN/YAML) quy định bảng ký tự được phép, `Ext-*.bffnt` là font BITMAP | ⚠️ **CHƯA XONG** — xem BH-30 |
+| Kirby | **Vẫn ô vuông sau khi vá đủ 45 font** | `.bfttf` là định dạng rút gọn của Nintendo (không có `maxp`) → fontTools `save()` đổi cấu trúc; thêm nữa `font/Region/<VÙNG>/*.bin` (XBIN/YAML) quy định bảng ký tự được phép, `Ext-*.bffnt` là font BITMAP | ✅ **đã sửa** (BH-30→42) — Filter.bin mở bảng ký tự + ghép glyph từ font gốc |
+| Kirby | **Chữ tiếng Việt LỆCH KIỂU** (có dấu đậm/sắc khác chữ thường) | glyph VI lấy từ font ngoài **Nunito**; `font_edit` bị FontForge ghi đè bản trộn | ✅ **đã sửa** (BH-42) — ghép từ chính font gốc (dùng dấu combining có sẵn) |
 | Unravel Two | **Treo ở logo Nintendo Switch** | `Data.kit.0` trong mod **lớn hơn gốc 1.460.324 byte** (repack LZ4 literal-only) | ⚠️ **CHƯA VÁ** — cần encoder LZ4-có-từ-điển để giữ đúng kích thước file |
 | Ori WotW / It Takes Two | Ô vuông | font nằm **trong bundle Unity / pak**, mod không có file font rời | ⏳ cần vá font trong bundle/pak |
 

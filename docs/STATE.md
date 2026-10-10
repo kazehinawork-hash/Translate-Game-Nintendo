@@ -228,9 +228,16 @@
     - **QA (`tools/qa_kirby.py`): PASS** — 0 lệch key, 0 sai mã điều khiển, 0 chuỗi rỗng, 0 ký tự lạ.
   - **Font**: 11 font Latin trong `font/ScalableFontBin/*.bfotf.cmp`
     - Định dạng đã giải mã: `.cmp` = `[u32 size][zstd]`; bên trong `.bfotf` = **OTF bọc XOR**
-      (magic Kirby `0x36F81A1E`).
-    - Đã vá: thay bằng **subset Arial Unicode MS** (giữ cmap gốc ∪ ký tự dùng trong bản dịch) — mỗi font
-      ~8.049 glyph (gốc 8.207; phần "mất" là ký tự điều khiển 0x00–0x1D). **Đọc lại OK** cả 11 font.
+      (magic Kirby `0x36F81A1E`, key khác nhau từng file).
+    - ✅ **Cách vá cuối cùng (10/10) — GHÉP glyph tiếng Việt TỪ CHÍNH font gốc**
+      (`tools/kirby_patch_all_fonts_native.py`): chữ cái cơ sở lấy nguyên từ font + **glyph dấu rời
+      (combining) có sẵn trong font** (`U+0300..0307`); chỉ **vẽ thêm 2 dấu** (móc `ơ ư`, dấu hỏi);
+      `đ = d + gạch`; advance width = chữ cái cơ sở. Giữ nguyên cấu trúc CID-Keyed.
+    - **11/11 font CFF phủ đủ 146 ký tự VI** (`tools/kirby_verify_mod_fonts.py`), mod **109,5 MB**.
+    - 🐛 **Đã sửa lỗi "hiển thị chưa đẹp" (10/10) — BH-42:** trước đó glyph VI lấy từ font ngoài
+      **Nunito-Bold** (`vi_only.ttf`) → chữ có dấu đậm/sắc khác chữ thường. Nguyên nhân phụ: thư mục
+      `font_edit/` bị FontForge ghi đè bản trộn Nunito (nay **đã khôi phục nguyên bản** từ dump).
+    - Filter.bin (XBIN) đã mở rộng đủ ASCII + VI cho 31 font (`tools/kirby_build_filter_universal.py`).
   - **Đóng gói**: **369 file MSBT ở 9 khe ngôn ngữ Latin** (`US/EU_English, French, Spanish, German,
     Italian, Dutch`) + 11 font. **Giữ nguyên JP/CN/TW/KR** (không phá font khu vực).
   - **Kiểm chứng thành phẩm (`tools/final_check_kirby.py`): PASS** — **15.975/15.975 chuỗi khớp**.

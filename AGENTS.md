@@ -62,17 +62,23 @@ E:\RomFS_Dump\
 ---
 
 ## 3. QUY TẮC BẢN DỊCH KHÔNG MÁY MÓC (Theo Translate Book)
-1. **NGỮ CẢNH LÀ SỐ 1**:
-   - Dịch theo ngữ cảnh game thủ Việt Nam, văn phong Nintendo vui tươi, sôi nổi, tự nhiên.
+Áp dụng nhất quán cho **MỌI ENGINE AI** (Gemini, Claude, GPT-4o, DeepSeek, v.v.):
+
+1. **NGỮ CẢNH LÀ SỐ 1 & CHỐNG DỊCH MÁY THÔ CỨNG**:
+   - Dịch theo ngữ cảnh game thủ Việt Nam, văn phong Nintendo vui tươi, sôi nổi, kịch tính hoặc trang trọng tùy tựa game.
    - Tuyệt đối không dịch word-by-word (từng chữ một).
+   - Triệt tiêu lối hành văn bị động giả tạo (tránh dùng "được/bị ... bởi", thay bằng câu chủ động tự nhiên).
 2. **GLOSSARY LÀ MỆNH LỆNH**:
-   - Mọi bản dịch phải tuân thủ nghiêm ngặt theo `glossary/master.csv`.
-   - Nếu phát hiện thuật ngữ mới, phải cập nhật vào `glossary/master.csv` trước khi áp dụng.
+   - Mọi bản dịch phải tuân thủ nghiêm ngặt theo `glossary/master.csv` và `glossary/<game>.csv`.
+   - Nếu phát hiện thuật ngữ mới, phải cập nhật vào từ điển trước khi áp dụng rộng rãi.
 3. **BẢO TỒN NGUYÊN VẸN FORMAT / CONTROL CODES NINTENDO**:
    - Ký tự nút bấm Switch: `` (A), `` (B), `` (X), `` (Y), `` (ZR), `` (ZL), `` (Stick), `` (R), `` (L)...
-   - Control tag đổi màu, căn dòng: `\u000e\u0000...`, `\n`, `%s`, `{0}`. Giữ nguyên 100%, không được làm đứt gãy thẻ.
-4. **ĐỘ DÀI CHUỖI GIAO DIỆN (UI Length)**:
+   - Control tag đổi màu, căn dòng: `\u000e\u0000...`, `\n`, `\t`, `%s`, `{0}`, `{$Keywords...}`. Giữ nguyên 100%, không được làm đứt gãy thẻ.
+   - Bảo toàn chuẩn escape sequence nhị phân (`\"` trong JSON/SJSON).
+4. **ĐỘ DÀI CHUỖI GIAO DIỆN (UI Length / Overflow Guard)**:
    - Các nút bấm, nhãn ngắn gọn, súc tích để tránh tràn khung (text overflow) trên màn hình Switch.
+5. **CƠ CHẾ TỰ BẢO VỆ & SỬA LỖI ĐA AI (Self-Healing Loop)**:
+   - Bất kể dùng AI nào dịch, sau khi nhận kết quả phải tự động chạy QA đối soát multiset thẻ/placeholder. Nếu AI dịch sót biến `{0}` hoặc sinh chuỗi hỏng, script sẽ tự động rollback hoặc vá lại ngay lập tức trước khi build mod.
 
 ---
 

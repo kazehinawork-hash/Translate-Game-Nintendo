@@ -82,11 +82,26 @@ flowchart TD
      - Nhãn UI ngắn (menu/nút): **300–400 chuỗi/chunk**.
      - Hội thoại/câu dài: **200–250 chuỗi/chunk**. Chunk 500 dòng thường làm subagent **lỗi/truncate** — nếu gặp lỗi lặp lại ở 1 chunk, hãy **tách đôi/tư chunk đó** rồi chạy lại.
    - Nếu nhiều chuỗi trùng lặp: **gộp còn danh sách duy nhất** rồi dịch một lần, sau đó map ngược ra toàn bộ key (tiết kiệm 20–40% công).
-3. **Quy tắc bảo vệ mã nguồn tuyệt đối**:
-   - **Biến số & Placeholder**: Khóa 100% `{player_name}`, `%s`, `{0}`, `{$Keywords...}` không được chạm vào.
-   - **Escape Sequences**: Giữ nguyên `\"`, `\\`, `\n`. **Tuyệt đối không** sinh chuỗi `\n` literal (2 ký tự) ở nơi nguồn dùng xuống dòng thật, và ngược lại.
-   - **Độ dài UI (Overflow Guard)**: Chuỗi menu/nút bấm phải súc tích, độ dài tương xứng với **bản tiếng Anh** để tránh tràn khung màn hình Switch.
-     - ⚠️ Nếu nguồn dịch là tiếng Trung/Nhật/Hàn (rất ngắn gọn) thì **không thể** so độ dài trực tiếp — cần bản tiếng Anh làm mốc.
+3. **Tiêu chuẩn "Translate Book" & Mẫu Prompt Chuẩn Cho Mọi AI (Model-Agnostic Prompting)**:
+   - Khi giao việc cho bất kỳ AI/subagent nào (Gemini, Claude, GPT-4o, DeepSeek, v.v.), prompt bắt buộc phải nhúng **Bộ khung dịch thuật chống dịch máy (Anti-Machine Translation Engine)**:
+     ```text
+     BẠN LÀ CHUYÊN GIA BẢN ĐỊA HÓA GAME NINTENDO (LOCALIZATION SPECIALIST).
+     NHIỆM VỤ: Dịch các chuỗi sau sang tiếng Việt tự nhiên, chuẩn văn phong game thủ Việt Nam.
+     
+     CÁC NGUYÊN TẮC BẤT DI BẤT DỊCH:
+     1. VĂN PHONG TỰ NHIÊN: Tuyệt đối KHÔNG dịch từng chữ (word-by-word), KHÔNG dịch kiểu dịch máy thô cứng.
+        - Tránh cấu trúc bị động gượng gạo: không dùng "được/bị ... bởi", hãy dùng câu chủ động tự nhiên.
+        - Giữ đúng sắc thái nhân vật: vui tươi, hào sảng, kịch tính hoặc trang trọng tùy ngữ cảnh thoại.
+     2. ĐỘ DÀI UI (OVERFLOW GUARD): Các chuỗi nhãn nút, tiêu đề menu phải súc tích, ngắn gọn tương đương tiếng Anh để tránh tràn màn hình Switch.
+     3. BẢO TỒN NGUYÊN MẪU 100% CÁC THẺ & MÃ ĐIỀU KHIỂN:
+        - Giữ nguyên các biến số, placeholder: {0}, {1}, %s, %d, {player_name}, {$Keywords...}.
+        - Giữ nguyên ký tự nút bấm Switch:  (A),  (B),  (X),  (Y),  (ZR),  (ZL),  (Stick)...
+        - Giữ nguyên thẻ màu & căn dòng: \n, \t, <i>...</i>, <color=...>...</color>, \u000e...
+        - Giữ nguyên escape sequences: \" thay vì " trơn làm hỏng JSON/SJSON.
+     4. TUÂN THỦ TỪ ĐIỂN THUẬT NGỮ (GLOSSARY): Tra cứu và dùng đúng từ khóa đã chỉ định.
+     5. ĐỊNH DẠNG ĐẦU RA: Giữ nguyên cấu trúc JSON/mảng gốc, chỉ thay đổi nội dung dịch, không thêm bớt khóa.
+     ```
+   - **Tự động đối soát sau dịch (Self-Verification)**: Trước khi lưu file, agent tự so khớp số lượng placeholder và thẻ điều khiển giữa bản gốc và bản dịch (`multiset count`). Nếu phát hiện AI dịch làm mất thẻ `{0}` hoặc làm biến dạng `\n`, tự động sửa lại hoặc yêu cầu dịch lại dòng đó ngay lập tức.
 
 ---
 

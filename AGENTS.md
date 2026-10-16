@@ -116,19 +116,12 @@ E:\RomFS_Dump\
 ---
 
 ## 5. QUẢN LÝ DUNG LƯỢNG & ĐỒNG BỘ ONEDRIVE
-- **ROM (.nsp/.xci/.nsz/.xcz) CHỈ nằm trong `input/` trong lúc bóc dữ liệu.**
-  Bóc xong (đã có dữ liệu trong `games/<TitleID>_<Tên>/source/`) → **BẮT BUỘC chuyển ra ngoài OneDrive**:
-  ```bash
-  python tools/archive_rom.py --list     # xem đang có ROM nào trong input/
-  python tools/archive_rom.py            # copy -> xác minh SHA256 -> xoá bản trong input/
-  ```
-  Nơi lưu: `E:\ROM_Backup\<Tên game>\` (khớp cách đặt sẵn có). `tools/find_rom.py` tìm ROM trong
-  `input/` trước rồi tới `E:\ROM_Backup` → chuyển đi **không** làm hỏng quy trình bóc lại.
-  ⚠️ **Không dùng `move`/`Move-Item`**: file trong OneDrive là *reparse point*, lệnh move báo thành công
-  nhưng OneDrive nuốt mất (đã từng dính) — phải **copy → xác minh SHA256 → mới xoá** (tool trên làm sẵn).
-- Chỉ giữ `prod.keys` + `titlekeys.txt` trong `input/` (không commit, `.gitignore` chặn).
-- Không lưu file ROM gốc trực tiếp trong thư mục OneDrive để tránh phình dung lượng.
+- **CHUẨN ĐẦU VÀO RomFS:** Dữ liệu RomFS dump nặng vài GB đến vài chục GB **BẮT BUỘC nằm tại `E:\RomFS_Dump\<TitleID>\romfs/`** (ngoài OneDrive).
+  - Không lưu file ROM (`.nsp`/`.xci`) hay thư mục RomFS dump trực tiếp trong thư mục OneDrive để tránh phình dung lượng đám mây.
+- **Thư mục dự án `Translate Game/` trong OneDrive chỉ lưu giữ tài nguyên cốt lõi nhẹ:**
+  - Script & công cụ (`tools/`), cấu hình.
+  - Từ điển thuật ngữ (`glossary/`).
+  - Dữ liệu text trích xuất & bản dịch tiếng Việt (`games/<TitleID>_<Tên>/{source,translations}`).
+  - Thành phẩm mod LayeredFS hoàn chỉnh (`output/atmosphere/contents/<TitleID>/romfs/...`).
 - Tự động dọn dẹp file tạm (`scratch_*`, `__pycache__`, `temp_*`, ảnh thử nghiệm) sau mỗi giai đoạn kiểm thử.
-- Chỉ lưu giữ tài nguyên cần thiết: script (`tools/`), cấu hình, từ điển (`glossary/`),
-  dữ liệu gốc bóc tách + bản dịch (`games/<TitleID>_<Tên>/{source,translations}`) và thành phẩm (`output/`).
 - Khi làm game mới, tạo `games/<TitleID>_<Tên>/{source,translations}/` để quản lý độc lập.

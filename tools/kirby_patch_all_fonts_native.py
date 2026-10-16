@@ -204,7 +204,7 @@ def patch_bfotf(fn, need):
                       (x1 + 52 * s, top_y + 78 * s)]
             val += tapered_stroke(center, stem * 1.0, stem * 0.5)
 
-        tone = next((cp for cp in (0x0301, 0x0300, 0x0303, 0x0309, 0x0323) if cp in nfd_marks), None)
+        tone = next((cp for cp in (0x0301, 0x0300, 0x0303, 0x0309, 0x0323, 0x0335) if cp in nfd_marks), None)
         if tone in TONE_ABOVE:
             m = mark[tone]
             mb = v_bounds(m)
@@ -218,8 +218,15 @@ def patch_bfotf(fn, need):
             db = v_bounds(dot)
             val += v_translate(dot, cx - (db[0] + db[2]) / 2.0, (bb[1] - 45 * s) - db[3])
         elif tone == 0x0335:
-            y = bb[1] + (bb[3] - bb[1]) * 0.80
-            val += tapered_stroke([(bb[0] - 25 * s, y), (bb[2] + 25 * s, y)], stem * 0.9, stem * 0.9)
+            high_x = [p[0] for cmd in bv for p in cmd[1] if p and p[1] > bb[3] * 0.85]
+            if high_x:
+                cx_stem = (min(high_x) + max(high_x)) / 2.0
+                bar_half_w = (max(high_x) - min(high_x)) * 0.95
+            else:
+                cx_stem = cx
+                bar_half_w = 60 * s
+            y = bb[1] + (bb[3] - bb[1]) * 0.75
+            val += tapered_stroke([(cx_stem - bar_half_w, y), (cx_stem + bar_half_w, y)], stem * 0.85, stem * 0.85)
         return val, W
 
     todo = [c for c in need if ord(c) not in f.getBestCmap()]
@@ -229,7 +236,7 @@ def patch_bfotf(fn, need):
         if r is None:
             continue
         val, W = r
-        cid = unused[i]
+        cid = unused[made]
         gid = order.index(cid)
         top.FDSelect[gid] = target_fd
 

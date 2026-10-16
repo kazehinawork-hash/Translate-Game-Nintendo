@@ -860,7 +860,45 @@ f.generate(otf, flags=('opentype',))
      pen = T2CharStringPen(cff_w, cs)
      ```
   5. Khi đó engine HAL đọc: $(W - \text{nom\_w}) + \text{nom\_w} \equiv W$ (khớp chính xác 100% độ rộng mong muốn).
-- **Công cụ:** `tools/kirby_patch_all_fonts_native.py`.
+### BH-45. 🚨 GHÉP DẤU CFF NATIVE: Chữ `đ` thường biến thành `d` do thiếu mã nét gạch `0x0335` trong bộ lọc dấu thanh
+
+**Ca thật: Kirby and the Forgotten Land (10/10).**
+
+- **Triệu chứng:** Vào game, toàn bộ chữ `đ` thường (U+0111) trong phụ đề, lời thoại và menu bị mất gạch ngang, hiển thị thành chữ `d` trơn (ví dụ: `được` thành `dược`, `đến` thành `dến`), trong khi chữ `Đ` in hoa vẫn có nét gạch bình thường.
+- **Nguyên nhân gốc rễ:**
+  - Chữ in hoa `Đ` (U+0110) được ánh xạ sang glyph `Eth` (`0x00D0` / `cid00179`) có sẵn trong font gốc Nintendo, nên đã có nét gạch.
+  - Chữ thường `đ` (U+0111) được ghép nhân tạo (synthesized) qua `base_cp = ord('d')` và `nfd_marks = [0x0335]` (Short stroke overlay).
+  - Tuy nhiên, trong hàm `compose(ch)` của `tools/kirby_patch_all_fonts_native.py`, dòng lọc tìm `tone`:
+    ```python
+    tone = next((cp for cp in (0x0301, 0x0300, 0x0303, 0x0309, 0x0323) if cp in nfd_marks), None)
+    ```
+    Tuple lọc dấu thanh chỉ gồm 5 dấu huyền/sắc/hỏi/ngã/nặng mà **hoàn toàn thiếu `0x0335`**.
+  - Biến `tone` luôn bằng `None`, khiến nhánh vẽ nét gạch ngang `elif tone == 0x0335:` không bao giờ được thực thi. Kết quả hàm trả về nguyên vẹn bản vẽ của chữ `d`.
+  - Ngoài ra, vòng lặp gán CID `cid = unused[i]` bị lệch chỉ mục khi gặp ký tự bỏ qua (`r is None`), phải dùng biến đếm riêng `unused[made]`.
+- **QUY TẮC BẮT BUỘC KHI TỔNG HỢP GLYPH (SYNTHESIZED GLYPHS):**
+  1. Mọi mã combining do chính script gán vào `nfd_marks` (kể cả mã nhân tạo như `0x0335` gạch ngang của `đ`, `0x031B` râu của `ơ`/`ư`) **bắt buộc phải nằm trong tuple/danh sách nhận diện dấu**.
+  2. Nét gạch ngang của `đ` phải đo chính xác toạ độ thân dọc (stem) của chữ `d` để đặt tâm gạch:
+     ```python
+     high_x = [p[0] for cmd in bv for p in cmd[1] if p and p[1] > bb[3] * 0.85]
+     cx_stem = (min(high_x) + max(high_x)) / 2.0
+     bar_half_w = (max(high_x) - min(high_x)) * 0.95
+     y = bb[1] + (bb[3] - bb[1]) * 0.75
+     ```
+  3. Sau khi vá, phải kiểm tra số lệnh vẽ (draw ops) của glyph `0x111` (`đ`): số lệnh phải lớn hơn chữ `d` trơn (17 ops của `d` + 5 ops nét gạch = 22 ops).
+### BH-46. 🚨 UNREAL ENGINE: MENU CHÍNH VẪN TIẾNG ANH & LỖI FONT DO BỎ SÓT `.locres` VÀ `.ufont` TRONG PAK
+
+**Ca thật: It Takes Two (11/10).**
+
+- **Triệu chứng:** Vào game, phụ đề thì có tiếng Việt nhưng toàn bộ Menu chính (`Play Local`, `Play Online`, `Options`, `Credits`...) vẫn giữ nguyên tiếng Anh. Thêm vào đó, những dòng tiếng Việt có sẵn lại bị lỗi font hình thoi (ví dụ: `Chi không dây cc b`).
+- **Nguyên nhân gốc rễ:**
+  1. **Bỏ sót kho text `.locres`:** Khác với phụ đề được bake vào từng `HazeSubtitleAsset` (`.uasset`), toàn bộ chuỗi hệ thống UI/Menu và Options (hơn 8.475 mục) được Unreal Engine biên dịch vào `Nuts.locres` và `Untold.locres`. Quá trình trích xuất ban đầu chỉ bóc subtitle asset mà bỏ qua `.locres` do nghĩ game không dùng locres.
+  2. **Font UI nhị phân `.ufont` thiếu ký tự:** UE4 nạp font UI trực tiếp từ các file TrueType nhúng trong pak (`Nuts/Content/GUI/Fonts/*.ufont` gồm MarkW1G, Poppins, NotoSans) chứ không rơi về `LastResort.ttf` của RomFS. Các font `.ufont` gốc chỉ chứa 469-871 glyphs và hoàn toàn thiếu các ký tự có dấu nặng, móc (`ơ`, `ư`, `ộ`, `ụ`...), dẫn đến hiển thị hình thoi.
+- **QUY TẮC BẮT BUỘC KHI XỬ LÝ GAME UNREAL ENGINE:**
+  1. Dùng `repak` quét sạch toàn bộ file đuôi `.locres` trong mọi file pak của game. Dùng thư viện `pylocres` giải mã, đối chiếu song ngữ (ZH/ES) và dịch trọn vẹn toàn bộ các namespace giao diện.
+  2. Ghi đè file `.locres` tiếng Việt vào **cả 12 thư mục ngôn ngữ** (`en`, `de`, `es`, `fr`, `ja-JP`, `zh-Hans`...) để game chọn ngôn ngữ nào cũng ra tiếng Việt hoàn hảo.
+  3. **Tuyệt đối không dùng `fontTools.merge` trộn font ngoài vào font độc quyền của game**: font ngoài (như Lato, BeVietnamPro) sẽ khác hoàn toàn về độ dày nét (weight), tỷ lệ độ rộng và hình dáng hình học, gây ra hiện tượng **nửa chữ font này, nửa chữ font kia (chữ không đồng nhất kiểu dáng)**!
+  4. **Giải pháp chuẩn xác (Native Glyph Synthesis)**: Lấy nguyên bản thân chữ cái Latin gốc (`o`, `u`, `a`, `e`...) và các dấu phụ kết hợp (`circumflex`, `acute`, `grave`, `tilde`, `dotbelow`) có sẵn trong font gốc, tự động ghép contour trực tiếp vào các **ô glyph chưa dùng (unused slots)** để tạo thành glyph đơn (non-composite). Cách này giữ nguyên 100% kiểu chữ, độ đậm nét, tỷ lệ hình học và độ rộng bước cách (`advanceWidth`) của font gốc!
+- **Công cụ:** `pylocres`, `tools/itt_patch_all_native.py`, `tools/build_itt_pak.py`.
 
 ---
 

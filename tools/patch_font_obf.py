@@ -125,17 +125,29 @@ def main():
     if a.dry:
         return 0
 
-    # ghi lại mã ký tự trong bảng glyph
+    # ghi lại mã ký tự trong bảng glyph và SẮP XẾP LẠI (bắt buộc để Binary Search của engine hoạt động)
     n_edit = 0
     new_raw = bytearray(raw)
     for base, cnt in blocks:
+        entries = []
         for k in range(cnt):
             off = base + 4 + k * 48
             c = int.from_bytes(new_raw[off:off + 4], 'little')
             if c in changes:
-                new_raw[off:off + 4] = int(changes[c]).to_bytes(4, 'little')
+                new_c = int(changes[c])
+                entry_data = bytearray(new_raw[off:off + 48])
+                entry_data[0:4] = new_c.to_bytes(4, 'little')
+                entries.append((new_c, bytes(entry_data)))
                 n_edit += 1
-    print(f'đã đổi mã ký tự cho {n_edit} entry')
+            else:
+                entries.append((c, bytes(new_raw[off:off + 48])))
+        # Sắp xếp các entry theo mã Unicode tăng dần
+        entries.sort(key=lambda x: x[0])
+        # Ghi lại vào raw data
+        for k, (code, entry_data) in enumerate(entries):
+            off = base + 4 + k * 48
+            new_raw[off:off + 48] = entry_data
+    print(f'đã đổi mã ký tự cho {n_edit} entry và sắp xếp lại các block glyph theo thứ tự tăng dần')
 
     # ghi lại texture
     o, d = texobj

@@ -13,6 +13,13 @@ MOD = os.path.join(ROOT, 'output', 'atmosphere', 'contents', TID, 'romfs', 'msg'
 G = os.path.join(ROOT, 'games', f'{TID}_Kirby')
 vi = json.load(open(os.path.join(G, 'translations', 'kirby_vi.json'), encoding='utf-8'))
 
+CTX_OVERRIDE = {
+    'Dialog.msbt': {'Btn_Continue': 'Nghe tiếp'},
+    'Figure.msbt': {'$View': 'Ngắm'},
+}
+for _f, _kv in CTX_OVERRIDE.items():
+    vi.setdefault(_f, {}).update(_kv)
+
 tot = ok = miss = 0
 for lang in ('US_English', 'EU_German'):
     d = os.path.join(MOD, lang)

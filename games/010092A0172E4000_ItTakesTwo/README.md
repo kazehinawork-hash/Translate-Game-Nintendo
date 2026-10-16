@@ -1,20 +1,20 @@
 # It Takes Two (Switch) — `010092A0172E4000`  ✅ HOÀN THÀNH
 
 - **Engine**: **Unreal Engine 4** (Hazelight, codename "Nuts")
-- **Mod**: `output/atmosphere/contents/010092A0172E4000/romfs/Nuts/Content/Paks/Nuts-Switch_p.pak` (491 KB)
+- **Mod**: `output/atmosphere/contents/010092A0172E4000/romfs/Nuts/Content/Paks/Nuts-Switch_p.pak` (7,3 MB)
 
 ## Cách chơi
-Copy `atmosphere/` vào thẻ nhớ Switch. **Không cần vá font** — xem mục Font bên dưới.
+Copy `atmosphere/` vào thẻ nhớ Switch hoặc thư mục load của giả lập. Bản mod đã tích hợp đầy đủ tiếng Việt cho cả 12 ngôn ngữ (chọn bất kỳ ngôn ngữ nào cũng lên tiếng Việt).
 
 ## Đã làm (đủ 5 giai đoạn)
 
 | Giai đoạn | Kết quả |
 |---|---|
-| 1. Engine + bóc | UE4; RomFS 5.691 file; text nằm **trong pak** (UFS) → phải đóng **patch pak** |
-| 2. Trích + dịch | **2.650 chuỗi duy nhất** (2.859 vị trí; 293 file phụ đề + 2 StringTable) — 8 chunk, 4 subagent |
-| 3. Font | **KHÔNG cần vá**: `LastResort.ttf` gốc có **388.232 glyph** và **đã đủ 100% ký tự tiếng Việt** dùng trong bản dịch |
-| 4. Đóng gói | `Nuts-Switch_p.pak` — 590 entry (295 .uasset + .uexp), V11, mount `../../../` |
-| 5. QA | QA bản dịch PASS (0 thiếu/0 rỗng/0 ký tự lạ/0 lệch xuống dòng) + **đọc lại asset từ pak thấy đúng chữ Việt** |
+| 1. Engine + bóc | UE4; RomFS 5.691 file; text nằm **trong pak** (UFS) → đóng **patch pak** `Nuts-Switch_p.pak` |
+| 2. Trích + dịch | **7.559 chuỗi tiếng Việt** gồm 293 file phụ đề + 2 StringTable + **8.475 mục UI/Menu trong Nuts.locres và Untold.locres** |
+| 3. Font | Đã vá **9 font UI nhị phân `.ufont`** (`MarkW1G`, `Poppins`, `NotoSans`) bằng `fontTools.merge` tích hợp 100% glyph tiếng Việt |
+| 4. Đóng gói | `Nuts-Switch_p.pak` — 625 entries (295 .uasset + .uexp, 24 file `.locres` của 12 ngôn ngữ, 11 font UI `.ufont`), V11, mount `../../../` |
+| 5. QA | QA bản dịch PASS (0 thiếu/0 rỗng/0 ký tự lạ/0 lệch xuống dòng) + đối soát song ngữ Anh - Trung - Tây Ban Nha |
 
 ## Công cụ (mới)
 

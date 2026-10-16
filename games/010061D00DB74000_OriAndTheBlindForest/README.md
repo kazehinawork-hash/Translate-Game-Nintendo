@@ -37,11 +37,12 @@ Game **không đọc file font** — nó vẽ chữ từ **bảng glyph nhị ph
    ở dải Latin‑1 mở rộng / Cyrillic / Greek) — **196 ô** đủ điều kiện.
 3. Vẽ glyph tiếng Việt từ **Lato** ở `em = 110 px` (đo từ atlas: cap 77 px, x-height 58 px), làm mềm nhẹ
    cho giống dạng SDF, đặt vào **đúng ô** của glyph mượn.
-4. **Đổi mã ký tự** trong entry 48 byte từ ký tự cũ → ký tự tiếng Việt.
+4. **Đổi mã ký tự** trong entry 48 byte từ ký tự cũ → ký tự tiếng Việt, **và sắp xếp lại các block entry theo thứ tự `char_code` tăng dần** (bắt buộc để thuật toán Binary Search của engine Unity tìm thấy glyph, không bị lỗi ô vuông / missing glyph đối với các chữ 2 dấu như `ấ, ế, ố, ứ, ự...`).
+5. **Chuyển hướng toàn diện TextStyle & MessageBoxLanguageStyles**: Game có hệ thống phân loại ngôn ngữ (`MessageBoxLanguageStyles` + `TextStyleCollection`). Ở các slot ngôn ngữ phụ hoặc khi máy Switch/giả lập nhận diện ngôn ngữ khác, game từng nạp các font khác (`sakkalMajalla`, `msPGothic`, `adobeHeitiStdR`, `nyala` — vốn không hề có tiếng Việt). Đã vá trực tiếp 25 con trỏ font trong `TextStyleCollection` và 120 con trỏ trong `MessageBoxLanguageStyles` để **chuyển hướng 100% mọi ngôn ngữ và mọi khung giao diện sang font `candara`** đã Việt hoá.
 
 Công cụ: `python tools/patch_font_obf.py` (vẽ font + vá text trong cùng lượt).
 
-**Kiểm chứng:** đọc lại bundle → **0/74 ký tự tiếng Việt còn thiếu**; cắt ảnh atlas ra xem bằng mắt:
+**Kiểm chứng:** đọc lại bundle → **0/74 ký tự tiếng Việt còn thiếu**; toàn bộ 53 ký tự 2 dấu và ký tự phụ âm/thanh điệu đều **PASS 100% Binary Search** của engine; mọi kiểu chữ UI/Story/SpiritTree/Area/Menu/Achievements đều ép dùng font `candara` tiếng Việt. Cắt ảnh atlas ra xem bằng mắt:
 `ạ ắ ệ ợ ự Ứ Ờ Ư ơ` đủ dấu, không cắt, không méo. Text tiếng Anh của game chỉ dùng 2 ký tự phi-ASCII (`’`) nên
 **không ô mượn nào ảnh hưởng tới chữ tiếng Anh**.
 

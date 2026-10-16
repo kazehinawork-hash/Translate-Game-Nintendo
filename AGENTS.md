@@ -8,12 +8,10 @@ AI là engine dịch ngữ cảnh cao cấp, tuân thủ nghiêm ngặt bộ quy
 ## 0. CẤU TRÚC THƯ MỤC (bắt buộc tuân theo)
 
 ```
-Translate Game/
+Translate Game/ (hoặc bất kỳ nơi nào trên máy)
 ├─ AGENTS.md  README.md
 ├─ docs/                  STATE.md (tiến độ), INSTALL-MOD.txt (hướng dẫn cài)
 ├─ glossary/              master.csv + <game>.csv
-├─ dump/                  THƯ MỤC CHỨA RomFS DUMP (Ưu tiên hàng đầu cho tự hành 100%)
-│   └─ <TitleID>/romfs/...
 ├─ input/                 prod.keys, titlekeys, hoặc ROM tạm (KHÔNG commit)
 ├─ tools/                 toàn bộ script dùng chung
 ├─ games/                 dữ liệu từng game (KHÔNG commit — .gitignore chặn)
@@ -23,11 +21,16 @@ Translate Game/
 │       └─ README.md      hướng dẫn riêng của game
 └─ output/                SẢN PHẨM (mod LayeredFS) — copy vào thẻ nhớ, KHÔNG commit
     └─ atmosphere/contents/<TitleID>/romfs/...
+
+KHO CHỨA DUMP RIÊNG BIỆT (NGOÀI ONEDRIVE):
+E:\RomFS_Dump\
+    └─ <TitleID>/romfs/...
 ```
 
 - **QUY CHUẨN ĐẦU VÀO ƯU TIÊN (HƯỚNG 2 — RomFS DUMP)**:
   - Để tự động hóa tối đa, tránh lỗi mã hóa ticket/keys và bản patch update phức tạp, **ƯU TIÊN HÀNG ĐẦU là dùng RomFS dump trực tiếp từ Giả lập (Yuzu/Eden/Ryujinx: Dump RomFS FULL) hoặc DBI trên máy Switch**.
-  - Đặt RomFS dump vào `dump/<TitleID>/romfs/` hoặc `dump/<TitleID>/`. Tool sẽ nhận diện ngay lập tức và chạy thẳng quy trình dịch/vá font/đóng gói mà không cần qua bước bóc ROM.
+  - **Vị trí lưu trữ RomFS chuẩn:** `E:\RomFS_Dump\<TitleID>\romfs/` (nằm ngoài OneDrive để tránh phình dung lượng đám mây).
+  - Tool (`tools/find_rom.py`) sẽ tự động quét và nhận diện ngay lập tức trong `E:\RomFS_Dump\`, sau đó kích hoạt quy trình bóc tách/dịch/vá font/đóng gói hoàn toàn tự động.
 - Game **mới** → tạo `games/<TitleID>_<Tên>/{source,translations}/` (mục 5).
 - **Không** tạo lại `working/`, `translations/`, `scratch/`, `temp/` ở gốc.
 

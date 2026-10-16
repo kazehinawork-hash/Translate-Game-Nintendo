@@ -22,7 +22,7 @@ from pathlib import Path
 
 sys.stdout.reconfigure(encoding='utf-8')
 ROOT = Path(__file__).resolve().parent.parent
-DEFAULT_DIRS = [ROOT / 'dump', ROOT / 'input', Path(os.environ.get('ROM_DIR', r'E:\ROM_Backup'))]
+DEFAULT_DIRS = [Path(os.environ.get('ROMFS_DUMP_DIR', r'E:\RomFS_Dump')), ROOT / 'dump', ROOT / 'input', Path(os.environ.get('ROM_DIR', r'E:\ROM_Backup'))]
 EXTS = ('.nsp', '.xci')
 
 
@@ -36,11 +36,17 @@ def _dirs(extra=()):
 def find_romfs_dump(keyword=None):
     """Tìm thư mục RomFS đã dump (ưu tiên hàng đầu cho workflow tự hành 100%).
     Quét trong:
-      1. dump/<TitleID>/romfs hoặc dump/<TitleID>/
-      2. games/<TitleID>_*/source/romfs/
-      3. input/romfs/
+      1. E:\\RomFS_Dump\\<TitleID>\\romfs hoặc E:\\RomFS_Dump\\<TitleID>
+      2. dump/<TitleID>/romfs hoặc dump/<TitleID>/
+      3. games/<TitleID>_*/source/romfs/
+      4. input/romfs/
     """
-    search_dirs = [ROOT / 'dump', ROOT / 'input', ROOT / 'games']
+    search_dirs = [
+        Path(os.environ.get('ROMFS_DUMP_DIR', r'E:\RomFS_Dump')),
+        ROOT / 'dump',
+        ROOT / 'input',
+        ROOT / 'games',
+    ]
     for base in search_dirs:
         if not base.exists():
             continue
@@ -60,6 +66,9 @@ def find_romfs_dump(keyword=None):
             # games/.../source/romfs
             if (p / 'source' / 'romfs').is_dir():
                 return p / 'source' / 'romfs'
+            # direct game folder containing game assets
+            if (p / 'Data').is_dir() or (p / 'resource').is_dir() or (p / 'Common').is_dir():
+                return p
     return None
 
 

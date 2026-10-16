@@ -37,26 +37,27 @@ flowchart TD
 ```
 
 ### GIAI ĐOẠN 1: NHẬN DIỆN ENGINE & KHỞI TẠO BỘ NHỚ
-1. **Xác định Game mục tiêu**:
+1. **Xác định Game mục tiêu & Nguồn dữ liệu (Ưu tiên Hướng 2: RomFS Dump)**:
    - Đọc `docs/STATE.md` để lấy Title ID, cấu trúc file và tiến độ hiện tại.
-   - **Tìm ROM tự động** (không hardcode đường dẫn):
-     `python tools/find_rom.py "<TitleID hoặc tên game>"` — quét `input/` rồi `E:\ROM_Backup`
-     (đổi gốc bằng biến môi trường `ROM_DIR`). ROM nên để **ngoài OneDrive** cho nhẹ máy.
+   - **Tìm nguồn dữ liệu tự động** (ưu tiên RomFS dump trước, file ROM sau):
+     `python tools/find_rom.py "<TitleID hoặc tên game>"`
+     - **Nếu thấy `[RomFS Dump]` (trong `dump/<TitleID>/romfs` hoặc `input/romfs`)**: Bỏ qua toàn bộ bước giải mã NSP/XCI và NCA, tiến thẳng vào quét Engine và bóc tách dữ liệu gốc! Đây là cách tối ưu nhất, không lo lỗi keys/patch update.
+     - **Nếu chỉ thấy file ROM (`.nsp`/`.xci`)**: Thực hiện bóc RomFS từ ROM (hướng dự phòng).
    - Tạo thư mục làm việc: `games/<TitleID>_<Tên>/{source,translations}/`.
-1b. **THỬ BÓC ROMFS NGAY — NẾU RA 0 FILE THÌ DỪNG VÀ BÁO NGƯỜI DÙNG:**
+1b. **NẾU DÙNG FILE ROM: THỬ BÓC ROMFS NGAY — NẾU RA 0 FILE THÌ DỪNG VÀ BÁO NGƯỜI DÙNG:**
    ```bash
    python tools/ue_romfs_tool.py list "<game.nsp>"
    ```
    Ra danh sách file = làm tiếp bình thường. **Ra `0 file` = DỪNG LẠI**, báo rõ cho người dùng:
    có thể là (a) NSP **còn mã hoá** (cần bản *decrypted* hoặc `title.keys`), hoặc (b) game **quá mới**
-   vượt khả năng bộ tool hiện tại.
-   ⚠️ Đừng đi tiếp khi chưa bóc được dữ liệu — xem `docs/BAI-HOC.md` BH-19 (ca Super Mario Party Jamboree:
-   phát hiện muộn, tốn rất nhiều thời gian mà cuối cùng phải bỏ).
-2. **Nhận diện Engine tự động**:
+   vượt khả năng bộ tool hiện tại $\to$ Hướng dẫn người dùng chuyển sang Hướng 2 (Dump RomFS từ emulator).
+   ⚠️ Đừng đi tiếp khi chưa bóc được dữ liệu — xem `docs/BAI-HOC.md` BH-19 (ca Super Mario Party Jamboree).
+2. **Nhận diện Engine tự động (Trực tiếp từ cây thư mục RomFS)**:
    - **Nintendo First-Party** (Switch Sports, Mario, Zelda): Định dạng `MSBT` + `SARC.zs` + `BFARC.zs` font.
-   - **Unity**: Thư mục `Managed/`, file `sharedassets*.assets`, file `TextMeshPro` hoặc `I2 Localization`.
+   - **Unity**: Thư mục `Managed/`, file `Data/data.unity3d`, `sharedassets*.assets`, file `TextMeshPro` hoặc `I2 Localization`.
    - **Unreal Engine**: Định dạng `.pak` `.ucas` `.utoc` (IoStore) hoặc `.locres`; text có thể nằm trong pak dạng **AVAFDICT 2.0** (`MAIN-*.bin`, `SUB-*.bin`). Xem mục **PHỤ LỤC A**.
    - **Supergiant Games** (Hades II): Định dạng `SJSON` + SpriteFont `XNB` Version 6/7.
+   - **Bandai Namco / Custom Engine (God Eater, v.v.)**: Định dạng pack `*.pfs`/`*.pk`/`*.pkh` hoặc CSV/JSON/XML.
    - **Custom Engine / CSV / JSON / XML**: Các game indie khác.
 3. **Đồng bộ Glossary**:
    - Nạp `glossary/master.csv` (hoặc `glossary/<game>.csv`). Nếu có thuật ngữ mới phát sinh, ghi ngay vào từ điển trước khi dịch.

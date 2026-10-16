@@ -12,17 +12,22 @@ Translate Game/
 ├─ AGENTS.md  README.md
 ├─ docs/                  STATE.md (tiến độ), INSTALL-MOD.txt (hướng dẫn cài)
 ├─ glossary/              master.csv + <game>.csv
-├─ input/                 prod.keys, titlekeys (KHÔNG commit)
+├─ dump/                  THƯ MỤC CHỨA RomFS DUMP (Ưu tiên hàng đầu cho tự hành 100%)
+│   └─ <TitleID>/romfs/...
+├─ input/                 prod.keys, titlekeys, hoặc ROM tạm (KHÔNG commit)
 ├─ tools/                 toàn bộ script dùng chung
 ├─ games/                 dữ liệu từng game (KHÔNG commit — .gitignore chặn)
 │   └─ <TitleID>_<Tên>/
-│       ├─ source/        dữ liệu gốc bóc từ ROM (raw_text, extracted_json, font gốc…)
+│       ├─ source/        dữ liệu gốc bóc tách (raw_text, extracted_json, font gốc…)
 │       ├─ translations/  BẢN DỊCH TIẾNG VIỆT  ← sửa ở đây khi cần fix
 │       └─ README.md      hướng dẫn riêng của game
 └─ output/                SẢN PHẨM (mod LayeredFS) — copy vào thẻ nhớ, KHÔNG commit
     └─ atmosphere/contents/<TitleID>/romfs/...
 ```
 
+- **QUY CHUẨN ĐẦU VÀO ƯU TIÊN (HƯỚNG 2 — RomFS DUMP)**:
+  - Để tự động hóa tối đa, tránh lỗi mã hóa ticket/keys và bản patch update phức tạp, **ƯU TIÊN HÀNG ĐẦU là dùng RomFS dump trực tiếp từ Giả lập (Yuzu/Eden/Ryujinx: Dump RomFS FULL) hoặc DBI trên máy Switch**.
+  - Đặt RomFS dump vào `dump/<TitleID>/romfs/` hoặc `dump/<TitleID>/`. Tool sẽ nhận diện ngay lập tức và chạy thẳng quy trình dịch/vá font/đóng gói mà không cần qua bước bóc ROM.
 - Game **mới** → tạo `games/<TitleID>_<Tên>/{source,translations}/` (mục 5).
 - **Không** tạo lại `working/`, `translations/`, `scratch/`, `temp/` ở gốc.
 

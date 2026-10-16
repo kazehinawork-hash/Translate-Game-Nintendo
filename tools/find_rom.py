@@ -22,7 +22,7 @@ from pathlib import Path
 
 sys.stdout.reconfigure(encoding='utf-8')
 ROOT = Path(__file__).resolve().parent.parent
-DEFAULT_DIRS = [ROOT / 'input', Path(os.environ.get('ROM_DIR', r'E:\ROM_Backup'))]
+DEFAULT_DIRS = [ROOT / 'dump', ROOT / 'input', Path(os.environ.get('ROM_DIR', r'E:\ROM_Backup'))]
 EXTS = ('.nsp', '.xci')
 
 
@@ -31,6 +31,36 @@ def _dirs(extra=()):
     for d in extra:
         out.append(Path(d))
     return [d for d in out if d.exists()]
+
+
+def find_romfs_dump(keyword=None):
+    """Tìm thư mục RomFS đã dump (ưu tiên hàng đầu cho workflow tự hành 100%).
+    Quét trong:
+      1. dump/<TitleID>/romfs hoặc dump/<TitleID>/
+      2. games/<TitleID>_*/source/romfs/
+      3. input/romfs/
+    """
+    search_dirs = [ROOT / 'dump', ROOT / 'input', ROOT / 'games']
+    for base in search_dirs:
+        if not base.exists():
+            continue
+        # Kiểm tra direct romfs
+        direct = base / 'romfs'
+        if direct.is_dir() and (not keyword or keyword.lower() in str(direct).lower()):
+            return direct
+        for p in base.iterdir():
+            if not p.is_dir():
+                continue
+            if keyword and keyword.lower() not in p.name.lower():
+                continue
+            if (p / 'romfs').is_dir():
+                return p / 'romfs'
+            if p.name.lower() == 'romfs':
+                return p
+            # games/.../source/romfs
+            if (p / 'source' / 'romfs').is_dir():
+                return p / 'source' / 'romfs'
+    return None
 
 
 def list_roms(extra_dirs=()):
@@ -44,11 +74,15 @@ def list_roms(extra_dirs=()):
 
 
 def find_rom(keyword=None, extra_dirs=(), prefer_base=True):
-    """Tìm ROM khớp `keyword` (TitleID hoặc tên, không phân biệt hoa thường).
-
-    prefer_base=True: ưu tiên bản gốc (v0) hơn bản Update.
-    Trả về Path hoặc None.
+    """Tìm RomFS dump (ưu tiên 1) hoặc file ROM khớp `keyword`.
+    Trả về Path (thư mục RomFS hoặc file ROM) hoặc None.
     """
+    # 1. ƯU TIÊN 1: Thư mục RomFS đã dump
+    romfs = find_romfs_dump(keyword)
+    if romfs:
+        return romfs
+
+    # 2. ƯU TIÊN 2: File ROM (.nsp/.xci)
     roms = list_roms(extra_dirs)
     if keyword:
         k = keyword.lower()
@@ -69,12 +103,17 @@ def main():
     if '--dir' in sys.argv:
         extra = sys.argv[sys.argv.index('--dir') + 1:]
     show_all = '--all' in sys.argv
-    roms = list_roms(extra)
     kw = args[0] if args else None
+    romfs = find_romfs_dump(kw)
+    if romfs:
+        print(f'[RomFS Dump] {romfs}')
+        if not show_all:
+            return 0
+    roms = list_roms(extra)
     if kw:
         roms = [(p, s) for p, s in roms if kw.lower() in p.name.lower()]
-    if not roms:
-        print('Khong tim thay ROM nao' + (f' khop "{kw}"' if kw else '') + '.')
+    if not roms and not romfs:
+        print('Khong tim thay ROM hoac RomFS nao' + (f' khop "{kw}"' if kw else '') + '.')
         print('Thu muc da quet:', ', '.join(str(d) for d in _dirs(extra)))
         return 1
     for p, s in (roms if show_all else roms[:1]):

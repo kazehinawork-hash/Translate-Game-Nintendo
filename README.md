@@ -24,17 +24,21 @@ Translate Game/
 ├─ tools/                    Toàn bộ script dùng chung (bóc/dịch/build/QA) → xem tools/README.md
 ├─ games/                    Dữ liệu từng game (nguồn + bản dịch) — KHÔNG commit
 │   └─ <TitleID>_<Tên>/
-│       ├─ source/           Dữ liệu gốc bóc từ ROM (text gốc, font gốc…)
+│       ├─ source/           Dữ liệu gốc bóc tách (text gốc, font gốc…)
 │       ├─ translations/     BẢN DỊCH TIẾNG VIỆT  ← SỬA Ở ĐÂY khi cần fix
 │       ├─ font_edit/        (nếu có) font đã giải mã để vá — tái tạo được, KHÔNG commit
 │       └─ README.md         Hướng dẫn + bài học riêng của game đó
 └─ output/                   SẢN PHẨM: mod LayeredFS — copy vào thẻ nhớ
     └─ atmosphere/contents/<TitleID>/romfs/...
+
+KHO CHỨA DỮ LIỆU RomFS THÔ (NGOÀI ONEDRIVE):
+E:\RomFS_Dump\
+    └─ <TitleID>/romfs/...   (Dump RomFS FULL từ Giả lập / Switch)
 ```
 
-> **Repo GitHub chỉ chứa MÃ NGUỒN.** `.gitignore` chặn `output/`, `dump/`, `input/`,
-> `games/*/{source,translations,font_edit}/` và ROM (`.nsp/.xci`) — sản phẩm và dữ liệu game
-> không bao giờ được push.
+> **Repo GitHub chỉ chứa MÃ NGUỒN.** `.gitignore` chặn `output/`, `input/`,
+> `games/*/{source,translations,font_edit}/` và ROM/RomFS — sản phẩm và dữ liệu game nặng
+> không bao giờ được push. Dữ liệu RomFS dump nằm ngoài OneDrive tại `E:\RomFS_Dump\`.
 
 ---
 

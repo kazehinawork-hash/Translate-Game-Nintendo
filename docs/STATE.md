@@ -1,5 +1,68 @@
 # Trạng thái dự án bản địa hóa Game Nintendo Switch
 
+## 0. The Legend of Zelda: Tears of the Kingdom (TotK)
+- **Title ID**: `0100F2C0115B6000` (Base / Update Product.142 v1.4.2)
+- **Engine**: Nintendo First-Party (EPD LunchPack)
+- **Cấu trúc Text/Font**:
+  - Mals archive: `Mals/USen.Product.142.sarc.zs` (MSBT trong SARC, nén Zstandard với dictionary `zs.zsdic`).
+  - Font: `Font/Font.Nin_NX_NVN.bfarc.zs` (BFFNT/BFOTF font nhị phân Nintendo mã hóa XOR key `0xD99B871A`).
+- **Trạng thái hiện tại**:
+  - Đã trích xuất toàn bộ 1.511 file MSBT (47.800 strings) từ RomFS Dump tại `E:\RomFS_Dump\0100F2C0115B6000\romfs`.
+  - **ĐÃ HOÀN THÀNH 100% CÁC DANH MỤC LỚN (14.537 chuỗi)**:
+    - `StaticMsg` (100% - 1.509 chuỗi): Toàn bộ mẹo chơi, chỉ dẫn, hiệu ứng nấu nướng, ký ức rồng, bản đồ phím.
+    - `ChallengeMsg` (100% - 1.097 chuỗi / 253 files): 100% nhiệm vụ chính, đền thờ, nhiệm vụ phụ, phiêu lưu bên lề.
+    - `LocationMsg` (100% - 1.709 chuỗi / 2 files): 100% địa danh Hyrule, hầm ngục Dungeon, đền thờ.
+    - `ShoutMsg` (100% - 176 chuỗi / 5 files): Giọng nói kêu gọi chiến đấu của cả 5 Hiền nhân.
+    - `LayoutMsg` (100% - 1.311 chuỗi / 59 files): 100% giao diện UI hệ thống, Album, Cài đặt, Bản đồ, Pouch UI, Shop...
+    - `ActorMsg` (100% - 5.618 chuỗi / 11 files): 100% Túi đồ Pouch (2.882 chuỗi vũ khí Master Sword/khiên/cung/đồ Zonai/nguyên liệu nấu ăn), Bách khoa toàn thư Hyrule PictureBook (1.019 chuỗi), Quái vật Boss, Chế tạo Zonai, NPC.
+    - `StaffRollMsg` (100% - 1.548 chuỗi / 2 files): 100% Danh đề Credits nhà sản xuất và chức danh.
+    - `NpcTerrorMsg` (100% - 1.569 chuỗi / 29 files): 100% câu thoại cảm thán, la hét, kinh ngạc của NPC.
+  - **EventFlowMsg (Hội thoại cốt truyện & minigame - 33.263 chuỗi / 1.139 files)**:
+    - **PIPELINE MỚI (batch + masking)** — tool dùng chung:
+      - `tools/totk_text.py`: tách/che MỘT TOKEN HÓA 100% mã điều khiển Nintendo (`\x0e…`) thành `[[n]]`
+        để subagent dịch mà KHÔNG thể phá thẻ; khôi phục lại đúng byte gốc. Tự kiểm roundtrip toàn 47.800 chuỗi.
+      - `tools/totk_make_event_batches.py`: sinh chunk (`source/ev_batches/batch_NNN.json`, ~250 chuỗi/chunk, đã che token).
+      - (giao subagent dịch) -> `translations/ev_batches/batch_NNN.json`
+      - `tools/totk_apply_batches.py`: khôi phục token + hợp nhất vào `translations/<file>.json` (đủ nhãn),
+        tự bắt lỗi JSON/lệch token/lệch `\n`.
+      - `glossary/totk.csv` (1.693 thuật ngữ, sinh từ `StaticMsg__Reference` + `LocationMsg`).
+      - Cổng QA: `python tools/qa_text.py --game totk` (đã thêm adapter).
+    - Tiến độ: ✅ **HOÀN THÀNH 100% EventFlowMsg (33.263 / 33.263 chuỗi, 1.137 file có nội dung)**;
+      **139 / 139 batch đã dịch**. (2 file `Dm_ZO_0016`, `Dm_ZO_0030` chỉ chứa chuỗi rỗng nên không cần dịch.)
+      Pipeline: sinh batch -> giao subagent dịch -> `totk_apply_batches.py` -> build -> QA.
+    - ⚠️ Lỗi cũ đã vá: 51 chuỗi ở `DmF_SY_StatueDevil/Venus` từng ghi literal `\n` (2 ký tự) thay vì xuống dòng thật
+      → `tools/totk_apply_batches.py` nay tự sửa; `LayoutMsg__AppMap_00::Scroll` (`[Hold]`→`[Giữ]`) là NGOẠI LỆ hợp lệ (đã whitelist QA).
+  - **TỔNG KẾT BẢN MOD HIỆN TẠI** (build 17/10):
+    - **1.509 / 1.511 file MSBT** đã inject tiếng Việt (2 file còn lại chỉ có chuỗi rỗng); gói `USen.Product.142.sarc.zs` = **2.269.137 byte**.
+    - 🚨 **BẮT BUỘC kèm `System/Resource/ResourceSizeTable...rsizetable.zs`** (BH-49): TotK dùng bảng RSTB
+      (magic `RESTBL`, cặp `crc32(path không .zs) -> size giải nén`) để cấp phát resource. Thay Mals/Font mà
+      không vá RSTB → **treo ở "Launching..." / crash**. Vá bằng `python tools/patch_totk_rstb.py`
+      (size Mals 11.595.592, Font 1.501.836).
+    - **Lưu ý phiên bản:** game 1.4.3 vẫn đọc `Mals/USen.Product.142.sarc.zs` (RSTB 143 KHÔNG có entry 143).
+    - Gói mod hiện có: `Mals/USen.Product.142.sarc.zs`, `Mals/USen.Product.143.sarc.zs` (dự phòng),
+      `Font/Font.Nin_NX_NVN.bfarc.zs`, `System/Resource/ResourceSizeTable.Product.{142,143}[.Nin_NX_NVN].rsizetable.zs`.
+    - `qa_text.py --game totk`: **PASS** (0 lỗi; cảnh báo: 3.489 lệch ngắt dòng, 580 rỗng-cả-nguồn, 1 lệch mã điều khiển; còn 1.703 chuỗi giống nguồn — tuyệt đại đa số là tên riêng/tên quái/nhân sự credits/lời hát, đã rà thủ công).
+    - Bộ Font `Font.Nin_NX_NVN.bfarc.zs` đã vá và mã hóa XOR chuẩn Nintendo (`0xD99B871A`).
+    - Bản mod LayeredFS: `output/atmosphere/contents/0100F2C0115B6000/romfs/` (`Mals/` + `Font/` + `System/Resource/`).
+    - Build: `python tools/build_totk_mod.py`; vá RSTB: `python tools/patch_totk_rstb.py`;
+      QA: `python tools/qa_text.py --game totk`.
+  - **PORT BẢN VIỆT HOÁ "THE RED TEAM" (TRT) SANG 1.4.3** (18/10) — cho chơi được ngay, khỏi dịch lại:
+    - Patch TRT (Patch 142) **không chạy trên 1.4.3** vì: (a) không có `ResourceSizeTable` cho Product.143,
+      (b) SARC của họ **thiếu file `LayoutMsg/AppLoadingMessage_00.msbt`** (file màn hình chờ!),
+      (c) thiếu **140 nhãn** ở 11 file do 1.4.3 thêm chuỗi (Staff +15, InstantTips +39, Pouch_00 +36...).
+    - Tool: `python tools/build_totk_trt_mod.py --trt "<...>/USen.Product.142.sarc.zs"` → `output/TRT143/`.
+      Ghép: cấu trúc file/nhãn lấy từ Mals gốc **1.4.3**, văn bản ưu tiên **TRT** → thiếu thì lấy **bản của mình**
+      → còn lại EN; tự bỏ qua nhãn có thẻ điều khiển lệch giữa 2 bản (321 nhãn).
+    - Kết quả: 1511/1511 file, 47.800 nhãn (47.336 TRT + 464 của mình), 0 nhãn thiếu/0 rỗng oan;
+      Mals `USen.Product.142.sarc.zs` = 2.248.333 B (giải nén 11.830.232) + Font TRT (569.084 B) + RSTB 143 đã vá.
+    - File tham chiếu đối chiếu: `glossary/totk_trt_names_ref.csv` (12.961 dòng `file,label,en,ours,redteam`).
+    - ✅ **GÓI ĐỂ CHƠI (chốt 18/10): `output/TRT143/`** — bản TRT port sang 1.4.3.
+      143 nhãn mới của 1.4.3 (5 vải dù Hiền Nhân, Item Sharing, Daily Bonus, ZELDA NOTES) lấy tạm bản dịch của mình;
+      người dùng quyết định **không dịch lại**. Bản dịch của mình (`output/` + `games/.../translations/`) **giữ nguyên làm dự phòng**, không xoá.
+    - Đồng bộ Eden: `output/TRT143/.../0100F2C0115B6000/romfs/` → `%APPDATA%\eden\load\0100F2C0115B6000\romfs\` (đã đồng bộ).
+    - ✅ **Toàn bộ text đã Việt hóa xong.** Việc còn lại: **test trong game** (Eden/Switch).
+
+
 ## 1. Hogwarts Legacy (Nintendo Switch)
 - **Title ID**: `0100F7E00C70E000` (Base) / `0100F7E00C70E800` (Update v1.0.5)
 - **Engine**: Unreal Engine 4.27 (Custom Avalanche Software Build)
@@ -57,31 +120,36 @@
 
 ## 3. Nintendo Switch Sports
 - **Title ID**: `0100D2F00D5C0000`
-- **Trạng thái**: Đã build mod (text 100% + font) — **NHƯNG có lỗi người dùng báo 03/10: UI tỷ số không hiện.**
-- **🐞 NGUYÊN NHÂN ĐÃ TÌM RA (03/10):** `tools/build_custom_font.py` **thay hẳn** 4 font Latin của
-  Nintendo (`scft/VDL-LOGOG-BOLD.bfotf`, `VDL-LOGOG-ULTRA`, `VDL-GigaJr-ExtraBold-003_Gaiji`,
-  `VDL-GigaJr-Ultra`) bằng **Nunito** → **mất 7.888 / 8.207 glyph (96%)**:
-  font gốc **8.207 glyph** (OTTO/CFF) → font mod **938 glyph** (TTF/glyf); mất trọn
-  **fullwidth/halfwidth 164/164, số trong vòng 76/76, mũi tên 13/13, hình khối 20/20** — đúng những
-  glyph mà UI tỷ số dùng để vẽ.
-- **Lỗi khác tìm thấy khi soát (`tools/qa_switchsports.py`):**
-  - thiếu 1 file dịch: `_all_strings.json` (file tổng hợp, có thể không cần)
-  - `ProgramMsg__Equipment__Hair.msbt.json` **thiếu key `Hair45`**
-  - **2 chuỗi rỗng** trong bản dịch
-- **Việc cần làm:** làm lại font theo hướng **HỢP NHẤT** (giữ 8.207 glyph gốc + thêm glyph tiếng Việt),
-  vá 3 lỗi bản dịch trên, rồi build lại. Chi tiết kỹ thuật: **BH-20** trong `docs/BAI-HOC.md`.
-- ✅ **ĐÃ SỬA XONG (03/10):**
-  - **Font:** `tools/patch_font_switchsports.py` — thay 4 font Latin bằng **Arial Unicode MS**
-    (ARIALUNI.TTF) rồi **subset** đúng bằng *cmap font gốc ∪ mọi ký tự dùng trong bản dịch*.
-    Kết quả: font mod **8.334 glyph** (font gốc 8.207) — **không thiếu ký tự tiếng Việt nào**,
-    và đã có lại **số fullwidth ０-９, số trong vòng ①, mũi tên →, hình khối ■** (thứ UI tỷ số dùng).
-    SARC font = **7,03 MB** (gốc 10,08 MB). Lưu ý: style đổi từ Nunito (bo tròn) sang Arial Unicode —
-    đánh đổi để đảm bảo hiển thị đúng.
-    ⚠️ **Bài học quan trọng:** danh sách giữ glyph phải lấy từ **ký tự THỰC DÙNG trong bản dịch**
-    (không chỉ từ cmap gốc) — lần đầu làm vậy nên **thiếu 16 ký tự hoa tiếng Việt** (`Ơ Ư Ả Ấ Ậ Ắ Ề Ể Ồ Ổ Ộ Ớ Ờ Ở Ợ Ủ`).
-  - **Bản dịch:** bu key thiếu `Hair45` = "Rẽ ngôi giữa" trong `ProgramMsg__Equipment__Hair.msbt.json`
-    (2 chuỗi "rỗng" còn lại là **rỗng cả trong bản gốc** → không phải lỗi). Build lại: **250 file dịch**.
-  - Mod: `output/atmosphere/contents/0100D2F00D5C0000/romfs/` — font 7,03 MB + `Mals/USen.Product.150.sarc.zs` 313 KB.
+- **Trạng thái**: ✅ **ĐÃ BUILD LẠI FONT ĐÚNG CHUẨN NINTENDO (10/10)** — text 100% + font gốc + tiếng Việt.
+  - File mod: `output/atmosphere/contents/0100D2F00D5C0000/romfs/`
+    (`Font/Font.Nin_NX_NVN.bfarc.zs` 9,88 MB + `Mals/USen.Product.150.sarc.zs` 355.880 B).
+  - ⚠️ **CHƯA test trên máy thật** (lỗi người dùng báo trước đó là *"Unable to start software"*).
+- **🐞 NGUYÊN NHÂN GỐC (xác nhận 10/10):** bản mod cũ dùng **SAI** font do `tools/build_custom_font.py`
+  (Nunito) sinh ra: **thay hẳn** 4 font Latin của Nintendo (`scft/VDL-LOGOG-BOLD.bfotf`,
+  `VDL-LOGOG-ULTRA`, `VDL-GigaJr-ExtraBold-003_Gaiji`, `VDL-GigaJr-Ultra`) bằng **TTF/glyf**
+  → **mất 7.888 / 8.207 glyph (96%)**: font gốc **8.207 glyph** (OTTO/CFF) → font mod cũ **938 glyph**;
+  mất trọn **fullwidth/halfwidth 164/164, số trong vòng 76/76, mũi tên 13/13, hình khối 20/20**
+  → vừa gây **crash khi boot** (HAL từ chối font sai cấu trúc — xem **BH-38**) vừa làm **UI tỷ số mất glyph**.
+  Ghi chú cũ ở mục "ĐÃ SỬA XONG (03/10)" là **sai** — file output khi đó vẫn là font Nunito hỏng.
+- ✅ **CÁCH SỬA ĐÚNG (10/10 — theo phương pháp gốc Nintendo, BH-38):**
+  - **Tool mới:** `tools/patch_font_switchsports_native.py` — **KHÔNG thay font**, mà **tiêm glyph tiếng Việt
+    thẳng vào các slot CFF còn trống** của chính 4 font VDL gốc:
+    - Giữ nguyên **OTTO/CFF**, `upem=1000`, **CID-keyed** (LOGOG) / name-keyed (GigaJr), **số glyph không đổi**
+      (9.355 / 9.705) → HAL Nintendo chấp nhận, không crash.
+    - Glyph tiếng Việt được **ghép từ chính chữ cái + dấu tổ hợp có sẵn trong font** (NFD); dấu móc/horn,
+      mũ, dấu chấm dưới, gạch ngang được vẽ theo tỷ lệ x-height của font.
+    - Kết quả: mỗi font **+104 glyph** (cmap 8.207 → **8.311**) với LOGOG; **+92** (8.555 → **8.647**) với GigaJr.
+      **0 ký tự tiếng Việt bị thiếu**, giữ nguyên lớp `GPOS/GSUB/GDEF`, đầy đủ fullwidth/số vòng/mũi tên/hình khối.
+    - 35 ký tự không ghép được (Hangul `U+CA00…` + icon PUA `\ue0xx`) **vốn cũng không có trong font Latin gốc**
+      → không đổi hành vi; các ký tự này do **font Hàn `AsiaKTITGD4-R_KRko.bfttf`** phủ (font này giữ nguyên).
+  - **Bản dịch:** giữ nguyên (250 file, 0 lệch key/tag); `_all_strings.json` là file tổng hợp, không nằm trong SARC.
+  - Kiểm tra: `python tools/qa_switchsports.py` → glyph mất **0**, VI thiếu **0**;
+    `python tools/qa_text.py --game switchsports` → **PASS**;
+    `python tools/final_check_switchsports.py` → **PASS**;
+    `python tools/sws_fix_zs.py` → frame Zstd **windowLog=21, checksum=False** khớp bản gốc (BH-27 OK).
+  - ⚠️ **Bài học:** danh sách glyph cần giữ phải lấy từ **ký tự THỰC DÙNG trong bản dịch** (không chỉ cmap gốc).
+  - ⚠️ **KHÔNG dùng lại** `tools/build_custom_font.py` (Nunito) và `tools/patch_font_switchsports.py`
+    (thay sang Arial TTF — mất cấu trúc CFF) cho game Nintendo.
 
 ---
 
@@ -343,6 +411,23 @@
   - Kiểm chứng QA (`tools/mono_final_qa.py`): 199.781 objects khớp, 14/14 file Oasis giải mã hợp lệ, 0 lệch tag/dòng/ký tự lạ -> **PASS 100%**. Game đã lên tiếng Việt hoàn chỉnh.
 
 
+
+---
+
+## 13. God Eater 3 (Nintendo Switch)
+- **Title ID**: `01001C700873E000`
+- **Engine**: Bandai Namco in-house — kho `PKH/PFS/PK` (big-endian), entry nén **zlib**.
+- **Nguồn**: `E:\RomFS_Dump\01001C700873E000\romfs\resource\target\nx\pack\mount\retail\{archive00,archive01}.{pfs,pkh,pk}`.
+- **Kho text**: `archive00.pk` — **5.516 bảng TSV UTF-16LE** (cột `TextId … Text …`), 694.638 dòng, **26.844 TextId duy nhất** đa ngôn ngữ.
+- **Dịch**: **26.844/26.844 TextId** sang tiếng Việt (68 chunk + 1.398 ID vá lỗi) —
+  `games/01001C700873E000_GodEater3/translations/{chunks,repair_chunks,vi_master.json}`.
+- **Đóng gói**: `tools/ge3_build_mod.py` — thay cột `Text` cho **673.642 dòng** trong 5.494 entry, rebuild `archive00.pk/.pkh`.
+- **Font**: vá **14 font** (OTF/CFF + TTF) đủ **217 ký tự** dùng trong bản dịch.
+- **QA**: `tools/ge3_qa_final.py` → 0 lệch dòng/key, 0 ô rỗng, 0 ký tự Hán/Nhật/Hàn mới; còn 552 dòng thiếu thẻ mở `<$01/$02/$03>` (cảnh báo).
+  `tools/ge3_qa_fonts.py` → 0 ký tự thiếu trên cả 14 font.
+- **Thành phẩm**: `output/atmosphere/contents/01001C700873E000/romfs/resource/target/nx/pack/mount/retail/archive00.{pk,pkh}`.
+  `archive00.pfs` + `archive01.*` giữ nguyên.
+- 🐞 **Lỗi đã sửa:** 2.226 dòng bị xoá trắng do `unique_texts` lấy phải đại diện rỗng → quét lại, dịch bổ sung 1.398 ID, build lại (0 lỗi rỗng).
 
 ---
 

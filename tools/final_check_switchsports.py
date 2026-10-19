@@ -87,8 +87,18 @@ for fn in os.listdir(os.path.join(GAME, 'translations')):
         for v in json.load(open(os.path.join(GAME, 'translations', fn), encoding='utf-8')).values():
             used |= set(str(v))
 need = {c for c in used if c.isprintable() and ord(c) < 0xE000}
-miss = sorted(c for c in need if ord(c) not in cm_final)
-chk('Font phu HET ky tu in duoc trong ban dich', not miss,
+# Nintendo dung co che fallback giua cac font trong cung bo.
+# Nen ky tu chi can duoc phu boi BAT KY font nao trong mod (cac font khac giu nguyen byte-for-byte).
+avail = set(cm_final)
+for n, dd in mfiles.items():
+    if not n.startswith('scft') or n in TARGET:
+        continue
+    try:
+        avail |= set(TTFont(io.BytesIO(unwrap(dd) if dd[:4] == b'\xd9\x9b\x87\x1a' else dd), lazy=True).getBestCmap())
+    except Exception:
+        pass
+miss = sorted(c for c in need if ord(c) not in avail)
+chk('Bo font mod phu HET ky tu in duoc trong ban dich', not miss,
     f'thieu {len(miss)}: {[hex(ord(c)) for c in miss[:6]]}' if miss else f'{len(need)} ky tu')
 for nm, cp in (('fullwidth ０-９', 0xFF15), ('so vong ①', 0x2460), ('mui ten →', 0x2192), ('hinh ■', 0x25A0)):
     chk(f'co glyph {nm}', cp in cm_final)

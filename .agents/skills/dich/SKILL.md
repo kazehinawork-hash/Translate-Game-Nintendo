@@ -136,6 +136,23 @@ flowchart TD
 2. **Quy chuẩn file đặc thù**:
    - Nếu là game có file HUD/UI runtime đọc tuần tự (như `HelpText` trong Hades): Luôn ưu tiên đưa khối HUD lên đầu file để nạp tức thì trong mili-giây đầu tiên.
    - Nén ZSTD chuẩn Nintendo (`.zs`) nếu là game first-party.
+2b. **🚨 BẢNG KÍCH THƯỚC RESOURCE — quên là TREO GAME** (BH-49, BH-50):
+   - Kiểm tra game có "bảng size resource" không (BotW/TotK: `System/Resource/ResourceSizeTable.Product.<ver>*.rsizetable.zs`).
+     **Có bảng ⇒ mọi file resource bị thay (`*.sarc.zs`, `*.bfarc.zs`, model/texture…) đều PHẢI cập nhật size tương ứng.**
+     Khoá tra cứu = `crc32(đường dẫn KHÔNG có đuôi nén)`, vd `Mals/USen.Product.142.sarc`; giá trị = size **giải nén** + dư.
+   - Vá xong **phải nén lại ĐÚNG định dạng gốc**: frame `.zs` của bảng size thường **KHÔNG dùng từ điển**
+     (trong khi file text/font thì **BẮT BUỘC** dùng `zs.zsdic`, kèm `windowLog` + `dictID` khớp bản gốc).
+     Tự kiểm: file bảng size phải giải nén được **cả khi không truyền từ điển**.
+   - Triệu chứng nếu sai: màn hình "Launching..." đứng im (Eden) hoặc fatal trên Switch, và trong log
+     `ApplyLayeredFS: ... applied successfully` xuất hiện **ngay trước** cơn bão `HW.Memory Unmapped Read`.
+2c. **PORT PATCH CŨ SANG PHIÊN BẢN GAME MỚI** (thay vì dịch lại — xem BH-50):
+   - Nền luôn là **gói gốc của phiên bản game đang chạy** (dump RomFS của chính bản đó).
+   - So **danh sách file** + **tập nhãn từng file** giữa gói cũ và gói gốc: **thiếu file = crash**
+     (nhất là file nạp sớm: `AppLoadingMessage`, `Boot`, font), thiếu nhãn = chuỗi trắng.
+   - Ghép: text ưu tiên **bản dịch cũ** → chỗ thiếu lấy **bản của mình** → còn lại EN;
+     **bỏ nhãn có multiset thẻ điều khiển lệch** giữa 2 bản (dấu hiệu lệch nhãn).
+   - ⚠️ Nhớ tên file resource mang **phiên bản DỮ LIỆU**, không phải phiên bản game
+     (TotK 1.4.3 vẫn đọc `USen.Product.142.sarc.zs` — xác minh bằng cách tra khoá crc32 trong bảng size).
 3. **Nếu file đích là UFS (nằm trong pak)** — theo kết quả kiểm tra ở Giai đoạn 1:
    - Vẫn là mod LayeredFS (không sửa gì trong game), nhưng phải tạo **patch pak** đặt cùng thư mục `romfs/<...>/Paks/`:
      - UE4 legacy pak: `pakchunk0-Switch_p.pak` (hậu tố `_p` = patch, engine mount sau và ưu tiên hơn pak gốc).
@@ -236,5 +253,7 @@ gốc và quy tắc chống lặp. Tóm tắt các lỗi NẶNG NHẤT:
 | 8 | Thay hẳn font → **mất glyph icon (PUA)** | Font có PUA đang dùng → **hợp nhất** (`tools/merge_vi_font.py`), không thay hẳn |
 | 9 | Kiểm tra bằng "niềm tin" vào script build | Sau build **phải mở lại thành phẩm** đọc và so với nguồn |
 | 10 | PowerShell + tiếng Việt trong `python -c` → hỏng ký tự | Luôn **viết script ra file** rồi chạy |
+| 11 | Thay resource mà quên **bảng kích thước** (TotK `ResourceSizeTable`) → treo ở "Launching..." | **Thay file resource PHẢI đi kèm vá bảng size**; nén bảng size bằng **đúng định dạng gốc** (thường KHÔNG từ điển) — BH-49 |
+| 12 | Patch/patch-dịch của team khác **không chạy ở phiên bản game mới** | **Dựng lại từ gói gốc phiên bản mới**: so danh sách file + tập nhãn, ghép lại text cũ — BH-50 |
 
-**Cổng QA:** `python tools/qa_text.py --game <hogwarts|ori>` → phải **PASS** (đã chạy được cho cả 2 game).
+**Cổng QA:** `python tools/qa_text.py --game <game>` → phải **PASS** (đã chạy được cho hogwarts / ori / hades2 / switchsports / totk).

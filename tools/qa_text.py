@@ -50,7 +50,9 @@ CTRL = re.compile(r'[\u0000-\u0008\u000b\u000c\u000e-\u001f\ue000-\uf8ff]')
 WARN_KINDS = {'XUONG_DONG_LECH', 'RONG', 'THUA_KEY', 'RONG_NGUON_CUNG_RONG', 'CONTROL_CODE_LECH'}
 # Các key ĐÃ VÁ CÓ CHỦ ĐÍCH: lệch placeholder so với nguồn là ĐÚNG (nguồn bị lỗi)
 KNOWN_FIXED = {'Data_RefreshesIn', 'FGC_Collect_AstronomyTower',
-               'FGC_Demiguise_AstronomyTower', 'ZSI_01'}
+               'FGC_Demiguise_AstronomyTower', 'ZSI_01',
+               # TotK: '[Hold]' là VĂN BẢN thật trong ngoặc (không phải placeholder) -> dịch '[Giữ]' là ĐÚNG
+               'LayoutMsg__AppMap_00.msbt::Scroll'}
 
 
 def check(name, src, built, font=None, verbose=False):
@@ -254,8 +256,41 @@ def load_switchsports():
     return [('Switch Sports (MSBT)', src, built)]
 
 
+def load_totk():
+    """Zelda: Tears of the Kingdom (Nintendo EPD, MSBT trong SARC nén ZSTD có từ điển)."""
+    from extract_msbt import parse_msbt_bytes
+    import zstandard
+    import oead
+    TID = '0100F2C0115B6000'
+    G = os.path.join(ROOT, 'games', f'{TID}_ZeldaTotK')
+    src_dir = os.path.join(G, 'source', 'raw_text')
+    src = {}
+    for f in sorted(glob.glob(os.path.join(src_dir, '*.json'))):
+        for k, v in json.load(open(f, encoding='utf-8')).items():
+            src[f'{os.path.basename(f)[:-5]}::{k}'] = v
+
+    built = {}
+    sarc_path = os.path.join(ROOT, 'output', 'atmosphere', 'contents', TID, 'romfs', 'Mals',
+                             'USen.Product.142.sarc.zs')
+    zsdic_path = os.path.join('E:\\RomFS_Dump', TID, 'romfs', 'Pack', 'ZsDic.pack.zs')
+    if os.path.exists(sarc_path) and os.path.exists(zsdic_path):
+        zsdic = oead.Sarc(zstandard.ZstdDecompressor().decompress(open(zsdic_path, 'rb').read()))
+        zs_dict = next((bytes(x.data) for x in zsdic.get_files() if x.name == 'zs.zsdic'), None)
+        if zs_dict:
+            dctx = zstandard.ZstdDecompressor(dict_data=zstandard.ZstdCompressionDict(zs_dict))
+            data = dctx.decompress(open(sarc_path, 'rb').read())
+            for fe in oead.Sarc(data).get_files():
+                if not fe.name.endswith('.msbt'):
+                    continue
+                for k, v in parse_msbt_bytes(bytes(fe.data)).items():
+                    built[f'{fe.name.replace("/", "__")}::{k}'] = v
+    elif not os.path.exists(sarc_path):
+        print(f'    (chưa có mod TotK để QA: {sarc_path})')
+    return [('TotK (MSBT)', src, built)]
+
+
 ADAPTERS = {'hogwarts': load_hogwarts, 'ori': load_ori, 'obf': load_obf,
-            'hades2': load_hades2, 'switchsports': load_switchsports}
+            'hades2': load_hades2, 'switchsports': load_switchsports, 'totk': load_totk}
 
 
 # ============================ SOÁT RÒ RỈ ============================

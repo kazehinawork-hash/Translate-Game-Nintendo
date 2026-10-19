@@ -900,6 +900,117 @@ f.generate(otf, flags=('opentype',))
   4. **Giải pháp chuẩn xác (Native Glyph Synthesis)**: Lấy nguyên bản thân chữ cái Latin gốc (`o`, `u`, `a`, `e`...) và các dấu phụ kết hợp (`circumflex`, `acute`, `grave`, `tilde`, `dotbelow`) có sẵn trong font gốc, tự động ghép contour trực tiếp vào các **ô glyph chưa dùng (unused slots)** để tạo thành glyph đơn (non-composite). Cách này giữ nguyên 100% kiểu chữ, độ đậm nét, tỷ lệ hình học và độ rộng bước cách (`advanceWidth`) của font gốc!
 - **Công cụ:** `pylocres`, `tools/itt_patch_all_native.py`, `tools/build_itt_pak.py`.
 
+### BH-47. 🚨 SWITCH SPORTS: "UNABLE TO START SOFTWARE" DO FONT SAI CẤU TRÚC (TTF thay CFF) — PHẢI DÙNG LẠI CHÍNH FONT GỐC + TIÊM GLYPH VÀO SLOT TRỐNG
+
+**Ca thật: Nintendo Switch Sports (`0100D2F00D5C0000`), người dùng báo lỗi 10/10.**
+
+- **Triệu chứng:** Cài mod LayeredFS → game báo **"Unable to start software"** (không boot được). Trước đó còn có lỗi UI tỷ số mất glyph.
+- **Nguyên nhân gốc rễ:** Bản mod cũ chứa font do `tools/build_custom_font.py` sinh ra — **thay hẳn** 4 font Latin
+  (`scft/VDL-LOGOG-BOLD.bfotf`, `VDL-LOGOG-ULTRA`, `VDL-GigaJr-ExtraBold-003_Gaiji`, `VDL-GigaJr-Ultra`) bằng
+  **TTF/glyf (Nunito)**: font gốc OTTO/**CFF** upem 1000 / 8.207 glyph / CID-keyed → font mod **TTF** 938 glyph.
+  HAL font của Nintendo **từ chối** font sai cấu trúc → crash. (Giống bài học BH-38 của Kirby.)
+  ⚠️ Ghi chú "đã sửa bằng Arial" trong `docs/STATE.md` bản cũ là **sai** — file output thực tế vẫn là Nunito hỏng.
+- **QUY TẮC BẮT BUỘC (font game Nintendo First-Party):**
+  1. **KHÔNG thay font.** Phải giữ **nguyên** font gốc: **cùng định dạng bảng** (`CFF ` / OTTO hay `glyf`), **cùng `upem`**,
+     **cùng keying** (`CID-keyed` thì phải CID-keyed), **cùng `unitsPerEm`** và **cùng số glyph (`maxp.numGlyphs`)**.
+  2. **Tiêm glyph tiếng Việt vào các ô glyph CHƯA DÙNG** (slot có trong `CharStrings`/`hmtx` nhưng `cmap` không trỏ tới),
+     rồi chỉ **cập nhật `cmap`** → số glyph và GID không đổi, HAL chấp nhận.
+  3. **Ghép dấu native:** dựng glyph VI từ **chính chữ cái + dấu tổ hợp có sẵn trong font** (NFD); dấu `horn`/`hook`/
+     `dot below`/`stroke` không có sẵn thì **vẽ theo tỷ lệ x-height** của font. Nếu font gốc thiếu `0x0335` (stroke)
+     thì `d` → `đ` phải vẽ tay nét gạch (xem BH-45).
+  4. Kiểm tra lại: font đọc được, **độ phủ không giảm**, `magic` `.bfotf` còn nguyên, và **Zstd frame khớp gốc** (BH-27).
+- **Chi tiết định dạng `.bfotf` (Switch Sports):** `[u32 magic 0xD99B871A][u32 len^K][XOR từng word 4 byte của OTF với K]`,
+  `K = 2785117442`, **đọc/ghi word theo BIG-ENDIAN (`>I`)**. `magic = 0xD99B871A`.
+- **Công cụ chuẩn:** `tools/patch_font_switchsports_native.py` (viết theo mẫu `tools/kirby_patch_all_fonts_native.py`).
+  Kết quả: LOGOG 8.207 → **8.311** glyph, GigaJr 8.555 → **8.647** glyph, **0 ký tự VI thiếu**, số glyph không đổi.
+- **Lưu ý phụ:** `U+CD00-U+CD02` trong `ProgramMsg__Common` ("PlayerTitle_...") là ký tự **chỉ font Hàn
+  `AsiaKTITGD4-R_KRko.bfttf` phủ** — công cụ QA phải tính **hợp cmap của mọi font trong bộ**, không chỉ font Latin.
+
+### BH-48. ✅ ZELDA TotK: MÃ ĐIỀU KHIỂN MSBT PHỨC TẠP -> CHE THÀNH TOKEN `[[n]]` TRƯỚC KHI GIAO AI DỊCH
+
+**Ca thật: The Legend of Zelda: Tears of the Kingdom (`0100F2C0115B6000`).**
+
+- **Vấn đề:** chuỗi EventFlowMsg chứa rất nhiều thẻ điều khiển nhiều byte (`\x0e\x03\x00\x02…`, `\x0e\x04\x00…<TÊN BIỂU CẢM>`,
+  `\x0e\x05…`, `\x0e\x00\x03\x02\x00…\x0e\x00\x03\x02\uffff`, `\x0e\x02…<TÊN BIẾN>\uffff`, `\x0eÉ…point/points\x00`, `\x0e\x01…`).
+  Giao thẳng cho AI dịch thì **AI rất dễ làm hỏng/mất thẻ** -> game lỗi hiển thị.
+- **GIẢI PHÁP (đã chạy thật, QA PASS):** viết `tools/totk_text.py` để **tách/che MỌI thẻ thành token `[[n]]`** rồi mới giao dịch;
+  sau khi nhận bản dịch thì **khôi phục token về đúng byte gốc**. Nhờ vậy mã điều khiển được bảo toàn **100% do cấu trúc**,
+  không phụ thuộc việc model có "cẩn thận" hay không.
+- **Chi tiết kỹ thuật:**
+  - Tên biểu cảm sau `\x0e\x04\x00<2 byte>` là **tập hữu hạn** (Vocabulary ~105 mục: `LaughS`, `TalkPositive`, `QuestionNormal`,
+    `SurpriseL`, `ZeldaTalkPositive`…). Phải khớp **BASE DÀI NHẤT** với danh mục, rồi tùy chọn `_\d\d`; khớp tham lam sẽ "ăn" luôn
+    chữ đầu của câu (vd `LaughLAmazing` -> phải tách là `LaughL` + `Amazing`).
+  - Tự kiểm **roundtrip** trên TOÀN BỘ 47.800 chuỗi; nếu `unmask(mask(s)) != s` là codec sai -> không được build.
+  - Lưới an toàn: sau khi tách theo `\x0e`, mọi ký tự điều khiển còn sót trong đoạn văn được che **riêng lẻ** -> 0 sót.
+  - Khi áp dụng: **so multiset token `[[n]]`** giữa nguồn và bản dịch; lệch -> loại, không nạp.
+- **Lỗi phụ đã gặp & vá:** nguồn TotK **không** bao giờ có literal `\n` (2 ký tự), nên nếu bản dịch chứa literal `\n` thì đó là
+  lỗi (đã bắt được **51 mục** ở `DmF_SY_StatueDevil/Venus`) -> `totk_apply_batches.py` tự đổi thành xuống dòng thật.
+- **Bài học tổng quát:** với game có thẻ điều khiển dày đặc, **đừng dựa vào việc AI "giữ nguyên thẻ"** — hãy **che token**
+  rồi khôi phục, và **tự kiểm roundtrip + multiset**.
+- **Công cụ:** `tools/totk_text.py`, `tools/totk_make_event_batches.py`, `tools/totk_apply_batches.py`,
+  `tools/gen_totk_glossary.py`, adapter `totk` (trong `tools/qa_text.py`).
+
+### BH-49. 🚨 Zelda TotK: THAY `Mals/*.sarc.zs` / `Font/*.bfarc.zs` BẮT BUỘC VÁ `ResourceSizeTable` (RSTB) — NẾU KHÔNG GAME TREO/CRASH
+
+**Ca thật: Tears of the Kingdom (18/10).** Mod có text + font đúng nhưng game **kẹt ở "Launching..."** (Eden) / Switch fatal.
+
+- **Nguyên nhân:** TotK đọc `System/Resource/ResourceSizeTable.Product.<ver>[.Nin_NX_NVN].rsizetable.zs`
+  để biết **kích thước GIẢI NÉN** của từng resource. Mod thay `Mals/USen.Product.142.sarc.zs`
+  (và font) nhưng **không cập nhật bảng** → engine cấp phát thiếu → treo/crash.
+  (Patch Việt hoá của "The Red Team" cũng kèm RSTB — đó là manh mối.)
+- **Định dạng RSTB (TotK):**
+  - `.zs` nén bằng `zs.zsdic`; giải nén ra magic **`RESTBL`**, sau đó là bảng các cặp
+    `(u32 crc32, u32 size)`.
+  - **Khoá = crc32 của đường dẫn resource KHÔNG có đuôi nén**, ví dụ `Mals/USen.Product.142.sarc`
+    (không có `.zs`), `Font/Font.Nin_NX_NVN.bfarc`.
+  - `size` = kích thước **giải nén** + một ít dư (Nintendo để ~+0x110; dùng +0x1000 cũng an toàn).
+- **Lưu ý số hiệu phiên bản:** TotK **1.4.3 vẫn đọc `USen.Product.142.sarc.zs`** (số `Product.*`
+  là phiên bản DỮ LIỆU text, không phải phiên bản game). Kiểm tra bằng cách tìm entry crc32 trong RSTB:
+  nếu **không có** `Mals/USen.Product.143.sarc` thì game không đọc file 143.
+- **⚠️ BẪY NÉN (đã sập 1 lần):** frame `.zs` của RSTB **KHÔNG dùng từ điển** (`dict_flag=0`,
+  đọc được bằng zstd thuần). `Mals/*.sarc.zs` và `Font/*.bfarc.zs` thì **BẮT BUỘC có từ điển**
+  (`dict_flag=1`, dictID=1). Nén RSTB kèm từ điển → engine đọc bảng lúc khởi động thất bại →
+  null pointer → **treo ở "Launching..."** (log Eden: `LayeredFS patches applied successfully`
+  rồi ngay sau đó là bão `HW.Memory Unmapped Read32 @ 0x18`).
+  Cách kiểm: `zstandard.ZstdDecompressor().decompress(raw)` (không truyền dict) phải chạy được với RSTB.
+- **Công cụ:** `tools/patch_totk_rstb.py` — đọc RSTB gốc trong `E:\RomFS_Dump\<TID>\romfs`,
+  vá size cho Mals + Font, nén lại **không từ điển** (tự assert roundtrip cả 2 chiều), xuất vào mod
+  `romfs/System/Resource/ResourceSizeTable.Product.{142,143}[.Nin_NX_NVN].rsizetable.zs`.
+- **Quy tắc chung:** game first-party nào có `ResourceSizeTable` (BotW/TotK) — **thay file resource
+  là phải vá bảng size tương ứng**, đừng chỉ thay file.
+
+---
+
+### BH-50. Port một bản Việt hoá/patch CÓ SẴN sang phiên bản game MỚI (khỏi dịch lại)
+
+**Ca thật (18/10):** patch Việt hoá "The Red Team" (TotK 1.4.2) chạy tốt trên 1.4.2 nhưng **treo ở "Launching..." trên 1.4.3**.
+Không phải lỗi bản dịch — là **lệch phiên bản gói dữ liệu**. Nguyên nhân kép:
+1. **Thiếu `ResourceSizeTable.Product.143...`** → engine không biết size resource (xem BH-49).
+2. **SARC cũ thiếu file**: `LayoutMsg/AppLoadingMessage_00.msbt` (file nạp ngay lúc loading!).
+3. **Thiếu 140 nhãn** ở 11 file (1.4.3 thêm chuỗi: Staff +15, InstantTips +39, Pouch_00 +36, PouchContent +14…).
+
+**Quy trình port chuẩn (áp dụng cho mọi engine):**
+
+| Bước | Việc | Cách kiểm |
+|---|---|---|
+| 1 | Xác định phiên bản game **thực tế** (titlebar emulator / Settings Switch) | Đừng tin tên file: `Product.142` là phiên bản **dữ liệu text**, không phải phiên bản game |
+| 2 | Tìm "bảng kích thước resource" của game | BotW/TotK: `System/Resource/ResourceSizeTable*.rsizetable.zs`. Có bảng → **mọi file resource thay đổi đều phải vá size** |
+| 3 | So **danh sách file** của gói cũ với gói gốc phiên bản mới | Script đối chiếu tên file; **file thiếu = crash**, nhất là file nạp sớm (AppLoading, Boot, Font) |
+| 4 | So **tập nhãn** từng file với gói gốc | `set(nhãn_gốc) - set(nhãn_cũ)`; nhãn thiếu → chuỗi trắng ở bản mới |
+| 5 | Ghép: nền = **gói gốc phiên bản mới**, text ưu tiên **bản dịch cũ** → thiếu thì lấy **bản của mình** → còn lại EN | Tự **bỏ nhãn có multiset thẻ điều khiển lệch** giữa 2 bản (dấu hiệu lệch nhãn/khác phiên bản) |
+| 6 | Đóng gói lại **khớp tham số nén gốc** + vá bảng size | `.zs`: phải khớp `windowLog` + `dictID`; RSTB thì **không** dùng từ điển (BH-49) |
+| 7 | Đếm lại sau build | Số file, số nhãn, số chuỗi rỗng — phải bằng gói gốc |
+
+**Công cụ đã có:** `tools/build_totk_trt_mod.py` (ghép gói), `tools/patch_totk_rstb.py` (vá bảng size),
+`tools/extract_msbt.py` + `tools/totk_text.py` (đọc/ghi MSBT & thẻ điều khiển).
+
+**Dấu hiệu nhận biết trong log emulator:** `ApplyLayeredFS: LayeredFS patches applied successfully`
+rồi **ngay sau đó** (trong ~0,5 s) crash/`Unmapped Read` → lỗi ở **mức resource** (thiếu file / sai size),
+KHÔNG phải lỗi nội dung bản dịch. Nếu crash ở màn hình trắng/logo sau vài phút → nghi font/asset.
+
+**Quy tắc vàng:** khi thay resource của game có bảng size → **thay file PHẢI đi kèm vá bảng size**;
+khi port patch sang bản mới → **dựng lại từ gốc bản mới**, đừng chép nguyên gói cũ.
+
 ---
 
 | Game | Lỗi đã gặp | Nguyên nhân | Trạng thái |
@@ -924,6 +1035,7 @@ f.generate(otf, flags=('opentype',))
 | MONOPOLY | **Hiện toàn bộ `[NO_ID]Menu/...`** thay vì chữ | Đóng gói TextAsset bị lặp header nhị phân (offset lệch) → engine Oasis fallback in tên đường dẫn GameObject | ✅ **đã sửa** (BH-37) |
 | MONOPOLY | 2 font **KabelBold/KabelMedium** (OTF/CFF) thiếu 88 dấu | `fontTools.merge` không ghép được glyf (Arial) ↔ CFF (Kabel) | ⚠️ **CHƯA VÁ** — cần chơi thử để biết có dùng tới không |
 | Switch Sports | **Vào game báo lỗi software** (crash) | `.zs` nén lại bằng windowLog 22 trong khi gốc là 21 → decoder game từ chối frame | ✅ **đã sửa** (BH-27) — nén khớp tham số gốc |
+| Switch Sports | **Vẫn "Unable to start software"** sau khi sửa frame `.zs` | font mod là **TTF/Nunito** thay cho **OTTO/CFF gốc** (8.207→938 glyph) → HAL Nintendo từ chối font | ✅ **đã sửa** (BH-47) — tiêm glyph VI vào slot trống của chính font VDL gốc |
 | Switch Sports | Còn 173 chuỗi UI chưa dịch | các key có trong json nhưng value vẫn là tiếng Anh | ✅ **đã dịch** (còn 21 mục giữ nguyên có chủ đích: nhãn golf) |
 | Kirby | **Ô vuông khi hiển thị** | thay hẳn font CFF/upem1000 bằng TTF/upem2048 → mất 262–340 glyph | ✅ **đã sửa** (BH-28) — dựng lại CFF giữ đủ glyph |
 | Kirby | **Vẫn ô vuông sau khi vá `.bfotf`** | game còn dùng 34 font `.bfttf` (CHI/KOR/TWN/K15) mà mod KHÔNG có | ✅ đã bổ sung đủ 45 file (BH-29) |
@@ -932,6 +1044,9 @@ f.generate(otf, flags=('opentype',))
 | MONOPOLY | **Switch: đặt `…800` → không lên tiếng Việt; đặt cả 2 ID → treo** | Atmosphere key LayeredFS theo **ID base** và đè lên romfs đã gộp (base + update) | ✅ đã sửa (BH-43) — đặt ở **ID base** với **bundle đúng phiên bản (v1.6)**, chỉ 1 folder |
 | Unravel Two | **Treo ở logo Nintendo Switch** | `Data.kit.0` trong mod **lớn hơn gốc 1.460.324 byte** (repack LZ4 literal-only) | ⚠️ **CHƯA VÁ** — cần encoder LZ4-có-từ-điển để giữ đúng kích thước file |
 | Ori WotW / It Takes Two | Ô vuông | font nằm **trong bundle Unity / pak**, mod không có file font rời | ⏳ cần vá font trong bundle/pak |
+| TotK | **Treo ở "Launching..."** (Eden/Switch) dù text + font đúng | thay `Mals/*.sarc.zs` + `Font/*.bfarc.zs` nhưng **không vá `ResourceSizeTable`** → engine thiếu size resource | ✅ **đã sửa** (BH-49) — `tools/patch_totk_rstb.py` |
+| TotK | Vẫn treo sau khi thêm RSTB | frame `.zs` của RSTB bị nén **kèm từ điển** (gốc nén **không** từ điển) → engine đọc bảng lúc khởi động thất bại | ✅ **đã sửa** (BH-49) — nén RSTB không từ điển |
+| TotK | Patch Việt hoá của team khác **không chạy trên 1.4.3** | gói cũ: thiếu `AppLoadingMessage_00.msbt` + 140 nhãn + không có RSTB Product.143 | ✅ **đã sửa** (BH-50) — `tools/build_totk_trt_mod.py` ghép lại từ gốc 1.4.3 |
 
 ---
 

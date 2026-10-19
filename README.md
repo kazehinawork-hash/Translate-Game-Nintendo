@@ -52,6 +52,7 @@ E:\RomFS_Dump\
 | Ori and the Will of the Wisps | `01008DD013200000` | Unity IL2CPP | ✅ 100% |
 | Ori and the Blind Forest DE | `010061D00DB74000` | Unity IL2CPP (BitmapFont) | ✅ 100% (font vá bằng atlas SDF) |
 | Kirby and the Forgotten Land | `01004D300C5AE000` | Nintendo/HAL "basil" (MSBT/BFOTF) | ✅ 100% (ghép glyph từ chính font gốc) |
+| Zelda: Tears of the Kingdom | `0100F2C0115B6000` | Nintendo EPD (MSBT/SARC + **ResourceSizeTable**) | ✅ 100% (47.800 chuỗi) + **port bản Việt hoá team khác sang 1.4.3** |
 | It Takes Two | `010092A0172E4000` | Unreal Engine 4 | ✅ 100% (text trong pak) |
 | MONOPOLY (2024) | `01002C201BC40000` | Unity IL2CPP (hệ "Oasis") | ✅ 100% (mod đặt ở cả base + update) |
 | Unravel Two | `0100E5D00CC0C000` | Native Switch (Coldwood) | 🔄 đang làm (đang gỡ lỗi treo logo) |
@@ -103,8 +104,12 @@ Bản đồ đầy đủ theo engine: **`tools/README.md`**. Vài nhóm chính:
   `itt_uasset_tool/` (C# + UAssetAPI).
 - **Unity (Ori, MONOPOLY):** `unity_text_tool.py`, `unity_bitmapfont.py`, codec `kit_*` (Unravel),
   `mono_*` (MONOPOLY).
-- **Nintendo EPD / HAL (Switch Sports, Kirby):** `extract_msbt.py`, `build_mod.py`,
+- **Nintendo EPD / HAL (Switch Sports, Kirby, TotK):** `extract_msbt.py`, `build_mod.py`,
   `kirby_*` (font CFF/glyf, Filter.bin), `zs_util.py` (nén ZSTD khớp tham số gốc).
+- **Zelda TotK (MSBT trong SARC + ResourceSizeTable):** `totk_text.py` (che/khôi phục 100% mã điều khiển),
+  `totk_make_event_batches.py` / `totk_apply_batches.py` (chia chunk & hợp nhất), `build_totk_mod.py`,
+  **`patch_totk_rstb.py`** (vá bảng kích thước resource — thiếu là TREO game), `gen_totk_glossary.py`,
+  `build_totk_trt_mod.py` + `apply_totk_trt_style.py` (port bản dịch của team khác sang phiên bản mới).
 - **Supergiant (Hades II):** `hades2_sjson_helper.py`, `patch_hades2_xnb_font.py`.
 
 > `tools/legacy/` = script **một lần** đã chạy xong (chứa nội dung dịch đã sinh ra file nguồn).
@@ -112,12 +117,41 @@ Bản đồ đầy đủ theo engine: **`tools/README.md`**. Vài nhóm chính:
 
 ---
 
+## ⚠️ Hai cái bẫy lớn khi thay file resource (đọc trước khi build)
+
+**1. Bảng kích thước resource (`ResourceSizeTable`)** — game first-party như BotW/TotK có
+`System/Resource/ResourceSizeTable.Product.<ver>*.rsizetable.zs` ghi **kích thước giải nén** của từng resource.
+Thay `Mals/*.sarc.zs` hay `Font/*.bfarc.zs` mà **không cập nhật bảng** ⇒ engine cấp phát thiếu ⇒
+**treo ở màn hình "Launching…"** (Eden) hoặc fatal trên Switch.
+
+```bash
+python tools/patch_totk_rstb.py        # vá lại bảng size sau khi build (tự kiểm roundtrip)
+```
+
+⚠️ Bảng size phải nén **đúng định dạng frame gốc**: `.zs` của bảng size **KHÔNG** dùng từ điển,
+còn file text/font thì **BẮT BUỘC** dùng `Pack/ZsDic.pack.zs` + khớp `windowLog`/`dictID`.
+
+**2. Port một bản Việt hoá/patch CÓ SẴN sang phiên bản game mới** (thay vì dịch lại) — dựng lại từ
+**gói gốc của đúng phiên bản máy đang chạy**, rồi ghép text cũ vào; **thiếu file ⇒ crash** (nhất là file
+nạp sớm như `AppLoadingMessage`), thiếu nhãn ⇒ chuỗi trắng:
+
+```bash
+python tools/build_totk_trt_mod.py --trt "<đường dẫn USen.Product.142.sarc.zs của patch cũ>"
+```
+
+Quy trình 7 bước đầy đủ: **BH-50** trong `docs/BAI-HOC.md`.
+
+---
+
 ## Cách dùng mod
 
 1. Chép nguyên thư mục `output/atmosphere/` vào **gốc thẻ nhớ Switch** (gộp vào `atmosphere` có sẵn).
 2. Trên máy ảo (Eden/yuzu): thêm `atmosphere/contents/<TitleID>` vào mục **Add-Ons** của game.
-3. Một số game cần để **ngôn ngữ game = English** (ví dụ Ori, Kirby) để ra tiếng Việt — xem
+3. Một số game cần để **ngôn ngữ game = English** (ví dụ Ori, Kirby, TotK) để ra tiếng Việt — xem
    ghi chú trong `README.md` của game đó.
+4. **Zelda TotK:** mod gồm **3 thư mục** `Mals/` + `Font/` + **`System/Resource/`** (bảng size).
+   Chép thiếu `System/` là game treo ở màn hình "Launching…". Mod phải khớp **phiên bản update của máy**
+   (hiện hỗ trợ 1.4.3 — RSTB `Product.143`; bản 1.4.2 dùng RSTB `Product.142`).
 
 Chi tiết cài đặt: `docs/INSTALL-MOD.txt`.
 
@@ -149,4 +183,6 @@ Xem `AGENTS.md`. Tóm tắt:
 - **Không bao giờ thay hẳn font game** — phải giữ đủ glyph gốc (kể cả icon) rồi mới thêm dấu tiếng Việt.
 - **Không tin script build, tin thành phẩm** — sau mỗi lần build phải mở lại file đã đóng gói để kiểm.
 
-36 bài học xương máu + checklist bàn giao nằm ở **`docs/BAI-HOC.md`** (đọc trước khi build).
+50 bài học xương máu + checklist bàn giao nằm ở **`docs/BAI-HOC.md`** (đọc trước khi build).
+Trong đó BH-49 (bảng kích thước resource) và BH-50 (port patch sang phiên bản mới) là hai lỗi tốn thời
+gian nhất khi làm TotK.

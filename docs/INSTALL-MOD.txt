@@ -19,6 +19,11 @@ Các game có trong gói
 - Kirby and the Forgotten Land    TitleID 01004D300C5AE000
 - It Takes Two                    TitleID 010092A0172E4000
 - MONOPOLY (2024)                 TitleID 01002C201BC40000   (xem mục "có bản UPDATE" bên dưới)
+- The Legend of Zelda: Tears of the Kingdom   TitleID 0100F2C0115B6000   (xem mục TotK bên dưới)
+- God Eater 3                     TitleID 01001C700873E000
+  Mod gồm: romfs\resource\target\nx\pack\mount\retail\archive00.pk + archive00.pkh
+  (đã dịch 26.844 TextId + vá 14 font tiếng Việt). Không cần chọn ngôn ngữ đặc biệt —
+  mọi khe ngôn ngữ đều đã được ghi tiếng Việt.
 
 Game CÓ BẢN UPDATE — cài trên SWITCH: ID base + bundle đúng phiên bản (QUAN TRỌNG)
 ----------------------------------------------------------------------------------
@@ -29,6 +34,33 @@ Ví dụ MONOPOLY (máy chạy update v1.6):
   atmosphere/contents/01002C201BC40000/romfs/Data/data.unity3d   (bundle v1.6)
   -> KHÔNG đặt thêm folder 01002C201BC40800.
 Eden/yuzu thì nạp mod theo ID *update* nên dùng folder ...800 (trong %APPDATA%/eden/load/).
+
+The Legend of Zelda: Tears of the Kingdom — LƯU Ý QUAN TRỌNG
+----------------------------------------------------------
+Mod gồm 3 thư mục (file rời trong RomFS -> LayeredFS thay trực tiếp, KHÔNG cần patch pak):
+  romfs\Mals\USen.Product.142.sarc.zs        -> toàn bộ text (47.800 chuỗi, 1.511 file MSBT)
+  romfs\Font\Font.Nin_NX_NVN.bfarc.zs        -> font đã vá tiếng Việt
+  romfs\System\Resource\ResourceSizeTable... -> BẢNG KÍCH THƯỚC RESOURCE (BẮT BUỘC, xem mục 3)
+
+1) NGÔN NGỮ TRONG GAME = **English** (mod ghi đè khe USen; chọn ngôn ngữ khác sẽ ra ngôn ngữ đó).
+2) HAI GÓI ĐANG CÓ (dùng cái khớp ý bạn):
+   - `output/atmosphere/contents/0100F2C0115B6000/`  -> bản dịch CỦA MÌNH (100%).
+   - `output/TRT143/.../0100F2C0115B6000/`           -> PORT bản Việt hoá của team "The Red Team" sang 1.4.3
+       (47.336 nhãn giọng TRT + 143 nhãn mới của 1.4.3 lấy từ bản của mình). Đây là gói đã chạy tốt trên 1.4.3.
+   Cách cài: xoá sạch `...\eden\load\0100F2C0115B6000\romfs\` (hoặc folder trên thẻ) rồi chép **cả 3 thư mục**
+   `Mals` + `Font` + `System` của gói muốn dùng. Chép thiếu `System/` -> TREO ở màn hình "Launching...".
+3) 🚨 BẢNG KÍCH THƯỚC RESOURCE (ResourceSizeTable) — LÝ DO TREO GAME PHỔ BIẾN NHẤT:
+   TotK dùng `System/Resource/ResourceSizeTable.Product.<ver>[.Nin_NX_NVN].rsizetable.zs` để biết kích thước
+   GIẢI NÉN của từng resource. Thay Mals/Font mà không vá bảng -> engine cấp phát thiếu -> treo/fatal.
+   - Máy chạy **1.4.3** -> game đọc `ResourceSizeTable.Product.143.Nin_NX_NVN.rsizetable.zs` (bản 1.4.3 vẫn đọc
+     `Mals/USen.Product.142.sarc.zs`; số `Product.*` là phiên bản DỮ LIỆU, không phải phiên bản game).
+   - Vá lại sau mỗi lần build: `python tools/patch_totk_rstb.py` (tự kiểm roundtrip; nén KHÔNG từ điển cho khớp gốc).
+4) KHÁC PHIÊN BẢN: nếu máy chạy phiên bản update khác -> Dump RomFS đúng phiên bản rồi build lại
+   (`python tools/build_totk_mod.py` hoặc `python tools/build_totk_trt_mod.py --trt <patch cũ>`), rồi vá RSTB.
+   Nguồn dữ liệu (ngoài OneDrive): `E:\RomFS_Dump\0100F2C0115B6000\romfs\` (cần `Pack\ZsDic.pack.zs` = từ điển zstd).
+5) Đặt ở **ID base** `atmosphere/contents/0100F2C0115B6000/romfs/...` và CHỈ 1 folder.
+   Eden/yuzu: dùng `%APPDATA%\eden\load\0100F2C0115B6000\romfs\...`
+6) QA: `python tools/qa_text.py --game totk` (đã PASS; 0 lỗi).
 
 Ori and the Blind Forest (DE) — LƯU Ý QUAN TRỌNG
 ------------------------------------------------

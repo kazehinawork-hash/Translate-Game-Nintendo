@@ -24,6 +24,10 @@ games/*/font_edit/
 *.nsp
 *.xci
 
+# --- Bảng đối chiếu lấy từ bản Việt hoá của TEAM KHÁC (chỉ để tra cứu nội bộ) ---
+#     Không đẩy lên repo công khai: đó là bản dịch của người khác, không phải thành quả của dự án.
+glossary/totk_trt_names_ref.csv
+
 # --- Cache / hệ điều hành ---
 __pycache__/
 *.pyc

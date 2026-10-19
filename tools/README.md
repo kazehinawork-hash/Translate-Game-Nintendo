@@ -52,6 +52,9 @@ Pipeline **dừng ngay** nếu một bước lỗi và **không chạy QA** — 
 | | `extract_lootdata.py` | Bóc dữ liệu LootData |
 | **Nintendo EPD** (Switch Sports) | `extract_msbt.py` | MSBT ⇄ JSON (UTF-16LE, LBL1/ATR1/TXT2, SARC) |
 | | `build_mod.py`, `build_custom_font.py` | Build SARC.zs / font BFARC |
+| | `patch_font_switchsports_native.py` | Tiêm glyph VI vào **slot CFF trống của font gốc** (BH-47) |
+| | **`patch_sws_rstb.py`** | **Vá `ResourceSizeTable.Product.150`** — chép thiếu bảng này là TREO/crash (BH-49) |
+| | `fix_sws_escapes.py` | Chuẩn hoá **thẻ điều khiển thiếu byte** (`\x0e\x03\x02\x02`→`\x0e\x00\x03\x02\x02`) + thêm lại dấu ngắt dòng theo bản gốc |
 | **Nintendo EPD** (Zelda TotK) | `totk_text.py` | Che/khôi phục **100% mã điều khiển MSBT** (`\x0e…`) thành token `[[n]]` |
 | | `totk_make_event_batches.py`, `totk_apply_batches.py` | Chia chunk cho subagent dịch / hợp nhất lại (tự bắt lỗi token, `\n`) |
 | | `gen_totk_glossary.py` | Sinh `glossary/totk.csv` từ bảng tham chiếu trong game |

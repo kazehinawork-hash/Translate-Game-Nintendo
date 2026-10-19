@@ -62,6 +62,19 @@ Mod gồm 3 thư mục (file rời trong RomFS -> LayeredFS thay trực tiếp, 
    Eden/yuzu: dùng `%APPDATA%\eden\load\0100F2C0115B6000\romfs\...`
 6) QA: `python tools/qa_text.py --game totk` (đã PASS; 0 lỗi).
 
+Nintendo Switch Sports — LƯU Ý QUAN TRỌNG
+-----------------------------------------
+Mod gồm 3 thư mục (LayeredFS thay trực tiếp, KHÔNG cần patch pak):
+  romfs\Mals\USen.Product.150.sarc.zs                              -> toàn bộ text (250 file MSBT, 24.597 chuỗi)
+  romfs\Font\Font.Nin_NX_NVN.bfarc.zs                              -> font GỐC + tiêm glyph tiếng Việt
+  romfs\System\Resource\ResourceSizeTable.Product.150.rsizetable.zs -> BẢNG KÍCH THƯỚC RESOURCE (BẮT BUỘC)
+
+1) NGÔN NGỮ TRONG GAME = **English**.
+2) 🚨 Chép THIẾU thư mục `System\Resource\` -> engine không biết kích thước resource -> TREO/crash khi vào game.
+   (Bảng gốc ghi font 13.901.528 byte, còn font mod 13.921.644 byte -> vượt hạn mức.)
+3) Sau mỗi lần build lại text/font phải chạy: `python tools/patch_sws_rstb.py`
+4) QA: `python tools/qa_text.py --game switchsports` (PASS).
+
 Ori and the Blind Forest (DE) — LƯU Ý QUAN TRỌNG
 ------------------------------------------------
 Sau khi chép mod, PHẢI đặt NGÔN NGỮ TRONG GAME = **English**.

@@ -194,7 +194,24 @@
   nhãn golf, 99 chức danh Staff Roll). Chưa dịch **173 → 21** (21 mục còn lại là **nhãn golf giữ
   nguyên tiếng Anh có chủ đích** + 1 chuỗi chỉ có mã điều khiển). QA `qa_text.py --game switchsports`: **PASS**.
   Công cụ: `list_untranslated.py`, `sws_prepare/apply_untranslated.py` (che mã điều khiển thành token `[[n]]`).
-- Thành phẩm: `output/atmosphere/contents/0100D2F00D5C0000/romfs/{Mals,Font}/` (4,6 MB).
+- Thành phẩm: `output/atmosphere/contents/0100D2F00D5C0000/romfs/{Mals,Font,System}/`.
+- 🚨 **KIỂM TRA LẠI THEO ROMFS DUMP MỚI (19/10) — phát hiện 2 lỗi, đã sửa:**
+  1. **Thiếu `ResourceSizeTable.Product.150.rsizetable.zs`** (mục BH-49 áp dụng cho cả game này!).
+     Font mod **vượt hạn mức** bảng gốc: RSTB ghi 13.901.528 byte nhưng font thật **13.921.644** (+20.116)
+     → nguy cơ crash/yêu cầu "unable to start". Đã thêm bảng size đã vá: `tools/patch_sws_rstb.py`
+     (Mals 4.546.012 / Font 13.925.740; frame `.zs` khớp gốc `28 b5 2f fd a0 14 19 03`, KHÔNG dùng từ điển).
+  2. **Thẻ điều khiển bị thiếu byte** trong bản dịch: `\x0e\x03\x02\x02` thay vì `\x0e\x00\x03\x02\x02`,
+     và thẻ đóng mất byte kết `\uffff` (`\x0e\x03\x02` thay vì `\x0e\x00\x03\x02\uffff`) — 131 chuỗi;
+     cộng 197 chuỗi lệch cân bằng thẻ đóng/mở và **156 chuỗi mất dấu ngắt dòng**.
+     Đã sửa bằng `tools/fix_sws_escapes.py` (chuẩn hoá thẻ + dựng lại theo khung thẻ gốc + thêm lại `\n`).
+     Sau khi build lại: lệch ngắt dòng **156 → 9**; số nhãn/file vẫn khớp 100% (250 file, 24.597 nhãn).
+  3. ⚠️ Còn 1.528 cảnh báo "lệch mã điều khiển" — **toàn bộ nằm ở bảng tên riêng của NGÔN NGỮ KHÁC**
+     (`PlayerTitle_gen_{EUde,EUfr,EUru,USes,…}`: nguồn là tên bản địa, bản dịch dùng chung bảng tiếng Việt).
+     File tiếng Anh (`PlayerTitle_gen_USen/EUen`) đã dịch đúng → **không ảnh hưởng khi chơi tiếng Anh**.
+  4. Đối chiếu SARC gốc mới nhất: `Mals/USen.Product.150.sarc.zs` gốc **giống hệt** `source/orig_mals/`
+     (md5 `d6ba08fa9478`) → **không lệch phiên bản**.
+- Ghi chú dọn dẹp: phát hiện mod **Unravel Two (209 MB) nằm sai chỗ** trong
+  `%APPDATA%\eden\load\0100D2F00D5C0000\0100E5D00CC0C000\` → đã chuyển về `load\0100E5D00CC0C000\romfs\NVNKits\`.
 
 ### 4b. Kirby and the Forgotten Land — SỬA DỨT ĐIỂM LỖI Ô VUÔNG BẰNG NATIVE CID (10/10)
 - 🐛 **Nguyên nhân gốc của ảnh lỗi ô vuông:**

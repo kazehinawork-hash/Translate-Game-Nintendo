@@ -1047,6 +1047,8 @@ khi port patch sang bản mới → **dựng lại từ gốc bản mới**, đ�
 | TotK | **Treo ở "Launching..."** (Eden/Switch) dù text + font đúng | thay `Mals/*.sarc.zs` + `Font/*.bfarc.zs` nhưng **không vá `ResourceSizeTable`** → engine thiếu size resource | ✅ **đã sửa** (BH-49) — `tools/patch_totk_rstb.py` |
 | TotK | Vẫn treo sau khi thêm RSTB | frame `.zs` của RSTB bị nén **kèm từ điển** (gốc nén **không** từ điển) → engine đọc bảng lúc khởi động thất bại | ✅ **đã sửa** (BH-49) — nén RSTB không từ điển |
 | TotK | Patch Việt hoá của team khác **không chạy trên 1.4.3** | gói cũ: thiếu `AppLoadingMessage_00.msbt` + 140 nhãn + không có RSTB Product.143 | ✅ **đã sửa** (BH-50) — `tools/build_totk_trt_mod.py` ghép lại từ gốc 1.4.3 |
+| Switch Sports | Mod **thiếu `ResourceSizeTable.Product.150`**; font mod **vượt hạn mức** bảng gốc 20.116 byte | thay font/text mà không vá bảng size (BH-49 áp dụng cho **mọi game EPD**, không riêng TotK) | ✅ **đã sửa** — `tools/patch_sws_rstb.py` (+ bổ sung vào mod) |
+| Switch Sports | 131 chuỗi **thẻ điều khiển thiếu byte** (`\x0e\x03\x02\x02` thay vì `\x0e\x00\x03\x02\x02`; thẻ đóng mất `\uffff`), 197 chuỗi lệch cân bằng, 156 chuỗi **mất dấu ngắt dòng** | lỗi từ khâu trích xuất/dịch trước đây (không đối chiếu tag với nguồn) | ✅ **đã sửa** — `tools/fix_sws_escapes.py` (lệch ngắt dòng 156 → 9) |
 
 ---
 

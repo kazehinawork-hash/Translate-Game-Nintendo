@@ -15,13 +15,31 @@
 ```bash
 python tools/patch_font_switchsports_native.py   # → Font/Font.Nin_NX_NVN.bfarc.zs (font GỐC + tiêm glyph tiếng Việt)
 python tools/build_mod.py                        # → Mals/USen.Product.150.sarc.zs (text đã dịch)
+python tools/patch_sws_rstb.py                   # → System/Resource/ResourceSizeTable.Product.150.rsizetable.zs (BẮT BUỘC)
 ```
+
+> ⚠️ **Sau MỖI lần build text/font phải chạy `patch_sws_rstb.py`** — bảng size ghi kích thước giải nén của
+> từng resource; thay file mà không vá bảng ⇒ engine cấp phát thiếu ⇒ treo/crash (BH-49).
+> Game này `.zs` **KHÔNG dùng từ điển** (khác TotK), và bảng size cũng nén thuần (frame `28 b5 2f fd a0 …`).
 
 ## Kiểm tra
 
+- `python tools/qa_text.py --game switchsports` — cổng QA chuẩn (PASS).
 - `python tools/qa_switchsports.py` — độ phủ glyph (font gốc vs mod) + soát bản dịch.
 - `python tools/final_check_switchsports.py` — kiểm tra toàn vẹn font/text/đường dẫn.
+- `python tools/fix_sws_escapes.py [--apply]` — chuẩn hoá **thẻ điều khiển** (thêm byte `\x00`/`\uffff` bị thiếu)
+  và **thêm lại dấu ngắt dòng** theo bản gốc. Chạy khi dump RomFS mới để rà lệch với nguồn.
 - `python tools/sws_fix_zs.py` — xác nhận tham số frame Zstd khớp bản gốc.
+
+## Đối chiếu với RomFS gốc (khi user dump bản mới)
+
+```bash
+# so cấu trúc + nhãn: 250/250 file, 24.597 nhãn, 0 thiếu/0 rỗng
+python tools/qa_text.py --game switchsports
+```
+
+- Cảnh báo `CONTROL_CODE_LECH` ở `PlayerTitle_gen_{EUde,EUfr,EUru,USes,…}` là **bình thường**: nguồn là bảng
+  tên riêng theo ngôn ngữ, còn bản dịch dùng chung một bảng tiếng Việt. File tiếng Anh (`USen`, `EUen`) đã đúng.
 
 ## Lưu ý
 
@@ -32,4 +50,6 @@ python tools/build_mod.py                        # → Mals/USen.Product.150.sar
 - File SARC phải nén lại đúng chuẩn **ZSTD Nintendo** (`.zs`, `windowLog=21` khớp gốc — BH-27).
 - Tên file đích trong mod phải khớp tuyệt đối: `Font/Font.Nin_NX_NVN.bfarc.zs`,
   `Font/Font_CNzh.Nin_NX_NVN.bfarc.zs`, `Font/Font_KRko.Nin_NX_NVN.bfarc.zs`,
-  `Font/Font_TWzh.Nin_NX_NVN.bfarc.zs`, `Mals/USen.Product.150.sarc.zs`.
+  `Font/Font_TWzh.Nin_NX_NVN.bfarc.zs`, `Mals/USen.Product.150.sarc.zs`,
+  **`System/Resource/ResourceSizeTable.Product.150.rsizetable.zs`** (bảng kích thước — chép thiếu là treo/crash).
+- Mod hiện gồm **3 thư mục**: `Mals/` + `Font/` + `System/`. Ngôn ngữ trong game phải để **English**.
